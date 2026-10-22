@@ -1,0 +1,56 @@
+{
+  "paper_version_id": "paper_002_v1",
+  "origin": "prepared",
+  "selection_scope": "One core claim from the abstract. Other abstract and introduction claims have not been selected yet.",
+  "scope_complete": false,
+  "scope_limitations": [
+    "Only one abstract claim is included. Other abstract and introduction claims were not selected.",
+    "The comparison uses the parsed Table 3 caption. extracted_text is empty, so there are no independent table cells.",
+    "Only the GPT-3.5 / GSM8K row is compared. Other models and benchmarks in Table 3 are not covered."
+  ],
+  "claims": [
+    {
+      "claim_id": "paper_002_c01",
+      "statement": "Without external feedback, intrinsic self-correction can lower LLM reasoning performance.",
+      "importance": "core",
+      "claim_conditions": {
+        "metric": null,
+        "dataset": null,
+        "baseline": null,
+        "setting": "intrinsic self-correction without external feedback"
+      },
+      "claim_evidence": [
+        {
+          "evidence_id": "ev_p002_c01_claim",
+          "chunk_id": "paper_002_v1_chunk_0001",
+          "mode": "quote",
+          "excerpt": "In the context of reasoning, our research indicates that LLMs struggle to selfcorrect their responses without external feedback, and at times, their performance might even degrade post self-correction."
+        }
+      ],
+      "comparison_evidence": [
+        {
+          "evidence_id": "ev_p002_c01_table3",
+          "element_id": "paper_002_v1_table_3",
+          "mode": "paraphrase",
+          "excerpt": "Table 3 caption, GPT-3.5 on GSM8K: Standard Prompting 75.9; Self-Correct (round 1) 75.1; Self-Correct (round 2) 74.7.",
+          "values": ["75.9", "75.1", "74.7"],
+          "conditions": {
+            "metric": "accuracy",
+            "dataset": "GSM8K",
+            "baseline": "Standard Prompting",
+            "setting": "intrinsic self-correction without external feedback"
+          }
+        }
+      ],
+      "search_scope": "Abstract claim compared with the Table 3 caption (intrinsic self-correction, no label-based stopping). Table 1 uses the correct label to stop self-correction, which is external feedback, so it is a different condition and was not used for comparison.",
+      "proposed_outcome": "partially_supported",
+      "reason": "Under the same setting, the Table 3 caption shows GPT-3.5 on GSM8K falling from 75.9 with standard prompting to 75.1 after round 1 and 74.7 after round 2 of self-correction. This supports the direction of the claim. Only one model and benchmark row was compared, so the claim's generality is not established here.",
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_at": null,
+        "note": null
+      }
+    }
+  ]
+}

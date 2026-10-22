@@ -1,0 +1,389 @@
+{
+  "assessment_id": "assessment_ai_paper_033_iclr_2026_proceedings",
+  "paper_version_id": "paper_033_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_033_iclr_2026_proceedings",
+    "raw_output_sha256": "c50b5592538cf0e7e47a91745fa46a079a5a39f32a8f37038dfd407e5a83624a"
+  },
+  "paper_summary": "Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited, and many existing studies provide empirical validation or a theoretical guarantee in restrictive settings. To address this issue, in this work, we focus on the smooth calibration error (CE) and provide a uniform convergence bound, showing that the smooth CE is bounded by the sum of the smooth CE over the training dataset and a generalization gap. We further prove that the functional gr",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited, and many existing studies provide empirical validation or a theoretical guarantee in restrictive settings. To address this issue, in this work, we focus on the smooth calibration error (CE) and provide a uniform convergence bound, showing that the smooth CE is bounded by the sum of the smooth CE over the training dataset and a generalization gap. We further prove that the functional gr",
+      "type": "method_or_finding",
+      "evidence_id": "paper_033_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited, and many existing studies provide empirical validation or a theoretical guarantee in restrictive settings. To address this issue, in this work, we focus on th",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_033_ev_003",
+        "paper_033_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.6,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Smooth Calibration Error: Uniform Convergence and Functional Gradient Analysis》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited",
+    "论文提供方法或实证支持：D.1 P ROOF OF T HEOREM 2 To simplify the notation, we define ϕ ( f,h,x,y ) = h ( f ( x )) · ( y − f ( x )) . Then smCE( f, D ) − smCE( f,S ) tr ≤ sup smCE( f, D ) − smCE( f,S ) tr f ∈F n 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − sup ϕ ( f,h,X ,Y ) n i i f ∈F h ∈ "
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited；边界证据为：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via",
+      "strengths": [
+        "可定位正文支持：Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+      "evidence_ids": [
+        "paper_033_ev_001",
+        "paper_033_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：D.1 P ROOF OF T HEOREM 2 To simplify the notation, we define ϕ ( f,h,x,y ) = h ( f ( x )) · ( y − f ( x )) . Then smCE( f, D ) − smCE( f,S ) tr ≤ sup smCE( f, D ) − smCE( f,S ) tr f ∈F n 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − sup ϕ ( f,h,X ,Y ) n i i f ∈F h ∈ ；边界证据为：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via",
+      "strengths": [
+        "可定位正文支持：D.1 P ROOF OF T HEOREM 2 To simplify the notation, we define ϕ ( f,h,x,y ) = h ( f ( x )) · ( y − f ( x )) . Then smCE( f, D ) − smCE( f,S ) tr ≤ sup smCE( f, D ) − smCE( f,S ) tr f ∈F n 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − sup ϕ ( f,h,X ,Y ) n i i f ∈F h ∈ "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 9/10。",
+      "evidence_ids": [
+        "paper_033_ev_003",
+        "paper_033_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Various metrics have been proposed to quantify deviations from perfect calibration, including ECE (Guo et al., 2017; Rahaman et al., 2021; Minderer et al., 2021). The binning ECE has been widely used to estimate the conditional expectation E [ Y | f ( X )] in ；边界证据为：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via",
+      "strengths": [
+        "可定位正文支持：Various metrics have been proposed to quantify deviations from perfect calibration, including ECE (Guo et al., 2017; Rahaman et al., 2021; Minderer et al., 2021). The binning ECE has been widely used to estimate the conditional expectation E [ Y | f ( X )] in "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_033_ev_004",
+        "paper_033_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Probabilistic prediction plays a central role in many real-world applications, such as healthcare (Jiang et al., 2012), weather forecasting (Murphy & Winkler, 1984), and language modeling (Nguyen & O’Connor, 2015), where uncertainty estimates are often critica；边界证据为：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via",
+      "strengths": [
+        "可定位正文支持：Probabilistic prediction plays a central role in many real-world applications, such as healthcare (Jiang et al., 2012), weather forecasting (Murphy & Winkler, 1984), and language modeling (Nguyen & O’Connor, 2015), where uncertainty estimates are often critica"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 7/10。",
+      "evidence_ids": [
+        "paper_033_ev_005",
+        "paper_033_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：We conducted similar experiments using a two-layer neural network corresponding to Section 4.3. We prepared the toy dataset and designed the two-layer neural network to satisfy Assumption 1 in Appendix H. We used the sigmoid activation function, initialized th；边界证据为：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via",
+      "strengths": [
+        "可定位正文支持：We conducted similar experiments using a two-layer neural network corresponding to Section 4.3. We prepared the toy dataset and designed the two-layer neural network to satisfy Assumption 1 in Appendix H. We used the sigmoid activation function, initialized th"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 6/10。",
+      "evidence_ids": [
+        "paper_033_ev_006",
+        "paper_033_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_033_ev_001",
+      "page_number": 1,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Calibration is a critical requirement for reliable probabilistic prediction, especially in high-risk applications. However, the theoretical understanding of which learning algorithms can simultaneously achieve high accuracy and good calibration remains limited, and many existing studies provide empirical validation or a theoretical guarantee in restrictive settings. To address this issue, in this work, we focus on the smooth calibration error (CE) and provide a uniform convergence bound, showing that the smooth CE is bounded by the sum of the smooth CE over the training dataset and a generalization gap. We further prove that the functional gradient of the loss function can effectively control the training smooth CE. Based on this framework, we analyze three representative algorithms: gradient boosting trees, kernel boosting, and two-layer neural networks. For each, we derive conditions u",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "page_number": 10,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "This work presented the first rigorous guarantees on the smooth CE for several widely used learning algorithms. Our analysis proceeds in two stages: we first derive a uniform convergence bound for the smooth CE, and then upper-bound the training smooth CE via functional gradients. We demonstrate that algorithms that can control the functional gradient simultaneously achieve a small smooth CE and misclassification rate. Despite these contributions, several limitations remain. First, our bounds are derived using a uniform bound over the post-processing function h , not the Lipschitz function class, which may result in loose estimates. More refined analyses that better align with practical performance would be valuable. Moreover, our analysis relies on a strong margin assumption, which requires a well-separated data distribution. Since calibration is a rather weak notion compared with accur",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_003",
+      "page_number": 28,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_d",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0039",
+      "evidence_mode": "quote",
+      "excerpt": "D.1 P ROOF OF T HEOREM 2 To simplify the notation, we define ϕ ( f,h,x,y ) = h ( f ( x )) · ( y − f ( x )) . Then smCE( f, D ) − smCE( f,S ) tr ≤ sup smCE( f, D ) − smCE( f,S ) tr f ∈F n 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − sup ϕ ( f,h,X ,Y ) n i i f ∈F h ∈ Lip ([0 , 1] , [ − 1 , 1]) h ∈ Lip ([0 , 1] , [ − 1 , 1]) i =1 L =1 L =1 (cid:40) n (cid:41) 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − ϕ ( f,h,X ,Y ) n i i f ∈F h ∈ Lip ([0 , 1] , [ − 1 , 1]) i =1 L =1 (cid:40) n (cid:41) 1 (cid:88) ≤ sup sup E ϕ ( f,h,X,Y ) − ϕ ( f,h,X ,Y ) . n i i h ∈ Lip ([0 , 1] , [ − 1 , 1]) f ∈F i =1 L =1 In the last line, we simply used the swapping of the supremum, which can be shown using the definition of the supremum. (In general, for any f ∈ F , ϕ ( f,h ) ≤ sup ϕ ( f ′ ,h ) , which leads to f ′ sup ϕ ( f,h ) ≤ sup sup ϕ ( f ′ ,h ) . This further leads to sup sup ϕ ( f,h ) ≤ sup sup ′ ϕ ( f ′ ,h ) .) h h f ′",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_004",
+      "page_number": 9,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "Various metrics have been proposed to quantify deviations from perfect calibration, including ECE (Guo et al., 2017; Rahaman et al., 2021; Minderer et al., 2021). The binning ECE has been widely used to estimate the conditional expectation E [ Y | f ( X )] in the ECE, which partitions the probability interval into discrete bins. Despite its popularity, binning ECE is sensitive to hyperparameters such as the number of bins, and it lacks both consistency and smoothness as a distance metric (Kumar et al., 2019; Nixon et al., 2019; Minderer et al., 2021). A broader comparison of ECE variants is given by Gruber & Buettner (2022). Błasiok et al. (2023) systematically studied calibration distances and formalized the true distance from calibration as a rigorous notion of deviation from perfect calibration. As an efficiently estimable surrogate, they proposed the smooth CE, building on Foster & H",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_005",
+      "page_number": 1,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Probabilistic prediction plays a central role in many real-world applications, such as healthcare (Jiang et al., 2012), weather forecasting (Murphy & Winkler, 1984), and language modeling (Nguyen & O’Connor, 2015), where uncertainty estimates are often critical. Since ensuring the reliability of such predictions has become a key challenge in modern machine learning, calibration Dawid (1982); Foster & Vohra (1998)—which requires that predicted probabilities align with the actual frequency of the true label—has attracted increasing attention. Calibration is a relatively weak condition that can be satisfied by simple models. However, it is frequently violated in practice. Notably, Guo et al. (2017) demonstrated that many modern deep learning models can be significantly miscalibrated, which has since drawn increasing attention to calibration within the machine learning community. Although va",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_006",
+      "page_number": 50,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_k_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0061",
+      "evidence_mode": "quote",
+      "excerpt": "We conducted similar experiments using a two-layer neural network corresponding to Section 4.3. We prepared the toy dataset and designed the two-layer neural network to satisfy Assumption 1 in Appendix H. We used the sigmoid activation function, initialized the parameters independently from the standard Gaussian distribution, and set the number of hidden units to be even to satisfy Assumption (A3). The coefficients a were also set according to the specification in Assumption r (A3). Unless otherwise stated, we used 300 hidden units. We used full-batch gradient descent (GD) for optimization with a fixed step size of w = 0 . 01 . First, we performed experiments on the same toy dataset used for GBTs. We evaluated the training and test metrics by increasing the number of GD iterations while fixing the training dataset size ( n = 200 ). Figure 4(a) reports the same set of metrics as in the GB",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_007",
+      "page_number": 47,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_j_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0059",
+      "evidence_mode": "quote",
+      "excerpt": "The results in Section 4 provide concrete guidance for practical training of GBT, / Kernel Boosting / Two-layer NN models. For example, in Section 4.1 (Corollary 2), the first term in the upper bound decreases with the number of iterations T , reflecting the improvement of the training smooth CE. In contrast, the fourth term corresponds to the Rademacher complexity of the tree model and increases with T , reflecting the growth of the generalization gap (i.e., overfitting). The same qualitative behavior appears in Section 4.2 and 4.3. Hence, our analysis formally justifies the following practical tuning rules: i) excessive iterations can worsen smooth CE due to overfitting and ii) appropriate early stopping (and regularization) can jointly optimize accuracy and smooth CE. This shows that, from the perspective of calibration as well, controlling hypothesis class complexity via regularizati",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_008",
+      "page_number": 2,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "potential improvement of the loss function achievable by applying Lipschitz-continuous transformations to the model outputs. This framework provides an optimization-theoretic perspective on calibration. Nevertheless, analyses based on this concept typically assume access to infinite data (i.e., population-level risk) (Błasiok et al., 2023; Globus-Harris et al., 2023), which limits their applicability to real-world algorithms based on finite training samples. Furthermore, only a few theoretical results explicitly connect calibration error with concrete learning algorithms (Hansen et al., 2024; Błasiok et al., 2023). As a result, a key question remains unresolved: What types of learning algorithms can achieve both high predictive accuracy and strong calibration guarantees in practice? To address this gap, we focus on the smooth calibration error (CE) (Błasiok et al., 2023; Foster & Hart, 2",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_033_ev_009",
+      "page_number": 7,
+      "section_id": "paper_033_iclr_2026_proceedings_sec_4_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_033_iclr_2026_proceedings_chunk_0013",
+      "evidence_mode": "quote",
+      "excerpt": "We next consider kernel boosting (Wei et al., 2017), where the functional gradient is approximated by functions in an RKHS. Let ( H , ⟨· , ·⟩ ) be an RKHS associated with the kernel k : X ×X → R . The H functional gradient over the training dataset is approximated as (cid:68) (cid:69) T ∇ L ( g ) argmax ∇ L ( g ( t ) ) ,ϕ = k g n , g n L ( S ) ∥T ∇ L ( g ) ∥ ϕ ∈H , ∥ ϕ ∥ H ≤ 1 2 n k g n H where T ∇ L ( g ) := 1 (cid:80) n k ( X , · ) ∇ ℓ ( σ ( g ( X )) ,Y )) is the empirical kernel operator. In k g n n i =1 i g ent i i kernel boosting, we set h = −T ∇ L ( g ( t ) ) in Eq. (4) and use the update rule: t k g n g ( t +1) = g ( t ) − w T ∇ L ( g ( t ) ) . t k g n\n\nTo analyze this, we introduce the following normalized margin assumption: Assumption 3. Given a dataset S , there exists a function ϕ ∈ H and a constant γ > 0 such that tr for all ( X ,Y ) ∈ S , (2 Y − 1) ϕ ( X ) ≥ γ . i i tr i i\n\n",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_033_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_033_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_033_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_033_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_033_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_033_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_033_ev_002"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_033_ev_001"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到random_seed披露。",
+      "evidence_ids": [
+        "paper_033_ev_007"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_033_ev_008"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_033_ev_009"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

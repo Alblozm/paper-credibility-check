@@ -1,0 +1,3324 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-911c28bd5c1fa146",
+  "paper_version_id": "paper_031_iclr_2026_proceedings",
+  "pdf_sha256": "009272a661a93100f6e776ab83f5cd2957a81e6a0b0e4e5d53633dfd9f93bd80",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "1c735898c9fb67987e6c7948f17e89dbfc0f75ccf881ec336014c04e3d461b93",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.254385964912281,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.7631578947368425,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 76,
+        "extracted_count": 76,
+        "parsed_count": 51,
+        "queried_count": 51,
+        "matched_count": 16,
+        "metadata_conflict_count": 2,
+        "unverified_count": 14,
+        "parse_failed_count": 25,
+        "not_checked_count": 0,
+        "query_failed_count": 19,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/002a6bef26174b590e4eab95b63feb1b-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:49:39.410239Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-1",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Qwen technical report, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Qwen+technical+report%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:49:18.969582Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "QWEN-SIMPLIFY: EXPLORING SENTENCE SIMPLIFICATION VIA QWEN-BASED REINFORCEMENT LEARNING PARADIGM",
+            "authors": [
+              "Zhou",
+              "Li",
+              "Huang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.36227/techrxiv.177005246.64929154/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.177005246.64929154/v1",
+            "title_similarity": 0.3
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Technical Report. Incubation Program 2023",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.4160/cip.2024.01.010",
+            "source_url": "https://doi.org/10.4160/cip.2024.01.010",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "TIMSS 2023 Longitudinal Technical Report (Addendum to the TIMSS 2023 Technical Report)",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.6017/lse.tpisc.timss.de4812",
+            "source_url": "https://doi.org/10.6017/lse.tpisc.timss.de4812",
+            "title_similarity": 0.41818181818181815
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Final Technical Report",
+            "authors": [
+              "Soll"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2172/2234238",
+            "source_url": "https://doi.org/10.2172/2234238",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Qwen-VL2 Model with NEFTune technique For Medical Report Generation",
+            "authors": [
+              "Yu",
+              "Shi",
+              "Tang",
+              "Zheng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iscait64916.2025.11010582",
+            "source_url": "https://doi.org/10.1109/iscait64916.2025.11010582",
+            "title_similarity": 0.4731182795698925
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:18.966319Z",
+        "response_sha256": "815783761b9e5cc8aa4ca72d38cacbd6149a36897f758dbe57c8cadc339e63f4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Qwen+technical+report%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:18.969582Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Qwen2.5-vl technical report",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Qwen2.5-vl+technical+report&rows=5",
+        "checked_at": "2026-10-09T04:49:19.235136Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 2: OCR comparison of Pytesseract and Qwen2-VL-2B outputs on a meme image.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3736/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3736/fig-2",
+            "title_similarity": 0.26666666666666666
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Enhancing Zero-Shot Visual Reasoning with Qwen2-VL on CLEVR",
+            "authors": [
+              "Liu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1051/itmconf/20268901011",
+            "source_url": "https://doi.org/10.1051/itmconf/20268901011",
+            "title_similarity": 0.2558139534883721
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "DQTP: A Robot Autonomous Task Planner in Open Environments Based on Qwen2-VL model",
+            "authors": [
+              "Qu",
+              "Hu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3778886.3778903",
+            "source_url": "https://doi.org/10.1145/3778886.3778903",
+            "title_similarity": 0.2037037037037037
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Vision-Language-Action Framework for End-to-End Robotic Manipulation Using Qwen2-VL-Instruct",
+            "authors": [
+              "Kashkash",
+              "Guizani"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.1145/3787279.3787314",
+            "source_url": "https://doi.org/10.1145/3787279.3787314",
+            "title_similarity": 0.19834710743801653
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Research on Multimodal Narrative Generation of ICH Oral Histories Based on Qwen2-VL",
+            "authors": [
+              "Liu",
+              "Xu",
+              "Qiao",
+              "Ye"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/caibda70336.2026.11621437",
+            "source_url": "https://doi.org/10.1109/caibda70336.2026.11621437",
+            "title_similarity": 0.14545454545454545
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:19.233459Z",
+        "response_sha256": "a0e7f85ee83efe31d7444420e97b35c36550e9fee8d5bab00b641936c7d11696",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Qwen2.5-vl+technical+report&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:19.235136Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-4",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-4",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Seeclick: Harnessing gui grounding for advanced visual gui agents, 2024.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Seeclick%3A+Harnessing+gui+grounding+for+advanced+visual+gui+agents%2C+2024.&rows=5",
+        "checked_at": "2026-10-09T04:49:21.131571Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:21.131518Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Seeclick%3A+Harnessing+gui+grounding+for+advanced+visual+gui+agents%2C+2024.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:21.131571Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-5",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gemini+2.5%3A+Pushing+the+frontier+with+advanced+reasoning%2C+multimodality%2C+long+context%2C+and+next+generation+agentic+capabilities&rows=5",
+        "checked_at": "2026-10-09T04:49:21.135679Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:21.135624Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gemini+2.5%3A+Pushing+the+frontier+with+advanced+reasoning%2C+multimodality%2C+long+context%2C+and+next+generation+agentic+capabilities&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:21.135679Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-7",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Generalized parametric contrastive learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Generalized+parametric+contrastive+learning&rows=5",
+        "checked_at": "2026-10-09T04:49:21.308732Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Generalized Parametric Contrastive Learning_supp1-3278694.pdf",
+            "authors": [
+              "Cui"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2023.3278694/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3278694/mm1",
+            "title_similarity": 0.8269230769230769
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Generalized Parametric Contrastive Learning",
+            "authors": [
+              "Cui",
+              "Zhong",
+              "Tian",
+              "Liu",
+              "Yu",
+              "Jia"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/tpami.2023.3278694",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3278694",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Generalized Semantic Contrastive Learning Via Embedding Side Information for Few-Shot Object Detection_supp1-3560033.pdf",
+            "authors": [
+              "Chen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2025.3560033/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2025.3560033/mm1",
+            "title_similarity": 0.4539877300613497
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contrastive Learning for Semi-Supervised Deep Regression With Generalized Ordinal Rankings From Spectral Seriation_supp1-3635904.pdf",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2025.3635904/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2025.3635904/mm1",
+            "title_similarity": 0.22857142857142856
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Contrastive Prototype-Guided Generation for Generalized Zero-Shot Learning",
+            "authors": [
+              "Wang",
+              "Mao",
+              "Guo",
+              "Chen"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4545107",
+            "source_url": "https://doi.org/10.2139/ssrn.4545107",
+            "title_similarity": 0.39316239316239315
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:21.307069Z",
+        "response_sha256": "4dc0c3977d451e8433864dc19d3a83af3be7cb3be41e889a7916c20ecbd94aef",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Generalized+parametric+contrastive+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:21.308732Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-8",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An image is worth 16x16 words: Transformers for image recognition at scale, 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+image+is+worth+16x16+words%3A+Transformers+for+image+recognition+at+scale%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:49:20.215997Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "An Image Equals 16x16 Words: Scaling Image Recogni:on with Transformers",
+            "authors": [
+              "Beyer",
+              "Alexy"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5180447",
+            "source_url": "https://doi.org/10.2139/ssrn.5180447",
+            "title_similarity": 0.6081081081081081
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "DECIMER 1.0: Deep Learning for Chemical Image Recognition using Transformers",
+            "authors": [
+              "Rajan",
+              "Zielesny",
+              "Steinbeck"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.26434/chemrxiv-2021-9j7wg-v2",
+            "source_url": "https://doi.org/10.26434/chemrxiv-2021-9j7wg-v2",
+            "title_similarity": 0.39215686274509803
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "DECIMER 1.0: Deep Learning for Chemical Image Recognition using Transformers",
+            "authors": [
+              "Rajan",
+              "Zielesny",
+              "Steinbeck"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.26434/chemrxiv.14479287.v1",
+            "source_url": "https://doi.org/10.26434/chemrxiv.14479287.v1",
+            "title_similarity": 0.39215686274509803
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Tensor-to-Image: Image-to-Image Translation with Vision Transformers",
+            "authors": [
+              "Gunduc"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.36227/techrxiv.16727140",
+            "source_url": "https://doi.org/10.36227/techrxiv.16727140",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Tensor-to-Image: Image-to-Image Translation with Vision Transformers",
+            "authors": [
+              "Gunduc"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.36227/techrxiv.16727140.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.16727140.v1",
+            "title_similarity": 0.4
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:20.214603Z",
+        "response_sha256": "42a4f14e5fe1c9b5304802348b7ec4d26b26d4baa97fc322ec2be9448fb6ec2e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+image+is+worth+16x16+words%3A+Transformers+for+image+recognition+at+scale%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:20.215997Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-10",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-10",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Multimodal web navigation with instruction-finetuned foundation models, 2024.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Multimodal+web+navigation+with+instruction-finetuned+foundation+models%2C+2024.&rows=5",
+        "checked_at": "2026-10-09T04:49:23.147075Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:23.147011Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Multimodal+web+navigation+with+instruction-finetuned+foundation+models%2C+2024.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:23.147075Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Memory forcing: Spatio-temporal memory for consistent scene generation on minecraft",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Memory+forcing%3A+Spatio-temporal+memory+for+consistent+scene+generation+on+minecraft&rows=5",
+        "checked_at": "2026-10-09T04:49:23.452591Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "SCSV: Spatial-temporal Consistent Dynamic 3D Scene Generation from Sparse Views_supp1-3671692.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tip.2026.3671692/mm1",
+            "source_url": "https://doi.org/10.1109/tip.2026.3671692/mm1",
+            "title_similarity": 0.5617977528089888
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "SCSV: Spatial-temporal Consistent Dynamic 3D Scene Generation from Sparse Views_supp2-3671692.mp4",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tip.2026.3671692/mm2",
+            "source_url": "https://doi.org/10.1109/tip.2026.3671692/mm2",
+            "title_similarity": 0.5393258426966292
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Context as Memory: Scene-Consistent Interactive Long Video Generation with Memory Retrieval",
+            "authors": [
+              "Yu",
+              "Bai",
+              "Qin",
+              "Liu",
+              "Wang",
+              "Wan",
+              "Zhang",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3757377.3763833",
+            "source_url": "https://doi.org/10.1145/3757377.3763833",
+            "title_similarity": 0.5348837209302325
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "VMem: Consistent Interactive Video Scene Generation with Surfel-Indexed View Memory",
+            "authors": [
+              "Li",
+              "Torr",
+              "Vedaldi",
+              "Jakab"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iccv51701.2025.02383",
+            "source_url": "https://doi.org/10.1109/iccv51701.2025.02383",
+            "title_similarity": 0.45121951219512196
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.3030/715714",
+            "source_url": "https://doi.org/10.3030/715714",
+            "title_similarity": 0.0
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:23.448960Z",
+        "response_sha256": "03073c00dc874aa06e0468dcaaf0a1e86131afd9d5713836227f086e87189b21",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Memory+forcing%3A+Spatio-temporal+memory+for+consistent+scene+generation+on+minecraft&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:23.452591Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-13",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-13",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-14",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-14",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Guided point contrastive learning for semi-supervised point cloud semantic segmentation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Guided+point+contrastive+learning+for+semi-supervised+point+cloud+semantic+segmentation&rows=5",
+        "checked_at": "2026-10-09T04:49:24.298173Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:24.298109Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Guided+point+contrastive+learning+for+semi-supervised+point+cloud+semantic+segmentation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:24.298173Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-19",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-21",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-21",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-22",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-22",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Step-dpo: Stepwise preference optimization for long-chain reasoning of llms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Step-dpo%3A+Stepwise+preference+optimization+for+long-chain+reasoning+of+llms&rows=5",
+        "checked_at": "2026-10-09T04:49:26.308132Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:26.308052Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Step-dpo%3A+Stepwise+preference+optimization+for+long-chain+reasoning+of+llms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:26.308132Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-23",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-23",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Ko, Sangeun Oh, and Insik Shin",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ko%2C+Sangeun+Oh%2C+and+Insik+Shin&rows=5",
+        "checked_at": "2026-10-09T04:49:26.419245Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:26.419167Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ko%2C+Sangeun+Oh%2C+and+Insik+Shin&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:26.419245Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-24",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Blip-2: Bootstrapping language-image pre-training with frozen vision encoders and large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Blip-2%3A+Bootstrapping+language-image+pre-training+with+frozen+vision+encoders+and+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:49:25.549824Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "FLAME: Frozen Large Language Models Enable Data-Efficient Language-Image Pre-training",
+            "authors": [
+              "Cao",
+              "Wei",
+              "Ma"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/cvpr52734.2025.00386",
+            "source_url": "https://doi.org/10.1109/cvpr52734.2025.00386",
+            "title_similarity": 0.34408602150537637
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "RA-BLIP: Multimodal Adaptive Retrieval-Augmented Bootstrapping Language-Image Pre-Training",
+            "authors": [
+              "Ding",
+              "Ma",
+              "Qin",
+              "Wu",
+              "Li",
+              "Nie"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/tmm.2025.3599070",
+            "source_url": "https://doi.org/10.1109/tmm.2025.3599070",
+            "title_similarity": 0.49214659685863876
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Bootstrapping Vision-Language Learning with Decoupled Language Pre-training",
+            "authors": [
+              "Jian",
+              "Gao",
+              "Vosoughi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-0004",
+            "source_url": "https://doi.org/10.52202/075280-0004",
+            "title_similarity": 0.4519774011299435
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multimodal understanding of interior construction scenes based on the bootstrapping language-image pre-training (BLIP) model",
+            "authors": [
+              "Wu",
+              "Fang",
+              "Fang",
+              "Lian",
+              "Yang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.kscej.2026.100705",
+            "source_url": "https://doi.org/10.1016/j.kscej.2026.100705",
+            "title_similarity": 0.4642857142857143
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning Efficient Feature Adapters for Vision-Language Models",
+            "authors": [
+              "Zhang",
+              "Gao"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.1007/978-3-031-94969-2_7",
+            "source_url": "https://doi.org/10.1007/978-3-031-94969-2_7",
+            "title_similarity": 0.43902439024390244
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:25.548312Z",
+        "response_sha256": "bb594e210962c57009bedbca387e9a469e4858892ccd2597efb6d21a77ca270d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Blip-2%3A+Bootstrapping+language-image+pre-training+with+frozen+vision+encoders+and+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:25.549824Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-25",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the effects of data scale on computer control agents",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+effects+of+data+scale+on+computer+control+agents&rows=5",
+        "checked_at": "2026-10-09T04:49:28.086155Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "On the Effects of Data Scale on UI Control Agents",
+            "authors": [
+              "Li",
+              "Bishop",
+              "Li",
+              "Rawles",
+              "Campbell-Ajala",
+              "Tyamagundlu",
+              "Riva"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2925",
+            "source_url": "https://doi.org/10.52202/079017-2925",
+            "title_similarity": 0.9230769230769231
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Organizational Control for Data Mining with Large Numbers of Agents",
+            "authors": [
+              "Lesser"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1007/978-3-642-36288-0_1",
+            "source_url": "https://doi.org/10.1007/978-3-642-36288-0_1",
+            "title_similarity": 0.3114754098360656
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Control of Large-Scale Cyber-Physical Systems with Agents Having Various Dynamics",
+            "authors": [
+              "Sakurama"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/tbdata.2017.2664892",
+            "source_url": "https://doi.org/10.1109/tbdata.2017.2664892",
+            "title_similarity": 0.20588235294117646
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Effects of Agents’ Embodiment and Robot Anxiety Scale on Social Priming",
+            "authors": [
+              "Koda",
+              "Kikuzawa"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.5220/0009144202660271",
+            "source_url": "https://doi.org/10.5220/0009144202660271",
+            "title_similarity": 0.464
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep learning for automatic quality control and computer-aided diagnosis in neuroimaging using a large-scale clinical data warehouse",
+            "authors": [
+              "Loizillon"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/283337b0zad45z454czb562z99ce565b4bfc",
+            "source_url": "https://doi.org/10.70675/283337b0zad45z454czb562z99ce565b4bfc",
+            "title_similarity": 0.24598930481283424
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:28.083554Z",
+        "response_sha256": "3fef7e2167f22c9724a39e464903a03c6c02a346443ba3b52c1006858860dc6b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+effects+of+data+scale+on+computer+control+agents&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:28.086155Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-26",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-26",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-27",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Perception, reason, think, and plan: A survey on large multimodal reasoning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Perception%2C+reason%2C+think%2C+and+plan%3A+A+survey+on+large+multimodal+reasoning+models&rows=5",
+        "checked_at": "2026-10-09T04:49:28.435159Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:28.435095Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Perception%2C+reason%2C+think%2C+and+plan%3A+A+survey+on+large+multimodal+reasoning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:28.435159Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-28",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-28",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Moe-llava: Mixture of experts for large vision-language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Moe-llava%3A+Mixture+of+experts+for+large+vision-language+models&rows=5",
+        "checked_at": "2026-10-09T04:49:26.530494Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+            "authors": [
+              "Lin",
+              "Tang",
+              "Ye",
+              "Huang",
+              "Zhang",
+              "Pang",
+              "Jin",
+              "Ning",
+              "Luo",
+              "Yuan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/tmm.2026.3654458",
+            "source_url": "https://doi.org/10.1109/tmm.2026.3654458",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards Robust and Scalable Mixture of Experts Architectures for Large Language and Vision Models",
+            "authors": [
+              "Yousra",
+              "Fawziya",
+              "Gamal"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/4764",
+            "source_url": "https://doi.org/10.31224/4764",
+            "title_similarity": 0.620253164556962
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multilayer Perceptron Block with Mixture of Experts (MoE) and SwiGLU",
+            "authors": [
+              "Grigorov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/979-8-8688-2297-1_8",
+            "source_url": "https://doi.org/10.1007/979-8-8688-2297-1_8",
+            "title_similarity": 0.4881889763779528
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Mathematical Perspectives on Large-Scale Mixture of Experts in Foundation Language and Vision Models",
+            "authors": [
+              "Tabassum",
+              "Imane",
+              "Hafeez",
+              "Gamal"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5335797",
+            "source_url": "https://doi.org/10.2139/ssrn.5335797",
+            "title_similarity": 0.5838509316770186
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Med-MoE: Mixture of Domain-Specific Experts for Lightweight Medical Vision-Language Models",
+            "authors": [
+              "Jiang",
+              "Zheng",
+              "Zhang",
+              "Jin",
+              "Yuan",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-emnlp.221",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.221",
+            "title_similarity": 0.6933333333333334
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:26.528644Z",
+        "response_sha256": "e3319e6078af9ac330242ae20c12be43549c435db176c7c76f0c2f4643d5596e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Moe-llava%3A+Mixture+of+experts+for+large+vision-language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:26.530494Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-30",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Visual instruction tuning with large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Visual+instruction+tuning+with+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:49:27.422029Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fine-tuning multimodal large language models for medical visual question answering",
+            "authors": [
+              "Mungalpara"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.62791/20485",
+            "source_url": "https://doi.org/10.62791/20485",
+            "title_similarity": 0.4925373134328358
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Instruction Tuning on Large Language Models to Improve Reasoning Performance",
+            "authors": [
+              "Vaillancourt",
+              "Thompson"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.171778765.53860614/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.171778765.53860614/v1",
+            "title_similarity": 0.640625
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation_supp1-3656374.pdf",
+            "authors": [
+              "Gong"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tevc.2026.3656374/mm1",
+            "source_url": "https://doi.org/10.1109/tevc.2026.3656374/mm1",
+            "title_similarity": 0.5584415584415584
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Large Language Models for Text Classification: From Zero-Shot Learning to Instruction-Tuning",
+            "authors": [
+              "Chae",
+              "Davidson"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31235/osf.io/sthwk",
+            "source_url": "https://doi.org/10.31235/osf.io/sthwk",
+            "title_similarity": 0.2937062937062937
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Large Language Models for Text Classification: From Zero-Shot Learning to Instruction-Tuning",
+            "authors": [
+              "Davidson",
+              "Chae"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31235/osf.io/sthwk_v2",
+            "source_url": "https://doi.org/10.31235/osf.io/sthwk_v2",
+            "title_similarity": 0.2937062937062937
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:27.420713Z",
+        "response_sha256": "e595cf9643009b2dcda9de4f40e33a0755d1d6985ae2022a22a63766adddabf1",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Visual+instruction+tuning+with+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:27.422029Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-31",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Infigui-r1: Advancing multimodal gui agents from reactive actors to deliberative reasoners, 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Infigui-r1%3A+Advancing+multimodal+gui+agents+from+reactive+actors+to+deliberative+reasoners%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:49:29.355710Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:29.355649Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Infigui-r1%3A+Advancing+multimodal+gui+agents+from+reactive+actors+to+deliberative+reasoners%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:29.355710Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-32",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-32",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-33",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-33",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-34",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-34",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-35",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-35",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gui-r1 : A generalist r1-style vision-language action model for gui agents, 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gui-r1+%3A+A+generalist+r1-style+vision-language+action+model+for+gui+agents%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:49:29.868818Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:29.868768Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gui-r1+%3A+A+generalist+r1-style+vision-language+action+model+for+gui+agents%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:29.868818Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-36",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pfenet++: Boostingfew-shotsemanticsegmentationwiththenoise-filteredcontext-awarepriormask",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pfenet%2B%2B%3A+Boostingfew-shotsemanticsegmentationwiththenoise-filteredcontext-awarepriormask&rows=5",
+        "checked_at": "2026-10-09T04:49:29.686574Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Pfenet: Towards Precise Feature Extraction from Sparse Point Cloud for 3d Object Detection",
+            "authors": [
+              "Li",
+              "Li",
+              "Gao",
+              "Gao",
+              "Wu",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4875053",
+            "source_url": "https://doi.org/10.2139/ssrn.4875053",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "PFENet: Physics-Informed Frequency-Enhanced YOLO for Object Detection in Hazy Scenes",
+            "authors": [
+              "Bai",
+              "Zhou",
+              "Yang",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3390/app16104635",
+            "source_url": "https://doi.org/10.3390/app16104635",
+            "title_similarity": 0.28402366863905326
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Classification of breast cancer histology images using MSMV-PFENet",
+            "authors": [
+              "Liu",
+              "Feng",
+              "Chen",
+              "Liu",
+              "Qu",
+              "Yang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1038/s41598-022-22358-y",
+            "source_url": "https://doi.org/10.1038/s41598-022-22358-y",
+            "title_similarity": 0.07894736842105263
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "PFENet: Towards precise feature extraction from sparse point cloud for 3D object detection",
+            "authors": [
+              "Li",
+              "Li",
+              "Gao",
+              "Gao",
+              "Wu",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107144",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107144",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "PFENet++: Boosting Few-Shot Semantic Segmentation With the Noise-Filtered Context-Aware Prior Mask",
+            "authors": [
+              "Luo",
+              "Tian",
+              "Zhang",
+              "Yu",
+              "Tang",
+              "Jia"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/tpami.2023.3329725",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3329725",
+            "title_similarity": 0.9502762430939227
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:29.683482Z",
+        "response_sha256": "8cb14c0d7d959281c43a099bea6c1d50a5894a28676aa359a5ede592445cb625",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pfenet%2B%2B%3A+Boostingfew-shotsemanticsegmentationwiththenoise-filteredcontext-awarepriormask&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:29.686574Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-37",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-37",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Boosting few-shot 3d point cloud segmentation via query-guided enhancement",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Boosting+few-shot+3d+point+cloud+segmentation+via+query-guided+enhancement&rows=5",
+        "checked_at": "2026-10-09T04:49:29.323453Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Boosting Few-shot 3D Point Cloud Segmentation via Query-Guided Enhancement",
+            "authors": [
+              "Ning",
+              "Tian",
+              "Lu",
+              "Pei"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1145/3581783.3612287",
+            "source_url": "https://doi.org/10.1145/3581783.3612287",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Generalized few-shot 3D point cloud segmentation",
+            "authors": [
+              "Yang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/179000",
+            "source_url": "https://doi.org/10.32657/10356/179000",
+            "title_similarity": 0.6229508196721312
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Few-shot 3D point cloud Segmentation via Dynamic Multi-scale Sparse Attention with Adaptive Gated Context Enhancement",
+            "authors": [
+              "Chen",
+              "Li",
+              "Lu",
+              "Wu",
+              "Li",
+              "Zou"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6022345",
+            "source_url": "https://doi.org/10.2139/ssrn.6022345",
+            "title_similarity": 0.6282722513089005
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Few-Shot 3D Point Cloud Segmentation via Relation Consistency-Guided Heterogeneous Prototypes",
+            "authors": [
+              "Wei",
+              "Lang",
+              "Xu",
+              "Liang",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/tmm.2025.3557699",
+            "source_url": "https://doi.org/10.1109/tmm.2025.3557699",
+            "title_similarity": 0.6586826347305389
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FESSNet: Boosting Few-Shot Point Cloud Semantic Segmentation with Feature-Enhanced Self-Support Network",
+            "authors": [
+              "Xu",
+              "Xinyi",
+              "Weichao",
+              "Xie"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5964759",
+            "source_url": "https://doi.org/10.2139/ssrn.5964759",
+            "title_similarity": 0.6590909090909091
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:29.321954Z",
+        "response_sha256": "45e015fa8af318ee2bf272f4647dcc5284e97ded450e669b0f7cd8ce15a7d14a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Boosting+few-shot+3d+point+cloud+segmentation+via+query-guided+enhancement&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:29.323453Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-38",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-38",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Screenagent: A vision language model-driven computer control agent",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Screenagent%3A+A+vision+language+model-driven+computer+control+agent&rows=5",
+        "checked_at": "2026-10-09T04:49:31.225516Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:31.225464Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Screenagent%3A+A+vision+language+model-driven+computer+control+agent&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:31.225516Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-39",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-39",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gpt-4 technical report, 2024.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2024.&rows=5",
+        "checked_at": "2026-10-09T04:49:32.107295Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:32.107218Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2024.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:32.107295Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-41",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-41",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Scalable language model with generalized continual learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Scalable+language+model+with+generalized+continual+learning&rows=5",
+        "checked_at": "2026-10-09T04:49:32.491453Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:32.491396Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Scalable+language+model+with+generalized+continual+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:32.491453Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-42",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-42",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-43",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-43",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mitigating object hallucinations via sentence-level early intervention",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mitigating+object+hallucinations+via+sentence-level+early+intervention&rows=5",
+        "checked_at": "2026-10-09T04:49:32.658016Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:32.657945Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mitigating+object+hallucinations+via+sentence-level+early+intervention&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:32.658016Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-44",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-44",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Agent q: Advanced reasoning and learning for autonomous ai agents, 2024.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Agent+q%3A+Advanced+reasoning+and+learning+for+autonomous+ai+agents%2C+2024.&rows=5",
+        "checked_at": "2026-10-09T04:49:31.849365Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Causal Learning and Reasoning in Multi-Agent Reinforcement Learning",
+            "authors": [
+              "Briglia"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.65109/rzto8815",
+            "source_url": "https://doi.org/10.65109/rzto8815",
+            "title_similarity": 0.4117647058823529
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards combining commonsense reasoning and knowledge acquisition to guide deep learning",
+            "authors": [
+              "Sridharan",
+              "Mota"
+            ],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.1007/s10458-022-09584-4",
+            "source_url": "https://doi.org/10.1007/s10458-022-09584-4",
+            "title_similarity": 0.35668789808917195
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Building AI Agents for Autonomous Decision-Making",
+            "authors": [
+              "R.",
+              "R.",
+              "Abey"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.4018/979-8-3373-2008-3.ch006",
+            "source_url": "https://doi.org/10.4018/979-8-3373-2008-3.ch006",
+            "title_similarity": 0.423728813559322
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Real-Time Cognitive Reasoning Architecture for Continual Learning and Decision Making in Autonomous Multi-Agent Systems",
+            "authors": [
+              "MuhsnHasan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0014201400004932",
+            "source_url": "https://doi.org/10.5220/0014201400004932",
+            "title_similarity": 0.49473684210526314
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reasoning about Textual Similarity in a Web-Based Information Access System",
+            "authors": [
+              "Cohen"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1023/a:1010031208520",
+            "source_url": "https://doi.org/10.1023/a:1010031208520",
+            "title_similarity": 0.3333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:31.847908Z",
+        "response_sha256": "e3bc55f1675045b04aa4fa05f5ee920c453a01f68a05d317bd0582974baf4968",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Agent+q%3A+Advanced+reasoning+and+learning+for+autonomous+ai+agents%2C+2024.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:31.849365Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-45",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-45",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Ui-tars: Pioneering automated gui interaction with native agents, 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ui-tars%3A+Pioneering+automated+gui+interaction+with+native+agents%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:49:34.025640Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:34.025567Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ui-tars%3A+Pioneering+automated+gui+interaction+with+native+agents%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:34.025640Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-46",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-46",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning transferable visual models from natural language supervision, 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+transferable+visual+models+from+natural+language+supervision%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:49:33.290635Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "CLIP-FSSC: A transferable visual model for fish and shrimp species classification based on natural language supervision",
+            "authors": [
+              "Dai",
+              "Shao",
+              "Gong",
+              "Jing",
+              "Chen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.aquaeng.2024.102460",
+            "source_url": "https://doi.org/10.1016/j.aquaeng.2024.102460",
+            "title_similarity": 0.6354166666666666
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adaptive Compression : From Visual Data to Efficient and Transferable Models",
+            "authors": [
+              "Spadaro"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/ae4a7203z4b30z4b6azb64dz25b215b2f878",
+            "source_url": "https://doi.org/10.70675/ae4a7203z4b30z4b6azb64dz25b215b2f878",
+            "title_similarity": 0.32432432432432434
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Object Recognition and Visual Question Answering with Limited Supervision: From Episodic Learning to Foundational Models",
+            "authors": [
+              "Zarei"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2026-17160",
+            "source_url": "https://doi.org/10.22215/etd/2026-17160",
+            "title_similarity": 0.37305699481865284
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning to generate structured queries from natural language with indirect supervision",
+            "authors": [
+              "Bai",
+              "yu",
+              "Wu",
+              "Wang",
+              "Wang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.csl.2020.101185",
+            "source_url": "https://doi.org/10.1016/j.csl.2020.101185",
+            "title_similarity": 0.6583850931677019
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Understanding Surgical Triplet Videos Through Transferable Visual Models from Natural Language Supervision",
+            "authors": [
+              "Li",
+              "Wang",
+              "Xie",
+              "Wang",
+              "Ye",
+              "Savi",
+              "Hu",
+              "Pang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/978-981-95-5764-6_38",
+            "source_url": "https://doi.org/10.1007/978-981-95-5764-6_38",
+            "title_similarity": 0.7444444444444445
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:33.289180Z",
+        "response_sha256": "070c5411c05a3199700de4a528fe502f74dc87f064f18ab2123c4d699296b3ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+transferable+visual+models+from+natural+language+supervision%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:33.290635Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-49",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mobilegui-rl: Advancing mobile gui agent through reinforcement learning in online environment, 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mobilegui-rl%3A+Advancing+mobile+gui+agent+through+reinforcement+learning+in+online+environment%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:49:33.532495Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BANK-RL: A Multi-Agent Hierarchical Reinforcement Learning Framework for Banks",
+            "authors": [
+              "Noguer I Alonso"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5071840",
+            "source_url": "https://doi.org/10.2139/ssrn.5071840",
+            "title_similarity": 0.5517241379310345
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multi-Agent RL (MARL) Algorithms",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1201/9781032659800-5",
+            "source_url": "https://doi.org/10.1201/9781032659800-5",
+            "title_similarity": 0.2047244094488189
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Empirical Analysis of Destiny Dominance in Multi-Agent Systems with Adversarial RL Agent",
+            "authors": [
+              "Dinda"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/5306",
+            "source_url": "https://doi.org/10.31224/5306",
+            "title_similarity": 0.33513513513513515
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Advancing Cooperative Decision Making in Multi-Agent Reinforcement Learning",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-hdl169606",
+            "source_url": "https://doi.org/10.14711/thesis-hdl169606",
+            "title_similarity": 0.5348837209302325
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multi-Agent Deep Reinforcement Learning for Penetration Testing of IoT Devices through their Mobile Companion App",
+            "authors": [
+              "Pagano",
+              "Ceccato",
+              "Tonella",
+              "Merlo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.174114576.61410228/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.174114576.61410228/v1",
+            "title_similarity": 0.4380952380952381
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:33.531213Z",
+        "response_sha256": "fbdcd9ac7225b842701524d2b236b7ed0c73410fb640e7055f44cf11f5b21757",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mobilegui-rl%3A+Advancing+mobile+gui+agent+through+reinforcement+learning+in+online+environment%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:33.532495Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-50",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-50",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-51",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-51",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-52",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-52",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Karlsson, Bo An, Shuicheng Yan, and Zongqing Lu",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Karlsson%2C+Bo+An%2C+Shuicheng+Yan%2C+and+Zongqing+Lu&rows=5",
+        "checked_at": "2026-10-09T04:49:36.174726Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:36.174669Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Karlsson%2C+Bo+An%2C+Shuicheng+Yan%2C+and+Zongqing+Lu&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:36.174726Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-54",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-54",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Prior guided feature enrichment network for few-shot segmentation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Prior+guided+feature+enrichment+network+for+few-shot+segmentation&rows=5",
+        "checked_at": "2026-10-09T04:49:36.456471Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:36.456415Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Prior+guided+feature+enrichment+network+for+few-shot+segmentation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:36.456471Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-55",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-55",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-56",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-56",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-58",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-58",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-59",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-59",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-59",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-60",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-60",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Generalized decoupled learning for enhancing open-vocabulary dense perception",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Generalized+decoupled+learning+for+enhancing+open-vocabulary+dense+perception&rows=5",
+        "checked_at": "2026-10-09T04:49:36.545797Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "DeCLIP: Decoupled Learning for Open-Vocabulary Dense Perception",
+            "authors": [
+              "Wang",
+              "Chen",
+              "Li",
+              "Kang",
+              "Chen",
+              "Tian"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/cvpr52734.2025.01381",
+            "source_url": "https://doi.org/10.1109/cvpr52734.2025.01381",
+            "title_similarity": 0.8489208633093526
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Open-Vocabulary Mobile Manipulation Based on Double Relaxed Contrastive Learning with Dense Labeling_supp1-3522841.mp4",
+            "authors": [
+              "Yashima"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/lra.2024.3522841/mm1",
+            "source_url": "https://doi.org/10.1109/lra.2024.3522841/mm1",
+            "title_similarity": 0.24615384615384617
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "DeTAL: Open-Vocabulary Temporal Action Localization with Decoupled Networks_supp1-3395778.pdf",
+            "authors": [
+              "Song"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2024.3395778/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2024.3395778/mm1",
+            "title_similarity": 0.31952662721893493
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Reflective-Det: Enhancing Open-Vocabulary Detection via Introspective Chain-of-Thought and Dense Captioning",
+            "authors": [
+              "Wang",
+              "Liu",
+              "Ding",
+              "Xu",
+              "Zhao"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/dlcv69906.2026.11635693",
+            "source_url": "https://doi.org/10.1109/dlcv69906.2026.11635693",
+            "title_similarity": 0.5027322404371585
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "5. Vocabulary learning processes under the SBCA 81",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.3726/978-3-0351-0507-0/8",
+            "source_url": "https://doi.org/10.3726/978-3-0351-0507-0/8",
+            "title_similarity": 0.2698412698412698
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:36.544162Z",
+        "response_sha256": "10a6a791238be8a355ebd84a5f601c6ac92f3d2e771eb58d174312178b023c25",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Generalized+decoupled+learning+for+enhancing+open-vocabulary+dense+perception&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:36.545797Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-61",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-61",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-61",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-62",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-62",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-62",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-63",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-63",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-63",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-64",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-64",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-64",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-65",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-65",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-65",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-66",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-66",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-66",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Lisa++: An improved baseline for reasoning segmentation with large language model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Lisa%2B%2B%3A+An+improved+baseline+for+reasoning+segmentation+with+large+language+model&rows=5",
+        "checked_at": "2026-10-09T04:49:37.769372Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:37.769330Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Lisa%2B%2B%3A+An+improved+baseline+for+reasoning+segmentation+with+large+language+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:37.769372Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-68",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-68",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-68",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Visionzip: Longer is better but not necessary in vision language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Visionzip%3A+Longer+is+better+but+not+necessary+in+vision+language+models&rows=5",
+        "checked_at": "2026-10-09T04:49:39.259237Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:39.259165Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Visionzip%3A+Longer+is+better+but+not+necessary+in+vision+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:39.259237Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-69",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-69",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-69",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mobile-agent-v3: Fundamental agents for gui automation, 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mobile-agent-v3%3A+Fundamental+agents+for+gui+automation%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:49:37.469995Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Agents, Multi-agent Systems and Mobile Code",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/978-1-84628-647-6_2",
+            "source_url": "https://doi.org/10.1007/978-1-84628-647-6_2",
+            "title_similarity": 0.16
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Applications of Mobile Agents",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/978-1-84628-647-6_5",
+            "source_url": "https://doi.org/10.1007/978-1-84628-647-6_5",
+            "title_similarity": 0.2988505747126437
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Using of colleague learning mobile agents for protecting the confidentiality of mobile agents in a multi-agent environment",
+            "authors": [
+              "Ebrahimi"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.4314/jfas.v8i3s.240",
+            "source_url": "https://doi.org/10.4314/jfas.v8i3s.240",
+            "title_similarity": 0.4222222222222222
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Building generalizable mobile sensing and GUI operation agents",
+            "authors": [
+              "Dai"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/218901",
+            "source_url": "https://doi.org/10.32657/10356/218901",
+            "title_similarity": 0.35
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multi-Input Melanoma Classification using MobileNet-V3-Large Architecture",
+            "authors": [
+              "Aksoy"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.14313/jamris-2025-008",
+            "source_url": "https://doi.org/10.14313/jamris-2025-008",
+            "title_similarity": 0.2900763358778626
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:37.467186Z",
+        "response_sha256": "d2aa08316ca79d103d7afe62e5a2463c485c5077a048844d225d77cbdf66aa49",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mobile-agent-v3%3A+Fundamental+agents+for+gui+automation%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:37.469995Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-70",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-70",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-70",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Enhancing visual grounding for gui agents via selfevolutionary reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Enhancing+visual+grounding+for+gui+agents+via+selfevolutionary+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:49:39.409186Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:39.409105Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Enhancing+visual+grounding+for+gui+agents+via+selfevolutionary+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:39.409186Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-72",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-72",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-72",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-73",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-73",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-73",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-74",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-74",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-74",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-75",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-75",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-75",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_031_iclr_2026_proceedings_credibility-76",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_031_iclr_2026_proceedings_credibility-76",
+        "paper_reference_id": "ref-paper_031_iclr_2026_proceedings_credibility-76",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.7631578947368425
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 76,
+    "extracted_count": 76,
+    "parsed_count": 51,
+    "queried_count": 51,
+    "matched_count": 16,
+    "metadata_conflict_count": 2,
+    "unverified_count": 14,
+    "parse_failed_count": 25,
+    "not_checked_count": 0,
+    "query_failed_count": 19,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.848217Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

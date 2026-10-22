@@ -1,0 +1,44 @@
+[project]
+name = "paper-credibility-check-backend"
+version = "1.0.0"
+description = "Paper Credibility Check — backend API (field contract v0.4)"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "sqlalchemy>=2.0",
+    "httpx>=0.27",
+    "certifi>=2024.0.0",
+    "python-multipart>=0.0.9",
+    "pypdf>=5.0",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.5"]
+full = ["celery>=5.4", "redis>=5.0", "psycopg[binary]>=3.2"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.setuptools.package-data]
+app = ["rubrics/**/*.yaml", "rubrics/**/*.md", "credibility/rubrics/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+# Pydantic 模型的 `= []` 默认值是安全的（pydantic 会深拷贝），所以不启用 RUF012。
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008"]  # FastAPI 的 Depends()/File() 就是要在默认值里调用

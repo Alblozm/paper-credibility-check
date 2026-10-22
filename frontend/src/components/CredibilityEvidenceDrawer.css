@@ -1,0 +1,45 @@
+.cred-evidence-layer { position: fixed; inset: 0; z-index: 160; }
+.cred-evidence-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; background: rgba(22, 24, 29, .25); cursor: default; animation: cred-evidence-fade 180ms ease-out; }
+.cred-evidence-panel { position: absolute; inset: 0 0 0 auto; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; width: min(540px, 100vw); background: var(--paper); border-left: 1px solid var(--line-2); box-shadow: -16px 0 52px -24px rgba(22, 24, 29, .24); animation: cred-evidence-enter 240ms cubic-bezier(.22, .7, .3, 1); }
+.cred-evidence-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 25px 28px 22px; border-bottom: 1px solid var(--line); }
+.cred-evidence-eyebrow { margin-bottom: 6px; color: var(--ink-3); font-size: 11px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+.cred-evidence-header h2 { font-size: 27px; }
+.cred-evidence-close { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; color: var(--ink-2); border: 1px solid var(--line-2); border-radius: 50%; font-size: 26px; line-height: 1; transition: background 120ms ease, border-color 120ms ease; }
+.cred-evidence-close:hover { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
+.cred-evidence-body { overflow-y: auto; overscroll-behavior: contain; padding: 28px; }
+.cred-evidence-location { margin-bottom: 28px; color: var(--ink-3); }
+.cred-evidence-location .cred-evidence-page { margin-bottom: 6px; color: var(--accent); font-size: 23px; font-weight: 600; letter-spacing: -.025em; }
+.cred-evidence-location .cred-evidence-element { margin-top: 7px; color: var(--ink); font-weight: 600; }
+.cred-evidence-body h3 { margin-bottom: 10px; font-size: 12px; font-weight: 650; letter-spacing: .025em; }
+.cred-evidence-excerpt { margin-bottom: 27px; }
+.cred-evidence-excerpt blockquote { margin: 0; padding: 2px 0 2px 18px; border-left: 2px solid var(--accent-line); font-family: var(--serif); font-size: 20px; line-height: 1.65; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.cred-evidence-section { padding: 22px 0; border-top: 1px solid var(--line); }
+.cred-evidence-section:last-child { padding-bottom: 0; }
+.cred-evidence-confidence { color: var(--ink-2); text-transform: capitalize; }
+.cred-evidence-body .cred-evidence-note { margin-top: 10px; color: var(--ink-3); font-size: 13px; line-height: 1.65; }
+.cred-evidence-source-link { display: inline-flex; align-items: center; gap: 12px; min-height: 38px; margin-top: 14px; color: var(--accent); font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cred-evidence-source-link:hover { color: var(--accent-hover); }
+.cred-evidence-fetch { color: var(--accent); font-size: 13px; font-weight: 600; }
+.cred-evidence-fetch.is-incomplete { color: var(--amber); }
+.cred-evidence-source-meta { margin: 20px 0 24px; font-size: 13px; }
+.cred-evidence-source-meta > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 14px; padding: 8px 0; }
+.cred-evidence-source-meta dt { color: var(--ink-3); }
+.cred-evidence-source-meta dd { margin: 0; color: var(--ink-2); overflow-wrap: anywhere; }
+.cred-evidence-body .cred-evidence-association-heading { margin-bottom: 8px; }
+.cred-evidence-navigation { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 28px 20px; border-top: 1px solid var(--line); background: var(--paper); }
+.cred-evidence-navigation button { display: inline-flex; align-items: center; gap: 10px; min-height: 36px; color: var(--accent); font-size: 13px; font-weight: 600; }
+.cred-evidence-navigation button:hover:not(:disabled) { color: var(--accent-hover); }
+.cred-evidence-navigation button:disabled { color: var(--ink-4); cursor: default; }
+@keyframes cred-evidence-enter { from { transform: translateX(36px); opacity: .3; } to { transform: translateX(0); opacity: 1; } }
+@keyframes cred-evidence-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 480px) {
+  .cred-evidence-panel { border-left: 0; }
+  .cred-evidence-header, .cred-evidence-body { padding: 22px; }
+  .cred-evidence-navigation { padding: 15px 22px 18px; gap: 12px; }
+  .cred-evidence-navigation button { font-size: 12px; gap: 6px; }
+  .cred-evidence-source-meta > div { grid-template-columns: 112px minmax(0, 1fr); gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cred-evidence-backdrop, .cred-evidence-panel { animation: none; }
+  .cred-evidence-close { transition: none; }
+}

@@ -1,0 +1,355 @@
+{
+  "assessment_id": "assessment_ai_paper_020_openreview_2024_02_11",
+  "paper_version_id": "paper_020_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_020_openreview_2024_02_11",
+    "raw_output_sha256": "48b9693d4682f4673369bde38e129a5121a690dd4e3773cbed9f16fd8231cd8d"
+  },
+  "paper_summary": "Designing expressive Graph Neural Networks (GNNs) is an important topic in graph machine learning fields. Despite the existence of numerous approaches proposed to enhance GNNs based on Weisfeiler-Lehman (WL) tests, what GNNs can and cannot learn still lacks a deeper understanding.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Additionally, we introduce novel methods that can provably enhance GNNs' ability to capture complex dependencies and make complex predictions.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_020_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Experiments on both synthetic and real-world datasets demonstrate the effectiveness of our approaches.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_020_ev_004",
+        "paper_020_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.4,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.4/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Designing expressive Graph neural networks (GNNs) is an important topic in graph machine learning fields. ",
+    "正文可定位证据支持该维度判断：R ETHINKING AND E XTENDING THE P ROBABILISTIC I NFERENCE C APACITY OF GNN S Tuo Xu Lei Zou Wangxuan Institute of Computer Technology Wangxuan Institute of Computer Technology Peking University Peking University Beijing, China Beijing, China doujzc@stu.pku.edu.cn zoulei@pku.edu.cn",
+    "正文可定位证据支持该维度判断：We conduct two sets of experiments to empirically validate our results and verify the probabilistic inference capacity of our methods. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》在研究价值方面的正文支持是：Designing expressive Graph neural networks (GNNs) is an important topic in graph machine learning fields.  限制或边界证据是：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Designing expressive Graph neural networks (GNNs) is an important topic in graph machine learning fields. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_020_ev_001",
+        "paper_020_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》在可靠性与证据方面的正文支持是：R ETHINKING AND E XTENDING THE P ROBABILISTIC I NFERENCE C APACITY OF GNN S Tuo Xu Lei Zou Wangxuan Institute of Computer Technology Wangxuan Institute of Computer Technology Peking University Peking University Beijing, China Beijing, China doujzc@stu.pku.edu.cn zoulei@pku.edu.cn 限制或边界证据是：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：R ETHINKING AND E XTENDING THE P ROBABILISTIC I NFERENCE C APACITY OF GNN S Tuo Xu Lei Zou Wangxuan Institute of Computer Technology Wangxuan Institute of Computer Technology Peking University Peking University Beijing, China Beijing, China doujzc@stu.pku.edu.cn zoulei@pku.edu.cn"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_020_ev_003",
+        "paper_020_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》在原创性定位方面的正文支持是：We conduct two sets of experiments to empirically validate our results and verify the probabilistic inference capacity of our methods.  限制或边界证据是：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We conduct two sets of experiments to empirically validate our results and verify the probabilistic inference capacity of our methods. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_020_ev_004",
+        "paper_020_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》在清晰度与可用性方面的正文支持是：Graph neural networks (GNNs) are the dominant approaches for learning graph-structured data, among which message passing neural networks (MPNNs) are the most promising variants, demonstrating remarkable success across various domains.  限制或边界证据是：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Graph neural networks (GNNs) are the dominant approaches for learning graph-structured data, among which message passing neural networks (MPNNs) are the most promising variants, demonstrating remarkable success across various domains. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_020_ev_005",
+        "paper_020_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Rethinking and Extending the Probabilistic Inference Capacity of GNNs》在可复现性与透明度方面的正文支持是：Proof. Given G = ( V , E ) , the k -FWL at each layer evaluates (cid:16) Col ( l +1) ( u ,...,u ) = Hash Col ( l ) ( u ,...,u ) , 1 k 1 k (cid:110)(cid:110)(cid:16) (cid:17) (cid:111)(cid:111)(cid:17) Col ( l ) ( v,u ,...,u ) , Col ( l ) ( u ,v,...,u ) ,..., Col ( l ) ( u ,...,u… 限制或边界证据是：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Proof. Given G = ( V , E ) , the k -FWL at each layer evaluates (cid:16) Col ( l +1) ( u ,...,u ) = Hash Col ( l ) ( u ,...,u ) , 1 k 1 k (cid:110)(cid:110)(cid:16) (cid:17) (cid:111)(cid:111)(cid:17) Col ( l ) ( v,u ,...,u ) , Col ( l ) ( u ,v,...,u ) ,..., Col ( l ) ( u ,...,u…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29.…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_020_ev_006",
+        "paper_020_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_020_ev_001",
+      "page_number": 1,
+      "section_id": "paper_020_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Designing expressive Graph neural networks (GNNs) is an important topic in graph machine learning fields. Despite the existence of numerous approaches proposed to enhance GNNs based on Weisfeiler-Lehman (WL) tests, what GNNs can and cannot learn still lacks a deeper understanding. This paper adopts a fundamentally different approach to examine the expressive power of GNNs from a probabilistic perspective. By establishing connections between GNNs’ predictions and the central inference problems of probabilistic graphical models (PGMs), we can analyze previous GNN variants with a novel hierarchical framework and gain new insights into their node-level and link-level behaviors. Additionally, we introduce novel methods that can provably enhance GNNs’ ability to capture complex dependencies and make complex predictions. Experiments on both synthetic and real-world datasets demonstrate the effe",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "page_number": 43,
+      "section_id": "paper_020_openreview_2024_02_11_sec_k_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0060",
+      "evidence_mode": "quote",
+      "excerpt": "Proposition 26. MPNNs can at most 2-approximate p ( z | X ) for arbitrary G and i ∈ V . i G Proposition 27. k -GNNs can k -approximate p ( z | X ) for arbitrary G . i Proposition 28. ESANs with node marking policy can 3-approximate p ( z | X ) for arbitrary G . i Proposition 29. The GNN variants corresponding with SWL / CWL with k -clique simplex can k approximate p ( z | X ) . i Proposition 30. ID-GNNs (You et al., 2021) and Nested GNNs (Zhang & Li, 2021) can at most 2-approximate p ( z | X ) . i",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_020_ev_003",
+      "page_number": 1,
+      "section_id": "paper_020_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "R ETHINKING AND E XTENDING THE P ROBABILISTIC I NFERENCE C APACITY OF GNN S\n\nTuo Xu Lei Zou Wangxuan Institute of Computer Technology Wangxuan Institute of Computer Technology Peking University Peking University Beijing, China Beijing, China doujzc@stu.pku.edu.cn zoulei@pku.edu.cn",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_020_ev_004",
+      "page_number": 8,
+      "section_id": "paper_020_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "We conduct two sets of experiments to empirically validate our results and verify the probabilistic inference capacity of our methods. Firstly, we verify whether our proposed phantom nodes / edges\n\nframeworks can systematically help MPNNs to learn higher-order dependencies and joint posteriori as our theory implies. Secondly, we investigate whether MPNNs with expressiveness for complex distributions and posteriori can also help real-world node classification and link prediction tasks. Compared algorithms. Our phantom nodes / edges are frameworks for lifting the probabilistic inference capacities of general GNNs. We consider popular MPNNs GCN (Kipf & Welling, 2016b), SAGE (Hamilton et al., 2017) and GCNII (Chen et al., 2020a) on all tasks. For node classification tasks, we consider SPN (Qu et al., 2022), a recent GNN-CRF framework that also lifts GNNs’ probabilistic inference capacity. Fo",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_020_ev_005",
+      "page_number": 1,
+      "section_id": "paper_020_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Graph neural networks (GNNs) are the dominant approaches for learning graph-structured data, among which message passing neural networks (MPNNs) are the most promising variants, demonstrating remarkable success across various domains. The development of MPNNs can be classified into several distinct theoretical motivations. From the perspective of graph signal processing, MPNNs were proposed as a generalization of convolutions on non-Euclidean graph domains (Bruna et al., 2013). Also, MPNNs have been motivated by their connection to the Weisfeiler-Lehman (WL) graph isomorphism tests (Hamilton et al., 2017). At the same time, MPNNs were proposed by parameterizing mean-field inference in probabilistic graphical models (PGMs) (Dai et al., 2016). Although GNNs have been well studied, motivated and improved in terms of graph convolutions and WL tests, few works study GNN’s probabilistic infere",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_020_ev_006",
+      "page_number": 40,
+      "section_id": "paper_020_openreview_2024_02_11_sec_h_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_020_openreview_2024_02_11_chunk_0055",
+      "evidence_mode": "quote",
+      "excerpt": "Proof. Given G = ( V , E ) , the k -FWL at each layer evaluates (cid:16) Col ( l +1) ( u ,...,u ) = Hash Col ( l ) ( u ,...,u ) , 1 k 1 k (cid:110)(cid:110)(cid:16) (cid:17) (cid:111)(cid:111)(cid:17) Col ( l ) ( v,u ,...,u ) , Col ( l ) ( u ,v,...,u ) ,..., Col ( l ) ( u ,...,u ,v ) | v ∈ V . 2 k 1 k 1 k − 1\n\nIf we consider a fragment of the above procedure where we replace the last colors in each neighbor with the initial colors (cid:16) Col ( l +1) ( u ,...,u ) = Hash Col ( l ) ( u ,...,u ) , 1 k 1 k (cid:110)(cid:110)(cid:16) (cid:17) (cid:111)(cid:111)(cid:17) Col ( l ) ( v,u ,...,u ) , Col (0) ( u ,v,...,u ) ,..., Col (0) ( u ,...,u ,v ) | v ∈ N ( u ) . 2 k 1 k 1 k − 1 1\n\nNote that the neighbors N ( u ) are already encoded in Col (0) ( u ,v,... ) . Clearly, this variant is less 1 1 expressive than the original one. We can rewrite this variant to make it strictly corresponded to k −",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_020_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_020_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_020_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_020_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_020_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_020_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_020_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_020_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_020_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_020_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "assessment_id": "assessment_ai_paper_043_iclr_2026_proceedings",
+  "paper_version_id": "paper_043_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_043_iclr_2026_proceedings",
+    "raw_output_sha256": "85fb7dbfd8b93b6cbcc959c56aa857b253d6b94b706040677caf75ebe020185a"
+  },
+  "paper_summary": "Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leading to systematic disparities across demographic groups. Existing approaches to fair learning largely fall into two directions: incorporating fairness constraints tailored to specific definitions, which limits their generalizability, or reducing the statistical dependence between predictions and sensitive attributes, which is more flexible but highly sensitive to the choice of distance me",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leading to systematic disparities across demographic groups. Existing approaches to fair learning largely fall into two directions: incorporating fairness constraints tailored to specific definitions, which limits their generalizability, or reducing the statistical dependence between predictions and sensitive attributes, which is more flexible but highly sensitive to the choice of distance me",
+      "type": "method_or_finding",
+      "evidence_id": "paper_043_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leading to systematic disparities across demographic groups. Existing approaches to fair learning largely fall into two directions: incorporating fairness constraint",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_043_ev_003",
+        "paper_043_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.8,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Fairness via Independence: A General Regularization Framework for Machine Learning》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leadi",
+    "论文提供方法或实证支持：0.001 84.3 84.4 84.5 83.2 82.6 82.4 80.0 85 0.001 7.2 6.3 6.5 4.6 6.7 2.8 7.9 0.01 84.4 84.6 83.2 83.9 83.1 83.2 81.1 84 0.01 7.0 6.2 6.3 5.4 5.5 2.6 7.1 For all models, we tune the hyperparameters us- 0.1 84.4 84.2 84.1 83.7 83.5 83.3 81.4 83 0.1 7.3 6.2 6.3 "
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leadi；边界证据为：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and",
+      "strengths": [
+        "可定位正文支持：Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leadi"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+      "evidence_ids": [
+        "paper_043_ev_001",
+        "paper_043_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：0.001 84.3 84.4 84.5 83.2 82.6 82.4 80.0 85 0.001 7.2 6.3 6.5 4.6 6.7 2.8 7.9 0.01 84.4 84.6 83.2 83.9 83.1 83.2 81.1 84 0.01 7.0 6.2 6.3 5.4 5.5 2.6 7.1 For all models, we tune the hyperparameters us- 0.1 84.4 84.2 84.1 83.7 83.5 83.3 81.4 83 0.1 7.3 6.2 6.3 ；边界证据为：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and",
+      "strengths": [
+        "可定位正文支持：0.001 84.3 84.4 84.5 83.2 82.6 82.4 80.0 85 0.001 7.2 6.3 6.5 4.6 6.7 2.8 7.9 0.01 84.4 84.6 83.2 83.9 83.1 83.2 81.1 84 0.01 7.0 6.2 6.3 5.4 5.5 2.6 7.1 For all models, we tune the hyperparameters us- 0.1 84.4 84.2 84.1 83.7 83.5 83.3 81.4 83 0.1 7.3 6.2 6.3 "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_043_ev_003",
+        "paper_043_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：In this section, we first review relevant prior studies, beginning with an overview of algorithmic fairness in machine learning. We then narrow our focus to regularization-based in-processing methods, which are central to our approach.；边界证据为：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and",
+      "strengths": [
+        "可定位正文支持：In this section, we first review relevant prior studies, beginning with an overview of algorithmic fairness in machine learning. We then narrow our focus to regularization-based in-processing methods, which are central to our approach."
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 7/10。",
+      "evidence_ids": [
+        "paper_043_ev_004",
+        "paper_043_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：In this paper, we explore three types of regularization-based in-processing methods. First, Gap Regularization (Chuang & Mroueh, 2020) streamlines the optimization process by offering a smooth approximation of real-world loss functions, which are typically non；边界证据为：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and",
+      "strengths": [
+        "可定位正文支持：In this paper, we explore three types of regularization-based in-processing methods. First, Gap Regularization (Chuang & Mroueh, 2020) streamlines the optimization process by offering a smooth approximation of real-world loss functions, which are typically non"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_043_ev_005",
+        "paper_043_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：In this section, we evaluate the effectiveness of the CS fairness regularizer from several perspectives: (1) utility and fairness performance, (2) the tradeoff between utility and fairness, (3) prediction distributions across different sensitive groups, (4) T-；边界证据为：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and",
+      "strengths": [
+        "可定位正文支持：In this section, we evaluate the effectiveness of the CS fairness regularizer from several perspectives: (1) utility and fairness performance, (2) the tradeoff between utility and fairness, (3) prediction distributions across different sensitive groups, (4) T-"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+      "evidence_ids": [
+        "paper_043_ev_006",
+        "paper_043_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_043_ev_001",
+      "page_number": 1,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Fairness in machine learning has emerged as a central concern, as predictive models frequently inherit or even amplify biases present in training data. Such biases often manifest as unintended correlations between model outcomes and sensitive attributes, leading to systematic disparities across demographic groups. Existing approaches to fair learning largely fall into two directions: incorporating fairness constraints tailored to specific definitions, which limits their generalizability, or reducing the statistical dependence between predictions and sensitive attributes, which is more flexible but highly sensitive to the choice of distance measure. The latter strategy in particular raises the challenge of finding a principled and reliable measure of dependence that can perform consistently across tasks. In this work, we present a general and model-agnostic approach to address this challe",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "page_number": 10,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0022",
+      "evidence_mode": "quote",
+      "excerpt": "In this paper, we introduce a novel fair machine learning method called the Cauchy-Schwarz (CS) fairness regularizer. Empirically, our approach achieves a more consistent utility–fairness trade-off across hyperparameter settings than standard regularizers, and yields more generalizable fairness by minimizing the Cauchy–Schwarz divergence between the prediction distribution and the sensitive attributes. We demonstrate that the CS divergence provides a tighter bound compared to both the Kullback-Leibler divergence and the Maximum Mean Discrepancy, as well as the mean disparity used in Demographic Parity regularization. This superiority is particularly evident when the distributions are significantly different or when there is substantial variation in the scale of the embeddings. As a result, our CS fairness regularizer delivers improved fairness performance in practical scenarios. While ou",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_003",
+      "page_number": 10,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_5_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0021",
+      "evidence_mode": "quote",
+      "excerpt": "0.001 84.3 84.4 84.5 83.2 82.6 82.4 80.0 85 0.001 7.2 6.3 6.5 4.6 6.7 2.8 7.9 0.01 84.4 84.6 83.2 83.9 83.1 83.2 81.1 84 0.01 7.0 6.2 6.3 5.4 5.5 2.6 7.1 For all models, we tune the hyperparameters us- 0.1 84.4 84.2 84.1 83.7 83.5 83.3 81.4 83 0.1 7.3 6.2 6.3 5.2 5.1 2.2 6.0 6 ing cross-validation on the training set. The hy- 0.5 85.7 85.1 84.7 84.5 83.7 83.3 82.9 82 0.5 5.5 5.8 5.9 4.0 3.8 2.8 6.6 5 perparameters for these variants are determined 1 83.2 83.6 83.9 82.1 82.8 82.1 82.2 81 1 5.6 5.9 4.0 3.1 2.2 1.4 5.2 4 through grid search during cross-validation. 5 82.1 82.2 82.2 82.6 81.2 81.3 80.5 80 5 5.5 5.4 4.3 4.7 3.1 1.9 5.9 3 10 81.2 80.3 80.5 80.3 79.5 79.2 78.3 79 10 4.2 4.3 3.2 2.5 2.2 1.7 5.8 2 Specifically, we vary the parameters α and β 1e-45e-41e-35e-31e-25e-21e-1 1e-45e-41e-35e-31e-25e-21e-1 in Equation (13) across the ranges (1 e − 6 , 150) and (1 e − 3 , 10) , respective",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_004",
+      "page_number": 20,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_c",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0034",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we first review relevant prior studies, beginning with an overview of algorithmic fairness in machine learning. We then narrow our focus to regularization-based in-processing methods, which are central to our approach.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_005",
+      "page_number": 21,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_c_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0036",
+      "evidence_mode": "quote",
+      "excerpt": "In this paper, we explore three types of regularization-based in-processing methods. First, Gap Regularization (Chuang & Mroueh, 2020) streamlines the optimization process by offering a smooth approximation of real-world loss functions, which are typically non-convex and difficult to optimize directly. This category includes methods such as DP , EO, and EOD. Second, the Independence approach integrates fairness constraints into the optimization, aiming to mitigate the influence of protected attributes on model predictions while maintaining overall performance. Notable examples of this approach include PR (Kamishima et al., 2012) and HSIC (Li et al., 2019). Lastly, adversarial debiasing seeks to minimize utility loss while hindering an adversary’s ability to accurately predict the protected attributes. This approach encompasses methods like ADV (Zhang et al., 2018; Louppe et al., 2017; Be",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_006",
+      "page_number": 8,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we evaluate the effectiveness of the CS fairness regularizer from several perspectives: (1) utility and fairness performance, (2) the tradeoff between utility and fairness, (3) prediction distributions across different sensitive groups, (4) T-SNE plots for these sensitive groups, and (5) the sensitivity of parameters in Equation (13). Our evaluation encompasses five datasets with diverse sensitive attributes, including four tabular datasets: Adult , COMPAS , ACS-I , and ACS-T , as well as one image dataset, CelebA-A . Utility performance is assessed based on accuracy and the area under the curve (AUC), while fairness performance is measured using △ Equation (2) DP and △ Equation (3). Detailed information about the datasets and baselines can be found in EO the Appendices E and F. We denote an observation drawn from the results as Obs. .",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_007",
+      "page_number": 13,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_references",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0026",
+      "evidence_mode": "quote",
+      "excerpt": "Ren´ e F Kizilcec and Hansol Lee. Algorithmic fairness in education. In The ethics of artificial intelligence in education , pp. 174–202. Routledge, 2022.\n\nJon Kleinberg, Sendhil Mullainathan, and Manish Raghavan. Inherent trade-offs in the fair determination of risk scores. arXiv preprint arXiv:1609.05807 , 2016.\n\nMatt J Kusner, Joshua Loftus, Chris Russell, and Ricardo Silva. Counterfactual fairness. NeurIPS , 30, 2017.\n\nJeff Larson, Surya Mattu, Lauren Kirchner, and Julia Angwin. Propublica compas analysis—data and analysis for ‘machine bias’. https://github.com/propublica/compas-analysis , 2016. Accessed: 2023-03-13.\n\nTai Le Quy, Arjun Roy, Vasileios Iosifidis, Wenbin Zhang, and Eirini Ntoutsi. A survey on datasets for fairness-aware machine learning. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery , 12(3):e1452, 2022.\n\nAna Alves Leal. Algorithms, creditworthines",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_008",
+      "page_number": 2,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "Figure 2: Fairness loss landscapes evaluated using three functions, presented from left to right: Kullback-Leibler (KL) divergence, Hilbert-Schmidt Independence Criterion (HSIC), and Cauchy- Schwarz (CS) divergence. A smaller inner circle indicates greater robustness. Among these methods, the CS divergence achieves the smallest inner circle, ranging from − 2 to 1 , while the inner circles of KL and HSIC divergences both span from − 2 to 2 . Existing group fairness approaches can be intrinsically categorized into two main approaches based on their debiasing objectives: i) directly integrate the fairness notion into the training objective, ii) minimizing the correlation between predictions and sensitive attributes. Methods belongs to i) such as a demographic parity (DP) regularizer, and an equality of opportunity (EO) regularizer. The benefit of this approach is that the model trained by t",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_009",
+      "page_number": 34,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_i_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0053",
+      "evidence_mode": "quote",
+      "excerpt": "We conducted additional experiments using Adversarial Debiasing (Louppe et al., 2017), which we refer to as ADV below.\n\nMethod ACC( ↑ ) AUC( ↑ ) ∆ ( ↓ ) ∆ ( ↓ ) DP EO DP 82 . 42 ± 0 . 39 86 . 91 ± 0 . 80 1 . 29 ± 0 . 95 20 . 15 ± 1 . 13 CS 83 . 04 ± 0 . 51 90 . 84 ± 0 . 35 2 . 13 ± 0 . 89 2 . 35 ± 1 . 15 ADV 81 . 58 ± 1 . 26 83 . 08 ± 0 . 75 16 . 3 ± 7 . 5 14 . 2 ± 8 . 6\n\nTable 10: Additional experiment on the fairness performance of ADV on the Adult dataset (gender attribute).\n\nFrom Table 10, we observe that:\n\n• The ADV method exhibits lower utility (in terms of ACC and AUC) and higher △ compared to DP both the DP and CS fairness regularizers. It also performs worse than the CS regularizer in terms of △ . EO • ADV also shows a higher variance in accuracy, likely due to the greater difficulty of optimizing adversarial objectives compared to the DP and CS regularization approaches.\n\nJ M O",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_043_ev_010",
+      "page_number": 6,
+      "section_id": "paper_043_iclr_2026_proceedings_sec_4_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_043_iclr_2026_proceedings_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "The CS Divergence is particularly well-suited for promoting fairness due to several key reasons: (1)Closed-formsolutionforthemixtureofGaussians. TheCSdivergencehasseveraladvantageous properties, one of which is that it provides a closed-form solution for the mixture of Gaussians (Kampa et al., 2011). This particular property has facilitated its successful application in various tasks, including deep clustering (Trosten et al., 2021), disentangled representation learning (Tran et al., 2022), and point-set registration (Sanchez Giraldo et al., 2017). (2) CS Divergence has a tighter error bound than the KL divergence. Proposition 4.2. For any d -variate Gaussian distributions p ∼ N ( µ , Σ ) and q ∼ N ( µ , Σ ) , p p q q where Σ and Σ are positive definite, the following inequality holds: p q D ( p ; q ) ≤ D ( p ; q ) and D ( p ; q ) ≤ D ( q ; p ) . (15) CS KL CS KL\n\nThe proof can be found ",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_043_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_043_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_043_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_043_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_043_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_043_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_043_ev_007"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_043_ev_001"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_043_ev_008"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+      "evidence_ids": [
+        "paper_043_ev_009"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_043_ev_010"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

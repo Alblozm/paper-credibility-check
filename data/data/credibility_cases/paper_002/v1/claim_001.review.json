@@ -1,0 +1,172 @@
+{
+  "case_record_format": "claim-review-0.1-draft",
+  "case_id": "R2C-P002-C01",
+  "record_status": "pending_human_review",
+  "is_gold": false,
+  "gold_evaluation_eligible": false,
+  "prepared_by": "source inspection draft",
+  "prepared_at": "2026-10-01T05:17:58Z",
+  "paper": {
+    "paper_id": "paper_002",
+    "paper_version_id": "paper_002_v1",
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "arxiv_id": "2310.01798v1",
+    "version_label": "v1",
+    "source_url": "https://arxiv.org/pdf/2310.01798v1",
+    "pdf_sha256": "f204bfe2e642ab52abbf3fa94141e644d22a23510d6d64ed8ddc0ee9823eb983",
+    "pdf_page_count": 19,
+    "paper_type": "empirical_reasoning_study",
+    "page_number_convention": "1-based PDF page; matches printed page numbers in this version"
+  },
+  "source_audit": {
+    "data_local_head": "8e1ce03953a55b395741064df38f3fba03da4d9e",
+    "data_origin_main": "ae990db5a2ba9249db0bdc3da4dd2926b72b877f",
+    "parsed_files_match_origin_main": [
+      "metadata.json",
+      "chunks.jsonl",
+      "elements.json",
+      "sections.json"
+    ],
+    "download_matches_repository_pdf_sha256": true,
+    "pdf_pages_visually_inspected": [
+      1,
+      3,
+      4,
+      5,
+      19
+    ],
+    "prior_five_dimension_scores_used": false,
+    "research_experiments_reproduced": false
+  },
+  "claim": {
+    "claim_id": "p002_c01",
+    "dimension_id": "claim_evidence",
+    "importance": "core",
+    "quote_excerpt": "their performance might even degrade post self-correction",
+    "statement_zh": "在本文所测试的条件下，无外部正确答案反馈的推理自我纠错可能降低表现。",
+    "paper_page": 1,
+    "section": "Abstract",
+    "source_chunk_id": "paper_002_v1_chunk_0001",
+    "selection_scope": "仅核查摘要中可能降低推理表现这一子主张；未覆盖摘要和引言的全部重要主张。",
+    "scope_complete": false
+  },
+  "comparison": {
+    "paper_page": 5,
+    "section": "3.2",
+    "locator_label": "Table 3",
+    "source_chunk_id": "paper_002_v1_chunk_0010",
+    "source_chunk_page_range": [
+      4,
+      5
+    ],
+    "source_element_id": "paper_002_v1_table_3",
+    "model": "GPT-4",
+    "model_access_date_reported_in_paper": "2023-08-29",
+    "benchmark": "GSM8K",
+    "evaluation_sample_size": 200,
+    "metric": "accuracy",
+    "unit": "percent",
+    "baseline": {
+      "condition": "initial answer",
+      "model_calls": 1,
+      "value": 95.5
+    },
+    "intervention": {
+      "condition": "two rounds of intrinsic self-correction, without correct-label stopping",
+      "model_calls": 5,
+      "value": 89.0
+    },
+    "difference_percentage_points": -6.5,
+    "conditions_source": {
+      "setup_pages": [
+        3,
+        4
+      ],
+      "setup_chunk_id": "paper_002_v1_chunk_0007",
+      "intrinsic_setting_page": 5,
+      "intrinsic_setting_chunk_id": "paper_002_v1_chunk_0010"
+    },
+    "excluded_comparison": {
+      "paper_page": 4,
+      "locator_label": "Table 1",
+      "reason_zh": "该表使用正确答案判断何时停止，自我纠错条件与表 3 不同；其中的提升不能直接作为本条主张的反证。"
+    },
+    "search_scope_pages": [
+      1,
+      3,
+      4,
+      5,
+      19
+    ]
+  },
+  "candidate_annotation": {
+    "applicability": "applicable",
+    "proposed_outcome": "supported",
+    "reason_zh": "同一模型与数据集下，两轮无正确答案停止反馈的自我纠错结果低于初始结果，支持可能降低表现这一有限主张。",
+    "proposed_score_rule_id": "C_SUPPORTED",
+    "item_score": null,
+    "rubric_version": "0.1-draft",
+    "schema_reference": "credibility-0.1.0-draft",
+    "limitations": [
+      "待两位人工标注者复核和必要的仲裁，不能作为已批准 Gold。",
+      "只核查一条子主张，不能据此生成主张维度分数。",
+      "结果限于该论文的历史模型、数据集和提示条件，不代表所有模型或当前模型。",
+      "仅核对论文内部的主张与证据，没有重新运行论文实验。",
+      "引用存在性和代码／复现检查均尚未执行。"
+    ]
+  },
+  "parse_handoff": {
+    "parser_name": "pdfplumber-structured",
+    "parser_version": "1.0.0",
+    "table_cells": null,
+    "table_parse_quality": "partial",
+    "table_section_id_in_existing_elements": "paper_002_v1_sec_3_2_1",
+    "evidence_section_id_in_existing_chunks": "paper_002_v1_sec_3_2",
+    "reviewer_verified_table_page": 5,
+    "requirements_zh": [
+      "表 3 位于第 5 页；不能以跨页文本块的 page_start=4 代替表格页码。",
+      "表格元素章节与正文块章节不同，需结合表号、原文页面和正文上下文核对。",
+      "手工转录的数值保留来源；后端须自行证明实际解析材料可支持该数值与行列条件。",
+      "实际运行报告的证据 ID 必须映射到该运行的真实文本块，不照抄案例 ID。",
+      "只有 stub 文档或必要表格无法读取时，记录无法判断／技术缺口，不记录论文缺证或矛盾。"
+    ]
+  },
+  "review": {
+    "annotator_a": {
+      "name": null,
+      "reviewed_at": null,
+      "outcome": null,
+      "reason": null
+    },
+    "annotator_b": {
+      "name": null,
+      "reviewed_at": null,
+      "outcome": null,
+      "reason": null
+    },
+    "adjudication": {
+      "name": null,
+      "reviewed_at": null,
+      "outcome": null,
+      "reason": null
+    },
+    "discussion_confirmation": {
+      "actor": "reviewer",
+      "confirmed_at": "2026-10-01T05:21:23Z",
+      "outcome": "supported",
+      "scope_zh": "认可 GPT-4／GSM8K、无正确答案停止反馈条件下支持可能降低表现这一限定口径；正式双人复核仍需记录。",
+      "independent_annotation": false
+    }
+  },
+  "execution": {
+    "backend_source_loader_check": "passed: 30 real source chunks; claim on page 1; Table 3 on page 5",
+    "credibility_api_run_id": null,
+    "model_output": null,
+    "frontend_run_evidence": null,
+    "reference_check": "not_run",
+    "code_check": "not_run",
+    "expected_claim_dimension_score": null,
+    "expected_overall_score": null,
+    "expected_overall_category": null
+  }
+}

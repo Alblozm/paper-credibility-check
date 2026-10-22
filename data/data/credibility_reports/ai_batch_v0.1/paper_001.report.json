@@ -1,0 +1,3715 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-eb1431f80e2560f0",
+  "paper_version_id": "paper_001_v3",
+  "pdf_sha256": "5bca1492f804f7ba440d4b5ff5bbc9d5f45afe5d4f184bd0904cdf46b8471d6f",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "250fd2d9c650dc4633b721323ca682cefb47d431b9675f721cc19aef6b7a16db",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.5,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 2,
+        "deduplicated_claim_count": 2,
+        "checked_claim_count": 2,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.5,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 50,
+        "extracted_count": 50,
+        "parsed_count": 44,
+        "queried_count": 44,
+        "matched_count": 13,
+        "metadata_conflict_count": 1,
+        "unverified_count": 30,
+        "parse_failed_count": 6,
+        "not_checked_count": 0,
+        "query_failed_count": 0,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://arxiv.org/pdf/2307.08122v3",
+            "checked_at": "2026-10-09T04:40:58.376129Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-982ddb925e9b",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 1,
+            "comments_checked": 2,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:40:58.376376Z",
+            "source_urls": [
+              "https://api.github.com/repos/tianyu139/tangent-model-composition",
+              "https://api.github.com/repos/tianyu139/tangent-model-composition/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/tianyu139/tangent-model-composition/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-1",
+        "paper_reference_id": "ref-paper_001_v3_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep learning with differential privacy",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+learning+with+differential+privacy&rows=5",
+        "checked_at": "2026-10-09T04:40:58.347860Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Privacy-Preserving Intrusion Detection in SDN-IoT Networks: Machine Learning, Deep Learning, Differential Privacy, and Inference Attacks",
+            "authors": [
+              "Younes",
+              "Haithem",
+              "Chirihane"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10093086/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10093086/v1",
+            "title_similarity": 0.39766081871345027
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Dynamic Gradient Noise Adaptation with Reinforcement Learning for Differential Privacy Deep Learning",
+            "authors": [
+              "Li",
+              "Zhao",
+              "Sun"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5490607",
+            "source_url": "https://doi.org/10.2139/ssrn.5490607",
+            "title_similarity": 0.5035971223021583
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Securing Deep Learning Models with Differential Privacy for Cardiovascular Disease Prediction",
+            "authors": [
+              "Orabe",
+              "Vasankari"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5346424",
+            "source_url": "https://doi.org/10.2139/ssrn.5346424",
+            "title_similarity": 0.5909090909090909
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Local Differential Privacy Based Membership-Privacy-Preserving Federated Learning for Deep-Learning-Driven Remote Sensing",
+            "authors": [
+              "Zhang",
+              "Ma",
+              "Ma"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3390/rs15205050",
+            "source_url": "https://doi.org/10.3390/rs15205050",
+            "title_similarity": 0.2875
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Adaptive differential privacy mechanism for enhanced deep learning model utility and privacy",
+            "authors": [
+              "Xiangfei",
+              "Qingchen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108345",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108345",
+            "title_similarity": 0.3511450381679389
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:33:56.107886Z",
+        "response_sha256": "7085f53d666091c66254efc6a35881b0de3ac636db7bb15a029652bc7deaec59",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+learning+with+differential+privacy&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.347860Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-3",
+        "paper_reference_id": "ref-paper_001_v3_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Ai model disgorgement: Methods and choices",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ai+model+disgorgement%3A+Methods+and+choices&rows=5",
+        "checked_at": "2026-10-09T04:40:58.349155Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "AI model disgorgement: Methods and choices",
+            "authors": [
+              "Achille",
+              "Kearns",
+              "Klingenberg",
+              "Soatto"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1073/pnas.2307304121",
+            "source_url": "https://doi.org/10.1073/pnas.2307304121",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Disgorgement",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.5040/9781472558985.ch-011",
+            "source_url": "https://doi.org/10.5040/9781472558985.ch-011",
+            "title_similarity": 0.4528301886792453
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Disgorgement of Profit and Fiduciary Loyalty",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.5040/9781509901487.ch-002",
+            "source_url": "https://doi.org/10.5040/9781509901487.ch-002",
+            "title_similarity": 0.49411764705882355
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Using alternative-specific DCE designs and best and worst choices to model choices",
+            "authors": [
+              "Louviere"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1017/cbo9781107337855.016",
+            "source_url": "https://doi.org/10.1017/cbo9781107337855.016",
+            "title_similarity": 0.34146341463414637
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Disgorgement for Breach of Contract",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.5040/9781472558985.ch-012",
+            "source_url": "https://doi.org/10.5040/9781472558985.ch-012",
+            "title_similarity": 0.5263157894736842
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:33:58.025290Z",
+        "response_sha256": "d7b77095a49e639374845f0c5499d042195699d562f84fd357ef61d77e6b33a1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ai+model+disgorgement%3A+Methods+and+choices&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.349155Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-5",
+        "paper_reference_id": "ref-paper_001_v3_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentially private stochastic optimization: New results in convex and non-convex settings",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentially+private+stochastic+optimization%3A+New+results+in+convex+and+non-convex+settings&rows=5",
+        "checked_at": "2026-10-09T04:40:58.350974Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Revisiting differentially private stochastic convex optimization in (non)-Euclidean space",
+            "authors": [
+              "Su",
+              "Xu",
+              "Zhao",
+              "Wang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.ic.2026.105496",
+            "source_url": "https://doi.org/10.1016/j.ic.2026.105496",
+            "title_similarity": 0.659217877094972
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Differentially Private Stochastic Convex Optimization for Network Routing Applications",
+            "authors": [
+              "Tsao",
+              "Gopalakrishnan",
+              "Yang",
+              "Pavone"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/cdc49753.2023.10383207",
+            "source_url": "https://doi.org/10.1109/cdc49753.2023.10383207",
+            "title_similarity": 0.651685393258427
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Differentially Private Regularized Stochastic Convex Optimization with Heavy-Tailed Data",
+            "authors": [
+              "Xie",
+              "Pietrosanu",
+              "Liu",
+              "Tu",
+              "Jiang",
+              "Kong"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5705/ss.202022.0282",
+            "source_url": "https://doi.org/10.5705/ss.202022.0282",
+            "title_similarity": 0.5888888888888889
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contributions to non-convex stochastic optimization and reinforcement learning",
+            "authors": [
+              "Barakat"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/90e72d94zec35z4c83za741z1c824ae015ae",
+            "source_url": "https://doi.org/10.70675/90e72d94zec35z4c83za741z1c824ae015ae",
+            "title_similarity": 0.5058823529411764
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differentially private distributed convex optimization via objective perturbation",
+            "authors": [
+              "Nozari",
+              "Tallapragada",
+              "Cortes"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/acc.2016.7525222",
+            "source_url": "https://doi.org/10.1109/acc.2016.7525222",
+            "title_similarity": 0.5549132947976878
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:00.540938Z",
+        "response_sha256": "63b3c9f4d61f22aca8c52cd27efae5f079fb01ea7b19950f36181f6214d31e47",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentially+private+stochastic+optimization%3A+New+results+in+convex+and+non-convex+settings&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.350974Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-6",
+        "paper_reference_id": "ref-paper_001_v3_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:40:58.352726Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unlearning Under Siege: How Machine Unlearning Degrades Adversarial Robustness",
+            "authors": [
+              "Ahmad"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6537881",
+            "source_url": "https://doi.org/10.2139/ssrn.6537881",
+            "title_similarity": 0.37894736842105264
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Case Studies in Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-5",
+            "source_url": "https://doi.org/10.1201/9781003771470-5",
+            "title_similarity": 0.6923076923076923
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction to Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-1",
+            "source_url": "https://doi.org/10.1201/9781003771470-1",
+            "title_similarity": 0.6923076923076923
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Machine Unlearning in Generative AI and LLMs",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-3",
+            "source_url": "https://doi.org/10.1201/9781003771470-3",
+            "title_similarity": 0.5806451612903226
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Unlearning Comparator: a Visual Analytics System for Comparative Evaluation of Machine Unlearning Methods_supp2-3658325.pdf",
+            "authors": [
+              "Jo"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tvcg.2026.3658325/mm2",
+            "source_url": "https://doi.org/10.1109/tvcg.2026.3658325/mm2",
+            "title_similarity": 0.2571428571428571
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:01.564482Z",
+        "response_sha256": "1984b4e6dbeee381b3293a708c5ad3f84a49d6a9966c0f5f7cefd4a20374308e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.352726Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-8",
+        "paper_reference_id": "ref-paper_001_v3_credibility-8",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Language models are few-shot learners",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5",
+        "checked_at": "2026-10-09T04:40:58.350501Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Language Models are Few-Shot Learners",
+            "authors": [
+              "Malakar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.65525/svup.9788199778009.2026.224-230",
+            "source_url": "https://doi.org/10.65525/svup.9788199778009.2026.224-230",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adapting Language-Audio Models as Few-Shot Audio Learners",
+            "authors": [
+              "Liang",
+              "Liu",
+              "Liu",
+              "Phan",
+              "Benetos",
+              "Plumbley",
+              "Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21437/interspeech.2023-1082",
+            "source_url": "https://doi.org/10.21437/interspeech.2023-1082",
+            "title_similarity": 0.7446808510638298
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Language Models of Code are Few-Shot Commonsense Learners",
+            "authors": [
+              "Madaan",
+              "Zhou",
+              "Alon",
+              "Yang",
+              "Neubig"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.90",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.90",
+            "title_similarity": 0.7872340425531915
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Language Models are Few-shot Multilingual Learners",
+            "authors": [
+              "Winata",
+              "Madotto",
+              "Lin",
+              "Liu",
+              "Yosinski",
+              "Fung"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.18653/v1/2021.mrl-1.1",
+            "source_url": "https://doi.org/10.18653/v1/2021.mrl-1.1",
+            "title_similarity": 0.8505747126436781
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MaterialBrain: High-Performance Material Synthesis Extraction via HumanAI-Curated Few-Shot Large Language Models",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.5c02299.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.5c02299.s001",
+            "title_similarity": 0.20270270270270271
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:03.527518Z",
+        "response_sha256": "07f5926555c42d04c1b806c058e7e66db26a6d8f00a76df2d8520a0a4243b475",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.350501Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-9",
+        "paper_reference_id": "ref-paper_001_v3_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentially private optimization on large model at small cost",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentially+private+optimization+on+large+model+at+small+cost&rows=5",
+        "checked_at": "2026-10-09T04:40:58.353022Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Differentially Private Zeroth-Order Methods for Scalable Large Language Model Fine-tuning_supp1-3679194.pdf",
+            "authors": [
+              "Qin"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2026.3679194/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2026.3679194/mm1",
+            "title_similarity": 0.5029239766081871
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Higher utility methods for differentially private optimization",
+            "authors": [
+              "Chaturvedi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20652998",
+            "source_url": "https://doi.org/10.17760/d20652998",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Differentially Private Decentralized Optimization with Relay Communication_supp1-3515803.pdf",
+            "authors": [
+              "Yang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2024.3515803/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2024.3515803/mm1",
+            "title_similarity": 0.5512820512820513
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Public-Private Partnerships As A Cost-Optimization Strategy In Large-Scale Infrastructure Projects&amp;nbsp;",
+            "authors": [
+              "Alyakhri",
+              "Alhalalmeh"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5062775",
+            "source_url": "https://doi.org/10.2139/ssrn.5062775",
+            "title_similarity": 0.4327485380116959
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differentially Private Access in Encrypted Search: Achieving Privacy at a Small Cost?",
+            "authors": [
+              "Pöllmann",
+              "Tang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3719027.3765038",
+            "source_url": "https://doi.org/10.1145/3719027.3765038",
+            "title_similarity": 0.5986394557823129
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:05.512613Z",
+        "response_sha256": "1b411a37aea67aee40de08a320ffbd3f2b81a524a3516404c743e30c9a82786b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentially+private+optimization+on+large+model+at+small+cost&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.353022Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-10",
+        "paper_reference_id": "ref-paper_001_v3_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentially private bias-term only fine-tuning of foundation models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentially+private+bias-term+only+fine-tuning+of+foundation+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.354867Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "PrunePrivyTune: Accelerating Language Models with Pruning and Differentially Private Fine-Tuning",
+            "authors": [
+              "Garg",
+              "Torra"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10994-026-07016-y",
+            "source_url": "https://doi.org/10.1007/s10994-026-07016-y",
+            "title_similarity": 0.4121212121212121
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fine-tuning foundation models for activity of daily living analysis",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/td-20240617-297",
+            "source_url": "https://doi.org/10.31274/td-20240617-297",
+            "title_similarity": 0.4233576642335766
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Efficient Differentially Private Fine-Tuning with QLoRA and Prefix Tuning for Large Language Models",
+            "authors": [
+              "Tan",
+              "Xiong",
+              "Xu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.54097/we271q84",
+            "source_url": "https://doi.org/10.54097/we271q84",
+            "title_similarity": 0.5798816568047337
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Privacy-Preserving Fine-Tuning of Artificial Intelligence (AI) Foundation Models with Federated Learning, Differential Privacy, Offsite Tuning, and Parameter-Efficient Fine-Tuning (PEFT)",
+            "authors": [
+              "Zhao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.24191886.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.24191886.v1",
+            "title_similarity": 0.3453815261044177
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Privacy-Preserving Fine-Tuning of Artificial Intelligence (AI) Foundation Models with Federated Learning, Differential Privacy, Offsite Tuning, and Parameter-Efficient Fine-Tuning (PEFT)",
+            "authors": [
+              "Zhao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.24191886",
+            "source_url": "https://doi.org/10.36227/techrxiv.24191886",
+            "title_similarity": 0.3453815261044177
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:06.531162Z",
+        "response_sha256": "bfe2fcfb574d5a8a25c7f2394dff7113b31d41cc811a547f23d7ad0ee5573828",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentially+private+bias-term+only+fine-tuning+of+foundation+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.354867Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-11",
+        "paper_reference_id": "ref-paper_001_v3_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fusing finetuned models for better pretraining",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fusing+finetuned+models+for+better+pretraining&rows=5",
+        "checked_at": "2026-10-09T04:40:58.355760Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "TMI! Finetuned Models Leak Private Information from their Pretraining Data",
+            "authors": [
+              "Abascal",
+              "Wu",
+              "Oprea",
+              "Ullman"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.56553/popets-2024-0075",
+            "source_url": "https://doi.org/10.56553/popets-2024-0075",
+            "title_similarity": 0.6218487394957983
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table 7: Parameters finetuned for machine learning models.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.745/table-7",
+            "source_url": "https://doi.org/10.7717/peerjcs.745/table-7",
+            "title_similarity": 0.35294117647058826
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Small is the New Big: Pre-finetuned compact models are better for Asynchronous Active Learning",
+            "authors": [
+              "Liu",
+              "Pavani",
+              "Dasgupta"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.sustainlp-1.7",
+            "source_url": "https://doi.org/10.18653/v1/2023.sustainlp-1.7",
+            "title_similarity": 0.5467625899280576
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Performance of Identity-Aware Finetuned Diffusion Models for Customized Comic Character Generation",
+            "authors": [
+              "Panda",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.176159626.64784474/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.176159626.64784474/v1",
+            "title_similarity": 0.4861111111111111
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Better Coherence, Better Height: Fusing Physical Models and Deep Learning for Forest Height Estimation from Interferometric SAR Data",
+            "authors": [
+              "Mahesh",
+              "Hänsch"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/cvprw67362.2025.00219",
+            "source_url": "https://doi.org/10.1109/cvprw67362.2025.00219",
+            "title_similarity": 0.3409090909090909
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:07.396735Z",
+        "response_sha256": "980fa7379cadc281d1de5fa3b75afe209bd097c7fe832cb3bb0a7581b77bea9c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fusing+finetuned+models+for+better+pretraining&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.355760Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-13",
+        "paper_reference_id": "ref-paper_001_v3_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An image is worth 16x16 words: Transformers for image recognition at scale",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+image+is+worth+16x16+words%3A+Transformers+for+image+recognition+at+scale&rows=5",
+        "checked_at": "2026-10-09T04:40:58.356305Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "An Image Equals 16x16 Words: Scaling Image Recogni:on with Transformers",
+            "authors": [
+              "Beyer",
+              "Alexy"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5180447",
+            "source_url": "https://doi.org/10.2139/ssrn.5180447",
+            "title_similarity": 0.6293706293706294
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Worth 1000 Words? Image-Based Conjoints and Respondent Experience",
+            "authors": [
+              "Turner"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/9xswa_v1",
+            "source_url": "https://doi.org/10.31219/osf.io/9xswa_v1",
+            "title_similarity": 0.30656934306569344
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Low-Resolution Image is Worth 1 $$\\times $$ 1 Words: Enabling Fine Image Super-Resolution with Transformers and TaylorShift",
+            "authors": [
+              "Nagaraju",
+              "Moser",
+              "Nauen",
+              "Frolov",
+              "Raue",
+              "Dengel"
+            ],
+            "year": 2026,
+            "years": [
+              2026,
+              2027
+            ],
+            "doi": "10.1007/978-3-032-31335-5_6",
+            "source_url": "https://doi.org/10.1007/978-3-032-31335-5_6",
+            "title_similarity": 0.4607329842931937
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "MdcFormer: transformers based on dynamic weights and multi-scale for medical image segmentation",
+            "authors": [
+              "Ma",
+              "Wang",
+              "Deng"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1117/12.3033531",
+            "source_url": "https://doi.org/10.1117/12.3033531",
+            "title_similarity": 0.41916167664670656
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction: A Picture  is  Worth a Thousand Words",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5040/9781350397095.0005",
+            "source_url": "https://doi.org/10.5040/9781350397095.0005",
+            "title_similarity": 0.3305785123966942
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:09.434314Z",
+        "response_sha256": "4ddbfce488db3adf51791fd60688b4d35cc81c76d7789306c4842a46566f30a8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+image+is+worth+16x16+words%3A+Transformers+for+image+recognition+at+scale&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.356305Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-16",
+        "paper_reference_id": "ref-paper_001_v3_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Improved convergence of differential private sgd with gradient clipping",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Improved+convergence+of+differential+private+sgd+with+gradient+clipping&rows=5",
+        "checked_at": "2026-10-09T04:40:58.358081Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "DC-SGD: Differentially Private SGD with Dynamic Clipping through Gradient Norm Distribution Estimation_supp1-3557755.pdf",
+            "authors": [
+              "Wei"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2025.3557755/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2025.3557755/mm1",
+            "title_similarity": 0.4842105263157895
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "DC-SGD: Differentially Private SGD With Dynamic Clipping Through Gradient Norm Distribution Estimation",
+            "authors": [
+              "Wei",
+              "Li",
+              "Gong",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/tifs.2025.3557755",
+            "source_url": "https://doi.org/10.1109/tifs.2025.3557755",
+            "title_similarity": 0.5348837209302325
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Unified Fast Gradient Clipping Framework for DP-SGD",
+            "authors": [
+              "Kong",
+              "Medina"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-2281",
+            "source_url": "https://doi.org/10.52202/075280-2281",
+            "title_similarity": 0.3870967741935484
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "GeoClip: Geometry-Aware Clipping for Differentially Private SGD",
+            "authors": [
+              "Gilani",
+              "Tasnim",
+              "Sankar",
+              "Kosut"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-0218",
+            "source_url": "https://doi.org/10.52202/085713-0218",
+            "title_similarity": 0.49624060150375937
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differential private federated learning with per-sample adaptive clipping and layer-wise gradient perturbation",
+            "authors": [
+              "Yuan",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.comnet.2025.111139",
+            "source_url": "https://doi.org/10.1016/j.comnet.2025.111139",
+            "title_similarity": 0.430939226519337
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:12.260535Z",
+        "response_sha256": "b8b1a3d2e0f9bbfe974d94cbe2aed2126d3c887a9e608b4df6ec39ed35fb73c4",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Improved+convergence+of+differential+private+sgd+with+gradient+clipping&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.358081Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-17",
+        "paper_reference_id": "ref-paper_001_v3_credibility-17",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-21",
+        "paper_reference_id": "ref-paper_001_v3_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Time matters in regularizing deep networks: Weight decay and data augmentation affect early learning dynamics, matter little near convergence",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Time+matters+in+regularizing+deep+networks%3A+Weight+decay+and+data+augmentation+affect+early+learning+dynamics%2C+matter+little+near+convergence&rows=5",
+        "checked_at": "2026-10-09T04:40:58.360230Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Medical Augmentation (Med-Aug) for Optimal Data Augmentation in Medical Deep Learning Networks",
+            "authors": [
+              "Lo",
+              "Cardinell",
+              "Costanzo",
+              "Sussman"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.32920/21288258.v1",
+            "source_url": "https://doi.org/10.32920/21288258.v1",
+            "title_similarity": 0.3463203463203463
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Medical Augmentation (Med-Aug) for Optimal Data Augmentation in Medical Deep Learning Networks",
+            "authors": [
+              "Lo",
+              "Cardinell",
+              "Costanzo",
+              "Sussman"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.32920/21288258",
+            "source_url": "https://doi.org/10.32920/21288258",
+            "title_similarity": 0.3463203463203463
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "UTILIZING DEEP LEARNING AND DATA AUGMENTATION FOR EARLY DETECTION OF EYE DISEASES IN PETS",
+            "authors": [
+              "ŞENGÖZ"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.47933/ijeir.1227798",
+            "source_url": "https://doi.org/10.47933/ijeir.1227798",
+            "title_similarity": 0.47368421052631576
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Data Augmentation Boosted Deep Learning Framework for Aircraft Engine System Weight Prediction",
+            "authors": [
+              "Xiang",
+              "Kewei",
+              "Lei",
+              "Yang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5208578",
+            "source_url": "https://doi.org/10.2139/ssrn.5208578",
+            "title_similarity": 0.34893617021276596
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Real-Time Speech Emotion Recognition Using Deep Learning and Data Augmentation",
+            "authors": [
+              "Barhoumi",
+              "Ayed"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-2874039/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-2874039/v1",
+            "title_similarity": 0.4423963133640553
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:16.311678Z",
+        "response_sha256": "17340540b7e46035aec88671de30245250b58acfadfea603693526e2699fccc0",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Time+matters+in+regularizing+deep+networks%3A+Weight+decay+and+data+augmentation+affect+early+learning+dynamics%2C+matter+little+near+convergence&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.360230Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-22",
+        "paper_reference_id": "ref-paper_001_v3_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Caltech-256 object category dataset",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Caltech-256+object+category+dataset&rows=5",
+        "checked_at": "2026-10-09T04:40:58.363781Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dynamic Properties and Frames of Reference in Object and Event Category Learning",
+            "authors": [
+              "Kersten",
+              "Billman"
+            ],
+            "year": 1994,
+            "years": [
+              1994
+            ],
+            "doi": "10.1037/e537272012-032",
+            "source_url": "https://doi.org/10.1037/e537272012-032",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Processing Images from the Zwicky Transient Facility",
+            "authors": [
+              "Laher",
+              "Masci",
+              "Groom",
+              "Rusholme",
+              "Shupe",
+              "Jackson",
+              "Flynn",
+              "Landry",
+              "Terek",
+              "Helou",
+              "Surace",
+              "Beck",
+              "Hasscopians",
+              "Rebbapragada",
+              "Bue",
+              "Smith",
+              "Miller",
+              "Cenko",
+              "Kupfer",
+              "Yan",
+              "Barlow",
+              "Bellm",
+              "Graham",
+              "Kasliwal",
+              "Prince",
+              "Shrinivas"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.32374/rtsre.2017.031",
+            "source_url": "https://doi.org/10.32374/rtsre.2017.031",
+            "title_similarity": 0.27586206896551724
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Inhibition of return is object-based, not category-based",
+            "authors": [
+              "Morgan",
+              "Paul",
+              "Tipper"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1167/4.8.256",
+            "source_url": "https://doi.org/10.1167/4.8.256",
+            "title_similarity": 0.5111111111111111
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Effects of Linguistic and Nonlinguistic Category Knowledge on Object Processing",
+            "authors": [
+              "Holmes",
+              "Namy",
+              "Wolff"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1037/e527312012-932",
+            "source_url": "https://doi.org/10.1037/e527312012-932",
+            "title_similarity": 0.2982456140350877
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Contemporary Object II: Category Theory",
+            "authors": [
+              "Nail"
+            ],
+            "year": 2021,
+            "years": [
+              2021,
+              2022
+            ],
+            "doi": "10.3366/edinburgh/9781474487924.003.0018",
+            "source_url": "https://doi.org/10.3366/edinburgh/9781474487924.003.0018",
+            "title_similarity": 0.5714285714285714
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:17.199208Z",
+        "response_sha256": "166dc70e7b27e9589c234c0211982495d332fc05bc004fbb7e15b36a5afc0e9a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Caltech-256+object+category+dataset&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.363781Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-23",
+        "paper_reference_id": "ref-paper_001_v3_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Parameter-efficient transfer learning for nlp",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Parameter-efficient+transfer+learning+for+nlp&rows=5",
+        "checked_at": "2026-10-09T04:40:58.364179Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Flat: Fusing Layer Representations for More Efficient Transfer Learning in Nlp",
+            "authors": [
+              "Wenqiang",
+              "Li",
+              "Liu",
+              "Zhao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4460393",
+            "source_url": "https://doi.org/10.2139/ssrn.4460393",
+            "title_similarity": 0.6065573770491803
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "NLP Transfer Learning",
+            "authors": [
+              "Lessmann"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.24818/ida-cl/2025.105",
+            "source_url": "https://doi.org/10.24818/ida-cl/2025.105",
+            "title_similarity": 0.5757575757575758
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "IT-Tuning : Parameter Efficient Information Token Tuning for Language Model",
+            "authors": [
+              "Kim",
+              "Kim"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.repl4nlp-1.6",
+            "source_url": "https://doi.org/10.18653/v1/2024.repl4nlp-1.6",
+            "title_similarity": 0.5932203389830508
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "GeoPETL: Parameter-Efficient Transfer Learning for Earth Science Remote Sensing Visual Tasks",
+            "authors": [
+              "Meng",
+              "Zeng"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.22541/essoar.15005321/v1",
+            "source_url": "https://doi.org/10.22541/essoar.15005321/v1",
+            "title_similarity": 0.6470588235294118
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FewShotMetabolic: Parameter-Efficient Transfer Learning for Rapid Metabolic Risk Prediction in Data-Scarce Obesity Phenotypes_supp1-3690956.pdf",
+            "authors": [
+              "Qiu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/jbhi.2026.3690956/mm1",
+            "source_url": "https://doi.org/10.1109/jbhi.2026.3690956/mm1",
+            "title_similarity": 0.47058823529411764
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:19.311685Z",
+        "response_sha256": "fe02d130861da994fab6501c3878a664c6663ecd34ffb24ae51863a7c55ea9c2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Parameter-efficient+transfer+learning+for+nlp&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.364179Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-24",
+        "paper_reference_id": "ref-paper_001_v3_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Lora: Low-rank adaptation of large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Lora%3A+Low-rank+adaptation+of+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.362860Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ID-LoRA: Intrinsic Dimension-Based Pruning with Low-Rank Adaptation for Vision-Language Models",
+            "authors": [
+              "Liang",
+              "Shi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.176521385.54906010/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.176521385.54906010/v1",
+            "title_similarity": 0.6056338028169014
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Energy-Efficient Training of Large Language Models Through Sparse Attention and Low-Rank Adaptation (LoRA-S)",
+            "authors": [
+              "Tiwari",
+              "Harish"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.66542/irjsrr.v2.i1.000022",
+            "source_url": "https://doi.org/10.66542/irjsrr.v2.i1.000022",
+            "title_similarity": 0.3870967741935484
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "C-LoRA: Contextual Low-Rank Adaptation for Uncertainty Estimation in Large Language Models",
+            "authors": [
+              "Rahmati",
+              "Jantre",
+              "Zhang",
+              "Wang",
+              "Yoon",
+              "Urban",
+              "Qian"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-2263",
+            "source_url": "https://doi.org/10.52202/085713-2263",
+            "title_similarity": 0.6956521739130435
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ESM-LoRA-Gly: Improved prediction of N- and O-linked glycosylation sites by tuning protein language models with low-rank adaptation (LoRA)",
+            "authors": [
+              "Feng",
+              "Zhang",
+              "Wang",
+              "Hong",
+              "Zhan",
+              "Zhou"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1101/2025.08.12.669850",
+            "source_url": "https://doi.org/10.1101/2025.08.12.669850",
+            "title_similarity": 0.29508196721311475
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ST‐LoRA: SVD‐Guided Sparse Low‐Rank Adaptation With Trainable Masks for Large Language and Vision Models",
+            "authors": [
+              "Gan",
+              "Hu",
+              "Wang",
+              "Zhao",
+              "Ren"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1049/cvi2.70072",
+            "source_url": "https://doi.org/10.1049/cvi2.70072",
+            "title_similarity": 0.631578947368421
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:20.284123Z",
+        "response_sha256": "bc370bb2ebb55fcbf94ae8ab837b771045a794cbeb1d97f5ae9c05e058307f83",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Lora%3A+Low-rank+adaptation+of+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.362860Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-25",
+        "paper_reference_id": "ref-paper_001_v3_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Evaluation of neural architectures trained with square loss vs crossentropy in classification tasks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Evaluation+of+neural+architectures+trained+with+square+loss+vs+crossentropy+in+classification+tasks&rows=5",
+        "checked_at": "2026-10-09T04:40:58.361693Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Single-Cell Conventional Pap Smear Image Classification Using Pre-Trained Deep Neural Network Architectures",
+            "authors": [
+              "Mohammed",
+              "Abdurahman",
+              "Ayalew"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.21203/rs.3.rs-257282/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-257282/v1",
+            "title_similarity": 0.3106796116504854
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Figure 7: A comparison of classification accuracy across all architectures and binary classification tasks.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.4017/fig-7",
+            "source_url": "https://doi.org/10.7717/peerj-cs.4017/fig-7",
+            "title_similarity": 0.5392156862745098
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Comprehensive Comparative Analysis of Convolutional Neural\nNetwork Architectures for Image Classification and Object\nDetection Tasks",
+            "authors": [
+              "Islam",
+              "Hossain",
+              "Hosen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-8749762/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8749762/v1",
+            "title_similarity": 0.4721030042918455
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Figure 16: Comprehensive confusion matrices for all architectures and binary classification tasks.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.4017/fig-16",
+            "source_url": "https://doi.org/10.7717/peerj-cs.4017/fig-16",
+            "title_similarity": 0.5435897435897435
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Exploring versatile neural architectures across modalities and perception tasks",
+            "authors": [
+              "Zhang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/171935",
+            "source_url": "https://doi.org/10.32657/10356/171935",
+            "title_similarity": 0.5280898876404494
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:22.140478Z",
+        "response_sha256": "fd922210bcab6003bf0a942544795fd534b9ad9b3a3956cf5502b5006ea7740e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Evaluation+of+neural+architectures+trained+with+square+loss+vs+crossentropy+in+classification+tasks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.361693Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-26",
+        "paper_reference_id": "ref-paper_001_v3_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neural tangent kernel: Convergence and generalization in neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neural+tangent+kernel%3A+Convergence+and+generalization+in+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:40:58.365200Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Neural tangent kernel: convergence and generalization in neural networks (invited paper)",
+            "authors": [
+              "Jacot",
+              "Gabriel",
+              "Hongler"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3406325.3465355",
+            "source_url": "https://doi.org/10.1145/3406325.3465355",
+            "title_similarity": 0.9102564102564102
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On the Generalization Power of the Overfitted Three-Layer Neural Tangent Kernel Model",
+            "authors": [
+              "Ju",
+              "Lin",
+              "Shroff"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-1895",
+            "source_url": "https://doi.org/10.52202/068431-1895",
+            "title_similarity": 0.32051282051282054
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Deep learning in random neural fields: Numerical experiments via neural tangent kernel",
+            "authors": [
+              "Watanabe",
+              "Sakamoto",
+              "Karakida",
+              "Sonoda",
+              "Amari"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.neunet.2022.12.020",
+            "source_url": "https://doi.org/10.1016/j.neunet.2022.12.020",
+            "title_similarity": 0.2692307692307692
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Characterizing Trainability, Expressivity and Generalization of Neural Architecture with Metrics from Neural Tangent Kernel",
+            "authors": [
+              "Chen",
+              "Li",
+              "Amin",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.1007/978-3-032-04558-4_5",
+            "source_url": "https://doi.org/10.1007/978-3-032-04558-4_5",
+            "title_similarity": 0.21761658031088082
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "RG Flow of the Neural Tangent Kernel",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781009023405.010",
+            "source_url": "https://doi.org/10.1017/9781009023405.010",
+            "title_similarity": 0.3925233644859813
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:24.185283Z",
+        "response_sha256": "760656895a0410d8e17f69436166d14d849d19076328005f80c9476f7f743f09",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neural+tangent+kernel%3A+Convergence+and+generalization+in+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.365200Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-27",
+        "paper_reference_id": "ref-paper_001_v3_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Novel dataset for fine-grained image categorization: Stanford dogs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Novel+dataset+for+fine-grained+image+categorization%3A+Stanford+dogs&rows=5",
+        "checked_at": "2026-10-09T04:40:58.364669Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Enhancing Fine-Grained Image Classification with Attention Mechanisms and Transfer Learning: A Case Study on the Stanford Dogs Dataset",
+            "authors": [
+              "Mehta"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.58445/rars.2355",
+            "source_url": "https://doi.org/10.58445/rars.2355",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Feature Fusion Units for Fine-Grained Image Categorization",
+            "authors": [
+              "Zhao",
+              "Liu",
+              "Yang",
+              "Lu",
+              "Xing"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5370575",
+            "source_url": "https://doi.org/10.2139/ssrn.5370575",
+            "title_similarity": 0.6991869918699187
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Feature Fusion Units for Fine-Grained Image Categorization",
+            "authors": [
+              "Zhao",
+              "Liu",
+              "Yang",
+              "Lu",
+              "Xing"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5370574",
+            "source_url": "https://doi.org/10.2139/ssrn.5370574",
+            "title_similarity": 0.6991869918699187
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "PFNet: A Novel Part Fusion Network for Fine-Grained Image Categorization",
+            "authors": [
+              "Guo",
+              "Liang",
+              "Bai",
+              "Lao"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/bigmm.2018.8499094",
+            "source_url": "https://doi.org/10.1109/bigmm.2018.8499094",
+            "title_similarity": 0.7205882352941176
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Combining randomization and discrimination for fine-grained image categorization",
+            "authors": [
+              "Yao",
+              "Khosla",
+              "Fei-Fei"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/cvpr.2011.5995368",
+            "source_url": "https://doi.org/10.1109/cvpr.2011.5995368",
+            "title_similarity": 0.6068965517241379
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:25.097333Z",
+        "response_sha256": "71c16bb48c1748c16f7c9148575e2f97d362fffe22e0247dd9d1835a4a605187",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Novel+dataset+for+fine-grained+image+categorization%3A+Stanford+dogs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.364669Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-28",
+        "paper_reference_id": "ref-paper_001_v3_credibility-28",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-30",
+        "paper_reference_id": "ref-paper_001_v3_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Rethinking the hyperparameters for fine-tuning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Rethinking+the+hyperparameters+for+fine-tuning&rows=5",
+        "checked_at": "2026-10-09T04:40:58.366592Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Table 1: Hyperparameters for fine-tuning BERT.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.1248/table-1",
+            "source_url": "https://doi.org/10.7717/peerjcs.1248/table-1",
+            "title_similarity": 0.7555555555555555
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table 3: Hyperparameters used in fine-tuning the three standard CNNs.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.869/table-3",
+            "source_url": "https://doi.org/10.7717/peerj-cs.869/table-3",
+            "title_similarity": 0.5486725663716814
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 2: Hyperparameters for fine-tuning BERT for the CrisisMMD dataset.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.1859/table-2",
+            "source_url": "https://doi.org/10.7717/peerjcs.1859/table-2",
+            "title_similarity": 0.5862068965517241
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Table 3: Comparative analysis of fine-tuning results under different values of hyperparameters\n                      <i>β</i>\n                      and\n                      <i>maxEpoch</i>\n                      .",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.2107/table-3",
+            "source_url": "https://doi.org/10.7717/peerjcs.2107/table-3",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Table 3: ANN hyperparameters tuning.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.14104/table-3",
+            "source_url": "https://doi.org/10.7717/peerj.14104/table-3",
+            "title_similarity": 0.65
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:27.373651Z",
+        "response_sha256": "c48b6577156cf67abb7af15f0fae4e253220217c6c43842699428d68d45ee7c9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Rethinking+the+hyperparameters+for+fine-tuning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.366592Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-32",
+        "paper_reference_id": "ref-paper_001_v3_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Integral continual learning along the tangent vector field of tasks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Integral+continual+learning+along+the+tangent+vector+field+of+tasks&rows=5",
+        "checked_at": "2026-10-09T04:40:58.367025Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Continual Learning for Classification Tasks",
+            "authors": [
+              "Han"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2023-15555",
+            "source_url": "https://doi.org/10.22215/etd/2023-15555",
+            "title_similarity": 0.5636363636363636
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Line Integral of a Vector Field Along a Path",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1002/9781119332244.ch8",
+            "source_url": "https://doi.org/10.1002/9781119332244.ch8",
+            "title_similarity": 0.5225225225225225
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Parameter-Efficient Fine-Tuning for Continual Learning: A Neural Tangent Kernel Perspective_supp1-3670952.pdf",
+            "authors": [
+              "Ji"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2026.3670952/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2026.3670952/mm1",
+            "title_similarity": 0.4685714285714286
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Dynamic Transformer Architecture for Continual Learning of Multimodal Tasks",
+            "authors": [
+              "Cai",
+              "Rostami"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4713352",
+            "source_url": "https://doi.org/10.2139/ssrn.4713352",
+            "title_similarity": 0.4647887323943662
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Value-Driven Federated Continual Learning Without Predefined Tasks",
+            "authors": [
+              "Zhou",
+              "Li",
+              "Yi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6064812",
+            "source_url": "https://doi.org/10.2139/ssrn.6064812",
+            "title_similarity": 0.5864661654135338
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:30.494665Z",
+        "response_sha256": "68f844816ffa46cad33e03e84ab54924ac5b4efa8c5cc5acf4d5c90991cd80d4",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Integral+continual+learning+along+the+tangent+vector+field+of+tasks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.367025Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-33",
+        "paper_reference_id": "ref-paper_001_v3_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Maji, J",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Maji%2C+J&rows=5",
+        "checked_at": "2026-10-09T04:40:58.368524Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Maji Maji Revolt",
+            "authors": [
+              "Heath"
+            ],
+            "year": 2005,
+            "years": [
+              2005,
+              2006
+            ],
+            "doi": "10.1093/acref/9780195301731.013.42272",
+            "source_url": "https://doi.org/10.1093/acref/9780195301731.013.42272",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Chapter Two. The Ngindo: Exploring The Center Of The Maji Maji Rebellion",
+            "authors": [
+              "Larson"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1163/ej.9789004183421.i-325.18",
+            "source_url": "https://doi.org/10.1163/ej.9789004183421.i-325.18",
+            "title_similarity": 0.15789473684210525
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Maji-Maji, n.",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1093/oed/2187653309",
+            "source_url": "https://doi.org/10.1093/oed/2187653309",
+            "title_similarity": 0.7058823529411765
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "2 Der Beginn des Maji-Maji-Krieges Ausbruch",
+            "authors": [
+              "Seeberg"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5771/9783496030935-24",
+            "source_url": "https://doi.org/10.5771/9783496030935-24",
+            "title_similarity": 0.24489795918367346
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Chapter One. War Of Words: The Narrative Efficacy Of Medicine In The Maji Maji War",
+            "authors": [
+              "Monson"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1163/ej.9789004183421.i-325.11",
+            "source_url": "https://doi.org/10.1163/ej.9789004183421.i-325.11",
+            "title_similarity": 0.13953488372093023
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:31.359468Z",
+        "response_sha256": "5368b721d593447c6f798ab7301176e73d0bc4e59d50a5f2c6be51284ab18589",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Maji%2C+J&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.368524Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-34",
+        "paper_reference_id": "ref-paper_001_v3_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gradients as features for deep representation learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gradients+as+features+for+deep+representation+learning&rows=5",
+        "checked_at": "2026-10-09T04:40:58.369785Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Speech-Based Parkinson's Disease Detection Using MFCC Features and Deep Representation Learning",
+            "authors": [
+              "Hossain",
+              "Banu",
+              "Arefin",
+              "Musharaf Hussain"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icsadl67539.2026.11451863",
+            "source_url": "https://doi.org/10.1109/icsadl67539.2026.11451863",
+            "title_similarity": 0.6040268456375839
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Addressing stale gradients in asynchronous federated deep reinforcement learning",
+            "authors": [
+              "Stanley"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/td-20240329-43",
+            "source_url": "https://doi.org/10.31274/td-20240329-43",
+            "title_similarity": 0.5970149253731343
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Statistical Features Versus Deep Learning Representation for Suspicious Human Activity Recognition",
+            "authors": [
+              "Khairy"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/niles56402.2022.9942440",
+            "source_url": "https://doi.org/10.1109/niles56402.2022.9942440",
+            "title_similarity": 0.5263157894736842
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Lung Ultrasound Image Classification Using Deep Learning and Histogram of Oriented Gradients Features for COVID-19 Detection",
+            "authors": [
+              "Nehary",
+              "Rajan",
+              "Rossa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/sas58821.2023.10254002",
+            "source_url": "https://doi.org/10.1109/sas58821.2023.10254002",
+            "title_similarity": 0.33707865168539325
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Figure 2: Representation of deep learning models.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3484/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3484/fig-2",
+            "title_similarity": 0.5742574257425742
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:32.481889Z",
+        "response_sha256": "d10ffdfc4983bf86db05211459fcab915fb0659cd71a1cd4429ace8e0c638f49",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gradients+as+features+for+deep+representation+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.369785Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-35",
+        "paper_reference_id": "ref-paper_001_v3_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Cats and dogs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Cats+and+dogs&rows=5",
+        "checked_at": "2026-10-09T04:40:58.369107Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dogs and Cats",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32013/whwuttinh9bt",
+            "source_url": "https://doi.org/10.32013/whwuttinh9bt",
+            "title_similarity": 0.5384615384615384
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Dogs and Cats",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32013/3mgb-mnb1",
+            "source_url": "https://doi.org/10.32013/3mgb-mnb1",
+            "title_similarity": 0.5384615384615384
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Atlas of Dentistry in Cats and Dogs",
+            "authors": [
+              "Eickhoff"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1055/b-0040-176247",
+            "source_url": "https://doi.org/10.1055/b-0040-176247",
+            "title_similarity": 0.5416666666666666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "More Cats Than Dogs?",
+            "authors": [
+              "Heine"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1093/acprof:oso/9780199837281.003.0001",
+            "source_url": "https://doi.org/10.1093/acprof:oso/9780199837281.003.0001",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Appendix 3: Normal Values for Cats and Dogs",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000,
+              2008
+            ],
+            "doi": "10.1002/9780470699010.app3",
+            "source_url": "https://doi.org/10.1002/9780470699010.app3",
+            "title_similarity": 0.4727272727272727
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:33.220526Z",
+        "response_sha256": "6bf920d63a3acff4d374b4bc24bf7fcf8278895d3cb36dc78e0d7ba3b6ca86fd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Cats+and+dogs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.369107Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-37",
+        "paper_reference_id": "ref-paper_001_v3_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A stochastic approximation method",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+stochastic+approximation+method&rows=5",
+        "checked_at": "2026-10-09T04:40:58.369397Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Polynomial approximation method for stochastic programming.",
+            "authors": [
+              "Ma"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18297/etd/874",
+            "source_url": "https://doi.org/10.18297/etd/874",
+            "title_similarity": 0.4835164835164835
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An Iterative Approximation Method",
+            "authors": [],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1007/978-3-540-74173-2_8",
+            "source_url": "https://doi.org/10.1007/978-3-540-74173-2_8",
+            "title_similarity": 0.8181818181818182
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Projected Stochastic Approximation Method for Adaptive Filters and Identifiers.",
+            "authors": [
+              "Kushner"
+            ],
+            "year": 1979,
+            "years": [
+              1979
+            ],
+            "doi": "10.21236/ada078602",
+            "source_url": "https://doi.org/10.21236/ada078602",
+            "title_similarity": 0.584070796460177
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ADAPTIVE CONTROL OF FINITE MARKOV CHAINS EMPLOYING STOCHASTIC APPROXIMATION METHOD",
+            "authors": [
+              "Nazin",
+              "Poznyak"
+            ],
+            "year": 1987,
+            "years": [
+              1987
+            ],
+            "doi": "10.1016/b978-0-08-033452-3.50071-5",
+            "source_url": "https://doi.org/10.1016/b978-0-08-033452-3.50071-5",
+            "title_similarity": 0.5739130434782609
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Necessary and sufficient conditions for a stochastic approximation method",
+            "authors": [
+              "Clark"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1016/0021-9045(89)90138-x",
+            "source_url": "https://doi.org/10.1016/0021-9045(89)90138-x",
+            "title_similarity": 0.6226415094339622
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:36.601773Z",
+        "response_sha256": "96c118182eb3df4b4d75c0647747c4069f9c037e29f45bdb0bcf1662f616c67b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+stochastic+approximation+method&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.369397Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-38",
+        "paper_reference_id": "ref-paper_001_v3_credibility-38",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Exact+solutions+to+the+nonlinear+dynamics+of+learning+in+deep+linear+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:40:58.370373Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Exact Learning Dynamics of Deep Linear Networks with Prior Knowledge",
+            "authors": [
+              "Braun",
+              "Dominé",
+              "Fitzgerald",
+              "Saxe"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-0479",
+            "source_url": "https://doi.org/10.52202/068431-0479",
+            "title_similarity": 0.5657894736842105
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Exact and Perturbation Solutions for the Ensemble Dynamics",
+            "authors": [
+              "Leen"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1017/cbo9780511569920.004",
+            "source_url": "https://doi.org/10.1017/cbo9780511569920.004",
+            "title_similarity": 0.4788732394366197
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stochastic linear learning: Exact test and training error averages",
+            "authors": [
+              "Hansen"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1016/0893-6080(93)90006-i",
+            "source_url": "https://doi.org/10.1016/0893-6080(93)90006-i",
+            "title_similarity": 0.4429530201342282
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Exact Solutions of a Deep Linear Network",
+            "authors": [
+              "Ziyin",
+              "Li",
+              "Meng"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-1775",
+            "source_url": "https://doi.org/10.52202/068431-1775",
+            "title_similarity": 0.6451612903225806
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Solutions of linear equations and a class of nonlinear equations using recurrent neural networks",
+            "authors": [
+              "Mathia"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.15760/etd.1354",
+            "source_url": "https://doi.org/10.15760/etd.1354",
+            "title_similarity": 0.5333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:37.765750Z",
+        "response_sha256": "7f499183aa6800ac6e2277cbd244ed61743b7dbc9561d7a28f10de31cb6a47c4",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Exact+solutions+to+the+nonlinear+dynamics+of+learning+in+deep+linear+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.370373Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-39",
+        "paper_reference_id": "ref-paper_001_v3_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Wah, S",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Wah%2C+S&rows=5",
+        "checked_at": "2026-10-09T04:40:58.371159Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Wah! Wah! Girls",
+            "authors": [
+              "Gupta"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.5040/9781350210387.00000004",
+            "source_url": "https://doi.org/10.5040/9781350210387.00000004",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "wah-wah, n.",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1093/oed/8345598605",
+            "source_url": "https://doi.org/10.1093/oed/8345598605",
+            "title_similarity": 0.5714285714285714
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Wah! Wah! Girls",
+            "authors": [
+              "Gupta"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.5040/9781350210387",
+            "source_url": "https://doi.org/10.5040/9781350210387",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Igneous complex at Wah Wah Pass, Beaver County, Utah",
+            "authors": [],
+            "year": 1966,
+            "years": [
+              1966
+            ],
+            "doi": "10.34191/ss-17",
+            "source_url": "https://doi.org/10.34191/ss-17",
+            "title_similarity": 0.18181818181818182
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Optimized Production of Syngas from Rice Hush Using Steam Explosion in Dual Fluidized Bed Gasifier",
+            "authors": [
+              "F",
+              "N",
+              "U",
+              "A",
+              "A"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.26420/austinchemeng.2021.1085",
+            "source_url": "https://doi.org/10.26420/austinchemeng.2021.1085",
+            "title_similarity": 0.07766990291262135
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:38.544475Z",
+        "response_sha256": "75e35a654e002cf97c27765314fd15c052c42ad26630cf402bf655da4e6fbbd0",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Wah%2C+S&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.371159Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-40",
+        "paper_reference_id": "ref-paper_001_v3_credibility-40",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentially private empirical risk minimization with non-convex loss functions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentially+private+empirical+risk+minimization+with+non-convex+loss+functions&rows=5",
+        "checked_at": "2026-10-09T04:40:58.371488Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Differentially Private Empirical Risk Minimization with Smooth Non-Convex Loss Functions: A Non-Stationary View",
+            "authors": [
+              "Wang",
+              "Xu"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1609/aaai.v33i01.33011182",
+            "source_url": "https://doi.org/10.1609/aaai.v33i01.33011182",
+            "title_similarity": 0.8481675392670157
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Differentially Private Weighted Empirical Risk Minimization Procedure and its Application to Outcome Weighted Learning_supp1-3707445.pdf",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2026.3707445/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2026.3707445/mm1",
+            "title_similarity": 0.5570776255707762
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Gradient complexity and non-stationary views of differentially private empirical risk minimization",
+            "authors": [
+              "Wang",
+              "Xu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.tcs.2023.114259",
+            "source_url": "https://doi.org/10.1016/j.tcs.2023.114259",
+            "title_similarity": 0.5586592178770949
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Differentially Private Confidence Intervals for Empirical Risk Minimization",
+            "authors": [
+              "Wang",
+              "Kifer",
+              "Lee"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.29012/jpc.660",
+            "source_url": "https://doi.org/10.29012/jpc.660",
+            "title_similarity": 0.6410256410256411
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differentially private empirical risk minimization for AUC maximization",
+            "authors": [
+              "Wang",
+              "Yang",
+              "Lei",
+              "Ying",
+              "Zhang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neucom.2021.07.001",
+            "source_url": "https://doi.org/10.1016/j.neucom.2021.07.001",
+            "title_similarity": 0.7368421052631579
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:41.169468Z",
+        "response_sha256": "d47f6f8a6688c0c9970bcc9354f742fef1a4f38d831b9403ae1ff7133c5b12b0",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentially+private+empirical+risk+minimization+with+non-convex+loss+functions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.371488Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-41",
+        "paper_reference_id": "ref-paper_001_v3_credibility-41",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-43",
+        "paper_reference_id": "ref-paper_001_v3_credibility-43",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-44",
+        "paper_reference_id": "ref-paper_001_v3_credibility-44",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "lo-fi: distributed fine-tuning without communication",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=lo-fi%3A+distributed+fine-tuning+without+communication&rows=5",
+        "checked_at": "2026-10-09T04:40:58.373633Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Communication-Efficient MoE Fine-Tuning with Locality-Aware Expert Placement",
+            "authors": [
+              "Hu",
+              "Kang",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icdcs63083.2025.00025",
+            "source_url": "https://doi.org/10.1109/icdcs63083.2025.00025",
+            "title_similarity": 0.47244094488188976
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Lo-fi",
+            "authors": [
+              "Vallee"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.a2267083",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.a2267083",
+            "title_similarity": 0.17857142857142858
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning Evolving Latent Strategies for Multi-Agent Language Systems without Model Fine-Tuning",
+            "authors": [
+              "Tang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/6085",
+            "source_url": "https://doi.org/10.31224/6085",
+            "title_similarity": 0.31724137931034485
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Vacuum Energy with Natural Bounds:  A Spectral Approach without Fine-Tuning",
+            "authors": [
+              "Kamminga"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202507.0199.v2",
+            "source_url": "https://doi.org/10.20944/preprints202507.0199.v2",
+            "title_similarity": 0.3548387096774194
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Vacuum Energy with Natural Bounds:  A Spectral Approach without Fine-Tuning",
+            "authors": [
+              "Kamminga"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202507.0199.v1",
+            "source_url": "https://doi.org/10.20944/preprints202507.0199.v1",
+            "title_similarity": 0.3548387096774194
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:44.319475Z",
+        "response_sha256": "e2fd05ab2fe85d5fcdc71ada1a961c715c1696df6e3dc7de99ee2a035432a213",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=lo-fi%3A+distributed+fine-tuning+without+communication&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.373633Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-45",
+        "paper_reference_id": "ref-paper_001_v3_credibility-45",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-46",
+        "paper_reference_id": "ref-paper_001_v3_credibility-46",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Normalized/clipped sgd with perturbation for differentially private non-convex optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Normalized%2Fclipped+sgd+with+perturbation+for+differentially+private+non-convex+optimization&rows=5",
+        "checked_at": "2026-10-09T04:40:58.372308Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Differentially private distributed convex optimization via objective perturbation",
+            "authors": [
+              "Nozari",
+              "Tallapragada",
+              "Cortes"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/acc.2016.7525222",
+            "source_url": "https://doi.org/10.1109/acc.2016.7525222",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "DC-SGD: Differentially Private SGD with Dynamic Clipping through Gradient Norm Distribution Estimation_supp1-3557755.pdf",
+            "authors": [
+              "Wei"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2025.3557755/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2025.3557755/mm1",
+            "title_similarity": 0.4095238095238095
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Differentially Private Federated Learning: Privacy and Utility Analysis of Output Perturbation and DP-SGD",
+            "authors": [
+              "Pustozerova",
+              "Baumbach",
+              "Mayer"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/bigdata59044.2023.10386466",
+            "source_url": "https://doi.org/10.1109/bigdata59044.2023.10386466",
+            "title_similarity": 0.37948717948717947
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Gradient Perturbation is Underrated for Differentially Private Convex Optimization",
+            "authors": [
+              "Yu",
+              "Zhang",
+              "Chen",
+              "Yin",
+              "Liu"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.24963/ijcai.2020/431",
+            "source_url": "https://doi.org/10.24963/ijcai.2020/431",
+            "title_similarity": 0.7167630057803468
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differentially Private Distributed Convex Optimization via Functional Perturbation",
+            "authors": [
+              "Nozari",
+              "Tallapragada",
+              "Cortes"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/tcns.2016.2614100",
+            "source_url": "https://doi.org/10.1109/tcns.2016.2614100",
+            "title_similarity": 0.49710982658959535
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:45.473086Z",
+        "response_sha256": "88cef95f82bac021c3b505140f31892ceb880f91e59f45602f39128c0d38c85e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Normalized%2Fclipped+sgd+with+perturbation+for+differentially+private+non-convex+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.372308Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-47",
+        "paper_reference_id": "ref-paper_001_v3_credibility-47",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentially private fine-tuning of language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentially+private+fine-tuning+of+language+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.374519Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "PrunePrivyTune: Accelerating Language Models with Pruning and Differentially Private Fine-Tuning",
+            "authors": [
+              "Garg",
+              "Torra"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10994-026-07016-y",
+            "source_url": "https://doi.org/10.1007/s10994-026-07016-y",
+            "title_similarity": 0.4594594594594595
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Efficient Differentially Private Fine-Tuning with QLoRA and Prefix Tuning for Large Language Models",
+            "authors": [
+              "Tan",
+              "Xiong",
+              "Xu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.54097/we271q84",
+            "source_url": "https://doi.org/10.54097/we271q84",
+            "title_similarity": 0.6973684210526315
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Privacy-Aware Clinical NLP with Differentially Private Fine-Tuning of Large Language Models",
+            "authors": [
+              "Susan Lopez",
+              "Joseph Hill"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.71465/fbg549",
+            "source_url": "https://doi.org/10.71465/fbg549",
+            "title_similarity": 0.7361111111111112
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Differentially Private Subspace Fine-Tuning for Large Language Models",
+            "authors": [
+              "Zheng",
+              "Wang",
+              "Zhang",
+              "Cao",
+              "Cheng",
+              "Shen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1609/aaai.v40i34.40117",
+            "source_url": "https://doi.org/10.1609/aaai.v40i34.40117",
+            "title_similarity": 0.8524590163934426
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "DP-LAC: Lightweight Adaptive Clipping for Differentially Private Federated Fine-Tuning of Language Models",
+            "authors": [
+              "Mehmood",
+              "Xu",
+              "Saravanan",
+              "Dalen",
+              "Ozay"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icassp55912.2026.11460789",
+            "source_url": "https://doi.org/10.1109/icassp55912.2026.11460789",
+            "title_similarity": 0.6751592356687898
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:46.893329Z",
+        "response_sha256": "d9f39405713e3848ec4878cfac3dee7e1bda0bc3adac81b4126346535c80e46f",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentially+private+fine-tuning+of+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.374519Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-48",
+        "paper_reference_id": "ref-paper_001_v3_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bitfit: Simple parameter-efficient fine-tuning for transformer-based masked language-models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bitfit%3A+Simple+parameter-efficient+fine-tuning+for+transformer-based+masked+language-models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.375026Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+            "authors": [
+              "Ben Zaken",
+              "Goldberg",
+              "Ravfogel"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.acl-short.1",
+            "source_url": "https://doi.org/10.18653/v1/2022.acl-short.1",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Parameter-Efficient Fine-Tuning for Vision-Language Models: The Post-Transformer Evolution",
+            "authors": [
+              "Narasinghe",
+              "Sudantha"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/iciprob69625.2026.11497870",
+            "source_url": "https://doi.org/10.1109/iciprob69625.2026.11497870",
+            "title_similarity": 0.5921787709497207
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Parameter Efficient Fine-Tuning on Selective Parameters for Transformer-Based Pre-Trained Models",
+            "authors": [
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icme57554.2024.10688138",
+            "source_url": "https://doi.org/10.1109/icme57554.2024.10688138",
+            "title_similarity": 0.6881720430107527
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Parameter Efficient Fine-tuning of Transformer-Based Language Models Using Dataset Pruning",
+            "authors": [
+              "Tayaranian Hosseini",
+              "Mozafari",
+              "Clark",
+              "Meyer",
+              "Gross"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/ieeeconf60004.2024.10942686",
+            "source_url": "https://doi.org/10.1109/ieeeconf60004.2024.10942686",
+            "title_similarity": 0.7444444444444445
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Parameter-Efficient Fine-Tuning Methods for Pretrained Language Models: A Critical Review and Assessment_supp1-3657354.pdf",
+            "authors": [
+              "Xie"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2026.3657354/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2026.3657354/mm1",
+            "title_similarity": 0.5497630331753555
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:47.836710Z",
+        "response_sha256": "a2dab10f6b277071f8e2c22087fab7d939a56bd402ea0bdf5159ead32fbc6d94",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bitfit%3A+Simple+parameter-efficient+fine-tuning+for+transformer-based+masked+language-models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.375026Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-49",
+        "paper_reference_id": "ref-paper_001_v3_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A survey on negative transfer",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+survey+on+negative+transfer&rows=5",
+        "checked_at": "2026-10-09T04:40:58.374221Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Advancements and Challenges in Transfer Learning and Domain Adaptation: A Comprehensive Survey on Mitigating Negative Transfer",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.62441/nano-ntp.v20is9.25",
+            "source_url": "https://doi.org/10.62441/nano-ntp.v20is9.25",
+            "title_similarity": 0.37662337662337664
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Safe, Scalable Transfer with Dynamic Experts: Mitigating Negative Transfer",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-hdl172498",
+            "source_url": "https://doi.org/10.14711/thesis-hdl172498",
+            "title_similarity": 0.5148514851485149
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Survey on Negative Transfer",
+            "authors": [
+              "Zhang",
+              "Deng",
+              "Zhang",
+              "Wu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/jas.2022.106004",
+            "source_url": "https://doi.org/10.1109/jas.2022.106004",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multiple-negative survey method for enhancing the accuracy of negative survey-based cloud data privacy",
+            "authors": [
+              "Liu",
+              "Tang"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/aisw.2015.7469245",
+            "source_url": "https://doi.org/10.1109/aisw.2015.7469245",
+            "title_similarity": 0.2900763358778626
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Full-Featured Search Algorithm for Negative Electron-Transfer Dissociation",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jproteome.6b00319.s001",
+            "source_url": "https://doi.org/10.1021/acs.jproteome.6b00319.s001",
+            "title_similarity": 0.46601941747572817
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:49.974892Z",
+        "response_sha256": "1c13225e3733c253413bb1612c023959a23c6e5a1e69900307eda009f0a5ccb3",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+survey+on+negative+transfer&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.374221Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_001_v3_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_001_v3_credibility-50",
+        "paper_reference_id": "ref-paper_001_v3_credibility-50",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.5
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 50,
+    "extracted_count": 50,
+    "parsed_count": 44,
+    "queried_count": 44,
+    "matched_count": 13,
+    "metadata_conflict_count": 1,
+    "unverified_count": 30,
+    "parse_failed_count": 6,
+    "not_checked_count": 0,
+    "query_failed_count": 0,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:40.748081Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

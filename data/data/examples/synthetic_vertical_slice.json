@@ -1,0 +1,206 @@
+{
+  "schema_version": "0.1-draft",
+  "case_id": "synthetic_vertical_slice",
+  "synthetic": true,
+  "paper_version": {
+    "paper_id": "synthetic-paper",
+    "paper_version_id": "synthetic-paper-v1",
+    "pdf_sha256": "06f487d00af29157a4411ba9e8a09034c14827a645db015a712dc559fd9b95ff",
+    "page_count": 4,
+    "extraction_quality": "usable",
+    "source_url": "https://example.org/synthetic-paper.pdf"
+  },
+  "review_status": "candidate",
+  "reviewed_at": "2026-10-07T10:59:42Z",
+  "review_record": {
+    "annotators": [
+      "demo-reviewer"
+    ],
+    "adjudicator": null
+  },
+  "scope_complete": false,
+  "claim_scope_complete": false,
+  "reference_scope": {
+    "expected_count": 2,
+    "extraction_complete": true
+  },
+  "code_scope": {
+    "applicability": "applicable",
+    "justification": null,
+    "searched_sources": [],
+    "query_completed": false,
+    "repository_checks": []
+  },
+  "document": {
+    "sections": [
+      {
+        "section_id": "abstract",
+        "title": "Abstract",
+        "kind": "abstract",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "section_id": "results",
+        "title": "Results",
+        "kind": "results",
+        "page_start": 2,
+        "page_end": 3
+      },
+      {
+        "section_id": "references",
+        "title": "References",
+        "kind": "references",
+        "page_start": 4,
+        "page_end": 4
+      }
+    ],
+    "chunks": [
+      {
+        "chunk_id": "abstract-1",
+        "section_id": "abstract",
+        "page_number": 1,
+        "sequence_index": 0,
+        "text": "Our method outperforms baseline B on all evaluated datasets."
+      },
+      {
+        "chunk_id": "results-1",
+        "section_id": "results",
+        "page_number": 2,
+        "sequence_index": 1,
+        "text": "On dataset A, accuracy is 92% for our method and 90% for baseline B. Dataset C was not evaluated."
+      },
+      {
+        "chunk_id": "references-1",
+        "section_id": "references",
+        "page_number": 4,
+        "sequence_index": 2,
+        "text": "[1] Doe. Example Paper. 2024. doi:10.9999/synthetic\n[2] Roe. Another Example. 2025."
+      }
+    ],
+    "elements": []
+  },
+  "claims": [
+    {
+      "credibility_claim_id": "claim-1",
+      "paper_version_id": "synthetic-paper-v1",
+      "source_chunk_id": "abstract-1",
+      "claim_text": "Our method outperforms baseline B on all evaluated datasets.",
+      "claim_type": "performance",
+      "importance": "major",
+      "verifiability": true,
+      "dedup_group_id": "group-1",
+      "page_number": 1,
+      "extraction_source": "human_demo",
+      "review_status": "reviewed",
+      "exclusion_reason": null
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_check_id": "cc-1",
+      "credibility_claim_id": "claim-1",
+      "verdict": "partially_supported",
+      "reasoning": "合成演示：结果只列出数据集 A；不足以检查摘要的全部评测数据集范围。",
+      "searched_scope": [
+        {
+          "section_id": "results",
+          "page_start": 2,
+          "page_end": 2
+        }
+      ],
+      "scope_complete": false,
+      "context_comparison": null,
+      "evidence": [
+        {
+          "internal_evidence_id": "ev-1",
+          "chunk_id": "results-1",
+          "element_id": null,
+          "evidence_role": "supports",
+          "excerpt": "On dataset A, accuracy is 92% for our method and 90% for baseline B.",
+          "page_number": 2,
+          "location_confidence": 1.0
+        }
+      ],
+      "review_status": "reviewed",
+      "check_source": "human",
+      "checked_at": "2026-10-07T10:59:42Z"
+    }
+  ],
+  "references": [
+    {
+      "paper_reference_id": "ref-1",
+      "paper_version_id": "synthetic-paper-v1",
+      "sequence_index": 1,
+      "raw_reference_text": "[1] Synthetic citation Example Paper.",
+      "parsed_title": "Example Paper",
+      "parsed_authors": [
+        "Doe"
+      ],
+      "parsed_year": 2024,
+      "parsed_doi": "10.9999/synthetic",
+      "parsed_arxiv_id": null,
+      "page_start": 4,
+      "page_end": 4,
+      "parse_status": "success",
+      "parse_confidence": 1.0
+    },
+    {
+      "paper_reference_id": "ref-2",
+      "paper_version_id": "synthetic-paper-v1",
+      "sequence_index": 2,
+      "raw_reference_text": "[2] Synthetic citation Another Example.",
+      "parsed_title": "Another Example",
+      "parsed_authors": [
+        "Roe"
+      ],
+      "parsed_year": 2025,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "page_start": 4,
+      "page_end": 4,
+      "parse_status": "success",
+      "parse_confidence": 1.0
+    }
+  ],
+  "reference_checks": [
+    {
+      "reference_check_id": "rc-1",
+      "paper_reference_id": "ref-1",
+      "status": "not_checked",
+      "provider": "Crossref",
+      "query": {},
+      "query_attempted": false,
+      "source_url": null,
+      "checked_at": null,
+      "technical_error": null,
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": null,
+      "response_sha256": null,
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-2",
+      "paper_reference_id": "ref-2",
+      "status": "not_checked",
+      "provider": "Crossref",
+      "query": {},
+      "query_attempted": false,
+      "source_url": null,
+      "checked_at": null,
+      "technical_error": null,
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": null,
+      "response_sha256": null,
+      "from_cache": false
+    }
+  ],
+  "repositories": [],
+  "reproduction_signals": []
+}

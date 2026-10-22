@@ -1,0 +1,1579 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-9f74d81c6aa48fa2",
+  "paper_version_id": "paper_029_openreview_2024_02_11",
+  "pdf_sha256": "4e48b5da11a82fb558f15d53a96fd52f4206f8a81d1983383373d67db75c0012",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "a625d09e184d75c699fddf77b9aee36d56a3e4b11741ae5b9534d5966e52480a",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.612903225806452,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.838709677419355,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 31,
+        "extracted_count": 31,
+        "parsed_count": 28,
+        "queried_count": 28,
+        "matched_count": 10,
+        "metadata_conflict_count": 2,
+        "unverified_count": 10,
+        "parse_failed_count": 3,
+        "not_checked_count": 0,
+        "query_failed_count": 6,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=gYcft1HIaU",
+            "checked_at": "2026-10-09T04:48:58.260481Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-25f89268572d",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 15,
+            "comments_checked": 29,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:48:58.763356Z",
+            "source_urls": [
+              "https://api.github.com/repos/openmedlab/PULSE",
+              "https://api.github.com/repos/openmedlab/PULSE/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/14/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/12/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/11/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/10/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/9/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/8/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/7/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/6/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/5/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/4/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/3/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/2/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openmedlab/PULSE/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bianque-1.0: Improving the ”question” ability of medical chat model through finetuning with hybrid instructions and multi-turn doctor qa datasets",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bianque-1.0%3A+Improving+the+%E2%80%9Dquestion%E2%80%9D+ability+of+medical+chat+model+through+finetuning+with+hybrid+instructions+and+multi-turn+doctor+qa+datasets&rows=5",
+        "checked_at": "2026-10-09T04:48:50.094368Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Improving question answering retrieval system through multi-result ranking model",
+            "authors": [
+              "Khamnuansin"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.58837/chula.the.2024.296",
+            "source_url": "https://doi.org/10.58837/chula.the.2024.296",
+            "title_similarity": 0.44144144144144143
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Calvados at MEDIQA-Chat 2023: Improving Clinical Note Generation with Multi-Task Instruction Finetuning",
+            "authors": [
+              "Milintsevich",
+              "Agarwal"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.clinicalnlp-1.56",
+            "source_url": "https://doi.org/10.18653/v1/2023.clinicalnlp-1.56",
+            "title_similarity": 0.4180327868852459
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Medical QA Oriented Multi-Task Learning Model for Question Intent Classification and Named Entity Recognition",
+            "authors": [
+              "Tohti",
+              "Abdurxit",
+              "Hamdulla"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.3390/info13120581",
+            "source_url": "https://doi.org/10.3390/info13120581",
+            "title_similarity": 0.3346613545816733
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Question-and-Answer Juxtaposition Based Chat Model for Multi-Turn Medical Inquiry",
+            "authors": [
+              "Liu",
+              "Fu",
+              "Xia",
+              "Chang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.3233/atde231211",
+            "source_url": "https://doi.org/10.3233/atde231211",
+            "title_similarity": 0.38565022421524664
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Supplemental Information 10: Length analysis for ExtGPT-QA Model for SQuAD, Wiki-QA, and News-QA datasets",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.1422/supp-10",
+            "source_url": "https://doi.org/10.7717/peerj-cs.1422/supp-10",
+            "title_similarity": 0.36885245901639346
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:50.089382Z",
+        "response_sha256": "0398df58b51c16525d3d8c0d980e958ecbd1c12222ac7a52f1a744c7ff8b9a8b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bianque-1.0%3A+Improving+the+%E2%80%9Dquestion%E2%80%9D+ability+of+medical+chat+model+through+finetuning+with+hybrid+instructions+and+multi-turn+doctor+qa+datasets&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:50.094368Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bert%3A+Pre-training+of+deep+bidirectional+transformers+for+language+understanding&rows=5",
+        "checked_at": "2026-10-09T04:48:50.091584Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Spectrum-BERT: Pre-training of Deep Bidirectional Transformers for Spectral Classification of Chinese Liquors_supp1-3374300.docx",
+            "authors": [
+              "Zhu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tim.2024.3374300/mm1",
+            "source_url": "https://doi.org/10.1109/tim.2024.3374300/mm1",
+            "title_similarity": 0.6407766990291263
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            "authors": [
+              "Devlin",
+              "Chang",
+              "Lee",
+              "Toutanova"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/n19-1423",
+            "source_url": "https://doi.org/10.18653/v1/n19-1423",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Over-Sampling Effect in Pre-Training for Bidirectional Encoder Representations from Transformers (BERT) to Localize Medical BERT and Enhance Biomedical BERT (Preprint)",
+            "authors": [
+              "Wada",
+              "Takeda",
+              "Okada",
+              "Manabe",
+              "Konishi",
+              "Kamohara",
+              "Matsumura"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2196/preprints.40992",
+            "source_url": "https://doi.org/10.2196/preprints.40992",
+            "title_similarity": 0.5041322314049587
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Arabic Image Captioning using Pre-training of Deep Bidirectional Transformers",
+            "authors": [
+              "Emami",
+              "Nugues",
+              "Elnagar",
+              "Afyouni"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.inlg-main.4",
+            "source_url": "https://doi.org/10.18653/v1/2022.inlg-main.4",
+            "title_similarity": 0.6538461538461539
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bidirectional Encoder Representations from Transformers (BERT)",
+            "authors": [
+              "Kamath",
+              "Graham",
+              "Emara"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003170082-3",
+            "source_url": "https://doi.org/10.1201/9781003170082-3",
+            "title_similarity": 0.4316546762589928
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:50.088797Z",
+        "response_sha256": "4474d96f0766804b02d2d996ece3d354f05bca8dc49022c219514ef21c40d2dc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bert%3A+Pre-training+of+deep+bidirectional+transformers+for+language+understanding&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:50.091584Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Measuring massive multitask language understanding",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Measuring+massive+multitask+language+understanding&rows=5",
+        "checked_at": "2026-10-09T04:48:49.110402Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BnMMLU: Measuring Massive Multitask Language Understanding in Bengali",
+            "authors": [
+              "Joy",
+              "Shatabda"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.18653/v1/2026.findings-acl.593",
+            "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.593",
+            "title_similarity": 0.847457627118644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "TurkishMMLU: Measuring Massive Multitask Language Understanding in Turkish",
+            "authors": [
+              "Yüksel",
+              "Köksal",
+              "Senel",
+              "Korhonen",
+              "Schuetze"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-emnlp.413",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.413",
+            "title_similarity": 0.8130081300813008
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "CMMLU: Measuring massive multitask language understanding in Chinese",
+            "authors": [
+              "Li",
+              "Zhang",
+              "Koto",
+              "Yang",
+              "Zhao",
+              "Gong",
+              "Duan",
+              "Baldwin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-acl.671",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-acl.671",
+            "title_similarity": 0.8547008547008547
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "KMMLU: Measuring Massive Multitask Language Understanding in Korean",
+            "authors": [
+              "Son",
+              "Lee",
+              "Kim",
+              "Kim",
+              "Muennighoff",
+              "Choi",
+              "Park",
+              "Yoo",
+              "Biderman"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.naacl-long.206",
+            "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.206",
+            "title_similarity": 0.8620689655172413
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Evaluating Zero-Shot and Few-Shot Learning on the Turkish Massive Multitask Language Understanding Dataset",
+            "authors": [
+              "Elhussieni",
+              "Sailunaz",
+              "Elgammal",
+              "AbuShaar",
+              "Özdemir",
+              "Rokne",
+              "Alhajj"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icsai68704.2025.11345826",
+            "source_url": "https://doi.org/10.1109/icsai68704.2025.11345826",
+            "title_similarity": 0.6025641025641025
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:23.001346Z",
+        "response_sha256": "374225bde1d0c4ec3b58f19a279a5b2d94ae2ad27f397769b1e78a5a40477a1d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Measuring+massive+multitask+language+understanding&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:49.110402Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "What disease does this patient have? a large-scale open domain question answering dataset from medical exams",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=What+disease+does+this+patient+have%3F+a+large-scale+open+domain+question+answering+dataset+from+medical+exams&rows=5",
+        "checked_at": "2026-10-09T04:48:52.040526Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:52.040462Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=What+disease+does+this+patient+have%3F+a+large-scale+open+domain+question+answering+dataset+from+medical+exams&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:52.040526Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "ROUGE: A package for automatic evaluation of summaries",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=ROUGE%3A+A+package+for+automatic+evaluation+of+summaries&rows=5",
+        "checked_at": "2026-10-09T04:48:51.514785Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Table 6: ROUGE scores for 90-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-6",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-6",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table 4: ROUGE scores for 10-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-4",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-4",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 5: ROUGE scores for 50-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-5",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-5",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Manual and automatic evaluation of summaries",
+            "authors": [
+              "Lin",
+              "Hovy"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.3115/1118162.1118168",
+            "source_url": "https://doi.org/10.3115/1118162.1118168",
+            "title_similarity": 0.7628865979381443
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Table 2: Timing summaries of desktop software by package and platform.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.9414/table-2",
+            "source_url": "https://doi.org/10.7717/peerj.9414/table-2",
+            "title_similarity": 0.2809917355371901
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:49.907845Z",
+        "response_sha256": "f6790f081fc621265cdc9b2f1379a7953d66b3bad35b2f83b722f18435a650d6",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=ROUGE%3A+A+package+for+automatic+evaluation+of+summaries&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:51.514785Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pulse, 2023",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pulse%2C+2023&rows=5",
+        "checked_at": "2026-10-09T04:48:53.917328Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Abstracts  book of Pulse of Asia  2023",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1159/000534378",
+            "source_url": "https://doi.org/10.1159/000534378",
+            "title_similarity": 0.43478260869565216
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "2023 Index IEEE Pulse Vol. 14",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/mpuls.2024.3370388",
+            "source_url": "https://doi.org/10.1109/mpuls.2024.3370388",
+            "title_similarity": 0.3157894736842105
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "SDG Pulse 2023",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18356/9789210028226",
+            "source_url": "https://doi.org/10.18356/9789210028226",
+            "title_similarity": 0.8333333333333334
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "SDG Pulse 2022",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18356/9789210018418",
+            "source_url": "https://doi.org/10.18356/9789210018418",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Pulse Official Vol.12-14",
+            "authors": [
+              "Chief"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3329/pulse.v14i1-3.66905",
+            "source_url": "https://doi.org/10.3329/pulse.v14i1-3.66905",
+            "title_similarity": 0.4117647058823529
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:53.914814Z",
+        "response_sha256": "77cea60c8353143f365a7d4514331ced7d3aba618d67de34a60df5c851157586",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pulse%2C+2023&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:53.917328Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-16",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.3115/1073083.1073135"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.3115%2F1073083.1073135",
+        "checked_at": "2026-10-09T04:48:52.293411Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BLEU",
+            "authors": [
+              "Papineni",
+              "Roukos",
+              "Ward",
+              "Zhu"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.3115/1073083.1073135",
+            "source_url": "https://doi.org/10.3115/1073083.1073135",
+            "title_similarity": 0.12307692307692308
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:12.553049Z",
+        "response_sha256": "94e1153c03b593a969b1e4dbf1d63927660d605a43b78c67633387cc43db783f",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.3115%2F1073083.1073135"
+      ],
+      "checked_at": "2026-10-09T04:48:52.293411Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-17",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/d19-1250"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2Fd19-1250",
+        "checked_at": "2026-10-09T04:48:52.955409Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Language Models as Knowledge Bases?",
+            "authors": [
+              "Petroni",
+              "Rocktäschel",
+              "Riedel",
+              "Lewis",
+              "Bakhtin",
+              "Wu",
+              "Miller"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/d19-1250",
+            "source_url": "https://doi.org/10.18653/v1/d19-1250",
+            "title_similarity": 0.27419354838709675
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:52.954269Z",
+        "response_sha256": "3b8ac417d94cf7e9f592f525f823eba943b0a48241da4e2a678b27c14f501301",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2Fd19-1250"
+      ],
+      "checked_at": "2026-10-09T04:48:52.955409Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-18",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-19",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Global pointer: Novel efficient span-based approach for named entity recognition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Global+pointer%3A+Novel+efficient+span-based+approach+for+named+entity+recognition&rows=5",
+        "checked_at": "2026-10-09T04:48:55.281020Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:55.280949Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Global+pointer%3A+Novel+efficient+span-based+approach+for+named+entity+recognition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:55.281020Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/2021"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2021",
+        "checked_at": "2026-10-09T04:48:53.279813Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:53.279217Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2F2021"
+      ],
+      "checked_at": "2026-10-09T04:48:53.279813Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Llama: Open and efficient foundation language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Llama%3A+Open+and+efficient+foundation+language+models&rows=5",
+        "checked_at": "2026-10-09T04:48:52.956750Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hierarchical Prompt Composition for Memory-Efficient Open-World Continual Learning in Vision-Language Foundation Models",
+            "authors": [
+              "SIHAM"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.21203/rs.3.rs-7970696/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-7970696/v1",
+            "title_similarity": 0.47058823529411764
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "NiftyLLaMA: An open information extraction system integrated with sentiment analysis for Nifty-50 companies using LLaMa-2",
+            "authors": [
+              "Yadav",
+              "Kumar"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/fllm63129.2024.10852501",
+            "source_url": "https://doi.org/10.1109/fllm63129.2024.10852501",
+            "title_similarity": 0.2807017543859649
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Efficient Training and Inference: Techniques for Large Language Models Using Llama",
+            "authors": [
+              "Cunningham",
+              "Archambault",
+              "Kung"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.171651876.65094225/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.171651876.65094225/v1",
+            "title_similarity": 0.4393939393939394
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Efficient Compression of Large Language Models: A Case Study on Llama 2 with 13B Parameters",
+            "authors": [
+              "Konishi",
+              "Nakano",
+              "Tomoda"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4407954/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4407954/v1",
+            "title_similarity": 0.425531914893617
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Vision–Language Foundation Models and Multimodal Large Language Models: A Comprehensive Survey of Architectures, Benchmarks, and Open Challenges",
+            "authors": [
+              "Singh"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6176720",
+            "source_url": "https://doi.org/10.2139/ssrn.6176720",
+            "title_similarity": 0.3229166666666667
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:16.448216Z",
+        "response_sha256": "4570edf49693bee44389b8470e2eabd7f62125fefff100710b7264217170f3d1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Llama%3A+Open+and+efficient+foundation+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:52.956750Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Huatuo: Tuning llama model with chinese medical knowledge, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Huatuo%3A+Tuning+llama+model+with+chinese+medical+knowledge%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:48:54.096441Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Tuning LLaMA Model with Mental Disorders Knowledge",
+            "authors": [
+              "Zhao",
+              "Gao",
+              "Zhang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4250151/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4250151/v1",
+            "title_similarity": 0.6846846846846847
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "DRG-LLaMA: Tuning LLaMA Model to Predict Diagnosis-related Group for Hospitalized Patients",
+            "authors": [
+              "Wang",
+              "Gao",
+              "Dantona",
+              "Hull",
+              "Sun"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-3397089/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3397089/v1",
+            "title_similarity": 0.4266666666666667
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge",
+            "authors": [
+              "Li",
+              "Li",
+              "Zhang",
+              "Dan",
+              "Jiang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7759/cureus.40895",
+            "source_url": "https://doi.org/10.7759/cureus.40895",
+            "title_similarity": 0.27586206896551724
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "PowerPulse: Power Energy Chat Model with LLaMA Model Fine-tuned on Chinese and Power Sector Domain Knowledge",
+            "authors": [
+              "nong",
+              "Yin",
+              "Du",
+              "Zhang",
+              "Yang",
+              "Yan",
+              "Xiang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.169152136.62259950/v1",
+            "source_url": "https://doi.org/10.22541/au.169152136.62259950/v1",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Chinese Medical Named Entity Recognition based on Expert Knowledge and Fine-tuning Bert",
+            "authors": [
+              "Zhang",
+              "Yao",
+              "Li",
+              "Aini"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/ickg59574.2023.00016",
+            "source_url": "https://doi.org/10.1109/ickg59574.2023.00016",
+            "title_similarity": 0.35135135135135137
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:54.094900Z",
+        "response_sha256": "95efc6433755833f11b6e9a3afbe9ebe6e7f66c86562b1f1d9771a951c61d1e6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Huatuo%3A+Tuning+llama+model+with+chinese+medical+knowledge%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:54.096441Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-24",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "M3e: Moka massive mixed embedding model, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=M3e%3A+Moka+massive+mixed+embedding+model%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:48:55.886564Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:55.886506Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=M3e%3A+Moka+massive+mixed+embedding+model%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:55.886564Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-25",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pmc-llama: Towards building open-source language models for medicine, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pmc-llama%3A+Towards+building+open-source+language+models+for+medicine%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:48:56.152468Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:56.152415Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pmc-llama%3A+Towards+building+open-source+language+models+for+medicine%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:56.152468Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Doctorglm: Fine-tuning your chinese doctor is not a herculean task",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Doctorglm%3A+Fine-tuning+your+chinese+doctor+is+not+a+herculean+task&rows=5",
+        "checked_at": "2026-10-09T04:48:55.865391Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Opening Act",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1017/9781009466400.005",
+            "source_url": "https://doi.org/10.1017/9781009466400.005",
+            "title_similarity": 0.23684210526315788
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fine-Tuning Your Game",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.5040/9781718218871.ch-009",
+            "source_url": "https://doi.org/10.5040/9781718218871.ch-009",
+            "title_similarity": 0.4186046511627907
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fine-Tuning Your Presentation",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.4135/9781452219011.n14",
+            "source_url": "https://doi.org/10.4135/9781452219011.n14",
+            "title_similarity": 0.48936170212765956
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Table 2: Performance of fine-tuning BERT and CodeBERT on data leakage detection task.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2730/table-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2730/table-2",
+            "title_similarity": 0.4594594594594595
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Fine-tuning your brand",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.5040/9781350009851.ch-003",
+            "source_url": "https://doi.org/10.5040/9781350009851.ch-003",
+            "title_similarity": 0.45977011494252873
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:55.864032Z",
+        "response_sha256": "c0d70fa9d48ae2b18d16bddab7cbf9a2c1da336f9dc19d87d24185181fbcc8d1",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Doctorglm%3A+Fine-tuning+your+chinese+doctor+is+not+a+herculean+task&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:55.865391Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-27",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Baichuan 2: Open large-scale language models, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Baichuan+2%3A+Open+large-scale+language+models%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:48:56.910055Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:56.909980Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Baichuan+2%3A+Open+large-scale+language+models%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:56.910055Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Huatuogpt, towards taming language models to be a doctor",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Huatuogpt%2C+towards+taming+language+models+to+be+a+doctor&rows=5",
+        "checked_at": "2026-10-09T04:48:58.259646Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:58.259576Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Huatuogpt%2C+towards+taming+language+models+to+be+a+doctor&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:58.259646Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_029_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_029_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_029_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bertscore: Evaluating text generation with bert",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bertscore%3A+Evaluating+text+generation+with+bert&rows=5",
+        "checked_at": "2026-10-09T04:48:57.041178Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Evaluating the BERTScore of synthetic text and its sentiment analysis",
+            "authors": [
+              "Gupta"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-3248507/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3248507/v1",
+            "title_similarity": 0.3130434782608696
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "DiscoScore: Evaluating Text Generation with BERT and Discourse Coherence",
+            "authors": [
+              "Zhao",
+              "Strube",
+              "Eger"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.eacl-main.278",
+            "source_url": "https://doi.org/10.18653/v1/2023.eacl-main.278",
+            "title_similarity": 0.717948717948718
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Text to SQL Generation Using Beam Search and an Enhanced Bert  Model",
+            "authors": [
+              "Rajaput",
+              "Sangolli",
+              "Bellerimath",
+              "Abbigeri",
+              "Kulkarni",
+              "Hegde"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013608600004664",
+            "source_url": "https://doi.org/10.5220/0013608600004664",
+            "title_similarity": 0.40707964601769914
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "BERTScore is Unfair: On Social Bias in Language Model-Based Metrics for Text Generation",
+            "authors": [
+              "Sun",
+              "He",
+              "Qiu",
+              "Huang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.245",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.245",
+            "title_similarity": 0.48484848484848486
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "METCL-BERT: A BERTScore and Contrastive Learning-Based Framework for Automatic Translation Quality Assessment of Large Language Models",
+            "authors": [
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31449/inf.v49i36.9765",
+            "source_url": "https://doi.org/10.31449/inf.v49i36.9765",
+            "title_similarity": 0.3463687150837989
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:57.038703Z",
+        "response_sha256": "7a553264112dc81901b2542ad76efd77464d41d51cf24d72630650c307dfde1f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bertscore%3A+Evaluating+text+generation+with+bert&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:57.041178Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.838709677419355
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 31,
+    "extracted_count": 31,
+    "parsed_count": 28,
+    "queried_count": 28,
+    "matched_count": 10,
+    "metadata_conflict_count": 2,
+    "unverified_count": 10,
+    "parse_failed_count": 3,
+    "not_checked_count": 0,
+    "query_failed_count": 6,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available"
+  ],
+  "created_at": "2026-10-09T06:14:42.774690Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

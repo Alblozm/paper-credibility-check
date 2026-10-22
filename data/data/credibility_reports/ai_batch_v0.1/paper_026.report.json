@@ -1,0 +1,2334 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-9ee83e8cfe52db34",
+  "paper_version_id": "paper_026_openreview_2024_02_11",
+  "pdf_sha256": "8722b6f45902786c6f84f2311fcb0a6729e0ce26778bfa14f014a2a1987f08d8",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "e8f6841233bf5b65ec6e12a51dd7f44f3436b9c87b01fc2c170912df28d3db71",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.9907407407407405,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 3.9722222222222223,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 36,
+        "extracted_count": 36,
+        "parsed_count": 33,
+        "queried_count": 33,
+        "matched_count": 3,
+        "metadata_conflict_count": 0,
+        "unverified_count": 14,
+        "parse_failed_count": 3,
+        "not_checked_count": 0,
+        "query_failed_count": 16,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=rp5vfyp5Np",
+            "checked_at": "2026-10-09T04:48:10.571133Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-5542039196c3",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 11,
+            "comments_checked": 11,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:48:11.044398Z",
+            "source_urls": [
+              "https://api.github.com/repos/rll-research/BPref",
+              "https://api.github.com/repos/rll-research/BPref/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/rll-research/BPref/issues/8/comments?per_page=100&page=1",
+              "https://api.github.com/repos/rll-research/BPref/issues/5/comments?per_page=100&page=1",
+              "https://api.github.com/repos/rll-research/BPref/issues/3/comments?per_page=100&page=1",
+              "https://api.github.com/repos/rll-research/BPref/issues/2/comments?per_page=100&page=1",
+              "https://api.github.com/repos/rll-research/BPref/issues/1/comments?per_page=100&page=1"
+            ]
+          },
+          {
+            "repository_id": "repo-8f0ffbde65cb",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 1,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:48:13.946016Z",
+            "source_urls": [
+              "https://api.github.com/repos/umd-huang-lab/paad_adv_rl",
+              "https://api.github.com/repos/umd-huang-lab/paad_adv_rl/issues?state=all&per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Constrained policy optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Constrained+policy+optimization&rows=5",
+        "checked_at": "2026-10-09T04:47:57.182536Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Game-Theoretic Constrained Policy Optimization for Safe Reinforcement Learning_supp1-3586603.pdf",
+            "authors": [
+              "Xu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tnnls.2025.3586603/mm1",
+            "source_url": "https://doi.org/10.1109/tnnls.2025.3586603/mm1",
+            "title_similarity": 0.4881889763779528
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Safe Multiagent Learning With Soft Constrained Policy Optimization in Real Robot Control_supp1-3391934.mp4",
+            "authors": [
+              "Chen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tii.2024.3391934/mm1",
+            "source_url": "https://doi.org/10.1109/tii.2024.3391934/mm1",
+            "title_similarity": 0.45255474452554745
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Graph Attention Multi-Agent Proximal Policy Optimization for Constrained Dynamic Scheduling in Industrial IoT-Edge Systems",
+            "authors": [
+              "Basingab"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6321179",
+            "source_url": "https://doi.org/10.2139/ssrn.6321179",
+            "title_similarity": 0.32679738562091504
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Graph Attention Multi-Agent Proximal Policy Optimization for Constrained Dynamic Scheduling in Industrial IoT-Edge Systems",
+            "authors": [
+              "Basingab"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5960262",
+            "source_url": "https://doi.org/10.2139/ssrn.5960262",
+            "title_similarity": 0.32679738562091504
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Graph Attention Multi-Agent Proximal Policy Optimization for Constrained Dynamic Scheduling in Industrial IoT-Edge Systems",
+            "authors": [
+              "Basingab"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6211199",
+            "source_url": "https://doi.org/10.2139/ssrn.6211199",
+            "title_similarity": 0.32679738562091504
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:57.181230Z",
+        "response_sha256": "a30206e7ef642b672bf43149a36cc104b0cd095771e85a2ce5399ed3fca1aa59",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Constrained+policy+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:57.182536Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Terry",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Terry&rows=5",
+        "checked_at": "2026-10-09T04:47:59.254072Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:59.254052Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Terry&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:59.254072Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-4",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Targeted attack on deep rl-based autonomous driving with learned visual patterns",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Targeted+attack+on+deep+rl-based+autonomous+driving+with+learned+visual+patterns&rows=5",
+        "checked_at": "2026-10-09T04:47:59.253202Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:59.253133Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Targeted+attack+on+deep+rl-based+autonomous+driving+with+learned+visual+patterns&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:59.253202Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Decision transformer: Reinforcement learning via sequence modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Decision+transformer%3A+Reinforcement+learning+via+sequence+modeling&rows=5",
+        "checked_at": "2026-10-09T04:47:57.392970Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Decision Transformer: Reinforcement Learning via Sequence Modelling - Paper Review (Presentation Slides)",
+            "authors": [
+              "Benhamou"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.2139/ssrn.3971444",
+            "source_url": "https://doi.org/10.2139/ssrn.3971444",
+            "title_similarity": 0.7926829268292683
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Advantage-Guided Transformer for Conditional Sequence Modeling in Offline Reinforcement Learning",
+            "authors": [
+              "Wei",
+              "Xu",
+              "Lan",
+              "Liu",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.174235351.13662510/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.174235351.13662510/v1",
+            "title_similarity": 0.45962732919254656
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Decision Mamba: Reinforcement Learning via Hybrid Selective Sequence Modeling",
+            "authors": [
+              "Huang",
+              "Hu",
+              "Yang",
+              "Yang",
+              "Luo",
+              "Chen",
+              "Sun",
+              "Yang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2314",
+            "source_url": "https://doi.org/10.52202/079017-2314",
+            "title_similarity": 0.7943262411347518
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "State Prediction for Offline Reinforcement Learning via Sequence-to-Sequence Modeling",
+            "authors": [
+              "Ghanem",
+              "Ghogho",
+              "Ciblat"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/mlsp62443.2025.11204264",
+            "source_url": "https://doi.org/10.1109/mlsp62443.2025.11204264",
+            "title_similarity": 0.7333333333333333
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep reinforcement learning navigation via decision transformer in autonomous driving",
+            "authors": [
+              "Ge",
+              "Zhou",
+              "Li",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.3389/fnbot.2024.1338189",
+            "source_url": "https://doi.org/10.3389/fnbot.2024.1338189",
+            "title_similarity": 0.5466666666666666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:57.391109Z",
+        "response_sha256": "f4177f548152f59110a52b95f6abcc2ff07fba7253696b9c0fff3a2a69d96943",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Decision+transformer%3A+Reinforcement+learning+via+sequence+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:57.392970Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep reinforcement learning from human preferences",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+reinforcement+learning+from+human+preferences&rows=5",
+        "checked_at": "2026-10-09T04:47:59.583968Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep reinforcement learning from human preferences for ROV path tracking",
+            "authors": [
+              "Niu",
+              "Pan",
+              "Wang",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.oceaneng.2024.120036",
+            "source_url": "https://doi.org/10.1016/j.oceaneng.2024.120036",
+            "title_similarity": 0.819672131147541
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep reinforcement learning for human preferences with AI Governance: Comprehensive Review",
+            "authors": [
+              "Chaudhary",
+              "Sharma"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icctac68277.2026.11524568",
+            "source_url": "https://doi.org/10.1109/icctac68277.2026.11524568",
+            "title_similarity": 0.6906474820143885
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Adaptive Control in Robotics via Deep Reinforcement Learning: From Autonomous Task Management to Zero-Shot Human Assistance",
+            "authors": [
+              "Karimi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2025-16786",
+            "source_url": "https://doi.org/10.22215/etd/2025-16786",
+            "title_similarity": 0.4883720930232558
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Reinforcement Learning and Deep Reinforcement Learning",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1017/9781108955652.016",
+            "source_url": "https://doi.org/10.1017/9781108955652.016",
+            "title_similarity": 0.5192307692307693
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reinforcement Learning from Diverse Human Preferences",
+            "authors": [
+              "Xue",
+              "An",
+              "Yan",
+              "Xu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.24963/ijcai.2024/586",
+            "source_url": "https://doi.org/10.24963/ijcai.2024/586",
+            "title_similarity": 0.8737864077669902
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:59.582563Z",
+        "response_sha256": "f357bdfa11afda05898bbe6eb06dc79f736e910a0159c3649d414de7f11bcdab",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+reinforcement+learning+from+human+preferences&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:59.583968Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-7",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarial policies: Attacking deep reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarial+policies%3A+Attacking+deep+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:00.244972Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:00.244913Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarial+policies%3A+Attacking+deep+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:00.244972Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Goodfellow, Jonathon Shlens, and Christian Szegedy",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Goodfellow%2C+Jonathon+Shlens%2C+and+Christian+Szegedy&rows=5",
+        "checked_at": "2026-10-09T04:47:58.434618Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Rethinking the Inception Architecture for Computer Vision",
+            "authors": [
+              "Szegedy",
+              "Vanhoucke",
+              "Ioffe",
+              "Shlens",
+              "Wojna"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/cvpr.2016.308",
+            "source_url": "https://doi.org/10.1109/cvpr.2016.308",
+            "title_similarity": 0.3047619047619048
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Jonathon Heyward conducts Stravinsky &amp; Dvořák",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.5040/9781350882188",
+            "source_url": "https://doi.org/10.5040/9781350882188",
+            "title_similarity": 0.4421052631578947
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Subtle adversarial image manipulations influence both human and machine perception",
+            "authors": [
+              "Veerabadran",
+              "Goldman",
+              "Shankar",
+              "Cheung",
+              "Papernot",
+              "Kurakin",
+              "Goodfellow",
+              "Shlens",
+              "Sohl-Dickstein",
+              "Mozer",
+              "Elsayed"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1038/s41467-023-40499-0",
+            "source_url": "https://doi.org/10.1038/s41467-023-40499-0",
+            "title_similarity": 0.2923076923076923
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Author Correction: Subtle adversarial image manipulations influence both human and machine perception",
+            "authors": [
+              "Veerabadran",
+              "Goldman",
+              "Shankar",
+              "Cheung",
+              "Papernot",
+              "Kurakin",
+              "Goodfellow",
+              "Shlens",
+              "Sohl-Dickstein",
+              "Mozer",
+              "Elsayed"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1038/s41467-024-44826-x",
+            "source_url": "https://doi.org/10.1038/s41467-024-44826-x",
+            "title_similarity": 0.2972972972972973
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Szegedy-Maszak, Hugo",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00178682",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00178682",
+            "title_similarity": 0.208955223880597
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:58.432772Z",
+        "response_sha256": "9b03a57ab898e47a4e83bd6e0fc7e983f07a8a96376a40433f3a92b0e60c9f45",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Goodfellow%2C+Jonathon+Shlens%2C+and+Christian+Szegedy&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:58.434618Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A review of safe reinforcement learning: Methods, theory and applications",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+review+of+safe+reinforcement+learning%3A+Methods%2C+theory+and+applications&rows=5",
+        "checked_at": "2026-10-09T04:47:59.682488Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Safe Reinforcement Learning Methods for Military Applications",
+            "authors": [
+              "Kim",
+              "Ahn",
+              "Kim"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icmic70587.2026.11708604",
+            "source_url": "https://doi.org/10.1109/icmic70587.2026.11708604",
+            "title_similarity": 0.7878787878787878
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reinforcement Learning: Theory and Methods",
+            "authors": [
+              "Ghosh"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31224/7319",
+            "source_url": "https://doi.org/10.31224/7319",
+            "title_similarity": 0.6607142857142857
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Safe Reinforcement Learning for Learning from Human Demonstrations",
+            "authors": [
+              "Ramirez",
+              "Yu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-3195158/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3195158/v1",
+            "title_similarity": 0.583941605839416
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Safe Autonomous Driving via Deep Reinforcement Learning and Model Predictive Control",
+            "authors": [
+              "Hu",
+              "Luo"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icocta64736.2024.00014",
+            "source_url": "https://doi.org/10.1109/icocta64736.2024.00014",
+            "title_similarity": 0.5032258064516129
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Action Masking Methods for Safe Reinforcement Learning in a Non-Stationary Configurable Environment",
+            "authors": [
+              "Leon"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icstcc66753.2025.11240265",
+            "source_url": "https://doi.org/10.1109/icstcc66753.2025.11240265",
+            "title_similarity": 0.4823529411764706
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:59.680629Z",
+        "response_sha256": "5eaae7e9424cfd289030e41448d94f3b68c27390c3243bb1eaf7bbc4fe773ea4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+review+of+safe+reinforcement+learning%3A+Methods%2C+theory+and+applications&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:59.682488Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Soft+actor-critic%3A+Off-policy+maximum+entropy+deep+reinforcement+learning+with+a+stochastic+actor&rows=5",
+        "checked_at": "2026-10-09T04:47:59.255576Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multi-Alpha Soft Actor-Critic: Overcoming Stochastic Biases in Maximum Entropy Reinforcement Learning",
+            "authors": [
+              "Igoe",
+              "Pande",
+              "Venkatraman",
+              "Schneider"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/icra48891.2023.10161395",
+            "source_url": "https://doi.org/10.1109/icra48891.2023.10161395",
+            "title_similarity": 0.6326530612244898
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Optimizing Maximum Power Point Tracking with Soft Actor-Critic Reinforcement Learning and Transfer Learning Techniques",
+            "authors": [
+              "Rostamipour",
+              "Ghayeni",
+              "Abdi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5242944",
+            "source_url": "https://doi.org/10.2139/ssrn.5242944",
+            "title_similarity": 0.42990654205607476
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Entropy regularized actor-critic based multi-agent deep reinforcement learning for stochastic games",
+            "authors": [
+              "Hao",
+              "Zhang",
+              "Shi",
+              "Li"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.ins.2022.10.022",
+            "source_url": "https://doi.org/10.1016/j.ins.2022.10.022",
+            "title_similarity": 0.6461538461538462
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Optimization of High-Speed Train Operation Control Based on Soft Actor-Critic Deep Reinforcement Learning Algorithm",
+            "authors": [
+              "Pei",
+              "Lan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4573607",
+            "source_url": "https://doi.org/10.2139/ssrn.4573607",
+            "title_similarity": 0.46445497630331756
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Optimal Policy of Multiplayer Poker via Actor-Critic Reinforcement Learning",
+            "authors": [
+              "Shi",
+              "Guo",
+              "Liu",
+              "Fan"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.3390/e24060774",
+            "source_url": "https://doi.org/10.3390/e24060774",
+            "title_similarity": 0.45614035087719296
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:27.116080Z",
+        "response_sha256": "7e791b85e76ca223fadb4872221598cbe866f2ef8559063b1b4674590495a6a6",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Soft+actor-critic%3A+Off-policy+maximum+entropy+deep+reinforcement+learning+with+a+stochastic+actor&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:59.255576Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Huang, Nicolas Papernot, Ian J",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Huang%2C+Nicolas+Papernot%2C+Ian+J&rows=5",
+        "checked_at": "2026-10-09T04:48:02.144541Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:02.144462Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Huang%2C+Nicolas+Papernot%2C+Ian+J&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:02.144541Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Targeted attacks on deep reinforcement learning agents through adversarial observations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Targeted+attacks+on+deep+reinforcement+learning+agents+through+adversarial+observations&rows=5",
+        "checked_at": "2026-10-09T04:48:00.367205Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Targeted Adversarial Attacks on Deep Reinforcement Learning Policies via Model Checking",
+            "authors": [
+              "Gross",
+              "Simão",
+              "Jansen",
+              "Pérez"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.5220/0011693200003393",
+            "source_url": "https://doi.org/10.5220/0011693200003393",
+            "title_similarity": 0.6781609195402298
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Toward Robust Agents: A Survey of Adversarial Attacks and Defenses in Deep Reinforcement Learning",
+            "authors": [
+              "Mohan",
+              "Schön"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/access.2026.3657855",
+            "source_url": "https://doi.org/10.1109/access.2026.3657855",
+            "title_similarity": 0.5027322404371585
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Analyzing Adversarial Attacks against Deep Learning for Robot Navigation",
+            "authors": [
+              "Ibn Khedher",
+              "Rezzoug"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.5220/0010323611141121",
+            "source_url": "https://doi.org/10.5220/0010323611141121",
+            "title_similarity": 0.33962264150943394
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "RAT: Adversarial Attacks on Deep Reinforcement Agents for Targeted Behaviors",
+            "authors": [
+              "Bai",
+              "Liu",
+              "Du",
+              "Wen",
+              "Yang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1609/aaai.v39i15.33696",
+            "source_url": "https://doi.org/10.1609/aaai.v39i15.33696",
+            "title_similarity": 0.5679012345679012
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep Reinforcement Learning-based Resilient Control Method for CBTC Systems through Train-to-Train Communications under Adversarial Attacks",
+            "authors": [
+              "Gao",
+              "Bu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/itsc48978.2021.9564835",
+            "source_url": "https://doi.org/10.1109/itsc48978.2021.9564835",
+            "title_similarity": 0.504424778761062
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:00.364625Z",
+        "response_sha256": "909cf703df8511f41e19c2dd8d93149c781fa64778d6c286cb78b0139d27664e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Targeted+attacks+on+deep+reinforcement+learning+agents+through+adversarial+observations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:00.367205Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-13",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Targeted attacks on deep reinforcement learning agents through adversarial observations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Targeted+attacks+on+deep+reinforcement+learning+agents+through+adversarial+observations&rows=5",
+        "checked_at": "2026-10-09T04:48:02.617452Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:02.617384Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Targeted+attacks+on+deep+reinforcement+learning+agents+through+adversarial+observations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:02.617452Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reward learning from human preferences and demonstrations in atari",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reward+learning+from+human+preferences+and+demonstrations+in+atari&rows=5",
+        "checked_at": "2026-10-09T04:48:02.620698Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:02.620646Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reward+learning+from+human+preferences+and+demonstrations+in+atari&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:02.620698Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "When to trust your model: Model-based policy optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=When+to+trust+your+model%3A+Model-based+policy+optimization&rows=5",
+        "checked_at": "2026-10-09T04:48:02.792620Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Trust your company: A multimethod approach based on the Hero model",
+            "authors": [
+              "Acosta Antognoni"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.6035/14109.2017.227593",
+            "source_url": "https://doi.org/10.6035/14109.2017.227593",
+            "title_similarity": 0.4132231404958678
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "How to Use Your Model: Model-Based Reinforcement Learning with Model-Free Policy Optimization",
+            "authors": [
+              "Dong",
+              "Luo",
+              "Wang",
+              "Liu",
+              "Qu",
+              "Zhang",
+              "Cheng",
+              "Sun",
+              "Bo"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4552867",
+            "source_url": "https://doi.org/10.2139/ssrn.4552867",
+            "title_similarity": 0.6756756756756757
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Developing a Surrogate Policy Tree Optimization Model based on an Optimization-Simulation Model for the Operation of Folsom Reservoir System",
+            "authors": [
+              "Erfani",
+              "."
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.26226/m.634060653701db4fe353039f",
+            "source_url": "https://doi.org/10.26226/m.634060653701db4fe353039f",
+            "title_similarity": 0.37755102040816324
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "When practical considerations impact your scientific model",
+            "authors": [
+              "Fischer"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5194/egusphere-egu25-1620",
+            "source_url": "https://doi.org/10.5194/egusphere-egu25-1620",
+            "title_similarity": 0.38596491228070173
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reinforced Model Predictive Control via Trust-Region Quasi-Newton Policy Optimization",
+            "authors": [
+              "Brandner",
+              "Lucia"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.23919/ecc64448.2024.10590970",
+            "source_url": "https://doi.org/10.23919/ecc64448.2024.10590970",
+            "title_similarity": 0.524822695035461
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:02.790515Z",
+        "response_sha256": "312f9873f1c42df71d2be38f5d187a107ecac1f531edfffa45c23a04aa1deb7c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=When+to+trust+your+model%3A+Model-based+policy+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:02.792620Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:01.144982Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "What’s Deep About Deep Learning?",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4135/9781506368603.n2",
+            "source_url": "https://doi.org/10.4135/9781506368603.n2",
+            "title_similarity": 0.5909090909090909
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Designing Deep Learning: Learning Partnerships",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4135/9781506368603.n5",
+            "source_url": "https://doi.org/10.4135/9781506368603.n5",
+            "title_similarity": 0.4482758620689655
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Deep Learning in Action",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4135/9781506368603.n4",
+            "source_url": "https://doi.org/10.4135/9781506368603.n4",
+            "title_similarity": 0.7222222222222222
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Learning in Python: Introduction to Deep Learning",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.4135/9781526493446",
+            "source_url": "https://doi.org/10.4135/9781526493446",
+            "title_similarity": 0.3939393939393939
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "New Measures for Deep Learning",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4135/9781506368603.n9",
+            "source_url": "https://doi.org/10.4135/9781506368603.n9",
+            "title_similarity": 0.6046511627906976
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:01.143832Z",
+        "response_sha256": "47e12461c327968f41b1458f17fc0ac929b5dc8c1b30934e7544c4e144ccc9c8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:01.144982Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-17",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-18",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reward uncertainty for exploration in preference-based reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reward+uncertainty+for+exploration+in+preference-based+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:04.946743Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:04.946674Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reward+uncertainty+for+exploration+in+preference-based+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:04.946743Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-21",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-23",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Stochastic majorization-minimization algorithms for large-scale optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Stochastic+majorization-minimization+algorithms+for+large-scale+optimization&rows=5",
+        "checked_at": "2026-10-09T04:48:05.553307Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:05.553242Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Stochastic+majorization-minimization+algorithms+for+large-scale+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:05.553307Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-24",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarially robust policy learning: Active construction of physically-plausible perturbations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarially+robust+policy+learning%3A+Active+construction+of+physically-plausible+perturbations&rows=5",
+        "checked_at": "2026-10-09T04:48:05.686684Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:05.686631Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarially+robust+policy+learning%3A+Active+construction+of+physically-plausible+perturbations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:05.686684Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Introductory lectures on convex programming, 1998.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Introductory+lectures+on+convex+programming%2C+1998.&rows=5",
+        "checked_at": "2026-10-09T04:48:03.736130Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Smooth Convex Optimization",
+            "authors": [
+              "Nesterov"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-1-4419-8853-9_2",
+            "source_url": "https://doi.org/10.1007/978-1-4419-8853-9_2",
+            "title_similarity": 0.35135135135135137
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Nonsmooth Convex Optimization",
+            "authors": [
+              "Nesterov"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-1-4419-8853-9_3",
+            "source_url": "https://doi.org/10.1007/978-1-4419-8853-9_3",
+            "title_similarity": 0.38961038961038963
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introductory Lectures on Convex Optimization",
+            "authors": [
+              "Nesterov"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-1-4419-8853-9",
+            "source_url": "https://doi.org/10.1007/978-1-4419-8853-9",
+            "title_similarity": 0.782608695652174
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Structural Optimization",
+            "authors": [
+              "Nesterov"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-1-4419-8853-9_4",
+            "source_url": "https://doi.org/10.1007/978-1-4419-8853-9_4",
+            "title_similarity": 0.30985915492957744
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Nonlinear Optimization",
+            "authors": [
+              "Nesterov"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-1-4419-8853-9_1",
+            "source_url": "https://doi.org/10.1007/978-1-4419-8853-9_1",
+            "title_similarity": 0.2
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:03.733410Z",
+        "response_sha256": "181009d21a18a25ce590c15483c8e7442c8e02c6614cc9f1644bbc1f6c41311a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Introductory+lectures+on+convex+programming%2C+1998.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:03.736130Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "SURF: Semi-supervised reward learning with data augmentation for feedback-efficient preference-based reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=SURF%3A+Semi-supervised+reward+learning+with+data+augmentation+for+feedback-efficient+preference-based+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:06.429645Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:06.429564Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=SURF%3A+Semi-supervised+reward+learning+with+data+augmentation+for+feedback-efficient+preference-based+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:06.429645Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust deep reinforcement learning with adversarial attacks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+deep+reinforcement+learning+with+adversarial+attacks&rows=5",
+        "checked_at": "2026-10-09T04:48:06.584060Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:06.583933Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+deep+reinforcement+learning+with+adversarial+attacks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:06.584060Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust adversarial reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+adversarial+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:05.820413Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Diverse and Adaptive Adversarial Training for Robust Reinforcement Learning",
+            "authors": [
+              "Schott"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/5d6e715azaa48z4ff8za86dz4604cd08ab1e",
+            "source_url": "https://doi.org/10.70675/5d6e715azaa48z4ff8za86dz4604cd08ab1e",
+            "title_similarity": 0.6551724137931034
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Robust Proximal Adversarial Reinforcement Learning Under Model Mismatch_supp1-3472348.mp4",
+            "authors": [
+              "Zhai"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/lra.2024.3472348/mm1",
+            "source_url": "https://doi.org/10.1109/lra.2024.3472348/mm1",
+            "title_similarity": 0.6307692307692307
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Robust Adversarial Weighted Meta Reinforcement Learning for Generalizable Traffic Signal Control_supp1-3683084.pdf",
+            "authors": [
+              "Hu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tits.2026.3683084/mm1",
+            "source_url": "https://doi.org/10.1109/tits.2026.3683084/mm1",
+            "title_similarity": 0.5290322580645161
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial-Robust Deep Reinforcement Learning for High-Frequency Cryptocurrency Trading with Explainable AI Framework",
+            "authors": [
+              "Sinha"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.5799762",
+            "source_url": "https://doi.org/10.2139/ssrn.5799762",
+            "title_similarity": 0.4276729559748428
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Adversarial-Robust Deep Reinforcement Learning for High-Frequency Cryptocurrency Trading with Explainable AI Framework",
+            "authors": [
+              "Sinha"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.5798544",
+            "source_url": "https://doi.org/10.2139/ssrn.5798544",
+            "title_similarity": 0.4276729559748428
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:05.816894Z",
+        "response_sha256": "0ec0ad3e0ad80206ee924128e7b81fceef480031b6c9aa8b6b0b2f1952ec2025",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+adversarial+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:05.820413Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Who is the strongest enemy? towards optimal and efficient evasion attacks in deep RL",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Who+is+the+strongest+enemy%3F+towards+optimal+and+efficient+evasion+attacks+in+deep+RL&rows=5",
+        "checked_at": "2026-10-09T04:48:08.357268Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:08.357212Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Who+is+the+strongest+enemy%3F+towards+optimal+and+efficient+evasion+attacks+in+deep+RL&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:08.357268Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reinforcement learning: An introduction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5",
+        "checked_at": "2026-10-09T04:48:05.688506Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction: The Challenge of Reinforcement Learning",
+            "authors": [
+              "Sutton"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/978-1-4615-3618-5_1",
+            "source_url": "https://doi.org/10.1007/978-1-4615-3618-5_1",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Basic Mathematics behind Deep Reinforcement Learning",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1201/9781032659800-3",
+            "source_url": "https://doi.org/10.1201/9781032659800-3",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction of Reinforcement Learning (RL)",
+            "authors": [
+              "Xiao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-19-4933-3_1",
+            "source_url": "https://doi.org/10.1007/978-981-19-4933-3_1",
+            "title_similarity": 0.6075949367088608
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7551/mitpress/14207.003.0003",
+            "source_url": "https://doi.org/10.7551/mitpress/14207.003.0003",
+            "title_similarity": 0.48
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Reinforcement Learning",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1017/9781009023870.027",
+            "source_url": "https://doi.org/10.1017/9781009023870.027",
+            "title_similarity": 0.5789473684210527
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:28.141037Z",
+        "response_sha256": "d7b5edcd7d110dc7bb3209b412a9ae023a77aaf625bb28fdbdf3d6bfc59739da",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:05.688506Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mujoco: A physics engine for model-based control",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mujoco%3A+A+physics+engine+for+model-based+control&rows=5",
+        "checked_at": "2026-10-09T04:48:08.486968Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:08.486918Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mujoco%3A+A+physics+engine+for+model-based+control&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:08.486968Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-32",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Scalar reward is not enough: A response to silver, singh, precup and sutton (2021)",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Scalar+reward+is+not+enough%3A+A+response+to+silver%2C+singh%2C+precup+and+sutton+%282021%29&rows=5",
+        "checked_at": "2026-10-09T04:48:08.646886Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:08.646813Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Scalar+reward+is+not+enough%3A+A+response+to+silver%2C+singh%2C+precup+and+sutton+%282021%29&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:08.646886Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-33",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Visualizing data using t-sne",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Visualizing+data+using+t-sne&rows=5",
+        "checked_at": "2026-10-09T04:48:09.233461Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:09.233302Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Visualizing+data+using+t-sne&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:09.233461Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Meta-world: A benchmark and evaluation for multi-task and meta reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Meta-world%3A+A+benchmark+and+evaluation+for+multi-task+and+meta+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:48:07.758453Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multi-Task Reinforcement Meta-Learning in Neural Networks",
+            "authors": [
+              "Shakah"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.14569/ijacsa.2022.0130734",
+            "source_url": "https://doi.org/10.14569/ijacsa.2022.0130734",
+            "title_similarity": 0.46808510638297873
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Quantifying Statistical Heterogeneity and Reproducibility in Cooperative Multi-Agent Reinforcement Learning: A Meta-Analysis of the SMAC Benchmark",
+            "authors": [
+              "Li",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3390/a18100653",
+            "source_url": "https://doi.org/10.3390/a18100653",
+            "title_similarity": 0.4017467248908297
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multi-task reinforcement learning via mixture-of-patterns meta-learning",
+            "authors": [
+              "Xu",
+              "Chen",
+              "Wang",
+              "Zhao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s10489-025-06951-y",
+            "source_url": "https://doi.org/10.1007/s10489-025-06951-y",
+            "title_similarity": 0.4258064516129032
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Federated, continual and meta-learning algorithms for multi-task settings",
+            "authors": [
+              "Νικολουτσόπουλος"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.12681/eadd/58349",
+            "source_url": "https://doi.org/10.12681/eadd/58349",
+            "title_similarity": 0.3974358974358974
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Hierarchical Multi-agent Meta-Reinforcement Learning for Cross-channel Bidding_supp1-3523472.pdf",
+            "authors": [
+              "Yu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tkde.2024.3523472/mm1",
+            "source_url": "https://doi.org/10.1109/tkde.2024.3523472/mm1",
+            "title_similarity": 0.4777777777777778
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:07.756584Z",
+        "response_sha256": "239b75c8f3aa5e794fbc8edc2baae0ce942bbcdd412ce67900c6b2a3a9e9bb87",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Meta-world%3A+A+benchmark+and+evaluation+for+multi-task+and+meta+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:07.758453Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-35",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust deep reinforcement learning against adversarial perturbations on state observations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+deep+reinforcement+learning+against+adversarial+perturbations+on+state+observations&rows=5",
+        "checked_at": "2026-10-09T04:48:10.569967Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:10.569823Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+deep+reinforcement+learning+against+adversarial+perturbations+on+state+observations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:10.569967Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_026_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_026_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_026_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust reinforcement learning on state observations with learned optimal adversary",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+reinforcement+learning+on+state+observations+with+learned+optimal+adversary&rows=5",
+        "checked_at": "2026-10-09T04:48:09.697000Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Robust Training in Multiagent Deep Reinforcement Learning Against Optimal Adversary",
+            "authors": [
+              "Guo",
+              "Liu",
+              "Zhou",
+              "Wang",
+              "Tang",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/tsmc.2025.3561276",
+            "source_url": "https://doi.org/10.1109/tsmc.2025.3561276",
+            "title_similarity": 0.6181818181818182
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "LiRA: Light-Robust Adversary for model-based reinforcement learning in real world",
+            "authors": [
+              "Kobayashi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.robot.2025.105057",
+            "source_url": "https://doi.org/10.1016/j.robot.2025.105057",
+            "title_similarity": 0.4567901234567901
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Robust Reinforcement Learning via Leveraging Historically Optimal Policy With Regulation of Performance_supp1-3670947.pdf",
+            "authors": [
+              "Zhu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tnnls.2026.3670947/mm1",
+            "source_url": "https://doi.org/10.1109/tnnls.2026.3670947/mm1",
+            "title_similarity": 0.4827586206896552
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Reinforcement Learning for Robust Athletic Intel-ligence: Lessons Learned From the Second AI Olympics With RealAIGym Competition_supp1-3631571.mp4",
+            "authors": [
+              "Kumar"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/mra.2025.3631571/mm1",
+            "source_url": "https://doi.org/10.1109/mra.2025.3631571/mm1",
+            "title_similarity": 0.43171806167400884
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Adversary Agnostic Robust Deep Reinforcement Learning",
+            "authors": [
+              "Qu",
+              "Gupta",
+              "Ong",
+              "Sun"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tnnls.2021.3133537",
+            "source_url": "https://doi.org/10.1109/tnnls.2021.3133537",
+            "title_similarity": 0.42962962962962964
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:48:09.695605Z",
+        "response_sha256": "c16711d30775f884c918cdee43d84985d20a38da640dfe1874d41a31b2becaff",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+reinforcement+learning+on+state+observations+with+learned+optimal+adversary&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:48:09.697000Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 3.9722222222222223
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 36,
+    "extracted_count": 36,
+    "parsed_count": 33,
+    "queried_count": 33,
+    "matched_count": 3,
+    "metadata_conflict_count": 0,
+    "unverified_count": 14,
+    "parse_failed_count": 3,
+    "not_checked_count": 0,
+    "query_failed_count": 16,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:42.376182Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

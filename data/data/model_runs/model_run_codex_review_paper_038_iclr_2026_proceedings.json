@@ -1,0 +1,198 @@
+{
+  "model_run_id": "model_run_codex_review_paper_038_iclr_2026_proceedings",
+  "paper_id": "paper_038",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "5f88206c04048a75e45a313903277752d3ef275d67c79ca94048b3d04bead73f",
+  "raw_output": {
+    "paper_summary": "Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information present in climate data, especially over regions showing complex terrain variability. A key obstacle lies in a frequency bias existing in both deep neural networks (DNNs) and climate data: DNNs exhibit such bias by overfitting to low-frequency information, which is further exacerbated by the prevalence of low-frequency components in climate data (e.g., plains, oceans). As a consequence, geogr",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《GeoFAR: Geography-Informed Frequency-Aware Super-Resolution for Climate Data》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information prese",
+      "论文提供方法或实证支持：We quantify the contribution of each GeoFAR component compared to alternative design choices. Comparison with alternative designs . The grey rows in Table 4 show the results for design choices different from ours. As an alternative to our FCK, the Discrete Wav"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information prese；边界证据为：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve",
+        "strengths": [
+          "可定位正文支持：Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information prese"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：We quantify the contribution of each GeoFAR component compared to alternative design choices. Comparison with alternative designs . The grey rows in Table 4 show the results for design choices different from ours. As an alternative to our FCK, the Discrete Wav；边界证据为：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve",
+        "strengths": [
+          "可定位正文支持：We quantify the contribution of each GeoFAR component compared to alternative design choices. Comparison with alternative designs . The grey rows in Table 4 show the results for design choices different from ours. As an alternative to our FCK, the Discrete Wav"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0015"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：The inherent complexity of the climate system leads to complex regional climate variations at local scales. As an example, NOAA’s HeatWatch campaigns show intra-urban air-temperature differences of up to 9°C in records only a few kilometers apart, mostly due t；边界证据为：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve",
+        "strengths": [
+          "可定位正文支持：The inherent complexity of the climate system leads to complex regional climate variations at local scales. As an example, NOAA’s HeatWatch campaigns show intra-urban air-temperature differences of up to 9°C in records only a few kilometers apart, mostly due t"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：In the introduction, we use the Laplace operator to filter the prediction bias in Figure 1. In the experiment section, we use two types of evaluation metrics: spatial domain and frequency-aware metrics.；边界证据为：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve",
+        "strengths": [
+          "可定位正文支持：In the introduction, we use the Laplace operator to filter the prediction bias in Figure 1. In the experiment section, we use two types of evaluation metrics: spatial domain and frequency-aware metrics."
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0029"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：All experiments are run on a working station with one NVIDIA RTX A5500 GPU and an Intel Xeon Silver 4410Y CPU (1 socket, 12 physical cores, 2 threads/core). We implement our method and re-implement baselines using the ClimateLearn training pipeline (Nguyen et ；边界证据为：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve",
+        "strengths": [
+          "可定位正文支持：All experiments are run on a working station with one NVIDIA RTX A5500 GPU and an Intel Xeon Silver 4410Y CPU (1 socket, 12 physical cores, 2 threads/core). We implement our method and re-implement baselines using the ClimateLearn training pipeline (Nguyen et "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this paper, we focused on learning frequency-aware patterns and geo-informed representations to for climate downscaling. A limitation is that our geographic factors mainly characterize the land surface, whereas atmospheric dynamics at multiple pressure leve"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0037"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到random_seed披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0038"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0037"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0037"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0008"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information present in climate data, especially over regions showing complex terrain variability. A key obstacle lies in a frequency bias existing in both deep neural networks (DNNs) and climate data: DNNs exhibit such bias by overfitting to low-frequency information, which is further exacerbated by the prevalence of low-frequency components in climate data (e.g., plains, oceans). As a consequence, geogr",
+        "type": "method_or_finding",
+        "chunk_id": "paper_038_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Super-resolving climate data is crucial for fine-grained decision-making in various domains, ranging from agriculture to environmental conservation. However, existing super-resolution approaches struggle to generate the high-frequency spatial information present in climate data, especially over regions showing complex terrain variability. A key obstacle lies in a frequency bias existing in both deep neural networks (",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0015"
+        ],
+        "limiting_chunk_ids": [
+          "paper_038_iclr_2026_proceedings_chunk_0041"
+        ]
+      }
+    ]
+  }
+}

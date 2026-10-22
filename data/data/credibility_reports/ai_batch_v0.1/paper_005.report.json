@@ -1,0 +1,2577 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-64c692e64a0342d6",
+  "paper_version_id": "paper_005_v5",
+  "pdf_sha256": "4017f54b9b7357d6da491e2edd5c315b75b1d0659c4844e5c06e1ab22a2be20c",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "c3863386a8d30fc1be78128827dbc39a793d8868e7b09e73176ce07416234ba4",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 4.077777777777778,
+  "overall_category": "significant_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 3,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 2,
+        "deduplicated_claim_count": 2,
+        "checked_claim_count": 2,
+        "scope_complete": false
+      },
+      "failure_reasons": [
+        "claim_unable_to_determine"
+      ]
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.233333333333333,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 30,
+        "extracted_count": 30,
+        "parsed_count": 28,
+        "queried_count": 28,
+        "matched_count": 6,
+        "metadata_conflict_count": 1,
+        "unverified_count": 21,
+        "parse_failed_count": 2,
+        "not_checked_count": 0,
+        "query_failed_count": 0,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://arxiv.org/pdf/2310.07923v5",
+            "checked_at": "2026-10-09T04:41:14.037781Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-paper_005_v5_credibility_claim_001_check",
+      "dimension_id": "claim_evidence_consistency",
+      "severity": "info",
+      "status": "unable_to_determine",
+      "title": "unable_to_determine",
+      "description": "没有找到足以建立可回查链条的后文证据。",
+      "claim": {
+        "credibility_claim_id": "paper_005_v5_credibility_claim_001",
+        "paper_version_id": "paper_005_v5",
+        "source_chunk_id": "paper_005_v5_chunk_0001",
+        "claim_text": "Motivated by this, we ask: Does such intermediate generation fundamentally extend the computational power of a decoder-only transformer?",
+        "claim_type": "other",
+        "importance": "major",
+        "verifiability": true,
+        "dedup_group_id": null,
+        "page_number": 1,
+        "extraction_source": "existing_ai_semantic_descriptor_alignment",
+        "review_status": "reviewed",
+        "exclusion_reason": null
+      },
+      "searched_scope": [
+        {
+          "section_id": "paper_005_v5_sec_1",
+          "page_start": 1,
+          "page_end": 2
+        }
+      ],
+      "context_comparison": null,
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": "2026-10-09T04:41:11.788641Z",
+      "uncertainty": "人工核查结论，范围见主张与实验条件。"
+    },
+    {
+      "finding_id": "f-paper_005_v5_credibility_claim_002_check",
+      "dimension_id": "claim_evidence_consistency",
+      "severity": "info",
+      "status": "unable_to_determine",
+      "title": "unable_to_determine",
+      "description": "没有找到足以建立可回查链条的后文证据。",
+      "claim": {
+        "credibility_claim_id": "paper_005_v5_credibility_claim_002",
+        "paper_version_id": "paper_005_v5",
+        "source_chunk_id": "paper_005_v5_chunk_0002",
+        "claim_text": "Theseresultsshowcertainkindsofsequentialreasoningpose a challenge for the transformer and motivate extensions to address this issue.",
+        "claim_type": "other",
+        "importance": "major",
+        "verifiability": true,
+        "dedup_group_id": null,
+        "page_number": 1,
+        "extraction_source": "existing_ai_semantic_descriptor_alignment",
+        "review_status": "reviewed",
+        "exclusion_reason": null
+      },
+      "searched_scope": [
+        {
+          "section_id": "paper_005_v5_sec_1",
+          "page_start": 1,
+          "page_end": 2
+        }
+      ],
+      "context_comparison": null,
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": "2026-10-09T04:41:11.789128Z",
+      "uncertainty": "人工核查结论，范围见主张与实验条件。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-1",
+        "paper_reference_id": "ref-paper_005_v5_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Personal communication, March 2024.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Personal+communication%2C+March+2024.&rows=5",
+        "checked_at": "2026-10-09T04:41:11.790445Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Feb-March 2024",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.55529/jmcc.42",
+            "source_url": "https://doi.org/10.55529/jmcc.42",
+            "title_similarity": 0.5106382978723404
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Personal Watercraft Remote Control Communication Fault Detection",
+            "authors": [
+              "Titrik"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.3390/engproc2024079008",
+            "source_url": "https://doi.org/10.3390/engproc2024079008",
+            "title_similarity": 0.5154639175257731
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Communication",
+            "authors": [
+              "Meikle"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.4324/9781003021100-2",
+            "source_url": "https://doi.org/10.4324/9781003021100-2",
+            "title_similarity": 0.5652173913043478
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Social Media",
+            "authors": [
+              "Meikle"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.4324/9781003021100",
+            "source_url": "https://doi.org/10.4324/9781003021100",
+            "title_similarity": 0.35555555555555557
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Personal and Institutional Communication Strategies on Social Media",
+            "authors": [
+              "Martyanov",
+              "Lukyanova"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/comsds61892.2024.10502120",
+            "source_url": "https://doi.org/10.1109/comsds61892.2024.10502120",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:36:56.967654Z",
+        "response_sha256": "40140070d6ec4d98338303f41791320f0cd571462883776197c853ebf6d58707",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Personal+communication%2C+March+2024.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.790445Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-2",
+        "paper_reference_id": "ref-paper_005_v5_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Tighter bounds on the expressivity of transformer encoders",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Tighter+bounds+on+the+expressivity+of+transformer+encoders&rows=5",
+        "checked_at": "2026-10-09T04:41:11.790989Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Tighter Bounds for Implied Volatility",
+            "authors": [
+              "Gatheral",
+              "Matic"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.2139/ssrn.2922742",
+            "source_url": "https://doi.org/10.2139/ssrn.2922742",
+            "title_similarity": 0.4631578947368421
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Tighter bounds on the minimum broadcast time",
+            "authors": [
+              "Haugland"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.disopt.2024.100822",
+            "source_url": "https://doi.org/10.1016/j.disopt.2024.100822",
+            "title_similarity": 0.5686274509803921
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Tighter Bounds on Non-Clairvoyant Parallel Machine Scheduling with Prediction to Minimize Makespan",
+            "authors": [
+              "CHEN",
+              "TAN"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5210158",
+            "source_url": "https://doi.org/10.2139/ssrn.5210158",
+            "title_similarity": 0.3974358974358974
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Figure 4: Sentence-based hierarchical dense representation of news articles using Transformer-based encoders.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.2534/fig-4",
+            "source_url": "https://doi.org/10.7717/peerjcs.2534/fig-4",
+            "title_similarity": 0.48484848484848486
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Tighter bounds on universal noiseless coding for finite sequences",
+            "authors": [
+              "Suzuki"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/isit.1994.394631",
+            "source_url": "https://doi.org/10.1109/isit.1994.394631",
+            "title_similarity": 0.5853658536585366
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:36:57.276525Z",
+        "response_sha256": "02e54a4fe3d53625f93b02c37bf371b1b8bfd0553e4bd8c800528e5c6cffc47e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Tighter+bounds+on+the+expressivity+of+transformer+encoders&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.790989Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-3",
+        "paper_reference_id": "ref-paper_005_v5_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hwang, Soumya Sanyal, Sean Welleck, Xiang Ren, Allyson Ettinger, Za¨ıd Harchaoui, and Yejin Choi",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hwang%2C+Soumya+Sanyal%2C+Sean+Welleck%2C+Xiang+Ren%2C+Allyson+Ettinger%2C+Za%C2%A8%C4%B1d+Harchaoui%2C+and+Yejin+Choi&rows=5",
+        "checked_at": "2026-10-09T04:41:11.792329Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Faith and Fate: Limits of Transformers on Compositionality",
+            "authors": [
+              "Dziri",
+              "Lu",
+              "Sclar",
+              "Li",
+              "Jiang",
+              "Lin",
+              "Welleck",
+              "West",
+              "Bhagavatula",
+              "Bras",
+              "Hwang",
+              "Sanyal",
+              "Ren",
+              "Ettinger",
+              "Harchaoui",
+              "Choi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-3081",
+            "source_url": "https://doi.org/10.52202/075280-3081",
+            "title_similarity": 0.17687074829931973
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Symbolic Knowledge Distillation: from General Language Models to Commonsense Models",
+            "authors": [
+              "West",
+              "Bhagavatula",
+              "Hessel",
+              "Hwang",
+              "Jiang",
+              "Le Bras",
+              "Lu",
+              "Welleck",
+              "Choi"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.naacl-main.341",
+            "source_url": "https://doi.org/10.18653/v1/2022.naacl-main.341",
+            "title_similarity": 0.18604651162790697
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Factors Affecting First-Mile Travel Time of Urban Commutes: A Machine-Learning-Based Analysis Using Trip Decomposition Data",
+            "authors": [
+              "Yejin",
+              "Choi",
+              "Lee"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5388490",
+            "source_url": "https://doi.org/10.2139/ssrn.5388490",
+            "title_similarity": 0.2641509433962264
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "“You Are An Expert Linguistic Annotator”: Limits of LLMs as Analyzers of Abstract Meaning Representation",
+            "authors": [
+              "Ettinger",
+              "Hwang",
+              "Pyatkin",
+              "Bhagavatula",
+              "Choi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-emnlp.553",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-emnlp.553",
+            "title_similarity": 0.24083769633507854
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A Study on the Problems and Improvement of Resale of Performance Ticket",
+            "authors": [
+              "Ki-Yeon Nam",
+              "HWANG YEJIN"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.16960/jhlr.21.1.202002.293",
+            "source_url": "https://doi.org/10.16960/jhlr.21.1.202002.293",
+            "title_similarity": 0.2236024844720497
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:36:57.207063Z",
+        "response_sha256": "591a4e298697b83a033063f07e52612627436060fd70eb213c4c36b4c5b2437a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hwang%2C+Soumya+Sanyal%2C+Sean+Welleck%2C+Xiang+Ren%2C+Allyson+Ettinger%2C+Za%C2%A8%C4%B1d+Harchaoui%2C+and+Yejin+Choi&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.792329Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-6",
+        "paper_reference_id": "ref-paper_005_v5_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hopcroft, Wolfgang J",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hopcroft%2C+Wolfgang+J&rows=5",
+        "checked_at": "2026-10-09T04:41:11.797339Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "\"Wolfgang Amadeus Mozart: Music for Solo Keyboard.\" Trevor Stephenson, Fortepiano",
+            "authors": [
+              "Olech-Hopcroft"
+            ],
+            "year": 1997,
+            "years": [
+              1997
+            ],
+            "doi": "10.5642/perfpr.199710.01.10",
+            "source_url": "https://doi.org/10.5642/perfpr.199710.01.10",
+            "title_similarity": 0.18947368421052632
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Introduction",
+            "authors": [
+              "Hopcroft"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1093/oxfordhb/9780190299323.013.1",
+            "source_url": "https://doi.org/10.1093/oxfordhb/9780190299323.013.1",
+            "title_similarity": 0.3225806451612903
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "HOPCROFT v HOPCROFT",
+            "authors": [],
+            "year": 1963,
+            "years": [
+              1963
+            ],
+            "doi": "10.25291/vr/1963-vr-625",
+            "source_url": "https://doi.org/10.25291/vr/1963-vr-625",
+            "title_similarity": 0.5789473684210527
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sociology",
+            "authors": [
+              "Hopcroft"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.4324/9781315632025",
+            "source_url": "https://doi.org/10.4324/9781315632025",
+            "title_similarity": 0.35714285714285715
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Information Forensics",
+            "authors": [
+              "Hopcroft"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.21236/ada562577",
+            "source_url": "https://doi.org/10.21236/ada562577",
+            "title_similarity": 0.1
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:24.768093Z",
+        "response_sha256": "ad4e7d5cc4cd2bb5edee5fdfeb54692ed3eab741eff5721b49afe05c94ae7e17",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hopcroft%2C+Wolfgang+J&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.797339Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-7",
+        "paper_reference_id": "ref-paper_005_v5_credibility-7",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Introduction to automata theory, languages, and computation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Introduction+to+automata+theory%2C+languages%2C+and+computation&rows=5",
+        "checked_at": "2026-10-09T04:41:12.767482Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction to automata theory, languages, and computation",
+            "authors": [],
+            "year": 1980,
+            "years": [
+              1980
+            ],
+            "doi": "10.1016/0096-0551(80)90011-9",
+            "source_url": "https://doi.org/10.1016/0096-0551(80)90011-9",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Linear-Bounded Automata and Context-Sensitive Languages",
+            "authors": [
+              "Chowdhary"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-981-97-6234-7_11",
+            "source_url": "https://doi.org/10.1007/978-981-97-6234-7_11",
+            "title_similarity": 0.48214285714285715
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Regular Languages",
+            "authors": [
+              "Chowdhary"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-981-97-6234-7_5",
+            "source_url": "https://doi.org/10.1007/978-981-97-6234-7_5",
+            "title_similarity": 0.3783783783783784
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Theory of Computation",
+            "authors": [
+              "Chowdhary"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-981-97-6234-7",
+            "source_url": "https://doi.org/10.1007/978-981-97-6234-7",
+            "title_similarity": 0.48717948717948717
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Minimization of Finite Automata",
+            "authors": [
+              "Chowdhary"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-981-97-6234-7_4",
+            "source_url": "https://doi.org/10.1007/978-981-97-6234-7_4",
+            "title_similarity": 0.38636363636363635
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:12.764887Z",
+        "response_sha256": "d52000d6709e31068afac5b48c1a4d4ebd05c59212256635795d87bf50a37d4c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Introduction+to+automata+theory%2C+languages%2C+and+computation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:12.767482Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-10",
+        "paper_reference_id": "ref-paper_005_v5_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Ash, Surbhi Goel, Akshay Krishnamurthy, and Cyril Zhang",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ash%2C+Surbhi+Goel%2C+Akshay+Krishnamurthy%2C+and+Cyril+Zhang&rows=5",
+        "checked_at": "2026-10-09T04:41:14.035033Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Exposing Attention Glitches with Flip-Flop Language Modeling",
+            "authors": [
+              "Liu",
+              "Ash",
+              "Goel",
+              "Krishnamurthy",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1112",
+            "source_url": "https://doi.org/10.52202/075280-1112",
+            "title_similarity": 0.19642857142857142
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Exploring deep learning theory with Surbhi Goel",
+            "authors": [
+              "Maleki"
+            ],
+            "year": 2021,
+            "years": [
+              2021,
+              2022
+            ],
+            "doi": "10.1145/3495268",
+            "source_url": "https://doi.org/10.1145/3495268",
+            "title_similarity": 0.2828282828282828
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Author response for \"MOF-metal nanohybrid-assisted charge transfer amplification for electrochemical biosensing of MUC1 Cancer Biomarker\"",
+            "authors": [
+              "Sarita Devi",
+              "Shivangi Goel",
+              "Sonia Rani",
+              "Rudolf J. Schneider",
+              "Rishika Rohilla",
+              "Surbhi Kumari",
+              "Nirmal Prabhakar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1039/d6an00018e/v2/response1",
+            "source_url": "https://doi.org/10.1039/d6an00018e/v2/response1",
+            "title_similarity": 0.16042780748663102
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Huntingtin Interacting Protein 1 (HIP1) autoantibodies as a novel potential surrogate marker for Rheumatoid Arthritis: Pilot Study",
+            "authors": [
+              "Surbhi",
+              "Goel",
+              "Chaturvedi",
+              "Verma",
+              "Rawat",
+              "Ganguly",
+              "Mittal"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1101/2022.09.07.22279672",
+            "source_url": "https://doi.org/10.1101/2022.09.07.22279672",
+            "title_similarity": 0.18994413407821228
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Study of Black Cotton Soil and Settled Soil near Bhatghar Dam by using Lime Rice Husk Ash and Fly Ash Stabilized",
+            "authors": [
+              "Akshay"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.22214/ijraset.2020.4075",
+            "source_url": "https://doi.org/10.22214/ijraset.2020.4075",
+            "title_similarity": 0.10975609756097561
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:14.032143Z",
+        "response_sha256": "067514847440949e7e9ee03a0341e581f57eee537ca00027df94e9ab150ffcba",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ash%2C+Surbhi+Goel%2C+Akshay+Krishnamurthy%2C+and+Cyril+Zhang&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:14.035033Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-11",
+        "paper_reference_id": "ref-paper_005_v5_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Auto-regressive next-token predictors are universal learners",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Auto-regressive+next-token+predictors+are+universal+learners&rows=5",
+        "checked_at": "2026-10-09T04:41:11.798340Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Channel Status Prediction using Auto-regressive and Auto-regressive Integrated Predictors over WLAN Channel",
+            "authors": [
+              "Hou",
+              "Hokimoto",
+              "Denno"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.15344/2456-4451/2020/159",
+            "source_url": "https://doi.org/10.15344/2456-4451/2020/159",
+            "title_similarity": 0.5029940119760479
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Humans as next-token predictors: Measuring the flow of memes through minds",
+            "authors": [
+              "Cashman"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.31234/osf.io/xnrvy",
+            "source_url": "https://doi.org/10.31234/osf.io/xnrvy",
+            "title_similarity": 0.49624060150375937
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Are LLMs “just” next-token predictors?",
+            "authors": [
+              "Hussain",
+              "Mata",
+              "Wulff"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31219/osf.io/y34ur",
+            "source_url": "https://doi.org/10.31219/osf.io/y34ur",
+            "title_similarity": 0.5684210526315789
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Hybrid Auto-Regressive LSTM Network with Adaptive Attention for Next-Generation Cyber Threat Detection",
+            "authors": [
+              "Madhu",
+              "Venkatesh"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781042001767-32",
+            "source_url": "https://doi.org/10.1201/9781042001767-32",
+            "title_similarity": 0.3048780487804878
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ARGS: Auto-Regressive Gaussian Splatting via Parallel Progressive Next-Scale Prediction",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/cvprf71909.2026.00810",
+            "source_url": "https://doi.org/10.1109/cvprf71909.2026.00810",
+            "title_similarity": 0.4383561643835616
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:36:59.808063Z",
+        "response_sha256": "5b3d41fbcd2094641e6e11d0e3c3c91266382c85c6d56f1caecbca1a36212588",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Auto-regressive+next-token+predictors+are+universal+learners&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.798340Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-12",
+        "paper_reference_id": "ref-paper_005_v5_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the linguistic capacity of real-time counter automata",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+linguistic+capacity+of+real-time+counter+automata&rows=5",
+        "checked_at": "2026-10-09T04:41:11.797660Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Real time counter machines",
+            "authors": [
+              "Fischer",
+              "Meyer",
+              "Rosenberg"
+            ],
+            "year": 1967,
+            "years": [
+              1967
+            ],
+            "doi": "10.1109/focs.1967.29",
+            "source_url": "https://doi.org/10.1109/focs.1967.29",
+            "title_similarity": 0.4878048780487805
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Counter-Augmented Deterministic Automata for Real-Time Regular Expression Matching Without State Explosion",
+            "authors": [
+              "Bernadotte"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icara69401.2026.11480280",
+            "source_url": "https://doi.org/10.1109/icara69401.2026.11480280",
+            "title_similarity": 0.4691358024691358
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Efficient learning of real time one-counter automata",
+            "authors": [
+              "Fahmy",
+              "Roos"
+            ],
+            "year": 1995,
+            "years": [
+              1995,
+              2005
+            ],
+            "doi": "10.1007/3-540-60454-5_26",
+            "source_url": "https://doi.org/10.1007/3-540-60454-5_26",
+            "title_similarity": 0.6851851851851852
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Bisimulation equivalence and regularity for real-time one-counter automata",
+            "authors": [
+              "Böhm",
+              "Göller",
+              "Jančar"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1016/j.jcss.2013.11.003",
+            "source_url": "https://doi.org/10.1016/j.jcss.2013.11.003",
+            "title_similarity": 0.6307692307692307
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Construction of Real-Time Oracle Using Timed Automata",
+            "authors": [
+              "Morteza",
+              "Borhani"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.5772/45597",
+            "source_url": "https://doi.org/10.5772/45597",
+            "title_similarity": 0.6055045871559633
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:01.338629Z",
+        "response_sha256": "22f9c58085cc303b1ff3f523b4949560890c426155caa3af141bdd127f626529",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+linguistic+capacity+of+real-time+counter+automata&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.797660Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-13",
+        "paper_reference_id": "ref-paper_005_v5_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Formal languages and neural models for learning on sequences",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Formal+languages+and+neural+models+for+learning+on+sequences&rows=5",
+        "checked_at": "2026-10-09T04:41:11.799091Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Formal Languages and Rewriting Systems",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1201/b16376-6",
+            "source_url": "https://doi.org/10.1201/b16376-6",
+            "title_similarity": 0.6122448979591837
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Models for Regular Languages",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1201/b16376-7",
+            "source_url": "https://doi.org/10.1201/b16376-7",
+            "title_similarity": 0.4318181818181818
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Models for Context-Free Languages",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1201/b16376-10",
+            "source_url": "https://doi.org/10.1201/b16376-10",
+            "title_similarity": 0.3870967741935484
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sequential Neural Networks as Automata",
+            "authors": [
+              "Merrill"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/w19-3901",
+            "source_url": "https://doi.org/10.18653/v1/w19-3901",
+            "title_similarity": 0.30612244897959184
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A model of formal neural networks for unsupervised learning of binary temporal sequences",
+            "authors": [
+              "Gas",
+              "Natowicz"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/ijcnn.1992.227214",
+            "source_url": "https://doi.org/10.1109/ijcnn.1992.227214",
+            "title_similarity": 0.5675675675675675
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:00.498872Z",
+        "response_sha256": "bf0a0a9067315bfb39bec6531ef8ffe4e9ce3228c5fc40800c80c547b3ed7ee5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Formal+languages+and+neural+models+for+learning+on+sequences&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.799091Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-14",
+        "paper_reference_id": "ref-paper_005_v5_credibility-14",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-15",
+        "paper_reference_id": "ref-paper_005_v5_credibility-15",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-16",
+        "paper_reference_id": "ref-paper_005_v5_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Smith",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Smith&rows=5",
+        "checked_at": "2026-10-09T04:41:11.799721Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automated Underway Oceanic and Atmospheric Measurements from Ships",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.82",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.82",
+            "title_similarity": 0.08450704225352113
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Smith, Ted [Editor]; Smith,",
+            "authors": [
+              "Smith",
+              "Smith"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.2172/1027630",
+            "source_url": "https://doi.org/10.2172/1027630",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Targeting smokers at increased risk for relapse: treating women and those with a history of depression",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1080/14622200307263",
+            "source_url": "https://doi.org/10.1080/14622200307263",
+            "title_similarity": 0.09433962264150944
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Book Reviews",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Wilkins",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.3763/asre.2010.0074",
+            "source_url": "https://doi.org/10.3763/asre.2010.0074",
+            "title_similarity": 0.11764705882352941
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Data Management System for the Shipboard Automated Meteorological and Oceanographic System (SAMOS) Initiative",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.83",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.83",
+            "title_similarity": 0.06896551724137931
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:00.712731Z",
+        "response_sha256": "9ea02b4974231819e9be28244c92517182b6c9e92def1edca969eee1117e44d2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Smith&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.799721Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-17",
+        "paper_reference_id": "ref-paper_005_v5_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Smith",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Smith&rows=5",
+        "checked_at": "2026-10-09T04:41:11.800322Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automated Underway Oceanic and Atmospheric Measurements from Ships",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.82",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.82",
+            "title_similarity": 0.08450704225352113
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Smith, Ted [Editor]; Smith,",
+            "authors": [
+              "Smith",
+              "Smith"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.2172/1027630",
+            "source_url": "https://doi.org/10.2172/1027630",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Targeting smokers at increased risk for relapse: treating women and those with a history of depression",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1080/14622200307263",
+            "source_url": "https://doi.org/10.1080/14622200307263",
+            "title_similarity": 0.09433962264150944
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Book Reviews",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Wilkins",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.3763/asre.2010.0074",
+            "source_url": "https://doi.org/10.3763/asre.2010.0074",
+            "title_similarity": 0.11764705882352941
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Data Management System for the Shipboard Automated Meteorological and Oceanographic System (SAMOS) Initiative",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.83",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.83",
+            "title_similarity": 0.06896551724137931
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:00.712731Z",
+        "response_sha256": "9ea02b4974231819e9be28244c92517182b6c9e92def1edca969eee1117e44d2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Smith&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.800322Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-18",
+        "paper_reference_id": "ref-paper_005_v5_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Showyourwork: Scratchpadsforintermediatecomputationwith languagemodels",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Showyourwork%3A+Scratchpadsforintermediatecomputationwith+languagemodels&rows=5",
+        "checked_at": "2026-10-09T04:41:11.800710Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Safety and Alignment of Small LanguageModels: A Systematic Survey of Methods,Evaluation, and Open Challenges",
+            "authors": [
+              "Colca"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-9557790/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-9557790/v1",
+            "title_similarity": 0.22857142857142856
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Construction of Automated Machine Learning(AutoML) Framework Based on Large LanguageModels",
+            "authors": [
+              "Sun",
+              "Yu",
+              "Jiang",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202506.0017.v1",
+            "source_url": "https://doi.org/10.20944/preprints202506.0017.v1",
+            "title_similarity": 0.3670886075949367
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Foundational Capabilities of Large LanguageModels in Predicting Postoperative Risks UsingClinical Notes",
+            "authors": [
+              "Alba",
+              "Xue",
+              "Abraham",
+              "Kannampallil",
+              "Lu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-5008407/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-5008407/v1",
+            "title_similarity": 0.29545454545454547
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Survey on Privacy-Preserving Large LanguageModels (LLMs): Architectures, Techniques, and Use-Cases",
+            "authors": [
+              "Tariq",
+              "Serhani",
+              "Taleb",
+              "El-Kassabi",
+              "Navaz",
+              "Brik"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-9258244/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-9258244/v1",
+            "title_similarity": 0.3170731707317073
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Empirical Evidence of Complexity-Induced Limits in Large LanguageModels on Finite Discrete State-Space Problems",
+            "authors": [
+              "Utsho",
+              "Ameen",
+              "Islam",
+              "Rashed",
+              "Das"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6865201",
+            "source_url": "https://doi.org/10.2139/ssrn.6865201",
+            "title_similarity": 0.28888888888888886
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:26.935657Z",
+        "response_sha256": "e230b3105a6351161ff430fcc87509a793c23bc1878cc55e0fb13e5d17bd406c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Showyourwork%3A+Scratchpadsforintermediatecomputationwith+languagemodels&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.800710Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-19",
+        "paper_reference_id": "ref-paper_005_v5_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Attention is Turing complete",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Attention+is+Turing+complete&rows=5",
+        "checked_at": "2026-10-09T04:41:11.801482Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Achieving Operational Universality through a Turing Complete Chemputer",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacsau.5c01382.s002",
+            "source_url": "https://doi.org/10.1021/jacsau.5c01382.s002",
+            "title_similarity": 0.5306122448979592
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Achieving Operational Universality through a Turing Complete Chemputer",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacsau.5c01382.s004",
+            "source_url": "https://doi.org/10.1021/jacsau.5c01382.s004",
+            "title_similarity": 0.5306122448979592
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Achieving Operational Universality through a Turing Complete Chemputer",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacsau.5c01382.s003",
+            "source_url": "https://doi.org/10.1021/jacsau.5c01382.s003",
+            "title_similarity": 0.5306122448979592
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Achieving Operational Universality through a Turing Complete Chemputer",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacsau.5c01382.s001",
+            "source_url": "https://doi.org/10.1021/jacsau.5c01382.s001",
+            "title_similarity": 0.5306122448979592
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Achieving Operational Universality through a Turing Complete Chemputer",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacsau.5c01382.s005",
+            "source_url": "https://doi.org/10.1021/jacsau.5c01382.s005",
+            "title_similarity": 0.5306122448979592
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:26.775418Z",
+        "response_sha256": "81780e1369f2ffaa4e415da966ae380deb8fa5b7ab07e62147d6fa5f14dd55a3",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Attention+is+Turing+complete&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.801482Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-20",
+        "paper_reference_id": "ref-paper_005_v5_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Memoryaugmentedlargelanguagemodelsarecomputationallyuniversal",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Memoryaugmentedlargelanguagemodelsarecomputationallyuniversal&rows=5",
+        "checked_at": "2026-10-09T04:41:11.801804Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:26.894601Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Memoryaugmentedlargelanguagemodelsarecomputationallyuniversal&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.801804Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-21",
+        "paper_reference_id": "ref-paper_005_v5_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Transformers as recognizers of formal languages: A survey on expressivity",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+as+recognizers+of+formal+languages%3A+A+survey+on+expressivity&rows=5",
+        "checked_at": "2026-10-09T04:41:11.802170Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Some Grammars and Recognizers for Formal and Natural Languages",
+            "authors": [
+              "Moyne"
+            ],
+            "year": 1974,
+            "years": [
+              1974
+            ],
+            "doi": "10.1007/978-1-4615-8246-5_4",
+            "source_url": "https://doi.org/10.1007/978-1-4615-8246-5_4",
+            "title_similarity": 0.5671641791044776
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Finite Automata as Regular Language Recognizers",
+            "authors": [
+              "Reghizzi"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1007/978-1-84882-050-0_3",
+            "source_url": "https://doi.org/10.1007/978-1-84882-050-0_3",
+            "title_similarity": 0.31932773109243695
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "What Formal Languages Can Transformers Express? A Survey",
+            "authors": [
+              "Strobl",
+              "Merrill",
+              "Weiss",
+              "Chiang",
+              "Angluin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1162/tacl_a_00663",
+            "source_url": "https://doi.org/10.1162/tacl_a_00663",
+            "title_similarity": 0.4251968503937008
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A survey of expressive words in Breton",
+            "authors": [
+              "Jouitteau"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1017/9781108989084.014",
+            "source_url": "https://doi.org/10.1017/9781108989084.014",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Finite Automata as Regular Language Recognizers",
+            "authors": [
+              "Crespi Reghizzi",
+              "Breveglieri",
+              "Morzenti"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1007/978-1-4471-5514-0_3",
+            "source_url": "https://doi.org/10.1007/978-1-4471-5514-0_3",
+            "title_similarity": 0.31932773109243695
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:03.424507Z",
+        "response_sha256": "7625c4c417527df3c1a1f3cfc526f89a5dec5d7641bbf250454cacde33df39ad",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Transformers+as+recognizers+of+formal+languages%3A+A+survey+on+expressivity&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.802170Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-22",
+        "paper_reference_id": "ref-paper_005_v5_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Valiant",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Valiant&rows=5",
+        "checked_at": "2026-10-09T04:41:11.802639Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Prince Valiant (1937)",
+            "authors": [
+              "Bishop"
+            ],
+            "year": 2016,
+            "years": [
+              2016,
+              2018
+            ],
+            "doi": "10.14325/mississippi/9781496808509.003.0002",
+            "source_url": "https://doi.org/10.14325/mississippi/9781496808509.003.0002",
+            "title_similarity": 0.5384615384615384
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "3. Caradoc the Valiant Englishman?",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1515/9781580443548-005",
+            "source_url": "https://doi.org/10.1515/9781580443548-005",
+            "title_similarity": 0.358974358974359
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "PAC Learning, 1984; Valiant",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/springerreference_57795",
+            "source_url": "https://doi.org/10.1007/springerreference_57795",
+            "title_similarity": 0.4375
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "2. R. A.’s Valiant Welshmen",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1515/9781580443548-004",
+            "source_url": "https://doi.org/10.1515/9781580443548-004",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The ‘Valiant Englishman’",
+            "authors": [
+              "Manson"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.4324/9781003367406-16",
+            "source_url": "https://doi.org/10.4324/9781003367406-16",
+            "title_similarity": 0.4827586206896552
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:03.441231Z",
+        "response_sha256": "768c738160da79607cc39f5b1bddc744bb02f32d57832ff65c6c5e5eabd26fad",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Valiant&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.802639Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-23",
+        "paper_reference_id": "ref-paper_005_v5_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Chi, Quoc V Le, and Denny Zhou",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Chi%2C+Quoc+V+Le%2C+and+Denny+Zhou&rows=5",
+        "checked_at": "2026-10-09T04:41:11.802761Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The \"Ho Chi Minh Factor\" in Thai-Vietnamese relations",
+            "authors": [
+              "Quoc Toan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.58837/chula.the.2007.2041",
+            "source_url": "https://doi.org/10.58837/chula.the.2007.2041",
+            "title_similarity": 0.27848101265822783
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "asfgxdvxcg",
+            "authors": [
+              "LE VIET QUOC"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.gqakbbcj.1",
+            "source_url": "https://doi.org/10.55277/researchhub.gqakbbcj.1",
+            "title_similarity": 0.05263157894736842
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Movie",
+            "authors": [
+              "LE VIET QUOC"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.ak91wfm8.1",
+            "source_url": "https://doi.org/10.55277/researchhub.ak91wfm8.1",
+            "title_similarity": 0.12121212121212122
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Biological macrofouling and electrochemical corrosion properties of structural steel AH36 in natural seawater at Hon Tre island, Nha Trang",
+            "authors": [
+              "Chi",
+              "Dong Van Kien",
+              "Le Hong Quan",
+              "Cao Nhat Linh",
+              "Nong Quoc Quang",
+              "Nguyen Duc Anh",
+              "Pham Thi Hai Yen",
+              "Le Quoc Hung"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.15625/2525-2518/16473",
+            "source_url": "https://doi.org/10.15625/2525-2518/16473",
+            "title_similarity": 0.15757575757575756
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FRIEND’S QUALITY PREFERENCE OF KOREAN PEOPLE.",
+            "authors": [
+              "Quoc Le"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.58837/chula.the.2013.1844",
+            "source_url": "https://doi.org/10.58837/chula.the.2013.1844",
+            "title_similarity": 0.25
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:04.331016Z",
+        "response_sha256": "386efb87137b1258e2cc4b76b48ac132b9e7a5a79d755289a36f90c687d62313",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Chi%2C+Quoc+V+Le%2C+and+Denny+Zhou&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.802761Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-25",
+        "paper_reference_id": "ref-paper_005_v5_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Thinking like transformers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Thinking+like+transformers&rows=5",
+        "checked_at": "2026-10-09T04:41:11.803188Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Thinking Like An Archaeologist and Thinking Like an Engineer",
+            "authors": [
+              "Minnis"
+            ],
+            "year": 2015,
+            "years": [
+              2015,
+              2019
+            ],
+            "doi": "10.1093/oxfordhb/9780199672691.013.12",
+            "source_url": "https://doi.org/10.1093/oxfordhb/9780199672691.013.12",
+            "title_similarity": 0.4418604651162791
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "7. Thinking Like A Machine",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1515/9783110543797-009",
+            "source_url": "https://doi.org/10.1515/9783110543797-009",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Thinking like a Mall",
+            "authors": [],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.7551/mitpress/9503.003.0006",
+            "source_url": "https://doi.org/10.7551/mitpress/9503.003.0006",
+            "title_similarity": 0.6956521739130435
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Thinking Like a Policy Analyst",
+            "authors": [
+              "Geva-May"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1057/9781403980939_2",
+            "source_url": "https://doi.org/10.1057/9781403980939_2",
+            "title_similarity": 0.6071428571428571
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Thinking Like a Mountain or Thinking Like a “Man”?",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.5040/9798216420569.ch-4",
+            "source_url": "https://doi.org/10.5040/9798216420569.ch-4",
+            "title_similarity": 0.4931506849315068
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:28.849130Z",
+        "response_sha256": "99bd04908b58131bfc8c316cc76a0bc05b0341fd604d36973aaf9f5cf7be25ee",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Thinking+like+transformers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.803188Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-26",
+        "paper_reference_id": "ref-paper_005_v5_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Thecomplexityofgraphconnectivity",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Thecomplexityofgraphconnectivity&rows=5",
+        "checked_at": "2026-10-09T04:41:11.804286Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:28.720790Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Thecomplexityofgraphconnectivity&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.804286Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-27",
+        "paper_reference_id": "ref-paper_005_v5_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On layer normalization in the transformer architecture",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+layer+normalization+in+the+transformer+architecture&rows=5",
+        "checked_at": "2026-10-09T04:41:11.804427Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 6: Vision Transformer (ViT) architecture with dual-neuron output layer.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.4017/fig-6",
+            "source_url": "https://doi.org/10.7717/peerj-cs.4017/fig-6",
+            "title_similarity": 0.484375
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Figure 5: Vision Transformer (ViT) architecture with a single-neuron output layer.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.4017/fig-5",
+            "source_url": "https://doi.org/10.7717/peerj-cs.4017/fig-5",
+            "title_similarity": 0.4696969696969697
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Accuracy-preserving Layer Normalization Approximations for Efficient Transformer Hardware Accelerators",
+            "authors": [
+              "Koca",
+              "Do",
+              "Chang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iscas56072.2025.11044257",
+            "source_url": "https://doi.org/10.1109/iscas56072.2025.11044257",
+            "title_similarity": 0.5512820512820513
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ALN: Approximate Layer Normalization for Transformer Training on Edge Device",
+            "authors": [
+              "Mao",
+              "Liu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/tc.2026.3661873",
+            "source_url": "https://doi.org/10.1109/tc.2026.3661873",
+            "title_similarity": 0.5891472868217055
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Supplemental Information 8: Multi-Head Self-Attention transformer encoder implementation with position-wise feed-forward networks and layer normalization, serving as a baseline attention mechanism for comparison with Mamba’s selective state space approach.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3733/supp-8",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3733/supp-8",
+            "title_similarity": 0.13680781758957655
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:05.002868Z",
+        "response_sha256": "80ffe147f773a670a8465cd8db921c9454ea922945edd96e49d8bc8ac3b01b54",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+layer+normalization+in+the+transformer+architecture&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.804427Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-29",
+        "paper_reference_id": "ref-paper_005_v5_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Root mean square layer normalization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Root+mean+square+layer+normalization&rows=5",
+        "checked_at": "2026-10-09T04:41:11.805111Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 2: Protein root mean square deviation (RMSD) and root mean square fluctuation (RMSF).",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.13680/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj.13680/fig-2",
+            "title_similarity": 0.39344262295081966
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "root mean square",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/springerreference_23870",
+            "source_url": "https://doi.org/10.1007/springerreference_23870",
+            "title_similarity": 0.6153846153846154
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Root-mean-square",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1036/1097-8542.593500",
+            "source_url": "https://doi.org/10.1036/1097-8542.593500",
+            "title_similarity": 0.6153846153846154
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Figure 5: Root-mean-square deviation (RMSD) and root-mean-square fluctuation (RMSF) of wild-type and mutated IL-18.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.13626/fig-5",
+            "source_url": "https://doi.org/10.7717/peerj.13626/fig-5",
+            "title_similarity": 0.3310344827586207
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Root-Mean-Square Error",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/springerreference_62798",
+            "source_url": "https://doi.org/10.1007/springerreference_62798",
+            "title_similarity": 0.7241379310344828
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:06.940888Z",
+        "response_sha256": "362618bcf30b6eb79d0bc182c2e03f56009eeb4580837d8cabbe2d7026fa017d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Root+mean+square+layer+normalization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.805111Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_005_v5_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_005_v5_credibility-30",
+        "paper_reference_id": "ref-paper_005_v5_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Smith",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Smith&rows=5",
+        "checked_at": "2026-10-09T04:41:11.806104Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automated Underway Oceanic and Atmospheric Measurements from Ships",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.82",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.82",
+            "title_similarity": 0.08450704225352113
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Smith, Ted [Editor]; Smith,",
+            "authors": [
+              "Smith",
+              "Smith"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.2172/1027630",
+            "source_url": "https://doi.org/10.2172/1027630",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Targeting smokers at increased risk for relapse: treating women and those with a history of depression",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1080/14622200307263",
+            "source_url": "https://doi.org/10.1080/14622200307263",
+            "title_similarity": 0.09433962264150944
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Book Reviews",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Wilkins",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.3763/asre.2010.0074",
+            "source_url": "https://doi.org/10.3763/asre.2010.0074",
+            "title_similarity": 0.11764705882352941
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Data Management System for the Shipboard Automated Meteorological and Oceanographic System (SAMOS) Initiative",
+            "authors": [
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith",
+              "Smith"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5270/oceanobs09.cwp.83",
+            "source_url": "https://doi.org/10.5270/oceanobs09.cwp.83",
+            "title_similarity": 0.06896551724137931
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:00.712731Z",
+        "response_sha256": "9ea02b4974231819e9be28244c92517182b6c9e92def1edca969eee1117e44d2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Smith&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:11.806104Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "kind": "low_dimension_score",
+      "score": 3
+    },
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.233333333333333
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 30,
+    "extracted_count": 30,
+    "parsed_count": 28,
+    "queried_count": 28,
+    "matched_count": 6,
+    "metadata_conflict_count": 1,
+    "unverified_count": 21,
+    "parse_failed_count": 2,
+    "not_checked_count": 0,
+    "query_failed_count": 0,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:41.038510Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

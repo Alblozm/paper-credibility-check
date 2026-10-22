@@ -1,0 +1,198 @@
+{
+  "model_run_id": "model_run_codex_review_paper_032_iclr_2026_proceedings",
+  "paper_id": "paper_032",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "a87cc34a03a7cad8c304dfe3e70cfff853a5e5b6b6d3f7441d4cb3229542a852",
+  "raw_output": {
+    "paper_summary": "Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and advance their generalization and robustness. In this paper, we conjecture that the Reversal Curse in LLMs is a manifestation of the long-standing binding problem in cognitive science, neuroscience and AI. Specifically, we hypothesize two primary causes of the Reversal Curse stemming from transformers' limitations in conceptual binding: the inconsistency and entanglements of concept represe",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Is the Reversal Curse a Binding Problem? Uncovering Limitations of Transformers from a Basic Generalization Failure》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and ad",
+      "论文提供方法或实证支持：JEPA Framework. The Joint-Embedding Predictive Architecture (JEPA) was proposed by LeCun (2022) as a departure from conventional generative architectures. Its core premise is that prediction should be performed in the abstract representation space of encoded i"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and ad；边界证据为：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, ",
+        "strengths": [
+          "可定位正文支持：Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and ad"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：JEPA Framework. The Joint-Embedding Predictive Architecture (JEPA) was proposed by LeCun (2022) as a departure from conventional generative architectures. Its core premise is that prediction should be performed in the abstract representation space of encoded i；边界证据为：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, ",
+        "strengths": [
+          "可定位正文支持：JEPA Framework. The Joint-Embedding Predictive Architecture (JEPA) was proposed by LeCun (2022) as a departure from conventional generative architectures. Its core premise is that prediction should be performed in the abstract representation space of encoded i"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0023"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：The Reversal Curse is coined by Berglund et al. (2024), which discovers that state-of-the-art (SoTA) LLMs fail at forming reversible factual associations under both direct testing and fine-tuning settings. Similar observations are also made in Grosse et al. (2；边界证据为：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, ",
+        "strengths": [
+          "可定位正文支持：The Reversal Curse is coined by Berglund et al. (2024), which discovers that state-of-the-art (SoTA) LLMs fail at forming reversible factual associations under both direct testing and fine-tuning settings. Similar observations are also made in Grosse et al. (2"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0014"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：Current large language models (LLMs) exhibit a notable failure of basic generalization known as the Reversal Curse (Berglund et al., 2024), where they struggle to learn rules of inversion over parametric knowledge and form reversible factual associations. For ；边界证据为：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, ",
+        "strengths": [
+          "可定位正文支持：Current large language models (LLMs) exhibit a notable failure of basic generalization known as the Reversal Curse (Berglund et al., 2024), where they struggle to learn rules of inversion over parametric knowledge and form reversible factual associations. For "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 7,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：We perform a series of experiments to ground the above analysis. Scientific-wise, the experiments support the previous conjectures and arguments. Practical-wise, the explorations lead to a model design based on Joint-Embedding Predictive Architectures (JEPA) (；边界证据为：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, ",
+        "strengths": [
+          "可定位正文支持：We perform a series of experiments to ground the above analysis. Scientific-wise, the experiments support the previous conjectures and arguments. Practical-wise, the explorations lead to a model design based on Joint-Embedding Predictive Architectures (JEPA) ("
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：We conjecture that the Reversal Curse in LLMs is caused by inconsistency and entanglements of concept representations, two aspects of the long-standing binding problem in cognitive science, neuroscience and AI. A series of experiments supports our hypotheses, "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0009"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0002"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到random_seed披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0023"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0022"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0006"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and advance their generalization and robustness. In this paper, we conjecture that the Reversal Curse in LLMs is a manifestation of the long-standing binding problem in cognitive science, neuroscience and AI. Specifically, we hypothesize two primary causes of the Reversal Curse stemming from transformers' limitations in conceptual binding: the inconsistency and entanglements of concept represe",
+        "type": "method_or_finding",
+        "chunk_id": "paper_032_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Despite their impressive capabilities, LLMs exhibit a basic generalization failure known as the Reversal Curse , where they struggle to learn reversible factual associations. Understanding why this occurs could help identify weaknesses in current models and advance their generalization and robustness. In this paper, we conjecture that the Reversal Curse in LLMs is a manifestation of the long-standing binding problem ",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0023"
+        ],
+        "limiting_chunk_ids": [
+          "paper_032_iclr_2026_proceedings_chunk_0015"
+        ]
+      }
+    ]
+  }
+}

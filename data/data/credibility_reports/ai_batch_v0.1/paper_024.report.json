@@ -1,0 +1,2921 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-3c7fa07bb5d6bb5c",
+  "paper_version_id": "paper_024_openreview_2024_02_11",
+  "pdf_sha256": "228825544607393a58422f681b2bc8ecf2d987ac445e57415f480cf4f4d627f7",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "cb000bbaae1e5272682b1d738141ce180d3a58a0c4cd4d2dc6c20f72d555afd0",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.448087431693989,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.344262295081967,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 61,
+        "extracted_count": 61,
+        "parsed_count": 55,
+        "queried_count": 55,
+        "matched_count": 17,
+        "metadata_conflict_count": 2,
+        "unverified_count": 16,
+        "parse_failed_count": 6,
+        "not_checked_count": 0,
+        "query_failed_count": 20,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=ApjY32f3Xr",
+            "checked_at": "2026-10-09T04:47:28.066110Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-2",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Multi-objective loss balancing for physics-informed deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Multi-objective+loss+balancing+for+physics-informed+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:47:07.050920Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:07.050866Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Multi-objective+loss+balancing+for+physics-informed+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:07.050920Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Which priors matter? benchmarking models for learning latent dynamics",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Which+priors+matter%3F+benchmarking+models+for+learning+latent+dynamics&rows=5",
+        "checked_at": "2026-10-09T04:47:05.245530Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Fragmentation Physics or Exploiting Sequence Priors? Benchmarking Bias in Deep Learning Models for De Novo Peptide Sequencing",
+            "authors": [
+              "Li",
+              "Röst"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.06.23.734131",
+            "source_url": "https://doi.org/10.64898/2026.06.23.734131",
+            "title_similarity": 0.39800995024875624
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Applicability Boundaries of Delay-Embedded Latent Hamiltonian Priors for Partially Observed Dynamics",
+            "authors": [
+              "Li",
+              "Bai"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7009893",
+            "source_url": "https://doi.org/10.2139/ssrn.7009893",
+            "title_similarity": 0.34523809523809523
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Power priors for latent variable mediation models under small sample sizes.",
+            "authors": [
+              "Chen",
+              "Miocevic",
+              "Falk"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31234/osf.io/qf8kj_v1",
+            "source_url": "https://doi.org/10.31234/osf.io/qf8kj_v1",
+            "title_similarity": 0.4507042253521127
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning Dynamic Video Priors with Energy-Based Hierarchical Latent Variables",
+            "authors": [
+              "Yang",
+              "Lu",
+              "Yan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6427938",
+            "source_url": "https://doi.org/10.2139/ssrn.6427938",
+            "title_similarity": 0.2620689655172414
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Improving and testing machine learning methods for benchmarking soil carbon dynamics representation of land surface models",
+            "authors": [
+              "Mishra",
+              "Gautam"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2172/1891184",
+            "source_url": "https://doi.org/10.2172/1891184",
+            "title_similarity": 0.4105263157894737
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:05.243620Z",
+        "response_sha256": "f858ac938d3ad680c3c7736ad5fd07877d27e02eb26fd3ae16493a1d2be0e82c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Which+priors+matter%3F+benchmarking+models+for+learning+latent+dynamics&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:05.245530Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Climart: A benchmark dataset for emulating atmospheric radiative transfer in weather and climate models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Climart%3A+A+benchmark+dataset+for+emulating+atmospheric+radiative+transfer+in+weather+and+climate+models&rows=5",
+        "checked_at": "2026-10-09T04:47:07.053014Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:07.052956Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Climart%3A+A+benchmark+dataset+for+emulating+atmospheric+radiative+transfer+in+weather+and+climate+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:07.053014Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Introductory finite difference methods for PDEs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Introductory+finite+difference+methods+for+PDEs&rows=5",
+        "checked_at": "2026-10-09T04:47:06.995568Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Finite Difference Methods for Hyperbolic PDEs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1017/9781316678725.006",
+            "source_url": "https://doi.org/10.1017/9781316678725.006",
+            "title_similarity": 0.7391304347826086
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Finite Difference Methods for 2D Elliptic PDEs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1017/9781316678725.004",
+            "source_url": "https://doi.org/10.1017/9781316678725.004",
+            "title_similarity": 0.7311827956989247
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Approximating PDEs",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1002/9781118630006.ch7",
+            "source_url": "https://doi.org/10.1002/9781118630006.ch7",
+            "title_similarity": 0.2153846153846154
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "FD Methods for Parabolic PDEs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1017/9781316678725.005",
+            "source_url": "https://doi.org/10.1017/9781316678725.005",
+            "title_similarity": 0.47368421052631576
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Finite Difference Methods For PDEs",
+            "authors": [],
+            "year": 2008,
+            "years": [
+              2008,
+              2012
+            ],
+            "doi": "10.1142/9789812818188_0010",
+            "source_url": "https://doi.org/10.1142/9789812818188_0010",
+            "title_similarity": 0.8395061728395061
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:06.994210Z",
+        "response_sha256": "8363503d9791228db5c36cc45309aa1b3205342846c7ceccab0dbb0eb0dc3dbf",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Introductory+finite+difference+methods+for+PDEs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:06.995568Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-7",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neurodiffeq: A python package for solving differential equations with neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neurodiffeq%3A+A+python+package+for+solving+differential+equations+with+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:07.373108Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "NeuroDiffEq: A Python package for solving differential equations with neural networks",
+            "authors": [
+              "Chen",
+              "Sondak",
+              "Protopapas",
+              "Mattheakis",
+              "Liu",
+              "Agarwal",
+              "Di Giovanni"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.21105/joss.01931",
+            "source_url": "https://doi.org/10.21105/joss.01931",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "nnde: A Python package for solving differential equations using neural networks",
+            "authors": [
+              "Winter",
+              "Weigel"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.21105/joss.03465",
+            "source_url": "https://doi.org/10.21105/joss.03465",
+            "title_similarity": 0.8888888888888888
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "py-pde: A Python package for solving partial differential equations",
+            "authors": [
+              "Zwicker"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.21105/joss.02158",
+            "source_url": "https://doi.org/10.21105/joss.02158",
+            "title_similarity": 0.7066666666666667
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Hybrid Neural Networks for Solving Differential Equations",
+            "authors": [
+              "Cajic",
+              "Banovic"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5045814",
+            "source_url": "https://doi.org/10.2139/ssrn.5045814",
+            "title_similarity": 0.5815602836879432
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Solving Ordinary Differential Equations",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1017/9781009106696.025",
+            "source_url": "https://doi.org/10.1017/9781009106696.025",
+            "title_similarity": 0.4878048780487805
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:07.370802Z",
+        "response_sha256": "1595062cce6df293e9358fc761a3dcc8afc8cef9dbe84539cd35b0b431317566",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neurodiffeq%3A+A+python+package+for+solving+differential+equations+with+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:07.373108Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-8",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Scientific machine learning through physics–informed neural networks: where we are and what’s next",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Scientific+machine+learning+through+physics%E2%80%93informed+neural+networks%3A+where+we+are+and+what%E2%80%99s+next&rows=5",
+        "checked_at": "2026-10-09T04:47:08.084796Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:08.084724Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Scientific+machine+learning+through+physics%E2%80%93informed+neural+networks%3A+where+we+are+and+what%E2%80%99s+next&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:08.084796Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "State-of-the-art review of design of experiments for physicsinformed deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=State-of-the-art+review+of+design+of+experiments+for+physicsinformed+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:47:09.455940Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "State-of-the-Art Review of Deep Learning Techniques in Recommendation System",
+            "authors": [
+              "Rajput",
+              "Mall",
+              "Tiwari",
+              "Tiwari"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.5220/0010564900003161",
+            "source_url": "https://doi.org/10.5220/0010564900003161",
+            "title_similarity": 0.5063291139240507
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "State-of-the-Art Deep Learning Models: Part II",
+            "authors": [
+              "Meedeniya"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1201/9781003390824-4",
+            "source_url": "https://doi.org/10.1201/9781003390824-4",
+            "title_similarity": 0.47244094488188976
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "State-of-the-Art Deep Learning Models: Part I",
+            "authors": [
+              "Meedeniya"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1201/9781003390824-3",
+            "source_url": "https://doi.org/10.1201/9781003390824-3",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep learning for molecular design—a review of the state of the art",
+            "authors": [
+              "Elton",
+              "Boukouvalas",
+              "Fuge",
+              "Chung"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1039/c9me00039a",
+            "source_url": "https://doi.org/10.1039/c9me00039a",
+            "title_similarity": 0.21476510067114093
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Table 11: Performance comparison with state-of-the-art deep learning models.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3788/table-11",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3788/table-11",
+            "title_similarity": 0.38461538461538464
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:09.454012Z",
+        "response_sha256": "fd36313d44c26475f046975f138f74a837730c391e7bce6f5ba47c4bc940ae12",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=State-of-the-art+review+of+design+of+experiments+for+physicsinformed+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:09.455940Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-10",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Physics-guided neural networks (pgnn): An application in lake temperature modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Physics-guided+neural+networks+%28pgnn%29%3A+An+application+in+lake+temperature+modeling&rows=5",
+        "checked_at": "2026-10-09T04:47:09.100942Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Physics-Guided Neural Networks (PGNN): An Application in Lake Temperature Modeling",
+            "authors": [
+              "Daw",
+              "Karpatne",
+              "Watkins",
+              "Read",
+              "Kumar"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003143376-15",
+            "source_url": "https://doi.org/10.1201/9781003143376-15",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Physics-Guided Neural Networks (PgNN) for Seismic Site Amplification: A Scalable Framework for Seismic Microzonation",
+            "authors": [
+              "Amina",
+              "Mohamed",
+              "Raouf"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7560921",
+            "source_url": "https://doi.org/10.2139/ssrn.7560921",
+            "title_similarity": 0.6458333333333334
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Physics-Guided Architecture (PGA) of Neural Networks for Quantifying Uncertainty in Lake Temperature Modeling",
+            "authors": [
+              "Daw",
+              "Thomas",
+              "Carey",
+              "Read",
+              "Appling",
+              "Karpatne"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1137/1.9781611976236.60",
+            "source_url": "https://doi.org/10.1137/1.9781611976236.60",
+            "title_similarity": 0.7096774193548387
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Application of Physics Informed Neural Networks to Compositional Modeling",
+            "authors": [
+              "Ihunde"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31390/gradschool_theses.5492",
+            "source_url": "https://doi.org/10.31390/gradschool_theses.5492",
+            "title_similarity": 0.5641025641025641
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Physics-Guided Recurrent Neural Networks for Predicting Lake Water Temperature",
+            "authors": [
+              "Jia",
+              "Willard",
+              "Karpatne",
+              "Read",
+              "Zwart",
+              "Steinbach",
+              "Kumar"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003143376-16",
+            "source_url": "https://doi.org/10.1201/9781003143376-16",
+            "title_similarity": 0.6878980891719745
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:09.098952Z",
+        "response_sha256": "9b8c765ef91ac740b4559ae39c1db30888afe6df5f0cc3367faba18dbfb2408c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Physics-guided+neural+networks+%28pgnn%29%3A+An+application+in+lake+temperature+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:09.100942Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Chebfun guide, 2014.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Chebfun+guide%2C+2014.&rows=5",
+        "checked_at": "2026-10-09T04:47:08.096326Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Appendix A. Chebfun and its ODE algorithms",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017,
+              2021
+            ],
+            "doi": "10.1137/1.9781611975161.appa",
+            "source_url": "https://doi.org/10.1137/1.9781611975161.appa",
+            "title_similarity": 0.4067796610169492
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Computing Complex Singularities of Differential Equations with Chebfun",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1137/12s011520",
+            "source_url": "https://doi.org/10.1137/12s011520",
+            "title_similarity": 0.1590909090909091
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Chapter 12. Approximation Theory: Polynomials and Chebfun",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.1137/1.9781611977196.ch12",
+            "source_url": "https://doi.org/10.1137/1.9781611977196.ch12",
+            "title_similarity": 0.1917808219178082
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Solving optimal control problems using chebfun",
+            "authors": [
+              "Whidborne"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/control.2016.7737522",
+            "source_url": "https://doi.org/10.1109/control.2016.7737522",
+            "title_similarity": 0.21875
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Data merging for the cultural heritage imaging based on Chebfun approach",
+            "authors": [],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.14529/jsfi160308",
+            "source_url": "https://doi.org/10.14529/jsfi160308",
+            "title_similarity": 0.17777777777777778
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:08.094663Z",
+        "response_sha256": "aff55eb3b7e9a005d6a0bf64f265387069886ade357847b6f2612caf1ac512d5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Chebfun+guide%2C+2014.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:08.096326Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-12",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Finite volume methods",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Finite+volume+methods&rows=5",
+        "checked_at": "2026-10-09T04:47:10.221250Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:10.221211Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Finite+volume+methods&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:10.221250Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Can physics-informed neural networks beat the finite element method? arXiv preprint arXiv:2302.04107 , 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Can+physics-informed+neural+networks+beat+the+finite+element+method%3F+arXiv+preprint+arXiv%3A2302.04107+%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:47:11.025744Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:11.025683Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Can+physics-informed+neural+networks+beat+the+finite+element+method%3F+arXiv+preprint+arXiv%3A2302.04107+%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:11.025744Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards multi-spatiotemporal-scale generalized pde modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+multi-spatiotemporal-scale+generalized+pde+modeling&rows=5",
+        "checked_at": "2026-10-09T04:47:11.485018Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "An Immuno-Linguistic Transformer for Multi-Scale Modeling of T-Cell Spatiotemporal Dynamics",
+            "authors": [
+              "Tan",
+              "Xun"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1101/2025.10.25.684555",
+            "source_url": "https://doi.org/10.1101/2025.10.25.684555",
+            "title_similarity": 0.3466666666666667
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "One PDE stem cell model",
+            "authors": [
+              "Schiesser"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-323-90797-2.00005-0",
+            "source_url": "https://doi.org/10.1016/b978-0-323-90797-2.00005-0",
+            "title_similarity": 0.3170731707317073
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Implementation of the Six PDE model",
+            "authors": [
+              "Schiesser"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-323-90797-2.00004-9",
+            "source_url": "https://doi.org/10.1016/b978-0-323-90797-2.00004-9",
+            "title_similarity": 0.425531914893617
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Variations of the six PDE model",
+            "authors": [
+              "Schiesser"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-323-90797-2.00003-7",
+            "source_url": "https://doi.org/10.1016/b978-0-323-90797-2.00003-7",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Implementation of the One PDE model",
+            "authors": [
+              "Schiesser"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-323-90797-2.00001-3",
+            "source_url": "https://doi.org/10.1016/b978-0-323-90797-2.00001-3",
+            "title_similarity": 0.425531914893617
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:11.482811Z",
+        "response_sha256": "891353c73551cc10bc78916d65152e3cd5e5a92473d9257f0eb44ad25906b745",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+multi-spatiotemporal-scale+generalized+pde+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:11.485018Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Physics-informed machine learning: A survey on problems, methods and applications",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Physics-informed+machine+learning%3A+A+survey+on+problems%2C+methods+and+applications&rows=5",
+        "checked_at": "2026-10-09T04:47:11.628466Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Physics-Informed Learning",
+            "authors": [
+              "Neuer"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/978-3-662-69995-9_6",
+            "source_url": "https://doi.org/10.1007/978-3-662-69995-9_6",
+            "title_similarity": 0.4807692307692308
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Machine Learning for Engineers",
+            "authors": [
+              "Neuer"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-662-69995-9",
+            "source_url": "https://doi.org/10.1007/978-3-662-69995-9",
+            "title_similarity": 0.3486238532110092
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Physics-informed neural networks for solving direct and inverse problems in nonlinear corneal curvature",
+            "authors": [
+              "Abbasi",
+              "Izadi",
+              "Sheikhi",
+              "Jani"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.mlwa.2026.101006",
+            "source_url": "https://doi.org/10.1016/j.mlwa.2026.101006",
+            "title_similarity": 0.5054945054945055
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Unsupervised Learning",
+            "authors": [
+              "Neuer"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/978-3-662-69995-9_5",
+            "source_url": "https://doi.org/10.1007/978-3-662-69995-9_5",
+            "title_similarity": 0.26
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Supervised Learning",
+            "authors": [
+              "Neuer"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/978-3-662-69995-9_4",
+            "source_url": "https://doi.org/10.1007/978-3-662-69995-9_4",
+            "title_similarity": 0.2653061224489796
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:11.626772Z",
+        "response_sha256": "ae2d63aee428d288cf3e241b904b8232fe9bfe5409ff625058d1e047c2fcd0af",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Physics-informed+machine+learning%3A+A+survey+on+problems%2C+methods+and+applications&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:11.628466Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A large-scale benchmark for the incompressible navier-stokes equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+large-scale+benchmark+for+the+incompressible+navier-stokes+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:11.066122Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Large Scale Benchmark for the Incompressible Navier-Stokes Equations",
+            "authors": [
+              "Huang",
+              "Schneider",
+              "Li",
+              "Jiang",
+              "Zorin",
+              "Panozzo"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4030476",
+            "source_url": "https://doi.org/10.2139/ssrn.4030476",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The incompressible Navier—Stokes equations",
+            "authors": [
+              "Quartapelle"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1007/978-3-0348-8579-9_1",
+            "source_url": "https://doi.org/10.1007/978-3-0348-8579-9_1",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Application to Navier—Stokes Equations",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/3-540-26403-5_3",
+            "source_url": "https://doi.org/10.1007/3-540-26403-5_3",
+            "title_similarity": 0.5925925925925926
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Stability to the Global Large Solutions of the Navier–Stokes Equations",
+            "authors": [
+              "Gui"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1007/978-3-642-36028-2_2",
+            "source_url": "https://doi.org/10.1007/978-3-642-36028-2_2",
+            "title_similarity": 0.5714285714285714
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Global Existence of Large Solutions for the 3D incompressible Navier--Stokes--Poisson-- Nernst--Planck Equations",
+            "authors": [
+              "Zhao",
+              "Li"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.22541/au.166903577.78133856/v1",
+            "source_url": "https://doi.org/10.22541/au.166903577.78133856/v1",
+            "title_similarity": 0.655367231638418
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:11.064861Z",
+        "response_sha256": "be28a15ccd70ebd1da6358f4a6a3591dbcee6b3ec68338f4f49e83e383000609",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+large-scale+benchmark+for+the+incompressible+navier-stokes+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:11.066122Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Extended physics-informed neural networks (xpinns): A generalized space-time domain decomposition based deep learning framework for nonlinear partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Extended+physics-informed+neural+networks+%28xpinns%29%3A+A+generalized+space-time+domain+decomposition+based+deep+learning+framework+for+nonlinear+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:13.393374Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:13.393292Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Extended+physics-informed+neural+networks+%28xpinns%29%3A+A+generalized+space-time+domain+decomposition+based+deep+learning+framework+for+nonlinear+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:13.393374Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-20",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-21",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-22",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Physics-informed machine learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Physics-informed+machine+learning&rows=5",
+        "checked_at": "2026-10-09T04:47:13.037128Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Discrepancy Modeling with Physics Informed Machine Learning",
+            "authors": [
+              "Brunton"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52843/cassyni.ftzlk9",
+            "source_url": "https://doi.org/10.52843/cassyni.ftzlk9",
+            "title_similarity": 0.717391304347826
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep Learning to Discover Coordinates for Dynamics: Autoencoders &amp; Physics Informed Machine Learning",
+            "authors": [
+              "Brunton"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.52843/cassyni.4zpjhl",
+            "source_url": "https://doi.org/10.52843/cassyni.4zpjhl",
+            "title_similarity": 0.4925373134328358
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Modeling Batch Crystallization under Uncertainty Using Physics-Informed Machine Learning",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.iecr.6c00599.s001",
+            "source_url": "https://doi.org/10.1021/acs.iecr.6c00599.s001",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "AI/ML+Physics: Recap and Summary",
+            "authors": [
+              "Brunton"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52843/cassyni.2mt4mr",
+            "source_url": "https://doi.org/10.52843/cassyni.2mt4mr",
+            "title_similarity": 0.4375
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Physics-Informed Learning",
+            "authors": [
+              "Neuer"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/978-3-662-69995-9_6",
+            "source_url": "https://doi.org/10.1007/978-3-662-69995-9_6",
+            "title_similarity": 0.8620689655172413
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:13.035772Z",
+        "response_sha256": "0421a76e2fee43eab083c6e96b87674f27aa0c031ed0fdfe1f87def192db44b8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Physics-informed+machine+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:13.037128Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Variational physics-informed neural networks for solving partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Variational+physics-informed+neural+networks+for+solving+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:13.579979Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fine-Tuning Deeponets to Enhance Physics-Informed Neural Networks for Solving Partial Differential Equations",
+            "authors": [
+              "Wu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4992639",
+            "source_url": "https://doi.org/10.2139/ssrn.4992639",
+            "title_similarity": 0.841025641025641
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fine-Tuning Deeponets to Enhance Physics-Informed Neural Networks for Solving Partial Differential Equations",
+            "authors": [
+              "Wu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5007965",
+            "source_url": "https://doi.org/10.2139/ssrn.5007965",
+            "title_similarity": 0.841025641025641
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "DeepONet for solving nonlinear partial differential equations with physics-informed training",
+            "authors": [
+              "Yang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108490",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108490",
+            "title_similarity": 0.5251396648044693
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Physics-informed kernel function neural networks for solving partial differential equations",
+            "authors": [
+              "Fu",
+              "Xu",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2024.106098",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.106098",
+            "title_similarity": 0.8426966292134831
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Boundary Region Reinforcement Physics-Informed Neural Networks for Solving Partial Differential Equations",
+            "authors": [
+              "Yao",
+              "Huang",
+              "Hu",
+              "He"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5005150",
+            "source_url": "https://doi.org/10.2139/ssrn.5005150",
+            "title_similarity": 0.84375
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:13.578423Z",
+        "response_sha256": "216ec75bace2838e90dd6309e33b27d4e1eccfe99c44d067f142ab837b96733b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Variational+physics-informed+neural+networks+for+solving+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:13.579979Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Varnet: Variational neural networks for the solution of partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Varnet%3A+Variational+neural+networks+for+the+solution+of+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:14.420139Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:14.420061Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Varnet%3A+Variational+neural+networks+for+the+solution+of+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:14.420139Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pydens framework for solving differential equations with deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pydens+framework+for+solving+differential+equations+with+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:47:15.452530Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:15.452475Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pydens+framework+for+solving+differential+equations+with+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:15.452530Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Characterizing possible failure modes in physics-informed neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Characterizing+possible+failure+modes+in+physics-informed+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:15.834588Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:15.834487Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Characterizing+possible+failure+modes+in+physics-informed+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:15.834588Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "D3m: A deep domain decomposition method for partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=D3m%3A+A+deep+domain+decomposition+method+for+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:15.632976Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "D3M: A Deep Domain Decomposition Method for Partial Differential Equations",
+            "authors": [
+              "Li",
+              "Tang",
+              "Wu",
+              "Liao"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/access.2019.2957200",
+            "source_url": "https://doi.org/10.1109/access.2019.2957200",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Discretised Equations and Domain Decomposition Methods",
+            "authors": [
+              "Quarteroni",
+              "Valli"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1093/oso/9780198501787.003.0002",
+            "source_url": "https://doi.org/10.1093/oso/9780198501787.003.0002",
+            "title_similarity": 0.5196850393700787
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Differential quadrature domain decomposition method for problems on a triangular domain",
+            "authors": [
+              "Wu",
+              "Liu"
+            ],
+            "year": 2004,
+            "years": [
+              2004,
+              2005
+            ],
+            "doi": "10.1002/num.20052",
+            "source_url": "https://doi.org/10.1002/num.20052",
+            "title_similarity": 0.5625
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Heterogeneous Domain Decomposition Methods",
+            "authors": [
+              "Quarteroni",
+              "Valli"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1093/oso/9780198501787.003.0008",
+            "source_url": "https://doi.org/10.1093/oso/9780198501787.003.0008",
+            "title_similarity": 0.5391304347826087
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Nonlinear Partial Differential Equations and the Decomposition Method",
+            "authors": [
+              "Bellman",
+              "Adomian"
+            ],
+            "year": 1985,
+            "years": [
+              1985
+            ],
+            "doi": "10.1007/978-94-009-5209-6_19",
+            "source_url": "https://doi.org/10.1007/978-94-009-5209-6_19",
+            "title_similarity": 0.5070422535211268
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:15.630720Z",
+        "response_sha256": "96867fd073b3f0a1f5cad54c110effcd48c803c3db2d153f60590a3b2ad46f54",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=D3m%3A+A+deep+domain+decomposition+method+for+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:15.632976Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-32",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A comprehensive and fair comparison of two neural operators (with practical extensions) based on fair data",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+comprehensive+and+fair+comparison+of+two+neural+operators+%28with+practical+extensions%29+based+on+fair+data&rows=5",
+        "checked_at": "2026-10-09T04:47:17.687121Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:17.687056Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+comprehensive+and+fair+comparison+of+two+neural+operators+%28with+practical+extensions%29+based+on+fair+data&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:17.687121Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-34",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The old and the new: Can physics-informed deep-learning replace traditional linear solvers? Frontiers in big Data , 4:669097, 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+old+and+the+new%3A+Can+physics-informed+deep-learning+replace+traditional+linear+solvers%3F+Frontiers+in+big+Data+%2C+4%3A669097%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:47:18.286476Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:18.286378Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+old+and+the+new%3A+Can+physics-informed+deep-learning+replace+traditional+linear+solvers%3F+Frontiers+in+big+Data+%2C+4%3A669097%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:18.286476Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Numerical solution of partial differential equations: an introduction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Numerical+solution+of+partial+differential+equations%3A+an+introduction&rows=5",
+        "checked_at": "2026-10-09T04:47:17.588868Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Numerical Solution of Partial Differential Equations",
+            "authors": [],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1017/cbo9780511812248.011",
+            "source_url": "https://doi.org/10.1017/cbo9780511812248.011",
+            "title_similarity": 0.8666666666666667
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Introduction to Partial Differential Equations",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1017/cbo9781139025508.002",
+            "source_url": "https://doi.org/10.1017/cbo9781139025508.002",
+            "title_similarity": 0.7017543859649122
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction",
+            "authors": [],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1017/cbo9780511812248.003",
+            "source_url": "https://doi.org/10.1017/cbo9780511812248.003",
+            "title_similarity": 0.3
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Iterative solution of linear algebraic equations",
+            "authors": [],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1017/cbo9780511812248.009",
+            "source_url": "https://doi.org/10.1017/cbo9780511812248.009",
+            "title_similarity": 0.5344827586206896
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "References",
+            "authors": [],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1017/cbo9780511812248.010",
+            "source_url": "https://doi.org/10.1017/cbo9780511812248.010",
+            "title_similarity": 0.20512820512820512
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:17.587416Z",
+        "response_sha256": "55f0c879e074b484d89578f66ce031de11a0871dc61184f535c0c49f526f2430",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Numerical+solution+of+partial+differential+equations%3A+an+introduction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:17.588868Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-36",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Finite basis physics-informed neural networks (fbpinns): a scalable domain decomposition approach for solving differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Finite+basis+physics-informed+neural+networks+%28fbpinns%29%3A+a+scalable+domain+decomposition+approach+for+solving+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:18.646210Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:18.646143Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Finite+basis+physics-informed+neural+networks+%28fbpinns%29%3A+a+scalable+domain+decomposition+approach+for+solving+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:18.646210Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-37",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-37",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Introduction to comsol multiphysics®",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Introduction+to+comsol+multiphysics%C2%AE&rows=5",
+        "checked_at": "2026-10-09T04:47:19.372754Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:19.372702Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Introduction+to+comsol+multiphysics%C2%AE&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:19.372754Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-39",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-39",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An extensible benchmark suite for learning to simulate physical systems",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+extensible+benchmark+suite+for+learning+to+simulate+physical+systems&rows=5",
+        "checked_at": "2026-10-09T04:47:20.564385Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:20.564314Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+extensible+benchmark+suite+for+learning+to+simulate+physical+systems&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:20.564385Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-40",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Extremeweather: A large-scale climate dataset for semi-supervised detection, localization, and understanding of extreme weather events",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Extremeweather%3A+A+large-scale+climate+dataset+for+semi-supervised+detection%2C+localization%2C+and+understanding+of+extreme+weather+events&rows=5",
+        "checked_at": "2026-10-09T04:47:21.164675Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:21.164574Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Extremeweather%3A+A+large-scale+climate+dataset+for+semi-supervised+detection%2C+localization%2C+and+understanding+of+extreme+weather+events&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:21.164675Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-41",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-41",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Differentialequations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Differentialequations&rows=5",
+        "checked_at": "2026-10-09T04:47:19.539056Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Quantum-Latent Topology Optimization Using Neural Ordinary DifferentialEquations",
+            "authors": [
+              "Tabarraei",
+              "Bhuiyan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7395432",
+            "source_url": "https://doi.org/10.2139/ssrn.7395432",
+            "title_similarity": 0.4158415841584158
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ON INFINITE SYSTEMS OF STOCHASTIC DIFFERENTIALEQUATIONS",
+            "authors": [
+              "Skorokhod"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1007/978-3-319-28507-8_21",
+            "source_url": "https://doi.org/10.1007/978-3-319-28507-8_21",
+            "title_similarity": 0.5526315789473685
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Attractivity of nonlinear impulsive delay differentialequations",
+            "authors": [
+              "Yang",
+              "Xu"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.1155/jamsa/2006/83152",
+            "source_url": "https://doi.org/10.1155/jamsa/2006/83152",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Positive periodic solutions to impulsive delay differentialequations",
+            "authors": [
+              "DAOUDI-MERZAGUI",
+              "DIB"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.3906/mat-1601-64",
+            "source_url": "https://doi.org/10.3906/mat-1601-64",
+            "title_similarity": 0.47191011235955055
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Existence of solution for some two-point boundary value fractional differentialequations",
+            "authors": [
+              "ISIFE"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.3906/mat-1711-21",
+            "source_url": "https://doi.org/10.3906/mat-1711-21",
+            "title_similarity": 0.3853211009174312
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:19.537686Z",
+        "response_sha256": "186e42d71ba7700c252da3ffc6da9c499e0c35cf888af8143874b045d5d83641",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Differentialequations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:19.539056Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-43",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Introduction to the finite element method",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Introduction+to+the+finite+element+method&rows=5",
+        "checked_at": "2026-10-09T04:47:21.628150Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction to the finite element displacement method",
+            "authors": [
+              "Petyt"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1017/cbo9780511624292.005",
+            "source_url": "https://doi.org/10.1017/cbo9780511624292.005",
+            "title_similarity": 0.8631578947368421
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "CHAPTER 1 Introduction of Finite Element Method",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1051/978-2-7598-2938-5.c003",
+            "source_url": "https://doi.org/10.1051/978-2-7598-2938-5.c003",
+            "title_similarity": 0.8181818181818182
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "CHAPTER 1 Introduction of Finite Element Method",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1051/978-2-7598-2939-2.c003",
+            "source_url": "https://doi.org/10.1051/978-2-7598-2939-2.c003",
+            "title_similarity": 0.8181818181818182
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Chapter 2: Introduction to Finite Element Method",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1515/9781938549366-004",
+            "source_url": "https://doi.org/10.1515/9781938549366-004",
+            "title_similarity": 0.8409090909090909
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "INTRODUCTION TO FINITE ELEMENT METHOD",
+            "authors": [
+              "RAO"
+            ],
+            "year": 1982,
+            "years": [
+              1982
+            ],
+            "doi": "10.1016/b978-0-08-025466-1.50007-9",
+            "source_url": "https://doi.org/10.1016/b978-0-08-025466-1.50007-9",
+            "title_similarity": 0.9487179487179487
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:21.626351Z",
+        "response_sha256": "5f4aa63edd09ad71527bfcb32478348ef076f9235a34378b795100b37d2295e7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Introduction+to+the+finite+element+method&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:21.628150Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-45",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the pareto front of physics-informed neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+pareto+front+of+physics-informed+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:20.938552Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Data vs. Physics: The Apparent Pareto Front of Physics-Informed Neural Networks",
+            "authors": [
+              "Rohrhofer",
+              "Posch",
+              "Gößnitzer",
+              "Geiger"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/access.2023.3302892",
+            "source_url": "https://doi.org/10.1109/access.2023.3302892",
+            "title_similarity": 0.803030303030303
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Computational Fluid Dynamics Optimization of F1 Front Wing using Physics Informed Neural Networks",
+            "authors": [
+              "Shah"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.175734779.97588643/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.175734779.97588643/v1",
+            "title_similarity": 0.5789473684210527
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Mathematics of Physics-Informed Neural Networks vs. Physics-Informed Neural Operators",
+            "authors": [
+              "Noguer I Alonso"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5297552",
+            "source_url": "https://doi.org/10.2139/ssrn.5297552",
+            "title_similarity": 0.6013986013986014
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Predicting Voltammetry Using Physics-Informed Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jpclett.1c04054.s001",
+            "source_url": "https://doi.org/10.1021/acs.jpclett.1c04054.s001",
+            "title_similarity": 0.6896551724137931
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Electromagnetic field computation of multilayer vacuum chambers with physics-informed neural networks",
+            "authors": [
+              "Fujita"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.3389/fphy.2022.967645",
+            "source_url": "https://doi.org/10.3389/fphy.2022.967645",
+            "title_similarity": 0.48717948717948717
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:20.936572Z",
+        "response_sha256": "28446663e53ceeb9b092c1b949a8377262c35e929ef5d866aa2fdde8e67e3891",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+pareto+front+of+physics-informed+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:20.938552Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-48",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-48",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Sobolev training for the neural network solutions of pdes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Sobolev+training+for+the+neural+network+solutions+of+pdes&rows=5",
+        "checked_at": "2026-10-09T04:47:23.742248Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:23.742167Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Sobolev+training+for+the+neural+network+solutions+of+pdes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:23.742248Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-49",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How pinns cheat: Predicting chaotic motion of a double pendulum",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+pinns+cheat%3A+Predicting+chaotic+motion+of+a+double+pendulum&rows=5",
+        "checked_at": "2026-10-09T04:47:23.067422Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "How to Cheat in Motion",
+            "authors": [
+              "Sheffield"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.4324/9780080928241",
+            "source_url": "https://doi.org/10.4324/9780080928241",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Copyright",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1016/b978-0-240-81097-3.50001-1",
+            "source_url": "https://doi.org/10.1016/b978-0-240-81097-3.50001-1",
+            "title_similarity": 0.056338028169014086
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Acknowledgments",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1016/b978-0-240-81097-3.50003-5",
+            "source_url": "https://doi.org/10.1016/b978-0-240-81097-3.50003-5",
+            "title_similarity": 0.2077922077922078
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Index",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1016/b978-0-240-81097-3.50014-x",
+            "source_url": "https://doi.org/10.1016/b978-0-240-81097-3.50014-x",
+            "title_similarity": 0.08955223880597014
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Chaotic motion",
+            "authors": [
+              "Lambourne"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1201/9780429187506-6",
+            "source_url": "https://doi.org/10.1201/9780429187506-6",
+            "title_similarity": 0.3684210526315789
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:23.065841Z",
+        "response_sha256": "fac710c3d595216a9d2c7b56347b2e8bd46107bc3aeb67a07277b28c198d975c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+pinns+cheat%3A+Predicting+chaotic+motion+of+a+double+pendulum&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:23.067422Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-51",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Das: A deep adaptive sampling method for solving partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Das%3A+A+deep+adaptive+sampling+method+for+solving+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:24.596708Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:24.596647Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Das%3A+A+deep+adaptive+sampling+method+for+solving+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:24.596708Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-52",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep learning of subsurface flow via theory-guided neural network",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+learning+of+subsurface+flow+via+theory-guided+neural+network&rows=5",
+        "checked_at": "2026-10-09T04:47:25.313521Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:25.313464Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+learning+of+subsurface+flow+via+theory-guided+neural+network&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:25.313521Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-53",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-53",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-53",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-54",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-54",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-55",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-55",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Respecting causality is all you need for training physics-informed neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Respecting+causality+is+all+you+need+for+training+physics-informed+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:25.418785Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:25.418706Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Respecting+causality+is+all+you+need+for+training+physics-informed+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:25.418785Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-56",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-56",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-57",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-57",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-57",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A comprehensive study of nonadaptive and residual-based adaptive sampling for physics-informed neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+comprehensive+study+of+nonadaptive+and+residual-based+adaptive+sampling+for+physics-informed+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:25.858984Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:25.858910Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+comprehensive+study+of+nonadaptive+and+residual-based+adaptive+sampling+for+physics-informed+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:25.858984Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_024_openreview_2024_02_11_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_024_openreview_2024_02_11_credibility-58",
+        "paper_reference_id": "ref-paper_024_openreview_2024_02_11_credibility-58",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Multiadam: Parameterwise scale-invariant optimizer for multiscale training of physics-informed neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Multiadam%3A+Parameterwise+scale-invariant+optimizer+for+multiscale+training+of+physics-informed+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:47:25.878711Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multiscale Damage Via Physics-Informed Recurrent Neural Networks",
+            "authors": [
+              "Deng"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.26226/m.64c26777632e9539aa87d77a",
+            "source_url": "https://doi.org/10.26226/m.64c26777632e9539aa87d77a",
+            "title_similarity": 0.5317919075144508
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multiscale training for Physics-informed Neural Networks.",
+            "authors": [
+              "Patel",
+              "Trask",
+              "Cyr"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.2172/1861255",
+            "source_url": "https://doi.org/10.2172/1861255",
+            "title_similarity": 0.6545454545454545
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An efficient wavelet-based physics-informed neural network for multiscale problems",
+            "authors": [
+              "Pandey",
+              "Singh",
+              "Behera"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2026.108860",
+            "source_url": "https://doi.org/10.1016/j.neunet.2026.108860",
+            "title_similarity": 0.450261780104712
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Investigating training pathologies in physics-informed neural networks",
+            "authors": [
+              "Sykora",
+              "Kucerova",
+              "Oswald"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3311/ceacmmsf2026-296",
+            "source_url": "https://doi.org/10.3311/ceacmmsf2026-296",
+            "title_similarity": 0.5698324022346368
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Estimating Invariant Sets using Physics-Informed Neural Networks",
+            "authors": [
+              "Tadiparthi",
+              "Bhattacharya"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2514/6.2022-1441",
+            "source_url": "https://doi.org/10.2514/6.2022-1441",
+            "title_similarity": 0.6473988439306358
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:25.877409Z",
+        "response_sha256": "1110c4897ec7169a0991fcdc3cffc3519234fb0721509df2754c7edf3b99215e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Multiadam%3A+Parameterwise+scale-invariant+optimizer+for+multiscale+training+of+physics-informed+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:25.878711Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.344262295081967
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 61,
+    "extracted_count": 61,
+    "parsed_count": 55,
+    "queried_count": 55,
+    "matched_count": 17,
+    "metadata_conflict_count": 2,
+    "unverified_count": 16,
+    "parse_failed_count": 6,
+    "not_checked_count": 0,
+    "query_failed_count": 20,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.258282Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

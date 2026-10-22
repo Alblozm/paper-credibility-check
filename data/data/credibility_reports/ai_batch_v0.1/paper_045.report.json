@@ -1,0 +1,2545 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-a257cf4eabb72b03",
+  "paper_version_id": "paper_045_iclr_2026_proceedings",
+  "pdf_sha256": "41169892fad46a1e73f541b81e5dc8db15ff2409ef956820de61b23d8caf25be",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "7c648e9fef372091043ffd00ec87a89bd37800fe7c442d4fe1cae79c9170d8a0",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.211382113821138,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.634146341463414,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 41,
+        "extracted_count": 41,
+        "parsed_count": 38,
+        "queried_count": 38,
+        "matched_count": 7,
+        "metadata_conflict_count": 0,
+        "unverified_count": 18,
+        "parse_failed_count": 3,
+        "not_checked_count": 0,
+        "query_failed_count": 13,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c1b3d1e2cf53bb28cabd801bd58b3521-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:54:56.763321Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-b75c48ee238d",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 0,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:54:57.166380Z",
+            "source_urls": [
+              "https://api.github.com/repos/ysfalh/unlearning-distribution",
+              "https://api.github.com/repos/ysfalh/unlearning-distribution/issues?state=all&per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-1",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The utility and complexity of in- and out-of-distribution machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+utility+and+complexity+of+in-+and+out-of-distribution+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:43.272556Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Backdoor Defense via Malicious Knowledge Capturing and Machine Unlearning with Out-of-Distribution Data",
+            "authors": [
+              "Liang",
+              "Chen",
+              "Yan",
+              "Dong"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/ijcnn64981.2025.11228380",
+            "source_url": "https://doi.org/10.1109/ijcnn64981.2025.11228380",
+            "title_similarity": 0.43820224719101125
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Distribution-Level Feature Distancing for Machine Unlearning: Towards a Better Trade-off Between Model Utility and Forgetting",
+            "authors": [
+              "Choi",
+              "Na"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1609/aaai.v39i3.32256",
+            "source_url": "https://doi.org/10.1609/aaai.v39i3.32256",
+            "title_similarity": 0.31155778894472363
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Unlearning Under Siege: How Machine Unlearning Degrades Adversarial Robustness",
+            "authors": [
+              "Ahmad"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6537881",
+            "source_url": "https://doi.org/10.2139/ssrn.6537881",
+            "title_similarity": 0.2894736842105263
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "PRISMA: Data-Distribution-Aware Approach to Machine Unlearning",
+            "authors": [
+              "Peyrone",
+              "Wichadakul"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/access.2026.3720974",
+            "source_url": "https://doi.org/10.1109/access.2026.3720974",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Balancing Utility and Privacy: Machine Unlearning for Medical Robotics",
+            "authors": [
+              "Pisanu",
+              "Walter",
+              "Franke"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/ismt68188.2025.11488082",
+            "source_url": "https://doi.org/10.1109/ismt68188.2025.11488082",
+            "title_similarity": 0.4861111111111111
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:43.270899Z",
+        "response_sha256": "0e07f72cff93f168bb39f031cbf32d3fa5c542b1105949cc07a06414e6900889",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+utility+and+complexity+of+in-+and+out-of-distribution+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:43.272556Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-2",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Almeida, Jos´ e M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Almeida%2C+Jos%C2%B4+e+M&rows=5",
+        "checked_at": "2026-10-09T04:54:45.326176Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:45.326120Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Almeida%2C+Jos%C2%B4+e+M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:45.326176Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-3",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Clustering with bregman divergences",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Clustering+with+bregman+divergences&rows=5",
+        "checked_at": "2026-10-09T04:54:45.313344Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:45.313306Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Clustering+with+bregman+divergences&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:45.313344Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-6",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Nonlinear programming",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Nonlinear+programming&rows=5",
+        "checked_at": "2026-10-09T04:54:45.316950Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "8. Duality in Nonlinear Programming",
+            "authors": [],
+            "year": 1994,
+            "years": [
+              1994,
+              2012
+            ],
+            "doi": "10.1137/1.9781611971255.ch8",
+            "source_url": "https://doi.org/10.1137/1.9781611971255.ch8",
+            "title_similarity": 0.7636363636363637
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Nonlinear Nondifferentiable Programming in Complex Space",
+            "authors": [
+              "MOND"
+            ],
+            "year": 1970,
+            "years": [
+              1970
+            ],
+            "doi": "10.1016/b978-0-12-597050-1.50017-8",
+            "source_url": "https://doi.org/10.1016/b978-0-12-597050-1.50017-8",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Nonlinear leastpth optimization and nonlinear programming",
+            "authors": [
+              "Charalambous"
+            ],
+            "year": 1977,
+            "years": [
+              1977
+            ],
+            "doi": "10.1007/bf01593788",
+            "source_url": "https://doi.org/10.1007/bf01593788",
+            "title_similarity": 0.5384615384615384
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Linear and Nonlinear Programming",
+            "authors": [
+              "Danø"
+            ],
+            "year": 1975,
+            "years": [
+              1975
+            ],
+            "doi": "10.1007/978-3-7091-8394-6_1",
+            "source_url": "https://doi.org/10.1007/978-3-7091-8394-6_1",
+            "title_similarity": 0.7924528301886793
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "7. Optimality Criteria in Nonlinear Programming with Differentiability",
+            "authors": [],
+            "year": 1994,
+            "years": [
+              1994,
+              2012
+            ],
+            "doi": "10.1137/1.9781611971255.ch7",
+            "source_url": "https://doi.org/10.1137/1.9781611971255.ch7",
+            "title_similarity": 0.4666666666666667
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:45.315828Z",
+        "response_sha256": "b72593c23af525b71ad4d4fac2dfb02da9a2f44ba7c773b3a7db7e70e471f139",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Nonlinear+programming&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:45.316950Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-7",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Latent dirichlet allocation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Latent+dirichlet+allocation&rows=5",
+        "checked_at": "2026-10-09T04:54:45.456125Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Partial membership latent Dirichlet allocation",
+            "authors": [
+              "Chen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32469/10355/56468",
+            "source_url": "https://doi.org/10.32469/10355/56468",
+            "title_similarity": 0.7397260273972602
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Figure 2: Word embedding latent Dirichlet allocation (WELDA).",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2300/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2300/fig-2",
+            "title_similarity": 0.6428571428571429
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Topic Modelling in COVID-19 Vaccination Refusal Cases Using Latent Dirichlet Allocation and Latent Semantic Analysis",
+            "authors": [
+              "Sholihah",
+              "Findawati"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21070/ups.774",
+            "source_url": "https://doi.org/10.21070/ups.774",
+            "title_similarity": 0.3776223776223776
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Table 1: Latent Dirichlet Allocation (LDA) generalization process model.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.677/table-1",
+            "source_url": "https://doi.org/10.7717/peerjcs.677/table-1",
+            "title_similarity": 0.5684210526315789
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Comparing Latent Dirichlet Allocation and Latent Semantic Analysis as Classifiers",
+            "authors": [
+              "Anaya"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.12794/metadc103284",
+            "source_url": "https://doi.org/10.12794/metadc103284",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:45.454852Z",
+        "response_sha256": "1eb101ddb006faacbe97ce7111883354478eb0919e67af798153e92ddf804160",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Latent+dirichlet+allocation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:45.456125Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-8",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:43.515482Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unlearning Under Siege: How Machine Unlearning Degrades Adversarial Robustness",
+            "authors": [
+              "Ahmad"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6537881",
+            "source_url": "https://doi.org/10.2139/ssrn.6537881",
+            "title_similarity": 0.37894736842105264
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Case Studies in Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-5",
+            "source_url": "https://doi.org/10.1201/9781003771470-5",
+            "title_similarity": 0.6923076923076923
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction to Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-1",
+            "source_url": "https://doi.org/10.1201/9781003771470-1",
+            "title_similarity": 0.6923076923076923
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Machine Unlearning in Generative AI and LLMs",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-3",
+            "source_url": "https://doi.org/10.1201/9781003771470-3",
+            "title_similarity": 0.5806451612903226
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Unlearning Comparator: a Visual Analytics System for Comparative Evaluation of Machine Unlearning Methods_supp2-3658325.pdf",
+            "authors": [
+              "Jo"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tvcg.2026.3658325/mm2",
+            "source_url": "https://doi.org/10.1109/tvcg.2026.3658325/mm2",
+            "title_similarity": 0.2571428571428571
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:01.564482Z",
+        "response_sha256": "1984b4e6dbeee381b3293a708c5ad3f84a49d6a9966c0f5f7cefd4a20374308e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:43.515482Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-9",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-9",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Langevin unlearning: A new perspective of noisy gradient descent for machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Langevin+unlearning%3A+A+new+perspective+of+noisy+gradient+descent+for+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:46.341331Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:46.341255Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Langevin+unlearning%3A+A+new+perspective+of+noisy+gradient+descent+for+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:46.341331Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-10",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Forgetunlearning: Towardstruedata-deletioninmachinelearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Forgetunlearning%3A+Towardstruedata-deletioninmachinelearning&rows=5",
+        "checked_at": "2026-10-09T04:54:47.133122Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:47.132178Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Forgetunlearning%3A+Towardstruedata-deletioninmachinelearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:47.133122Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-11",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarial removal of demographic attributes from text data",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarial+removal+of+demographic+attributes+from+text+data&rows=5",
+        "checked_at": "2026-10-09T04:54:48.240396Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:48.240343Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarial+removal+of+demographic+attributes+from+text+data&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:48.240396Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Who’s harry potter? approximate unlearning in llms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Who%E2%80%99s+harry+potter%3F+approximate+unlearning+in+llms&rows=5",
+        "checked_at": "2026-10-09T04:54:46.199629Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Revisiting Who’s Harry Potter: Towards Targeted Unlearning from a Causal Intervention Perspective",
+            "authors": [
+              "Liu",
+              "Zhang",
+              "Jaakkola",
+              "Chang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.495",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.495",
+            "title_similarity": 0.5517241379310345
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Naming in Harry Potter",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.4324/9781315269337-2",
+            "source_url": "https://doi.org/10.4324/9781315269337-2",
+            "title_similarity": 0.39436619718309857
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Harry Potter and the Management of Trauma",
+            "authors": [
+              "Henderson"
+            ],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.14325/mississippi/9781496839312.003.0015",
+            "source_url": "https://doi.org/10.14325/mississippi/9781496839312.003.0015",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Potter, Harry Spafford",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00145099",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00145099",
+            "title_similarity": 0.3142857142857143
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bros before Chos",
+            "authors": [
+              "Chez"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.14325/mississippi/9781496857316.003.0003",
+            "source_url": "https://doi.org/10.14325/mississippi/9781496857316.003.0003",
+            "title_similarity": 0.09230769230769231
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:46.198440Z",
+        "response_sha256": "f767c9a4cad994f9b856e61c2403e879396ebd0a549e58b4e9282ad414fe9ce5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Who%E2%80%99s+harry+potter%3F+approximate+unlearning+in+llms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:46.199629Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-13",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Salun: Empowering machine unlearning via gradient-based weight saliency in both image classification and generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Salun%3A+Empowering+machine+unlearning+via+gradient-based+weight+saliency+in+both+image+classification+and+generation&rows=5",
+        "checked_at": "2026-10-09T04:54:47.791597Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "WSS-CL: Weight Saliency Soft-Guided Contrastive Learning for Efficient Machine Unlearning Image Classification",
+            "authors": [
+              "Tran",
+              "Le"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.1007/978-3-032-09321-9_26",
+            "source_url": "https://doi.org/10.1007/978-3-032-09321-9_26",
+            "title_similarity": 0.45739910313901344
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Medical Image Classification via SVM Using LBP Features from Saliency-Based Folded Data",
+            "authors": [
+              "Camlica",
+              "Tizhoosh",
+              "Khalvati"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/icmla.2015.131",
+            "source_url": "https://doi.org/10.1109/icmla.2015.131",
+            "title_similarity": 0.30845771144278605
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Robust Image Classification via Centroid-Aware Machine Unlearning of Noisy Annotations",
+            "authors": [
+              "Yamamoto",
+              "Yoshida",
+              "Muneyasu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/gcce65946.2025.11275131",
+            "source_url": "https://doi.org/10.1109/gcce65946.2025.11275131",
+            "title_similarity": 0.32
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "CoUn: Empowering Machine Unlearning via Contrastive Learning",
+            "authors": [
+              "Khalil",
+              "Setayesh",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-4370",
+            "source_url": "https://doi.org/10.52202/085713-4370",
+            "title_similarity": 0.5202312138728323
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multiclass Unlearning for Image Classification via Weight Filtering",
+            "authors": [
+              "Poppi",
+              "Sarto",
+              "Cornia",
+              "Baraldi",
+              "Cucchiara"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/mis.2024.3412742",
+            "source_url": "https://doi.org/10.1109/mis.2024.3412742",
+            "title_similarity": 0.47513812154696133
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:47.789166Z",
+        "response_sha256": "e0f8056be4d92a3d50d703329eb6f1a797c6cbc2c047babe571b8b6cbfac4f98",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Salun%3A+Empowering+machine+unlearning+via+gradient-based+weight+saliency+in+both+image+classification+and+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:47.791597Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-14",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fast rates in pool-based batch active learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fast+rates+in+pool-based+batch+active+learning&rows=5",
+        "checked_at": "2026-10-09T04:54:47.255237Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Improving importance estimation in pool-based batch active learning for approximate linear regression",
+            "authors": [
+              "Kurihara",
+              "Sugiyama"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1016/j.neunet.2012.09.002",
+            "source_url": "https://doi.org/10.1016/j.neunet.2012.09.002",
+            "title_similarity": 0.5578231292517006
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A fast partition-based batch-mode active learning technique using SVM classifier",
+            "authors": [
+              "Singla",
+              "Patra"
+            ],
+            "year": 2017,
+            "years": [
+              2017,
+              2018
+            ],
+            "doi": "10.1007/s00500-017-2645-0",
+            "source_url": "https://doi.org/10.1007/s00500-017-2645-0",
+            "title_similarity": 0.5873015873015873
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Fast Spatial Pool Learning Algorithm of Hierarchical Temporal Memory Based on Minicolumn’s Self-Nomination",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.37473/dac/10.1155/2021/6680833",
+            "source_url": "https://doi.org/10.37473/dac/10.1155/2021/6680833",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Fast Spatial Pool Learning Algorithm of Hierarchical Temporal Memory Based on Minicolumn’s Self-Nomination",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.37473/fic/10.1155/2021/6680833",
+            "source_url": "https://doi.org/10.37473/fic/10.1155/2021/6680833",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sequential pool-based batch-mode active learning based on weighted uncertainty difference sampling for automated warping detection in additive manufacturing",
+            "authors": [
+              "Moon",
+              "Park",
+              "Park"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.jmapro.2025.09.016",
+            "source_url": "https://doi.org/10.1016/j.jmapro.2025.09.016",
+            "title_similarity": 0.33663366336633666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:47.253650Z",
+        "response_sha256": "1040fd2cbf096209eaf1c672b7867bc1a619af3cbf630143a912f9785760f726",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fast+rates+in+pool-based+batch+active+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:47.255237Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Certified data removal from machine learning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Certified+data+removal+from+machine+learning+models&rows=5",
+        "checked_at": "2026-10-09T04:54:49.139854Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:49.139783Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Certified+data+removal+from+machine+learning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:49.139854Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-16",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-16",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Approximate data deletion from machine learning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Approximate+data+deletion+from+machine+learning+models&rows=5",
+        "checked_at": "2026-10-09T04:54:50.002364Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:50.002310Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Approximate+data+deletion+from+machine+learning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:50.002364Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-17",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning the difference that makes a difference with counterfactually-augmented data",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+the+difference+that+makes+a+difference+with+counterfactually-augmented+data&rows=5",
+        "checked_at": "2026-10-09T04:54:50.132581Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:50.132515Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+the+difference+that+makes+a+difference+with+counterfactually-augmented+data&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:50.132581Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-18",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Grad-match: Gradientmatchingbaseddatasubsetselectionforefficientdeepmodeltraining",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Grad-match%3A+Gradientmatchingbaseddatasubsetselectionforefficientdeepmodeltraining&rows=5",
+        "checked_at": "2026-10-09T04:54:50.587980Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:50.587934Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Grad-match%3A+Gradientmatchingbaseddatasubsetselectionforefficientdeepmodeltraining&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:50.587980Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep unlearning: Fast and efficient gradientfree class forgetting",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+unlearning%3A+Fast+and+efficient+gradientfree+class+forgetting&rows=5",
+        "checked_at": "2026-10-09T04:54:51.028254Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:51.028189Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+unlearning%3A+Fast+and+efficient+gradientfree+class+forgetting&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:51.028254Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-20",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Certified unlearning for neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Certified+unlearning+for+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:54:50.372889Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Forgettable Federated Linear Learning With Certified Data Unlearning",
+            "authors": [
+              "Jin",
+              "Chen",
+              "Zhang",
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/tnnls.2026.3683398",
+            "source_url": "https://doi.org/10.1109/tnnls.2026.3683398",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Certified Edge Unlearning for Graph Neural Networks",
+            "authors": [
+              "Wu",
+              "Shen",
+              "Ning",
+              "Wang",
+              "Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1145/3580305.3599271",
+            "source_url": "https://doi.org/10.1145/3580305.3599271",
+            "title_similarity": 0.8791208791208791
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Rewind-to-Delete: Certified Machine Unlearning for Nonconvex Functions",
+            "authors": [
+              "Mu",
+              "Klabjan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-3832",
+            "source_url": "https://doi.org/10.52202/085713-3832",
+            "title_similarity": 0.5871559633027523
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "IDEA: A Flexible Framework of Certified Unlearning for Graph Neural Networks",
+            "authors": [
+              "Dong",
+              "Zhang",
+              "Lei",
+              "Zou",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1145/3637528.3671744",
+            "source_url": "https://doi.org/10.1145/3637528.3671744",
+            "title_similarity": 0.6956521739130435
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Machine Unlearning Using Forgetting Neural Networks",
+            "authors": [
+              "Hatua",
+              "Nguyen",
+              "Cano",
+              "Sung"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014326500004052",
+            "source_url": "https://doi.org/10.5220/0014326500004052",
+            "title_similarity": 0.7252747252747253
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:50.371370Z",
+        "response_sha256": "28ce9e87d397336cfc39dadd56aca1295013a6d5b54ae5a160fe7a663b589fda",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Certified+unlearning+for+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:50.372889Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-21",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The cifar-10 dataset",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+cifar-10+dataset&rows=5",
+        "checked_at": "2026-10-09T04:54:52.793187Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:52.793110Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+cifar-10+dataset&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:52.793187Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-22",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards unbounded machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+unbounded+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:51.030793Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Towards Unbounded Machine Unlearning",
+            "authors": [
+              "Kurmanji",
+              "Triantafillou",
+              "Hayes",
+              "Triantafillou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-0095",
+            "source_url": "https://doi.org/10.52202/075280-0095",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards Making Systems Forget with Machine Unlearning",
+            "authors": [
+              "Cao",
+              "Yang"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/sp.2015.35",
+            "source_url": "https://doi.org/10.1109/sp.2015.35",
+            "title_similarity": 0.6741573033707865
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Unlearning Under Siege: How Machine Unlearning Degrades Adversarial Robustness",
+            "authors": [
+              "Ahmad"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6537881",
+            "source_url": "https://doi.org/10.2139/ssrn.6537881",
+            "title_similarity": 0.46017699115044247
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Case Studies in Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-5",
+            "source_url": "https://doi.org/10.1201/9781003771470-5",
+            "title_similarity": 0.6857142857142857
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Machine Unlearning",
+            "authors": [
+              "Misra",
+              "Chakraborty",
+              "Dey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003771470-1",
+            "source_url": "https://doi.org/10.1201/9781003771470-1",
+            "title_similarity": 0.6
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:51.029132Z",
+        "response_sha256": "36c94e19231bd20b31c88947cb0b0bf9c4a1d4bd9e11970a469206a55999e9bd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+unbounded+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:51.030793Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-24",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-24",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-25",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-25",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Choquette-Choo, Matthew Jagielski, Peter Kairouz, Sanmi Koyejo, Percy Liang, and Nicolas Papernot",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Choquette-Choo%2C+Matthew+Jagielski%2C+Peter+Kairouz%2C+Sanmi+Koyejo%2C+Percy+Liang%2C+and+Nicolas+Papernot&rows=5",
+        "checked_at": "2026-10-09T04:54:53.393174Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:53.393094Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Choquette-Choo%2C+Matthew+Jagielski%2C+Peter+Kairouz%2C+Sanmi+Koyejo%2C+Percy+Liang%2C+and+Nicolas+Papernot&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:53.393174Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-26",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Coresets for data-efficient training of machine learning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Coresets+for+data-efficient+training+of+machine+learning+models&rows=5",
+        "checked_at": "2026-10-09T04:54:52.189525Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacs.4c14455.s001",
+            "source_url": "https://doi.org/10.1021/jacs.4c14455.s001",
+            "title_similarity": 0.620253164556962
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Automated Machine Learning Pipeline: Large Language Models-Assisted Automated Data set Generation for Training Machine-Learned Interatomic Potentials",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jctc.5c01610.s001",
+            "source_url": "https://doi.org/10.1021/acs.jctc.5c01610.s001",
+            "title_similarity": 0.26540284360189575
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Incorporating Training Data Uncertainty in Machine Learning Models for Satellite Imagery",
+            "authors": [
+              "Alemohammad"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.5194/egusphere-egu23-10528",
+            "source_url": "https://doi.org/10.5194/egusphere-egu23-10528",
+            "title_similarity": 0.5695364238410596
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Coresets over multiple tables for feature-rich and data-efficient machine learning",
+            "authors": [
+              "Wang",
+              "Chai",
+              "Tang",
+              "Liu",
+              "Li"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.14778/3561261.3561267",
+            "source_url": "https://doi.org/10.14778/3561261.3561267",
+            "title_similarity": 0.6068965517241379
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Similarity Metric for Data Optimization and Efficient Training of Reactive Machine Learning Force Fields for Hydrocarbon Radiolysis",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jctc.5c01301.s002",
+            "source_url": "https://doi.org/10.1021/acs.jctc.5c01301.s002",
+            "title_similarity": 0.5773195876288659
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:52.188115Z",
+        "response_sha256": "34a671fb2dc64815b2fb4bc615ed9daa4efd5146482467b12bb31faaf08aab30",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Coresets+for+data-efficient+training+of+machine+learning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:52.189525Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-27",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Descent-to-delete: Gradient-based methods for machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Descent-to-delete%3A+Gradient-based+methods+for+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:52.043542Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The Study of Orthogonal Gradient Descent in Unlearning Algorithms",
+            "authors": [
+              "He"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5220/0013528400004619",
+            "source_url": "https://doi.org/10.5220/0013528400004619",
+            "title_similarity": 0.453125
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Langevin Unlearning: A New Perspective of Noisy Gradient Descent for Machine Unlearning",
+            "authors": [
+              "Chien",
+              "Wang",
+              "Chen",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2530",
+            "source_url": "https://doi.org/10.52202/079017-2530",
+            "title_similarity": 0.5771812080536913
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Certified Machine Unlearning via Noisy Stochastic Gradient Descent",
+            "authors": [
+              "Chien",
+              "Wang",
+              "Chen",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-1228",
+            "source_url": "https://doi.org/10.52202/079017-1228",
+            "title_similarity": 0.3875968992248062
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Chapter 3: Specialized Gradient Descent Methods",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1190/1.9781560804048.ch3",
+            "source_url": "https://doi.org/10.1190/1.9781560804048.ch3",
+            "title_similarity": 0.42201834862385323
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Delete Sequence Data for Educational Platforms: Machine Unlearning in Knowledge Tracing Model",
+            "authors": [
+              "Liu",
+              "Yang",
+              "Khalil",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5943492",
+            "source_url": "https://doi.org/10.2139/ssrn.5943492",
+            "title_similarity": 0.43870967741935485
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:52.041912Z",
+        "response_sha256": "74692cf87504d7036559100aff8d20bf3e044b0fead8d130254cd8febca99bec",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Descent-to-delete%3A+Gradient-based+methods+for+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:52.043542Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-29",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Understanding machine learning: From theory to algorithms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Understanding+machine+learning%3A+From+theory+to+algorithms&rows=5",
+        "checked_at": "2026-10-09T04:54:52.816324Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Convex Learning Problems",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781107298019.013",
+            "source_url": "https://doi.org/10.1017/cbo9781107298019.013",
+            "title_similarity": 0.425
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "References",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781107298019.036",
+            "source_url": "https://doi.org/10.1017/cbo9781107298019.036",
+            "title_similarity": 0.09090909090909091
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781107298019.002",
+            "source_url": "https://doi.org/10.1017/cbo9781107298019.002",
+            "title_similarity": 0.17647058823529413
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Preface",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781107298019.001",
+            "source_url": "https://doi.org/10.1017/cbo9781107298019.001",
+            "title_similarity": 0.12698412698412698
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Clustering",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781107298019.023",
+            "source_url": "https://doi.org/10.1017/cbo9781107298019.023",
+            "title_similarity": 0.18181818181818182
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:52.814762Z",
+        "response_sha256": "930120463f47af3fa085af92d9650dd7d59d2733d78a81bc5baf8aee9ae5c337",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Understanding+machine+learning%3A+From+theory+to+algorithms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:52.816324Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-31",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Autoencoding variational inference for topic models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Autoencoding+variational+inference+for+topic+models&rows=5",
+        "checked_at": "2026-10-09T04:54:54.997858Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:54.997789Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Autoencoding+variational+inference+for+topic+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:54.997858Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-32",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fast yet effective machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fast+yet+effective+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:53.768966Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fast Yet Effective Machine Unlearning_supp1-3266233.pdf",
+            "authors": [
+              "Mandal"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tnnls.2023.3266233/mm1",
+            "source_url": "https://doi.org/10.1109/tnnls.2023.3266233/mm1",
+            "title_similarity": 0.8043478260869565
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fast Yet Effective Machine Unlearning",
+            "authors": [
+              "Tarun",
+              "Chundawat",
+              "Mandal",
+              "Kankanhalli"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/tnnls.2023.3266233",
+            "source_url": "https://doi.org/10.1109/tnnls.2023.3266233",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fast yet versatile machine unlearning for deep neural networks",
+            "authors": [
+              "Chen",
+              "Zhang",
+              "Mi",
+              "Huang",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107648",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107648",
+            "title_similarity": 0.6464646464646465
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Advancing Machine Unlearning: A Novel Approach for Efficient and Effective Data Removal",
+            "authors": [
+              "Bensaoud",
+              "Kalita"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5023189",
+            "source_url": "https://doi.org/10.2139/ssrn.5023189",
+            "title_similarity": 0.35772357723577236
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Unlearning Under Siege: How Machine Unlearning Degrades Adversarial Robustness",
+            "authors": [
+              "Ahmad"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6537881",
+            "source_url": "https://doi.org/10.2139/ssrn.6537881",
+            "title_similarity": 0.38596491228070173
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:53.766920Z",
+        "response_sha256": "96ea26e933ddb239b5d03af4e6db7cbbdafd42df6691673191d60224c30d0cb3",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fast+yet+effective+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:53.768966Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-33",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-33",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "When to forget? complexity trade-offs in machine unlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=When+to+forget%3F+complexity+trade-offs+in+machine+unlearning&rows=5",
+        "checked_at": "2026-10-09T04:54:55.636748Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:55.636698Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=When+to+forget%3F+complexity+trade-offs+in+machine+unlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:55.636748Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-34",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graphicalmodels, exponentialfamilies, andvariational inference",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graphicalmodels%2C+exponentialfamilies%2C+andvariational+inference&rows=5",
+        "checked_at": "2026-10-09T04:54:54.359218Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Connections Between Continuous and Discrete Extremum Problems, Generalized Systems, andVariational Inequalities∗",
+            "authors": [
+              "Antoni",
+              "Giannessi",
+              "Tardella"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1007/978-1-4419-7997-1_54",
+            "source_url": "https://doi.org/10.1007/978-1-4419-7997-1_54",
+            "title_similarity": 0.3905325443786982
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Probabilistic graphicalmodels for human motion tracking",
+            "authors": [
+              "Gomez",
+              "Marin-Jimenez",
+              "Perez de la Blanca"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/wiamis.2009.5031453",
+            "source_url": "https://doi.org/10.1109/wiamis.2009.5031453",
+            "title_similarity": 0.46956521739130436
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Variational Inference",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781009218245.011",
+            "source_url": "https://doi.org/10.1017/9781009218245.011",
+            "title_similarity": 0.5185185185185185
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Bayesian Inference",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781009218245.003",
+            "source_url": "https://doi.org/10.1017/9781009218245.003",
+            "title_similarity": 0.41025641025641024
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Inference over Graphs",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781009218245.017",
+            "source_url": "https://doi.org/10.1017/9781009218245.017",
+            "title_similarity": 0.2222222222222222
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:54.358546Z",
+        "response_sha256": "f47419deca97a4cea7ffc65a56b1509c5184a2e00033d95c64cd10be7394d807",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graphicalmodels%2C+exponentialfamilies%2C+andvariational+inference&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:54.359218Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-36",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Finetuned language models are zero-shot learners",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Finetuned+language+models+are+zero-shot+learners&rows=5",
+        "checked_at": "2026-10-09T04:54:53.770934Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Zero-Shot Classification of Crisis Tweets Using Instruction-Finetuned Large Language Models",
+            "authors": [
+              "McDaniel",
+              "Scheele",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/ihtc61819.2024.10855037",
+            "source_url": "https://doi.org/10.1109/ihtc61819.2024.10855037",
+            "title_similarity": 0.3597122302158273
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Zero-shot and Few-shot Study of Instruction-Finetuned Large Language Models Applied to Clinical and Biomedical Tasks",
+            "authors": [
+              "Labrak",
+              "Rouvier",
+              "Dufour"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.63317/2fcovvb4zao3",
+            "source_url": "https://doi.org/10.63317/2fcovvb4zao3",
+            "title_similarity": 0.39759036144578314
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Advancing zero-shot and multilingual generalization in large language models",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/210531",
+            "source_url": "https://doi.org/10.32657/10356/210531",
+            "title_similarity": 0.3709677419354839
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Zero‐shot animal behaviour classification with vision‐language foundation models\"",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1111/2041-210x.70059/v1/review2",
+            "source_url": "https://doi.org/10.1111/2041-210x.70059/v1/review2",
+            "title_similarity": 0.28776978417266186
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Beyond prompting: Making Pre-trained Language Models Better Zero-shot Learners by Clustering Representations",
+            "authors": [
+              "Fei",
+              "Meng",
+              "Nie",
+              "Wattenhofer",
+              "Sachan"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.587",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.587",
+            "title_similarity": 0.567741935483871
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:57.682363Z",
+        "response_sha256": "30c6e979bd645d3bc26f056a435d00c8a0f7baa942353f2707507b8541841029",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Finetuned+language+models+are+zero-shot+learners&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:53.770934Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-37",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Rethinking dataset pruning from a generalization perspective",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Rethinking+dataset+pruning+from+a+generalization+perspective&rows=5",
+        "checked_at": "2026-10-09T04:54:54.577568Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "UNSEEN: Enhancing Dataset Pruning from a Generalization Perspective",
+            "authors": [
+              "Xu",
+              "Wang",
+              "Zhang",
+              "Sun",
+              "Tang",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1609/aaai.v40i32.39938",
+            "source_url": "https://doi.org/10.1609/aaai.v40i32.39938",
+            "title_similarity": 0.8888888888888888
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "In The Ordinary Moments: Rethinking Ritual and Reverie From the Relational Perspective",
+            "authors": [
+              "Cooper",
+              "Davies",
+              "Slavin",
+              "Shane"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1037/e670982007-008",
+            "source_url": "https://doi.org/10.1037/e670982007-008",
+            "title_similarity": 0.5655172413793104
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Generalization of Langevin Dynamics from Spatio-Temporal Dressed Dynamics Perspective",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jpca.0c00343.s001",
+            "source_url": "https://doi.org/10.1021/acs.jpca.0c00343.s001",
+            "title_similarity": 0.3586206896551724
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Rethinking Radical Democracy from a Marxist Perspective: A Critique of Bowles and Gintis's “Rethinking Marxism and Liberalism from a Radical Democratic Perspective”",
+            "authors": [
+              "O'Connor"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1080/08935699208658037",
+            "source_url": "https://doi.org/10.1080/08935699208658037",
+            "title_similarity": 0.334841628959276
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Rethinking our world from the perspective of poverty with Joseph Wresinski",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3917/herm.tardi.2020.01.0337",
+            "source_url": "https://doi.org/10.3917/herm.tardi.2020.01.0337",
+            "title_similarity": 0.4626865671641791
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:54.576467Z",
+        "response_sha256": "707382b9832576957c08c1ad322460b760d25d7319fb342eb26f5313baa2e97b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Rethinking+dataset+pruning+from+a+generalization+perspective&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:54.577568Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-38",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-38",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-40",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-40",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_045_iclr_2026_proceedings_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_045_iclr_2026_proceedings_credibility-41",
+        "paper_reference_id": "ref-paper_045_iclr_2026_proceedings_credibility-41",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Coverage-centric coreset selection for high pruning rates",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Coverage-centric+coreset+selection+for+high+pruning+rates&rows=5",
+        "checked_at": "2026-10-09T04:54:55.398334Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Coreset Selection Reimagined: CLIP-Based Sample Selection with Dynamic Coverage-Centric Strategies",
+            "authors": [
+              "Zi",
+              "Shi",
+              "Zhu",
+              "Tao",
+              "Li",
+              "Xu",
+              "Tiwari",
+              "Prasad"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5525964",
+            "source_url": "https://doi.org/10.2139/ssrn.5525964",
+            "title_similarity": 0.4155844155844156
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Coreset: Discrete Diversity, Dispersion, and Coverage Subset Selection",
+            "authors": [
+              "Smith"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32614/cran.package.coreset",
+            "source_url": "https://doi.org/10.32614/cran.package.coreset",
+            "title_similarity": 0.3548387096774194
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Task-moment mismatch: diagnosing failures of coverage-based methods on heavy-tailed distributions in coreset selection",
+            "authors": [
+              "Halagali",
+              "Naveen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1038/s41598-026-64763-7",
+            "source_url": "https://doi.org/10.1038/s41598-026-64763-7",
+            "title_similarity": 0.367816091954023
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Enabling data-efficient trajectory prediction via coreset selection",
+            "authors": [
+              "Yang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20705207",
+            "source_url": "https://doi.org/10.17760/d20705207",
+            "title_similarity": 0.4032258064516129
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Coverage-Controlled Artifact-Aware Adaptive Image Protection via Joint Block Selection and Attacker-Centric Evaluation",
+            "authors": [
+              "HOTUR"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7560743",
+            "source_url": "https://doi.org/10.2139/ssrn.7560743",
+            "title_similarity": 0.4342857142857143
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:54:55.395813Z",
+        "response_sha256": "c04ae612699104873150a0bd30116f2da301676cd7bb009486555291689bc6a7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Coverage-centric+coreset+selection+for+high+pruning+rates&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:54:55.398334Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.634146341463414
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 41,
+    "extracted_count": 41,
+    "parsed_count": 38,
+    "queried_count": 38,
+    "matched_count": 7,
+    "metadata_conflict_count": 0,
+    "unverified_count": 18,
+    "parse_failed_count": 3,
+    "not_checked_count": 0,
+    "query_failed_count": 13,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:43.613783Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

@@ -1,0 +1,22 @@
+# Large/source artifacts stay local or in object storage.
+data/raw_pdfs/
+renders/
+data/source_snapshots/.dedup.lock
+storage/
+tmp/
+*.pdf
+
+# Secrets and local environments.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Local staging copy; canonical project files live at repository root.
+data/quality_reports/pipeline_state.json

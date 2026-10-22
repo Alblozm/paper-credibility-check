@@ -1,0 +1,196 @@
+{
+  "model_run_id": "model_run_codex_review_paper_045_iclr_2026_proceedings",
+  "paper_id": "paper_045",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "2f5ccd375333afd66c3a79c235f36daeca2129139dd5e547210ef36b031233ca",
+  "raw_output": {
+    "paper_summary": "Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is statistically inefficient. We find that a domain's statistical influence is often concentrated in a small subset of its data samples, suggesting a path between ineffective partial removal and unnecessary complete removal. We formalize this as distributional unlearning: a framework to select a small subset that balances forgetting an unwanted distributi",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Distributional Machine Unlearning via Selective Data Removal》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensi",
+      "论文提供方法或实证支持：To assess how sensitive our selective deletion procedure is to the choice of feature representation, we conducted an ablation study on CIFAR–10 where we varied only the feature extractor and kept the selection algorithm and training setup fixed. We compare fiv"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensi；边界证据为：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati",
+        "strengths": [
+          "可定位正文支持：Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensi"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：To assess how sensitive our selective deletion procedure is to the choice of feature representation, we conducted an ablation study on CIFAR–10 where we varied only the feature extractor and kept the selection algorithm and training setup fixed. We compare fiv；边界证据为：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati",
+        "strengths": [
+          "可定位正文支持：To assess how sensitive our selective deletion procedure is to the choice of feature representation, we conducted an ablation study on CIFAR–10 where we varied only the feature extractor and kept the selection algorithm and training setup fixed. We compare fiv"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0047"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Sample-level unlearning. Sample-level unlearning has made impressive strides in fast model updates and formal deletion guarantees (Neel et al., 2021; Zhang et al., 2024a; Chien et al., 2024; Allouah et al., 2025; Koloskova et al., 2025). Izzo et al. (2021) use；边界证据为：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati",
+        "strengths": [
+          "可定位正文支持：Sample-level unlearning. Sample-level unlearning has made impressive strides in fast model updates and formal deletion guarantees (Neel et al., 2021; Zhang et al., 2024a; Chien et al., 2024; Allouah et al., 2025; Koloskova et al., 2025). Izzo et al. (2021) use"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0004"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：We evaluate five sample-level unlearning strategies that represent different approaches to machine unlearning: • R ETRAINING (oracle baseline): – Description: Complete retraining from scratch on the retained data only. It trains a new model from random initial；边界证据为：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati",
+        "strengths": [
+          "可定位正文支持：We evaluate five sample-level unlearning strategies that represent different approaches to machine unlearning: • R ETRAINING (oracle baseline): – Description: Complete retraining from scratch on the retained data only. It trains a new model from random initial"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0041"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 7,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：To assess how sensitive our selective deletion procedure is to the choice of feature representation, we conducted an ablation study on CIFAR–10 where we varied only the feature extractor and kept the selection algorithm and training setup fixed. We compare fiv；边界证据为：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati",
+        "strengths": [
+          "可定位正文支持：To assess how sensitive our selective deletion procedure is to the choice of feature representation, we conducted an ablation study on CIFAR–10 where we varied only the feature extractor and kept the selection algorithm and training setup fixed. We compare fiv"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Machine unlearning increasingly requires moving beyond individual record deletion to erase the influence of entire subpopulations. We tackled the central dilemma of this task: that full removal is computationally expensive, while naive partial removal is stati"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0047"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0002"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到random_seed披露。",
+        "chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0013"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0041"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0046"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确preprocessing_details披露。",
+        "chunk_ids": []
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is statistically inefficient. We find that a domain's statistical influence is often concentrated in a small subset of its data samples, suggesting a path between ineffective partial removal and unnecessary complete removal. We formalize this as distributional unlearning: a framework to select a small subset that balances forgetting an unwanted distributi",
+        "type": "method_or_finding",
+        "chunk_id": "paper_045_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is statistically inefficient. We find that a domain’s statistical influence is often concentrated in a small subset of its data",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0047"
+        ],
+        "limiting_chunk_ids": [
+          "paper_045_iclr_2026_proceedings_chunk_0019"
+        ]
+      }
+    ]
+  }
+}

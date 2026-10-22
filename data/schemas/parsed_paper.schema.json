@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "parsed_paper.schema.json",
+  "title": "Parsed paper metadata",
+  "type": "object",
+  "required": ["paper_id", "paper_version_id", "version_label", "source_type", "source_url", "pdf_object_key", "pdf_sha256", "page_count", "parser_name", "parser_version", "parse_status", "parse_quality", "parse_warnings", "has_ocr", "reading_order_quality"],
+  "properties": {
+    "paper_id": {"type": "string", "pattern": "^paper_[0-9]{3,}$"},
+    "paper_version_id": {"type": "string", "minLength": 1},
+    "pdf_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "page_count": {"type": "integer", "minimum": 1},
+    "parse_status": {"enum": ["pending", "processing", "completed", "failed"]},
+    "parse_quality": {"enum": ["good", "partial", "poor"]},
+    "parse_warnings": {"type": "array"},
+    "has_ocr": {"type": "boolean"},
+    "reading_order_quality": {"enum": ["high", "medium", "low"]}
+  },
+  "additionalProperties": true
+}

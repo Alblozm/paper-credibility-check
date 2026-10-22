@@ -1,0 +1,43 @@
+{
+  "case_id": "paper_001_v3_credibility_real_vertical_slice",
+  "review_status": "reviewed",
+  "reviewed_at": "2026-10-09T04:30:00Z",
+  "review_record": {"annotators": ["data_team_review"], "adjudicator": null},
+  "scope_complete": false,
+  "claim_scope_complete": false,
+  "claims": [{
+    "credibility_claim_id": "paper_001_claim_001",
+    "paper_version_id": "paper_001_v3",
+    "source_chunk_id": "paper_001_v3_chunk_0001",
+    "claim_text": "the resulting Tangent Transformer fine-tuned with TAFT can perform comparably with fine-tuning the original non-linear network",
+    "claim_type": "performance",
+    "importance": "major",
+    "verifiability": true,
+    "dedup_group_id": null,
+    "page_number": 1,
+    "extraction_source": "manual_real_vertical_slice",
+    "review_status": "reviewed",
+    "exclusion_reason": null
+  }],
+  "claim_checks": [{
+    "claim_check_id": "paper_001_claim_check_001",
+    "credibility_claim_id": "paper_001_claim_001",
+    "verdict": "supported",
+    "reasoning": "论文后文给出了 TAFT 与非线性微调的平均性能差异，并明确报告差异为 1.0% 和 0.7%；这直接支持摘要中的可比性能主张。该核查只覆盖一个主张，不能代表全文可信度核查已完成。",
+    "searched_scope": [{"section_id": "paper_001_v3_sec_4_2", "page_start": 7, "page_end": 8}],
+    "scope_complete": false,
+    "context_comparison": null,
+    "evidence": [{
+      "internal_evidence_id": "paper_001_evidence_001",
+      "chunk_id": "paper_001_v3_chunk_0015",
+      "element_id": null,
+      "evidence_role": "supports",
+      "excerpt": "the average downstream performance is highly comparable with that of non-linear fine-tuning of the original model, differing on average only by 1 . 0% and 0 . 7% respectively",
+      "page_number": 7,
+      "location_confidence": 0.95
+    }],
+    "review_status": "reviewed",
+    "check_source": "human",
+    "checked_at": "2026-10-09T04:30:00Z"
+  }]
+}

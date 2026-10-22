@@ -1,0 +1,2385 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-777f432863bd927d",
+  "paper_version_id": "paper_036_iclr_2026_proceedings",
+  "pdf_sha256": "3b96d5f1af31690bffccacdefcd3fdbf10ea55d8a0842d1939221a61a308f571",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "559789f0bf165d3037e6b43fa184d3c7dc4c2c897a2a2ded84e04befb03f845d",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.17948717948718,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.538461538461538,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 39,
+        "extracted_count": 39,
+        "parsed_count": 33,
+        "queried_count": 33,
+        "matched_count": 6,
+        "metadata_conflict_count": 1,
+        "unverified_count": 14,
+        "parse_failed_count": 6,
+        "not_checked_count": 0,
+        "query_failed_count": 12,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/01a8d63f9cb6dcbaa3092ccddd2075ac-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:51:26.459996Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-1",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-1",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graphllm: Boosting graph reasoning ability of large language model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graphllm%3A+Boosting+graph+reasoning+ability+of+large+language+model&rows=5",
+        "checked_at": "2026-10-09T04:51:13.283921Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GraphLLM: Boosting Graph Reasoning Ability of Large Language Model",
+            "authors": [
+              "Chai",
+              "Zhang",
+              "Wu",
+              "Han",
+              "Hu",
+              "Huang",
+              "Yang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/tbdata.2025.3627488",
+            "source_url": "https://doi.org/10.1109/tbdata.2025.3627488",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Large Language Model and Knowledge Graph Entangled Logical Reasoning",
+            "authors": [
+              "Xu",
+              "Li",
+              "Zhang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/ickg63256.2024.00061",
+            "source_url": "https://doi.org/10.1109/ickg63256.2024.00061",
+            "title_similarity": 0.3007518796992481
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "OOD-GraphLLM: Graph Large Language Model for Out-of-Distribution Generalized Drug Synergy Prediction",
+            "authors": [
+              "Wang",
+              "Xiao",
+              "Yao",
+              "Zhu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1145/3770855.3818871",
+            "source_url": "https://doi.org/10.1145/3770855.3818871",
+            "title_similarity": 0.4268292682926829
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Understanding Logical Reasoning Ability of Large Language Models",
+            "authors": [
+              "Chan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4943448",
+            "source_url": "https://doi.org/10.2139/ssrn.4943448",
+            "title_similarity": 0.7906976744186046
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Large Language Models for Code Writing: Performance Boosting",
+            "authors": [
+              "He"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/vhxv3-ycv47",
+            "source_url": "https://doi.org/10.59350/vhxv3-ycv47",
+            "title_similarity": 0.3225806451612903
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:13.282552Z",
+        "response_sha256": "15c5038bf54b4f91a9c351abb0ce3e6beca9348ce0ec9ed9913d484163ab64ed",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graphllm%3A+Boosting+graph+reasoning+ability+of+large+language+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:13.283921Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-2",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-3",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Llaga: Large language and graph assistant",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Llaga%3A+Large+language+and+graph+assistant&rows=5",
+        "checked_at": "2026-10-09T04:51:14.677292Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:14.677222Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Llaga%3A+Large+language+and+graph+assistant&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:14.677292Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-4",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Sft memorizes, rl generalizes: A comparative study of foundation model post-training",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Sft+memorizes%2C+rl+generalizes%3A+A+comparative+study+of+foundation+model+post-training&rows=5",
+        "checked_at": "2026-10-09T04:51:12.902456Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "First SFT, Second RL, Third UPT: Continual Improving Multi-Modal LLM Reasoning via Unsupervised Post-Training",
+            "authors": [
+              "Wei",
+              "Li",
+              "Wang",
+              "Wang",
+              "Kong",
+              "Huang",
+              "Sun"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-2084",
+            "source_url": "https://doi.org/10.52202/085713-2084",
+            "title_similarity": 0.4148936170212766
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Does Post-Training Order Change the Mechanism of Safety Alignment? A Controlled Study of Safety DPO and Helpfulness SFT",
+            "authors": [
+              "Yuchen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10594989/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10594989/v1",
+            "title_similarity": 0.17
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Leveraging SFT and RL for Fine-Tuning LLMs to Generate Supplementary Annotated Data for Entity Recognition",
+            "authors": [
+              "Cao",
+              "Wei",
+              "Li",
+              "Pillai"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014302600004070",
+            "source_url": "https://doi.org/10.5220/0014302600004070",
+            "title_similarity": 0.3191489361702128
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Evaluating Post-Training Employment Outcomes for Workforce Policy through Clustering: A Comparative Study of K-Means, Hierarchical Clustering, Gaussian Mixture Model, and Fuzzy C-Means",
+            "authors": [
+              "Andriyani",
+              "Nurwilda",
+              "Mergianti",
+              "Ulinnuha"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.30871/jaic.v10i4.13482",
+            "source_url": "https://doi.org/10.30871/jaic.v10i4.13482",
+            "title_similarity": 0.3969465648854962
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Fixing It in Post: A Comparative Study of LLM Post-Training Data Quality and Model Performance",
+            "authors": [
+              "Djuhera",
+              "Kadhe",
+              "Zawad",
+              "Ahmed",
+              "Ludwig",
+              "Boche"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-3776",
+            "source_url": "https://doi.org/10.52202/085713-3776",
+            "title_similarity": 0.5028571428571429
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:12.899551Z",
+        "response_sha256": "8e69e757d2047b10a34159ab74ce625839493fc2e44726d408bd7e0526880b0a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Sft+memorizes%2C+rl+generalizes%3A+A+comparative+study+of+foundation+model+post-training&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:12.902456Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-5",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Spectral journey: How transformers predict the shortest path",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Spectral+journey%3A+How+transformers+predict+the+shortest+path&rows=5",
+        "checked_at": "2026-10-09T04:51:13.962301Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Eigenvalue-Decomposition Cost Denoising as an Alternative to Predict-then-Optimize for Shortest-Path Problems",
+            "authors": [
+              "Aldridge",
+              "Aldridge-Krawciw"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7458864",
+            "source_url": "https://doi.org/10.2139/ssrn.7458864",
+            "title_similarity": 0.44047619047619047
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Shortest Path",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/springerreference_57889",
+            "source_url": "https://doi.org/10.1007/springerreference_57889",
+            "title_similarity": 0.3611111111111111
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "MaaS Personalised Multi-Modal Multi-Objective Journey Planning with Machine Learning Guided Shortest Path Algorithms",
+            "authors": [
+              "Bayliss",
+              "Ouelhadj",
+              "Dadashzadeh",
+              "Fletcher"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202501.1034.v1",
+            "source_url": "https://doi.org/10.20944/preprints202501.1034.v1",
+            "title_similarity": 0.38857142857142857
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Figure 2: (A) Sample Topology; 2B: Shortest path from Site 1 to site 4; (C) Alternate shortest path from Site 1 to site 4; (D) Alternate Shortest path from Site 1 to site 4.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.283/fig-2",
+            "source_url": "https://doi.org/10.7717/peerjcs.283/fig-2",
+            "title_similarity": 0.21818181818181817
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "When the Path Is Never Shortest: A Reality Check on Shortest Path Biocomputation",
+            "authors": [
+              "Mayne"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1007/978-3-319-77510-4_14",
+            "source_url": "https://doi.org/10.1007/978-3-319-77510-4_14",
+            "title_similarity": 0.2898550724637681
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:13.959896Z",
+        "response_sha256": "3c86ba0e9776885848da62b072b794ffbb01147ea65bc9e58f71f9b23a809476",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Spectral+journey%3A+How+transformers+predict+the+shortest+path&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:13.962301Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-6",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The entropy mechanism of reinforcement learning for reasoning language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+entropy+mechanism+of+reinforcement+learning+for+reasoning+language+models&rows=5",
+        "checked_at": "2026-10-09T04:51:14.665474Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:14.665413Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+entropy+mechanism+of+reinforcement+learning+for+reasoning+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:14.665474Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-7",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How do large language models understand graph patterns? a benchmark for graph pattern comprehension",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+do+large+language+models+understand+graph+patterns%3F+a+benchmark+for+graph+pattern+comprehension&rows=5",
+        "checked_at": "2026-10-09T04:51:13.872199Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automated Knowledge Graph Construction with Large Language Models",
+            "authors": [
+              "Kau"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/e9jz5-r3357",
+            "source_url": "https://doi.org/10.59350/e9jz5-r3357",
+            "title_similarity": 0.31901840490797545
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Automated Knowledge Graph Construction with Large Language Models",
+            "authors": [
+              "Kau"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/1a4tv-e9903",
+            "source_url": "https://doi.org/10.59350/1a4tv-e9903",
+            "title_similarity": 0.31901840490797545
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "How to use Large Language Models to tag your data: A complete tutorial",
+            "authors": [
+              "He"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/z1z3k-rrm02",
+            "source_url": "https://doi.org/10.59350/z1z3k-rrm02",
+            "title_similarity": 0.5029940119760479
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How to use Large Language Models to tag your data: A complete tutorial",
+            "authors": [
+              "He"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/svdm1-pqp41",
+            "source_url": "https://doi.org/10.59350/svdm1-pqp41",
+            "title_similarity": 0.5029940119760479
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Automated Knowledge Graph Construction with Large Language Models — Part 2",
+            "authors": [
+              "Kau"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/k0dd1-vv544",
+            "source_url": "https://doi.org/10.59350/k0dd1-vv544",
+            "title_similarity": 0.36470588235294116
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:13.870880Z",
+        "response_sha256": "e64def611fdf3ff093e4f6bf0cb4d4fe1b9ec5e3bb3b17eb8ec932080a27f23a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+do+large+language+models+understand+graph+patterns%3F+a+benchmark+for+graph+pattern+comprehension&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:13.872199Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-8",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-8",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "From sequence to structure: Uncovering substructure reasoning in transformers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=From+sequence+to+structure%3A+Uncovering+substructure+reasoning+in+transformers&rows=5",
+        "checked_at": "2026-10-09T04:51:16.087436Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:16.087378Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=From+sequence+to+structure%3A+Uncovering+substructure+reasoning+in+transformers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:16.087436Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-9",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Plan-seqlearn: Language model guided rl for solving long horizon robotics tasks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Plan-seqlearn%3A+Language+model+guided+rl+for+solving+long+horizon+robotics+tasks&rows=5",
+        "checked_at": "2026-10-09T04:51:15.088843Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Intrinsic Language-Guided Exploration for Complex Long-Horizon Robotic Manipulation Tasks",
+            "authors": [
+              "Triantafyllidis",
+              "Christianos",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icra57147.2024.10611483",
+            "source_url": "https://doi.org/10.1109/icra57147.2024.10611483",
+            "title_similarity": 0.6467065868263473
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Curriculum-guided skill learning for long-horizon robot manipulation tasks",
+            "authors": [
+              "Alves",
+              "Lau",
+              "Silva"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.robot.2025.105032",
+            "source_url": "https://doi.org/10.1016/j.robot.2025.105032",
+            "title_similarity": 0.5526315789473685
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sketch RL: Interactive Sketch Generation for Long-Horizon Tasks Via Vision-Based Skill Predictor_supp1-3339400.mp4",
+            "authors": [
+              "Lin"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/lra.2023.3339400/mm1",
+            "source_url": "https://doi.org/10.1109/lra.2023.3339400/mm1",
+            "title_similarity": 0.2931937172774869
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "IG-RFT: An Interaction-Guided RL Framework for VLA Models in Long-Horizon Robotic Manipulation_supp1-3719668.mp4",
+            "authors": [
+              "Dong"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tase.2026.3719668/mm1",
+            "source_url": "https://doi.org/10.1109/tase.2026.3719668/mm1",
+            "title_similarity": 0.4973544973544973
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sketch RL: Interactive Sketch Generation for Long-Horizon Tasks via Vision-Based Skill Predictor",
+            "authors": [
+              "Lin",
+              "Chen",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/lra.2023.3339400",
+            "source_url": "https://doi.org/10.1109/lra.2023.3339400",
+            "title_similarity": 0.3236994219653179
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:15.087365Z",
+        "response_sha256": "816bfb5e02667f7692ea3c4c46acde284f68b0557b4808bd1fe6ad409dcc4327",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Plan-seqlearn%3A+Language+model+guided+rl+for+solving+long+horizon+robotics+tasks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:15.088843Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-10",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Simulation of graph algorithms with looped transformers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Simulation+of+graph+algorithms+with+looped+transformers&rows=5",
+        "checked_at": "2026-10-09T04:51:15.381527Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep learning, transformers and graph neural networks: a linear algebra perspective",
+            "authors": [
+              "Baggag",
+              "Saad"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s11075-025-02218-2",
+            "source_url": "https://doi.org/10.1007/s11075-025-02218-2",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Simulation of Contact Graph Routing for Mars–Earth Data Communication",
+            "authors": [
+              "Suhardiman",
+              "Sidarto",
+              "Sumarti"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3390/a18050293",
+            "source_url": "https://doi.org/10.3390/a18050293",
+            "title_similarity": 0.5079365079365079
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "COM-transformers: research on automatic knowledge graph construction based on transformer",
+            "authors": [
+              "Dai",
+              "Ma",
+              "Qin"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1117/12.3060407",
+            "source_url": "https://doi.org/10.1117/12.3060407",
+            "title_similarity": 0.1958041958041958
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Wireless network power allocation using graph transformers",
+            "authors": [
+              "Kim"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013160257703412",
+            "source_url": "https://doi.org/10.14711/thesis-991013160257703412",
+            "title_similarity": 0.4778761061946903
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "eWISENS — Simulation of the wireless sensor networks and graph algorithms",
+            "authors": [
+              "Zivkovic"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/telfor.2015.7377627",
+            "source_url": "https://doi.org/10.1109/telfor.2015.7377627",
+            "title_similarity": 0.47619047619047616
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:15.379826Z",
+        "response_sha256": "1f0a419a30f2ed544c3165d6840af2a939b9a87ffa888776dedabf2c67e18380",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Simulation+of+graph+algorithms+with+looped+transformers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:15.381527Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-11",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gpt4graph: Can large language models understand graph structured data? an empirical evaluation and benchmarking",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gpt4graph%3A+Can+large+language+models+understand+graph+structured+data%3F+an+empirical+evaluation+and+benchmarking&rows=5",
+        "checked_at": "2026-10-09T04:51:17.144167Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Can Language Models Understand Mmwave Data? Benchmarking Large Language Models for Mmwave Radar-Based Human Understanding",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/cvprf71909.2026.00216",
+            "source_url": "https://doi.org/10.1109/cvprf71909.2026.00216",
+            "title_similarity": 0.44541484716157204
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table Meets LLM: Can Large Language Models Understand Structured Table Data? A Benchmark and Empirical Study",
+            "authors": [
+              "Sui",
+              "Zhou",
+              "Zhou",
+              "Han",
+              "Zhang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1145/3616855.3635752",
+            "source_url": "https://doi.org/10.1145/3616855.3635752",
+            "title_similarity": 0.6604651162790698
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Can I trust AI? Benchmarking Large Language Models",
+            "authors": [
+              "Bang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-hdl152320",
+            "source_url": "https://doi.org/10.14711/thesis-hdl152320",
+            "title_similarity": 0.31645569620253167
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Can Zero -Shot Large Language Models Forecast Gold Prices? An Empirical Evaluation",
+            "authors": [
+              "Afandi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7498101",
+            "source_url": "https://doi.org/10.2139/ssrn.7498101",
+            "title_similarity": 0.6031746031746031
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Empirical benchmarking of large language models for data science coding: a multidimensional evaluation",
+            "authors": [
+              "Boominathan",
+              "Chintakunta",
+              "Guimaraes",
+              "Satyamurthy",
+              "Nascimento"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10664-026-10927-y",
+            "source_url": "https://doi.org/10.1007/s10664-026-10927-y",
+            "title_similarity": 0.4857142857142857
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:17.142483Z",
+        "response_sha256": "94fd1b42e30329c5830591cc42d20c05b6d936b864d4600cc73798c116db8352",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gpt4graph%3A+Can+large+language+models+understand+graph+structured+data%3F+an+empirical+evaluation+and+benchmarking&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:17.144167Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "G1: Teaching llms to reason on graphs with reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=G1%3A+Teaching+llms+to+reason+on+graphs+with+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:51:17.077752Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "$\\texttt{G1}$: Teaching LLMs to Reason on Graphs with Reinforcement Learning",
+            "authors": [
+              "Guo",
+              "Li",
+              "Wang",
+              "Jegelka",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-1767",
+            "source_url": "https://doi.org/10.52202/085713-1767",
+            "title_similarity": 0.9481481481481482
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Teaching Small LLMS to Reason Using Reinforcement Learning",
+            "authors": [
+              "Yadav",
+              "Verma"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/ccwc67433.2026.11393811",
+            "source_url": "https://doi.org/10.1109/ccwc67433.2026.11393811",
+            "title_similarity": 0.8032786885245902
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Grounding LLMs as autotelic reinforcement learning agents",
+            "authors": [
+              "Romac"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/e40c3140z2868z4db2z997az453e4804bae1",
+            "source_url": "https://doi.org/10.70675/e40c3140z2868z4db2z997az453e4804bae1",
+            "title_similarity": 0.6115702479338843
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Teaching LLMs to Write Clean Code: Quality-Aware Feedback via Reinforcement Learning Training",
+            "authors": [
+              "Dell&apos;Aversana",
+              "Della Corte",
+              "Improta",
+              "Liguori"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7269699",
+            "source_url": "https://doi.org/10.2139/ssrn.7269699",
+            "title_similarity": 0.5769230769230769
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Router-R1: Teaching LLMs Multi-Round Routing and Aggregation via Reinforcement Learning",
+            "authors": [
+              "Zhang",
+              "Feng",
+              "You"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-4719",
+            "source_url": "https://doi.org/10.52202/085713-4719",
+            "title_similarity": 0.64
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:17.076023Z",
+        "response_sha256": "d5b99e005b9c90539e2c018118392d6f1b74141cd12f40634ac75ce0915a8b2f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=G1%3A+Teaching+llms+to+reason+on+graphs+with+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:17.077752Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-13",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-13",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Position: LLMscan’tplan, butcanhelpplanning in LLM-modulo frameworks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Position%3A+LLMscan%E2%80%99tplan%2C+butcanhelpplanning+in+LLM-modulo+frameworks&rows=5",
+        "checked_at": "2026-10-09T04:51:17.902277Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:17.902224Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Position%3A+LLMscan%E2%80%99tplan%2C+butcanhelpplanning+in+LLM-modulo+frameworks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:17.902277Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-14",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Agent lightning: Train any ai agents with reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Agent+lightning%3A+Train+any+ai+agents+with+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:51:18.181740Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:18.181668Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Agent+lightning%3A+Train+any+ai+agents+with+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:18.181740Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graphinstruct: Empowering large language models with graph understanding and reasoning capability",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graphinstruct%3A+Empowering+large+language+models+with+graph+understanding+and+reasoning+capability&rows=5",
+        "checked_at": "2026-10-09T04:51:17.212124Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Understanding the Reasoning Process in Large (Vision-)Language Models: From Capability to Alignment",
+            "authors": [
+              "Wen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-hdl172505",
+            "source_url": "https://doi.org/10.14711/thesis-hdl172505",
+            "title_similarity": 0.4375
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Understanding Logical Reasoning Ability of Large Language Models",
+            "authors": [
+              "Chan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4943448",
+            "source_url": "https://doi.org/10.2139/ssrn.4943448",
+            "title_similarity": 0.35
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multimodal Large Language Models for Misinformation Detection and Reasoning",
+            "authors": [
+              "Pi"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/ea77s-hdq63",
+            "source_url": "https://doi.org/10.59350/ea77s-hdq63",
+            "title_similarity": 0.5263157894736842
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multimodal Large Language Models for Misinformation Detection and Reasoning",
+            "authors": [
+              "Pi"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.59350/mtep9-gwy69",
+            "source_url": "https://doi.org/10.59350/mtep9-gwy69",
+            "title_similarity": 0.5263157894736842
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Generative Design of Functional Metal Complexes Utilizing the Internal Knowledge and Reasoning Capability of Large Language Models",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/jacs.5c02097.s001",
+            "source_url": "https://doi.org/10.1021/jacs.5c02097.s001",
+            "title_similarity": 0.39823008849557523
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:17.210418Z",
+        "response_sha256": "148592da5b24b08bf7c29afe5075b5589b3a13d9f0ba4b83bff4929eaba9c398",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graphinstruct%3A+Empowering+large+language+models+with+graph+understanding+and+reasoning+capability&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:17.212124Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-16",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-16",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Playing atari with deep reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Playing+atari+with+deep+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:51:19.959288Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:19.959217Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Playing+atari+with+deep+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:19.959288Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-17",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Evaluating cognitive maps and planning in large language models with CogEval",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Evaluating+cognitive+maps+and+planning+in+large+language+models+with+CogEval&rows=5",
+        "checked_at": "2026-10-09T04:51:20.075047Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:20.074981Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Evaluating+cognitive+maps+and+planning+in+large+language+models+with+CogEval&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:20.075047Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-18",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Progress measures for grokking via mechanistic interpretability",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Progress+measures+for+grokking+via+mechanistic+interpretability&rows=5",
+        "checked_at": "2026-10-09T04:51:20.202658Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:20.202608Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Progress+measures+for+grokking+via+mechanistic+interpretability&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:20.202658Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Let your graph do the talking: Encoding structured data for llms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Let+your+graph+do+the+talking%3A+Encoding+structured+data+for+llms&rows=5",
+        "checked_at": "2026-10-09T04:51:18.655981Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Let your finger do the talking",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1097/01.nurse.0000266007.51696.2d",
+            "source_url": "https://doi.org/10.1097/01.nurse.0000266007.51696.2d",
+            "title_similarity": 0.5591397849462365
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Let your fingers do the talking, '80s style",
+            "authors": [
+              "Bales"
+            ],
+            "year": 1988,
+            "years": [
+              1988
+            ],
+            "doi": "10.1037/e381952004-007",
+            "source_url": "https://doi.org/10.1037/e381952004-007",
+            "title_similarity": 0.5961538461538461
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Let Your Fingers Do the Talking",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.2307/j.ctv2rcnf56.6",
+            "source_url": "https://doi.org/10.2307/j.ctv2rcnf56.6",
+            "title_similarity": 0.5531914893617021
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Graduate applicants: Let your phone calls do the talking",
+            "authors": [
+              "Abramowitz"
+            ],
+            "year": 1978,
+            "years": [
+              1978
+            ],
+            "doi": "10.1037/e578622009-018",
+            "source_url": "https://doi.org/10.1037/e578622009-018",
+            "title_similarity": 0.4406779661016949
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Let your bib do the talking",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.7748/ns.18.13.8.s19",
+            "source_url": "https://doi.org/10.7748/ns.18.13.8.s19",
+            "title_similarity": 0.5333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:18.654852Z",
+        "response_sha256": "5b34152c1471a8b031270a5908b85304c1aba9f10f3a12c28712d091f2485eb6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Let+your+graph+do+the+talking%3A+Encoding+structured+data+for+llms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:18.655981Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-21",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Proximal policy optimization algorithms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Proximal+policy+optimization+algorithms&rows=5",
+        "checked_at": "2026-10-09T04:51:21.480995Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:21.480943Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Proximal+policy+optimization+algorithms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:21.480995Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-22",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Scaling test-time compute without verification or rl is suboptimal",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Scaling+test-time+compute+without+verification+or+rl+is+suboptimal&rows=5",
+        "checked_at": "2026-10-09T04:51:21.027886Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Rethinking Optimal Verification Granularity for Compute-Efficient Test-Time Scaling",
+            "authors": [
+              "Chen",
+              "Lu",
+              "Okoshi",
+              "Mo",
+              "Motomura",
+              "Fan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-2964",
+            "source_url": "https://doi.org/10.52202/085713-2964",
+            "title_similarity": 0.4429530201342282
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "<i>De novo</i>\n                  design of hundreds of functional GPCR-targeting antibodies enabled by scaling test-time compute",
+            "authors": [
+              "Biswas"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1101/2025.05.28.656709",
+            "source_url": "https://doi.org/10.1101/2025.05.28.656709",
+            "title_similarity": 0.2958579881656805
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Towards Thinking-Optimal Scaling of Test-Time Compute for LLM Reasoning",
+            "authors": [
+              "Yang",
+              "Ma",
+              "Lin",
+              "Wei"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-1452",
+            "source_url": "https://doi.org/10.52202/085713-1452",
+            "title_similarity": 0.46715328467153283
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Compute Without Concrete: A Critical Assessment of Alternative Pathways to Artificial Intelligence Infrastructure Scaling",
+            "authors": [
+              "Pagadala"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7201180",
+            "source_url": "https://doi.org/10.2139/ssrn.7201180",
+            "title_similarity": 0.34408602150537637
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Balancing Compute in LLM Inference: Model Selection, Quantization, and Test-Time Scaling",
+            "authors": [
+              "Šubić",
+              "Cozzini"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1145/3805621.3807631",
+            "source_url": "https://doi.org/10.1145/3805621.3807631",
+            "title_similarity": 0.26490066225165565
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:21.026040Z",
+        "response_sha256": "591f4a0ecdc5b6babf171994d6ad3826393f92e305408bb6546cb87e60e532be",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Scaling+test-time+compute+without+verification+or+rl+is+suboptimal&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:21.027886Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-23",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deepseekmath: Pushing the limits of mathematical reasoning in open language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deepseekmath%3A+Pushing+the+limits+of+mathematical+reasoning+in+open+language+models&rows=5",
+        "checked_at": "2026-10-09T04:51:21.391522Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Mathematical Reasoning in Large Language Models: Benchmarks, Architectures, Evaluation, and Open Challenges",
+            "authors": [
+              "Amjad",
+              "Shahzad",
+              "Shahzad",
+              "Fatima"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6568455",
+            "source_url": "https://doi.org/10.2139/ssrn.6568455",
+            "title_similarity": 0.4673913043478261
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Pushing the Limits of Large Language Models in Quantum Operations",
+            "authors": [
+              "Closser",
+              "Kabala"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3390/quantum8010007",
+            "source_url": "https://doi.org/10.3390/quantum8010007",
+            "title_similarity": 0.547945205479452
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Pushing the Limits of Rule Reasoning in Transformers through Natural Language Satisfiability",
+            "authors": [
+              "Richardson",
+              "Sabharwal"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1609/aaai.v36i10.21371",
+            "source_url": "https://doi.org/10.1609/aaai.v36i10.21371",
+            "title_similarity": 0.5895953757225434
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Pushing limits",
+            "authors": [
+              "Toller"
+            ],
+            "year": 2018,
+            "years": [
+              2018,
+              2025
+            ],
+            "doi": "10.1017/mag.2018.37",
+            "source_url": "https://doi.org/10.1017/mag.2018.37",
+            "title_similarity": 0.29473684210526313
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reasoning AI (RAI), Large Language Models (LLMs) and Cognition",
+            "authors": [
+              "Senkevich"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31219/osf.io/65rkw",
+            "source_url": "https://doi.org/10.31219/osf.io/65rkw",
+            "title_similarity": 0.42028985507246375
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:21.389990Z",
+        "response_sha256": "ebbe940664c0a9d6378ac0cb2f179dbdc9aa5f7616ae96584983ef85811a9698",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deepseekmath%3A+Pushing+the+limits+of+mathematical+reasoning+in+open+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:21.391522Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-25",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hybridflow: A flexible and efficient rlhf framework",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hybridflow%3A+A+flexible+and+efficient+rlhf+framework&rows=5",
+        "checked_at": "2026-10-09T04:51:23.394300Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
+            "authors": [
+              "Sheng",
+              "Zhang",
+              "Ye",
+              "Wu",
+              "Zhang",
+              "Zhang",
+              "Peng",
+              "Lin",
+              "Wu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3689031.3696075",
+            "source_url": "https://doi.org/10.1145/3689031.3696075",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "FlexRLHF: A Flexible Placement and Parallelism Framework for Efficient RLHF Training",
+            "authors": [
+              "Xiao",
+              "Zhou",
+              "Mao",
+              "Wu",
+              "Zhao",
+              "Ju",
+              "Liang",
+              "Zhang",
+              "Zhou"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/ipdps64566.2025.00039",
+            "source_url": "https://doi.org/10.1109/ipdps64566.2025.00039",
+            "title_similarity": 0.5263157894736842
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "FedRLHF: A Convergence-Guaranteed Federated Framework for Privacy-Preserving and Personalized RLHF",
+            "authors": [
+              "Fan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/pa7bk_v1",
+            "source_url": "https://doi.org/10.31219/osf.io/pa7bk_v1",
+            "title_similarity": 0.20408163265306123
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Politeness Trap: Semantic Compliance Drift in RLHF-Tuned LLMs",
+            "authors": [
+              "Curry"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/2tkav_v1",
+            "source_url": "https://doi.org/10.31219/osf.io/2tkav_v1",
+            "title_similarity": 0.24561403508771928
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A flexible framework for secure and efficient program obfuscation.",
+            "authors": [
+              "Solis"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.2172/1096167",
+            "source_url": "https://doi.org/10.2172/1096167",
+            "title_similarity": 0.5217391304347826
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:23.392182Z",
+        "response_sha256": "c3922383cd19c5d1561461faba5424d541aef0d5982151c7eb59bb66f8faa6d5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hybridflow%3A+A+flexible+and+efficient+rlhf+framework&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:23.394300Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-28",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-28",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-29",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Voyager: An open-ended embodied agent with large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Voyager%3A+An+open-ended+embodied+agent+with+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:51:24.388251Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:24.388180Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Voyager%3A+An+open-ended+embodied+agent+with+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:24.388251Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-30",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-30",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-31",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-31",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-32",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-32",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-33",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Toolplanner: A tool augmented llm for multi granularity instructions with path planning and feedback",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Toolplanner%3A+A+tool+augmented+llm+for+multi+granularity+instructions+with+path+planning+and+feedback&rows=5",
+        "checked_at": "2026-10-09T04:51:24.252682Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ToolPlanner: A Tool Augmented LLM for Multi Granularity Instructions with Path Planning and Feedback",
+            "authors": [
+              "Wu",
+              "Liu",
+              "Luan",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.1018",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1018",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Media-Derived Epidemic Intelligence for Avian Influenza: A Multi-Granularity Evaluation of LLM-Augmented Event-Based Surveillance",
+            "authors": [
+              "Paudyal",
+              "Deschinkel",
+              "Laiymani",
+              "Guyeux"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0015231400004091",
+            "source_url": "https://doi.org/10.5220/0015231400004091",
+            "title_similarity": 0.3964757709251101
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ALAS: A Stateful Multi-LLM Agent Framework for Disruption-Aware Planning",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3749421.3749436",
+            "source_url": "https://doi.org/10.1145/3749421.3749436",
+            "title_similarity": 0.4823529411764706
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Prompt Engineering: Few Shots, Chain of Thought, and Retrieval-Augmented Generation",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3749421.3749427",
+            "source_url": "https://doi.org/10.1145/3749421.3749427",
+            "title_similarity": 0.3016759776536313
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "LLM-Augmented Operations for Dynamic Supply Chain Planning with Multi-Agent Feedback Optimization",
+            "authors": [
+              "Bharadwaja",
+              "Utwani",
+              "Mangat",
+              "Poojitha",
+              "Jayanthi",
+              "Addepalli"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781042005376-107",
+            "source_url": "https://doi.org/10.1201/9781042005376-107",
+            "title_similarity": 0.46938775510204084
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:24.250115Z",
+        "response_sha256": "c4ff212da6773de5a3ffbd649a81f7faed5cdcde9419a3f287c5d07b5d5202ba",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Toolplanner%3A+A+tool+augmented+llm+for+multi+granularity+instructions+with+path+planning+and+feedback&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:24.252682Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-34",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-34",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-36",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-36",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Does reinforcement learning really incentivize reasoning capacity in llms beyond the base model? arXiv preprint arXiv:2504.13837 , 2025.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Does+reinforcement+learning+really+incentivize+reasoning+capacity+in+llms+beyond+the+base+model%3F+arXiv+preprint+arXiv%3A2504.13837+%2C+2025.&rows=5",
+        "checked_at": "2026-10-09T04:51:26.253539Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:26.253490Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Does+reinforcement+learning+really+incentivize+reasoning+capacity+in+llms+beyond+the+base+model%3F+arXiv+preprint+arXiv%3A2504.13837+%2C+2025.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:26.253539Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-37",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-37",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The landscape of agentic reinforcement learning for llms: A survey",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+landscape+of+agentic+reinforcement+learning+for+llms%3A+A+survey&rows=5",
+        "checked_at": "2026-10-09T04:51:26.458975Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:26.458891Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+landscape+of+agentic+reinforcement+learning+for+llms%3A+A+survey&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:26.458975Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_036_iclr_2026_proceedings_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_036_iclr_2026_proceedings_credibility-38",
+        "paper_reference_id": "ref-paper_036_iclr_2026_proceedings_credibility-38",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A survey of reinforcement learning for large reasoning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+survey+of+reinforcement+learning+for+large+reasoning+models&rows=5",
+        "checked_at": "2026-10-09T04:51:25.908781Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Large Language Models Reasoning and Reinforcement Learning",
+            "authors": [
+              "Noguer I Alonso"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4656090",
+            "source_url": "https://doi.org/10.2139/ssrn.4656090",
+            "title_similarity": 0.48739495798319327
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reasoning Models Hallucinate More: Factuality-Aware Reinforcement Learning for Large Reasoning Models",
+            "authors": [
+              "Li",
+              "Ng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-5052",
+            "source_url": "https://doi.org/10.52202/085713-5052",
+            "title_similarity": 0.7204968944099379
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Role of Reinforcement Learning in Large Language Models: A Survey",
+            "authors": [
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.176300471.10070244/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.176300471.10070244/v1",
+            "title_similarity": 0.7286821705426356
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "SCORE: Mitigating Overthinking in Large Reasoning Models via Step-Level Reinforcement Learning",
+            "authors": [
+              "Nie",
+              "Zhou",
+              "Wang",
+              "Wang",
+              "Zhai"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7506741",
+            "source_url": "https://doi.org/10.2139/ssrn.7506741",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A Survey on Large Reasoning Models with Self-Play Deep Reinforcement Learning and Chain-of-Thought",
+            "authors": [
+              "Ou",
+              "Fan",
+              "Fu",
+              "Liu",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.1145/3784013.3784042",
+            "source_url": "https://doi.org/10.1145/3784013.3784042",
+            "title_similarity": 0.5031446540880503
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:25.906890Z",
+        "response_sha256": "23664e1bc00110b65f7f84b0197059bd15262aa7eda9f8087b346da2d52807c5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+survey+of+reinforcement+learning+for+large+reasoning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:25.908781Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.538461538461538
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 39,
+    "extracted_count": 39,
+    "parsed_count": 33,
+    "queried_count": 33,
+    "matched_count": 6,
+    "metadata_conflict_count": 1,
+    "unverified_count": 14,
+    "parse_failed_count": 6,
+    "not_checked_count": 0,
+    "query_failed_count": 12,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:43.138210Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

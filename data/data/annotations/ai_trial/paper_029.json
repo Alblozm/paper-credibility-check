@@ -1,0 +1,361 @@
+{
+  "assessment_id": "assessment_ai_paper_029_openreview_2024_02_11",
+  "paper_version_id": "paper_029_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_029_openreview_2024_02_11",
+    "raw_output_sha256": "4d07196563e56887206061325097315375be8e9d817044e29343af1d39c235d4"
+  },
+  "paper_summary": "Large Language Models (LLMs) show promising potential in solving clinical problems. Current LLMs, including so-called medical LLMs, are reported to achieve excellent performance on certain medical evaluation benchmarks, such as medical question answering, medical exams, etc.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In this paper, we propose a framework to assess the mastery of LLMs in clinical knowledge.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_029_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Built on that, we propose a MedDisK-based evaluation method MedDisKEval: We prompt LLMs to retrieve information related to these clinical knowledge aspects.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_029_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Large Language Models (LLMs) show promising potential in solving clinical problems.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_029_ev_004",
+        "paper_029_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 6.0,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Do Current Large Language Models Master Adequate Clinical Knowledge?》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 6.0/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Large Language Models (LLMs) show promising potential in solving clinical problems. ",
+    "正文可定位证据支持该维度判断：In this section, we present the framework to assess whether LLMs have mastered comprehensive medical knowledge for real clinical diagnosis and medical decisions, by first introducing a largescale medical disease-based knowledge base MedDisK in Section 3.1 and then the MedDisK-ba…",
+    "正文可定位证据支持该维度判断：D O C URRENT L ARGE L ANGUAGE M ODELS M ASTER A DEQUATE C LINICAL K NOWLEDGE ? "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+    "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+    "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Do Current Large Language Models Master Adequate Clinical Knowledge?》在研究价值方面的正文支持是：Large Language Models (LLMs) show promising potential in solving clinical problems.  限制或边界证据是：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Large Language Models (LLMs) show promising potential in solving clinical problems. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_029_ev_001",
+        "paper_029_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Do Current Large Language Models Master Adequate Clinical Knowledge?》在可靠性与证据方面的正文支持是：In this section, we present the framework to assess whether LLMs have mastered comprehensive medical knowledge for real clinical diagnosis and medical decisions, by first introducing a largescale medical disease-based knowledge base MedDisK in Section 3.1 and then the MedDisK-ba… 限制或边界证据是：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this section, we present the framework to assess whether LLMs have mastered comprehensive medical knowledge for real clinical diagnosis and medical decisions, by first introducing a largescale medical disease-based knowledge base MedDisK in Section 3.1 and then the MedDisK-ba…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 5/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_029_ev_003",
+        "paper_029_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Do Current Large Language Models Master Adequate Clinical Knowledge?》在原创性定位方面的正文支持是：D O C URRENT L ARGE L ANGUAGE M ODELS M ASTER A DEQUATE C LINICAL K NOWLEDGE ?  限制或边界证据是：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：D O C URRENT L ARGE L ANGUAGE M ODELS M ASTER A DEQUATE C LINICAL K NOWLEDGE ? "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_029_ev_004",
+        "paper_029_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Do Current Large Language Models Master Adequate Clinical Knowledge?》在清晰度与可用性方面的正文支持是：In recent years, advancements in Large Language Models (LLMs) have shown potential across various domains, including the medical domain.  限制或边界证据是：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In recent years, advancements in Large Language Models (LLMs) have shown potential across various domains, including the medical domain. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_029_ev_005",
+        "paper_029_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 4,
+      "rating": "weak",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Do Current Large Language Models Master Adequate Clinical Knowledge?》在可复现性与透明度方面的正文支持是：We have conducted a comprehensive comparison between MedDisK and existing medical QA datasets in terms of coverage of common diseases, disease-based knowledge and public availability.  限制或边界证据是：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We have conducted a comprehensive comparison between MedDisK and existing medical QA datasets in terms of coverage of common diseases, disease-based knowledge and public availability. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 4/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_029_ev_006",
+        "paper_029_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_029_ev_001",
+      "page_number": 1,
+      "section_id": "paper_029_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Large Language Models (LLMs) show promising potential in solving clinical problems. Current LLMs, including so-called medical LLMs, are reported to achieve excellent performance on certain medical evaluation benchmarks, such as medical question answering, medical exams, etc. However, such evaluations cannot assess whether LLMs have mastered sufficient, compressive, and necessary medical knowledge for solving real clinical problems, such as clinical diagnostic assistance. In this paper, we propose a framework to assess the mastery of LLMs in clinical knowledge. Firstly, we construct a large medical disease-based knowledge base, MedDisK, covering 10,632 common diseases across 18 clinical knowledge aspects, which are crucial for diagnosing and treating diseases. Built on that, we propose a MedDisK-based evaluation method MedDisKEval: We prompt LLMs to retrieve information related to these c",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "page_number": 9,
+      "section_id": "paper_029_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "We present in this paper an evaluation framework to assess the clinical knowledge mastery of LLMs. Firstly, we construct a large-scale Chinese medical disease-based knowledge base MedDisK, covering 10,632 common diseases and 18 clinical knowledge aspects that are essential in clinical practice. Built on that, we introduce a MedDisK-based evaluation method MedDisKEval, utilizing the proposed clinical knowledge base to study the medical knowledge mastery of 12 general and medical LLMs. Our experimental results reveal that current LLMs have not mastered adequate clinical knowledge, indicating that they are not well prepared to serve as foundation models in the medical domain. A further in-depth study reveals that most current medical LLMs have not performed significantly better than their backbone models. In the future, we will continue maintaining the knowledge base we have introduced to e",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_029_ev_003",
+      "page_number": 3,
+      "section_id": "paper_029_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we present the framework to assess whether LLMs have mastered comprehensive medical knowledge for real clinical diagnosis and medical decisions, by first introducing a largescale medical disease-based knowledge base MedDisK in Section 3.1 and then the MedDisK-based evaluation method MedDisKEval in Section 3.2.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_029_ev_004",
+      "page_number": 1,
+      "section_id": "paper_029_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "D O C URRENT L ARGE L ANGUAGE M ODELS M ASTER A DEQUATE C LINICAL K NOWLEDGE ?\n\nAnonymous authors Paper under double-blind review",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_029_ev_005",
+      "page_number": 1,
+      "section_id": "paper_029_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "In recent years, advancements in Large Language Models (LLMs) have shown potential across various domains, including the medical domain. Several foundation LLMs like ChatGPT (Ouyang et al., 2022) and LLaMa (Touvron et al., 2023) have been noted for their outstanding performance on various medical evaluation benchmarks, including USMLE (United States Medical Licensing Examination) (Kung et al., 2023), the medical section of MMLU (Hendrycks et al., 2020), MedQA (Jin et al., 2021), and PubMedQA (Jin et al., 2019). However, direct application of general-purpose LLMs to the medical domain may not be suitable due to their lack of specialized training on medical corpora and potential deficits in professional expertise within the medical field. To address this gap, researchers have proposed several LLMs (Li et al., 2023; Wang et al., 2023; Chen et al., 2023; Zhang et al., 2023; Xiong et al., 202",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_029_ev_006",
+      "page_number": 14,
+      "section_id": "paper_029_openreview_2024_02_11_sec_a_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_029_openreview_2024_02_11_chunk_0020",
+      "evidence_mode": "quote",
+      "excerpt": "We have conducted a comprehensive comparison between MedDisK and existing medical QA datasets in terms of coverage of common diseases, disease-based knowledge and public availability. For QA datasets, we leverage Medical Concept Annotation Tool (Kraljevic et al., 2021) to identify all the diseases and count the number of diseases in each QA dataset. We included in the comparison all QA datasets in MultiMedQA (Singhal et al., 2023b) except PubMedQA, because PubMedQA is primarily a reading comprehension dataset where answers can be directly derived from the provided context. Consequently, it is not designed to evaluate models’ mastery of medical knowledge. The results listed in Table 7 demonstrate that our proposed database covers a significantly larger amount of diseases and more types of disease-based knowledge than existing QA-based datasets. It is also worth noting that most of existin",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_029_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_029_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_029_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_029_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_029_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_029_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_029_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_029_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "not_available",
+      "detail": "hyperparameters is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_029_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

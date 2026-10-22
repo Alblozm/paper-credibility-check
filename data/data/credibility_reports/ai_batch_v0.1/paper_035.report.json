@@ -1,0 +1,3831 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-a64e6c7d2fceec66",
+  "paper_version_id": "paper_035_iclr_2026_proceedings",
+  "pdf_sha256": "3462fd1775ecce2fd4dab55683ca567da5b7c94026749721be26e2ce50780ddf",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "cdfe699eb9b1245877348218e1eee10570804fdf27f640e67d6dc0e39ec350a7",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.288888888888889,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.866666666666666,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 60,
+        "extracted_count": 60,
+        "parsed_count": 58,
+        "queried_count": 58,
+        "matched_count": 12,
+        "metadata_conflict_count": 0,
+        "unverified_count": 28,
+        "parse_failed_count": 2,
+        "not_checked_count": 0,
+        "query_failed_count": 18,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/014898b821e3ce966ae1db68cb8d9966-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:51:06.432828Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-6bc5b52371e5",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 0,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:51:06.817254Z",
+            "source_urls": [
+              "https://api.github.com/repos/Noired/charm",
+              "https://api.github.com/repos/Noired/charm/issues?state=all&per_page=100&page=1"
+            ]
+          },
+          {
+            "repository_id": "repo-e97984da9512",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 10,
+            "comments_checked": 13,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:51:07.722237Z",
+            "source_urls": [
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/12/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/9/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/8/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/7/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/6/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/3/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/2/comments?per_page=100&page=1",
+              "https://api.github.com/repos/technion-cs-nlp/LLMsKnow/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-1",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the bottleneck of graph neural networks and its practical implications",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+bottleneck+of+graph+neural+networks+and+its+practical+implications&rows=5",
+        "checked_at": "2026-10-09T04:50:46.953087Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "TGSL: Trade-off graph structure learning via multifaceted graph information bottleneck",
+            "authors": [
+              "Li",
+              "Zhang",
+              "Song",
+              "Ruan",
+              "Wang",
+              "Xie"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108125",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108125",
+            "title_similarity": 0.16455696202531644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Knowledge graph information bottleneck enhanced molecular representation learning",
+            "authors": [
+              "Dai",
+              "Fu",
+              "Qiu",
+              "Ma",
+              "Zhang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107560",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107560",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Contrastive Graph Representation Learning with Adversarial Cross-View Reconstruction and Information Bottleneck",
+            "authors": [
+              "Shou",
+              "Lan",
+              "Cao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2024.107094",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.107094",
+            "title_similarity": 0.18478260869565216
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Dynamic graph representation learning with disentangled information bottleneck",
+            "authors": [
+              "Wang",
+              "Bai",
+              "Zhu",
+              "Qian",
+              "Liu",
+              "Luo"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108056",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108056",
+            "title_similarity": 0.2251655629139073
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Tackling Over-squashing in Graph Neural Networks via Mitigating Topological Bottleneck With Random Walks Based Probabilistic Curvature Metric_supp1-3739354.pdf",
+            "authors": [
+              "Dai"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tsp.2026.3739354/mm1",
+            "source_url": "https://doi.org/10.1109/tsp.2026.3739354/mm1",
+            "title_similarity": 0.4224137931034483
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:46.950630Z",
+        "response_sha256": "0cc1cb9ac8140a667435803f36bf304e455c2df33a1d16d273b94972815061f2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+bottleneck+of+graph+neural+networks+and+its+practical+implications&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:46.953087Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-2",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The internal state of an LLM knows when it’s lying",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+internal+state+of+an+LLM+knows+when+it%E2%80%99s+lying&rows=5",
+        "checked_at": "2026-10-09T04:50:48.818088Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:48.817917Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+internal+state+of+an+LLM+knows+when+it%E2%80%99s+lying&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:48.818088Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-5",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Araújo, Alex Vitvitskyi, Razvan Pascanu, and Petar Veliˇ ckovi´ c",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ara%C3%BAjo%2C+Alex+Vitvitskyi%2C+Razvan+Pascanu%2C+and+Petar+Veli%CB%87+ckovi%C2%B4+c&rows=5",
+        "checked_at": "2026-10-09T04:50:48.264634Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:48.264550Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ara%C3%BAjo%2C+Alex+Vitvitskyi%2C+Razvan+Pascanu%2C+and+Petar+Veli%CB%87+ckovi%C2%B4+c&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:48.264634Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-6",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Battaglia, Jessica B",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Battaglia%2C+Jessica+B&rows=5",
+        "checked_at": "2026-10-09T04:50:48.942669Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:48.942594Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Battaglia%2C+Jessica+B&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:48.942669Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-7",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-7",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-8",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hallucination detection in LLMs with topological divergence on attention graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hallucination+detection+in+LLMs+with+topological+divergence+on+attention+graphs&rows=5",
+        "checked_at": "2026-10-09T04:50:48.769415Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hallucination Detection in LLMs with Topological Divergence on Attention Graphs",
+            "authors": [
+              "Bazarova",
+              "Volodichev",
+              "Yugay",
+              "Shulga",
+              "Ermilova",
+              "Polev",
+              "Belikova",
+              "Parchiev",
+              "Simakov",
+              "Savchenko",
+              "Savchenko",
+              "Barannikov",
+              "Zaytsev"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.18653/v1/2026.acl-long.704",
+            "source_url": "https://doi.org/10.18653/v1/2026.acl-long.704",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Lie to Me: Knowledge Graphs for Robust Hallucination Self-Detection in LLMs",
+            "authors": [
+              "Kale",
+              "Alfeo"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014245100004067",
+            "source_url": "https://doi.org/10.5220/0014245100004067",
+            "title_similarity": 0.40522875816993464
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Roberta with Low-Rank Adaptation and Hierarchical Attention for Hallucination Detection in LLMs",
+            "authors": [
+              "Lu",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202504.0465.v1",
+            "source_url": "https://doi.org/10.20944/preprints202504.0465.v1",
+            "title_similarity": 0.3563218390804598
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "AI-Driven Hallucination Detection in LLMs Using Transformer Models",
+            "authors": [
+              "N."
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0014557300005024",
+            "source_url": "https://doi.org/10.5220/0014557300005024",
+            "title_similarity": 0.5517241379310345
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Uncertainty-Aware Structural Attention Features for Hallucination Detection in LLMs",
+            "authors": [
+              "Lokesh",
+              "Mokshagna",
+              "Dinesh",
+              "Usha"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/spcom71105.2026.11622967",
+            "source_url": "https://doi.org/10.1109/spcom71105.2026.11622967",
+            "title_similarity": 0.38271604938271603
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:48.766326Z",
+        "response_sha256": "f846725ac4fa217370c6db686806244c46fee3ccb9662b34755c23fe89eaeb05",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hallucination+detection+in+LLMs+with+topological+divergence+on+attention+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:48.769415Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-10",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Experiment tracking with weights and biases, 2020",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Experiment+tracking+with+weights+and+biases%2C+2020&rows=5",
+        "checked_at": "2026-10-09T04:50:49.361083Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Table 1: Weights and biases of the model.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.12726/table-1",
+            "source_url": "https://doi.org/10.7717/peerj.12726/table-1",
+            "title_similarity": 0.5057471264367817
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Milgram's experiment and gender biases in Indian context",
+            "authors": [
+              "Srivastava"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.31234/osf.io/8y7mp",
+            "source_url": "https://doi.org/10.31234/osf.io/8y7mp",
+            "title_similarity": 0.4230769230769231
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Magic of Uncertainty: An Eye-Tracking Amulet Experiment on Decision-Making and Cognitive Biases",
+            "authors": [
+              "Muczková"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3715669.3727333",
+            "source_url": "https://doi.org/10.1145/3715669.3727333",
+            "title_similarity": 0.38028169014084506
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Behavioral Biases and Legal Compliance: A Field Experiment",
+            "authors": [
+              "Emanuel",
+              "Ho"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.31235/osf.io/ztnmf",
+            "source_url": "https://doi.org/10.31235/osf.io/ztnmf",
+            "title_similarity": 0.19047619047619047
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Eye Tracking, Spatial Biases and Normative Spectatorship in Museums",
+            "authors": [
+              "Tymkiw",
+              "Foulsham"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1162/leon_a_01746",
+            "source_url": "https://doi.org/10.1162/leon_a_01746",
+            "title_similarity": 0.38596491228070173
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:49.359468Z",
+        "response_sha256": "a2d0d7f5cfc383185aef2c78c5c148b6951a72adc11f71f21a67ef46236c2189",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Experiment+tracking+with+weights+and+biases%2C+2020&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:49.361083Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-11",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hallucination detection in LLMs using spectral features of attention maps",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hallucination+detection+in+LLMs+using+spectral+features+of+attention+maps&rows=5",
+        "checked_at": "2026-10-09T04:50:51.186877Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:51.186826Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hallucination+detection+in+LLMs+using+spectral+features+of+attention+maps&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:51.186877Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Discovering latent knowledge in language models without supervision",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Discovering+latent+knowledge+in+language+models+without+supervision&rows=5",
+        "checked_at": "2026-10-09T04:50:51.285607Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unveiling source code latent knowledge : discovering program topoi",
+            "authors": [
+              "Ieva"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/c6964831zb076z4ef4za9bbzf34990fe99b2",
+            "source_url": "https://doi.org/10.70675/c6964831zb076z4ef4za9bbzf34990fe99b2",
+            "title_similarity": 0.4580152671755725
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Statistical Language Models With Embedded Latent Semantic Knowledge",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1201/9780203010525-13",
+            "source_url": "https://doi.org/10.1201/9780203010525-13",
+            "title_similarity": 0.4626865671641791
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Leveraging Large Language Models for Knowledge-free Weak Supervision in Clinical Natural Language Processing",
+            "authors": [
+              "Hsu",
+              "Roberts"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4559971/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4559971/v1",
+            "title_similarity": 0.4685714285714286
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "LMI: Latent Memory Injection for Efficient and Modular Knowledge Access in Language Models",
+            "authors": [
+              "Samani"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6514258",
+            "source_url": "https://doi.org/10.2139/ssrn.6514258",
+            "title_similarity": 0.47435897435897434
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Discovering interesting itemsets using hierarchical Indian buffet process latent feature models",
+            "authors": [
+              "Pandey"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013049929103412",
+            "source_url": "https://doi.org/10.14711/thesis-991013049929103412",
+            "title_similarity": 0.37037037037037035
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:51.282903Z",
+        "response_sha256": "b6d1b6de81f4be2797155bdd70116125af4526a23a4d19953e9013fb3eb88bf4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Discovering+latent+knowledge+in+language+models+without+supervision&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:51.285607Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-13",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-13",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hallucinated but factual! Inspecting the factuality of hallucinations in abstractive summarization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hallucinated+but+factual%21+Inspecting+the+factuality+of+hallucinations+in+abstractive+summarization&rows=5",
+        "checked_at": "2026-10-09T04:50:51.687681Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:51.687611Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hallucinated+but+factual%21+Inspecting+the+factuality+of+hallucinations+in+abstractive+summarization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:51.687681Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-14",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "INSIDE: LLMs’ internal states retain the power of hallucination detection",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=INSIDE%3A+LLMs%E2%80%99+internal+states+retain+the+power+of+hallucination+detection&rows=5",
+        "checked_at": "2026-10-09T04:50:51.804223Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:51.804165Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=INSIDE%3A+LLMs%E2%80%99+internal+states+retain+the+power+of+hallucination+detection&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:51.804223Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Glass",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Glass&rows=5",
+        "checked_at": "2026-10-09T04:50:52.171051Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:52.170981Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Glass&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:52.171051Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-16",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Joshi",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Joshi&rows=5",
+        "checked_at": "2026-10-09T04:50:52.091953Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Personal Hygiene and Sanitary Practices among the School Girls in Dhangadhi, Nepal",
+            "authors": [
+              "Joshi",
+              "Joshi",
+              "Adhikari",
+              "Joshi",
+              "Joshi",
+              "Joshi",
+              "Chaudhary",
+              "Joshi",
+              "Bhandari"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.31124/advance.13603163.v1",
+            "source_url": "https://doi.org/10.31124/advance.13603163.v1",
+            "title_similarity": 0.09302325581395349
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Formulation and Evaluation of Lip Balm",
+            "authors": [
+              "Pawar",
+              "Joshi",
+              "Joshi",
+              "Joshi",
+              "Joshi",
+              "Kumar"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5091269",
+            "source_url": "https://doi.org/10.2139/ssrn.5091269",
+            "title_similarity": 0.09302325581395349
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Personal Hygiene and Sanitary Practices among the School Girls in Dhangadhi, Nepal",
+            "authors": [
+              "Joshi",
+              "Joshi",
+              "Adhikari",
+              "Joshi",
+              "Joshi",
+              "Joshi",
+              "Chaudhary",
+              "Joshi",
+              "Bhandari"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.31124/advance.13603163",
+            "source_url": "https://doi.org/10.31124/advance.13603163",
+            "title_similarity": 0.09302325581395349
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Business War: Competitive Innovation Velocity",
+            "authors": [
+              "Joshi",
+              "Joshi",
+              "Joshi"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.2139/ssrn.913697",
+            "source_url": "https://doi.org/10.2139/ssrn.913697",
+            "title_similarity": 0.08163265306122448
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Ramesh Chandra Joshi",
+            "authors": [
+              "Cunnington",
+              "Joshi",
+              "Joshi"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1136/bmj.l1877",
+            "source_url": "https://doi.org/10.1136/bmj.l1877",
+            "title_similarity": 0.4
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:52.089785Z",
+        "response_sha256": "8776ebb4d3b89ffab4679203d03e7bcfcd49a28efd182668d69971e0ca2a65ad",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Joshi&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:52.091953Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-17",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fast graph representation learning with PyTorch Geometric",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fast+graph+representation+learning+with+PyTorch+Geometric&rows=5",
+        "checked_at": "2026-10-09T04:50:54.149509Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:54.149448Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fast+graph+representation+learning+with+PyTorch+Geometric&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:54.149509Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-18",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Schoenholz, Patrick F",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Schoenholz%2C+Patrick+F&rows=5",
+        "checked_at": "2026-10-09T04:50:52.367113Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Anatomische Untersuchungen zur Ursache der Tubenschwangerschaft",
+            "authors": [
+              "Schoenholz"
+            ],
+            "year": 1923,
+            "years": [
+              1923
+            ],
+            "doi": "10.1007/bf01974804",
+            "source_url": "https://doi.org/10.1007/bf01974804",
+            "title_similarity": 0.21686746987951808
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Nachweis intrakranieller Blutungen Neugeborener durch Röntgenaufnahme",
+            "authors": [
+              "Schoenholz"
+            ],
+            "year": 1925,
+            "years": [
+              1925
+            ],
+            "doi": "10.1007/bf01975330",
+            "source_url": "https://doi.org/10.1007/bf01975330",
+            "title_similarity": 0.1797752808988764
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Untersuchungen über die zirkulierende Blutmenge in der Schwangerschaft",
+            "authors": [
+              "Schoenholz"
+            ],
+            "year": 1929,
+            "years": [
+              1929
+            ],
+            "doi": "10.1007/bf01724715",
+            "source_url": "https://doi.org/10.1007/bf01724715",
+            "title_similarity": 0.15555555555555556
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Experimentelle Untersuchungen mit Vigantol an Trächtigen Ratten",
+            "authors": [
+              "Schoenholz"
+            ],
+            "year": 1929,
+            "years": [
+              1929
+            ],
+            "doi": "10.1007/bf01881198",
+            "source_url": "https://doi.org/10.1007/bf01881198",
+            "title_similarity": 0.24096385542168675
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Die Bedeutung der Konstitution für die Prognose der Geburtsblutungen",
+            "authors": [
+              "Schoenholz"
+            ],
+            "year": 1925,
+            "years": [
+              1925
+            ],
+            "doi": "10.1007/bf01975225",
+            "source_url": "https://doi.org/10.1007/bf01975225",
+            "title_similarity": 0.09090909090909091
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:52.366015Z",
+        "response_sha256": "b6fd63e7643f4a7ee7ca4d2ce65f5e3f9ca481de9657f72daacf45005c137a85",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Schoenholz%2C+Patrick+F&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:52.367113Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bronstein, and Kirill Veselkov",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bronstein%2C+and+Kirill+Veselkov&rows=5",
+        "checked_at": "2026-10-09T04:50:54.965880Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Network machine learning maps phytochemically rich “Hyperfoods” to fight COVID-19",
+            "authors": [
+              "Laponogov",
+              "Gonzalez",
+              "Shepherd",
+              "Qureshi",
+              "Veselkov",
+              "Charkoftaki",
+              "Vasiliou",
+              "Youssef",
+              "Mirnezami",
+              "Bronstein",
+              "Veselkov"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1186/s40246-020-00297-x",
+            "source_url": "https://doi.org/10.1186/s40246-020-00297-x",
+            "title_similarity": 0.14814814814814814
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Network machine learning maps phytochemically-rich “Hyperfoods” to fight COVID-19",
+            "authors": [
+              "Laponogov",
+              "Gonzalez",
+              "Shepherd",
+              "Qureshi",
+              "Veselkov",
+              "Charkoftaki",
+              "Vasiliou",
+              "Youssef",
+              "Mirnezami",
+              "Bronstein",
+              "Veselkov"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.21203/rs.3.rs-113421/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-113421/v1",
+            "title_similarity": 0.14814814814814814
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Genomic-driven nutritional interventions for radiotherapy-resistant rectal cancer patient",
+            "authors": [
+              "Southern",
+              "Gonzalez",
+              "Borgas",
+              "Poynter",
+              "Laponogov",
+              "Zhong",
+              "Mirnezami",
+              "Veselkov",
+              "Bronstein",
+              "Veselkov"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1038/s41598-023-41833-8",
+            "source_url": "https://doi.org/10.1038/s41598-023-41833-8",
+            "title_similarity": 0.2542372881355932
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Combinatorial prediction of therapeutic perturbations using causally-inspired neural networks",
+            "authors": [
+              "Gonzalez",
+              "Lin",
+              "Herath",
+              "Veselkov",
+              "Bronstein",
+              "Zitnik"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1101/2024.01.03.573985",
+            "source_url": "https://doi.org/10.1101/2024.01.03.573985",
+            "title_similarity": 0.2786885245901639
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Predicting anticancer hyperfoods with graph convolutional networks",
+            "authors": [
+              "Gonzalez",
+              "Gong",
+              "Laponogov",
+              "Bronstein",
+              "Veselkov"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1186/s40246-021-00333-4",
+            "source_url": "https://doi.org/10.1186/s40246-021-00333-4",
+            "title_similarity": 0.3368421052631579
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:54.963145Z",
+        "response_sha256": "15c4493d3480079246e800f68e5d0379a95a924076c052333699b71b50c811ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bronstein%2C+and+Kirill+Veselkov&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:54.965880Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-20",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Guerreiro, Elena Voita, and André F",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Guerreiro%2C+Elena+Voita%2C+and+Andr%C3%A9+F&rows=5",
+        "checked_at": "2026-10-09T04:50:53.988679Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Looking for a Needle in a Haystack: A Comprehensive Study of Hallucinations in Neural Machine Translation",
+            "authors": [
+              "Guerreiro",
+              "Voita",
+              "Martins"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.eacl-main.75",
+            "source_url": "https://doi.org/10.18653/v1/2023.eacl-main.75",
+            "title_similarity": 0.20437956204379562
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Las crónicas femeninas de Elena Poniatowska en la construcción de un archivo digital",
+            "authors": [
+              "André"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1353/dlg.2014.0003",
+            "source_url": "https://doi.org/10.1353/dlg.2014.0003",
+            "title_similarity": 0.2564102564102564
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "André Murraças e Miguel Abreu: a invenção do “actor T”: teatro de género em Portugal",
+            "authors": [
+              "Guerreiro",
+              "Quadrio"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.51427/cet.sdc.2005.0009",
+            "source_url": "https://doi.org/10.51427/cet.sdc.2005.0009",
+            "title_similarity": 0.10619469026548672
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Author response for \"Prevalence of mucoepidermoid carcinoma among intraoral minor salivary gland tumors: a systematic review and meta‐analysis\"",
+            "authors": [
+              "André Goulart Poletto",
+              "Fernanda Weber Mello",
+              "Gilberto Melo",
+              "Elena Riet Correa Rivero"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1111/jop.13073/v2/response1",
+            "source_url": "https://doi.org/10.1111/jop.13073/v2/response1",
+            "title_similarity": 0.24277456647398843
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "First Quarter Screening for Aneuploidy",
+            "authors": [
+              "Osvar",
+              "Ratiu",
+              "Voita-Mekeres",
+              "Mekeres",
+              "Voita",
+              "Abu-Awwad",
+              "Bembea"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.37358/rc.20.1.7851",
+            "source_url": "https://doi.org/10.37358/rc.20.1.7851",
+            "title_similarity": 0.36619718309859156
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:53.987484Z",
+        "response_sha256": "96b4237f908068561f38cd5343efb84bad53914946c4d191ae4ec6634cbdb014",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Guerreiro%2C+Elena+Voita%2C+and+Andr%C3%A9+F&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:53.988679Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-21",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+survey+on+hallucination+in+large+language+models%3A+Principles%2C+taxonomy%2C+challenges%2C+and+open+questions&rows=5",
+        "checked_at": "2026-10-09T04:50:55.006960Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:55.006901Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+survey+on+hallucination+in+large+language+models%3A+Principles%2C+taxonomy%2C+challenges%2C+and+open+questions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:55.006960Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-22",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-22",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Look before you leap: An exploratory study of uncertainty analysis for large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Look+before+you+leap%3A+An+exploratory+study+of+uncertainty+analysis+for+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:50:55.159343Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:55.159266Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Look+before+you+leap%3A+An+exploratory+study+of+uncertainty+analysis+for+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:55.159343Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-24",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-24",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut Lavril, Thomas Wang, Timothée Lacroix, and William El Sayed",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Jiang%2C+Alexandre+Sablayrolles%2C+Arthur+Mensch%2C+Chris+Bamford%2C+Devendra+Singh+Chaplot%2C+Diego+de+las+Casas%2C+Florian+Bressand%2C+Gianna+Lengyel%2C+Guillaume+Lample%2C+Lucile+Saulnier%2C+L%C3%A9lio+Renard+Lavaud%2C+Marie-Anne+Lachaux%2C+Pierre+Stock%2C+Teven+Le+Scao%2C+Thibaut+Lavril%2C+Thomas+Wang%2C+Timoth%C3%A9e+Lacroix%2C+and+William+El+Sayed&rows=5",
+        "checked_at": "2026-10-09T04:50:56.860889Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:56.860871Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Jiang%2C+Alexandre+Sablayrolles%2C+Arthur+Mensch%2C+Chris+Bamford%2C+Devendra+Singh+Chaplot%2C+Diego+de+las+Casas%2C+Florian+Bressand%2C+Gianna+Lengyel%2C+Guillaume+Lample%2C+Lucile+Saulnier%2C+L%C3%A9lio+Renard+Lavaud%2C+Marie-Anne+Lachaux%2C+Pierre+Stock%2C+Teven+Le+Scao%2C+Thibaut+Lavril%2C+Thomas+Wang%2C+Timoth%C3%A9e+Lacroix%2C+and+William+El+Sayed&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:56.860889Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-25",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Language models (mostly) know what they know",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+%28mostly%29+know+what+they+know&rows=5",
+        "checked_at": "2026-10-09T04:50:54.151982Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Mycoplasma hyosynoviae: What we know (and mostly what we do not know)",
+            "authors": [
+              "Pieters"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.54846/am2025/s7-3",
+            "source_url": "https://doi.org/10.54846/am2025/s7-3",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Measuring What AI Models Know and Whether They Know What They Don't Know: A Three-Run, Blind, Cross-Domain Benchmark of Six Leading Large Language Models",
+            "authors": [
+              "Pandit"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-8937831/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8937831/v1",
+            "title_similarity": 0.3645833333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "What we know (And Mostly Don't Know) about Technical Work",
+            "authors": [
+              "Barley"
+            ],
+            "year": 2006,
+            "years": [
+              2006,
+              2009
+            ],
+            "doi": "10.1093/oxfordhb/9780199299249.003.0020",
+            "source_url": "https://doi.org/10.1093/oxfordhb/9780199299249.003.0020",
+            "title_similarity": 0.4742268041237113
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "What Large Language Models Know",
+            "authors": [
+              "Alvarado"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1215/2834703x-11205161",
+            "source_url": "https://doi.org/10.1215/2834703x-11205161",
+            "title_similarity": 0.547945205479452
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "When models do not know what they do not know",
+            "authors": [
+              "elbert"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7027101",
+            "source_url": "https://doi.org/10.2139/ssrn.7027101",
+            "title_similarity": 0.7126436781609196
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:19.306290Z",
+        "response_sha256": "97a8930c582e507379d5dcdb670a1f96260bccc26defa29e6cd852eef5e70069",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Language+models+%28mostly%29+know+what+they+know&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:54.151982Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-26",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kipf and Max Welling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kipf+and+Max+Welling&rows=5",
+        "checked_at": "2026-10-09T04:50:54.154782Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 6: Karate club network for LC convolution (Kipf &amp; Welling, 2017).",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.953/fig-6",
+            "source_url": "https://doi.org/10.7717/peerj-cs.953/fig-6",
+            "title_similarity": 0.33707865168539325
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph refinement based airway extraction using mean-field networks and graph neural networks",
+            "authors": [
+              "Selvan",
+              "Kipf",
+              "Welling",
+              "Juarez",
+              "Pedersen",
+              "Petersen",
+              "Bruijne"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.media.2020.101751",
+            "source_url": "https://doi.org/10.1016/j.media.2020.101751",
+            "title_similarity": 0.16071428571428573
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Plannable Approximations to MDP Homomorphisms: Equivariance under Actions",
+            "authors": [
+              "van der Pol",
+              "Kipf",
+              "Oliehoek",
+              "Welling"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.65109/daie3353",
+            "source_url": "https://doi.org/10.65109/daie3353",
+            "title_similarity": 0.1956521739130435
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Eugen‐Hartmann‐Preis/Max‐Born‐Preis 1980/Gordon Research Conferences",
+            "authors": [
+              "Welling"
+            ],
+            "year": 1979,
+            "years": [
+              1979,
+              2013
+            ],
+            "doi": "10.1002/phbl.19790350414",
+            "source_url": "https://doi.org/10.1002/phbl.19790350414",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Modeling Relational Data with Graph Convolutional Networks",
+            "authors": [
+              "Schlichtkrull",
+              "Kipf",
+              "Bloem",
+              "van den Berg",
+              "Titov",
+              "Welling"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1007/978-3-319-93417-4_38",
+            "source_url": "https://doi.org/10.1007/978-3-319-93417-4_38",
+            "title_similarity": 0.15384615384615385
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:42.021118Z",
+        "response_sha256": "00b94b51070d4949e876c3769f2a7c047d08e2dad170fb72da9d0bb925350298",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kipf+and+Max+Welling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:54.154782Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-27",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Semantic uncertainty: Linguistic invariances for uncertainty estimation in natural language generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Semantic+uncertainty%3A+Linguistic+invariances+for+uncertainty+estimation+in+natural+language+generation&rows=5",
+        "checked_at": "2026-10-09T04:50:56.983599Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:56.983550Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Semantic+uncertainty%3A+Linguistic+invariances+for+uncertainty+estimation+in+natural+language+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:56.983599Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-28",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Dai, Jakob Uszkoreit, Quoc Le, and Slav Petrov",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Dai%2C+Jakob+Uszkoreit%2C+Quoc+Le%2C+and+Slav+Petrov&rows=5",
+        "checked_at": "2026-10-09T04:50:55.982556Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Natural Questions: A Benchmark for Question Answering                     Research",
+            "authors": [
+              "Kwiatkowski",
+              "Palomaki",
+              "Redfield",
+              "Collins",
+              "Parikh",
+              "Alberti",
+              "Epstein",
+              "Polosukhin",
+              "Devlin",
+              "Lee",
+              "Toutanova",
+              "Jones",
+              "Kelcey",
+              "Chang",
+              "Dai",
+              "Uszkoreit",
+              "Le",
+              "Petrov"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1162/tacl_a_00276",
+            "source_url": "https://doi.org/10.1162/tacl_a_00276",
+            "title_similarity": 0.3076923076923077
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "asfgxdvxcg",
+            "authors": [
+              "LE VIET QUOC"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.gqakbbcj.1",
+            "source_url": "https://doi.org/10.55277/researchhub.gqakbbcj.1",
+            "title_similarity": 0.07547169811320754
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Movie",
+            "authors": [
+              "LE VIET QUOC"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.ak91wfm8.1",
+            "source_url": "https://doi.org/10.55277/researchhub.ak91wfm8.1",
+            "title_similarity": 0.08333333333333333
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Navigating bronchodilator response in impulse oscillometry: are the latest cut-offs the optimal choice?",
+            "authors": [
+              "Tran Quoc",
+              "Hoang Dai",
+              "Le Thi Tuyet"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1183/13993003.congress-2024.pa3061",
+            "source_url": "https://doi.org/10.1183/13993003.congress-2024.pa3061",
+            "title_similarity": 0.2222222222222222
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FRIEND’S QUALITY PREFERENCE OF KOREAN PEOPLE.",
+            "authors": [
+              "Quoc Le"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.58837/chula.the.2013.1844",
+            "source_url": "https://doi.org/10.58837/chula.the.2013.1844",
+            "title_similarity": 0.367816091954023
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:55.981053Z",
+        "response_sha256": "3d308fac0285aa47c8dbf1578f7a5bab2c87e640468f77131fb50894ee5224ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Dai%2C+Jakob+Uszkoreit%2C+Quoc+Le%2C+and+Slav+Petrov&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:55.982556Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-29",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inference-time intervention: Eliciting truthful answers from a language model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inference-time+intervention%3A+Eliciting+truthful+answers+from+a+language+model&rows=5",
+        "checked_at": "2026-10-09T04:50:57.885672Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:57.885558Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inference-time+intervention%3A+Eliciting+truthful+answers+from+a+language+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:57.885672Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-30",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Catacutan, Khushi Rathod, Kyle Swanson, Wengong Jin, Jody C",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Catacutan%2C+Khushi+Rathod%2C+Kyle+Swanson%2C+Wengong+Jin%2C+Jody+C&rows=5",
+        "checked_at": "2026-10-09T04:50:56.847028Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii",
+            "authors": [
+              "Liu",
+              "Catacutan",
+              "Rathod",
+              "Swanson",
+              "Jin",
+              "Mohammed",
+              "Chiappino-Pepe",
+              "Syed",
+              "Fragis",
+              "Rachwalski",
+              "Magolan",
+              "Surette",
+              "Coombes",
+              "Jaakkola",
+              "Barzilay",
+              "Collins",
+              "Stokes"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1038/s41589-023-01349-8",
+            "source_url": "https://doi.org/10.1038/s41589-023-01349-8",
+            "title_similarity": 0.22058823529411764
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Impacts of a novel mHealth platform to track maternal and child health in Udaipur, India",
+            "authors": [
+              "Nagar",
+              "Ambiya",
+              "Singh",
+              "Abdullah",
+              "Banshiwal",
+              "Stone",
+              "Manjanatha",
+              "Venkat",
+              "Purawat",
+              "Supatkar",
+              "Singh",
+              "Shahnawaz"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.23846/tw10ie129",
+            "source_url": "https://doi.org/10.23846/tw10ie129",
+            "title_similarity": 0.29577464788732394
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Web3: Signature-Based Portfolio Verification",
+            "authors": [
+              "Mahendra S. Dalvi, Savita B. Mogare, Palak Sanjay Wadile",
+              "Khushi Dhiraj Koli, Pavan Rajaram Rathod"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.48175/ijarsct-38443",
+            "source_url": "https://doi.org/10.48175/ijarsct-38443",
+            "title_similarity": 0.12244897959183673
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Diamond, Jody",
+            "authors": [
+              "Benary"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.49431",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.49431",
+            "title_similarity": 0.23880597014925373
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "SyntheMol-RL: a flexible reinforcement learning framework for designing novel and synthesizable antibiotics",
+            "authors": [
+              "Swanson",
+              "Liu",
+              "Catacutan",
+              "McLellan",
+              "Arnold",
+              "Tu",
+              "Brown",
+              "Zou",
+              "Stokes"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1101/2025.05.17.654017",
+            "source_url": "https://doi.org/10.1101/2025.05.17.654017",
+            "title_similarity": 0.2981366459627329
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:56.844885Z",
+        "response_sha256": "7ec974b4319e5498913b93e26b7b08670d51801855ea31fcaf299853252b8bfa",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Catacutan%2C+Khushi+Rathod%2C+Kyle+Swanson%2C+Wengong+Jin%2C+Jody+C&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:56.847028Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-31",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A token-level reference-free hallucination detection benchmark for free-form text generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+token-level+reference-free+hallucination+detection+benchmark+for+free-form+text+generation&rows=5",
+        "checked_at": "2026-10-09T04:50:58.876721Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:58.876700Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+token-level+reference-free+hallucination+detection+benchmark+for+free-form+text+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:58.876721Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-32",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Decoupled weight decay regularization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Decoupled+weight+decay+regularization&rows=5",
+        "checked_at": "2026-10-09T04:50:56.850399Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Toward principled regularization of deep networks—From weight decay to feature contraction",
+            "authors": [
+              "Maki"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1126/scirobotics.aaw1329",
+            "source_url": "https://doi.org/10.1126/scirobotics.aaw1329",
+            "title_similarity": 0.33070866141732286
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Understanding Decoupled and Early Weight Decay",
+            "authors": [
+              "Bjorck",
+              "Weinberger",
+              "Gomes"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1609/aaai.v35i8.16837",
+            "source_url": "https://doi.org/10.1609/aaai.v35i8.16837",
+            "title_similarity": 0.5301204819277109
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A novel Adam approach related to Decoupled Weight Decay (AdamL)",
+            "authors": [
+              "Llugsi",
+              "El Yacoubi",
+              "Fontaine",
+              "Lupera"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/la-cci48322.2021.9769816",
+            "source_url": "https://doi.org/10.1109/la-cci48322.2021.9769816",
+            "title_similarity": 0.4897959183673469
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Neighbor embedding based single image super-resolution using hybrid feature and adaptive weight decay regularization",
+            "authors": [
+              "Yonggun Lee",
+              "Yoonsik Choe"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1109/icce-berlin.2014.7034223",
+            "source_url": "https://doi.org/10.1109/icce-berlin.2014.7034223",
+            "title_similarity": 0.45751633986928103
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Weak and strong convergence analysis of Elman neural networks via weight decay regularization",
+            "authors": [
+              "Zhou",
+              "Fan",
+              "Huang",
+              "Liu"
+            ],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.1080/02331934.2022.2057852",
+            "source_url": "https://doi.org/10.1080/02331934.2022.2057852",
+            "title_similarity": 0.5230769230769231
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:31.790422Z",
+        "response_sha256": "b0410da42e7234c636e0696ca1a249ce2e2c0aaf503074989b3aff70908dc0ee",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Decoupled+weight+decay+regularization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:56.850399Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-33",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "F",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=F&rows=5",
+        "checked_at": "2026-10-09T04:50:56.852660Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:44:19.741426Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=F&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:56.852660Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-34",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The geometry of truth: Emergent linear structure in large language model representations of true/false datasets",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+geometry+of+truth%3A+Emergent+linear+structure+in+large+language+model+representations+of+true%2Ffalse+datasets&rows=5",
+        "checked_at": "2026-10-09T04:50:58.873802Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A PARADIGM INQUIRY:",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.2307/j.ctt211qxkn.13",
+            "source_url": "https://doi.org/10.2307/j.ctt211qxkn.13",
+            "title_similarity": 0.109375
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Emergent Moral Representations in Large Language Models Aligns with Human Conceptual, Neural, and Behavioral Moral Structure",
+            "authors": [
+              "Karami",
+              "Zandi",
+              "Hatami"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.21203/rs.3.rs-8270539/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8270539/v1",
+            "title_similarity": 0.4224137931034483
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "4. Performativity and the “true/false fetish”",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1515/9783110687538-004",
+            "source_url": "https://doi.org/10.1515/9783110687538-004",
+            "title_similarity": 0.23684210526315788
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "SLiMNet: a deep learning model to detect short linear motifs using protein large language model representations and paired inputs",
+            "authors": [
+              "McFee",
+              "Kim"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.05.04.722713",
+            "source_url": "https://doi.org/10.64898/2026.05.04.722713",
+            "title_similarity": 0.5546218487394958
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Emergent Spatio-Semantic Structure in Large Language Model Embedding Spaces",
+            "authors": [
+              "Shingleton",
+              "Bicakci",
+              "Wang",
+              "Basiri"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31223/x5fq93",
+            "source_url": "https://doi.org/10.31223/x5fq93",
+            "title_similarity": 0.5405405405405406
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:58.872448Z",
+        "response_sha256": "67cdb03bb9761c91a724e848dd4dc123663648b81ef47641bcd25264538786ad",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+geometry+of+truth%3A+Emergent+linear+structure+in+large+language+model+representations+of+true%2Ffalse+datasets&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:58.873802Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-35",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bronstein",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bronstein&rows=5",
+        "checked_at": "2026-10-09T04:50:58.841837Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "M.I. Bronstein",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.14341/ket10168-3857",
+            "source_url": "https://doi.org/10.14341/ket10168-3857",
+            "title_similarity": 0.8181818181818182
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Law for the Expert Witness, Second Edition",
+            "authors": [
+              "Bronstein",
+              "Bronstein"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1201/9781420048766",
+            "source_url": "https://doi.org/10.1201/9781420048766",
+            "title_similarity": 0.24
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Zelda Bronstein Replies",
+            "authors": [
+              "Bronstein"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1353/dss.2011.0078",
+            "source_url": "https://doi.org/10.1353/dss.2011.0078",
+            "title_similarity": 0.5625
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Foreword by Professor Bronstein",
+            "authors": [
+              "Bronstein"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1093/med/9780199664368.002.0004",
+            "source_url": "https://doi.org/10.1093/med/9780199664368.002.0004",
+            "title_similarity": 0.45
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "M.I. Bronstein",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.14341/ket10168-3858",
+            "source_url": "https://doi.org/10.14341/ket10168-3858",
+            "title_similarity": 0.8181818181818182
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:58.839897Z",
+        "response_sha256": "7529793f01c66f5c362df1c497d9d32450bbf39934c207a67ef6e2dd5115be2b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bronstein&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:58.841837Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-36",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "LLMs know more than they show: On the intrinsic representation of LLM hallucinations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=LLMs+know+more+than+they+show%3A+On+the+intrinsic+representation+of+LLM+hallucinations&rows=5",
+        "checked_at": "2026-10-09T04:50:59.181388Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "‘Fighting fire with fire’ — using LLMs to combat LLM hallucinations",
+            "authors": [
+              "Verspoor"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1038/d41586-024-01641-0",
+            "source_url": "https://doi.org/10.1038/d41586-024-01641-0",
+            "title_similarity": 0.3972602739726027
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Risks of Using Large Language Models in Grading: LLMs and Humans Prefer LLM-Generated Writing Over Human’s but LLMs Show a Stronger Systematic Bias",
+            "authors": [
+              "Mak"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31234/osf.io/35utw_v1",
+            "source_url": "https://doi.org/10.31234/osf.io/35utw_v1",
+            "title_similarity": 0.28820960698689957
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ADHD Drugs More Likely to Cause Hallucinations and Psychosis Than Previously Thought",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1037/e671432011-001",
+            "source_url": "https://doi.org/10.1037/e671432011-001",
+            "title_similarity": 0.33532934131736525
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "StructHallu-Drift: Benchmarking Structured Hallucinations Under Schema Evolution in LLMs",
+            "authors": [
+              "Hasan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.18653/v1/2026.surgellm-1.22",
+            "source_url": "https://doi.org/10.18653/v1/2026.surgellm-1.22",
+            "title_similarity": 0.3411764705882353
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Front Matter",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012,
+              2015
+            ],
+            "doi": "10.1002/9781119206583.fmatter",
+            "source_url": "https://doi.org/10.1002/9781119206583.fmatter",
+            "title_similarity": 0.12631578947368421
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:59.179573Z",
+        "response_sha256": "c4114452f732b6b4557c895311eeebc7ca01db514ee3fc808270ffe6376256a4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=LLMs+know+more+than+they+show%3A+On+the+intrinsic+representation+of+LLM+hallucinations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:59.181388Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-38",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-38",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pytorch: An imperative style, high-performance deep learning library",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pytorch%3A+An+imperative+style%2C+high-performance+deep+learning+library&rows=5",
+        "checked_at": "2026-10-09T04:50:58.844027Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+            "authors": [
+              "Tegunov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.03.10.710885",
+            "source_url": "https://doi.org/10.64898/2026.03.10.710885",
+            "title_similarity": 0.54421768707483
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Anhang: Mathematik, Deep Learning, PyTorch",
+            "authors": [
+              "Zai",
+              "Brown"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3139/9783446466081.012",
+            "source_url": "https://doi.org/10.3139/9783446466081.012",
+            "title_similarity": 0.45714285714285713
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Scaling TensorFlow, PyTorch, and MXNet using MVAPICH2 for High-Performance Deep Learning on Frontera",
+            "authors": [
+              "Jain",
+              "Awan",
+              "Subramoni",
+              "Panda"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/dls49591.2019.00015",
+            "source_url": "https://doi.org/10.1109/dls49591.2019.00015",
+            "title_similarity": 0.5975609756097561
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction to PyTorch",
+            "authors": [
+              "Ketkar",
+              "Moolayil"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1007/978-1-4842-5364-9_2",
+            "source_url": "https://doi.org/10.1007/978-1-4842-5364-9_2",
+            "title_similarity": 0.15730337078651685
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Selene: a PyTorch-based deep learning library for biological sequence-level data",
+            "authors": [
+              "Chen",
+              "Cofer",
+              "Zhou",
+              "Troyanskaya"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1101/438291",
+            "source_url": "https://doi.org/10.1101/438291",
+            "title_similarity": 0.4413793103448276
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:38.860072Z",
+        "response_sha256": "1b903c0ec03b42f55b701632ac57ba1d55198b26e1fa074c25fd2dc0efb80106",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pytorch%3A+An+imperative+style%2C+high-performance+deep+learning+library&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:58.844027Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-39",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-39",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Approximation theory of the mlp model in neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Approximation+theory+of+the+mlp+model+in+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:51:01.660862Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:01.660825Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Approximation+theory+of+the+mlp+model+in+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:01.660862Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-42",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Weakly supervised detection of hallucinations in LLM activations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Weakly+supervised+detection+of+hallucinations+in+LLM+activations&rows=5",
+        "checked_at": "2026-10-09T04:50:59.889480Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Exploring LLM-Driven Textual Augmentation for Image-Level Weakly Supervised Remote Sensing Change Detection",
+            "authors": [
+              "Yi",
+              "Liu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/crsit69981.2026.11605252",
+            "source_url": "https://doi.org/10.1109/crsit69981.2026.11605252",
+            "title_similarity": 0.3157894736842105
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Weakly Supervised Defect Detection in Electrical Infrastructure",
+            "authors": [
+              "Astin-Walmsley"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.5204/thesis.eprints.261430",
+            "source_url": "https://doi.org/10.5204/thesis.eprints.261430",
+            "title_similarity": 0.5826771653543307
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Weakly Supervised Veracity Classification with LLM-Predicted Credibility Signals",
+            "authors": [
+              "Leite",
+              "Razuvayevskaya",
+              "Bontcheva",
+              "Scarton"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-5389911/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-5389911/v1",
+            "title_similarity": 0.5138888888888888
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Weakly supervised foreground learning for weakly supervised localization and detection",
+            "authors": [
+              "Zhang",
+              "Li",
+              "Wu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.patcog.2022.109279",
+            "source_url": "https://doi.org/10.1016/j.patcog.2022.109279",
+            "title_similarity": 0.36
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Improving Weakly Supervised Sound Event Detection with Self-Supervised Auxiliary Tasks",
+            "authors": [
+              "Deshmukh",
+              "Raj",
+              "Singh"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.21437/interspeech.2021-2079",
+            "source_url": "https://doi.org/10.21437/interspeech.2021-2079",
+            "title_similarity": 0.5066666666666667
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:59.886532Z",
+        "response_sha256": "6fa3733f6e59abce55e4a2d669cd498e5780fec09184114cd6fc702dfbb00a4f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Weakly+supervised+detection+of+hallucinations+in+LLM+activations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:59.889480Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-43",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-43",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=M&rows=5",
+        "checked_at": "2026-10-09T04:50:59.184723Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:44:32.342172Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:59.184723Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-44",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-44",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Liu, and Christopher D",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Liu%2C+and+Christopher+D&rows=5",
+        "checked_at": "2026-10-09T04:51:01.986734Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:01.986687Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Liu%2C+and+Christopher+D&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:01.986734Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-45",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Constructing benchmarks and interventions for combating hallucinations in LLMs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Constructing+benchmarks+and+interventions+for+combating+hallucinations+in+LLMs&rows=5",
+        "checked_at": "2026-10-09T04:51:00.866835Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Geometric Taxonomy of Hallucinations in LLMs",
+            "authors": [
+              "Marin"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32388/qyjyru",
+            "source_url": "https://doi.org/10.32388/qyjyru",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fixing Reference Hallucinations of LLMs",
+            "authors": [
+              "Maes"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/u38w4_v2",
+            "source_url": "https://doi.org/10.31219/osf.io/u38w4_v2",
+            "title_similarity": 0.49572649572649574
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fixing Reference Hallucinations of LLMs",
+            "authors": [
+              "Maes"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31219/osf.io/u38w4",
+            "source_url": "https://doi.org/10.31219/osf.io/u38w4",
+            "title_similarity": 0.49572649572649574
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Geometric Taxonomy of Hallucinations in LLMs",
+            "authors": [
+              "Marín"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6137207",
+            "source_url": "https://doi.org/10.2139/ssrn.6137207",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Asemantic Induction of Hallucinations in LLMs",
+            "authors": [
+              "von Csefalvay"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.59350/74tek-rb672",
+            "source_url": "https://doi.org/10.59350/74tek-rb672",
+            "title_similarity": 0.5365853658536586
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:00.865639Z",
+        "response_sha256": "6fe2e254b19f6c19e013d9b69cdb2ebfc6f171af8e0f324490a52d8e0d9d643c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Constructing+benchmarks+and+interventions+for+combating+hallucinations+in+LLMs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:00.866835Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-48",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Stokes, Kevin Yang, Kyle Swanson, Wengong Jin, Andres Cubillos-Ruiz, Nina M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Stokes%2C+Kevin+Yang%2C+Kyle+Swanson%2C+Wengong+Jin%2C+Andres+Cubillos-Ruiz%2C+Nina+M&rows=5",
+        "checked_at": "2026-10-09T04:51:04.324399Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Deep Learning Approach to Antibiotic Discovery",
+            "authors": [
+              "Stokes",
+              "Yang",
+              "Swanson",
+              "Jin",
+              "Cubillos-Ruiz",
+              "Donghia",
+              "MacNair",
+              "French",
+              "Carfrae",
+              "Bloom-Ackermann",
+              "Tran",
+              "Chiappino-Pepe",
+              "Badran",
+              "Andrews",
+              "Chory",
+              "Church",
+              "Brown",
+              "Jaakkola",
+              "Barzilay",
+              "Collins"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.cell.2020.01.021",
+            "source_url": "https://doi.org/10.1016/j.cell.2020.01.021",
+            "title_similarity": 0.288135593220339
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Deep Learning Approach to Antibiotic Discovery",
+            "authors": [
+              "Stokes",
+              "Yang",
+              "Swanson",
+              "Jin",
+              "Cubillos-Ruiz",
+              "Donghia",
+              "MacNair",
+              "French",
+              "Carfrae",
+              "Bloom-Ackermann",
+              "Tran",
+              "Chiappino-Pepe",
+              "Badran",
+              "Andrews",
+              "Chory",
+              "Church",
+              "Brown",
+              "Jaakkola",
+              "Barzilay",
+              "Collins"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.cell.2020.04.001",
+            "source_url": "https://doi.org/10.1016/j.cell.2020.04.001",
+            "title_similarity": 0.288135593220339
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Diffuse Metastatic Prostate Cancer",
+            "authors": [
+              "Kyle Atcheson, MD",
+              "Kevin D. Hiatt, MD"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1148/cases.20238978",
+            "source_url": "https://doi.org/10.1148/cases.20238978",
+            "title_similarity": 0.17307692307692307
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Engineered bacteria recycle tumor metabolic waste to boost immunotherapy",
+            "authors": [
+              "Cubillos-Ruiz",
+              "Cubillos-Ruiz"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.chom.2021.11.008",
+            "source_url": "https://doi.org/10.1016/j.chom.2021.11.008",
+            "title_similarity": 0.2676056338028169
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "SO2 from episode 48A eruption, Hawaii: Sulfur dioxide emissions from the episode 48A East Rift Zone eruption of Kilauea volcano, Hawaii",
+            "authors": [
+              "Andres",
+              "Kyle",
+              "Stokes",
+              "Rose"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1007/bf00301550",
+            "source_url": "https://doi.org/10.1007/bf00301550",
+            "title_similarity": 0.22772277227722773
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:04.320894Z",
+        "response_sha256": "fbb7ff84aa3ccf9ac852162d325ce786bcf8ec96f0ef7d6e98f373d4733db10b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Stokes%2C+Kevin+Yang%2C+Kyle+Swanson%2C+Wengong+Jin%2C+Andres+Cubillos-Ruiz%2C+Nina+M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:04.324399Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-50",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-50",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Chamberlain, Xiaowen Dong, and Michael M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Chamberlain%2C+Xiaowen+Dong%2C+and+Michael+M&rows=5",
+        "checked_at": "2026-10-09T04:51:03.146410Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Michael Chekhov",
+            "authors": [
+              "Chamberlain"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.4324/9780203380475",
+            "source_url": "https://doi.org/10.4324/9780203380475",
+            "title_similarity": 0.3018867924528302
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Michael Chekhov",
+            "authors": [
+              "Chamberlain"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4324/9780429485800",
+            "source_url": "https://doi.org/10.4324/9780429485800",
+            "title_similarity": 0.3018867924528302
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Afterword",
+            "authors": [
+              "Chamberlain"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.4324/9780429485800-5",
+            "source_url": "https://doi.org/10.4324/9780429485800-5",
+            "title_similarity": 0.2127659574468085
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Chamberlain, Michael Aubrey, (born 16 April 1939), Consultant, KPMG, Leicester, 1994–2004",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.10561",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.10561",
+            "title_similarity": 0.35294117647058826
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Chamberlain, Michael Aubrey, (born 16 April 1939), Consultant, KPMG, Leicester, 1994–2004",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u10561",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u10561",
+            "title_similarity": 0.35294117647058826
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:03.143905Z",
+        "response_sha256": "90fda88bf8a1470599a0f78f01dde95970202ef942600164ca809a801e63e907",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Chamberlain%2C+Xiaowen+Dong%2C+and+Michael+M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:03.146410Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-51",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-51",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-52",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-52",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Llama 2: Open foundation and fine-tuned chat models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models&rows=5",
+        "checked_at": "2026-10-09T04:51:02.362027Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Explainable Deepfake Audio Detection Using Fine-Tuned Foundation Models",
+            "authors": [
+              "Manoharan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.54rk-euuc",
+            "source_url": "https://doi.org/10.31979/etd.54rk-euuc",
+            "title_similarity": 0.4297520661157025
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge",
+            "authors": [
+              "Li",
+              "Li",
+              "Zhang",
+              "Dan",
+              "Jiang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7759/cureus.40895",
+            "source_url": "https://doi.org/10.7759/cureus.40895",
+            "title_similarity": 0.34355828220858897
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "PowerPulse: Power Energy Chat Model with LLaMA Model Fine-tuned on Chinese and Power Sector Domain Knowledge",
+            "authors": [
+              "nong",
+              "Yin",
+              "Du",
+              "Zhang",
+              "Yang",
+              "Yan",
+              "Xiang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.169152136.62259950/v1",
+            "source_url": "https://doi.org/10.22541/au.169152136.62259950/v1",
+            "title_similarity": 0.36942675159235666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Legal text summarization with optimized hybrid models and fine-tuned LLaMA-2",
+            "authors": [
+              "Patel",
+              "Patil",
+              "Vora",
+              "Shahade"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10791-026-09916-y",
+            "source_url": "https://doi.org/10.1007/s10791-026-09916-y",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "METRIC-BASED COMPARISON OF FINE-TUNED LLAMA 2 AND MIXTRAL LARGE LANGUAGE MODELS FOR INSTRUCTION TASKS",
+            "authors": [
+              "Pavlyshenko",
+              "Bulka"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.30970/eli.26.2",
+            "source_url": "https://doi.org/10.30970/eli.26.2",
+            "title_similarity": 0.3708609271523179
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:56.645252Z",
+        "response_sha256": "8e1a0a3c78affec5caa7e91452ddc9f3dcaa7343672ed9c2d04f3b3bd484d8f9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:02.362027Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-53",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-53",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-53",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A stitch in time saves nine: Detecting and mitigating hallucinations of LLMs by validating low-confidence generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+stitch+in+time+saves+nine%3A+Detecting+and+mitigating+hallucinations+of+LLMs+by+validating+low-confidence+generation&rows=5",
+        "checked_at": "2026-10-09T04:51:04.544393Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Stitch in Time Saves Nine - Analytic Review of 66 Cases of Chest Trauma",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.33140/japm.03.04.05",
+            "source_url": "https://doi.org/10.33140/japm.03.04.05",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Stitch in Time Saves Nine - A Novel Treatment of Duodenal Perforation Closure",
+            "authors": [
+              "HGM",
+              "Kalke"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.21276/ijcmr.2019.6.3.33",
+            "source_url": "https://doi.org/10.21276/ijcmr.2019.6.3.33",
+            "title_similarity": 0.53125
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Course Syllabus Construction: A Stitch In Time Saves Nine",
+            "authors": [
+              "Blowers"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18260/1-2--11331",
+            "source_url": "https://doi.org/10.18260/1-2--11331",
+            "title_similarity": 0.3157894736842105
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Stitch in Time Saves Nine",
+            "authors": [],
+            "year": 1849,
+            "years": [
+              1849
+            ],
+            "doi": "10.1038/scientificamerican12221849-109g",
+            "source_url": "https://doi.org/10.1038/scientificamerican12221849-109g",
+            "title_similarity": 0.38028169014084506
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Homocysteine – a stitch in time saves nine?",
+            "authors": [
+              "Smallwood"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1016/j.clnu.2011.09.005",
+            "source_url": "https://doi.org/10.1016/j.clnu.2011.09.005",
+            "title_similarity": 0.34838709677419355
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:04.542797Z",
+        "response_sha256": "b6e0c71de95712f7491276022385d6b8bf6830d2c1bd20c7fb7f172a1550a419",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+stitch+in+time+saves+nine%3A+Detecting+and+mitigating+hallucinations+of+LLMs+by+validating+low-confidence+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:04.544393Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-54",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-54",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=M&rows=5",
+        "checked_at": "2026-10-09T04:51:02.430410Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:44:32.342172Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:02.430410Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-55",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-55",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Martindale, and Marine Carpuat",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Martindale%2C+and+Marine+Carpuat&rows=5",
+        "checked_at": "2026-10-09T04:51:04.006619Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Study of Style in Machine Translation: Controlling the Formality\n            of Machine Translation Output",
+            "authors": [
+              "Niu",
+              "Martindale",
+              "Carpuat"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.18653/v1/d17-1299",
+            "source_url": "https://doi.org/10.18653/v1/d17-1299",
+            "title_similarity": 0.3225806451612903
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Understanding and Detecting Hallucinations in Neural Machine Translation via Model Introspection",
+            "authors": [
+              "Xu",
+              "Agrawal",
+              "Briakou",
+              "Martindale",
+              "Carpuat"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1162/tacl_a_00563",
+            "source_url": "https://doi.org/10.1162/tacl_a_00563",
+            "title_similarity": 0.272
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Toward Machine Translation Literacy: How Lay Users Perceive and Rely on Imperfect Translations",
+            "authors": [
+              "Xiao",
+              "Zhang",
+              "Ki",
+              "Bao",
+              "Martindale",
+              "Vaughn",
+              "Gao",
+              "Carpuat"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.emnlp-main.1725",
+            "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1725",
+            "title_similarity": 0.3114754098360656
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Marine algae of the New Jersey coast and adjacent waters of Staten Island /",
+            "authors": [
+              "Martindale"
+            ],
+            "year": 1889,
+            "years": [
+              1889
+            ],
+            "doi": "10.5962/bhl.title.97395",
+            "source_url": "https://doi.org/10.5962/bhl.title.97395",
+            "title_similarity": 0.21568627450980393
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Word sense alignment using bilingual corpora",
+            "authors": [
+              "Carpuat"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-b775096",
+            "source_url": "https://doi.org/10.14711/thesis-b775096",
+            "title_similarity": 0.3835616438356164
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:04.004348Z",
+        "response_sha256": "2d4feb387014dc7896287b4afae0fd926821bfe820b4d3cd4e7bba19a98903b8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Martindale%2C+and+Marine+Carpuat&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:04.006619Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-56",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-56",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Characterizing truthfulness in large language model generations with local intrinsic dimension",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Characterizing+truthfulness+in+large+language+model+generations+with+local+intrinsic+dimension&rows=5",
+        "checked_at": "2026-10-09T04:51:05.590921Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:05.590842Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Characterizing+truthfulness+in+large+language+model+generations+with+local+intrinsic+dimension&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:05.590921Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-57",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-57",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-57",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Attention satisfies: A constraint-satisfaction lens on factual errors of language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Attention+satisfies%3A+A+constraint-satisfaction+lens+on+factual+errors+of+language+models&rows=5",
+        "checked_at": "2026-10-09T04:51:05.932053Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:05.932004Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Attention+satisfies%3A+A+constraint-satisfaction+lens+on+factual+errors+of+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:05.932053Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_035_iclr_2026_proceedings_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_035_iclr_2026_proceedings_credibility-60",
+        "paper_reference_id": "ref-paper_035_iclr_2026_proceedings_credibility-60",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Byun, Zifan Wang, Alex Mallen, Steven Basart, Sanmi Koyejo, Dawn Song, Matt Fredrikson, J",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Byun%2C+Zifan+Wang%2C+Alex+Mallen%2C+Steven+Basart%2C+Sanmi+Koyejo%2C+Dawn+Song%2C+Matt+Fredrikson%2C+J&rows=5",
+        "checked_at": "2026-10-09T04:51:06.423439Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "James, Steven Alexander, (Alex), (born 21 Nov. 1968), musician, journalist, cheesemaker",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1093/ww/9780199540884.013.258716",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.258716",
+            "title_similarity": 0.3037974683544304
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "James, Steven Alexander, (Alex), (born 21 Nov. 1968), musician, journalist, cheesemaker",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u258716",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u258716",
+            "title_similarity": 0.3037974683544304
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Author response for \"Synthesis, properties and mechanism of carbon dots-based nano-antibacterial materials\"",
+            "authors": [
+              "Haimei Zhu",
+              "Nannan Peng",
+              "Xiao Liang",
+              "Song Yang",
+              "Shenghao Cai",
+              "Zifan Chen",
+              "Yang Yang",
+              "Jingmin Wang",
+              "Yongzhong Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1088/1748-605x/acfada/v2/response1",
+            "source_url": "https://doi.org/10.1088/1748-605x/acfada/v2/response1",
+            "title_similarity": 0.24731182795698925
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Who is Matt Smith?",
+            "authors": [
+              "Hewett"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.5040/9780755693450.ch-001",
+            "source_url": "https://doi.org/10.5040/9780755693450.ch-001",
+            "title_similarity": 0.2222222222222222
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Steven Z. Levine. Review of \"Dalí\"  by Dawn Ades.",
+            "authors": [
+              "Levine"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.3202/caa.reviews.2005.54",
+            "source_url": "https://doi.org/10.3202/caa.reviews.2005.54",
+            "title_similarity": 0.256
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:51:06.422086Z",
+        "response_sha256": "2387a14a22f6f6c70e386654ee037d6b2862853a898481b1a490d92f538c85a6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Byun%2C+Zifan+Wang%2C+Alex+Mallen%2C+Steven+Basart%2C+Sanmi+Koyejo%2C+Dawn+Song%2C+Matt+Fredrikson%2C+J&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:51:06.423439Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.866666666666666
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 60,
+    "extracted_count": 60,
+    "parsed_count": 58,
+    "queried_count": 58,
+    "matched_count": 12,
+    "metadata_conflict_count": 0,
+    "unverified_count": 28,
+    "parse_failed_count": 2,
+    "not_checked_count": 0,
+    "query_failed_count": 18,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:43.085775Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

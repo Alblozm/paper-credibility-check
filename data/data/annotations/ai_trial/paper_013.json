@@ -1,0 +1,359 @@
+{
+  "assessment_id": "assessment_ai_paper_013_openreview_2024_02_11",
+  "paper_version_id": "paper_013_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_013_openreview_2024_02_11",
+    "raw_output_sha256": "8a98cf4e61bb1201ce94138e421f8911c74af30acc814cb15af1bc4627bcb3c6"
+  },
+  "paper_summary": "Learning representations that generalize to novel compositions of known concepts is crucial for bridging the gap between human and machine perception. One prominent effort is learning object-centric representations, which are widely conjectured to enable compositional generalization.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "We show that autoencoders that satisfy structural assumptions on the decoder and enforce encoder-decoder consistency will learn object-centric representations that provably generalize compositionally.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_013_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "We show that autoencoders that satisfy structural assumptions on the decoder and enforce encoder-decoder consistency will learn object-centric representations that provably generalize compositionally.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_013_ev_004",
+        "paper_013_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.4,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Provable Compositional Generalization for Object-Centric Learning》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.4/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Learning representations that generalize to novel compositions of known concepts is crucial for bridging the gap between human and machine perception. ",
+    "正文可定位证据支持该维度判断：(cid:0) ˆ (cid:1) In this section, we show theoretically how the ground-truth generator f and autoencoder g ˆ , f can be constrained to address both slot identifiability and generalization , thereby facilitating compositional generalization (complete proofs and further details a…",
+    "正文可定位证据支持该维度判断：This section first verifies our main theoretical result (Thm.3) on synthetic multi-object data (Sec.6.1). "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Provable Compositional Generalization for Object-Centric Learning》在研究价值方面的正文支持是：Learning representations that generalize to novel compositions of known concepts is crucial for bridging the gap between human and machine perception.  限制或边界证据是：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Learning representations that generalize to novel compositions of known concepts is crucial for bridging the gap between human and machine perception. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_013_ev_001",
+        "paper_013_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Provable Compositional Generalization for Object-Centric Learning》在可靠性与证据方面的正文支持是：(cid:0) ˆ (cid:1) In this section, we show theoretically how the ground-truth generator f and autoencoder g ˆ , f can be constrained to address both slot identifiability and generalization , thereby facilitating compositional generalization (complete proofs and further details a… 限制或边界证据是：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：(cid:0) ˆ (cid:1) In this section, we show theoretically how the ground-truth generator f and autoencoder g ˆ , f can be constrained to address both slot identifiability and generalization , thereby facilitating compositional generalization (complete proofs and further details a…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_013_ev_003",
+        "paper_013_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Provable Compositional Generalization for Object-Centric Learning》在原创性定位方面的正文支持是：This section first verifies our main theoretical result (Thm.3) on synthetic multi-object data (Sec.6.1).  限制或边界证据是：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：This section first verifies our main theoretical result (Thm.3) on synthetic multi-object data (Sec.6.1). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_013_ev_004",
+        "paper_013_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Provable Compositional Generalization for Object-Centric Learning》在清晰度与可用性方面的正文支持是：Despite tremendous advances in machine learning, a large gap still exists between humans and machines in terms of learning efficiency and generalization (Tenenbaum et al., 2011; Behrens et al., 2018; Sch olkopf ¨ et al., 2021).  限制或边界证据是：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Despite tremendous advances in machine learning, a large gap still exists between humans and machines in terms of learning efficiency and generalization (Tenenbaum et al., 2011; Behrens et al., 2018; Sch olkopf ¨ et al., 2021). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_013_ev_005",
+        "paper_013_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Provable Compositional Generalization for Object-Centric Learning》在可复现性与透明度方面的正文支持是：We also examine how the consistency loss scales as the number of objects in the training data is increased from two to three and four.  限制或边界证据是：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We also examine how the consistency loss scales as the number of objects in the training data is increased from two to three and four. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_013_ev_006",
+        "paper_013_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_013_ev_001",
+      "page_number": 1,
+      "section_id": "paper_013_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Learning representations that generalize to novel compositions of known concepts is crucial for bridging the gap between human and machine perception. One prominent effort is learning object-centric representations, which are widely conjectured to enable compositional generalization. Yet, it remains unclear when this conjecture will be true, as a principled theoretical or empirical understanding of compositional generalization is lacking. In this work, we investigate when compositional generalization is guaranteed for object-centric representations through the lens of identifiability theory. We show that autoencoders that satisfy structural assumptions on the decoder and enforce encoder-decoder consistency will learn object-centric representations that provably generalize compositionally. We validate our theoretical result and highlight the practical relevance of our assumptions through ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "page_number": 9,
+      "section_id": "paper_013_openreview_2024_02_11_sec_7",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "Extensions of Experiments Our experiments in Sec.6.2 provide evidence that compositional generalization will not emerge naturally in object-centric models such as Slot Attention. However, to gain a more principled understanding of the limits of compositional generalization in these models, experiments with a broader set of architectures on more datasets are required. Additionally, , cons L as implemented in Sec.6, samples novel slot combinations in a naive uniform manner, potentially giving rise to implausible images in more complex settings, e.g., by sampling two background slots. Thus, a more principled sampling scheme should be employed to scale this loss. Extensions of Theory The assumptions of compositionality and additivity on the decoder make progress towards a theoretical understanding of compositional generalization, yet are inherently limiting. Namely, they do not allow slots t",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_013_ev_003",
+      "page_number": 4,
+      "section_id": "paper_013_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "(cid:0) ˆ (cid:1) In this section, we show theoretically how the ground-truth generator f and autoencoder g ˆ , f can be constrained to address both slot identifiability and generalization , thereby facilitating compositional generalization (complete proofs and further details are provided in App.A).\n\nTo address the problem of slot identifiability, Brady et al. (2023) proposed to constrain the generator f via assumptions on its Jacobian, which they called compositionality and irreducibility . Informally, compositionality states that each image pixel is locally a function of at most one latent slot, while irreducibility states that pixels belonging to the same object share information. We relegate a formal definition of irreducibility to App.A.4 and only restate the definition for compositionality. Definition 4 (Compositionality) . A differentiable f : R N is called compositional in z if ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_013_ev_004",
+      "page_number": 7,
+      "section_id": "paper_013_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "This section first verifies our main theoretical result (Thm.3) on synthetic multi-object data (Sec.6.1). We then ablate the impact of each of our theoretical assumptions on compositional generalization using the object-centric model Slot Attention (Locatello et al., 2020a) (Sec.6.2).\n\n1 . 0 with cons L D t without cons O 0 . 8 s a 1000 10 . 0 L O r t e n o r o c 0 . 6 C 100 ec S l a r L y n o t ili b 0 . 4 i t i a s o 10 1 . 0 fi p i t m n e 0 . 2 o d C 1 I\n\n0 . 0 0 . 1 1 . 0 10 . 0 0 100 200 300 cons Epoch L Figure 4: Experimental validation of Thm.3 . Left : Slot identifiability is measured throughout training as a function of reconstruction loss ( , Eq.3) and compositional consistency ( , rec cons L L Def.6). As predicted by Thm.3, models which minimize and learn representations that rec cons L L are slot identifiable OOD. Right : Compositional contrast (see App.B.4) decreases throug",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_013_ev_005",
+      "page_number": 1,
+      "section_id": "paper_013_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Despite tremendous advances in machine learning, a large gap still exists between humans and machines in terms of learning efficiency and generalization (Tenenbaum et al., 2011; Behrens et al., 2018; Sch olkopf ¨ et al., 2021). A key reason for this is thought to be that machines lack the ability to generalize compositionally , which humans heavily rely on (Fodor and Pylyshyn, 1988; Lake et al., 2017; Battaglia et al., 2018; Goyal and Bengio, 2022; Greff et al., 2020). Namely, humans are able to recompose previously learned knowledge to generalize to never-before-seen situations. Significant work has thus gone into the problem of learning representations that can generalize compositionally. One prominent effort is object-centric representation learning (Burgess et al., 2019; Greff et al., 2019; Locatello et al., 2020a; Lin et al., 2020; Singh et al., 2022; Elsayed et al., 2022; Seitzer e",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_013_ev_006",
+      "page_number": 27,
+      "section_id": "paper_013_openreview_2024_02_11_sec_c_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_013_openreview_2024_02_11_chunk_0048",
+      "evidence_mode": "quote",
+      "excerpt": "We also examine how the consistency loss scales as the number of objects in the training data is increased from two to three and four. We find that as the number of objects grows, optimization of the consistency loss becomes more challenging (Fig.9, bottom left) which makes sense considering that the number of possible slot combinations grows combinatorially with the number of slots. This,\n\nMSE Slot-supported Support with gaps 1.0\n\n0.8 n 2 t i o 0.6 u t o r i b l s i s t d 0.4 g n n i r a i 0.2 t\n\nslot 1 slot 1\n\nFigure 8: Violating slot-supportedness prevents OOD generalization . We retrain the additive autoencoder from Sec.6.1 on data arising from a latent subset S in which all occurrences of objects Z with a hue-latent in the interval (0 . 5 , 0 . 8) have been removed. This leads to a cross-shaped gap in the latent subset S which can be visualized via a 2D projection of the latent spac",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_013_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_013_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_013_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_013_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_013_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_013_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "random seed is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_013_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

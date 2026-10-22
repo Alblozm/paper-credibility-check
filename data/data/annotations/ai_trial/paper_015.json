@@ -1,0 +1,355 @@
+{
+  "assessment_id": "assessment_ai_paper_015_openreview_2024_02_11",
+  "paper_version_id": "paper_015_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_015_openreview_2024_02_11",
+    "raw_output_sha256": "404ee2df1156a962e96df7df9f9df8689f3027b658f8698ad0edcbc355e6ca42"
+  },
+  "paper_summary": "The reasoning performance of Large Language Models (LLMs) on a wide range of problems critically relies on chain-of-thought prompting, which involves providing a few chain of thought demonstrations as exemplars in prompts. Recent work, e.g., Tree of Thoughts, has pointed out the importance of exploration and self-evaluation in reasoning step selection for complex problem solving.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In this paper, we present Boosting of Thoughts (BoT), an automated prompting framework for problem solving with LLMs by iteratively exploring and self-evaluating many trees of thoughts in order to acquire an ensemble of trial-and-error reasoning experiences, which will serve as a new form of prompting to solve the complex problem.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_015_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Our experiments with GPT-4 and Llama2 across extensive complex mathematical problems demonstrate that BoT consistently achieves higher or comparable problem-solving rates than other advanced prompting approaches.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_015_ev_004",
+        "paper_015_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 6.2,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 6.2/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：The reasoning performance of Large Language Models (LLMs) on a wide range of problems critically relies on chain-of-thought prompting, which involves providing a few chain of thought demonstrations as exemplars in prompts. ",
+    "正文可定位证据支持该维度判断：B OOSTING OF T HOUGHTS : T RIAL - AND -E RROR P ROBLEM S OLVING WITH L ARGE L ANGUAGE M ODELS Sijia Chen, Baochun Li Di Niu Department of Electrical and Computer Engineering Department of Electrical and Computer University of Toronto Engineering, University of Alberta Toronto, O…",
+    "正文可定位证据支持该维度判断：Datasets . Experiments are performed on benchmark datasets with diverse mathematical problems, including MMLU Hendrycks et al. (2021a), SVAMP Patel et al. (2021), GSM8K Cobbe et al. (2021), AQuA Ling et al. (2017) and MATH Hendrycks et al. (2021b). Besides, we include a challeng…"
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+    "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+    "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》在研究价值方面的正文支持是：The reasoning performance of Large Language Models (LLMs) on a wide range of problems critically relies on chain-of-thought prompting, which involves providing a few chain of thought demonstrations as exemplars in prompts.  限制或边界证据是：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The reasoning performance of Large Language Models (LLMs) on a wide range of problems critically relies on chain-of-thought prompting, which involves providing a few chain of thought demonstrations as exemplars in prompts. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_015_ev_001",
+        "paper_015_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》在可靠性与证据方面的正文支持是：B OOSTING OF T HOUGHTS : T RIAL - AND -E RROR P ROBLEM S OLVING WITH L ARGE L ANGUAGE M ODELS Sijia Chen, Baochun Li Di Niu Department of Electrical and Computer Engineering Department of Electrical and Computer University of Toronto Engineering, University of Alberta Toronto, O… 限制或边界证据是：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：B OOSTING OF T HOUGHTS : T RIAL - AND -E RROR P ROBLEM S OLVING WITH L ARGE L ANGUAGE M ODELS Sijia Chen, Baochun Li Di Niu Department of Electrical and Computer Engineering Department of Electrical and Computer University of Toronto Engineering, University of Alberta Toronto, O…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_015_ev_003",
+        "paper_015_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》在原创性定位方面的正文支持是：Datasets . Experiments are performed on benchmark datasets with diverse mathematical problems, including MMLU Hendrycks et al. (2021a), SVAMP Patel et al. (2021), GSM8K Cobbe et al. (2021), AQuA Ling et al. (2017) and MATH Hendrycks et al. (2021b). Besides, we include a challeng… 限制或边界证据是：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Datasets . Experiments are performed on benchmark datasets with diverse mathematical problems, including MMLU Hendrycks et al. (2021a), SVAMP Patel et al. (2021), GSM8K Cobbe et al. (2021), AQuA Ling et al. (2017) and MATH Hendrycks et al. (2021b). Besides, we include a challeng…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_015_ev_004",
+        "paper_015_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》在清晰度与可用性方面的正文支持是：Large language models (LLMs) with the autoregressive paradigm have gained remarkable performance across various tasks due to their potential reasoning ability Brown et al.  限制或边界证据是：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Large language models (LLMs) with the autoregressive paradigm have gained remarkable performance across various tasks due to their potential reasoning ability Brown et al. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_015_ev_005",
+        "paper_015_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Boosting of Thoughts: Trial-and-Error Problem Solving with Large Language Models》在可复现性与透明度方面的正文支持是：g 20 19.7 g n i 16.8 n i 20 18.1 GPT3.5 v l o 15 14.5 15.5 v l o 15.0 14.6 S S 15 13.2 GPT3.5 ComplexCoT 10 10 GPT3.5 BoT 5 5 GPT3.5 BoT (GPT4) 0 0 Precalculus #samples: 546 Intermediate Algebra #samples: 903 Methods Figure 5: Solving rates on all the problems from different cat… 限制或边界证据是：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：g 20 19.7 g n i 16.8 n i 20 18.1 GPT3.5 v l o 15 14.5 15.5 v l o 15.0 14.6 S S 15 13.2 GPT3.5 ComplexCoT 10 10 GPT3.5 BoT 5 5 GPT3.5 BoT (GPT4) 0 0 Precalculus #samples: 546 Intermediate Algebra #samples: 903 Methods Figure 5: Solving rates on all the problems from different cat…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 5/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_015_ev_006",
+        "paper_015_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_015_ev_001",
+      "page_number": 1,
+      "section_id": "paper_015_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "The reasoning performance of Large Language Models (LLMs) on a wide range of problems critically relies on chain-of-thought prompting, which involves providing a few chain of thought demonstrations as exemplars in prompts. Recent work, e.g., Tree of Thoughts, has pointed out the importance of exploration and selfevaluation in reasoning step selection for complex problem solving. In this paper, we present Boosting of Thoughts (BoT), an automated prompting framework for problem solving with LLMs by iteratively exploring and self-evaluating many trees of thoughts in order to acquire an ensemble of trial-and-error reasoning experiences, which will serve as a new form of prompting to solve the complex problem. Starting from a simple prompt without requiring examples, BoT iteratively explores and evaluates a large collection of reasoning steps, and more importantly, uses error analysis obtaine",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "page_number": 28,
+      "section_id": "paper_015_openreview_2024_02_11_sec_h",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0053",
+      "evidence_mode": "quote",
+      "excerpt": "ExperienceobtainedinIteration1 ########The1-thReasoningChainwithComments######## Belowisareasoningchaincontainingreasoningstepspresentedinorder: ———————————– Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards. Mariahused1/4ofaskein,whichequals1/4*364yards. Her grandmaused1/2ofaskein,whichequals1/2*364yards..EvaluateScore:1.0 Step2:CalculatethetotalyardsofyarnusedbybothMariahandhergrandmabyaddingtheyardsofyarnMariahusedandtheyardsofyarnhergrandmaused.. EvaluateScore:1.0 Step1:ConvertthefractionsoftheskeinofyarnusedbyMariahandhergrandmaintoyards.Mariahused1/4ofaskein,whichequals1/4*364yards=91yards. Hergrandmaused1/2ofaskein,whichequals1/2*364yards=182yards..EvaluateScore:1.0 ———————————– AnalysisReport:Thereasoningchaincancompletethetaskandreachthetargetcorrectlybyexecutingitsreasoningsteps.Thestepsarelogical,followaclear progression,andarenecessaryforsolvingthepr",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_015_ev_003",
+      "page_number": 1,
+      "section_id": "paper_015_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "B OOSTING OF T HOUGHTS : T RIAL - AND -E RROR P ROBLEM S OLVING WITH L ARGE L ANGUAGE M ODELS\n\nSijia Chen, Baochun Li Di Niu Department of Electrical and Computer Engineering Department of Electrical and Computer University of Toronto Engineering, University of Alberta Toronto, Ontario, Canada Edmonton, Alberta, Canada sjia.chen@mail.utoronto.ca, bli@ece.toronto.edu dniu@ualberta.ca",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_015_ev_004",
+      "page_number": 6,
+      "section_id": "paper_015_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0010",
+      "evidence_mode": "quote",
+      "excerpt": "Datasets . Experiments are performed on benchmark datasets with diverse mathematical problems, including MMLU Hendrycks et al. (2021a), SVAMP Patel et al. (2021), GSM8K Cobbe et al. (2021), AQuA Ling et al. (2017) and MATH Hendrycks et al. (2021b). Besides, we include a challenging mathematical reasoning task, Game of 24 Yao et al. (2024), where the goal is to use four numbers and basic arithmetic operations (addition, subtraction, multiplication, and division) to obtain 24 in 1 equation. Thus, the solution includes 3 intermediate steps.\n\nCompetitors . Apart from the benchmark approach, standard Input-output (IO), the comparison approaches include Chain-of-thought (CoT) Wei et al. (2022), CoT-SC Wang et al. (2022) and Complex CoT Fu et al. (2022), in which the input prompt contains a few-shot examples ( 8 ) with human annotations. Also, BoT is also compared with related works, such as Tr",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_015_ev_005",
+      "page_number": 1,
+      "section_id": "paper_015_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Large language models (LLMs) with the autoregressive paradigm have gained remarkable performance across various tasks due to their potential reasoning ability Brown et al. (2020); Lewkowycz et al. (2022). The guarantee of such ability in complex tasks heavily relies on chain-ofthought (CoT) Wei et al. (2022) prompting, which provides step-by-step reasoning examples. This approach suggests that the reasoning ability can be elicited through a chain of thoughts, where a thought serves as an intermediate step toward problem solving.\n\nThus, subsequent studies Fu et al. (2022); Wang et al. (2022); Yao et al. (2024); Besta et al. (2023), especially Tree-of-Thought (ToT) Yao et al. (2024), have been proposed to improve CoT. To guarantee effectiveness, the prompt of these approaches generally includes human annotations on one specific task. Such a reliance limits their scalability. Recent work th",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_015_ev_006",
+      "page_number": 17,
+      "section_id": "paper_015_openreview_2024_02_11_sec_r",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_015_openreview_2024_02_11_chunk_0031",
+      "evidence_mode": "quote",
+      "excerpt": "g 20 19.7 g n i 16.8 n i 20 18.1 GPT3.5 v l o 15 14.5 15.5 v l o 15.0 14.6 S S 15 13.2 GPT3.5 ComplexCoT 10 10 GPT3.5 BoT 5 5 GPT3.5 BoT (GPT4)\n\n0 0 Precalculus #samples: 546 Intermediate Algebra #samples: 903 Methods\n\nFigure 5: Solving rates on all the problems from different categories of the MATH dataset with different methods. The comparsion between these methods are performed on the categories, including PreAlgebra, Algebra, Counting & Probability, Number Theory, Geometry, Precalculus, and Intermediate Algebra, of the test set. The sub-figure with the ’Overall’ shows the solving rate computed on all the problems across all categories.\n\nIn Figure 5, we provide the solving rate of different methods in each category of the MATH dataset. The diverse range of mathematical problems in these categories poses a significantly more challenging benchmark for mathematical reasoning. Thus, the c",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_015_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_015_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_015_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_015_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_015_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_015_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_015_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_015_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "not_available",
+      "detail": "hyperparameters is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_015_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

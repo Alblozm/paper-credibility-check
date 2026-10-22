@@ -1,0 +1,3524 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-b37f0ab0c9658b4f",
+  "paper_version_id": "paper_016_openreview_2024_02_11",
+  "pdf_sha256": "a51ccd83f461b8da3551ae947ccb9a5f2e74cba61d70c4c398470e18e506176d",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "c5473c69ff6dd13dba7c92b12818f0ad799b47ad1108a5e8f6c935959dafe700",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.39766081871345,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.192982456140351,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 57,
+        "extracted_count": 57,
+        "parsed_count": 57,
+        "queried_count": 57,
+        "matched_count": 13,
+        "metadata_conflict_count": 3,
+        "unverified_count": 22,
+        "parse_failed_count": 0,
+        "not_checked_count": 0,
+        "query_failed_count": 19,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=i8PjQT3Uig",
+            "checked_at": "2026-10-09T04:43:44.053685Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-105c7fa85be7",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 23,
+            "comments_checked": 41,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:43:44.494348Z",
+            "source_urls": [
+              "https://api.github.com/repos/jannerm/mbpo",
+              "https://api.github.com/repos/jannerm/mbpo/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/49/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/48/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/41/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/35/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/33/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/27/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/25/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/21/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/18/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/14/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/13/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/12/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/10/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/6/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/5/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/4/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/3/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/2/comments?per_page=100&page=1",
+              "https://api.github.com/repos/jannerm/mbpo/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-1",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Classincremental continual learning into the extended der-verse",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Classincremental+continual+learning+into+the+extended+der-verse&rows=5",
+        "checked_at": "2026-10-09T04:43:23.355348Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Class-Incremental Continual Learning Into the eXtended DER-Verse",
+            "authors": [
+              "Boschini",
+              "Bonicelli",
+              "Buzzega",
+              "Porrello",
+              "Calderara"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tpami.2022.3206549",
+            "source_url": "https://doi.org/10.1109/tpami.2022.3206549",
+            "title_similarity": 0.9921259842519685
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Continual Representation Learning for Images with Variational Continual Auto-Encoder",
+            "authors": [
+              "Jeon",
+              "Shin"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.5220/0007687103670373",
+            "source_url": "https://doi.org/10.5220/0007687103670373",
+            "title_similarity": 0.40816326530612246
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Continual Learning With Extended Kronecker-Factored Approximate Curvature",
+            "authors": [
+              "Lee",
+              "Hong",
+              "Joo",
+              "Kim"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/cvpr42600.2020.00902",
+            "source_url": "https://doi.org/10.1109/cvpr42600.2020.00902",
+            "title_similarity": 0.5441176470588235
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Winter Is Over for Continual Learning: From Continual Representation Learning to Continual Learning Agents",
+            "authors": [
+              "Quarantiello",
+              "Li",
+              "Tavan",
+              "Testa",
+              "Carfì",
+              "Gramaglia",
+              "Bell",
+              "Malitesta",
+              "Averty",
+              "Coleman",
+              "Lomonaco"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202607.1116.v1",
+            "source_url": "https://doi.org/10.20944/preprints202607.1116.v1",
+            "title_similarity": 0.4166666666666667
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Continual Learning for Classification Tasks",
+            "authors": [
+              "Han"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2023-15555",
+            "source_url": "https://doi.org/10.22215/etd/2023-15555",
+            "title_similarity": 0.4528301886792453
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:23.353876Z",
+        "response_sha256": "891f35a54c90be3b6818d69759080bbd9631ad268703e7cf2276f79f2317e2bc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Classincremental+continual+learning+into+the+extended+der-verse&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:23.355348Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-2",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Linear least-squares algorithms for temporal difference learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Linear+least-squares+algorithms+for+temporal+difference+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:25.367238Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:25.367121Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Linear+least-squares+algorithms+for+temporal+difference+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:25.367238Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-4",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Continual learning with tiny episodic memories",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Continual+learning+with+tiny+episodic+memories&rows=5",
+        "checked_at": "2026-10-09T04:43:25.392229Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:25.392146Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Continual+learning+with+tiny+episodic+memories&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:25.392229Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deepreinforcementlearning in a handful of trials using probabilistic dynamics models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deepreinforcementlearning+in+a+handful+of+trials+using+probabilistic+dynamics+models&rows=5",
+        "checked_at": "2026-10-09T04:43:23.371326Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "P(Sleep) 2.0: Capturing the dynamics of nighttime sleep using probabilistic models and big data",
+            "authors": [
+              "Yetton"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.31234/osf.io/ayqm2",
+            "source_url": "https://doi.org/10.31234/osf.io/ayqm2",
+            "title_similarity": 0.4858757062146893
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reliability and risk models based on independent trials",
+            "authors": [
+              "Twisdale"
+            ],
+            "year": 1986,
+            "years": [
+              1986
+            ],
+            "doi": "10.1016/0266-8920(86)90013-5",
+            "source_url": "https://doi.org/10.1016/0266-8920(86)90013-5",
+            "title_similarity": 0.2302158273381295
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "3 Probabilistic Models for Nonlinear Processes and Biological Dynamics",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1515/9783110288537.43",
+            "source_url": "https://doi.org/10.1515/9783110288537.43",
+            "title_similarity": 0.2987012987012987
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Probabilistic aircraft structural dynamics models",
+            "authors": [
+              "BENAROYA",
+              "FLEISHER"
+            ],
+            "year": 1991,
+            "years": [
+              1991
+            ],
+            "doi": "10.2514/6.1991-921",
+            "source_url": "https://doi.org/10.2514/6.1991-921",
+            "title_similarity": 0.43609022556390975
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Intrusion detection using probabilistic graphical models",
+            "authors": [
+              "Xiao"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/etd-180810-5668",
+            "source_url": "https://doi.org/10.31274/etd-180810-5668",
+            "title_similarity": 0.5142857142857142
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:23.370084Z",
+        "response_sha256": "d5f0f5aa9ccbf08cecd15b94ceee5709ab75698325988bcb45add2f0eb91cea0",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deepreinforcementlearning+in+a+handful+of+trials+using+probabilistic+dynamics+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:23.371326Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The mnist database of handwritten digit images for machine learning research",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+mnist+database+of+handwritten+digit+images+for+machine+learning+research&rows=5",
+        "checked_at": "2026-10-09T04:43:26.031843Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The MNIST Database of Handwritten Digit Images for Machine Learning Research [Best of the Web]",
+            "authors": [
+              "Li Deng"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1109/msp.2012.2211477",
+            "source_url": "https://doi.org/10.1109/msp.2012.2211477",
+            "title_similarity": 0.9047619047619048
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "MNIST Digit Classification Deep Learning Approach for Efficient Handwritten Digit Recognition",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64643/ijirtv12i10-194957-459",
+            "source_url": "https://doi.org/10.64643/ijirtv12i10-194957-459",
+            "title_similarity": 0.4260355029585799
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Unconstrained Handwritten Digit Recognition: Experimentation on MNIST Database",
+            "authors": [
+              "Manjunath Aradhya",
+              "Hemantha Kumar",
+              "Noushath"
+            ],
+            "year": 2006,
+            "years": [
+              2006,
+              2011
+            ],
+            "doi": "10.1142/9789812772381_0022",
+            "source_url": "https://doi.org/10.1142/9789812772381_0022",
+            "title_similarity": 0.45751633986928103
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Comparative Evaluation of Machine Learning Techniques for Handwritten Digit Classification Using the MNIST Dataset",
+            "authors": [
+              "Aysar Thamer Naser Tuaimah1"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.61710/2t8bpy67",
+            "source_url": "https://doi.org/10.61710/2t8bpy67",
+            "title_similarity": 0.3894736842105263
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Improved method of handwritten digit recognition tested on MNIST database",
+            "authors": [
+              "Kussul",
+              "Baidyk"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1016/j.imavis.2004.03.008",
+            "source_url": "https://doi.org/10.1016/j.imavis.2004.03.008",
+            "title_similarity": 0.4966442953020134
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:26.030574Z",
+        "response_sha256": "fef9e402e3a5f6ad8722f9d7ae9cc0e728d2bb6001a0b1aa1e57c88d204e57cf",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+mnist+database+of+handwritten+digit+images+for+machine+learning+research&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:26.031843Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The power of depth for feedforward neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+power+of+depth+for+feedforward+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:43:26.205661Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Feedforward neural networks",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021,
+              2024
+            ],
+            "doi": "10.1049/pbpo161e_ch6",
+            "source_url": "https://doi.org/10.1049/pbpo161e_ch6",
+            "title_similarity": 0.7012987012987013
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "O(n) depth-2 binary addition with feedforward neural nets",
+            "authors": [
+              "Vassiliadis",
+              "Bertels",
+              "Pechanek"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1994.374487",
+            "source_url": "https://doi.org/10.1109/icnn.1994.374487",
+            "title_similarity": 0.6226415094339622
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Power Law In Feedforward Networks",
+            "authors": [
+              "Cateau"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/ijcnn.1993.713966",
+            "source_url": "https://doi.org/10.1109/ijcnn.1993.713966",
+            "title_similarity": 0.6746987951807228
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Feedforward Neural Network",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1117/3.633187.apa",
+            "source_url": "https://doi.org/10.1117/3.633187.apa",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Digital halftoning of images using feedforward neural networks",
+            "authors": [],
+            "year": 1988,
+            "years": [
+              1988
+            ],
+            "doi": "10.1016/0893-6080(88)90529-1",
+            "source_url": "https://doi.org/10.1016/0893-6080(88)90529-1",
+            "title_similarity": 0.6607142857142857
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:26.204493Z",
+        "response_sha256": "3b5c6f1e58b6477e28f985b3a0f3c4c4738b1d5be07ab2d8b10affa06979a7ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+power+of+depth+for+feedforward+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:26.205661Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-8",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Using semi-distributed representations to overcome catastrophic forgetting in connectionist networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Using+semi-distributed+representations+to+overcome+catastrophic+forgetting+in+connectionist+networks&rows=5",
+        "checked_at": "2026-10-09T04:43:26.407285Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:26.407217Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Using+semi-distributed+representations+to+overcome+catastrophic+forgetting+in+connectionist+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:26.407285Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-9",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Catastrophic forgetting in connectionist networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Catastrophic+forgetting+in+connectionist+networks&rows=5",
+        "checked_at": "2026-10-09T04:43:26.262521Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Catastrophic Forgetting in Connectionist Networks",
+            "authors": [
+              "French"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.1002/0470018860.s00096",
+            "source_url": "https://doi.org/10.1002/0470018860.s00096",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Catastrophic forgetting in connectionist networks",
+            "authors": [
+              "French"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1016/s1364-6613(99)01294-2",
+            "source_url": "https://doi.org/10.1016/s1364-6613(99)01294-2",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Semi-distributed Representations and Catastrophic Forgetting in Connectionist Networks",
+            "authors": [
+              "FRENCH"
+            ],
+            "year": 1992,
+            "years": [
+              1992,
+              2007
+            ],
+            "doi": "10.1080/09540099208946624",
+            "source_url": "https://doi.org/10.1080/09540099208946624",
+            "title_similarity": 0.725925925925926
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Using Noise to Compute Error Surfaces in Connectionist Networks: A Novel Means of Reducing Catastrophic Forgetting",
+            "authors": [
+              "French",
+              "Chater"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1162/08997660260028700",
+            "source_url": "https://doi.org/10.1162/08997660260028700",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sleep-Mediated Replay Prevents Catastrophic Forgetting in Spiking Neural Networks Trained on Sequential Tasks",
+            "authors": [
+              "Sabbineni",
+              "Qiu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.36227/techrxiv.177220005.52986713/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.177220005.52986713/v1",
+            "title_similarity": 0.4936708860759494
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:26.261012Z",
+        "response_sha256": "d4a5e8d270c6cfa1f11e0a7ee692d9c9fda5c04c0ae112c27f167e5cef91f535",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Catastrophic+forgetting+in+connectionist+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:26.262521Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Uniform regret bounds over R d for the sequential linear regression problem with the square loss",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Uniform+regret+bounds+over+R+d+for+the+sequential+linear+regression+problem+with+the+square+loss&rows=5",
+        "checked_at": "2026-10-09T04:43:27.961192Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Regret lower bounds for budget-constrained sequential method selection",
+            "authors": [
+              "Laitinen-Fredriksson Lundström-Imanov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7274314",
+            "source_url": "https://doi.org/10.2139/ssrn.7274314",
+            "title_similarity": 0.4457831325301205
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Non-asymptotic bounds for the ℓ∞ estimator in linear regression with uniform noise",
+            "authors": [
+              "Yi",
+              "Neykov"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.3150/23-bej1607",
+            "source_url": "https://doi.org/10.3150/23-bej1607",
+            "title_similarity": 0.5310734463276836
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Uniform bounds in Waring’s problem over some diagonal forms",
+            "authors": [
+              "Pliego"
+            ],
+            "year": 2021,
+            "years": [
+              2021,
+              2022
+            ],
+            "doi": "10.1007/s00209-021-02887-4",
+            "source_url": "https://doi.org/10.1007/s00209-021-02887-4",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sequential estimation for the multiple linear regression models with balanced loss functions",
+            "authors": [
+              "Sengupta",
+              "Bapat",
+              "Joshi"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1080/07474946.2024.2329145",
+            "source_url": "https://doi.org/10.1080/07474946.2024.2329145",
+            "title_similarity": 0.4574468085106383
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sharp One-Sided Confidence Bounds for Linear Regression Over Intervals",
+            "authors": [
+              "Bohrer",
+              "Francis"
+            ],
+            "year": 1972,
+            "years": [
+              1972
+            ],
+            "doi": "10.2307/2334620",
+            "source_url": "https://doi.org/10.2307/2334620",
+            "title_similarity": 0.4578313253012048
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:27.958679Z",
+        "response_sha256": "28491c1b2d140b2587a73fbc41960d4104191901830137f035ed87a21825c8fc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Uniform+regret+bounds+over+R+d+for+the+sequential+linear+regression+problem+with+the+square+loss&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:27.961192Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Soft+actor-critic%3A+Off-policy+maximum+entropy+deep+reinforcement+learning+with+a+stochastic+actor&rows=5",
+        "checked_at": "2026-10-09T04:43:27.119238Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multi-Alpha Soft Actor-Critic: Overcoming Stochastic Biases in Maximum Entropy Reinforcement Learning",
+            "authors": [
+              "Igoe",
+              "Pande",
+              "Venkatraman",
+              "Schneider"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/icra48891.2023.10161395",
+            "source_url": "https://doi.org/10.1109/icra48891.2023.10161395",
+            "title_similarity": 0.6326530612244898
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Optimizing Maximum Power Point Tracking with Soft Actor-Critic Reinforcement Learning and Transfer Learning Techniques",
+            "authors": [
+              "Rostamipour",
+              "Ghayeni",
+              "Abdi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5242944",
+            "source_url": "https://doi.org/10.2139/ssrn.5242944",
+            "title_similarity": 0.42990654205607476
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Entropy regularized actor-critic based multi-agent deep reinforcement learning for stochastic games",
+            "authors": [
+              "Hao",
+              "Zhang",
+              "Shi",
+              "Li"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.ins.2022.10.022",
+            "source_url": "https://doi.org/10.1016/j.ins.2022.10.022",
+            "title_similarity": 0.6461538461538462
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Optimization of High-Speed Train Operation Control Based on Soft Actor-Critic Deep Reinforcement Learning Algorithm",
+            "authors": [
+              "Pei",
+              "Lan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4573607",
+            "source_url": "https://doi.org/10.2139/ssrn.4573607",
+            "title_similarity": 0.46445497630331756
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Optimal Policy of Multiplayer Poker via Actor-Critic Reinforcement Learning",
+            "authors": [
+              "Shi",
+              "Guo",
+              "Liu",
+              "Fan"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.3390/e24060774",
+            "source_url": "https://doi.org/10.3390/e24060774",
+            "title_similarity": 0.45614035087719296
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:27.116080Z",
+        "response_sha256": "7e791b85e76ca223fadb4872221598cbe866f2ef8559063b1b4674590495a6a6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Soft+actor-critic%3A+Off-policy+maximum+entropy+deep+reinforcement+learning+with+a+stochastic+actor&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:27.119238Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mastering diverse domains through world models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mastering+diverse+domains+through+world+models&rows=5",
+        "checked_at": "2026-10-09T04:43:27.237610Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Mastering diverse control tasks through world models",
+            "authors": [
+              "Hafner",
+              "Pasukonis",
+              "Ba",
+              "Lillicrap"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1038/s41586-025-08744-2",
+            "source_url": "https://doi.org/10.1038/s41586-025-08744-2",
+            "title_similarity": 0.8571428571428571
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Mind the domain gap : Improving Deep Learning Models Generalization Across Diverse Visual Domains",
+            "authors": [
+              "Scalbert"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/cb00b000z25d5z4008zb2f3z648972f98517",
+            "source_url": "https://doi.org/10.70675/cb00b000z25d5z4008zb2f3z648972f98517",
+            "title_similarity": 0.3120567375886525
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Mastering Large Language Models",
+            "authors": [
+              "Rawat",
+              "Pathak"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/979-8-8688-2733-4",
+            "source_url": "https://doi.org/10.1007/979-8-8688-2733-4",
+            "title_similarity": 0.6233766233766234
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Enhancing Performance Across Diverse Domains through Active Learning-Driven Improvement Tactics",
+            "authors": [
+              "godwin",
+              "felix"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31219/osf.io/j2tdb",
+            "source_url": "https://doi.org/10.31219/osf.io/j2tdb",
+            "title_similarity": 0.45390070921985815
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Large Language Models",
+            "authors": [
+              "Rawat",
+              "Pathak"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/979-8-8688-2733-4_1",
+            "source_url": "https://doi.org/10.1007/979-8-8688-2733-4_1",
+            "title_similarity": 0.3855421686746988
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:27.235545Z",
+        "response_sha256": "fe5be1726daf7109c79d13203aea91b8614cec0a39db95b2f4c507cb391f863d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mastering+diverse+domains+through+world+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:27.237610Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-13",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Temporal difference learning for model predictive control",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Temporal+difference+learning+for+model+predictive+control&rows=5",
+        "checked_at": "2026-10-09T04:43:29.142688Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:29.142612Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Temporal+difference+learning+for+model+predictive+control&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:29.142688Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning sparse representations incrementally in deep reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+sparse+representations+incrementally+in+deep+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:28.891801Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Sparse Representations in Reinforcement Learning with Sparse Coding",
+            "authors": [
+              "Le",
+              "Kumaraswamy",
+              "White"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.24963/ijcai.2017/287",
+            "source_url": "https://doi.org/10.24963/ijcai.2017/287",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning Representations Via Dynamics-Based Behavioral Similarity for Deep Reinforcement Learning",
+            "authors": [
+              "Liang",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5304099",
+            "source_url": "https://doi.org/10.2139/ssrn.5304099",
+            "title_similarity": 0.7167630057803468
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Convolutional Sparse Representations -- application to physiological signals and interpretability for Deep Learning",
+            "authors": [
+              "Moreau"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/7c809e38z7eb5z47b2z9d02zf314a84e612e",
+            "source_url": "https://doi.org/10.70675/7c809e38z7eb5z47b2z9d02zf314a84e612e",
+            "title_similarity": 0.5212765957446809
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Aprendiendo modelos sparse para algoritmos de deep reinforcement learning basados en policy gradient",
+            "authors": [
+              "Meléndez Salinas"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.7764/tesisuc/ing/57233",
+            "source_url": "https://doi.org/10.7764/tesisuc/ing/57233",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reinforcement Learning and Deep Reinforcement Learning",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1017/9781108955652.016",
+            "source_url": "https://doi.org/10.1017/9781108955652.016",
+            "title_similarity": 0.6
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:28.890184Z",
+        "response_sha256": "17511067cc96cf9e697b714f24b4998659e7e8994105aefcc67295ed822dc4d6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+sparse+representations+incrementally+in+deep+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:28.891801Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hallucinating value: A pitfall of dyna-style planning with imperfect environment models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hallucinating+value%3A+A+pitfall+of+dyna-style+planning+with+imperfect+environment+models&rows=5",
+        "checked_at": "2026-10-09T04:43:30.848710Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:30.848658Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hallucinating+value%3A+A+pitfall+of+dyna-style+planning+with+imperfect+environment+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:30.848710Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "When to trust your model: Modelbased policy optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=When+to+trust+your+model%3A+Modelbased+policy+optimization&rows=5",
+        "checked_at": "2026-10-09T04:43:29.071505Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "When you can't trust your eyes anymore",
+            "authors": [
+              "Seow"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.54377/9daf-7785",
+            "source_url": "https://doi.org/10.54377/9daf-7785",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "When It Comes To Empathy, Don't Always Trust Your Gut",
+            "authors": [],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1037/e510092016-001",
+            "source_url": "https://doi.org/10.1037/e510092016-001",
+            "title_similarity": 0.37383177570093457
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Should You Trust or Not Trust Your Feelings When Predicting the Future?",
+            "authors": [
+              "Pham",
+              "Lee",
+              "Stephen"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1037/e621072012-204",
+            "source_url": "https://doi.org/10.1037/e621072012-204",
+            "title_similarity": 0.432
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How to Trust Your Digital Twin When it Comes to Improving Your Health",
+            "authors": [
+              "Banerjee",
+              "Novakowski",
+              "Duglan",
+              "Nikolov"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21428/4f83582b.d746df71",
+            "source_url": "https://doi.org/10.21428/4f83582b.d746df71",
+            "title_similarity": 0.43548387096774194
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "When AI goes shopping: AI agents promise to lighten your purchasing load − if they can earn your trust",
+            "authors": [
+              "Triantoro"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.64628/aai.ua3pxrwrj",
+            "source_url": "https://doi.org/10.64628/aai.ua3pxrwrj",
+            "title_similarity": 0.16883116883116883
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:29.070294Z",
+        "response_sha256": "ac61cee7358ec79132ea02ff7a6e70d12c17e6e4e68320bc92df344a805d9114",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=When+to+trust+your+model%3A+Modelbased+policy+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:29.071505Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Model-based reinforcement learning for atari",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Model-based+reinforcement+learning+for+atari&rows=5",
+        "checked_at": "2026-10-09T04:43:31.687322Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:31.687246Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Model-based+reinforcement+learning+for+atari&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:31.687322Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adam: A method for stochastic optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5",
+        "checked_at": "2026-10-09T04:43:29.073736Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "madgrad: 'MADGRAD' Method for Stochastic Optimization",
+            "authors": [
+              "Falbel"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.32614/cran.package.madgrad",
+            "source_url": "https://doi.org/10.32614/cran.package.madgrad",
+            "title_similarity": 0.8791208791208791
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+            "authors": [
+              "Hong",
+              "Lin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0346",
+            "source_url": "https://doi.org/10.52202/079017-0346",
+            "title_similarity": 0.5470085470085471
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stochastic Trust Region Inexact Newton Method",
+            "authors": [
+              "Chauhan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1201/9781003240167-10",
+            "source_url": "https://doi.org/10.1201/9781003240167-10",
+            "title_similarity": 0.37209302325581395
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The stochastic projected gradient method for optimization problems on Hadamard manifolds",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.69829/oper-026-0301-ta03",
+            "source_url": "https://doi.org/10.69829/oper-026-0301-ta03",
+            "title_similarity": 0.40310077519379844
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+            "authors": [
+              "Barakat",
+              "Bianchi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1137/19m1263443",
+            "source_url": "https://doi.org/10.1137/19m1263443",
+            "title_similarity": 0.5333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:38.201160Z",
+        "response_sha256": "a7167cde8616a0aa3cf624b44a95f485d53d343dc8b6a1053fe503ee63993481",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:29.073736Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Elephant neural networks: Born to be a continual learner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Elephant+neural+networks%3A+Born+to+be+a+continual+learner&rows=5",
+        "checked_at": "2026-10-09T04:43:30.956382Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Continual Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/978-3-540-48125-6_5",
+            "source_url": "https://doi.org/10.1007/978-3-540-48125-6_5",
+            "title_similarity": 0.45
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Key-value pair-free continual learner via task-specific prompt-prototype",
+            "authors": [
+              "Luo",
+              "Ran",
+              "Li",
+              "Xue",
+              "Jiang",
+              "Shen",
+              "Kärkkäinen",
+              "Xu",
+              "Cong"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2026.108576",
+            "source_url": "https://doi.org/10.1016/j.neunet.2026.108576",
+            "title_similarity": 0.3937007874015748
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An EiC Transition and Continual Excellence",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/s0893-6080(25)01280-8",
+            "source_url": "https://doi.org/10.1016/s0893-6080(25)01280-8",
+            "title_similarity": 0.5360824742268041
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Continual Object Detection with Deep Neural Networks",
+            "authors": [
+              "Menezes"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/t.55.2023.tde-08012024-161234",
+            "source_url": "https://doi.org/10.11606/t.55.2023.tde-08012024-161234",
+            "title_similarity": 0.35514018691588783
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Class Incremental Continual Learning in Deep Neural Networks",
+            "authors": [
+              "Hocquet"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/b3bec60bzc6bfz492czbb74z8c20593dce01",
+            "source_url": "https://doi.org/10.70675/b3bec60bzc6bfz492czbb74z8c20593dce01",
+            "title_similarity": 0.34782608695652173
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:30.955659Z",
+        "response_sha256": "bbd6103b921dbe3f4ba44fdfe08fa19326aff7b0e0d2a5c31bd3a240436b8915",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Elephant+neural+networks%3A+Born+to+be+a+continual+learner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:30.956382Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A path towards autonomous machine intelligence version 0.9",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+path+towards+autonomous+machine+intelligence+version+0.9&rows=5",
+        "checked_at": "2026-10-09T04:43:31.488342Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Towards Exascale Computing for Autonomous Driving",
+            "authors": [
+              "Gurel"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/cemi.2018.8610529",
+            "source_url": "https://doi.org/10.1109/cemi.2018.8610529",
+            "title_similarity": 0.411214953271028
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "TOWARDS ROUTING FOR AUTONOMOUS ROBOTS - Using Constraint Programming in an Anytime Path Planner",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.5220/0003178703130320",
+            "source_url": "https://doi.org/10.5220/0003178703130320",
+            "title_similarity": 0.3973509933774834
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Comparison of path following controllers for autonomous vehicles",
+            "authors": [
+              "Domina",
+              "Tihanyi"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/sami.2019.8782719",
+            "source_url": "https://doi.org/10.1109/sami.2019.8782719",
+            "title_similarity": 0.4426229508196721
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Perception-Driven Path Planning Strategies for Safe Autonomous Vehicles",
+            "authors": [
+              "Gurrapu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.63282/3050-9262.ijaidsml-v7i1p151",
+            "source_url": "https://doi.org/10.63282/3050-9262.ijaidsml-v7i1p151",
+            "title_similarity": 0.3875968992248062
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reinforcement Learning–Driven Autonomous Decision-Making and Path Optimization for Industrial Robots",
+            "authors": [
+              "Qu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/mlcipr68329.2025.11407294",
+            "source_url": "https://doi.org/10.1109/mlcipr68329.2025.11407294",
+            "title_similarity": 0.3037974683544304
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:31.487152Z",
+        "response_sha256": "97a059a4ab3551886b6bc01a7716f45d07e67b80286fc0fe477c29f2ff49cb3f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+path+towards+autonomous+machine+intelligence+version+0.9&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:31.488342Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-25",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The utility of sparse representations for control in reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+utility+of+sparse+representations+for+control+in+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:33.640641Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:33.640567Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+utility+of+sparse+representations+for+control+in+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:33.640641Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Efficient offline policy optimization with a learned model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Efficient+offline+policy+optimization+with+a+learned+model&rows=5",
+        "checked_at": "2026-10-09T04:43:33.773728Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:33.773660Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Efficient+offline+policy+optimization+with+a+learned+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:33.773728Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gradient episodic memory for continual learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gradient+episodic+memory+for+continual+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:33.972591Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:33.972532Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gradient+episodic+memory+for+continual+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:33.972591Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning dynamics models for model predictive agents",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+dynamics+models+for+model+predictive+agents&rows=5",
+        "checked_at": "2026-10-09T04:43:32.703918Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Cross-Domain Generalization with Reverse Dynamics Models in Offline Model-Based Reinforcement Learning",
+            "authors": [
+              "Stoyanova",
+              "Tavakol"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013097200003890",
+            "source_url": "https://doi.org/10.5220/0013097200003890",
+            "title_similarity": 0.4805194805194805
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "FlowBoat: Learning USV Dynamics Model With Flow Matching for Adaptive Model Predictive Trajectory Tracking_supp1-3706892.mp4",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tie.2026.3706892/mm1",
+            "source_url": "https://doi.org/10.1109/tie.2026.3706892/mm1",
+            "title_similarity": 0.5485714285714286
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Exploring the Dynamics of Stock Markets: Mechanisms, Influences and Predictive Models",
+            "authors": [
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5220/0013487300004619",
+            "source_url": "https://doi.org/10.5220/0013487300004619",
+            "title_similarity": 0.5333333333333333
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Efficient adaptation of reinforcement learning agents : from model-free exploration to symbolic world models",
+            "authors": [
+              "Kamienny"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/eb3ca119z46c6z44c2zb8a4z75d2bd53def8",
+            "source_url": "https://doi.org/10.70675/eb3ca119z46c6z44c2zb8a4z75d2bd53def8",
+            "title_similarity": 0.26582278481012656
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Differentiable Model Predictive Excitation: Generating Optimal Data Sets for Learning of Dynamical System Models",
+            "authors": [
+              "Vater",
+              "Wallscheid"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.172840381.16440835/v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.172840381.16440835/v2",
+            "title_similarity": 0.31901840490797545
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:32.702553Z",
+        "response_sha256": "bf6300f7fc18b678db6357fd90c1f68ae246ca262c4b3f91c1c083be3e8d6018",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+dynamics+models+for+model+predictive+agents&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:32.703918Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Human-level control through deep reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Human-level+control+through+deep+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:34.875046Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Faculty Opinions recommendation of Human-level control through deep reinforcement learning.",
+            "authors": [
+              "Goodhill"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.3410/f.725368782.793506817",
+            "source_url": "https://doi.org/10.3410/f.725368782.793506817",
+            "title_similarity": 0.7586206896551724
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Faculty Opinions recommendation of Human-level control through deep reinforcement learning.",
+            "authors": [
+              "de Polavieja"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.3410/f.725368782.793509339",
+            "source_url": "https://doi.org/10.3410/f.725368782.793509339",
+            "title_similarity": 0.7586206896551724
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Enhancing Hvac Control Systems Through Transfer Learning with Deep Reinforcement Learning Agents",
+            "authors": [
+              "Kadamala",
+              "Chambers",
+              "Barrett"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4581832",
+            "source_url": "https://doi.org/10.2139/ssrn.4581832",
+            "title_similarity": 0.6490066225165563
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "European Sovereign Debt Control through Deep Reinforcement Learning and NMPC&amp;nbsp;",
+            "authors": [
+              "Khundadze",
+              "Semmler"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5133114",
+            "source_url": "https://doi.org/10.2139/ssrn.5133114",
+            "title_similarity": 0.7142857142857143
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep Reinforcement Learning for Fluid Dynamics and Control",
+            "authors": [
+              "Brunton"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.52843/cassyni.kvtnvy",
+            "source_url": "https://doi.org/10.52843/cassyni.kvtnvy",
+            "title_similarity": 0.4778761061946903
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:34.873749Z",
+        "response_sha256": "547a07a7b3c5cab1ace0b6e9d0d07190cbd1200c69638cee5b864eec07faaa35",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Human-level+control+through+deep+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:34.875046Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Prioritized sweeping: Reinforcement learning with less data and less time",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Prioritized+sweeping%3A+Reinforcement+learning+with+less+data+and+less+time&rows=5",
+        "checked_at": "2026-10-09T04:43:35.679395Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:35.679329Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Prioritized+sweeping%3A+Reinforcement+learning+with+less+data+and+less+time&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:35.679395Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep dynamics models for learning dexterous manipulation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+dynamics+models+for+learning+dexterous+manipulation&rows=5",
+        "checked_at": "2026-10-09T04:43:34.802010Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Object Shape Perception for Autonomous Dexterous Manipulation Based on Multi-Modal Learning Models",
+            "authors": [
+              "Tahoun"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/8298fd07z35b3z4c7az85c7zd9100d2bea8a",
+            "source_url": "https://doi.org/10.70675/8298fd07z35b3z4c7az85c7zd9100d2bea8a",
+            "title_similarity": 0.44155844155844154
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Symmetric models for dexterous robotic manipulation",
+            "authors": [
+              "Kohler"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20698939",
+            "source_url": "https://doi.org/10.17760/d20698939",
+            "title_similarity": 0.6915887850467289
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dexterous Pre-grasp Manipulation for Human-like Functional Categorical Grasping: Deep Reinforcement Learning and Grasp Representations_supp1-3541768.mp4",
+            "authors": [
+              "Pavlichenko"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tase.2025.3541768/mm1",
+            "source_url": "https://doi.org/10.1109/tase.2025.3541768/mm1",
+            "title_similarity": 0.21256038647342995
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multimodal perception for dexterous manipulation",
+            "authors": [
+              "Cao",
+              "Luo"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-32-390445-2.00010-6",
+            "source_url": "https://doi.org/10.1016/b978-0-32-390445-2.00010-6",
+            "title_similarity": 0.6346153846153846
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Robust dexterous manipulation and finger gaiting under various uncertainties",
+            "authors": [
+              "Fan"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/b978-0-32-390445-2.00024-6",
+            "source_url": "https://doi.org/10.1016/b978-0-32-390445-2.00024-6",
+            "title_similarity": 0.36363636363636365
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:34.799534Z",
+        "response_sha256": "cf7c818ef307dcbe5d430f7622696c572805a5cb30b95b04124d419010a47e08",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+dynamics+models+for+learning+dexterous+manipulation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:34.802010Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A modern introduction to online learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+modern+introduction+to+online+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:34.631119Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction: Challenging the Modern Synthesis",
+            "authors": [
+              "Walsh",
+              "Huneman"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1093/oso/9780199377176.003.0012",
+            "source_url": "https://doi.org/10.1093/oso/9780199377176.003.0012",
+            "title_similarity": 0.47058823529411764
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Introduction to Universals in Modern Philosophy",
+            "authors": [
+              "Di Bella",
+              "Schmaltz"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1093/acprof:oso/9780190608040.003.0001",
+            "source_url": "https://doi.org/10.1093/acprof:oso/9780190608040.003.0001",
+            "title_similarity": 0.5517241379310345
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1163/2352-0272_emho_sim_031351",
+            "source_url": "https://doi.org/10.1163/2352-0272_emho_sim_031351",
+            "title_similarity": 0.46153846153846156
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction: Learning in Modern International Society",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/978-3-531-90789-5_1",
+            "source_url": "https://doi.org/10.1007/978-3-531-90789-5_1",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Современное онлайн-обучение",
+            "authors": [
+              "Алиева",
+              "Баширова"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.34755/irok.2020.15.21.037",
+            "source_url": "https://doi.org/10.34755/irok.2020.15.21.037",
+            "title_similarity": 0.05970149253731343
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:34.629686Z",
+        "response_sha256": "83b16f8d77a71d6745352a4b04ca33ea9a0d5e50b4f56fad9f3504a8d5603a94",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+modern+introduction+to+online+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:34.631119Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-34",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hill climbing on value estimates for search-control in dyna",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hill+climbing+on+value+estimates+for+search-control+in+dyna&rows=5",
+        "checked_at": "2026-10-09T04:43:36.823393Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:36.823316Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hill+climbing+on+value+estimates+for+search-control+in+dyna&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:36.823393Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-35",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fuzzy tiling activations: A simple approach to learning sparse representations online",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fuzzy+tiling+activations%3A+A+simple+approach+to+learning+sparse+representations+online&rows=5",
+        "checked_at": "2026-10-09T04:43:37.452299Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:37.452250Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fuzzy+tiling+activations%3A+A+simple+approach+to+learning+sparse+representations+online&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:37.452299Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-36",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Efficient learning and planning within the dyna framework",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Efficient+learning+and+planning+within+the+dyna+framework&rows=5",
+        "checked_at": "2026-10-09T04:43:37.601758Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:37.601677Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Efficient+learning+and+planning+within+the+dyna+framework&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:37.601758Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-37",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Random features for large-scale kernel machines",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Random+features+for+large-scale+kernel+machines&rows=5",
+        "checked_at": "2026-10-09T04:43:34.877454Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Rffnet: Large-Scale Interpretable Kernel Methods Via Random Fourier Features",
+            "authors": [
+              "Otto",
+              "Izbicki"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5095787",
+            "source_url": "https://doi.org/10.2139/ssrn.5095787",
+            "title_similarity": 0.47540983606557374
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Index",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.7551/mitpress/7496.003.0019",
+            "source_url": "https://doi.org/10.7551/mitpress/7496.003.0019",
+            "title_similarity": 0.11538461538461539
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "References",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.7551/mitpress/7496.003.0017",
+            "source_url": "https://doi.org/10.7551/mitpress/7496.003.0017",
+            "title_similarity": 0.2807017543859649
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contributors",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.7551/mitpress/7496.003.0018",
+            "source_url": "https://doi.org/10.7551/mitpress/7496.003.0018",
+            "title_similarity": 0.1694915254237288
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preface",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.7551/mitpress/7496.003.0002",
+            "source_url": "https://doi.org/10.7551/mitpress/7496.003.0002",
+            "title_similarity": 0.2222222222222222
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:36:24.586013Z",
+        "response_sha256": "01b6062f810a8b6bed107b30095475abe43fd200ed9ef6eb48830e0eba624986",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Random+features+for+large-scale+kernel+machines&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:34.877454Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-38",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-38",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards generalization and simplicity in continuous control",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+generalization+and+simplicity+in+continuous+control&rows=5",
+        "checked_at": "2026-10-09T04:43:35.773802Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Towards Combating Frequency Simplicity-biased Learning for Domain Generalization",
+            "authors": [
+              "He",
+              "Hu",
+              "Lin",
+              "Luo",
+              "Xie",
+              "Song",
+              "Khan",
+              "Shen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0979",
+            "source_url": "https://doi.org/10.52202/079017-0979",
+            "title_similarity": 0.31654676258992803
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Symmetrized and continuous generalization of transversals",
+            "authors": [
+              "Kochol"
+            ],
+            "year": 1996,
+            "years": [
+              1996,
+              2008
+            ],
+            "doi": "10.21136/mb.1996.125937",
+            "source_url": "https://doi.org/10.21136/mb.1996.125937",
+            "title_similarity": 0.41379310344827586
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Towards Simplicity: Noise and Cooperation in the Perfect Integrator",
+            "authors": [
+              "Bulsara"
+            ],
+            "year": 1994,
+            "years": [
+              1994
+            ],
+            "doi": "10.21236/ada276256",
+            "source_url": "https://doi.org/10.21236/ada276256",
+            "title_similarity": 0.432
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Stabilization of quantum spin systems via continuous feedback control",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1049/pbce076e_ch12",
+            "source_url": "https://doi.org/10.1049/pbce076e_ch12",
+            "title_similarity": 0.578125
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reviewer #2 (Public Review): Evolution towards simplicity in bacterial small heat shock protein system",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7554/elife.89813.3.sa2",
+            "source_url": "https://doi.org/10.7554/elife.89813.3.sa2",
+            "title_similarity": 0.36942675159235666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:35.772370Z",
+        "response_sha256": "fd6a5dc66334f6d1a0d2ce6c80c0c77abd80bac3491dfb0d2299ff32241950d2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+generalization+and+simplicity+in+continuous+control&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:35.773802Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-40",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Online learning and online convex optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Online+learning+and+online+convex+optimization&rows=5",
+        "checked_at": "2026-10-09T04:43:36.738701Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Online Learning and Online Convex Optimization",
+            "authors": [
+              "Shalev-Shwartz"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1561/9781601985477",
+            "source_url": "https://doi.org/10.1561/9781601985477",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Online convex optimization: algorithms, learning, and duality",
+            "authors": [
+              "Portella"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/d.45.2019.tde-05062019-165924",
+            "source_url": "https://doi.org/10.11606/d.45.2019.tde-05062019-165924",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Online Learning and Online Convex Optimization",
+            "authors": [
+              "Shalev-Shwartz"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1561/2200000018",
+            "source_url": "https://doi.org/10.1561/2200000018",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction to Online Convex Optimization",
+            "authors": [
+              "Hazan"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1561/9781680831719",
+            "source_url": "https://doi.org/10.1561/9781680831719",
+            "title_similarity": 0.6818181818181818
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Online Convex Optimization",
+            "authors": [
+              "Ho-Nguyen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-3-030-54621-2_871-1",
+            "source_url": "https://doi.org/10.1007/978-3-030-54621-2_871-1",
+            "title_similarity": 0.7222222222222222
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:36.737376Z",
+        "response_sha256": "5fa3ad39d13e9f3734f0ec8e8fa7189840e01e431713f9490788277ca7f31692",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Online+learning+and+online+convex+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:36.738701Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-42",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the approximation properties of random relu features",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+approximation+properties+of+random+relu+features&rows=5",
+        "checked_at": "2026-10-09T04:43:37.722912Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Function Gradient Approximation with Random Shallow ReLU Networks with Control Applications",
+            "authors": [
+              "Lamperski",
+              "Salapaka"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.23919/acc63710.2025.11107609",
+            "source_url": "https://doi.org/10.23919/acc63710.2025.11107609",
+            "title_similarity": 0.5068493150684932
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Approximation with Random Shallow ReLU Networks with Applications to Model Reference Adaptive Control",
+            "authors": [
+              "Lamperski",
+              "Lekang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/cdc56724.2024.10886783",
+            "source_url": "https://doi.org/10.1109/cdc56724.2024.10886783",
+            "title_similarity": 0.41025641025641024
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Approximation properties of deep ReLU CNNs",
+            "authors": [
+              "He",
+              "Li",
+              "Xu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1007/s40687-022-00336-0",
+            "source_url": "https://doi.org/10.1007/s40687-022-00336-0",
+            "title_similarity": 0.7422680412371134
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Approximation properties of random shallow neural networks",
+            "authors": [
+              "Schavemaker"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.33540/3361",
+            "source_url": "https://doi.org/10.33540/3361",
+            "title_similarity": 0.7079646017699115
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Error Bounds for a Matrix-Vector Product Approximation with Deep ReLU Neural Networks",
+            "authors": [
+              "Getu"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.36227/techrxiv.12845753.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.12845753.v1",
+            "title_similarity": 0.45714285714285713
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:37.721649Z",
+        "response_sha256": "c67640f18f1b2c25770dfc5f6bacfdf6a113d7fb22901206a357608daed99ae7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+approximation+properties+of+random+relu+features&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:37.722912Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-43",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Integrated architectures for learning, planning, and reacting based on approximating dynamic programming",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Integrated+architectures+for+learning%2C+planning%2C+and+reacting+based+on+approximating+dynamic+programming&rows=5",
+        "checked_at": "2026-10-09T04:43:39.703472Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:39.703414Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Integrated+architectures+for+learning%2C+planning%2C+and+reacting+based+on+approximating+dynamic+programming&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:39.703472Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-45",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reinforcement learning: An introduction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5",
+        "checked_at": "2026-10-09T04:43:37.453490Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction: The Challenge of Reinforcement Learning",
+            "authors": [
+              "Sutton"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/978-1-4615-3618-5_1",
+            "source_url": "https://doi.org/10.1007/978-1-4615-3618-5_1",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Basic Mathematics behind Deep Reinforcement Learning",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1201/9781032659800-3",
+            "source_url": "https://doi.org/10.1201/9781032659800-3",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction of Reinforcement Learning (RL)",
+            "authors": [
+              "Xiao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-19-4933-3_1",
+            "source_url": "https://doi.org/10.1007/978-981-19-4933-3_1",
+            "title_similarity": 0.6075949367088608
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7551/mitpress/14207.003.0003",
+            "source_url": "https://doi.org/10.7551/mitpress/14207.003.0003",
+            "title_similarity": 0.48
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Reinforcement Learning",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1017/9781009023870.027",
+            "source_url": "https://doi.org/10.1017/9781009023870.027",
+            "title_similarity": 0.5789473684210527
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:28.141037Z",
+        "response_sha256": "d7b5edcd7d110dc7bb3209b412a9ae023a77aaf625bb28fdbdf3d6bfc59739da",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:37.453490Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-46",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-46",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The alberta plan for ai research",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+alberta+plan+for+ai+research&rows=5",
+        "checked_at": "2026-10-09T04:43:39.426289Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Prairie Coulees Natural Area : management plan /",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.5962/bhl.title.115325",
+            "source_url": "https://doi.org/10.5962/bhl.title.115325",
+            "title_similarity": 0.2894736842105263
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Sundance Provincial Park management plan",
+            "authors": [],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.5962/bhl.title.115182",
+            "source_url": "https://doi.org/10.5962/bhl.title.115182",
+            "title_similarity": 0.3055555555555556
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Gene conservation plan for native trees of Alberta.",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.5962/bhl.title.115366",
+            "source_url": "https://doi.org/10.5962/bhl.title.115366",
+            "title_similarity": 0.5609756097560976
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Miquelon Lake Provincial Park management plan",
+            "authors": [],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.5962/bhl.title.101485",
+            "source_url": "https://doi.org/10.5962/bhl.title.101485",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Alberta clubroot management plan /",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.5962/bhl.title.113814",
+            "source_url": "https://doi.org/10.5962/bhl.title.113814",
+            "title_similarity": 0.375
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:39.424542Z",
+        "response_sha256": "57bcf1263366aef0e21ec19f5ea797373debb8f7a66d352cae13497c3013f4b3",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+alberta+plan+for+ai+research&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:39.426289Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-47",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-47",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Self-correcting models for model-based reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Self-correcting+models+for+model-based+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:40.458166Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:40.458083Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Self-correcting+models+for+model-based+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:40.458166Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-48",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-48",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Benefits of depth in neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Benefits+of+depth+in+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:43:40.596669Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:40.596616Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Benefits+of+depth+in+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:40.596669Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-49",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-49",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mujoco: A physics engine for model-based control",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mujoco%3A+A+physics+engine+for+model-based+control&rows=5",
+        "checked_at": "2026-10-09T04:43:41.196067Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:41.195997Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mujoco%3A+A+physics+engine+for+model-based+control&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:41.196067Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-51",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Offline reinforcement learning with reverse model-based imagination",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Offline+reinforcement+learning+with+reverse+model-based+imagination&rows=5",
+        "checked_at": "2026-10-09T04:43:42.491485Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:42.491401Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Offline+reinforcement+learning+with+reverse+model-based+imagination&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:42.491485Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-52",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mopo: Model-basedofflinepolicyoptimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mopo%3A+Model-basedofflinepolicyoptimization&rows=5",
+        "checked_at": "2026-10-09T04:43:41.395395Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.3030/101158451",
+            "source_url": "https://doi.org/10.3030/101158451",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Software Design Principles for Digital Behavior Change Interventions - Lessons Learned from the MOPO Study",
+            "authors": [
+              "Tuovinen",
+              "Ahola",
+              "Kangas",
+              "Korpelainen",
+              "Siirtola",
+              "Luoto",
+              "Pyky",
+              "Röning",
+              "Jämsä"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.5220/0005656101750182",
+            "source_url": "https://doi.org/10.5220/0005656101750182",
+            "title_similarity": 0.09655172413793103
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3030/101095998",
+            "source_url": "https://doi.org/10.3030/101095998",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Preparation of Mesoporous Nanosized MoPO-AlPO&lt;SUB&gt;4&lt;/SUB&gt; and Its Catalytic Performance for Selective Oxidation of Isobutene",
+            "authors": [
+              "WANG",
+              "BI",
+              "ZHONG",
+              "XIAO"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.3724/sp.j.1088.2010.90634",
+            "source_url": "https://doi.org/10.3724/sp.j.1088.2010.90634",
+            "title_similarity": 0.21714285714285714
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MOPO-LSI: An open-source multi-objective portfolio optimization library for sustainable investments",
+            "authors": [
+              "Zheng",
+              "Shukla",
+              "Xu",
+              "Wang",
+              "O’Leary"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.simpa.2023.100499",
+            "source_url": "https://doi.org/10.1016/j.simpa.2023.100499",
+            "title_similarity": 0.37410071942446044
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:41.393385Z",
+        "response_sha256": "8c926d718c69ab537842d1e5730e7991995b071944ed2dee1a21712e3d24a19d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mopo%3A+Model-basedofflinepolicyoptimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:41.395395Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-53",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-53",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-53",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Continuallearningthroughsynapticintelligence",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Continuallearningthroughsynapticintelligence&rows=5",
+        "checked_at": "2026-10-09T04:43:43.485033Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:43.484981Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Continuallearningthroughsynapticintelligence&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:43.485033Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_016_openreview_2024_02_11_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_016_openreview_2024_02_11_credibility-54",
+        "paper_reference_id": "ref-paper_016_openreview_2024_02_11_credibility-54",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "robosuite: A modular simulation framework and benchmark for robot learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=robosuite%3A+A+modular+simulation+framework+and+benchmark+for+robot+learning&rows=5",
+        "checked_at": "2026-10-09T04:43:43.261621Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Development of a Learning Simulation Framework for Modular Robot Manipulator",
+            "authors": [
+              "Fuangpanichjaroen",
+              "Tirasuntarakul",
+              "Joochim"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1145/3625343.3625353",
+            "source_url": "https://doi.org/10.1145/3625343.3625353",
+            "title_similarity": 0.5771812080536913
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning Modular Robot Control Policies_supp1-3284362.mp4",
+            "authors": [
+              "Whitman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tro.2023.3284362/mm1",
+            "source_url": "https://doi.org/10.1109/tro.2023.3284362/mm1",
+            "title_similarity": 0.2923076923076923
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Biomedical Benchmark and Modular RAG Framework for Text2Cypher",
+            "authors": [
+              "Cavalleri",
+              "Kanaan",
+              "Mesiti"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10463153/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10463153/v1",
+            "title_similarity": 0.4233576642335766
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Design and Implementation of a Modular Human-Robot Interaction Framework",
+            "authors": [
+              "Juri"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.15368/theses.2021.108",
+            "source_url": "https://doi.org/10.15368/theses.2021.108",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "WITHDRAWN: CoppeliaSim: Adaptable modular robot and its different locomotions simulation framework",
+            "authors": [
+              "Rooban",
+              "Suraj",
+              "Vali",
+              "Dhanush"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.matpr.2021.01.055",
+            "source_url": "https://doi.org/10.1016/j.matpr.2021.01.055",
+            "title_similarity": 0.40236686390532544
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:43.260280Z",
+        "response_sha256": "08133c3533fe93b2d108b8bec11d03076cc7b560839621aa6d5b9ab25e1604af",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=robosuite%3A+A+modular+simulation+framework+and+benchmark+for+robot+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:43.261621Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-signal-repo-105c7fa85be7-1",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-105c7fa85be7-1",
+        "repository_id": "repo-105c7fa85be7",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/jannerm/mbpo/issues/1",
+        "source_title": "When I tried to reproduce the project environment with $ conda env create -f environment/gpu-env.yml encountered some problems",
+        "source_excerpt": "When I tried to reproduce the project environment with $ conda env create -f environment/gpu-env.yml encountered some problems\nFailed to build mujoco-py\r\nERROR: flask 1.1.1 has requirement Werkzeug>=0.15, but you'll have werkzeug 0.14.1 which is incompatible.\r\nERROR: awscli 1.16.67 has requirement PyYAML<=3.13,>=3.10, but you'll have pyyaml 4.2b4 which is incompatible.",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "closed",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:43:53.606571Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/jannerm/mbpo/issues/1#issuecomment-518003851",
+            "excerpt": "Maybe it need to clearly specify the version of flask and modify version of awscli/PyYAML in requirements.txt",
+            "login": "cmciris"
+          },
+          {
+            "source_url": "https://github.com/jannerm/mbpo/issues/1#issuecomment-518093951",
+            "excerpt": "Thanks for the heads-up. The version conflicts should be fixed as of commit 3f52a337b4d3e6732635cd37e24c81fab946db57. (`awscli` is not actually necessary for this code, since right now only running locally is supported.)",
+            "login": "jannerm"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/jannerm/mbpo/issues/1"
+      ],
+      "checked_at": "2026-10-09T04:43:53.606571Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.192982456140351
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 57,
+    "extracted_count": 57,
+    "parsed_count": 57,
+    "queried_count": 57,
+    "matched_count": 13,
+    "metadata_conflict_count": 3,
+    "unverified_count": 22,
+    "parse_failed_count": 0,
+    "not_checked_count": 0,
+    "query_failed_count": 19,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available"
+  ],
+  "created_at": "2026-10-09T06:14:41.773697Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

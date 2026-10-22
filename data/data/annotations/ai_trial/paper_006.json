@@ -1,0 +1,374 @@
+{
+  "assessment_id": "assessment_ai_paper_006_v3",
+  "paper_version_id": "paper_006_v3",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-07T06:08:19Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-legacy-audit-1",
+    "model_run_id": "model_run_codex_review_paper_006_v3",
+    "raw_output_sha256": "4666e93a99e83a82e52c7bb9859cd7712eb478ac7dac5aec2a195eb20e306509"
+  },
+  "paper_summary": "MathVista consolidates and extends visual mathematical reasoning datasets, supplies a broad taxonomy and evaluates twelve foundation models with detailed quantitative and qualitative analysis.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "A 6,141-example benchmark for mathematical reasoning in visual contexts.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_006_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Taxonomies of reasoning skills, tasks and visual contexts.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_006_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "Comprehensive evaluation and qualitative study of foundation models including GPT-4V.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_006_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Current leading multimodal models remain substantially below humans overall on MathVista.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_006_ev_002",
+        "paper_006_ev_004"
+      ]
+    },
+    {
+      "claim_id": "cl2",
+      "claim_text": "GPT-4V materially outperforms the other evaluated foundation models.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_006_ev_002",
+        "paper_006_ev_004"
+      ]
+    }
+  ],
+  "overall_score": 8.4,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "A highly useful benchmark paper with broad coverage, public resources, explicit protocols and unusually extensive analysis. Dataset composition and model-dependent answer extraction remain important limitations.",
+  "strengths": [
+    "Combines 28 existing datasets with three newly created datasets under a coherent taxonomy.",
+    "Reports human and model baselines across reasoning skills, tasks and visual contexts.",
+    "Publishes prompts, model settings, examples and fine-grained error analyses."
+  ],
+  "concerns": [
+    "A GPT-4-based answer extractor may introduce model-dependent evaluation bias.",
+    "Aggregation of many source datasets inherits heterogeneous annotation and licensing conditions.",
+    "Some proprietary-model evaluations are difficult to reproduce exactly."
+  ],
+  "unresolved_questions": [
+    "How stable are rankings under alternative answer extractors?",
+    "How should future versions control source-dataset contamination in pretrained models?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality evaluates the paper's positioning rather than an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Combines 28 existing datasets with three newly created datasets under a coherent taxonomy. A GPT-4-based answer extractor may introduce model-dependent evaluation bias.",
+      "strengths": [
+        "Combines 28 existing datasets with three newly created datasets under a coherent taxonomy."
+      ],
+      "weaknesses": [
+        "A GPT-4-based answer extractor may introduce model-dependent evaluation bias."
+      ],
+      "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_006_ev_001",
+        "paper_006_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Reports human and model baselines across reasoning skills, tasks and visual contexts. Aggregation of many source datasets inherits heterogeneous annotation and licensing conditions.",
+      "strengths": [
+        "Reports human and model baselines across reasoning skills, tasks and visual contexts."
+      ],
+      "weaknesses": [
+        "Aggregation of many source datasets inherits heterogeneous annotation and licensing conditions."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_006_ev_002",
+        "paper_006_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Publishes prompts, model settings, examples and fine-grained error analyses. Some proprietary-model evaluations are difficult to reproduce exactly.",
+      "strengths": [
+        "Publishes prompts, model settings, examples and fine-grained error analyses."
+      ],
+      "weaknesses": [
+        "Some proprietary-model evaluations are difficult to reproduce exactly."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_006_ev_003",
+        "paper_006_ev_001"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Publishes prompts, model settings, examples and fine-grained error analyses. Some proprietary-model evaluations are difficult to reproduce exactly.",
+      "strengths": [
+        "Publishes prompts, model settings, examples and fine-grained error analyses."
+      ],
+      "weaknesses": [
+        "Some proprietary-model evaluations are difficult to reproduce exactly."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_006_ev_001",
+        "paper_006_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Publishes prompts, model settings, examples and fine-grained error analyses. Some proprietary-model evaluations are difficult to reproduce exactly.",
+      "strengths": [
+        "Publishes prompts, model settings, examples and fine-grained error analyses."
+      ],
+      "weaknesses": [
+        "Some proprietary-model evaluations are difficult to reproduce exactly."
+      ],
+      "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_006_ev_005",
+        "paper_006_ev_004"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_006_ev_001",
+      "page_number": 1,
+      "section_id": "paper_006_v3_sec_abstract",
+      "section_title": "ABSTRACT",
+      "locator_type": "text",
+      "locator_label": "paper_006_v3_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "but their ability in mathematical reasoning in visual contexts has not been systematically studied. To bridge this gap, we present M ATH V ISTA , a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of 6,141 examples, derived from 28 existing multimodal datasets involving mathematics and 3 newly created datasets ( i.e. , IQTest, FunctionQA, and PaperQA). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging. With M ATH V ISTA , we have conducted a comprehensive, quantitative evaluation of12",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_006_ev_002",
+      "page_number": 1,
+      "section_id": "paper_006_v3_sec_abstract",
+      "section_title": "ABSTRACT",
+      "locator_type": "text",
+      "locator_label": "paper_006_v3_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "ducted a comprehensive, quantitative evaluation of12prominentfoundationmodels. Thebest-performingGPT-4Vmodelachieves an overall accuracy of 49.9%, substantially outperforming Bard, the second-best performer, by 15.1%. Our in-depth analysis reveals that the superiority of GPT- 4V is mainly attributed to its enhanced visual perception and mathematical reasoning. However, GPT-4V still falls short of human performance by 10.4%, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that M ATH V ISTA will play in the development of general-purpose AI agents capable of",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_006_ev_003",
+      "page_number": 3,
+      "section_id": "paper_006_v3_sec_1",
+      "section_title": "INTRODUCTION",
+      "locator_type": "text",
+      "locator_label": "paper_006_v3_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "nations caused by visual perception and textual reasoning (§3.5).\n\nWith M ATH V ISTA , we report, for the first time, a comprehensive quantitative and qualitative evaluation of GPT-4V (OpenAI, 2023b), the latest multimodal version of GPT-4. Remarkably, GPT-4V achieves a state-of-the-art accuracy of 49.9%, a significant improvement of 15.1% over Multimodal Bard. As illustrated in Figure 1, GPT-4V even surpasses human performance on a set of tasks involving algebraic reasoning and complex visual contexts, which include tables and function plots. Nevertheless, a 10.4% gap in overall accuracy remains when compared to the human baseline, leaving p",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_006_ev_004",
+      "page_number": 21,
+      "section_id": "paper_006_v3_sec_b",
+      "section_title": "LIMITATIONS OF THE BENCHMARK",
+      "locator_type": "text",
+      "locator_label": "paper_006_v3_chunk_0034",
+      "evidence_mode": "quote",
+      "excerpt": "Our benchmark, M ATH V ISTA , makes significant contributions by combining mathematical and visual tasks, a domain where existing models like GPT-4V have shown promise but also face challenges, especially in complex figure understanding and rigorous reasoning. While we have made strides in evaluating model performance, we acknowledge several limitations.\n\nOne limitation is the dataset coverage. While M ATH V ISTA encompasses a broad spectrum of tasks and visual contexts, there may be gaps in the representation of certain types of mathematical problems and visuals. Furthermore, the dataset’s focus on mathematical reasoning within visual contex",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_006_ev_005",
+      "page_number": 34,
+      "section_id": "paper_006_v3_sec_f_5",
+      "section_title": "MODEL HYPERPARAMETERS",
+      "locator_type": "text",
+      "locator_label": "paper_006_v3_chunk_0050",
+      "evidence_mode": "quote",
+      "excerpt": "The hyperparameters for the experiments in §3.2 are set to their default values unless specified otherwise. Table 11 and Table 12 detail specific generation parameters for the various large language models (LLMs) and large multimodal models (LMMs) we evaluated, respectively.\n\nModel Generation Setup Claude-2 model = claude-2 , temperature = 0, max tokens = 1024 ChatGPT model = gpt-3.5-turbo , temperature = 0, max tokens = 1024 GPT-4 model = gpt-4-0613 , temperature = 0, max tokens = 1024\n\nTable 11: Generating parameters for various LMMs.",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_006_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_006_ev_004",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_006_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_006_ev_004",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_006_ev_003",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_006_ev_001",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_006_ev_001",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_006_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_006_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_006_ev_004",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "unable_to_verify",
+      "detail": "random seed is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "unable_to_verify",
+      "detail": "hardware environment is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_006_ev_005"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

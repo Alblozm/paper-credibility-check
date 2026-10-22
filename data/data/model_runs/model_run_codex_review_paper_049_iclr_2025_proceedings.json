@@ -1,0 +1,198 @@
+{
+  "model_run_id": "model_run_codex_review_paper_049_iclr_2025_proceedings",
+  "paper_id": "paper_049",
+  "version": "iclr_2025_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "8a0e8409c504e6c4f4602a15c6a3dc2ac4597b6a5615f2724d86ff88e4787ff5",
+  "raw_output": {
+    "paper_summary": "Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeated invocations of traditional solvers to generate training labels, and (2) plausible yet infeasible solutions due to the misalignment between the training objective (minimizing prediction loss) and the inference objective (generating high-quality solutions). To tackle this challenge, we propose DiffILO ( Diff erentiable I nteger L inear Programming O ptimization), an unsupervised learnin",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Differentiable Integer Linear Programming》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeat",
+      "论文提供方法或实证支持：In the main text, our main baseline is the PS method, which is a representative supervised learning approach. In this section, we include three additional baselines as follows, and the experimental results on the SC dataset are shown in Table 6 and Figure 8. C"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeat；边界证据为：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim",
+        "strengths": [
+          "可定位正文支持：Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeat"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：In the main text, our main baseline is the PS method, which is a representative supervised learning approach. In this section, we include three additional baselines as follows, and the experimental results on the SC dataset are shown in Table 6 and Figure 8. C；边界证据为：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim",
+        "strengths": [
+          "可定位正文支持：In the main text, our main baseline is the PS method, which is a representative supervised learning approach. In this section, we include three additional baselines as follows, and the experimental results on the SC dataset are shown in Table 6 and Figure 8. C"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0034"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Integer linear programs (ILPs) are powerful tools in various areas such as operations research, mathematics, and engineering (Bixby et al., 2004; Bengio et al., 2021). They are able to model a broad range of combinatorial optimization (CO) problems and find di；边界证据为：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim",
+        "strengths": [
+          "可定位正文支持：Integer linear programs (ILPs) are powerful tools in various areas such as operations research, mathematics, and engineering (Bixby et al., 2004; Bengio et al., 2021). They are able to model a broad range of combinatorial optimization (CO) problems and find di"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：Differentiable approaches aim to construct a differentiable optimization objectives, facilitating the straightforward application of gradient descent methods in an unsupervised, end-to-end manner. These methods have been effectively implemented in fields such ；边界证据为：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim",
+        "strengths": [
+          "可定位正文支持：Differentiable approaches aim to construct a differentiable optimization objectives, facilitating the straightforward application of gradient descent methods in an unsupervised, end-to-end manner. These methods have been effectively implemented in fields such "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0006"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：So far, we have transformed the original ILP problem into a continuous, unconstrained, and differentiable (a.e.) problem that can be efficiently solved using straightforward gradient descent. Building on this transformation, we introduce the model implementati；边界证据为：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim",
+        "strengths": [
+          "可定位正文支持：So far, we have transformed the original ILP problem into a continuous, unconstrained, and differentiable (a.e.) problem that can be efficiently solved using straightforward gradient descent. Building on this transformation, we introduce the model implementati"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Sub-optimality DiffILO is an unsupervised learning approach, which does not learn from the optimal solutions found by traditional solvers, but instead learns to produce solutions itself. There are reasonable concerns that DiffILO may tend to generate sub-optim"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0012"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0014"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到random_seed披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0017"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0012"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0014"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0012"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeated invocations of traditional solvers to generate training labels, and (2) plausible yet infeasible solutions due to the misalignment between the training objective (minimizing prediction loss) and the inference objective (generating high-quality solutions). To tackle this challenge, we propose DiffILO ( Diff erentiable I nteger L inear Programming O ptimization), an unsupervised learnin",
+        "type": "method_or_finding",
+        "chunk_id": "paper_049_iclr_2025_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Machine learning (ML) techniques have shown great potential in generating highquality solutions for integer linear programs (ILPs). However, existing methods typically rely on a supervised learning paradigm, leading to (1) expensive training cost due to repeated invocations of traditional solvers to generate training labels, and (2) plausible yet infeasible solutions due to the misalignment between the training objec",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0034"
+        ],
+        "limiting_chunk_ids": [
+          "paper_049_iclr_2025_proceedings_chunk_0042"
+        ]
+      }
+    ]
+  }
+}

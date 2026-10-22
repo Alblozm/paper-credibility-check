@@ -1,0 +1,291 @@
+{
+  "paper_summary": "The paper proposes a new representation learning method and evaluates it on three public benchmarks.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "contrib_01",
+      "statement": "The paper proposes a new learning method.",
+      "contribution_type": "method",
+      "evidence_links": [
+        {
+          "evidence_id": "ev_01",
+          "stance": "supports",
+          "reason": "The introduction explicitly presents this as a contribution."
+        }
+      ]
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "claim_01",
+      "claim": "The proposed method outperforms the main baselines.",
+      "support_level": "partially_supported",
+      "reasoning": "The main result table shows improvements, but some ablations are missing.",
+      "confidence": "medium",
+      "evidence_links": [
+        {
+          "evidence_id": "ev_02",
+          "stance": "supports",
+          "reason": "Table 2 reports improvements over the listed baselines, while the setup leaves some comparability questions."
+        }
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "research_value",
+      "display_name": "Research Value & Significance",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "summary": "The problem is relevant and the results may be useful.",
+      "confidence": "medium",
+      "uncertainty_reason": null,
+      "evidence_links": [
+        {
+          "evidence_id": "ev_01",
+          "stance": "supports",
+          "reason": "The paper motivation and stated contribution support the research-value assessment."
+        }
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "display_name": "Soundness & Evidence Support",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "summary": "The main claim is supported, with some missing ablations.",
+      "confidence": "medium",
+      "uncertainty_reason": null,
+      "evidence_links": [
+        {
+          "evidence_id": "ev_02",
+          "stance": "supports",
+          "reason": "The main results support the core performance claim but do not resolve all ablation concerns."
+        }
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "display_name": "Originality & Positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "summary": "The contribution is differentiated from the cited baselines.",
+      "confidence": "medium",
+      "uncertainty_reason": null,
+      "evidence_links": [
+        {
+          "evidence_id": "ev_03",
+          "stance": "supports",
+          "reason": "The related-work discussion differentiates the method from the main cited approaches."
+        }
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "display_name": "Clarity & Usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "summary": "The paper is generally clear and well structured.",
+      "confidence": "high",
+      "uncertainty_reason": null,
+      "evidence_links": [
+        {
+          "evidence_id": "ev_04",
+          "stance": "supports",
+          "reason": "The structured method description supports the clarity assessment."
+        }
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "display_name": "Reproducibility & Transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "summary": "Code and hyperparameters are available, but seeds are missing.",
+      "confidence": "high",
+      "uncertainty_reason": null,
+      "evidence_links": [
+        {
+          "evidence_id": "ev_05",
+          "stance": "supports",
+          "reason": "The implementation details report code and hyperparameters but omit seeds and a complete environment."
+        }
+      ]
+    }
+  ],
+  "reproducibility_checklist": [
+    {
+      "check_id": "code_availability",
+      "display_name": "Code availability",
+      "status": "available",
+      "detail": "A code repository is linked in the paper.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "The implementation details provide a code repository link."}
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "display_name": "Data availability",
+      "status": "available",
+      "detail": "The evaluated datasets are publicly identified.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "The implementation details identify the evaluated public datasets."}
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "display_name": "Random seed",
+      "status": "not_available",
+      "detail": "No random seed is reported in the reviewed material.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "A full-paper check did not identify a reported random seed."}
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "display_name": "Hyperparameters",
+      "status": "available",
+      "detail": "Key training hyperparameters are reported.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "The implementation details report key training hyperparameters."}
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "display_name": "Hardware and environment",
+      "status": "not_available",
+      "detail": "The hardware and software environment is not fully reported.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "A full-paper check did not identify a complete hardware and software environment."}
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "display_name": "Preprocessing details",
+      "status": "unable_to_verify",
+      "detail": "The available text is insufficient to verify all preprocessing steps.",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "The available implementation details are insufficient to verify every preprocessing step."}
+      ]
+    }
+  ],
+  "strengths": [
+    {
+      "finding_id": "finding_01",
+      "title": "Relevant research problem",
+      "detail": "The paper addresses a problem that is relevant to the target community.",
+      "importance": "major",
+      "confidence": "medium",
+      "evidence_links": [
+        {"evidence_id": "ev_01", "stance": "supports", "reason": "The motivation and stated contribution show relevance to the target community."}
+      ]
+    }
+  ],
+  "concerns": [
+    {
+      "finding_id": "finding_02",
+      "title": "Incomplete reporting details",
+      "detail": "Random seeds and the full execution environment are not reported.",
+      "importance": "major",
+      "confidence": "high",
+      "evidence_links": [
+        {"evidence_id": "ev_05", "stance": "supports", "reason": "A full-paper check found code and hyperparameters but did not identify seeds or a complete execution environment."}
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "question_id": "question_01",
+      "question": "Would the reported improvement remain under matched training budgets?",
+      "why_it_matters": "This affects the fairness of the baseline comparison.",
+      "evidence_links": [
+        {"evidence_id": "ev_02", "stance": "context", "reason": "The results table reports baseline comparisons, but the available setup does not establish matched training budgets."}
+      ]
+    }
+  ],
+  "overall_assessment": {
+    "overall_score": 7.2,
+    "rating": "good",
+    "summary": "The paper is worth reading, with several issues to verify.",
+    "reading_recommendation": "worth_reading_with_checks",
+    "recommendation_reason": "The main contribution has support, but reporting transparency is incomplete.",
+    "confidence": "medium",
+    "is_provisional": false,
+    "calculation": {
+      "method": "weighted_average",
+      "assessed_dimension_count": 5,
+      "excluded_dimension_ids": []
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_01",
+      "page_number": 1,
+      "section_id": "sec_01",
+      "section_title": "Introduction",
+      "locator_type": "text",
+      "locator_label": null,
+      "evidence_mode": "paraphrase",
+      "excerpt": "The paper motivates the problem as...",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "ev_02",
+      "page_number": 6,
+      "section_id": "sec_04",
+      "section_title": "4.2 Main Results",
+      "locator_type": "table",
+      "locator_label": "Table 2",
+      "evidence_mode": "paraphrase",
+      "excerpt": "Table 2 reports improvements over the listed baselines.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "ev_03",
+      "page_number": 2,
+      "section_id": "sec_02",
+      "section_title": "Related Work",
+      "locator_type": "text",
+      "locator_label": null,
+      "evidence_mode": "paraphrase",
+      "excerpt": "The paper contrasts the proposed method with the main cited approaches.",
+      "location_confidence": "medium"
+    },
+    {
+      "evidence_id": "ev_04",
+      "page_number": 3,
+      "section_id": "sec_03",
+      "section_title": "Method",
+      "locator_type": "text",
+      "locator_label": null,
+      "evidence_mode": "paraphrase",
+      "excerpt": "The method and its main components are described in a structured sequence.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "ev_05",
+      "page_number": 10,
+      "section_id": "sec_appendix",
+      "section_title": "Implementation Details",
+      "locator_type": "text",
+      "locator_label": null,
+      "evidence_mode": "paraphrase",
+      "excerpt": "The appendix provides a repository link and key hyperparameters, but does not identify random seeds or a complete execution environment.",
+      "location_confidence": "medium"
+    }
+  ],
+  "limitations": [
+    "The system does not run the paper's code or reproduce experiments.",
+    "Originality is assessed mainly from the paper's own literature positioning."
+  ],
+  "generated_at": "2026-08-25T10:03:25Z"
+}

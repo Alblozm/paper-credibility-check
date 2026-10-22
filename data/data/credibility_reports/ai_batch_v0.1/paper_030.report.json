@@ -1,0 +1,2700 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-8467eb55de2b3433",
+  "paper_version_id": "paper_030_openreview_2024_02_11",
+  "pdf_sha256": "b4d865ac6a01c53d6cbb19ef9a93fb8ea40d9c98748f8a662297d7a14e058b7d",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "d0aae8a5b9c1ae0dfe2e1bd27148ceca4f40de91966e60738f2657ea98ce9011",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 5.909090909090909,
+  "overall_category": "significant_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 3.727272727272727,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 33,
+        "extracted_count": 33,
+        "parsed_count": 32,
+        "queried_count": 32,
+        "matched_count": 0,
+        "metadata_conflict_count": 2,
+        "unverified_count": 16,
+        "parse_failed_count": 1,
+        "not_checked_count": 0,
+        "query_failed_count": 14,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=10eQ4Cfh8p",
+            "checked_at": "2026-10-09T04:49:18.118877Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”A review on swarm intelligence and evolutionary algorithms for solving flexible job shop scheduling problems.” IEEE/CAA Journal of Automatica Sinica 6, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+review+on+swarm+intelligence+and+evolutionary+algorithms+for+solving+flexible+job+shop+scheduling+problems.%E2%80%9D+IEEE%2FCAA+Journal+of+Automatica+Sinica+6%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:05.212010Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A review on swarm intelligence and evolutionary algorithms for solving flexible job shop scheduling problems",
+            "authors": [
+              "Gao",
+              "Cao",
+              "Zhang",
+              "Chen",
+              "Han",
+              "Pan"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/jas.2019.1911540",
+            "source_url": "https://doi.org/10.1109/jas.2019.1911540",
+            "title_similarity": 0.833976833976834
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Review on Representative Swarm Intelligence Algorithms for Solving Optimization Problems: Applications and Trends",
+            "authors": [
+              "Tang",
+              "Liu",
+              "Pan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/jas.2021.1004129",
+            "source_url": "https://doi.org/10.1109/jas.2021.1004129",
+            "title_similarity": 0.5735849056603773
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Genetic Algorithms for Solving Flexible Job Shop Scheduling Problems",
+            "authors": [
+              "Kacem"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1002/9781118731598.ch2",
+            "source_url": "https://doi.org/10.1002/9781118731598.ch2",
+            "title_similarity": 0.6118721461187214
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multi-agent ReinforcementLearning for Solving Flexible Job Shop Scheduling Problems",
+            "authors": [
+              "Schmalzel",
+              "Springer",
+              "Schöler"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1201/9781032690711-5",
+            "source_url": "https://doi.org/10.1201/9781032690711-5",
+            "title_similarity": 0.5299145299145299
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Advances in Hybrid Evolutionary Algorithms for Fuzzy Flexible Job-shop Scheduling: State-of-the-Art Survey",
+            "authors": [
+              "Gen",
+              "Lin",
+              "Ohwada"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.5220/0010429605620573",
+            "source_url": "https://doi.org/10.5220/0010429605620573",
+            "title_similarity": 0.59375
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:05.210652Z",
+        "response_sha256": "e39005ec6412b56ede677ecd8602ed69df9689655bc4d9b975191a1dda1b0f41",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+review+on+swarm+intelligence+and+evolutionary+algorithms+for+solving+flexible+job+shop+scheduling+problems.%E2%80%9D+IEEE%2FCAA+Journal+of+Automatica+Sinica+6%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:05.212010Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Review on flexible job shop scheduling.” IET Collaborative Intelligent Manufacturing 1, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DReview+on+flexible+job+shop+scheduling.%E2%80%9D+IET+Collaborative+Intelligent+Manufacturing+1%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:05.614759Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Review on flexible job shop scheduling",
+            "authors": [
+              "Xie",
+              "Gao",
+              "Peng",
+              "Li",
+              "Li"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1049/iet-cim.2018.0009",
+            "source_url": "https://doi.org/10.1049/iet-cim.2018.0009",
+            "title_similarity": 0.608
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A survival duration‐guided NSGA‐III for sustainable flexible job shop scheduling problem considering dual resources",
+            "authors": [
+              "Hongyu",
+              "Xiuli"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1049/cim2.12003",
+            "source_url": "https://doi.org/10.1049/cim2.12003",
+            "title_similarity": 0.48514851485148514
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamic Node Entropy QMIX Algorithm for Flexible Job Shop Dynamic Scheduling Problem",
+            "authors": [
+              "Zhang",
+              "Zhang",
+              "Hu",
+              "Chen",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1049/cim2.70077",
+            "source_url": "https://doi.org/10.1049/cim2.70077",
+            "title_similarity": 0.42105263157894735
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "NSGA‐III for solving dynamic flexible job shop scheduling problem considering deterioration effect",
+            "authors": [
+              "Wu",
+              "Li",
+              "Shen",
+              "Zhao"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1049/iet-cim.2019.0056",
+            "source_url": "https://doi.org/10.1049/iet-cim.2019.0056",
+            "title_similarity": 0.518918918918919
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A hybrid particle swarm optimisation for flexible casting job shop scheduling problem with batch processing machine",
+            "authors": [
+              "Zhang",
+              "Zhuang",
+              "Tang",
+              "Li",
+              "Guo"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1049/cim2.12117",
+            "source_url": "https://doi.org/10.1049/cim2.12117",
+            "title_similarity": 0.4752475247524752
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:05.612559Z",
+        "response_sha256": "978f3df7cb0c65d491c1226bc58a23a97ceda5039b5abe396e84cb93c0fbe89c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DReview+on+flexible+job+shop+scheduling.%E2%80%9D+IET+Collaborative+Intelligent+Manufacturing+1%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:05.614759Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Mathematical models for job-shop scheduling problems with routing and process plan flexibility.” Applied Mathematical Modelling 34, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DMathematical+models+for+job-shop+scheduling+problems+with+routing+and+process+plan+flexibility.%E2%80%9D+Applied+Mathematical+Modelling+34%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:07.242243Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:07.242167Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DMathematical+models+for+job-shop+scheduling+problems+with+routing+and+process+plan+flexibility.%E2%80%9D+Applied+Mathematical+Modelling+34%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:07.242243Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "M¨ uller, Dominik Kress, and Erwin Pesch",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=M%C2%A8+uller%2C+Dominik+Kress%2C+and+Erwin+Pesch&rows=5",
+        "checked_at": "2026-10-09T04:49:05.468949Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Osen, Erwin Dominik",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00133792",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00133792",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Sequential competitive location on networks",
+            "authors": [
+              "Kress",
+              "Pesch"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1016/j.ejor.2011.06.036",
+            "source_url": "https://doi.org/10.1016/j.ejor.2011.06.036",
+            "title_similarity": 0.3
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An Integrated Matching and Partitioning Problem with Applications in Intermodal Transport",
+            "authors": [
+              "Pesch",
+              "Kress",
+              "Meiswinkel"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/ssci.2015.245",
+            "source_url": "https://doi.org/10.1109/ssci.2015.245",
+            "title_similarity": 0.23809523809523808
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Decentralized sequencing of jobs on a single machine",
+            "authors": [
+              "Pesch",
+              "Kovalyov",
+              "Kress",
+              "Meiswinkel"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/ssci.2016.7850053",
+            "source_url": "https://doi.org/10.1109/ssci.2016.7850053",
+            "title_similarity": 0.20224719101123595
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Competitive location under proportional choice: 1-suboptimal points on networks",
+            "authors": [
+              "Kress",
+              "Pesch"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7494/dmms.2012.6.2.53",
+            "source_url": "https://doi.org/10.7494/dmms.2012.6.2.53",
+            "title_similarity": 0.2782608695652174
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:05.466688Z",
+        "response_sha256": "36f242088eca8d9d9671c60ddca77c3c8119b44bff8cb79c841354970436ae5c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=M%C2%A8+uller%2C+Dominik+Kress%2C+and+Erwin+Pesch&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:05.468949Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Betancourt, Kevin Parra Negrete, Fabio De Felice, and Antonella Petrillo",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Betancourt%2C+Kevin+Parra+Negrete%2C+Fabio+De+Felice%2C+and+Antonella+Petrillo&rows=5",
+        "checked_at": "2026-10-09T04:49:07.239063Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:07.239010Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Betancourt%2C+Kevin+Parra+Negrete%2C+Fabio+De+Felice%2C+and+Antonella+Petrillo&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:07.239063Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Scheduling of flexible manufacturing systems based on Petri nets and hybrid heuristic search.” International Journal of Production Research 46, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DScheduling+of+flexible+manufacturing+systems+based+on+Petri+nets+and+hybrid+heuristic+search.%E2%80%9D+International+Journal+of+Production+Research+46%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:07.793870Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Scheduling of flexible manufacturing systems based on Petri nets and hybrid heuristic search",
+            "authors": [
+              "Huang",
+              "Sun",
+              "Sun"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1080/00207540600698878",
+            "source_url": "https://doi.org/10.1080/00207540600698878",
+            "title_similarity": 0.7829787234042553
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hybrid heuristic search approach for deadlock-free scheduling of flexible manufacturing systems using Petri nets",
+            "authors": [
+              "Lei",
+              "Xing",
+              "Han",
+              "Gao"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1016/j.asoc.2017.01.045",
+            "source_url": "https://doi.org/10.1016/j.asoc.2017.01.045",
+            "title_similarity": 0.4549019607843137
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Petri Net-Based Heuristic Scheduling for Flexible Manufacturing",
+            "authors": [
+              "Lee",
+              "DiCesare"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1007/978-1-4615-2231-7_6",
+            "source_url": "https://doi.org/10.1007/978-1-4615-2231-7_6",
+            "title_similarity": 0.33980582524271846
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Hybrid heuristic search for the scheduling of flexible manufacturing systems using Petri nets",
+            "authors": [
+              "Moro",
+              "Yu",
+              "Kelleher"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1109/tra.2002.999652",
+            "source_url": "https://doi.org/10.1109/tra.2002.999652",
+            "title_similarity": 0.4915254237288136
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multiple objective scheduling for flexible manufacturing systems using Petri nets and heuristic search",
+            "authors": [
+              "Seong Jin Yim",
+              "Doo Yong Lee"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icsmc.1996.561439",
+            "source_url": "https://doi.org/10.1109/icsmc.1996.561439",
+            "title_similarity": 0.636734693877551
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:07.792364Z",
+        "response_sha256": "9680439e2c7f285e490f40a194118467d70a76a84680fad27dfd264a16fb54d8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DScheduling+of+flexible+manufacturing+systems+based+on+Petri+nets+and+hybrid+heuristic+search.%E2%80%9D+International+Journal+of+Production+Research+46%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:07.793870Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-7",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "¨ ”Heuristic approaches for scheduling jobs in large-scale flexible job shops.” Computers & Operations Research 68 (2016): 97-109.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%C2%A8+%E2%80%9DHeuristic+approaches+for+scheduling+jobs+in+large-scale+flexible+job+shops.%E2%80%9D+Computers+%26+Operations+Research+68+%282016%29%3A+97-109.&rows=5",
+        "checked_at": "2026-10-09T04:49:08.301864Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:08.301800Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%C2%A8+%E2%80%9DHeuristic+approaches+for+scheduling+jobs+in+large-scale+flexible+job+shops.%E2%80%9D+Computers+%26+Operations+Research+68+%282016%29%3A+97-109.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:08.301864Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-8",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-9",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Path-relinking Tabu search for the multi-objective flexible job shop scheduling problem.” Computers & Operations Research 47 (2014): 11-26.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DPath-relinking+Tabu+search+for+the+multi-objective+flexible+job+shop+scheduling+problem.%E2%80%9D+Computers+%26+Operations+Research+47+%282014%29%3A+11-26.&rows=5",
+        "checked_at": "2026-10-09T04:49:08.506475Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:08.506430Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DPath-relinking+Tabu+search+for+the+multi-objective+flexible+job+shop+scheduling+problem.%E2%80%9D+Computers+%26+Operations+Research+47+%282014%29%3A+11-26.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:08.506475Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”A self-learning genetic algorithm based on reinforcement learning for flexible job-shop scheduling problem.” Computers & Industrial Engineering 149 (2020): 106778.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+self-learning+genetic+algorithm+based+on+reinforcement+learning+for+flexible+job-shop+scheduling+problem.%E2%80%9D+Computers+%26+Industrial+Engineering+149+%282020%29%3A+106778.&rows=5",
+        "checked_at": "2026-10-09T04:49:08.593289Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A self-learning genetic algorithm based on reinforcement learning for flexible job-shop scheduling problem",
+            "authors": [
+              "Chen",
+              "Yang",
+              "Li",
+              "Wang"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.cie.2020.106778",
+            "source_url": "https://doi.org/10.1016/j.cie.2020.106778",
+            "title_similarity": 0.8122605363984674
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep reinforcement learning-based memetic algorithm for energy-aware flexible job shop scheduling with multi-AGV",
+            "authors": [
+              "Zhang",
+              "Li",
+              "Gong"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.cie.2024.109917",
+            "source_url": "https://doi.org/10.1016/j.cie.2024.109917",
+            "title_similarity": 0.47191011235955055
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Graph Embedding Algorithm Based on Reinforcement Learning for Solving Fuzzy Multi-Objective Flexible Job Shop Scheduling Problem",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.23977/ieim.2025.080114",
+            "source_url": "https://doi.org/10.23977/ieim.2025.080114",
+            "title_similarity": 0.631578947368421
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Flexible job-shop scheduling problem with job precedence constraints and interval grey processing time",
+            "authors": [
+              "Zhu",
+              "Zhou"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.cie.2020.106781",
+            "source_url": "https://doi.org/10.1016/j.cie.2020.106781",
+            "title_similarity": 0.3968871595330739
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A learning interactive genetic algorithm based on edge selection encoding for assembly job shop scheduling problem",
+            "authors": [
+              "Guo",
+              "Lei",
+              "Song",
+              "Lyu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.cie.2021.107455",
+            "source_url": "https://doi.org/10.1016/j.cie.2021.107455",
+            "title_similarity": 0.6096654275092936
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:08.591366Z",
+        "response_sha256": "aaca23ba49a82d5b8946c4e9ea61762e3afa780fc30eeb72557f487144447324",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+self-learning+genetic+algorithm+based+on+reinforcement+learning+for+flexible+job-shop+scheduling+problem.%E2%80%9D+Computers+%26+Industrial+Engineering+149+%282020%29%3A+106778.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:08.593289Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”An efficient two-stage genetic algorithm for a flexible job-shop scheduling problem with sequence dependent attached/detached setup, machine release date and lag-time.” Computers & Industrial Engineering 147 (2020): 106605.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DAn+efficient+two-stage+genetic+algorithm+for+a+flexible+job-shop+scheduling+problem+with+sequence+dependent+attached%2Fdetached+setup%2C+machine+release+date+and+lag-time.%E2%80%9D+Computers+%26+Industrial+Engineering+147+%282020%29%3A+106605.&rows=5",
+        "checked_at": "2026-10-09T04:49:10.279481Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:10.279405Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DAn+efficient+two-stage+genetic+algorithm+for+a+flexible+job-shop+scheduling+problem+with+sequence+dependent+attached%2Fdetached+setup%2C+machine+release+date+and+lag-time.%E2%80%9D+Computers+%26+Industrial+Engineering+147+%282020%29%3A+106605.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:10.279481Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Smart manufacturing scheduling with edge computing using multiclass deep Q network.” IEEE Transactions on Industrial Informatics 15, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DSmart+manufacturing+scheduling+with+edge+computing+using+multiclass+deep+Q+network.%E2%80%9D+IEEE+Transactions+on+Industrial+Informatics+15%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:08.793466Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Smart Manufacturing Scheduling With Edge Computing Using Multiclass Deep Q Network",
+            "authors": [
+              "Lin",
+              "Deng",
+              "Chih",
+              "Chiu"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/tii.2019.2908210",
+            "source_url": "https://doi.org/10.1109/tii.2019.2908210",
+            "title_similarity": 0.7663551401869159
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Hybrid Computing Solution and Resource Scheduling Strategy for Edge Computing in Smart Manufacturing",
+            "authors": [
+              "Li",
+              "Wan",
+              "Dai",
+              "Imran",
+              "Xia",
+              "Celesti"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/tii.2019.2899679",
+            "source_url": "https://doi.org/10.1109/tii.2019.2899679",
+            "title_similarity": 0.1623931623931624
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Deep Learning Model for Smart Manufacturing Using Convolutional LSTM Neural Network Autoencoders",
+            "authors": [
+              "Essien",
+              "Giannetti"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/tii.2020.2967556",
+            "source_url": "https://doi.org/10.1109/tii.2020.2967556",
+            "title_similarity": 0.3826086956521739
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Tasks Scheduling and Resource Allocation in Fog Computing Based on Containers for Smart Manufacturing",
+            "authors": [
+              "Yin",
+              "Luo",
+              "Luo"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/tii.2018.2851241",
+            "source_url": "https://doi.org/10.1109/tii.2018.2851241",
+            "title_similarity": 0.1630901287553648
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning-based Edge Computing Architecture for Regional Scheduling in Manufacturing System",
+            "authors": [
+              "Xue",
+              "Zeng",
+              "Yu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/indin45523.2021.9557389",
+            "source_url": "https://doi.org/10.1109/indin45523.2021.9557389",
+            "title_similarity": 0.1981981981981982
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:08.791674Z",
+        "response_sha256": "15b53271060027219f1b253f863f9d9c9dd43c90020bcca8fd90c7d5cbff2a11",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DSmart+manufacturing+scheduling+with+edge+computing+using+multiclass+deep+Q+network.%E2%80%9D+IEEE+Transactions+on+Industrial+Informatics+15%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:08.793466Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Dynamic job-shop scheduling in smart manufacturing using deep reinforcement learning.” Computer Networks 190 (2021): 107969.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDynamic+job-shop+scheduling+in+smart+manufacturing+using+deep+reinforcement+learning.%E2%80%9D+Computer+Networks+190+%282021%29%3A+107969.&rows=5",
+        "checked_at": "2026-10-09T04:49:09.473603Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dynamic job-shop scheduling in smart manufacturing using deep reinforcement learning",
+            "authors": [
+              "Wang",
+              "Hu",
+              "Wang",
+              "Xu",
+              "Ma",
+              "Yang",
+              "Liu",
+              "Wang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.comnet.2021.107969",
+            "source_url": "https://doi.org/10.1016/j.comnet.2021.107969",
+            "title_similarity": 0.8316831683168316
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Job shop smart manufacturing scheduling by deep reinforcement learning for Industry 4.0",
+            "authors": [
+              "Serrano Ruiz"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.4995/thesis/10251/202871",
+            "source_url": "https://doi.org/10.4995/thesis/10251/202871",
+            "title_similarity": 0.6829268292682927
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamic job shop scheduling based on deep reinforcement learning for multi-agent manufacturing systems",
+            "authors": [
+              "Zhang",
+              "Zhu",
+              "Tang",
+              "Zhou",
+              "Gui"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.rcim.2022.102412",
+            "source_url": "https://doi.org/10.1016/j.rcim.2022.102412",
+            "title_similarity": 0.5727272727272728
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Smart scheduling of dynamic job shop based on discrete event simulation and deep reinforcement learning",
+            "authors": [
+              "Wang",
+              "Liao"
+            ],
+            "year": 2023,
+            "years": [
+              2023,
+              2024
+            ],
+            "doi": "10.1007/s10845-023-02161-w",
+            "source_url": "https://doi.org/10.1007/s10845-023-02161-w",
+            "title_similarity": 0.497737556561086
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A Hierarchical Multi-Action Deep Reinforcement Learning Method for Dynamic Distributed Job-Shop Scheduling Problem With Job Arrivals_supp1-3380644.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tase.2024.3380644/mm1",
+            "source_url": "https://doi.org/10.1109/tase.2024.3380644/mm1",
+            "title_similarity": 0.417910447761194
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:09.471650Z",
+        "response_sha256": "239edbeb9fbdd0f080145b8acc40c6e273d5d66a08482bfaf02d35bc703fecb0",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDynamic+job-shop+scheduling+in+smart+manufacturing+using+deep+reinforcement+learning.%E2%80%9D+Computer+Networks+190+%282021%29%3A+107969.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:09.473603Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Deep reinforcement learning for semiconductor production scheduling.” In 2018 29th annual SEMI advanced semiconductor manufacturing conference (ASMC), pp",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDeep+reinforcement+learning+for+semiconductor+production+scheduling.%E2%80%9D+In+2018+29th+annual+SEMI+advanced+semiconductor+manufacturing+conference+%28ASMC%29%2C+pp&rows=5",
+        "checked_at": "2026-10-09T04:49:09.352752Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep reinforcement learning for semiconductor production scheduling",
+            "authors": [
+              "Waschneck",
+              "Reichstaller",
+              "Belzner",
+              "Altenmuller",
+              "Bauernhansl",
+              "Knapp",
+              "Kyek"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/asmc.2018.8373191",
+            "source_url": "https://doi.org/10.1109/asmc.2018.8373191",
+            "title_similarity": 0.6232558139534884
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "2018 29th Annual SEMI Advanced Semiconductor Manufacturing Conference (ASMC)",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/asmc43002.2018",
+            "source_url": "https://doi.org/10.1109/asmc43002.2018",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Reinforcement Learning for Efficient Scheduling in Complex Semiconductor Equipment",
+            "authors": [
+              "Suerich",
+              "Young"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/asmc49169.2020.9185293",
+            "source_url": "https://doi.org/10.1109/asmc49169.2020.9185293",
+            "title_similarity": 0.5826086956521739
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Standardising utility savings",
+            "authors": [
+              "Czerniak",
+              "Neuber"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/asmc.2018.8373136",
+            "source_url": "https://doi.org/10.1109/asmc.2018.8373136",
+            "title_similarity": 0.14689265536723164
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Minimally invasive servicing design",
+            "authors": [
+              "Strocchia-Rivera"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/asmc.2018.8373219",
+            "source_url": "https://doi.org/10.1109/asmc.2018.8373219",
+            "title_similarity": 0.12021857923497267
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:09.349678Z",
+        "response_sha256": "6a3e045484b4b32701bece81bdbf0eb8e69f2c9c1cdf0f28c44f7d44b988a2f0",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDeep+reinforcement+learning+for+semiconductor+production+scheduling.%E2%80%9D+In+2018+29th+annual+SEMI+advanced+semiconductor+manufacturing+conference+%28ASMC%29%2C+pp&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:09.352752Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Intelligent scheduling of discrete automated production line via deep reinforcement learning.” International journal of production research 58, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DIntelligent+scheduling+of+discrete+automated+production+line+via+deep+reinforcement+learning.%E2%80%9D+International+journal+of+production+research+58%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:11.402170Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:11.402053Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DIntelligent+scheduling+of+discrete+automated+production+line+via+deep+reinforcement+learning.%E2%80%9D+International+journal+of+production+research+58%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:11.402170Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Actor-critic deep reinforcement learning for solving job shop scheduling problems.” Ieee Access 8 (2020): 71752-71762.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DActor-critic+deep+reinforcement+learning+for+solving+job+shop+scheduling+problems.%E2%80%9D+Ieee+Access+8+%282020%29%3A+71752-71762.&rows=5",
+        "checked_at": "2026-10-09T04:49:11.158557Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Actor-Critic Deep Reinforcement Learning for Solving Job Shop Scheduling Problems",
+            "authors": [
+              "Liu",
+              "Chang",
+              "Tseng"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/access.2020.2987820",
+            "source_url": "https://doi.org/10.1109/access.2020.2987820",
+            "title_similarity": 0.8393782383419689
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An actor-critic framework based on deep reinforcement learning for addressing flexible job shop scheduling problems",
+            "authors": [
+              "Zhao",
+              "Deng"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3934/mbe.2024062",
+            "source_url": "https://doi.org/10.3934/mbe.2024062",
+            "title_similarity": 0.6872246696035242
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An effective deep actor-critic reinforcement learning method for solving the flexible job shop scheduling problem",
+            "authors": [
+              "Wan",
+              "Cui",
+              "Zhao",
+              "Li",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/s00521-024-09654-6",
+            "source_url": "https://doi.org/10.1007/s00521-024-09654-6",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Application of Grey Wolf Optimization for Solving Combinatorial Problems: Job Shop and Flexible Job Shop Scheduling Cases",
+            "authors": [
+              "Jiang",
+              "Zhang"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/access.2018.2833552",
+            "source_url": "https://doi.org/10.1109/access.2018.2833552",
+            "title_similarity": 0.39655172413793105
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Cooperative Metaheuristic Approaches for Solving the Flexible Job Shop Scheduling Problem: A Sensitivity Analysis of the Search Parameters via an Actor-Critic PPO Reinforcement Learning",
+            "authors": [
+              "Hussein",
+              "AlNammi",
+              "Azab"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.mfglet.2026.07.017",
+            "source_url": "https://doi.org/10.1016/j.mfglet.2026.07.017",
+            "title_similarity": 0.39864864864864863
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:11.157066Z",
+        "response_sha256": "fb5582c758257a9389923ed69c1528f58ede5b71e152028eeeb3d784fc7b0556",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DActor-critic+deep+reinforcement+learning+for+solving+job+shop+scheduling+problems.%E2%80%9D+Ieee+Access+8+%282020%29%3A+71752-71762.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:11.158557Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Matrix encoding networks for neural combinatorial optimization.” Advances in Neural Information Processing Systems 34 (2021): 5138-5149.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DMatrix+encoding+networks+for+neural+combinatorial+optimization.%E2%80%9D+Advances+in+Neural+Information+Processing+Systems+34+%282021%29%3A+5138-5149.&rows=5",
+        "checked_at": "2026-10-09T04:49:12.153115Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:12.153063Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DMatrix+encoding+networks+for+neural+combinatorial+optimization.%E2%80%9D+Advances+in+Neural+Information+Processing+Systems+34+%282021%29%3A+5138-5149.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:12.153115Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gomez, Łukasz Kaiser, and Illia Polosukhin",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gomez%2C+%C5%81ukasz+Kaiser%2C+and+Illia+Polosukhin&rows=5",
+        "checked_at": "2026-10-09T04:49:12.280191Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:12.280120Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gomez%2C+%C5%81ukasz+Kaiser%2C+and+Illia+Polosukhin&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:12.280191Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Deep reinforcement learning based optimization algorithm for permutation flow-shop scheduling.” IEEE Transactions on Emerging Topics in Computational Intelligence (2021).",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDeep+reinforcement+learning+based+optimization+algorithm+for+permutation+flow-shop+scheduling.%E2%80%9D+IEEE+Transactions+on+Emerging+Topics+in+Computational+Intelligence+%282021%29.&rows=5",
+        "checked_at": "2026-10-09T04:49:11.350208Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep Reinforcement Learning Based Optimization Algorithm for Permutation Flow-Shop Scheduling",
+            "authors": [
+              "Pan",
+              "Wang",
+              "Wang",
+              "Lu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tetci.2021.3098354",
+            "source_url": "https://doi.org/10.1109/tetci.2021.3098354",
+            "title_similarity": 0.7209302325581395
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Spatiotemporal Graph Neural Network Based Deep Reinforcement Learning Method for Online Distributed Job-Shop Scheduling Problem",
+            "authors": [
+              "Huang",
+              "Gao",
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/tetci.2025.3628751",
+            "source_url": "https://doi.org/10.1109/tetci.2025.3628751",
+            "title_similarity": 0.4217687074829932
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Flow-Shop Scheduling Problem With Batch Processing Machines via Deep Reinforcement Learning for Industrial Internet of Things",
+            "authors": [
+              "Luo",
+              "Jiang",
+              "Liu",
+              "Zheng",
+              "Ma"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/tetci.2024.3402685",
+            "source_url": "https://doi.org/10.1109/tetci.2024.3402685",
+            "title_similarity": 0.3310344827586207
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Bi-Population Cooperative Memetic Algorithm for Distributed Hybrid Flow-Shop Scheduling",
+            "authors": [
+              "Wang",
+              "Wang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/tetci.2020.3022372",
+            "source_url": "https://doi.org/10.1109/tetci.2020.3022372",
+            "title_similarity": 0.4015748031496063
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Knowledge-Based Reinforcement Learning and Estimation of Distribution Algorithm for Flexible Job Shop Scheduling Problem",
+            "authors": [
+              "Du",
+              "Li",
+              "Chen",
+              "Duan",
+              "Pan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tetci.2022.3145706",
+            "source_url": "https://doi.org/10.1109/tetci.2022.3145706",
+            "title_similarity": 0.5403508771929825
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:11.348507Z",
+        "response_sha256": "adf8226da04eb5df46ba8239852b55221353fc584412abe3ceba66bc89b70604",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDeep+reinforcement+learning+based+optimization+algorithm+for+permutation+flow-shop+scheduling.%E2%80%9D+IEEE+Transactions+on+Emerging+Topics+in+Computational+Intelligence+%282021%29.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:11.350208Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Yu Philip",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Yu+Philip&rows=5",
+        "checked_at": "2026-10-09T04:49:14.052384Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:14.052321Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Yu+Philip&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:14.052384Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Learning to dispatch for job shop scheduling via deep reinforcement learning.” Advances in Neural Information Processing Systems 33 (2020): 1621-1632.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DLearning+to+dispatch+for+job+shop+scheduling+via+deep+reinforcement+learning.%E2%80%9D+Advances+in+Neural+Information+Processing+Systems+33+%282020%29%3A+1621-1632.&rows=5",
+        "checked_at": "2026-10-09T04:49:12.156977Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Intelligent job shop scheduling via deep reinforcement learning over graphs",
+            "authors": [
+              "Zhang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/164926",
+            "source_url": "https://doi.org/10.32657/10356/164926",
+            "title_similarity": 0.5844748858447488
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Distributed Flexible Job Shop Scheduling With Heterogeneous Transportation Resources Constraints via Deep Reinforcement Learning and Graph Neural Network_supp1-3656196.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tsmc.2026.3656196/mm1",
+            "source_url": "https://doi.org/10.1109/tsmc.2026.3656196/mm1",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning to Dispatch for Flexible Job Shop Scheduling Based on Deep Reinforcement Learning via Graph Gated Channel Transformation",
+            "authors": [
+              "Huang",
+              "Zhao",
+              "Zhang",
+              "Chen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/access.2024.3384923",
+            "source_url": "https://doi.org/10.1109/access.2024.3384923",
+            "title_similarity": 0.6813186813186813
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A deep reinforcement learning approach for an adaptive job shop\n                    scheduling",
+            "authors": [
+              "Belsare"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20429179",
+            "source_url": "https://doi.org/10.17760/d20429179",
+            "title_similarity": 0.44036697247706424
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Efficient Scheduling of Data Augmentation for Deep Reinforcement Learning",
+            "authors": [
+              "Ko",
+              "Ok"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-2412",
+            "source_url": "https://doi.org/10.52202/068431-2412",
+            "title_similarity": 0.4055299539170507
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:12.155772Z",
+        "response_sha256": "1ca6610d396f749aae381edd4e2846e5e06147b5f6677e0c1305f57c57dfa685",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DLearning+to+dispatch+for+job+shop+scheduling+via+deep+reinforcement+learning.%E2%80%9D+Advances+in+Neural+Information+Processing+Systems+33+%282020%29%3A+1621-1632.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:12.156977Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”A multi-graph attributed reinforcement learning based optimization algorithm for large-scale hybrid flow shop scheduling problem.” In Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data Mining, pp",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+multi-graph+attributed+reinforcement+learning+based+optimization+algorithm+for+large-scale+hybrid+flow+shop+scheduling+problem.%E2%80%9D+In+Proceedings+of+the+27th+ACM+SIGKDD+Conference+on+Knowledge+Discovery+%26+Data+Mining%2C+pp&rows=5",
+        "checked_at": "2026-10-09T04:49:12.745368Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Multi-Graph Attributed Reinforcement Learning based Optimization Algorithm for Large-scale Hybrid Flow Shop Scheduling Problem",
+            "authors": [
+              "Ni",
+              "Hao",
+              "Lu",
+              "Tong",
+              "Yuan",
+              "Duan",
+              "Ma",
+              "He"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3447548.3467135",
+            "source_url": "https://doi.org/10.1145/3447548.3467135",
+            "title_similarity": 0.7463556851311953
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GAT-MF: Graph Attention Mean Field for Very Large Scale Multi-Agent Reinforcement Learning",
+            "authors": [
+              "Hao",
+              "Huang",
+              "Feng",
+              "Yuan",
+              "Li"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1145/3580305.3599359",
+            "source_url": "https://doi.org/10.1145/3580305.3599359",
+            "title_similarity": 0.2565789473684211
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multi-Objective Model-based Reinforcement Learning for Infectious Disease Control",
+            "authors": [
+              "Wan",
+              "Zhang",
+              "Song"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3447548.3467303",
+            "source_url": "https://doi.org/10.1145/3447548.3467303",
+            "title_similarity": 0.3581081081081081
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multi-graph Multi-label Learning with Dual-granularity Labeling",
+            "authors": [
+              "Zhao",
+              "Wang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3447548.3467339",
+            "source_url": "https://doi.org/10.1145/3447548.3467339",
+            "title_similarity": 0.28776978417266186
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Automated Machine Learning on Graph",
+            "authors": [
+              "Wang",
+              "Zhu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3447548.3470804",
+            "source_url": "https://doi.org/10.1145/3447548.3470804",
+            "title_similarity": 0.2
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:12.743526Z",
+        "response_sha256": "21815d85790e997f7d5c0fd552ed8d9b614ceb139ae633e02a5875b4c0d3d8e4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+multi-graph+attributed+reinforcement+learning+based+optimization+algorithm+for+large-scale+hybrid+flow+shop+scheduling+problem.%E2%80%9D+In+Proceedings+of+the+27th+ACM+SIGKDD+Conference+on+Knowledge+Discovery+%26+Data+Mining%2C+pp&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:12.745368Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-23",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Dynamic multi-objective scheduling for flexible job shop by deep reinforcement learning.” Computers & Industrial Engineering 159 (2021): 107489.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDynamic+multi-objective+scheduling+for+flexible+job+shop+by+deep+reinforcement+learning.%E2%80%9D+Computers+%26+Industrial+Engineering+159+%282021%29%3A+107489.&rows=5",
+        "checked_at": "2026-10-09T04:49:14.959184Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:14.959096Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDynamic+multi-objective+scheduling+for+flexible+job+shop+by+deep+reinforcement+learning.%E2%80%9D+Computers+%26+Industrial+Engineering+159+%282021%29%3A+107489.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:14.959184Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Yang",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Yang&rows=5",
+        "checked_at": "2026-10-09T04:49:13.571639Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Chromosome-level genome assembly of Hippophae gyantsensis",
+            "authors": [
+              "Chen",
+              "Yang",
+              "Yang",
+              "Yang",
+              "Chen",
+              "Yang",
+              "Yang",
+              "Yang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1038/s41597-024-02909-w",
+            "source_url": "https://doi.org/10.1038/s41597-024-02909-w",
+            "title_similarity": 0.09836065573770492
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "High-quality genome assembly of Aglaia odorata reveals evolution, terpenes diversity and abundance in Meliaceae",
+            "authors": [
+              "Chen",
+              "Yang",
+              "Yang",
+              "Yin",
+              "Yang",
+              "Yang",
+              "Yang",
+              "Yang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1186/s43897-025-00212-9",
+            "source_url": "https://doi.org/10.1186/s43897-025-00212-9",
+            "title_similarity": 0.05263157894736842
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Chromosome-level genome assembly of Hippophae rhamnoides variety",
+            "authors": [
+              "Yang",
+              "Luo",
+              "Yang",
+              "Duoji",
+              "Wang",
+              "Chen",
+              "Yang",
+              "Yang",
+              "Wan",
+              "Yang",
+              "Liu",
+              "Yang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1038/s41597-024-03549-w",
+            "source_url": "https://doi.org/10.1038/s41597-024-03549-w",
+            "title_similarity": 0.08823529411764706
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Intermediate States of Rhenium in Alkaline Solution",
+            "authors": [
+              "Yang",
+              "Yang",
+              "Yang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4958711",
+            "source_url": "https://doi.org/10.2139/ssrn.4958711",
+            "title_similarity": 0.07272727272727272
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Xiaoguang Yang",
+            "authors": [
+              "Yang"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1287/ba8e9fd3-4f88-462c-82c5-b54b00b616f9",
+            "source_url": "https://doi.org/10.1287/ba8e9fd3-4f88-462c-82c5-b54b00b616f9",
+            "title_similarity": 0.4444444444444444
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:13.570151Z",
+        "response_sha256": "f142a8b7f773a2e72fcb35edc4d9afe94ef1f3751caf0f0bf81192b6c4eb24d7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Yang&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:13.571639Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-25",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Effective neighbourhood functions for the flexible job shop problem.” Journal of scheduling 3, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DEffective+neighbourhood+functions+for+the+flexible+job+shop+problem.%E2%80%9D+Journal+of+scheduling+3%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:15.269465Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:15.269411Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DEffective+neighbourhood+functions+for+the+flexible+job+shop+problem.%E2%80%9D+Journal+of+scheduling+3%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:15.269465Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Graph attention networks.” arXiv preprint arXiv:1710.10903 (2017).",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DGraph+attention+networks.%E2%80%9D+arXiv+preprint+arXiv%3A1710.10903+%282017%29.&rows=5",
+        "checked_at": "2026-10-09T04:49:13.502618Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.38095238095238093
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "arXiv FAQs",
+            "authors": [
+              "Tobschall"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.65527/agvr3-yps31",
+            "source_url": "https://doi.org/10.65527/agvr3-yps31",
+            "title_similarity": 0.19718309859154928
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.30303030303030304
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "arXiv FAQs",
+            "authors": [
+              "Tobschall"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.65527/d2wy3-xeq22",
+            "source_url": "https://doi.org/10.65527/d2wy3-xeq22",
+            "title_similarity": 0.19718309859154928
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:13.499913Z",
+        "response_sha256": "9038eea98918505fd641a385b5104eafd14ad8af49a9a52440622a4088da12ec",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DGraph+attention+networks.%E2%80%9D+arXiv+preprint+arXiv%3A1710.10903+%282017%29.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:13.502618Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Dueling network architectures for deep reinforcement learning.” In International conference on machine learning, pp",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDueling+network+architectures+for+deep+reinforcement+learning.%E2%80%9D+In+International+conference+on+machine+learning%2C+pp&rows=5",
+        "checked_at": "2026-10-09T04:49:15.734636Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A State Representation Dueling Network for Deep Reinforcement Learning",
+            "authors": [
+              "Qiu",
+              "Liu"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/ictai50040.2020.00107",
+            "source_url": "https://doi.org/10.1109/ictai50040.2020.00107",
+            "title_similarity": 0.5164835164835165
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reinforcement Learning Based PCB Routing Using Dueling Double Deep Q Network",
+            "authors": [
+              "Xiang",
+              "Liang",
+              "Xiao",
+              "Zhang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icicm63644.2024.10814351",
+            "source_url": "https://doi.org/10.1109/icicm63644.2024.10814351",
+            "title_similarity": 0.3191489361702128
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Optimization of Air Network Resources Based on Deep Reinforcement Learning",
+            "authors": [
+              "Zhang",
+              "Cui"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/mlise62164.2024.10674492",
+            "source_url": "https://doi.org/10.1109/mlise62164.2024.10674492",
+            "title_similarity": 0.4731182795698925
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Comparing deep reinforcement learning architectures for autonomous racing",
+            "authors": [
+              "Evans",
+              "Jordaan",
+              "Engelbrecht"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mlwa.2023.100496",
+            "source_url": "https://doi.org/10.1016/j.mlwa.2023.100496",
+            "title_similarity": 0.4540540540540541
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep Q Network (DQN), Double DQN, and Dueling DQN",
+            "authors": [
+              "Sewak"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1007/978-981-13-8285-7_8",
+            "source_url": "https://doi.org/10.1007/978-981-13-8285-7_8",
+            "title_similarity": 0.2929936305732484
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:15.733056Z",
+        "response_sha256": "22ebfaa083105cf4aeaa8dc5e7204a4a5d661e5e0ed8c957e861ac8b275f863c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DDueling+network+architectures+for+deep+reinforcement+learning.%E2%80%9D+In+International+conference+on+machine+learning%2C+pp&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:15.734636Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "0 (1997): 281-306.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=0+%281997%29%3A+281-306.&rows=5",
+        "checked_at": "2026-10-09T04:49:16.435454Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:16.435388Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=0+%281997%29%3A+281-306.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:16.435454Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”Flexible Job-Shop Scheduling via Graph Neural Network and Deep Reinforcement Learning.” IEEE Transactions on Industrial Informatics 19, no",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DFlexible+Job-Shop+Scheduling+via+Graph+Neural+Network+and+Deep+Reinforcement+Learning.%E2%80%9D+IEEE+Transactions+on+Industrial+Informatics+19%2C+no&rows=5",
+        "checked_at": "2026-10-09T04:49:15.180156Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Flexible Job-Shop Scheduling via Graph Neural Network and Deep Reinforcement Learning",
+            "authors": [
+              "Song",
+              "Chen",
+              "Li",
+              "Cao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tii.2022.3189725",
+            "source_url": "https://doi.org/10.1109/tii.2022.3189725",
+            "title_similarity": 0.7727272727272727
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Distributed Flexible Job Shop Scheduling With Heterogeneous Transportation Resources Constraints via Deep Reinforcement Learning and Graph Neural Network_supp1-3656196.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tsmc.2026.3656196/mm1",
+            "source_url": "https://doi.org/10.1109/tsmc.2026.3656196/mm1",
+            "title_similarity": 0.5098039215686274
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamic Scheduling for Flexible Job Shop with Insufficient Transportation Resources Via Graph Neural Network and Deep Reinforcement Learning",
+            "authors": [
+              "Zhang",
+              "Wang",
+              "Qiu",
+              "Liu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4485519",
+            "source_url": "https://doi.org/10.2139/ssrn.4485519",
+            "title_similarity": 0.5672727272727273
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Reinforcement Learning With Heterogeneous Graph Neural Network for Flexible Job Shop Scheduling Problem",
+            "authors": [
+              "Liu",
+              "Yin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/swc62898.2024.00198",
+            "source_url": "https://doi.org/10.1109/swc62898.2024.00198",
+            "title_similarity": 0.2716049382716049
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Dynamic scheduling for flexible job shop with insufficient transportation resources via graph neural network and deep reinforcement learning",
+            "authors": [
+              "Zhang",
+              "Wang",
+              "Qiu",
+              "Liu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.cie.2023.109718",
+            "source_url": "https://doi.org/10.1016/j.cie.2023.109718",
+            "title_similarity": 0.5672727272727273
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:15.177521Z",
+        "response_sha256": "312ec3d96fefa8a2101c858ec6c2011c598c411367c5a384232211cf80753f13",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DFlexible+Job-Shop+Scheduling+via+Graph+Neural+Network+and+Deep+Reinforcement+Learning.%E2%80%9D+IEEE+Transactions+on+Industrial+Informatics+19%2C+no&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:15.180156Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-30",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "”A multi-action deep reinforcement learning framework for flexible Job-shop scheduling problem.” Expert Systems with Applications 205 (2022): 117796.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+multi-action+deep+reinforcement+learning+framework+for+flexible+Job-shop+scheduling+problem.%E2%80%9D+Expert+Systems+with+Applications+205+%282022%29%3A+117796.&rows=5",
+        "checked_at": "2026-10-09T04:49:17.746375Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:17.746306Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%E2%80%9DA+multi-action+deep+reinforcement+learning+framework+for+flexible+Job-shop+scheduling+problem.%E2%80%9D+Expert+Systems+with+Applications+205+%282022%29%3A+117796.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:17.746375Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-31",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Routing and scheduling in a flexible job shop by tabu search,",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Routing+and+scheduling+in+a+flexible+job+shop+by+tabu+search%2C&rows=5",
+        "checked_at": "2026-10-09T04:49:17.268966Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Peer Review #2 of \"A global-local neighborhood search algorithm and tabu search for flexible job shop scheduling problem (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.574v0.1/reviews/2",
+            "source_url": "https://doi.org/10.7287/peerj-cs.574v0.1/reviews/2",
+            "title_similarity": 0.37158469945355194
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Peer Review #1 of \"A global-local neighborhood search algorithm and tabu search for flexible job shop scheduling problem (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.574v0.1/reviews/1",
+            "source_url": "https://doi.org/10.7287/peerj-cs.574v0.1/reviews/1",
+            "title_similarity": 0.37158469945355194
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Routing and scheduling in a flexible job shop by tabu search",
+            "authors": [
+              "Brandimarte"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1007/bf02023073",
+            "source_url": "https://doi.org/10.1007/bf02023073",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Genetic Algorithm Combined with Tabu Search in a Holonic Multiagent Model for Flexible Job Shop Scheduling Problem",
+            "authors": [
+              "Nouri",
+              "Belkahla Driss",
+              "Ghédira"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.5220/0005348105730584",
+            "source_url": "https://doi.org/10.5220/0005348105730584",
+            "title_similarity": 0.42528735632183906
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Knowledge-Based Self-Learning Tabu Search Algorithm for Mixed-Model Flexible Assembly Job Shop Scheduling with Equal Splitting",
+            "authors": [
+              "Jiang",
+              "Tang",
+              "Cheng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5235556",
+            "source_url": "https://doi.org/10.2139/ssrn.5235556",
+            "title_similarity": 0.22580645161290322
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:17.266651Z",
+        "response_sha256": "0e0d9be21b39d12444af93686f508eccef70a5440fdb207710ff89a7f8bb624e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Routing+and+scheduling+in+a+flexible+job+shop+by+tabu+search%2C&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:17.268966Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-32",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Long short-term memory,",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Long+short-term+memory%2C&rows=5",
+        "checked_at": "2026-10-09T04:49:18.118211Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:18.118168Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Long+short-term+memory%2C&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:18.118211Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_030_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_030_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_030_openreview_2024_02_11_credibility-33",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Tabu search for the job-shop scheduling problem with multi-purpose machines,",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Tabu+search+for+the+job-shop+scheduling+problem+with+multi-purpose+machines%2C&rows=5",
+        "checked_at": "2026-10-09T04:49:16.725053Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Tabu search for the job-shop scheduling problem with multi-purpose machines",
+            "authors": [
+              "Hurink",
+              "Jurisch",
+              "Thole"
+            ],
+            "year": 1994,
+            "years": [
+              1994
+            ],
+            "doi": "10.1007/bf01719451",
+            "source_url": "https://doi.org/10.1007/bf01719451",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Some New Results on Tabu Search Algorithm Applied to the Job-Shop Scheduling Problem",
+            "authors": [
+              "Zhang",
+              "Shao",
+              "Rao",
+              "Qiu"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.5772/5593",
+            "source_url": "https://doi.org/10.5772/5593",
+            "title_similarity": 0.5786163522012578
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Peer Review #2 of \"A global-local neighborhood search algorithm and tabu search for flexible job shop scheduling problem (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.574v0.1/reviews/2",
+            "source_url": "https://doi.org/10.7287/peerj-cs.574v0.1/reviews/2",
+            "title_similarity": 0.47474747474747475
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Peer Review #1 of \"A global-local neighborhood search algorithm and tabu search for flexible job shop scheduling problem (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.574v0.1/reviews/1",
+            "source_url": "https://doi.org/10.7287/peerj-cs.574v0.1/reviews/1",
+            "title_similarity": 0.47474747474747475
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A Tabu Search Algorithm for Job/Flow/Open Shop Scheduling Problems with Parallel Machines to Minimize Makespan",
+            "authors": [
+              "Wardono"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4156123",
+            "source_url": "https://doi.org/10.2139/ssrn.4156123",
+            "title_similarity": 0.6486486486486487
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:49:16.723632Z",
+        "response_sha256": "8b10addce9f31774910eab4b30be8ccef8918c4ee75d8b31a61609a67a0284ba",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Tabu+search+for+the+job-shop+scheduling+problem+with+multi-purpose+machines%2C&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:49:16.725053Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 3.727272727272727
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 33,
+    "extracted_count": 33,
+    "parsed_count": 32,
+    "queried_count": 32,
+    "matched_count": 0,
+    "metadata_conflict_count": 2,
+    "unverified_count": 16,
+    "parse_failed_count": 1,
+    "not_checked_count": 0,
+    "query_failed_count": 14,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.804408Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

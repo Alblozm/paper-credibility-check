@@ -1,0 +1,196 @@
+{
+  "model_run_id": "model_run_codex_review_paper_046_iclr_2025_proceedings",
+  "paper_id": "paper_046",
+  "version": "iclr_2025_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "2d6b8dbb4ec56d2c6cafa5414e3fef2455940401dd91e3f841f6edd7d6f98f96",
+  "raw_output": {
+    "paper_summary": "As synthetic data becomes increasingly popular in machine learning tasks, numerous methods---without formal differential privacy guarantees---use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the original training data.In this work, we explore four different training paradigms: coreset selection, dataset distillation, data-free knowledge distillation, and synthetic data generated from diffusion models. While all these methods utilize synthetic data for training, they lead to vastly different conclusions regarding privacy preservation. We caution that empirical approaches to ",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Does Training with Synthetic Data Truly Protect Privacy?》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：As synthetic data becomes increasingly popular in machine learning tasks, numerous methods—without formal differential privacy guarantees—use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the",
+      "论文提供方法或实证支持：In this section, we investigate how membership information of mislabeled canaries is transferred from the teacher to the student model through the use of dissimilar synthetic data. As demonstrated in Figure 9, the teacher model can strongly memorize the incorr"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：As synthetic data becomes increasingly popular in machine learning tasks, numerous methods—without formal differential privacy guarantees—use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the；边界证据为：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all ",
+        "strengths": [
+          "可定位正文支持：As synthetic data becomes increasingly popular in machine learning tasks, numerous methods—without formal differential privacy guarantees—use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：In this section, we investigate how membership information of mislabeled canaries is transferred from the teacher to the student model through the use of dissimilar synthetic data. As demonstrated in Figure 9, the teacher model can strongly memorize the incorr；边界证据为：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all ",
+        "strengths": [
+          "可定位正文支持：In this section, we investigate how membership information of mislabeled canaries is transferred from the teacher to the student model through the use of dissimilar synthetic data. As demonstrated in Figure 9, the teacher model can strongly memorize the incorr"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0032"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Membership Inference Attack Membership inference attack (Shokri et al., 2017) is a canonical approach to estimating privacy leakage, which aims to determine whether a given example was part of the training set. State-of-the-art attack methods frame membership ；边界证据为：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all ",
+        "strengths": [
+          "可定位正文支持：Membership Inference Attack Membership inference attack (Shokri et al., 2017) is a canonical approach to estimating privacy leakage, which aims to determine whether a given example was part of the training set. State-of-the-art attack methods frame membership "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0004"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：Synthetic data is increasingly utilized for training machine learning (ML) models, especially in situations where real-world data is scarce, sensitive, costly to obtain, or subject to regulations such as GDPR (GDPR.eu). Synthetic data is particularly beneficia；边界证据为：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all ",
+        "strengths": [
+          "可定位正文支持：Synthetic data is increasingly utilized for training machine learning (ML) models, especially in situations where real-world data is scarce, sensitive, costly to obtain, or subject to regulations such as GDPR (GDPR.eu). Synthetic data is particularly beneficia"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：Evaluation Metric Empirical methods designed to preserve data privacy require careful scrutiny. To ensure precise measurement of privacy leakage in models trained with synthetic data, we employ the state-of-the-art membership inference attack LiRA (Carlini et ；边界证据为：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all ",
+        "strengths": [
+          "可定位正文支持：Evaluation Metric Empirical methods designed to preserve data privacy require careful scrutiny. To ensure precise measurement of privacy leakage in models trained with synthetic data, we employ the state-of-the-art membership inference attack LiRA (Carlini et "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Empirical methods that claim to preserve data privacy, whether implicitly or explicitly, but lack theoretical guarantees (e.g., differential privacy), require careful scrutiny. In this work, we systematically and rigorously evaluate privacy leakage across all "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0009"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0024"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0020"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "As synthetic data becomes increasingly popular in machine learning tasks, numerous methods---without formal differential privacy guarantees---use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the original training data.In this work, we explore four different training paradigms: coreset selection, dataset distillation, data-free knowledge distillation, and synthetic data generated from diffusion models. While all these methods utilize synthetic data for training, they lead to vastly different conclusions regarding privacy preservation. We caution that empirical approaches to ",
+        "type": "method_or_finding",
+        "chunk_id": "paper_046_iclr_2025_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "As synthetic data becomes increasingly popular in machine learning tasks, numerous methods—without formal differential privacy guarantees—use synthetic data for training. These methods often claim, either explicitly or implicitly, to protect the privacy of the original training data. In this work, we explore four different training paradigms: coreset selection, dataset distillation, data-free knowledge distillation, ",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0032"
+        ],
+        "limiting_chunk_ids": [
+          "paper_046_iclr_2025_proceedings_chunk_0016"
+        ]
+      }
+    ]
+  }
+}

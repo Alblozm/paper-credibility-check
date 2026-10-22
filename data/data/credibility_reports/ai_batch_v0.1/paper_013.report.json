@@ -1,0 +1,4187 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-40e6166278075948",
+  "paper_version_id": "paper_013_openreview_2024_02_11",
+  "pdf_sha256": "59c81b647e75fddd0be4ce4a1e56a955682d8adab2889c42a41c68f7323e6c9a",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "666b4ecb7f9766eeec3c3b6c2776d40d586be5cf6c263764e7325d4ab8c28be5",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 5.828282828282828,
+  "overall_category": "significant_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.484848484848484,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 66,
+        "extracted_count": 66,
+        "parsed_count": 61,
+        "queried_count": 61,
+        "matched_count": 8,
+        "metadata_conflict_count": 4,
+        "unverified_count": 26,
+        "parse_failed_count": 5,
+        "not_checked_count": 0,
+        "query_failed_count": 23,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 3,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=7VPTUWkiDQ",
+            "checked_at": "2026-10-09T04:42:34.225518Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "query_failed"
+        ]
+      },
+      "failure_reasons": [
+        "repository_query_failed"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Tenenbaum, Charles Kemp, Thomas L",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Tenenbaum%2C+Charles+Kemp%2C+Thomas+L&rows=5",
+        "checked_at": "2026-10-09T04:42:09.820864Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Combining causal and similarity-based reasoning",
+            "authors": [
+              "Kemp",
+              "Shafto",
+              "Tenenbaum"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.1037/e527352012-450",
+            "source_url": "https://doi.org/10.1037/e527352012-450",
+            "title_similarity": 0.20512820512820512
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Inductive reasoning about causally transmitted properties",
+            "authors": [
+              "Shafto",
+              "Kemp",
+              "Bonawitz",
+              "Coley",
+              "Tenenbaum"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.31219/osf.io/92z3u",
+            "source_url": "https://doi.org/10.31219/osf.io/92z3u",
+            "title_similarity": 0.13636363636363635
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Causality and Prior Knowledge in Rational Models of Inductive Reasoning",
+            "authors": [
+              "Tenenbaum",
+              "Kemp"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1037/e537052012-137",
+            "source_url": "https://doi.org/10.1037/e537052012-137",
+            "title_similarity": 0.2549019607843137
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning cross-cutting systems of categories",
+            "authors": [
+              "Shafto",
+              "Kemp",
+              "Mansinghka",
+              "Tenenbaum"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.1037/e527352012-684",
+            "source_url": "https://doi.org/10.1037/e527352012-684",
+            "title_similarity": 0.24
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Kemp, Thomas Read (1781?–1844)",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1093/odnb/9780192683120.013.15332",
+            "source_url": "https://doi.org/10.1093/odnb/9780192683120.013.15332",
+            "title_similarity": 0.42105263157894735
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:09.819737Z",
+        "response_sha256": "dbe5bdfbd8de37364a45b4c1e1283785ac965ad17d656c2488b71fe95ea69999",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Tenenbaum%2C+Charles+Kemp%2C+Thomas+L&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:09.820864Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Behrens, Timothy H",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Behrens%2C+Timothy+H&rows=5",
+        "checked_at": "2026-10-09T04:42:11.229694Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Roberts, Timothy",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00153849",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00153849",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "1 TIMOTHY 6:3–21",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.2307/j.ctt1cgdz1n.10",
+            "source_url": "https://doi.org/10.2307/j.ctt1cgdz1n.10",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "1 TIMOTHY 4:1—5:2",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.2307/j.ctt1cgdz1n.8",
+            "source_url": "https://doi.org/10.2307/j.ctt1cgdz1n.8",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Timothy Findley Chronology",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.51644/9781771124560-018",
+            "source_url": "https://doi.org/10.51644/9781771124560-018",
+            "title_similarity": 0.4186046511627907
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Broege, Timothy",
+            "authors": [
+              "Whitwell"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.a2084900",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.a2084900",
+            "title_similarity": 0.7096774193548387
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:11.227931Z",
+        "response_sha256": "24bee751fa758066f345d2681aeea9b230b4954f295b71966c706b538a3c1a6b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Behrens%2C+Timothy+H&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:11.229694Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Toward causal representation learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Toward+causal+representation+learning&rows=5",
+        "checked_at": "2026-10-09T04:42:12.095142Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:12.095063Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Toward+causal+representation+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:12.095142Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fodor and Zenon W",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fodor+and+Zenon+W&rows=5",
+        "checked_at": "2026-10-09T04:42:09.969146Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Jerry A. Fodor y Zenon W. Pylyshyn, Minds without Meanings. An Essay on the Content of Concepts",
+            "authors": [
+              "Mota",
+              "Igoa"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.22201/iifs.18704905e.2016.238",
+            "source_url": "https://doi.org/10.22201/iifs.18704905e.2016.238",
+            "title_similarity": 0.25925925925925924
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "I. Der Aufbau der Zenon-Schrift",
+            "authors": [],
+            "year": 1961,
+            "years": [
+              1961
+            ],
+            "doi": "10.1515/9783112536988-002",
+            "source_url": "https://doi.org/10.1515/9783112536988-002",
+            "title_similarity": 0.5106382978723404
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Trigo, Zenon",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00185274",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00185274",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Zenon II",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00201438",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00201438",
+            "title_similarity": 0.48
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Zenon I",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00201437",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00201437",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:09.965637Z",
+        "response_sha256": "060cf1ea7fa7501ee1af51efdc789fac26d81f5a798eea851d03f8324c997460",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fodor+and+Zenon+W&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:09.969146Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-5",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1017/s0140525x16001837"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1017%2Fs0140525x16001837",
+        "checked_at": "2026-10-09T04:42:10.166269Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Building machines that learn and think like people",
+            "authors": [
+              "Lake",
+              "Ullman",
+              "Tenenbaum",
+              "Gershman"
+            ],
+            "year": 2016,
+            "years": [
+              2016,
+              2017
+            ],
+            "doi": "10.1017/s0140525x16001837",
+            "source_url": "https://doi.org/10.1017/s0140525x16001837",
+            "title_similarity": 0.22580645161290322
+          }
+        ],
+        "conflicting_fields": [
+          "title",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:10.165030Z",
+        "response_sha256": "c2a6f092bc311491a6c430243aee474a9a8282fd136154c14e6f93452a7fa4f9",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1017%2Fs0140525x16001837"
+      ],
+      "checked_at": "2026-10-09T04:42:10.166269Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Battaglia, Jessica B",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Battaglia%2C+Jessica+B&rows=5",
+        "checked_at": "2026-10-09T04:42:12.635055Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:12.635002Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Battaglia%2C+Jessica+B&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:12.635055Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the binding problem in artificial neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+binding+problem+in+artificial+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:42:12.354152Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The Binding Problem in Distributed Systems",
+            "authors": [
+              "de Vries",
+              "Dalenoort"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1007/978-1-4471-3087-1_15",
+            "source_url": "https://doi.org/10.1007/978-1-4471-3087-1_15",
+            "title_similarity": 0.5957446808510638
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "-opt neural networks for quadratic assignment problem",
+            "authors": [
+              "Ishii"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1049/cp:19991094",
+            "source_url": "https://doi.org/10.1049/cp:19991094",
+            "title_similarity": 0.34615384615384615
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "PATTERN CLASSIFICATION USING NEURAL NETWORKS FOR DIAGNOSTIC PROBLEM SOLVING",
+            "authors": [
+              "Swarup",
+              "Chandrasekharaiah"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1016/b978-0-444-89488-5.50174-3",
+            "source_url": "https://doi.org/10.1016/b978-0-444-89488-5.50174-3",
+            "title_similarity": 0.3937007874015748
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Traveling Salesman Problem Solutions by Using Passive Neural Networks",
+            "authors": [
+              "Luksza",
+              "Sienko"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.5220/0005132800690077",
+            "source_url": "https://doi.org/10.5220/0005132800690077",
+            "title_similarity": 0.5785123966942148
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Simulated Annealing Artificial Neural Networks for the Satisfiability (SAT) Problem",
+            "authors": [
+              "Tambouratzis"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1007/978-3-7091-7535-4_89",
+            "source_url": "https://doi.org/10.1007/978-3-7091-7535-4_89",
+            "title_similarity": 0.48120300751879697
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:12.352874Z",
+        "response_sha256": "6b3c41424bf0ee657c0db3dae65e9fc2dfb206718fba1dc463715729d9b77ebe",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+binding+problem+in+artificial+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:12.354152Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Burgess, Loic Matthey, Nicholas Watters, Rishabh Kabra, Irina Higgins, Matt Botvinick, and Alexander Lerchner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Burgess%2C+Loic+Matthey%2C+Nicholas+Watters%2C+Rishabh+Kabra%2C+Irina+Higgins%2C+Matt+Botvinick%2C+and+Alexander+Lerchner&rows=5",
+        "checked_at": "2026-10-09T04:42:11.887507Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Author response for \"Synthesis of Cyclooctyne-Sulfamates by the Nicholas Cyclisation\"",
+            "authors": [
+              "Iaroslav A. Kutuzov",
+              "Ekaterina  A. Khmelevskaya",
+              "Alexander F. Khlebnikov",
+              "Mia D. Kim",
+              "Alexander Ivanov",
+              "Ivan A. Rodionov",
+              "Irina Balova",
+              "Natalia Danilkina"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/d5ob01784j/v2/response1",
+            "source_url": "https://doi.org/10.1039/d5ob01784j/v2/response1",
+            "title_similarity": 0.3225806451612903
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "SDSU Geological Sciences - Thesis - Matt Burgess",
+            "authors": [],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.4016/9298.01",
+            "source_url": "https://doi.org/10.4016/9298.01",
+            "title_similarity": 0.2585034013605442
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Matt Adams and Debra Burgess in Kidnap, London 1998",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.3998/mpub.12217991.cmp.20",
+            "source_url": "https://doi.org/10.3998/mpub.12217991.cmp.20",
+            "title_similarity": 0.16993464052287582
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "proccalibrad: Extraction of Bands from MODIS Calibrated Radiances MOD02 NRT",
+            "authors": [],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.32614/cran.package.proccalibrad",
+            "source_url": "https://doi.org/10.32614/cran.package.proccalibrad",
+            "title_similarity": 0.1694915254237288
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "PARTS: Unsupervised segmentation with slots, attention and independence maximization",
+            "authors": [
+              "Zoran",
+              "Kabra",
+              "Lerchner",
+              "Rezende"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/iccv48922.2021.01027",
+            "source_url": "https://doi.org/10.1109/iccv48922.2021.01027",
+            "title_similarity": 0.2594594594594595
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:11.885379Z",
+        "response_sha256": "3ca2e1d85dcee31612f2d309b4dd325d85508e3c15b8931f36ce3c492e41c3ca",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Burgess%2C+Loic+Matthey%2C+Nicholas+Watters%2C+Rishabh+Kabra%2C+Irina+Higgins%2C+Matt+Botvinick%2C+and+Alexander+Lerchner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:11.887507Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-10",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Botvinick, and Alexander Lerchner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Botvinick%2C+and+Alexander+Lerchner&rows=5",
+        "checked_at": "2026-10-09T04:42:14.117984Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:14.117922Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Botvinick%2C+and+Alexander+Lerchner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:14.117984Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-11",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-12",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Space: Unsupervised object-oriented scene representation via spatial attention and decomposition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Space%3A+Unsupervised+object-oriented+scene+representation+via+spatial+attention+and+decomposition&rows=5",
+        "checked_at": "2026-10-09T04:42:14.680621Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:14.680582Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Space%3A+Unsupervised+object-oriented+scene+representation+via+spatial+attention+and+decomposition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:14.680621Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-13",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Illiterate DALL-e learns to compose",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Illiterate+DALL-e+learns+to+compose&rows=5",
+        "checked_at": "2026-10-09T04:42:14.892547Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:14.892472Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Illiterate+DALL-e+learns+to+compose&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:14.892547Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bridging the gap to real-world object-centric learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bridging+the+gap+to+real-world+object-centric+learning&rows=5",
+        "checked_at": "2026-10-09T04:42:13.347830Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bridging the Reality Gap in Tampered Text Detection: A Human-Crafted Real-World Dataset and a Text-Centric Approach_supp1-3705334.pdf",
+            "authors": [
+              "Jin"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tifs.2026.3705334/mm1",
+            "source_url": "https://doi.org/10.1109/tifs.2026.3705334/mm1",
+            "title_similarity": 0.4731182795698925
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bridging the Gap Between Traditional Process Mining and Object-Centric Process Mining",
+            "authors": [
+              "Moumad",
+              "Radgui"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3390/engproc2025112054",
+            "source_url": "https://doi.org/10.3390/engproc2025112054",
+            "title_similarity": 0.6474820143884892
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Bridging Model-Centric and Data-Centric AI: A Unified Framework for Scalable Real-World Deployment",
+            "authors": [
+              "Samrat Medavarapu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.21275/sr25528130124",
+            "source_url": "https://doi.org/10.21275/sr25528130124",
+            "title_similarity": 0.4105960264900662
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Standards Education:  Bridging The Gap Between Classroom Learning And Real World Applications",
+            "authors": [
+              "Olshefsky"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18260/1-2--15905",
+            "source_url": "https://doi.org/10.18260/1-2--15905",
+            "title_similarity": 0.4827586206896552
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Financial Inclusion Through Digital Payments: How Technology is Bridging the Gap",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.59646/725/29",
+            "source_url": "https://doi.org/10.59646/725/29",
+            "title_similarity": 0.24060150375939848
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:13.345225Z",
+        "response_sha256": "013bdec4e2f055d0c8229d92b9a75642c5a0c33ab83720a34229c86486876131",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bridging+the+gap+to+real-world+object-centric+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:13.347830Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Contrastive learning of structured world models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Contrastive+learning+of+structured+world+models&rows=5",
+        "checked_at": "2026-10-09T04:42:15.457157Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Orthogonalized Multimodal Contrastive Learning with Asymmetric Masking for Structured Representations",
+            "authors": [
+              "Cissee",
+              "Younis",
+              "Ahmadi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6486407",
+            "source_url": "https://doi.org/10.2139/ssrn.6486407",
+            "title_similarity": 0.4864864864864865
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s004",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s004",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s001",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s003",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s003",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s002",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s002",
+            "title_similarity": 0.3624161073825503
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:15.455936Z",
+        "response_sha256": "177865acba0ae22096f55358d87a232882a971cc07a588618507784569ef5b2b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Contrastive+learning+of+structured+world+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:15.457157Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Zimmermann, Yash Sharma, Bernhard Sch¨ olkopf, Julius Von K¨ ugelgen, and Wieland Brendel",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Zimmermann%2C+Yash+Sharma%2C+Bernhard+Sch%C2%A8+olkopf%2C+Julius+Von+K%C2%A8+ugelgen%2C+and+Wieland+Brendel&rows=5",
+        "checked_at": "2026-10-09T04:42:14.834966Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Zimmermann, Paul August Bernhard von",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1553/0x003e0027",
+            "source_url": "https://doi.org/10.1553/0x003e0027",
+            "title_similarity": 0.4406779661016949
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Kallmeyer, Hans Julius Bernhard",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00096867",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00096867",
+            "title_similarity": 0.2831858407079646
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stern,  Julius Bernhard",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1553/0x0001e374",
+            "source_url": "https://doi.org/10.1553/0x0001e374",
+            "title_similarity": 0.2692307692307692
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Zimmermann, Julius",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00202089",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00202089",
+            "title_similarity": 0.34
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "7. Der Unermüdliche: Paul Zimmermann (1843–1927)",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.7767/9783205223214.149",
+            "source_url": "https://doi.org/10.7767/9783205223214.149",
+            "title_similarity": 0.1889763779527559
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:14.832532Z",
+        "response_sha256": "6aa6ded9ce586dbe451c5924665bc235a871a7d63870160f714c7d570a55759e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Zimmermann%2C+Yash+Sharma%2C+Bernhard+Sch%C2%A8+olkopf%2C+Julius+Von+K%C2%A8+ugelgen%2C+and+Wieland+Brendel&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:14.834966Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Toward compositional generalization in object-oriented world modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Toward+compositional+generalization+in+object-oriented+world+modeling&rows=5",
+        "checked_at": "2026-10-09T04:42:15.370076Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Object-oriented map generalization: modeling and cartographic considerations",
+            "authors": [
+              "Buttenfield"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1201/9781003062646-10",
+            "source_url": "https://doi.org/10.1201/9781003062646-10",
+            "title_similarity": 0.4305555555555556
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Generalization Data Mining in Fuzzy Object-Oriented Databases",
+            "authors": [
+              "Angryk",
+              "Ladner",
+              "Petry"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.4018/978-1-59140-384-5.ch003",
+            "source_url": "https://doi.org/10.4018/978-1-59140-384-5.ch003",
+            "title_similarity": 0.5538461538461539
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Resource Scopes: Toward Language Support for Compositional Determinism",
+            "authors": [
+              "Anand",
+              "Fischmeister",
+              "Lee"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/isorc.2009.42",
+            "source_url": "https://doi.org/10.1109/isorc.2009.42",
+            "title_similarity": 0.4057971014492754
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Advances in Object-Oriented Data Modeling",
+            "authors": [
+              "Norrie"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.7551/mitpress/1131.003.0004",
+            "source_url": "https://doi.org/10.7551/mitpress/1131.003.0004",
+            "title_similarity": 0.6181818181818182
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preface: The Blossoming of Object-Oriented Data Modeling",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.7551/mitpress/1131.003.0003",
+            "source_url": "https://doi.org/10.7551/mitpress/1131.003.0003",
+            "title_similarity": 0.532258064516129
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:15.368852Z",
+        "response_sha256": "f8e40f5e951ee40f8216ab1c1e7894feed50d0eaaf5c7d1a1bf1d918e2cc3aeb",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Toward+compositional+generalization+in+object-oriented+world+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:15.370076Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning and generalization of compositional representations of visual scenes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+and+generalization+of+compositional+representations+of+visual+scenes&rows=5",
+        "checked_at": "2026-10-09T04:42:17.694667Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:17.694594Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+and+generalization+of+compositional+representations+of+visual+scenes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:17.694667Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-23",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Nonlinear independent component analysis: Existence and uniqueness results",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Nonlinear+independent+component+analysis%3A+Existence+and+uniqueness+results&rows=5",
+        "checked_at": "2026-10-09T04:42:18.168865Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:18.168812Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Nonlinear+independent+component+analysis%3A+Existence+and+uniqueness+results&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:18.168865Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-24",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Challenging common assumptions in the unsupervised learning of disentangled representations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Challenging+common+assumptions+in+the+unsupervised+learning+of+disentangled+representations&rows=5",
+        "checked_at": "2026-10-09T04:42:18.294669Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:18.294583Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Challenging+common+assumptions+in+the+unsupervised+learning+of+disentangled+representations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:18.294669Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-25",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The role of disentanglement in generalisation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+role+of+disentanglement+in+generalisation&rows=5",
+        "checked_at": "2026-10-09T04:42:18.709974Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:18.709928Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+role+of+disentanglement+in+generalisation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:18.709974Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Lost in latent space: Examining failures of disentangled models at combinatorial generalisation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Lost+in+latent+space%3A+Examining+failures+of+disentangled+models+at+combinatorial+generalisation&rows=5",
+        "checked_at": "2026-10-09T04:42:20.062587Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:20.062512Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Lost+in+latent+space%3A+Examining+failures+of+disentangled+models+at+combinatorial+generalisation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:20.062587Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Visual representation learning does not generalize strongly within the same domain",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Visual+representation+learning+does+not+generalize+strongly+within+the+same+domain&rows=5",
+        "checked_at": "2026-10-09T04:42:20.601473Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:20.601411Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Visual+representation+learning+does+not+generalize+strongly+within+the+same+domain&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:20.601473Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-28",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1002/nav.3800020109"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1002%2Fnav.3800020109",
+        "checked_at": "2026-10-09T04:42:18.815566Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The Hungarian method for the assignment problem",
+            "authors": [
+              "Kuhn"
+            ],
+            "year": 1955,
+            "years": [
+              1955,
+              2006
+            ],
+            "doi": "10.1002/nav.3800020109",
+            "source_url": "https://doi.org/10.1002/nav.3800020109",
+            "title_similarity": 0.0
+          }
+        ],
+        "conflicting_fields": [
+          "title",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:18.814396Z",
+        "response_sha256": "6a5ba9eb278087fd077e265fe40a40bc4d2de49997bf9181549143f5efa116ae",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1002%2Fnav.3800020109"
+      ],
+      "checked_at": "2026-10-09T04:42:18.815566Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Unsupervised feature extraction by time-contrastive learning and nonlinear ICA",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Unsupervised+feature+extraction+by+time-contrastive+learning+and+nonlinear+ICA&rows=5",
+        "checked_at": "2026-10-09T04:42:19.549470Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fine-grained adaptive contrastive learning for unsupervised feature extraction",
+            "authors": [
+              "Yin",
+              "Wang",
+              "Zhao",
+              "Wang",
+              "Ma",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neucom.2024.129014",
+            "source_url": "https://doi.org/10.1016/j.neucom.2024.129014",
+            "title_similarity": 0.3974358974358974
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Mluf-Mvsnet: An Improved Feature Extraction and Enhanced Attention for Unsupervised Contrastive Learning in Multi-View 3d Reconstruction",
+            "authors": [
+              "liao",
+              "liu",
+              "li",
+              "qin",
+              "zhao",
+              "ju"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5187564",
+            "source_url": "https://doi.org/10.2139/ssrn.5187564",
+            "title_similarity": 0.5633802816901409
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Feature Extraction Using an Unsupervised Neural Network",
+            "authors": [
+              "Intrator"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.7551/mitpress/7011.003.0012",
+            "source_url": "https://doi.org/10.7551/mitpress/7011.003.0012",
+            "title_similarity": 0.49624060150375937
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Negative-Free Contrastive Learning with Refined Positive Samples for Feature Extraction",
+            "authors": [
+              "Yang",
+              "Song"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5779155",
+            "source_url": "https://doi.org/10.2139/ssrn.5779155",
+            "title_similarity": 0.4727272727272727
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Feature extraction and clustering of lower-body shapes in older women using unsupervised contrastive learning on 3D point clouds",
+            "authors": [
+              "Sun",
+              "Zhou",
+              "Yao",
+              "Wang",
+              "Pan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1177/00405175251367684",
+            "source_url": "https://doi.org/10.1177/00405175251367684",
+            "title_similarity": 0.5339805825242718
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:19.547750Z",
+        "response_sha256": "43bb98b2a430d1c366d8ff4af74c43b608b5466c7ca5adf89fe0adf1a908dd99",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Unsupervised+feature+extraction+by+time-contrastive+learning+and+nonlinear+ICA&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:19.549470Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Nonlinear ICA of temporally dependent stationary sources",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Nonlinear+ICA+of+temporally+dependent+stationary+sources&rows=5",
+        "checked_at": "2026-10-09T04:42:20.757121Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Spectral coherence properties of temporally modulated stationary light sources",
+            "authors": [
+              "Lajunen",
+              "Tervo",
+              "Turunen",
+              "Vahimaa",
+              "Wyrowski"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1364/oe.11.001894",
+            "source_url": "https://doi.org/10.1364/oe.11.001894",
+            "title_similarity": 0.6119402985074627
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bayesian Separation of Non-Stationary Mixtures of Dependent Gaussian Sources",
+            "authors": [
+              "Gençağa"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1063/1.2149803",
+            "source_url": "https://doi.org/10.1063/1.2149803",
+            "title_similarity": 0.42424242424242425
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Local-ICA: independent component analysis for sources with non-stationary amplitudes",
+            "authors": [
+              "Dahl",
+              "Lingjaerde",
+              "Christophersen",
+              "Ekman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/isspa.2005.1580984",
+            "source_url": "https://doi.org/10.1109/isspa.2005.1580984",
+            "title_similarity": 0.4460431654676259
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Stationary patterns for a prey–predator model with prey-dependent and ratio-dependent functional responses and diffusion",
+            "authors": [
+              "Wang"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1016/j.physd.2004.05.007",
+            "source_url": "https://doi.org/10.1016/j.physd.2004.05.007",
+            "title_similarity": 0.375
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Temporally Distilled High-Dimensional Biphotonic States from Thin Sources",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsphotonics.3c01169.s001",
+            "source_url": "https://doi.org/10.1021/acsphotonics.3c01169.s001",
+            "title_similarity": 0.49612403100775193
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:20.755878Z",
+        "response_sha256": "ed2b1479274a3ab909785d3817fa311943c8c4283611c9fca0171638c0200867",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Nonlinear+ICA+of+temporally+dependent+stationary+sources&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:20.757121Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-31",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Turner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Turner&rows=5",
+        "checked_at": "2026-10-09T04:42:19.541490Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Turner",
+            "authors": [],
+            "year": 1987,
+            "years": [
+              1987
+            ],
+            "doi": "10.5040/9781350909823",
+            "source_url": "https://doi.org/10.5040/9781350909823",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Turner",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.5040/9781350902121",
+            "source_url": "https://doi.org/10.5040/9781350902121",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Mr Turner",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.5040/9781350910768",
+            "source_url": "https://doi.org/10.5040/9781350910768",
+            "title_similarity": 0.8
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Plays of Alexander Turner",
+            "authors": [
+              "Rees",
+              "Turner",
+              "Turner",
+              "Turner"
+            ],
+            "year": 1945,
+            "years": [
+              1945
+            ],
+            "doi": "10.2307/20631261",
+            "source_url": "https://doi.org/10.2307/20631261",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Turner on birds : a short and succinct history of the principal birds noticed by Pliny and Aristotle first published by Doctor William Turner, 1544",
+            "authors": [
+              "Turner",
+              "Turner",
+              "Turner",
+              "Evans"
+            ],
+            "year": 1903,
+            "years": [
+              1903
+            ],
+            "doi": "10.5962/bhl.title.160035",
+            "source_url": "https://doi.org/10.5962/bhl.title.160035",
+            "title_similarity": 0.08
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:19.540132Z",
+        "response_sha256": "6e26b564ee458a34a75b8ff925c8804e88c18ddb921358e8fec1759c58674ea6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Turner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:19.541490Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-32",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kingma, and Aapo Hyv arinen",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kingma%2C+and+Aapo+Hyv+arinen&rows=5",
+        "checked_at": "2026-10-09T04:42:21.401172Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Integrated Nutrient Management in Mustard (HYV)-Boro Rice (HYV)-transplanted Aman Rice (HYV) Cropping System",
+            "authors": [
+              "Kalim Uddi",
+              "Khalequzza",
+              "Rahman",
+              "Begum",
+              "Zibon Ness"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.3923/pjbs.2003.467.471",
+            "source_url": "https://doi.org/10.3923/pjbs.2003.467.471",
+            "title_similarity": 0.28125
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Tieteen kytkentöjä",
+            "authors": [
+              "Arinen"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.51809/te.104265",
+            "source_url": "https://doi.org/10.51809/te.104265",
+            "title_similarity": 0.13636363636363635
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Aikuisetko yksilöitä!",
+            "authors": [
+              "Arinen"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.33336/aik.96631",
+            "source_url": "https://doi.org/10.33336/aik.96631",
+            "title_similarity": 0.2608695652173913
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Modification of parietal association cortex and functional blindness after binocular deprivation in young monkeys",
+            "authors": [
+              "Hyv�rinen",
+              "Hyv�rinen",
+              "Linnankoski"
+            ],
+            "year": 1981,
+            "years": [
+              1981
+            ],
+            "doi": "10.1007/bf00235723",
+            "source_url": "https://doi.org/10.1007/bf00235723",
+            "title_similarity": 0.2302158273381295
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Biologismi ja ihmistieteet",
+            "authors": [
+              "Arinen"
+            ],
+            "year": 1977,
+            "years": [
+              1977
+            ],
+            "doi": "10.51809/te.103474",
+            "source_url": "https://doi.org/10.51809/te.103474",
+            "title_similarity": 0.3076923076923077
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:21.398842Z",
+        "response_sha256": "3728b041d8e924daaac22576899e62092fb5da76558e4cf8342c24e78221074d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kingma%2C+and+Aapo+Hyv+arinen&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:21.401172Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-34",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Weakly supervised disentanglement with guarantees",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Weakly+supervised+disentanglement+with+guarantees&rows=5",
+        "checked_at": "2026-10-09T04:42:22.498921Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:22.498867Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Weakly+supervised+disentanglement+with+guarantees&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:22.498921Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-35",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Rubenstein, Arash Mehrjou, Francesco Locatello, and Bernhard Sch¨ olkopf",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Rubenstein%2C+Arash+Mehrjou%2C+Francesco+Locatello%2C+and+Bernhard+Sch%C2%A8+olkopf&rows=5",
+        "checked_at": "2026-10-09T04:42:21.890712Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Locatelli (Locatello), Gian Francesco",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1553/0x00282a7f",
+            "source_url": "https://doi.org/10.1553/0x00282a7f",
+            "title_similarity": 0.4117647058823529
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Locatello, Gasparo",
+            "authors": [
+              "Arnold",
+              "Carter"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.16841",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.16841",
+            "title_similarity": 0.32941176470588235
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Author response for \"Human T cells interacting with HNSCC‐derived mesenchymal stromal cells acquire Tissue‐Resident memory like properties\"",
+            "authors": [
+              "Alessio Mazzoni",
+              "Laura Maggi",
+              "Gianni Montaini",
+              "Matteo Ramazzotti",
+              "Manuela Capone",
+              "Anna Vanni",
+              "Luca Giovanni Locatello",
+              "Giusi Barra",
+              "Raffaele De Palma",
+              "Oreste Gallo",
+              "Lorenzo Cosmi",
+              "Francesco Liotta",
+              "Francesco Annunziato"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1002/eji.202048544/v2/response1",
+            "source_url": "https://doi.org/10.1002/eji.202048544/v2/response1",
+            "title_similarity": 0.2634146341463415
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Francesco Negri zwischen konfessionellen und geographischen Grenzen",
+            "authors": [
+              "Bernhard"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.69871/9hwded03",
+            "source_url": "https://doi.org/10.69871/9hwded03",
+            "title_similarity": 0.37037037037037035
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Locatello [Loccatello, Lucatelli, Lucatello], Giovanni Battista",
+            "authors": [
+              "O’Regan"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.16842",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.16842",
+            "title_similarity": 0.25396825396825395
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:21.889276Z",
+        "response_sha256": "7677ec728534ece2f561cfdff477ad0ef4998d09c754bc32fa6b178d6e7a9254",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Rubenstein%2C+Arash+Mehrjou%2C+Francesco+Locatello%2C+and+Bernhard+Sch%C2%A8+olkopf&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:21.890712Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-37",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Disentanglement via mechanism sparsity regularization: A new principle for nonlinear ica",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Disentanglement+via+mechanism+sparsity+regularization%3A+A+new+principle+for+nonlinear+ica&rows=5",
+        "checked_at": "2026-10-09T04:42:23.124798Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Model-Induced Regularization and Sparsity Inducing Mechanism",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1017/9781139879354.008",
+            "source_url": "https://doi.org/10.1017/9781139879354.008",
+            "title_similarity": 0.3945578231292517
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Generalizing Nonlinear ICA Beyond Structural Sparsity",
+            "authors": [
+              "Zheng",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-0585",
+            "source_url": "https://doi.org/10.52202/075280-0585",
+            "title_similarity": 0.2714285714285714
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamic mode decomposition for detecting oscillatory transient activity via sparsity and smoothness regularization",
+            "authors": [
+              "Tanaka",
+              "Nakao"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1063/5.0295767",
+            "source_url": "https://doi.org/10.1063/5.0295767",
+            "title_similarity": 0.3880597014925373
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Non-line-of-sight reconstruction via structure sparsity regularization",
+            "authors": [
+              "Huang",
+              "Chen",
+              "Wei",
+              "CHEN"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1364/opticaopen.23737023",
+            "source_url": "https://doi.org/10.1364/opticaopen.23737023",
+            "title_similarity": 0.4585987261146497
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Non-line-of-sight reconstruction via structure sparsity regularization",
+            "authors": [
+              "Huang",
+              "Chen",
+              "Wei",
+              "CHEN"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1364/opticaopen.23737023.v1",
+            "source_url": "https://doi.org/10.1364/opticaopen.23737023.v1",
+            "title_similarity": 0.4585987261146497
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:23.123039Z",
+        "response_sha256": "b8b8717e45ae56dac3b417054f1093cecf575dc13e68f62f92139f427741356a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Disentanglement+via+mechanism+sparsity+regularization%3A+A+new+principle+for+nonlinear+ica&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:23.124798Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-38",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-38",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Klindt, Lukas Schott, Yash Sharma, Ivan Ustyuzhaninov, Wieland Brendel, Matthias Bethge, and Dylan M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Klindt%2C+Lukas+Schott%2C+Yash+Sharma%2C+Ivan+Ustyuzhaninov%2C+Wieland+Brendel%2C+Matthias+Bethge%2C+and+Dylan+M&rows=5",
+        "checked_at": "2026-10-09T04:42:23.668289Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:23.668253Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Klindt%2C+Lukas+Schott%2C+Yash+Sharma%2C+Ivan+Ustyuzhaninov%2C+Wieland+Brendel%2C+Matthias+Bethge%2C+and+Dylan+M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:23.668289Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-39",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Disentangling identifiable features from noisy data with structured nonlinear ICA",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Disentangling+identifiable+features+from+noisy+data+with+structured+nonlinear+ICA&rows=5",
+        "checked_at": "2026-10-09T04:42:23.363781Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Measuring Poverty Dynamics and Inequality in Transition Economies: Disentangling Real Events from Noisy Data",
+            "authors": [
+              "Luttmer"
+            ],
+            "year": 2001,
+            "years": [
+              2001,
+              2014
+            ],
+            "doi": "10.1596/1813-9450-2549",
+            "source_url": "https://doi.org/10.1596/1813-9450-2549",
+            "title_similarity": 0.3617021276595745
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Extracting meaningful features from noisy microbiome data",
+            "authors": [
+              "Woloszynek",
+              "Rosen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17918/d8nh3m",
+            "source_url": "https://doi.org/10.17918/d8nh3m",
+            "title_similarity": 0.5217391304347826
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sparse Mass-Constrained Nonlinear Dynamic Model Building from Noisy Data Using a Bayesian Approach",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.iecr.4c02481.s001",
+            "source_url": "https://doi.org/10.1021/acs.iecr.4c02481.s001",
+            "title_similarity": 0.4245810055865922
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "6 Separating waves from noiselike features",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1201/b12790-55",
+            "source_url": "https://doi.org/10.1201/b12790-55",
+            "title_similarity": 0.42276422764227645
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "8 Nonlinear systems",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1201/b12790-4",
+            "source_url": "https://doi.org/10.1201/b12790-4",
+            "title_similarity": 0.22
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:23.362219Z",
+        "response_sha256": "c8b3cfd0a8fa72081ce0c57b38bec529070d9cb8e653c97d00c28b0b37f7336b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Disentangling+identifiable+features+from+noisy+data+with+structured+nonlinear+ICA&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:23.363781Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-40",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Self-supervised learning with data augmentations provably isolates content from style",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Self-supervised+learning+with+data+augmentations+provably+isolates+content+from+style&rows=5",
+        "checked_at": "2026-10-09T04:42:22.941731Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Self-Supervised Representation Learning with Augmentations of Continuous Training Data Improves the Feel and Performance of Myoelectric Control",
+            "authors": [
+              "Raghu",
+              "MacIsaac",
+              "Scheme"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.172710350.04516335/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.172710350.04516335/v1",
+            "title_similarity": 0.49122807017543857
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "CSAST: Content self-supervised and style contrastive learning for arbitrary style transfer",
+            "authors": [
+              "Zhang",
+              "Tian",
+              "Hou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.neunet.2023.04.037",
+            "source_url": "https://doi.org/10.1016/j.neunet.2023.04.037",
+            "title_similarity": 0.41379310344827586
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Normalizing Self-Supervised Learning for Provably Reliable Change Point Detection",
+            "authors": [
+              "Bazarova",
+              "Romanenkova",
+              "Zaytsev"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icdm59182.2024.00009",
+            "source_url": "https://doi.org/10.1109/icdm59182.2024.00009",
+            "title_similarity": 0.5542168674698795
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "IMPROVING SELF-SUPERVISED LEARNING FOR MULTI-LABEL CLASSIFICATION USING MIX-BASED AUGMENTATIONS",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.35741/issn.0258-2724.58.1.66",
+            "source_url": "https://doi.org/10.35741/issn.0258-2724.58.1.66",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "You Don’t Need Domain-Specific Data Augmentations When Scaling Self-Supervised Learning",
+            "authors": [
+              "Moutakanni",
+              "Oquab",
+              "Szafraniec",
+              "Vakalopoulou",
+              "Bojanowski"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-3686",
+            "source_url": "https://doi.org/10.52202/079017-3686",
+            "title_similarity": 0.27906976744186046
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:22.940282Z",
+        "response_sha256": "49cb382882e3eed0424398e25f293fa1e816905e554fe930cfb97f31aaafeb2c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Self-supervised+learning+with+data+augmentations+provably+isolates+content+from+style&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:22.941731Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-41",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-41",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Causal component analysis",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Causal+component+analysis&rows=5",
+        "checked_at": "2026-10-09T04:42:25.275306Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:25.275236Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Causal+component+analysis&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:25.275306Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-42",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Independent mechanism analysis, a new concept? Advances in Neural Information Processing Systems , 34:28233–28248, 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Independent+mechanism+analysis%2C+a+new+concept%3F+Advances+in+Neural+Information+Processing+Systems+%2C+34%3A28233%E2%80%9328248%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:42:23.903496Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Function Classes for Identifiable Nonlinear Independent Component Analysis",
+            "authors": [
+              "Buchholz",
+              "Besserve",
+              "Schölkopf"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-1233",
+            "source_url": "https://doi.org/10.52202/068431-1233",
+            "title_similarity": 0.2553191489361702
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Embrace the Gap: VAEs Perform Independent Mechanism Analysis",
+            "authors": [
+              "Reizinger",
+              "Gresele",
+              "Brady",
+              "Kügelgen",
+              "Zietlow",
+              "Schölkopf",
+              "Martius",
+              "Brendel",
+              "Besserve"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-0875",
+            "source_url": "https://doi.org/10.52202/068431-0875",
+            "title_similarity": 0.3468208092485549
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Towards a general independent subspace analysis",
+            "authors": [
+              "Theis"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.7551/mitpress/7503.003.0175",
+            "source_url": "https://doi.org/10.7551/mitpress/7503.003.0175",
+            "title_similarity": 0.2732919254658385
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Neural Concept Binder",
+            "authors": [
+              "Stammer",
+              "Wüst",
+              "Steinmann",
+              "Kersting"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2293",
+            "source_url": "https://doi.org/10.52202/079017-2293",
+            "title_similarity": 0.2518518518518518
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Disentangling Interpretable Factors with Supervised Independent Subspace Principal Component Analysis",
+            "authors": [
+              "Su",
+              "Knowles",
+              "Rabadan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-1181",
+            "source_url": "https://doi.org/10.52202/079017-1181",
+            "title_similarity": 0.22325581395348837
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:23.901675Z",
+        "response_sha256": "b93aa6b39b1570d919f824af840f1573fa0bb457405044ac725bc6c4c9db3850",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Independent+mechanism+analysis%2C+a+new+concept%3F+Advances+in+Neural+Information+Processing+Systems+%2C+34%3A28233%E2%80%9328248%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:23.903496Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-43",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "When is unsupervised disentanglement possible? In Advances in Neural Information Processing Systems , 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=When+is+unsupervised+disentanglement+possible%3F+In+Advances+in+Neural+Information+Processing+Systems+%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:42:25.930770Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:25.930717Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=When+is+unsupervised+disentanglement+possible%3F+In+Advances+in+Neural+Information+Processing+Systems+%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:25.930770Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-44",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-44",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Identifiable deep generative models via sparse decoding",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Identifiable+deep+generative+models+via+sparse+decoding&rows=5",
+        "checked_at": "2026-10-09T04:42:25.691993Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Neural Evolution Operators: From Decoding to Identifiable Causal State-Space Models",
+            "authors": [
+              "Hakkak Moghadam Torbati"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202603.0480.v1",
+            "source_url": "https://doi.org/10.20944/preprints202603.0480.v1",
+            "title_similarity": 0.3287671232876712
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep Discrete Encoders: Identifiable Deep Generative Models for Rich Data with Discrete Latent Layers",
+            "authors": [
+              "Lee",
+              "Gu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1080/01621459.2025.2587922",
+            "source_url": "https://doi.org/10.1080/01621459.2025.2587922",
+            "title_similarity": 0.5548387096774193
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "When is Training-Data Causation Identifiable in Generative Models? From Training Documents to Protected Works",
+            "authors": [
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7214478",
+            "source_url": "https://doi.org/10.2139/ssrn.7214478",
+            "title_similarity": 0.44171779141104295
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Generalizing predictions to unseen sequencing profiles via deep generative models",
+            "authors": [
+              "Oh",
+              "Zhang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1101/2021.05.06.443027",
+            "source_url": "https://doi.org/10.1101/2021.05.06.443027",
+            "title_similarity": 0.45588235294117646
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning Neural Evolution Operators: From Decoding to Identifiable Causal State-Space Models",
+            "authors": [
+              "Hakkak Moghadam Torbati"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202603.0480.v2",
+            "source_url": "https://doi.org/10.20944/preprints202603.0480.v2",
+            "title_similarity": 0.3287671232876712
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:25.690442Z",
+        "response_sha256": "abae65d6848ee2f6c40babc46404fea9a339ed920a2a3d90347121c33b76f38c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Identifiable+deep+generative+models+via+sparse+decoding&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:25.691993Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-46",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-46",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the identifiability of nonlinear ICA: sparsity and beyond",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+identifiability+of+nonlinear+ICA%3A+sparsity+and+beyond&rows=5",
+        "checked_at": "2026-10-09T04:42:26.700281Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:26.700232Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+identifiability+of+nonlinear+ICA%3A+sparsity+and+beyond&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:26.700281Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-47",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-47",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning to Extrapolate: A Transductive Approach",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+to+Extrapolate%3A+A+Transductive+Approach&rows=5",
+        "checked_at": "2026-10-09T04:42:26.789680Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Transductive Learning Approach for Identification of Microstructure-Process Linkages",
+            "authors": [
+              "Acar"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.2514/6.2019-2212",
+            "source_url": "https://doi.org/10.2514/6.2019-2212",
+            "title_similarity": 0.3458646616541353
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Correction: A Transductive Learning Approach for Identification of Microstructure-Process Linkages",
+            "authors": [
+              "Acar"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.2514/6.2019-2212.c1",
+            "source_url": "https://doi.org/10.2514/6.2019-2212.c1",
+            "title_similarity": 0.3611111111111111
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "TNPNet: An Approach to Few-Shot Open-Set Recognition via Contextual Transductive Learning",
+            "authors": [
+              "Wu",
+              "Luo",
+              "Lin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4592647",
+            "source_url": "https://doi.org/10.2139/ssrn.4592647",
+            "title_similarity": 0.4148148148148148
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Transductive Learning Games for Word Sense Disambiguation",
+            "authors": [
+              "Tripodi",
+              "Pelillo"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1016/b978-1-78548-253-3.50006-8",
+            "source_url": "https://doi.org/10.1016/b978-1-78548-253-3.50006-8",
+            "title_similarity": 0.3269230769230769
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review for \"A generative approach to extrapolate word concreteness ratings\"",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1177/17470218251320641/v1/review2",
+            "source_url": "https://doi.org/10.1177/17470218251320641/v1/review2",
+            "title_similarity": 0.43333333333333335
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:26.788467Z",
+        "response_sha256": "2359ad9a5d8d4c4a15f246583e2a905d22f3dae9e98cf17f397b87ec4592f204",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+to+Extrapolate%3A+A+Transductive+Approach&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:26.789680Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-48",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-48",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "First Steps Toward Understanding the Extrapolation of Nonlinear Models to Unseen Domains",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=First+Steps+Toward+Understanding+the+Extrapolation+of+Nonlinear+Models+to+Unseen+Domains&rows=5",
+        "checked_at": "2026-10-09T04:42:28.059522Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:28.059442Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=First+Steps+Toward+Understanding+the+Extrapolation+of+Nonlinear+Models+to+Unseen+Domains&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:28.059522Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-49",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-49",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Additive decoders for latent variables identification and cartesian-product extrapolation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Additive+decoders+for+latent+variables+identification+and+cartesian-product+extrapolation&rows=5",
+        "checked_at": "2026-10-09T04:42:28.594095Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:28.594037Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Additive+decoders+for+latent+variables+identification+and+cartesian-product+extrapolation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:28.594095Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-51",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Miller, Lennart Luettgau, Raymond Dolan, Yunzhe Liu, and Philipp Schwartenbeck",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Miller%2C+Lennart+Luettgau%2C+Raymond+Dolan%2C+Yunzhe+Liu%2C+and+Philipp+Schwartenbeck&rows=5",
+        "checked_at": "2026-10-09T04:42:27.864624Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Replay and compositional computation",
+            "authors": [
+              "Kurth-Nelson",
+              "Behrens",
+              "Wayne",
+              "Miller",
+              "Luettgau",
+              "Dolan",
+              "Liu",
+              "Schwartenbeck"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.neuron.2022.12.028",
+            "source_url": "https://doi.org/10.1016/j.neuron.2022.12.028",
+            "title_similarity": 0.23636363636363636
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Author response for \"Acute stress alters probabilistic reversal learning in healthy male adults\"",
+            "authors": [
+              "Lara Wieland",
+              "Claudia Ebrahimi",
+              "Teresa Katthagen",
+              "Martin Panitz",
+              "Lennart Luettgau",
+              "Andreas Heinz",
+              "Florian Schlagenhauf",
+              "Zsuzsika Sjoerds"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1111/ejn.15916/v3/response1",
+            "source_url": "https://doi.org/10.1111/ejn.15916/v3/response1",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Author response for \"Acute stress alters probabilistic reversal learning in healthy male adults\"",
+            "authors": [
+              "Lara Wieland",
+              "Claudia Ebrahimi",
+              "Teresa Katthagen",
+              "Martin Panitz",
+              "Lennart Luettgau",
+              "Andreas Heinz",
+              "Florian Schlagenhauf",
+              "Zsuzsika Sjoerds"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1111/ejn.15916/v2/response1",
+            "source_url": "https://doi.org/10.1111/ejn.15916/v2/response1",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Generative Replay for Compositional Visual Understanding in the Prefrontal-Hippocampal Circuit",
+            "authors": [
+              "Schwartenbeck",
+              "Baram",
+              "Liu",
+              "Mark",
+              "Muller",
+              "Dolan",
+              "Botvinick",
+              "Kurth-Nelson",
+              "Behrens"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4104821",
+            "source_url": "https://doi.org/10.2139/ssrn.4104821",
+            "title_similarity": 0.3333333333333333
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Generative replay for compositional visual understanding in the prefrontal-hippocampal circuit",
+            "authors": [
+              "Schwartenbeck",
+              "Baram",
+              "Liu",
+              "Mark",
+              "Muller",
+              "Dolan",
+              "Botvinick",
+              "Kurth-Nelson",
+              "Behrens"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1101/2021.06.06.447249",
+            "source_url": "https://doi.org/10.1101/2021.06.06.447249",
+            "title_similarity": 0.3333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:27.862942Z",
+        "response_sha256": "00b374503ec76e499ba78601581cc7297967dfc2746f793c94327b58d199c7c6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Miller%2C+Lennart+Luettgau%2C+Raymond+Dolan%2C+Yunzhe+Liu%2C+and+Philipp+Schwartenbeck&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:27.864624Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-52",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1101/2023.04.07.536053"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1101%2F2023.04.07.536053",
+        "checked_at": "2026-10-09T04:42:27.678040Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Constructing future behaviour in the hippocampal formation through composition and replay",
+            "authors": [
+              "Bakermans",
+              "Warren",
+              "Whittington",
+              "Behrens"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1101/2023.04.07.536053",
+            "source_url": "https://doi.org/10.1101/2023.04.07.536053",
+            "title_similarity": 0.21311475409836064
+          }
+        ],
+        "conflicting_fields": [
+          "title",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:27.677029Z",
+        "response_sha256": "fc4d0ac756ff14f0b6b7cc5e86312d55f401554bc02dab07400350e3cd109474",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1101%2F2023.04.07.536053"
+      ],
+      "checked_at": "2026-10-09T04:42:27.678040Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-53",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-53",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-53",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Taming vaes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Taming+vaes&rows=5",
+        "checked_at": "2026-10-09T04:42:27.688812Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Taming Audio VAEs via Target-KL Regularization",
+            "authors": [
+              "Seetharaman",
+              "Kumar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icassp55912.2026.11460662",
+            "source_url": "https://doi.org/10.1109/icassp55912.2026.11460662",
+            "title_similarity": 0.38596491228070173
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Vaes, Jef",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00187577",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00187577",
+            "title_similarity": 0.42105263157894735
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Vaes, Walter",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00187578",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00187578",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Vaes, Francis",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00187576",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00187576",
+            "title_similarity": 0.34782608695652173
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Figure 7: VAEs architecture.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3276/fig-7",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3276/fig-7",
+            "title_similarity": 0.3783783783783784
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:27.687371Z",
+        "response_sha256": "569a65643450f49eb59ad8771ef8fcedd558f2aa168120a7c51b2ba5c54c4344",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Taming+vaes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:27.688812Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-54",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-54",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The autoencoding variational autoencoder",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+autoencoding+variational+autoencoder&rows=5",
+        "checked_at": "2026-10-09T04:42:28.370468Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Autoencoding Pixies: Amortised Variational Inference with Graph Convolutions for Functional Distributional Semantics",
+            "authors": [
+              "Emerson"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.33774/coe-2021-1v9x4",
+            "source_url": "https://doi.org/10.33774/coe-2021-1v9x4",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Research on Insider Threat Detection Method Based on Variational Autoencoding",
+            "authors": [
+              "Zhenjiang Zhang",
+              "Zhenjiang Zhang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.53106/199115992021083204016",
+            "source_url": "https://doi.org/10.53106/199115992021083204016",
+            "title_similarity": 0.5470085470085471
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "APPLICATION OF TRIPLET VARIATIONAL AUTOENCODER FOR MEDICAL IMAGE ANALYSIS",
+            "authors": [
+              "Dzeboev"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.46916/25092025-1-978-5-00215-871-3",
+            "source_url": "https://doi.org/10.46916/25092025-1-978-5-00215-871-3",
+            "title_similarity": 0.4778761061946903
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Variational Autoencoder for Generation of Antimicrobial Peptides",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsomega.0c00442.s001",
+            "source_url": "https://doi.org/10.1021/acsomega.0c00442.s001",
+            "title_similarity": 0.4423076923076923
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Variational Autoencoder for Generation of Antimicrobial Peptides",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsomega.0c00442.s003",
+            "source_url": "https://doi.org/10.1021/acsomega.0c00442.s003",
+            "title_similarity": 0.4423076923076923
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:28.369195Z",
+        "response_sha256": "fe4a9b11274ab4844d317d6a63ee4ba9f2f34e5b8d572e774751a1e7a9650eb8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+autoencoding+variational+autoencoder&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:28.370468Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-55",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-55",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Consistency regularization for variational auto-encoders",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Consistency+regularization+for+variational+auto-encoders&rows=5",
+        "checked_at": "2026-10-09T04:42:30.588099Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:30.588044Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Consistency+regularization+for+variational+auto-encoders&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:30.588099Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-56",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-56",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Exploring the latent space of autoencoders with interventional assays",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Exploring+the+latent+space+of+autoencoders+with+interventional+assays&rows=5",
+        "checked_at": "2026-10-09T04:42:30.718449Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:30.718411Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Exploring+the+latent+space+of+autoencoders+with+interventional+assays&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:30.718449Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-58",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-58",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Object-centric compositional imagination for visual abstract reasoning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Object-centric+compositional+imagination+for+visual+abstract+reasoning&rows=5",
+        "checked_at": "2026-10-09T04:42:30.758936Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Abstract Visual Reasoning Based on Object-Centric Inductive Biases",
+            "authors": [
+              "zheng",
+              "Wan",
+              "Fang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4989286",
+            "source_url": "https://doi.org/10.2139/ssrn.4989286",
+            "title_similarity": 0.3235294117647059
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Abstract Visual Reasoning Based on Object-Centric Inductive Biases",
+            "authors": [
+              "zheng",
+              "Wan",
+              "Fang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4924489",
+            "source_url": "https://doi.org/10.2139/ssrn.4924489",
+            "title_similarity": 0.3235294117647059
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "MAMCTS: Object-Centric Multi-Action Tree Search for Adaptive Visual Reasoning",
+            "authors": [
+              "bao",
+              "Zhu",
+              "Li",
+              "Jin",
+              "Yang",
+              "Sui"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6411809",
+            "source_url": "https://doi.org/10.2139/ssrn.6411809",
+            "title_similarity": 0.6027397260273972
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Neural Module Networks for Compositional Visual Reasoning",
+            "authors": [
+              "Aissa"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/3db1d147z6178z4bf0z9852z0ddfdcc3e412",
+            "source_url": "https://doi.org/10.70675/3db1d147z6178z4bf0z9852z0ddfdcc3e412",
+            "title_similarity": 0.5669291338582677
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Systematic Visual Reasoning through Object-Centric Relational Abstraction",
+            "authors": [
+              "Webb",
+              "Mondal",
+              "Cohen"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-3151",
+            "source_url": "https://doi.org/10.52202/075280-3151",
+            "title_similarity": 0.4755244755244755
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:30.757447Z",
+        "response_sha256": "520cd3a290329dcf9e139e91b67cf2052678b2f25e2cc04edfc5014f0c3a2c93",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Object-centric+compositional+imagination+for+visual+abstract+reasoning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:30.758936Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-59",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-59",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-59",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Spriteworld: A flexible, configurable reinforcement learning environment",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Spriteworld%3A+A+flexible%2C+configurable+reinforcement+learning+environment&rows=5",
+        "checked_at": "2026-10-09T04:42:31.409167Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:31.409079Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Spriteworld%3A+A+flexible%2C+configurable+reinforcement+learning+environment&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:31.409167Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-60",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-60",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Generalization and robustness implications in object-centric learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Generalization+and+robustness+implications+in+object-centric+learning&rows=5",
+        "checked_at": "2026-10-09T04:42:32.357913Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:32.357843Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Generalization+and+robustness+implications+in+object-centric+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:32.357913Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-61",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-61",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-61",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Burgess, Irina Higgins, Arka Pal, Loic Matthey, Nick Watters, Guillaume Desjardins, and Alexander Lerchner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Burgess%2C+Irina+Higgins%2C+Arka+Pal%2C+Loic+Matthey%2C+Nick+Watters%2C+Guillaume+Desjardins%2C+and+Alexander+Lerchner&rows=5",
+        "checked_at": "2026-10-09T04:42:31.355593Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "500 ICT Tips for Primary Teachers",
+            "authors": [
+              "Higgins, Steve",
+              "Pickard, Nick",
+              "Race, Phil"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.4324/9780203016701",
+            "source_url": "https://doi.org/10.4324/9780203016701",
+            "title_similarity": 0.18045112781954886
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Partridge, Sir Nicholas (Wyndham), (Sir Nick), (born 28 Aug. 1955), Chief Executive, Terrence Higgins Trust, 1991–2013",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1093/ww/9780199540884.013.249515",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.249515",
+            "title_similarity": 0.22439024390243903
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Partridge, Sir Nicholas (Wyndham), (Sir Nick), (born 28 Aug. 1955), Chief Executive, Terrence Higgins Trust, 1991–2013",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u249515",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u249515",
+            "title_similarity": 0.22439024390243903
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Author response for \"The geography of connectivity shapes plant endemism hotspots\"",
+            "authors": [
+              "Yuan, Zili",
+              "Yang, Gengchen",
+              "Ding, Wenna",
+              "Brun, Philipp",
+              "Skeels, Alexander",
+              "Pellissier, Loic",
+              "Zimmermann, Niklaus E."
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1002/ecog.07514/v3/response1",
+            "source_url": "https://doi.org/10.1002/ecog.07514/v3/response1",
+            "title_similarity": 0.32222222222222224
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Triébert, (Georges-Louis-)Guillaume",
+            "authors": [
+              "Bate"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/omo/9781561592630.013.90000381495",
+            "source_url": "https://doi.org/10.1093/omo/9781561592630.013.90000381495",
+            "title_similarity": 0.30303030303030304
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:31.354104Z",
+        "response_sha256": "aa159f9b6e56df5102c0a607536938ebece21470b47cf85b13ef6cce1b554f61",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Burgess%2C+Irina+Higgins%2C+Arka+Pal%2C+Loic+Matthey%2C+Nick+Watters%2C+Guillaume+Desjardins%2C+and+Alexander+Lerchner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:31.355593Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-62",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-62",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-62",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Decoupled weight decay regularization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Decoupled+weight+decay+regularization&rows=5",
+        "checked_at": "2026-10-09T04:42:31.791801Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Toward principled regularization of deep networks—From weight decay to feature contraction",
+            "authors": [
+              "Maki"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1126/scirobotics.aaw1329",
+            "source_url": "https://doi.org/10.1126/scirobotics.aaw1329",
+            "title_similarity": 0.33070866141732286
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Understanding Decoupled and Early Weight Decay",
+            "authors": [
+              "Bjorck",
+              "Weinberger",
+              "Gomes"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1609/aaai.v35i8.16837",
+            "source_url": "https://doi.org/10.1609/aaai.v35i8.16837",
+            "title_similarity": 0.5301204819277109
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A novel Adam approach related to Decoupled Weight Decay (AdamL)",
+            "authors": [
+              "Llugsi",
+              "El Yacoubi",
+              "Fontaine",
+              "Lupera"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/la-cci48322.2021.9769816",
+            "source_url": "https://doi.org/10.1109/la-cci48322.2021.9769816",
+            "title_similarity": 0.4897959183673469
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Neighbor embedding based single image super-resolution using hybrid feature and adaptive weight decay regularization",
+            "authors": [
+              "Yonggun Lee",
+              "Yoonsik Choe"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1109/icce-berlin.2014.7034223",
+            "source_url": "https://doi.org/10.1109/icce-berlin.2014.7034223",
+            "title_similarity": 0.45751633986928103
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Weak and strong convergence analysis of Elman neural networks via weight decay regularization",
+            "authors": [
+              "Zhou",
+              "Fan",
+              "Huang",
+              "Liu"
+            ],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.1080/02331934.2022.2057852",
+            "source_url": "https://doi.org/10.1080/02331934.2022.2057852",
+            "title_similarity": 0.5230769230769231
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:31.790422Z",
+        "response_sha256": "b0410da42e7234c636e0696ca1a249ce2e2c0aaf503074989b3aff70908dc0ee",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Decoupled+weight+decay+regularization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:31.791801Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-63",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-63",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-63",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Yang, Zachary DeVito, Martin Raison, Alykhan Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu Fang, Junjie Bai, and Soumith Chintala",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Yang%2C+Zachary+DeVito%2C+Martin+Raison%2C+Alykhan+Tejani%2C+Sasank+Chilamkurthy%2C+Benoit+Steiner%2C+Lu+Fang%2C+Junjie+Bai%2C+and+Soumith+Chintala&rows=5",
+        "checked_at": "2026-10-09T04:42:32.903363Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Design and realization of a system simulator",
+            "authors": [
+              "Na Bai",
+              "Fang Lu",
+              "Jun Yang",
+              "Longxing Shi"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1109/icasic.2007.4415578",
+            "source_url": "https://doi.org/10.1109/icasic.2007.4415578",
+            "title_similarity": 0.1437125748502994
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Electrical impedance microchip using microelectrodes",
+            "authors": [
+              "Ying Wu",
+              "Yi Xiang",
+              "Junjie Bai",
+              "Zhaoying Zhou",
+              "Ying Yang"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1109/wcica.2008.4594503",
+            "source_url": "https://doi.org/10.1109/wcica.2008.4594503",
+            "title_similarity": 0.10285714285714286
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Synthesis of graphene and its application as wide-band saturable absorbers",
+            "authors": [
+              "Man Jiang",
+              "Junjie Wu",
+              "Zhaoyu Ren",
+              "Mei Qi",
+              "Jintao Bai",
+              "Yang Bai",
+              "Zhang",
+              "Wang"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1109/nano.2012.6321988",
+            "source_url": "https://doi.org/10.1109/nano.2012.6321988",
+            "title_similarity": 0.16243654822335024
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Functional Analysis and Identification of MiRNAs Associated with Lipid Metabolism from Milk-Derived Exosomes",
+            "authors": [
+              "Lu",
+              "Deng",
+              "Liu",
+              "Zhang",
+              "Bai",
+              "Fang",
+              "Yang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.21203/rs.3.rs-7556355/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-7556355/v1",
+            "title_similarity": 0.19047619047619047
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Qu’est-ce qui nous fait courir ? Le champion cycliste et philosophe Guillaume Martin-Guyonnet a lu “La Raison du sport” de Jean-Luc Marion",
+            "authors": [
+              "Martin"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3917/phimag.196.0037",
+            "source_url": "https://doi.org/10.3917/phimag.196.0037",
+            "title_similarity": 0.25680933852140075
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:32.901614Z",
+        "response_sha256": "f4c684083faa3aaf9337b36806cbc1c00d518219dbae0ff105fbaf9192bfb9ad",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Yang%2C+Zachary+DeVito%2C+Martin+Raison%2C+Alykhan+Tejani%2C+Sasank+Chilamkurthy%2C+Benoit+Steiner%2C+Lu+Fang%2C+Junjie+Bai%2C+and+Soumith+Chintala&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:32.903363Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-64",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-64",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-64",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kubric: A scalable dataset generator",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kubric%3A+A+scalable+dataset+generator&rows=5",
+        "checked_at": "2026-10-09T04:42:34.224413Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:34.224339Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kubric%3A+A+scalable+dataset+generator&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:42:34.224413Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-65",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-65",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-65",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_013_openreview_2024_02_11_credibility-66",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_013_openreview_2024_02_11_credibility-66",
+        "paper_reference_id": "ref-paper_013_openreview_2024_02_11_credibility-66",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.484848484848484
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 3
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 66,
+    "extracted_count": 66,
+    "parsed_count": 61,
+    "queried_count": 61,
+    "matched_count": 8,
+    "metadata_conflict_count": 4,
+    "unverified_count": 26,
+    "parse_failed_count": 5,
+    "not_checked_count": 0,
+    "query_failed_count": 23,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "query_failed"
+  ],
+  "created_at": "2026-10-09T06:14:41.616623Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

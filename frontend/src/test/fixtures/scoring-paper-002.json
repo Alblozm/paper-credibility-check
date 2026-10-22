@@ -1,0 +1,753 @@
+{
+  "schema_version": "0.4",
+  "assessment_id": "asmt_4aa3055e8573",
+  "status": "completed",
+  "stage": "report_ready",
+  "progress_percent": 100,
+  "source": {
+    "type": "arxiv",
+    "arxiv_id": "2310.01798v1",
+    "original_url": "https://arxiv.org/abs/2310.01798v1",
+    "upload_id": null,
+    "original_filename": null
+  },
+  "venue": {
+    "venue_id": "iclr_2027_main",
+    "code": "ICLR",
+    "name": "International Conference on Learning Representations",
+    "year": 2027,
+    "track": "main",
+    "rubric_id": "iclr_inspired_due_diligence",
+    "rubric_version": "0.1-draft"
+  },
+  "model": {
+    "model_id": "model_standard_v1",
+    "display_name": "DeepSeek Review Model",
+    "provider": "deepseek",
+    "model_version": "deepseek-v4-flash"
+  },
+  "paper": {
+    "paper_id": "arxiv_2310_01798v1",
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "authors": [],
+    "abstract": "Large Language Models (LLMs) have emerged as a groundbreaking technology\nwith their unparalleled text generation capabilities across various applications.\nNevertheless, concerns persist regarding the accuracy and appropriateness of their\ngenerated content. A contemporary methodology, self-correction, has been pro-\nposed as a remedy to these issues. Building upon this premise, this paper critically\nexamines the role and efficacy of self-correction within LLMs, shedding light on\nits true potential and limitations. Central to our investigation is the notion of in-\ntrinsic self-correction, whereby an LLM attempts to correct its initial responses\nbased solely on its inherent capabilities, without the crutch of external feedback.\nIn the context of reasoning, our research indicates that LLMs struggle to self-\ncorrect their responses without external feedback, and at times, their performance\nmight even degrade post self-correction. Drawing from these insights, we offer\nsuggestions for future research and practical applications in this field.",
+    "language": "en",
+    "page_count": 19,
+    "arxiv_id": "2310.01798v1",
+    "doi": null,
+    "sections": [
+      {
+        "section_id": "arxiv_2310_01798v1_sec_000",
+        "title": "Front Matter",
+        "level": 1,
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_001",
+        "title": "Abstract",
+        "level": 1,
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_002",
+        "title": "Introduction",
+        "level": 1,
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_003",
+        "title": "Background And Related Work",
+        "level": 1,
+        "page_start": 2,
+        "page_end": 3
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_004",
+        "title": "Can Large Language Models Self-Correct Reasoning ?",
+        "level": 1,
+        "page_start": 3,
+        "page_end": 3
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_005",
+        "title": "Self-Correction With Oracle Feedback",
+        "level": 2,
+        "page_start": 3,
+        "page_end": 3
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_006",
+        "title": "Experimental Setup",
+        "level": 3,
+        "page_start": 3,
+        "page_end": 4
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_007",
+        "title": "Results",
+        "level": 3,
+        "page_start": 4,
+        "page_end": 4
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_008",
+        "title": "Reflection",
+        "level": 3,
+        "page_start": 4,
+        "page_end": 4
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_009",
+        "title": "Intrinsic Self-Correction",
+        "level": 2,
+        "page_start": 4,
+        "page_end": 5
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_010",
+        "title": "Why Does The Performance Not Increase , But Instead Decrease ?",
+        "level": 3,
+        "page_start": 5,
+        "page_end": 6
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_011",
+        "title": "Results Of Other Prompts And Related Studies",
+        "level": 3,
+        "page_start": 6,
+        "page_end": 6
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_012",
+        "title": "Multi-Agent Debate And Self-Consistency",
+        "level": 2,
+        "page_start": 6,
+        "page_end": 7
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_013",
+        "title": "Self-Correction As Post-Hoc Prompting",
+        "level": 1,
+        "page_start": 7,
+        "page_end": 8
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_014",
+        "title": "Discussion",
+        "level": 1,
+        "page_start": 8,
+        "page_end": 9
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_015",
+        "title": "Conclusion",
+        "level": 1,
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_016",
+        "title": "Limitations And Broader Impact",
+        "level": 1,
+        "page_start": 9,
+        "page_end": 10
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_017",
+        "title": "References",
+        "level": 1,
+        "page_start": 10,
+        "page_end": 14
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_018",
+        "title": "Prompts And Example Outputs",
+        "level": 1,
+        "page_start": 14,
+        "page_end": 19
+      },
+      {
+        "section_id": "arxiv_2310_01798v1_sec_019",
+        "title": "Additional Results On Gsm8K",
+        "level": 1,
+        "page_start": 19,
+        "page_end": 19
+      }
+    ],
+    "parse_quality": "good",
+    "parse_warnings": [
+      "TABLE_STRUCTURE_UNVERIFIED"
+    ]
+  },
+  "report": {
+    "paper_summary": "This paper critically examines whether LLMs can intrinsically self-correct their reasoning without external feedback. Using GPT-3.5 and GPT-4 on GSM8K, CommonSenseQA, and HotpotQA, the authors show that oracle-guided self-correction improves accuracy, but intrinsic self-correction (no labels) degrades performance across benchmarks. They analyze answer-change patterns, compare multi-agent debate to self-consistency, and reframe self-correction as post-hoc prompting, arguing that gains often stem from oracle labels or weak initial prompts. The paper is a negative-result/analysis contribution urging skepticism and better comparison practices.",
+    "claimed_contributions": [
+      {
+        "contribution_id": "c1",
+        "statement": "LLMs struggle to self-correct reasoning without external feedback, and performance often degrades after intrinsic self-correction.",
+        "contribution_type": "empirical_finding",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_01",
+            "stance": "supports",
+            "reason": "Abstract states LLMs struggle to self-correct without external feedback and may degrade."
+          },
+          {
+            "evidence_id": "ev_02",
+            "stance": "supports",
+            "reason": "Table 3 shows accuracy drops under intrinsic self-correction."
+          }
+        ]
+      },
+      {
+        "contribution_id": "c2",
+        "statement": "Reported self-correction gains in prior work rely on oracle labels, and a random baseline can match oracle-guided correction.",
+        "contribution_type": "analysis",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_03",
+            "stance": "supports",
+            "reason": "Table 2 compares oracle self-correction with a random baseline."
+          },
+          {
+            "evidence_id": "ev_04",
+            "stance": "supports",
+            "reason": "Text explains improvements vanish without oracle labels."
+          }
+        ]
+      },
+      {
+        "contribution_id": "c3",
+        "statement": "Multi-agent debate is no better than self-consistency with an equivalent number of responses, and self-correction is best viewed as post-hoc prompting.",
+        "contribution_type": "analysis",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_05",
+            "stance": "supports",
+            "reason": "Table 4 compares debate and self-consistency."
+          },
+          {
+            "evidence_id": "ev_06",
+            "stance": "supports",
+            "reason": "Section 4 frames self-correction as post-hoc prompting."
+          }
+        ]
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_id": "cc1",
+        "claim": "Intrinsic self-correction degrades reasoning performance on GSM8K, CommonSenseQA, and HotpotQA.",
+        "support_level": "supported",
+        "reasoning": "Table 3 reports lower accuracy after self-correction for both GPT-3.5 and GPT-4 across all three benchmarks, and Figure 1 shows correct-to-incorrect changes exceed incorrect-to-correct changes.",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_02",
+            "stance": "supports",
+            "reason": "Table 3 shows consistent drops."
+          },
+          {
+            "evidence_id": "ev_07",
+            "stance": "supports",
+            "reason": "Figure 1 quantifies answer changes."
+          }
+        ]
+      },
+      {
+        "claim_id": "cc2",
+        "claim": "Oracle-guided self-correction improvements are not evidence of intrinsic self-correction ability.",
+        "support_level": "supported",
+        "reasoning": "Table 1 shows oracle gains, but Table 2 shows a random oracle baseline matches or exceeds self-correction, and the text argues labels act as an oracle.",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_03",
+            "stance": "supports",
+            "reason": "Random baseline comparison."
+          },
+          {
+            "evidence_id": "ev_04",
+            "stance": "supports",
+            "reason": "Discussion of oracle labels."
+          }
+        ]
+      },
+      {
+        "claim_id": "cc3",
+        "claim": "Multi-agent debate underperforms self-consistency with equal response counts.",
+        "support_level": "supported",
+        "reasoning": "Table 4 shows debate at 6 and 9 responses is below self-consistency at the same counts, though the paper notes a small advantage at 3 responses.",
+        "confidence": "medium",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_05",
+            "stance": "supports",
+            "reason": "Table 4 numbers."
+          }
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "dimension_id": "research_value",
+        "display_name": "Research Value & Significance",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "summary": "Addresses an important and timely question about LLM self-correction with a clear negative-result contribution. The oracle-vs-intrinsic distinction and the post-hoc prompting framing are practically useful, though the scope is limited to a few benchmarks and two proprietary models.",
+        "confidence": "high",
+        "uncertainty_reason": null,
+        "evidence_links": [
+          {
+            "evidence_id": "ev_01",
+            "stance": "supports",
+            "reason": "States the central finding and its practical relevance."
+          },
+          {
+            "evidence_id": "ev_06",
+            "stance": "supports",
+            "reason": "Offers a useful conceptual reframing."
+          }
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "display_name": "Soundness & Evidence Support",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "summary": "Central claims are supported by controlled comparisons across three benchmarks, including an oracle baseline and a random baseline. However, reliance on proprietary models with unspecified versions, limited repeated runs, and small HotpotQA samples constrain confidence.",
+        "confidence": "medium",
+        "uncertainty_reason": null,
+        "evidence_links": [
+          {
+            "evidence_id": "ev_02",
+            "stance": "supports",
+            "reason": "Main intrinsic results."
+          },
+          {
+            "evidence_id": "ev_03",
+            "stance": "supports",
+            "reason": "Random baseline strengthens the oracle critique."
+          },
+          {
+            "evidence_id": "ev_08",
+            "stance": "contradicts",
+            "reason": "Model version ambiguity noted by authors."
+          }
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "display_name": "Originality & Positioning",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "summary": "The paper clearly distinguishes intrinsic self-correction from oracle-guided correction and positions itself against prior optimistic work. The post-hoc prompting framing is a meaningful conceptual contribution, though the core empirical finding is partly anticipated by cited work.",
+        "confidence": "medium",
+        "uncertainty_reason": null,
+        "evidence_links": [
+          {
+            "evidence_id": "ev_04",
+            "stance": "supports",
+            "reason": "Distinguishes oracle from intrinsic settings."
+          },
+          {
+            "evidence_id": "ev_06",
+            "stance": "supports",
+            "reason": "Introduces post-hoc prompting framing."
+          }
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "display_name": "Clarity & Usability",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "summary": "The paper is well organized, with clear definitions, tables, and worked examples. The distinction between intrinsic and oracle settings is explained carefully, and practical guidelines are offered. Minor ambiguity remains around model versions and some prompt details.",
+        "confidence": "high",
+        "uncertainty_reason": null,
+        "evidence_links": [
+          {
+            "evidence_id": "ev_01",
+            "stance": "supports",
+            "reason": "Clear abstract statement."
+          },
+          {
+            "evidence_id": "ev_09",
+            "stance": "supports",
+            "reason": "Guidelines for comparison are provided."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "display_name": "Reproducibility & Transparency",
+        "applicability": "applicable",
+        "score": 5,
+        "rating": "adequate",
+        "weight": 0.2,
+        "summary": "Datasets and prompts are identified, and some settings are reported, but code is not provided, model versions are partly ambiguous, and seeds/repeated-run details are sparse. Reproduction would require substantial effort and access to proprietary models.",
+        "confidence": "medium",
+        "uncertainty_reason": null,
+        "evidence_links": [
+          {
+            "evidence_id": "ev_08",
+            "stance": "contradicts",
+            "reason": "Model version ambiguity."
+          },
+          {
+            "evidence_id": "ev_10",
+            "stance": "context",
+            "reason": "Prompts are included in appendix."
+          }
+        ]
+      }
+    ],
+    "reproducibility_checklist": [
+      {
+        "check_id": "code_availability",
+        "display_name": "Code availability",
+        "status": "not_available",
+        "detail": "No code repository or implementation release is mentioned in the provided text.",
+        "evidence_links": []
+      },
+      {
+        "check_id": "data_availability",
+        "display_name": "Data availability",
+        "status": "available",
+        "detail": "The paper identifies public benchmarks (GSM8K, CommonSenseQA, HotpotQA) and evaluation subsets.",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_11",
+            "stance": "supports",
+            "reason": "Benchmarks and sizes are specified."
+          }
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "display_name": "Random seed",
+        "status": "not_available",
+        "detail": "No random seeds or repeated-run protocols are reported; only a standard deviation for one baseline is mentioned.",
+        "evidence_links": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "display_name": "Hyperparameters",
+        "status": "unable_to_verify",
+        "detail": "Temperature (1.0) and max self-correction rounds are reported, but other decoding parameters are not detailed.",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_12",
+            "stance": "context",
+            "reason": "Temperature and rounds mentioned."
+          }
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "display_name": "Hardware and environment",
+        "status": "not_applicable",
+        "detail": "The work uses proprietary API models; no local hardware or training environment is relevant.",
+        "evidence_links": []
+      },
+      {
+        "check_id": "preprocessing_details",
+        "display_name": "Preprocessing details",
+        "status": "unable_to_verify",
+        "detail": "Prompt formats and evaluation metrics are described, but detailed preprocessing of model outputs is only partially specified.",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_10",
+            "stance": "context",
+            "reason": "Prompts are provided in appendix."
+          }
+        ]
+      }
+    ],
+    "strengths": [
+      {
+        "finding_id": "strength_01",
+        "title": "Clear separation of oracle and intrinsic settings",
+        "detail": "The paper carefully distinguishes self-correction with ground-truth labels from intrinsic self-correction, exposing a key confound in prior work.",
+        "importance": "major",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_04",
+            "stance": "supports",
+            "reason": "Explains the oracle confound."
+          }
+        ]
+      },
+      {
+        "finding_id": "strength_02",
+        "title": "Random baseline strengthens the critique",
+        "detail": "A random-guess oracle baseline matches or exceeds self-correction, providing a simple and persuasive control.",
+        "importance": "major",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_03",
+            "stance": "supports",
+            "reason": "Table 2 random baseline."
+          }
+        ]
+      },
+      {
+        "finding_id": "strength_03",
+        "title": "Practical guidelines and conceptual reframing",
+        "detail": "The post-hoc prompting view and comparison guidelines offer actionable advice for future self-correction research.",
+        "importance": "minor",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_09",
+            "stance": "supports",
+            "reason": "Guidelines provided."
+          }
+        ]
+      }
+    ],
+    "concerns": [
+      {
+        "finding_id": "concern_01",
+        "title": "Limited model and benchmark scope",
+        "detail": "Conclusions rest on two proprietary models and three benchmarks, with small HotpotQA samples, limiting generality.",
+        "importance": "major",
+        "confidence": "medium",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_11",
+            "stance": "contradicts",
+            "reason": "Small HotpotQA set noted."
+          }
+        ]
+      },
+      {
+        "finding_id": "concern_02",
+        "title": "Model version ambiguity",
+        "detail": "The authors note prior work did not specify model versions and they had to choose versions themselves, complicating exact reproduction.",
+        "importance": "major",
+        "confidence": "high",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_08",
+            "stance": "contradicts",
+            "reason": "Version ambiguity acknowledged."
+          }
+        ]
+      },
+      {
+        "finding_id": "concern_03",
+        "title": "Sparse variance reporting",
+        "detail": "Repeated runs and variance are only partially reported, making the stability of the negative result less certain.",
+        "importance": "minor",
+        "confidence": "medium",
+        "evidence_links": []
+      }
+    ],
+    "unresolved_questions": [
+      {
+        "question_id": "question_01",
+        "question": "Would the negative result hold for open-weight models or newer model versions?",
+        "why_it_matters": "The conclusion may be model-specific given reliance on GPT-3.5 and GPT-4 snapshots.",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_08",
+            "stance": "context",
+            "reason": "Model version dependence."
+          }
+        ]
+      },
+      {
+        "question_id": "question_02",
+        "question": "How sensitive are the results to decoding parameters and prompt phrasing beyond the tested variants?",
+        "why_it_matters": "The paper tests a few feedback prompts but not a broad hyperparameter sweep, affecting robustness of the claim.",
+        "evidence_links": [
+          {
+            "evidence_id": "ev_12",
+            "stance": "context",
+            "reason": "Limited parameter reporting."
+          }
+        ]
+      }
+    ],
+    "overall_assessment": {
+      "overall_score": 7.0,
+      "rating": "good",
+      "summary": "A well-motivated and clearly presented negative-result study that challenges optimistic claims about LLM self-correction. The oracle-vs-intrinsic distinction and random baseline are persuasive, though limited model/benchmark scope and incomplete reproducibility details temper the conclusions.",
+      "reading_recommendation": "worth_reading_with_checks",
+      "recommendation_reason": "Valuable for researchers and practitioners working on self-correction, but readers should verify model-version and variance details before generalizing.",
+      "confidence": "medium",
+      "is_provisional": false,
+      "calculation": {
+        "method": "weighted_average",
+        "assessed_dimension_count": 5,
+        "excluded_dimension_ids": []
+      }
+    },
+    "evidence": [
+      {
+        "evidence_id": "ev_01",
+        "page_number": 1,
+        "section_id": "arxiv_2310_01798v1_sec_001",
+        "section_title": "Abstract",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0001",
+        "evidence_mode": "quote",
+        "excerpt": "LLMs struggle to self-correct their responses without external feedback, and at times, their performance might even degrade post self-correction.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_02",
+        "page_number": 5,
+        "section_id": "arxiv_2310_01798v1_sec_009",
+        "section_title": "Intrinsic Self-Correction",
+        "locator_type": "table",
+        "locator_label": "Table 3",
+        "evidence_mode": "paraphrase",
+        "excerpt": "Table 3 shows accuracy dropping after intrinsic self-correction for GPT-3.5 and GPT-4 on GSM8K, CommonSenseQA, and HotpotQA.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_03",
+        "page_number": 4,
+        "section_id": "arxiv_2310_01798v1_sec_008",
+        "section_title": "Reflection",
+        "locator_type": "table",
+        "locator_label": "Table 2",
+        "evidence_mode": "paraphrase",
+        "excerpt": "Table 2 compares oracle self-correction with a random baseline, where random guessing matches or exceeds self-correction after two rounds.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_04",
+        "page_number": 2,
+        "section_id": "arxiv_2310_01798v1_sec_002",
+        "section_title": "Introduction",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0003",
+        "evidence_mode": "quote",
+        "excerpt": "the improvements in these studies result from using oracles to guide the self-correction process, and the improvements vanish when oracle labels are not available.",
+        "location_confidence": "low"
+      },
+      {
+        "evidence_id": "ev_05",
+        "page_number": 7,
+        "section_id": "arxiv_2310_01798v1_sec_012",
+        "section_title": "Multi-Agent Debate And Self-Consistency",
+        "locator_type": "table",
+        "locator_label": "Table 4",
+        "evidence_mode": "paraphrase",
+        "excerpt": "Table 4 shows multi-agent debate at 6 and 9 responses underperforming self-consistency at the same response counts.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_06",
+        "page_number": 7,
+        "section_id": "arxiv_2310_01798v1_sec_013",
+        "section_title": "Self-Correction As Post-Hoc Prompting",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0019",
+        "evidence_mode": "quote",
+        "excerpt": "Based on its form, self-correction can be viewed as a type of post-hoc prompting.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_07",
+        "page_number": 5,
+        "section_id": "arxiv_2310_01798v1_sec_009",
+        "section_title": "Intrinsic Self-Correction",
+        "locator_type": "figure",
+        "locator_label": "Figure 1",
+        "evidence_mode": "paraphrase",
+        "excerpt": "Figure 1 shows that for GSM8K, correct-to-incorrect changes (8.8%) exceed incorrect-to-correct changes (7.6%) after two rounds.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_08",
+        "page_number": 3,
+        "section_id": "arxiv_2310_01798v1_sec_006",
+        "section_title": "Experimental Setup",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0008",
+        "evidence_mode": "quote",
+        "excerpt": "However, the papers do not specify which version was used",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_09",
+        "page_number": 9,
+        "section_id": "arxiv_2310_01798v1_sec_014",
+        "section_title": "Discussion",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0022",
+        "evidence_mode": "quote",
+        "excerpt": "when comparing self-correction methods to other baselines, it is important to report the inference cost, e.g., number of calls or tokens.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_10",
+        "page_number": 14,
+        "section_id": "arxiv_2310_01798v1_sec_018",
+        "section_title": "Prompts And Example Outputs",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0032",
+        "evidence_mode": "paraphrase",
+        "excerpt": "Appendix A provides full prompts and example outputs for the self-correction procedure.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_11",
+        "page_number": 3,
+        "section_id": "arxiv_2310_01798v1_sec_006",
+        "section_title": "Experimental Setup",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0008",
+        "evidence_mode": "quote",
+        "excerpt": "This set contains 100 questions, with exact match serving as the evaluation metric.",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "ev_12",
+        "page_number": 4,
+        "section_id": "arxiv_2310_01798v1_sec_006",
+        "section_title": "Experimental Setup",
+        "locator_type": "text",
+        "locator_label": "arxiv_2310_01798v1_chunk_0009",
+        "evidence_mode": "quote",
+        "excerpt": "We prompt the models to undergo a maximum of two rounds of self-correction, using the default temperature (1.).",
+        "location_confidence": "high"
+      }
+    ],
+    "limitations": [
+      "Only GPT-3.5 and GPT-4 are tested, with ambiguous model versions.",
+      "HotpotQA evaluation uses a small 100-question set.",
+      "Code is not released and variance reporting is sparse.",
+      "Prompt search is limited to a few feedback variants."
+    ],
+    "generated_at": "2025-01-01T00:00:00Z"
+  },
+  "warnings": [
+    {
+      "code": "EVIDENCE_EXCERPT_UNVERIFIED",
+      "message": "The quote of evidence_id 'ev_04' was not found in the parsed text; location_confidence was lowered to low",
+      "stage": "linking_evidence"
+    }
+  ],
+  "error": null,
+  "created_at": "2026-10-21T03:06:53Z",
+  "started_at": "2026-10-21T03:06:53Z",
+  "completed_at": "2026-10-21T03:07:59Z"
+}

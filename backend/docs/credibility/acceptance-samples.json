@@ -1,0 +1,270 @@
+{
+  "schema_version": "credibility-acceptance-samples-1",
+  "suite_id": "six-paper-v1",
+  "selection_frozen_on": "2026-10-19",
+  "selection_status": "ai_assisted_pending_human_review",
+  "is_human_gold": false,
+  "purpose": "Fresh live API technical acceptance with source-pinned inputs; historical outcomes are selection clues, never labels to copy.",
+  "coverage_gaps": [
+    {
+      "category": "verified_exclusive_single_paper_repository",
+      "reason": "No human-verified exclusivity label; LoRA is only an official association candidate."
+    },
+    {
+      "category": "non_github_code_host",
+      "reason": "No verified GitLab/Bitbucket official code repository identified in the local 50-paper materials."
+    },
+    {
+      "category": "confirmed_dead_or_404_official_entry",
+      "reason": "Historical query_failed does not establish HTTP 404 or a permanently dead entry."
+    },
+    {
+      "category": "human_gold_and_precision_recall",
+      "reason": "The six cases are AI-assisted selections pending human review; do not report model accuracy from them."
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "lora_2106_09685v2",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "target_categories": [
+        "official_repository_candidate"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "arxiv",
+        "arxiv_id": "2106.09685v2",
+        "pdf_url": "https://arxiv.org/pdf/2106.09685v2",
+        "pdf_sha256": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a",
+        "paper_version_id": "live:arxiv:2106.09685v2:sha256:e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a",
+        "page_count": 26
+      },
+      "manual_expectations": [
+        "Verify the paper-to-microsoft/LoRA association from newly captured evidence; do not presume this is an exclusive single-paper repository.",
+        "Separate accessible implementation evidence from executed reproduction, which this system does not perform."
+      ],
+      "provenance": [
+        {
+          "repository": "workspace",
+          "path": "outputs/deepseek-credibility-live-20261019-020029/source-context.json",
+          "sha256": "3f4a948b6d68c711a319f029649c989bffe33a0bed0d2afc61c888fbaa5d8099",
+          "pointer": "source/source_sha256",
+          "excerpt": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a"
+        },
+        {
+          "repository": "workspace",
+          "path": "outputs/deepseek-credibility-live-20261019-020029/report.json",
+          "sha256": "bae5fd1b87f3b5d205b8675474f477f6ab6a875f1c0f854b7d805bac37e92816",
+          "pointer": "checks.code.repositories[0]",
+          "excerpt": "Historical live run confirmed accessible associated implementation at c4593f060e6a368d7bb5af5273b8e42810cdef90; this is not human Gold."
+        }
+      ]
+    },
+    {
+      "sample_id": "paper_001",
+      "title": "Tangent Transformers for Composition, Privacy and Removal",
+      "target_categories": [
+        "shared_repository",
+        "explicit_paper_code_link"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "arxiv",
+        "arxiv_id": "2307.08122v3",
+        "pdf_url": "https://arxiv.org/pdf/2307.08122v3",
+        "pdf_sha256": "5bca1492f804f7ba440d4b5ff5bbc9d5f45afe5d4f184bd0904cdf46b8471d6f",
+        "paper_version_id": "paper_001_v3",
+        "page_count": 18
+      },
+      "manual_expectations": [
+        "README historically identifies both 2307.08122 and 2307.08114. Assign an issue to this paper only when the newly captured thread identifies it.",
+        "Recover the wrapped explicit paper URL while retaining the original paper excerpt; unresolved thread relevance must remain unknown."
+      ],
+      "provenance": [
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_001/source_record.json",
+          "sha256": "31fdf0f145359fdedaf031240de278768191b0e27b1161d51b161293b7b744ce",
+          "pointer": "source_url/pdf_sha256",
+          "excerpt": "https://arxiv.org/pdf/2307.08122v3"
+        },
+        {
+          "repository": "backend",
+          "path": "docs/credibility/frozen/paper_001-code-check.source.md",
+          "sha256": "97970eed6044527af94a99136d126aad162150c84d9a4fff7e78a87b9047ece6",
+          "pointer": "line 15",
+          "excerpt": "README 明确列出 arXiv 2307.08122，同时还支持另一篇论文 2307.08114。"
+        }
+      ]
+    },
+    {
+      "sample_id": "paper_038",
+      "title": "GeoFAR: Geography-Informed Frequency-Aware Super-Resolution for Climate Data",
+      "target_categories": [
+        "project_page_handoff_candidate"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "pdf_url",
+        "arxiv_id": null,
+        "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/039c30e9af8039fbd1b58da9d04f38e9-Paper-Conference.pdf",
+        "pdf_sha256": "40ff1e9142f9f21066990ba10698883127db6329403a1884d929d2d56561bda5",
+        "paper_version_id": "paper_038_iclr_2026_proceedings",
+        "page_count": 25
+      },
+      "manual_expectations": [
+        "Follow the explicit GeoFAR project page and evaluate the Code/Repository link against the paper identity.",
+        "If page retrieval or association fails, retain an explicit gap; an old no_public_code_found label is not Gold."
+      ],
+      "provenance": [
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_038/source_record.json",
+          "sha256": "19be2951ada61268e47592e9f2bb0581fb048830a1efe2a3e0efd193315d0040",
+          "pointer": "source_url/pdf_sha256",
+          "excerpt": "https://proceedings.iclr.cc/paper_files/paper/2026/file/039c30e9af8039fbd1b58da9d04f38e9-Paper-Conference.pdf"
+        },
+        {
+          "repository": "data",
+          "path": "data/parsed/paper_038/iclr_2026_proceedings/chunks.jsonl",
+          "sha256": "432c4f669ce431e40bf1229099c341186b2ca70af6f1e564cda11a11cb5a30a9",
+          "pointer": "paper_038_iclr_2026_proceedings_chunk_0019 page 11",
+          "excerpt": "The CERRA dataset and code are available at https://eceo-epfl.github.io/GeoFAR/ ."
+        }
+      ]
+    },
+    {
+      "sample_id": "paper_037",
+      "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+      "target_categories": [
+        "reproduction_discussion_candidate",
+        "baseline_repository_negative_control"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "pdf_url",
+        "arxiv_id": null,
+        "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/033d9e8dbbbc0ad90e59222cf1db0fc2-Paper-Conference.pdf",
+        "pdf_sha256": "d6033f58ff41529f20097a50dde1e97bce9e9db87e443c0d0efa7688a82d58c1",
+        "paper_version_id": "paper_037_iclr_2026_proceedings",
+        "page_count": 26
+      },
+      "manual_expectations": [
+        "garage and STRAP are cited framework/baseline repositories. Their issues must not automatically become DataMIL reproduction failures or author replies.",
+        "The historical STRAP issue #3 discusses demonstration counts. Check relevance, conditions, identity and resolution independently; a closed issue is not proof of resolution."
+      ],
+      "provenance": [
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_037/source_record.json",
+          "sha256": "9262869269cb1101baf71c6ed3ae85b67090f2333f81184737e1ad5022f7f7cb",
+          "pointer": "source_url/pdf_sha256",
+          "excerpt": "https://proceedings.iclr.cc/paper_files/paper/2026/file/033d9e8dbbbc0ad90e59222cf1db0fc2-Paper-Conference.pdf"
+        },
+        {
+          "repository": "data",
+          "path": "data/parsed/paper_037/iclr_2026_proceedings/chunks.jsonl",
+          "sha256": "221c6bba954bd02bce89ce6aff28786e463e513b29e2b7595b74c73c559037c5",
+          "pointer": "paper_037_iclr_2026_proceedings_chunk_0046 page 23",
+          "excerpt": "we use the authors’ STRAP implementation ( https://github.com/WEIRDLabUW/STRAP )"
+        },
+        {
+          "repository": "data",
+          "path": "data/credibility_cases/ai_batch_v0.1/paper_037.json",
+          "sha256": "b51958119d7a7f9be710ab292cb9ff4d190464237a823977a6ea75c303c73dbf",
+          "pointer": "reproduction_signals",
+          "excerpt": "Historical candidate URLs: https://github.com/rlworkgroup/garage/issues/2337 ; https://github.com/WEIRDLabUW/STRAP/issues/3 . All are candidate observations, not verified DataMIL outcomes."
+        }
+      ]
+    },
+    {
+      "sample_id": "paper_005",
+      "title": "The Expressive Power of Transformers with Chain of Thought",
+      "target_categories": [
+        "theoretical_work_candidate",
+        "no_explicit_public_code_candidate"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "arxiv",
+        "arxiv_id": "2310.07923v5",
+        "pdf_url": "https://arxiv.org/pdf/2310.07923v5",
+        "pdf_sha256": "4017f54b9b7357d6da491e2edd5c315b75b1d0659c4844e5c06e1ab22a2be20c",
+        "paper_version_id": "paper_005_v5",
+        "page_count": 17
+      },
+      "manual_expectations": [
+        "The paper studies complexity bounds and the local parsed links contain no code repository. Decide applicability from explicit paper evidence; do not force not_applicable based on the title.",
+        "Distinguish no code found within the inspected scope from proof that no public code exists."
+      ],
+      "provenance": [
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_005/source_record.json",
+          "sha256": "f6e7355dccbf5e12261337a3f76eb196170fb46940940931eea9c9b998abac03",
+          "pointer": "source_url/pdf_sha256",
+          "excerpt": "https://arxiv.org/pdf/2310.07923v5"
+        },
+        {
+          "repository": "data",
+          "path": "data/parsed/paper_005/v5/links.json",
+          "sha256": "19ade6db1c4d2a1e0445b94dc05af6264bcca88b75fd54c03c31f98c76ff8bd7",
+          "pointer": "all parsed links",
+          "excerpt": "The only local parsed link is the paper source URL; this is bounded historical extraction evidence."
+        },
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_005/source_record.json",
+          "sha256": "f6e7355dccbf5e12261337a3f76eb196170fb46940940931eea9c9b998abac03",
+          "pointer": "abstract",
+          "excerpt": "the first exact characterization of a type of transformers in terms of standard complexity classes"
+        }
+      ]
+    },
+    {
+      "sample_id": "paper_013",
+      "title": "Provable Compositional Generalization for Object-Centric Learning",
+      "target_categories": [
+        "historical_query_failure_candidate",
+        "cited_dependency_negative_control"
+      ],
+      "selection_status": "ai_assisted_pending_human_review",
+      "input": {
+        "type": "pdf_url",
+        "arxiv_id": null,
+        "pdf_url": "https://openreview.net/pdf?id=7VPTUWkiDQ",
+        "pdf_sha256": "59c81b647e75fddd0be4ce4a1e56a955682d8adab2889c42a41c68f7323e6c9a",
+        "paper_version_id": "paper_013_openreview_2024_02_11",
+        "page_count": 28
+      },
+      "manual_expectations": [
+        "The local 2026-10-09 case records deepmind/spriteworld query_failed. A technical failure must not become a fabricated 404, repository absence or reproduction failure.",
+        "spriteworld is in the bibliography. Do not confirm it as the current paper’s official implementation merely because the URL appears in the paper."
+      ],
+      "provenance": [
+        {
+          "repository": "data",
+          "path": "data/source_snapshots/paper_013/source_record.json",
+          "sha256": "8d154982fbca555b051fbfb637516053f9d56ea26b41b4033e97c82e55dc01b0",
+          "pointer": "source_url/pdf_sha256",
+          "excerpt": "https://openreview.net/pdf?id=7VPTUWkiDQ"
+        },
+        {
+          "repository": "data",
+          "path": "data/credibility_cases/ai_batch_v0.1/paper_013.json",
+          "sha256": "4519158f67cb226877ea997817b03e1e2fd1d4973672da8d5fd2c9d1a45d4615",
+          "pointer": "repositories[0].access_status",
+          "excerpt": "query_failed at 2026-10-09T04:42:34.552764Z; no HTTP 404 is established."
+        },
+        {
+          "repository": "data",
+          "path": "data/parsed/paper_013/openreview_2024_02_11/chunks.jsonl",
+          "sha256": "820500c693702a787e9aa935d5a08af5e7349f005eea8c0996ef9acfc3ce87c4",
+          "pointer": "paper_013_openreview_2024_02_11_chunk_0022 page 13",
+          "excerpt": "Spriteworld: A flexible, configurable reinforcement learning environment. https://github.com/deepmind/spriteworld/, 2019."
+        }
+      ]
+    }
+  ],
+  "selection_sha256": "07b644c8326a43aef8fd7962646f926195b8a6cd76de8a2ec08aa47a7bb268f5"
+}

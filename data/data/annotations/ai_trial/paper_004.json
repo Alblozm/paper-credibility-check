@@ -1,0 +1,374 @@
+{
+  "assessment_id": "assessment_ai_paper_004_v1",
+  "paper_version_id": "paper_004_v1",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-07T06:08:19Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-legacy-audit-1",
+    "model_run_id": "model_run_codex_review_paper_004_v1",
+    "raw_output_sha256": "9610e47d81b756b99a994decd04ad03d580d59949f98192a4425ba664a98cd07"
+  },
+  "paper_summary": "Mamba introduces input-dependent selective state-space models and a hardware-aware parallel scan, delivering linear sequence scaling and strong results across language, DNA and audio.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Input-dependent selective state-space parameters.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_004_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Hardware-aware parallel scan avoiding expanded-state materialization.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_004_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "A simplified selective SSM architecture evaluated across modalities.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_004_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Selective SSMs close key quality gaps while retaining linear sequence scaling.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_004_ev_002",
+        "paper_004_ev_004"
+      ]
+    },
+    {
+      "claim_id": "cl2",
+      "claim_text": "Mamba provides substantially higher generation throughput than matched Transformers.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_004_ev_002",
+        "paper_004_ev_004"
+      ]
+    }
+  ],
+  "overall_score": 8.6,
+  "overall_rating": "strong",
+  "reading_recommendation": "worth_deep_reading",
+  "confidence": "medium",
+  "overall_assessment": "A high-value, original and extensively evaluated architecture paper. Evidence spans synthetic mechanism tests, scaling studies, downstream tasks and efficiency benchmarks, with unusually strong implementation availability.",
+  "strengths": [
+    "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism.",
+    "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone.",
+    "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+  ],
+  "concerns": [
+    "Some comparisons use different training regimes or parameter budgets, complicating causal attribution.",
+    "The paper covers many modalities but detailed failure analysis is limited.",
+    "Several efficiency conclusions are hardware- and implementation-dependent."
+  ],
+  "unresolved_questions": [
+    "How robust are gains under matched-data and matched-compute comparisons?",
+    "Which selection components drive performance in the largest models?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality evaluates the paper's positioning rather than an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism. Some comparisons use different training regimes or parameter budgets, complicating causal attribution.",
+      "strengths": [
+        "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism."
+      ],
+      "weaknesses": [
+        "Some comparisons use different training regimes or parameter budgets, complicating causal attribution."
+      ],
+      "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_004_ev_001",
+        "paper_004_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone. The paper covers many modalities but detailed failure analysis is limited.",
+      "strengths": [
+        "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone."
+      ],
+      "weaknesses": [
+        "The paper covers many modalities but detailed failure analysis is limited."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_004_ev_002",
+        "paper_004_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+      "strengths": [
+        "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+      ],
+      "weaknesses": [
+        "Several efficiency conclusions are hardware- and implementation-dependent."
+      ],
+      "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_004_ev_003",
+        "paper_004_ev_001"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+      "strengths": [
+        "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+      ],
+      "weaknesses": [
+        "Several efficiency conclusions are hardware- and implementation-dependent."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_004_ev_001",
+        "paper_004_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+      "strengths": [
+        "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+      ],
+      "weaknesses": [
+        "Several efficiency conclusions are hardware- and implementation-dependent."
+      ],
+      "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_004_ev_005",
+        "paper_004_ev_004"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_004_ev_001",
+      "page_number": 1,
+      "section_id": "paper_004_v1_sec_1",
+      "section_title": "Introduction",
+      "locator_type": "text",
+      "locator_label": "paper_004_v1_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "a, and Cui 2023). However, they have been less effective at modeling discrete and information-dense data such as text.\n\nWe propose a new class of selective state space models, that improves on prior work on several axes to achieve the modeling power of Transformers while scaling linearly in sequence length.\n\nSelection Mechanism. First, we identify a key limitation of prior models: the ability to efficiently select data in an input-dependent manner (i.e. focus on or ignore particular inputs). Building on intuition based on important synthetic tasks such as selective copy and induction heads, we design a simple selection mechanism by parameteri",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_004_ev_002",
+      "page_number": 2,
+      "section_id": "paper_004_v1_sec_1",
+      "section_title": "Introduction",
+      "locator_type": "text",
+      "locator_label": "paper_004_v1_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "very strong modern Transformer training recipes based on LLaMa (Touvron et al. 2023). Our Mamba language model has 5 × generation throughput compared to Transformers of similar size, and Mamba-3B’s quality matches that of Transformers twice its size (e.g. 4 points higher avg. on common sense reasoning compared to Pythia-3B and even exceeding Pythia-7B).\n\nModel code and pre-trained checkpoints are open-sourced at https://github.com/state-spaces/mamba .\n\nSelective State Space Model with Hardware-aware State Expansion\n\n𝐴\n\nℎ ℎ !\"# !\n\n𝑥 𝑦 ! 𝐵 𝐶 ! ! ! ∆ GPU ! Discretize SRAM Project GPU HBM Selection Mechanism",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_004_ev_003",
+      "page_number": 1,
+      "section_id": "paper_004_v1_sec_1",
+      "section_title": "Introduction",
+      "locator_type": "text",
+      "locator_label": "paper_004_v1_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "odeling discrete and information-dense data such as text.\n\nWe propose a new class of selective state space models, that improves on prior work on several axes to achieve the modeling power of Transformers while scaling linearly in sequence length.\n\nSelection Mechanism. First, we identify a key limitation of prior models: the ability to efficiently select data in an input-dependent manner (i.e. focus on or ignore particular inputs). Building on intuition based on important synthetic tasks such as selective copy and induction heads, we design a simple selection mechanism by parameterizing the SSM parameters based on the input. This allows the m",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_004_ev_004",
+      "page_number": 3,
+      "section_id": "paper_004_v1_sec_2",
+      "section_title": "State Space Models",
+      "locator_type": "text",
+      "locator_label": "paper_004_v1_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "LTI (e.g. computed as convolutions) because of fundamental efficiency constraints, discussed in Section 3.3. However, a core insight of this work is that LTI models have fundamental limitations in modeling certain types of data, and our technical contributions involve removing the LTI constraint while overcoming the efficiency bottlenecks.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_004_ev_005",
+      "page_number": 2,
+      "section_id": "paper_004_v1_sec_1",
+      "section_title": "Introduction",
+      "locator_type": "text",
+      "locator_label": "paper_004_v1_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "ice its size (e.g. 4 points higher avg. on common sense reasoning compared to Pythia-3B and even exceeding Pythia-7B).\n\nModel code and pre-trained checkpoints are open-sourced at https://github.com/state-spaces/mamba .\n\nSelective State Space Model with Hardware-aware State Expansion\n\n𝐴\n\nℎ ℎ !\"# !\n\n𝑥 𝑦 ! 𝐵 𝐶 ! ! ! ∆ GPU ! Discretize SRAM Project GPU HBM Selection Mechanism",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_004_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_004_ev_004",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_004_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_004_ev_004",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_004_ev_003",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_004_ev_001",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_004_ev_001",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_004_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_004_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_004_ev_004",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "unable_to_verify",
+      "detail": "random seed is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_004_ev_005"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

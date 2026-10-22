@@ -1,0 +1,192 @@
+{
+  "model_run_id": "model_run_codex_review_paper_040_iclr_2026_proceedings",
+  "paper_id": "paper_040",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "826f04dea14e57889d3ba158d60cc1fa8aaae8084ee6bfdf1d1903883275cfda",
+  "raw_output": {
+    "paper_summary": "Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception capabilities predominantly engage different subsets of attention heads within the model architecture; and 2) truthfulness steering vectors vary significantly across different semantic contexts. Based on these observations, we propose Dynamic Multimodal Activation Steering, a training-free approach for hallucination mitigation. Our method constructs a semantic-based truthfulness steering vec",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Dynamic Multimodal Activation Steering for Hallucination Mitigation in Large Vision-Language Models》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception cap",
+      "论文提供方法或实证支持：The results on the MME (Fu et al., 2023) dataset are presented in Table 1. Our method demonstrates significant improvements of 94.66 and 46 points compared to the baseline models LLaVAv1.5 and QwenVL, respectively. On the LLaVAv1.5 model, our approach outperfo"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception cap；边界证据为：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method",
+        "strengths": [
+          "可定位正文支持：Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception cap"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：The results on the MME (Fu et al., 2023) dataset are presented in Table 1. Our method demonstrates significant improvements of 94.66 and 46 points compared to the baseline models LLaVAv1.5 and QwenVL, respectively. On the LLaVAv1.5 model, our approach outperfo；边界证据为：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method",
+        "strengths": [
+          "可定位正文支持：The results on the MME (Fu et al., 2023) dataset are presented in Table 1. Our method demonstrates significant improvements of 94.66 and 46 points compared to the baseline models LLaVAv1.5 and QwenVL, respectively. On the LLaVAv1.5 model, our approach outperfo"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0013"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Large Vision-Language Models (LVLMs) have demonstrated remarkable performance on visual question answering (VQA), image captioning, and related tasks (Liu et al., 2023; 2024c; Bai et al., 2023; Chen et al., 2024; Dai et al., 2023). However, these models suffer；边界证据为：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method",
+        "strengths": [
+          "可定位正文支持：Large Vision-Language Models (LVLMs) have demonstrated remarkable performance on visual question answering (VQA), image captioning, and related tasks (Liu et al., 2023; 2024c; Bai et al., 2023; Chen et al., 2024; Dai et al., 2023). However, these models suffer"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：In this section, we introduce dynamic multimodal activation steering. As shown in Figure 2, the method has three steps: the first step is to establish a dynamic truthfulness steering vector database, the second step is to calculate the steering vector for the ；边界证据为：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method",
+        "strengths": [
+          "可定位正文支持：In this section, we introduce dynamic multimodal activation steering. As shown in Figure 2, the method has three steps: the first step is to establish a dynamic truthfulness steering vector database, the second step is to calculate the steering vector for the "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0007"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 7,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：We validate the effectiveness on mainstream LVLMs: LLaVAv1.5 7B (Liu et al., 2024c) and QwenVL 7B (Bai et al., 2023), and compare DMAS with state-of-the-art methods: ICT (Chen et al., 2025a), AGLA (An et al., 2025), VAF (Yin et al., 2025), VTI (Liu et al., 202；边界证据为：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method",
+        "strengths": [
+          "可定位正文支持：We validate the effectiveness on mainstream LVLMs: LLaVAv1.5 7B (Liu et al., 2024c) and QwenVL 7B (Bai et al., 2023), and compare DMAS with state-of-the-art methods: ICT (Chen et al., 2025a), AGLA (An et al., 2025), VAF (Yin et al., 2025), VTI (Liu et al., 202"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：This paper proposes dynamic multimodal activation steering, a training-free approach to mitigate hallucination in LVLMs by dynamically intervening in attention head activations. The experiments on multiple benchmarks demonstrate the effectiveness of our method"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0012"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确code_availability披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0010"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0012"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确preprocessing_details披露。",
+        "chunk_ids": []
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception capabilities predominantly engage different subsets of attention heads within the model architecture; and 2) truthfulness steering vectors vary significantly across different semantic contexts. Based on these observations, we propose Dynamic Multimodal Activation Steering, a training-free approach for hallucination mitigation. Our method constructs a semantic-based truthfulness steering vec",
+        "type": "method_or_finding",
+        "chunk_id": "paper_040_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Large Vision-Language Models (LVLMs) exhibit outstanding performance on vision-language tasks but struggle with hallucination problems. Through in-depth analysis of LVLM activation patterns, we reveal two key findings: 1) truthfulness and visual perception capabilities predominantly engage different subsets of attention heads within the model architecture; and 2) truthfulness steering vectors vary significantly acros",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0013"
+        ],
+        "limiting_chunk_ids": [
+          "paper_040_iclr_2026_proceedings_chunk_0021"
+        ]
+      }
+    ]
+  }
+}

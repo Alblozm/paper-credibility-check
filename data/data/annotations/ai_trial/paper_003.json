@@ -1,0 +1,374 @@
+{
+  "assessment_id": "assessment_ai_paper_003_openreview_2024_02_11",
+  "paper_version_id": "paper_003_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-07T06:08:19Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-legacy-audit-1",
+    "model_run_id": "model_run_codex_review_paper_003_openreview_2024_02_11",
+    "raw_output_sha256": "eeeaa80eba88a7b81edddb79e740faa44a47736e15c5b9e9aa02c98952820b3f"
+  },
+  "paper_summary": "MemStranding attacks memory-based temporal graph neural networks by injecting fake interactions intended to persist in node memory and propagate to future nodes.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Defines persistence and propagation goals for temporal-graph attacks.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_003_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Introduces the two-stage MemStranding attack framework.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_003_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "Evaluates memory contamination on temporal graph prediction tasks.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_003_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Injected memory noise persists and propagates to future nodes.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "partially_supported",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_003_ev_002",
+        "paper_003_ev_004"
+      ]
+    },
+    {
+      "claim_id": "cl2",
+      "claim_text": "MemStranding significantly reduces TGNN task performance.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "partially_supported",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_003_ev_002",
+        "paper_003_ev_004"
+      ]
+    }
+  ],
+  "overall_score": 6.0,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "The problem and memory-oriented attack idea are meaningful, but the assessed evidence is narrower than the breadth of the claims. Baseline, architecture, defense and scale coverage limit confidence.",
+  "strengths": [
+    "Identifies temporal persistence and future-node transfer as distinct attack challenges.",
+    "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks.",
+    "Includes empirical studies over multiple temporal graph settings."
+  ],
+  "concerns": [
+    "Comparison coverage is narrow for a broad adversarial-robustness claim.",
+    "Threat-model assumptions require substantial attacker knowledge and capability.",
+    "Environment and repeatability disclosures are incomplete."
+  ],
+  "unresolved_questions": [
+    "How does the attack behave against a broader set of TGNN defenses?",
+    "Does effectiveness persist at substantially larger graph scale and across more architectures?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality evaluates the paper's positioning rather than an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Identifies temporal persistence and future-node transfer as distinct attack challenges. Comparison coverage is narrow for a broad adversarial-robustness claim.",
+      "strengths": [
+        "Identifies temporal persistence and future-node transfer as distinct attack challenges."
+      ],
+      "weaknesses": [
+        "Comparison coverage is narrow for a broad adversarial-robustness claim."
+      ],
+      "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_003_ev_001",
+        "paper_003_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks. Threat-model assumptions require substantial attacker knowledge and capability.",
+      "strengths": [
+        "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks."
+      ],
+      "weaknesses": [
+        "Threat-model assumptions require substantial attacker knowledge and capability."
+      ],
+      "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_003_ev_002",
+        "paper_003_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+      "strengths": [
+        "Includes empirical studies over multiple temporal graph settings."
+      ],
+      "weaknesses": [
+        "Environment and repeatability disclosures are incomplete."
+      ],
+      "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_003_ev_003",
+        "paper_003_ev_001"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+      "strengths": [
+        "Includes empirical studies over multiple temporal graph settings."
+      ],
+      "weaknesses": [
+        "Environment and repeatability disclosures are incomplete."
+      ],
+      "rationale": "Assigned 6/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_003_ev_001",
+        "paper_003_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+      "strengths": [
+        "Includes empirical studies over multiple temporal graph settings."
+      ],
+      "weaknesses": [
+        "Environment and repeatability disclosures are incomplete."
+      ],
+      "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_003_ev_005",
+        "paper_003_ev_004"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_003_ev_001",
+      "page_number": 1,
+      "section_id": "paper_003_openreview_2024_02_11_sec_abstract",
+      "section_title": "ABSTRACT",
+      "locator_type": "text",
+      "locator_label": "paper_003_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "poses significant challenges due to missing knowledge about them. To tackle these unique challenges in attacking TGNNs, we propose a practical and effective adversarial attack framework, MemStranding, that leverages node memories in TGNN models to yield long-lasting and spreading adversarial noises in dynamic graphs. The MemStranding allows the attacker to inject noises into nodes’ memory by adding fake nodes/edges at arbitrary timestamps. During future updates, the noises in nodes will persist with the support from their neighbors and be propagated to the future nodes by molding their memories into similar noisy states. The experimental resu",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_003_ev_002",
+      "page_number": 8,
+      "section_id": "paper_003_openreview_2024_02_11_sec_5_2",
+      "section_title": "EXPERIMENTAL RESULT",
+      "locator_type": "text",
+      "locator_label": "paper_003_openreview_2024_02_11_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "and more results of the edge prediction and node classification tasks are included in Appendix B.3 As one can observe, all prior attacks achieve significant accuracy drops at the t timestamp, but the strengths quickly decay as time shifts. In t and t , the accumulated ACC under these attacks is nearly identical to the vanilla. 25 50 In contrast, our proposed MemStranding fabricates the noise with persistence. Since MemStranding spends more budget on injecting the noise to the support nodes, it does not achieve considerable accuracy drops at t compared to the FakeNode attack. Nevertheless, as the time shifts to t and 0 25 t , MemStranding mai",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_003_ev_003",
+      "page_number": 3,
+      "section_id": "paper_003_openreview_2024_02_11_sec_2",
+      "section_title": "BACKGROUND AND RELATED WORK",
+      "locator_type": "text",
+      "locator_label": "paper_003_openreview_2024_02_11_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "ause the most substantial increases in thetraining losses on the original graphs. Though different in their strategies, existing GNN attacks assume that (1) attackers have full knowledge of every node and edge in the targeted graphs and (2) these graphs remain static after the attack.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_003_ev_004",
+      "page_number": 24,
+      "section_id": "paper_003_openreview_2024_02_11_sec_c_1",
+      "section_title": "LIMITS UNDER DIFFERENT MODELS AND GRAPHS",
+      "locator_type": "text",
+      "locator_label": "paper_003_openreview_2024_02_11_chunk_0033",
+      "evidence_mode": "quote",
+      "excerpt": "ment results in Appendix B.3 and Appendix B.6 demonstrated that MemStranding can be well-generalized on various inputs, several limitations can be observed according to the performance variance between different models. While our approach can effectively mislead TGN, ROLAND, and DyRep, its effectiveness is less significant on JODIE, which uses differences between a node’s current and its last update time to decay the memory. From these observations, we deduce that our attack may encounter limitations in two specific scenarios:\n\n• Limited Influence of Node Memory on Predictions: Our attack’s effectiveness may be mitigated in situations where t",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_003_ev_005",
+      "page_number": 7,
+      "section_id": "paper_003_openreview_2024_02_11_sec_5_1",
+      "section_title": "EXPERIMENTAL SETUP",
+      "locator_type": "text",
+      "locator_label": "paper_003_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "Models and Datasets: We use on four TGNN models for evaluation: Jodie (Kumar et al., 2019), Dyrep(Trivedietal.,2019), TGN(Rossietal.,2020)andRoland(Youetal.,2022). Theexperiments usefourdynamicgraphdatasets: Wikipedia( WIKI ),Reddit( REDDIT )(Kumaretal.,2019), Redditbody ( REDDIT-BODY ) and Reddit-title ( REDDIT-BODY ) (Kumar et al., 2018). More details about the models and datasets are included in Appendix B.1. Training Task & Metrics: We train and evaluate the models on tasks: node classification and edge prediction (Rossi et al., 2020). We use the commonly used Area under the ROC Curve (ROC- AUC) to measure the model performances. For a ti",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_003_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_003_ev_004",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_003_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_003_ev_004",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_003_ev_003",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_003_ev_001",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_003_ev_001",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_003_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_003_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_003_ev_004",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "unable_to_verify",
+      "detail": "hyperparameters is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "hardware environment is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "unable_to_verify",
+      "detail": "preprocessing details is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_003_ev_005"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

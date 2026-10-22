@@ -1,0 +1,37 @@
+{
+  "paper_id": "paper_045",
+  "paper_version_id": "paper_045_iclr_2026_proceedings",
+  "title": "Distributional Machine Unlearning via Selective Data Removal",
+  "authors": [
+    "Allouah, Youssef",
+    "Guerraoui, Rachid",
+    "Koyejo, Sanmi"
+  ],
+  "abstract": "Machine learning systems increasingly face requirements to remove entire domains of information—such as toxic language or biases—rather than individual user data. This task presents a dilemma: full removal of the unwanted domain data is computationally expensive, while random partial removal is statistically inefficient. We find that a domain's statistical influence is often concentrated in a small subset of its data samples, suggesting a path between ineffective partial removal and unnecessary complete removal. We formalize this as distributional unlearning: a framework to select a small subset that balances forgetting an unwanted distribution while preserving a desired one. Using Kullback-Leibler divergence constraints, we derive the exact removal-preservation Pareto frontier for Gaussian distributions and prove that models trained on the edited data achieve corresponding log-loss bounds. We propose a distance-based selection algorithm and show it is quadratically more sample-efficient than random removal in the challenging low-divergence regime. Experiments across synthetic, text, and image datasets (Jigsaw, CIFAR-10, SMS spam) show our method requires 15–82% less deletion than full removal for  strong unlearning effects, e.g., halving initial forget set accuracy. Ultimately, by showing a small forget set often suffices, our framework lays the foundations for more scalable and rigorous subpopulation unlearning.",
+  "language": "en",
+  "source_type": "pdf",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c1b3d1e2cf53bb28cabd801bd58b3521-Paper-Conference.pdf",
+  "tags": [
+    "iclr_2026",
+    "official_proceedings",
+    "recent_holdout",
+    "unlearning"
+  ],
+  "venue": "ICLR",
+  "publication_year": 2026,
+  "dataset_split": "test",
+  "decision": "Accept (proceedings)",
+  "decision_verified": true,
+  "landing_page_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c1b3d1e2cf53bb28cabd801bd58b3521-Abstract-Conference.html",
+  "retrieved_at": "2026-09-08T08:23:31Z",
+  "pdf_sha256": "41169892fad46a1e73f541b81e5dc8db15ff2409ef956820de61b23d8caf25be",
+  "pdf_sha256_status": "verified",
+  "page_count": 32,
+  "page_count_status": "verified",
+  "local_pdf_path": "data/raw_pdfs/paper_045/c1b3d1e2cf53bb28cabd801bd58b3521-Paper-Conference.pdf",
+  "parse_status": "completed",
+  "data_status": "parsed",
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "parse_quality": "good"
+}

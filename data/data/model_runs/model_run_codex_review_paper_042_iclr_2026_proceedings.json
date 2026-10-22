@@ -1,0 +1,196 @@
+{
+  "model_run_id": "model_run_codex_review_paper_042_iclr_2026_proceedings",
+  "paper_id": "paper_042",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "487386414c6df5fc4714a33eeb6ebfbcaf3b26bc487a0d48659152d63fe2c5c8",
+  "raw_output": {
+    "paper_summary": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of real-world rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Ctrl-World: A Controllable Generative World Model for Robot Manipulation》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout",
+      "论文提供方法或实证支持：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM "
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit ",
+        "strengths": [
+          "可定位正文支持：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit ",
+        "strengths": [
+          "可定位正文支持：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0011"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Video Generation Models for Robotics. Recent advances in video generation models (Agarwal et al., 2025; Wan et al., 2025; Blattmann et al., 2023a; Chi et al., 2025) have enabled the creation of realistic and temporally consistent content, reflecting a strong u；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit ",
+        "strengths": [
+          "可定位正文支持：Video Generation Models for Robotics. Recent advances in video generation models (Agarwal et al., 2025; Wan et al., 2025; Blattmann et al., 2023a; Chi et al., 2025) have enabled the creation of realistic and temporally consistent content, reflecting a strong u"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0004"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：Recent advances in vision-language-action (VLA) models have demonstrated competence across a wide range of manipulation tasks and scenarios (Black et al., 2024; Wen et al., 2025; Brohan et al., 2023; Kim et al., 2024; Cui et al., 2025; Guo et al., 2025; Zhang ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit ",
+        "strengths": [
+          "可定位正文支持：Recent advances in vision-language-action (VLA) models have demonstrated competence across a wide range of manipulation tasks and scenarios (Black et al., 2024; Wen et al., 2025; Brohan et al., 2023; Kim et al., 2024; Cui et al., 2025; Guo et al., 2025; Zhang "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 7,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：Policy Evaluation within World Model. Once a controllable and consistent world model is trained, we can conduct policy-in-the-loop rollouts in imagination space. Given an initial observation o and instruction l , a policy π together with the world model W can ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit ",
+        "strengths": [
+          "可定位正文支持：Policy Evaluation within World Model. Once a controllable and consistent world model is trained, we can conduct policy-in-the-loop rollouts in imagination space. Given an initial observation o and instruction l , a policy π together with the world model W can "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0008"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0000"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0021"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0010"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0019"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of real-world rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot",
+        "type": "method_or_finding",
+        "chunk_id": "paper_042_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World m",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0011"
+        ],
+        "limiting_chunk_ids": [
+          "paper_042_iclr_2026_proceedings_chunk_0015"
+        ]
+      }
+    ]
+  }
+}

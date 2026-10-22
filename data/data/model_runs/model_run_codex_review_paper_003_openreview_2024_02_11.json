@@ -1,0 +1,231 @@
+{
+  "model_run_id": "model_run_codex_review_paper_003_openreview_2024_02_11",
+  "paper_id": "paper_003",
+  "version": "openreview_2024_02_11",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:32:32.432703Z",
+  "raw_output_sha256": "eeeaa80eba88a7b81edddb79e740faa44a47736e15c5b9e9aa02c98952820b3f",
+  "raw_output": {
+    "paper_summary": "MemStranding attacks memory-based temporal graph neural networks by injecting fake interactions intended to persist in node memory and propagate to future nodes.",
+    "overall_assessment": "The problem and memory-oriented attack idea are meaningful, but the assessed evidence is narrower than the breadth of the claims. Baseline, architecture, defense and scale coverage limit confidence.",
+    "strengths": [
+      "Identifies temporal persistence and future-node transfer as distinct attack challenges.",
+      "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks.",
+      "Includes empirical studies over multiple temporal graph settings."
+    ],
+    "concerns": [
+      "Comparison coverage is narrow for a broad adversarial-robustness claim.",
+      "Threat-model assumptions require substantial attacker knowledge and capability.",
+      "Environment and repeatability disclosures are incomplete."
+    ],
+    "unresolved_questions": [
+      "How does the attack behave against a broader set of TGNN defenses?",
+      "Does effectiveness persist at substantially larger graph scale and across more architectures?"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "dimension_question": "research value",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Identifies temporal persistence and future-node transfer as distinct attack challenges. Comparison coverage is narrow for a broad adversarial-robustness claim.",
+        "strengths": [
+          "Identifies temporal persistence and future-node transfer as distinct attack challenges."
+        ],
+        "weaknesses": [
+          "Comparison coverage is narrow for a broad adversarial-robustness claim."
+        ],
+        "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_003_ev_001",
+          "paper_003_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "dimension_question": "soundness evidence",
+        "applicability": "applicable",
+        "score": 5,
+        "rating": "adequate",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks. Threat-model assumptions require substantial attacker knowledge and capability.",
+        "strengths": [
+          "Develops an attack around TGNN memory dynamics rather than directly reusing static-graph attacks."
+        ],
+        "weaknesses": [
+          "Threat-model assumptions require substantial attacker knowledge and capability."
+        ],
+        "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_003_ev_002",
+          "paper_003_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "dimension_question": "originality positioning",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+        "strengths": [
+          "Includes empirical studies over multiple temporal graph settings."
+        ],
+        "weaknesses": [
+          "Environment and repeatability disclosures are incomplete."
+        ],
+        "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_003_ev_003",
+          "paper_003_ev_001"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "dimension_question": "clarity usability",
+        "applicability": "applicable",
+        "score": 6,
+        "rating": "adequate",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+        "strengths": [
+          "Includes empirical studies over multiple temporal graph settings."
+        ],
+        "weaknesses": [
+          "Environment and repeatability disclosures are incomplete."
+        ],
+        "rationale": "Assigned 6/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_003_ev_001",
+          "paper_003_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "dimension_question": "reproducibility transparency",
+        "applicability": "applicable",
+        "score": 5,
+        "rating": "adequate",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Includes empirical studies over multiple temporal graph settings. Environment and repeatability disclosures are incomplete.",
+        "strengths": [
+          "Includes empirical studies over multiple temporal graph settings."
+        ],
+        "weaknesses": [
+          "Environment and repeatability disclosures are incomplete."
+        ],
+        "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_003_ev_005",
+          "paper_003_ev_004"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "not_available",
+        "detail": "code availability is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "data availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "random seed is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "unable_to_verify",
+        "detail": "hyperparameters is unable to verify in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "not_available",
+        "detail": "hardware environment is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "unable_to_verify",
+        "detail": "preprocessing details is unable to verify in the assessed PDF.",
+        "evidence_ids": [
+          "paper_003_ev_005"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "contribution_id": "c1",
+        "text": "Defines persistence and propagation goals for temporal-graph attacks.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_003_ev_001"
+      },
+      {
+        "contribution_id": "c2",
+        "text": "Introduces the two-stage MemStranding attack framework.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_003_ev_001"
+      },
+      {
+        "contribution_id": "c3",
+        "text": "Evaluates memory contamination on temporal graph prediction tasks.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_003_ev_001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_id": "cl1",
+        "claim_text": "Injected memory noise persists and propagates to future nodes.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "partially_supported",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_003_ev_002",
+          "paper_003_ev_004"
+        ]
+      },
+      {
+        "claim_id": "cl2",
+        "claim_text": "MemStranding significantly reduces TGNN task performance.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "partially_supported",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_003_ev_002",
+          "paper_003_ev_004"
+        ]
+      }
+    ],
+    "review_note": "Existing evidence-linked AI assessment reviewed in the Codex session under rubric v0.1."
+  }
+}

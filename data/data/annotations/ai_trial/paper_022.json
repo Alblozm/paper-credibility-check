@@ -1,0 +1,361 @@
+{
+  "assessment_id": "assessment_ai_paper_022_openreview_2024_02_11",
+  "paper_version_id": "paper_022_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_022_openreview_2024_02_11",
+    "raw_output_sha256": "bf6b71f86b55aff547a6b2b4744cc81f178337a7e7f85b8382ee519f5e40f2a8"
+  },
+  "paper_summary": "Understanding the interactions and interplay of microorganisms is a great challenge with many applications in medical and environmental settings. In this work, we model bacterial communities directly from their genomes using graph neural networks (GNNs).",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "We propose to learn the dynamics implicitly by directly predicting community relative abundance profiles at steady state, thus escaping the need for growth curves.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_022_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "On two real-world datasets, we show for the first time generalization to unseen bacteria and different community structures.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_022_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "On two real-world datasets, we show for the first time generalization to unseen bacteria and different community structures.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_022_ev_004",
+        "paper_022_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Modelling Microbial Communities with Graph Neural Networks》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.0/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Understanding the interactions and interplay of microorganisms is a great challenge with many applications in medical and environmental settings. ",
+    "正文可定位证据支持该维度判断：The datasets contain replicates for some of the settings. To make evaluation simple, we average the results of replicates when included in the validation or test sets. Cross-validation (CV) was performed on 5 train/validation/test data splits with 5 model initialization seeds fo…",
+    "正文可定位证据支持该维度判断：The general goal of this work is to train and evaluate neural models for the dynamics of bacterial communities, directly from their genomes. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Modelling Microbial Communities with Graph Neural Networks》在研究价值方面的正文支持是：Understanding the interactions and interplay of microorganisms is a great challenge with many applications in medical and environmental settings.  限制或边界证据是：Our work sets the stage for the application of GNNs to microbial communities. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Understanding the interactions and interplay of microorganisms is a great challenge with many applications in medical and environmental settings. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_022_ev_001",
+        "paper_022_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Modelling Microbial Communities with Graph Neural Networks》在可靠性与证据方面的正文支持是：The datasets contain replicates for some of the settings. To make evaluation simple, we average the results of replicates when included in the validation or test sets. Cross-validation (CV) was performed on 5 train/validation/test data splits with 5 model initialization seeds fo… 限制或边界证据是：Our work sets the stage for the application of GNNs to microbial communities. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The datasets contain replicates for some of the settings. To make evaluation simple, we average the results of replicates when included in the validation or test sets. Cross-validation (CV) was performed on 5 train/validation/test data splits with 5 model initialization seeds fo…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_022_ev_003",
+        "paper_022_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Modelling Microbial Communities with Graph Neural Networks》在原创性定位方面的正文支持是：The general goal of this work is to train and evaluate neural models for the dynamics of bacterial communities, directly from their genomes.  限制或边界证据是：Our work sets the stage for the application of GNNs to microbial communities. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The general goal of this work is to train and evaluate neural models for the dynamics of bacterial communities, directly from their genomes. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_022_ev_004",
+        "paper_022_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Modelling Microbial Communities with Graph Neural Networks》在清晰度与可用性方面的正文支持是：Microorganisms are ubiquitous and essential: in our gut, they digest our food and influence our behavior (Cani et al., 2019); in industrial plants, they treat our wastewater (Mathew et al., 2022); their biomining ability outside of Earth was even tested on the International Spac… 限制或边界证据是：Our work sets the stage for the application of GNNs to microbial communities. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Microorganisms are ubiquitous and essential: in our gut, they digest our food and influence our behavior (Cani et al., 2019); in industrial plants, they treat our wastewater (Mathew et al., 2022); their biomining ability outside of Earth was even tested on the International Spac…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_022_ev_005",
+        "paper_022_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Modelling Microbial Communities with Graph Neural Networks》在可复现性与透明度方面的正文支持是：Table S3: Mean Squared Error of models on validation sets after 500 epochs of training and coefficient of determination R 2 on test sets, with a 95% confidence interval.  限制或边界证据是：Our work sets the stage for the application of GNNs to microbial communities. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Table S3: Mean Squared Error of models on validation sets after 500 epochs of training and coefficient of determination R 2 on test sets, with a 95% confidence interval. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work sets the stage for the application of GNNs to microbial communities. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_022_ev_006",
+        "paper_022_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_022_ev_001",
+      "page_number": 1,
+      "section_id": "paper_022_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Understanding the interactions and interplay of microorganisms is a great challenge with many applications in medical and environmental settings. In this work, we model bacterial communities directly from their genomes using graph neural networks (GNNs). GNNs leverage the inductive bias induced by the set nature of bacteria, enforcing permutation equivariance and granting combinatorial generalization. We propose to learn the dynamics implicitly by directly predicting community relative abundance profiles at steady state, thus escaping the need for growth curves. On two real-world datasets, we show for the first time generalization to unseen bacteria and different community structures. To investigate the prediction results more deeply, we create a simulation for flexible data generation and analyze effects of bacteria interaction strength, community size, and training data amount.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "page_number": 9,
+      "section_id": "paper_022_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "Our work sets the stage for the application of GNNs to microbial communities. These models can implicitly learn growth dynamics, and empirically outperform MLPs in terms of accuracy and generalization. Empirically, they outperform MLPs in terms of accuracy and generalization capabilities. Altogether, GNNs hold great potential for further applications. Furthermore, our results show that genomes are sufficient to learn an accurate model that can generalize predictions beyond observed communities. To our knowledge, this is the first attempt at predicting microbial community profiles from genomes directly. Recently, Lam et al. (2020) employed genome-scale metabolic models (GEMs) (van den Berg et al., 2022) adapted for microbial communities (Machado et al., 2018) to predict pairwise bacterial interactions. Hence, a potential next step would be to apply GNNs to such GEMs. Finally, our simulati",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_022_ev_003",
+      "page_number": 13,
+      "section_id": "paper_022_openreview_2024_02_11_sec_a",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0023",
+      "evidence_mode": "quote",
+      "excerpt": "The datasets contain replicates for some of the settings. To make evaluation simple, we average the results of replicates when included in the validation or test sets. Cross-validation (CV) was performed on 5 train/validation/test data splits with 5 model initialization seeds for hyperparameter tuning (see Supplementary Table S2).\n\nWe chose the hyperparameter combination resulting in the lowest validation error. Consequently, we used 2 convolutional layers/message-passing steps with 50 and 100 hidden features for F RIED - MAN 2017 and B ARANWAL C LARK 2022 data, respectively. Note that for all architectures, we first have an embedding layer that maps the input genomes to the hidden feature size. For predictions on the test sets, we show each of the 3-models and the average of the 3-models ensemble on Fig. 3 and Fig. 6. Otherwise, predictions on test sets correspond to the average of the ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_022_ev_004",
+      "page_number": 5,
+      "section_id": "paper_022_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0011",
+      "evidence_mode": "quote",
+      "excerpt": "The general goal of this work is to train and evaluate neural models for the dynamics of bacterial communities, directly from their genomes. On real data (F RIEDMAN 2017 and B ARANWAL C LARK 2022),\n\nA Generalize: in-distribution (CV) B Generalize: OOD community size 1 Model 1.0 Permuted Architecture Generalize to 0 FALSE MLP 0.5 bigger 2 R 2 R TRUE GraphSAGE 0.0 much bigger -1 MPGNN -0.5 smaller BaranwalClark2022 Friedman2017 BaranwalClark2022 Friedman2017 Figure 3: Accuracy of MLP and GNN models on predictions of in-distribution and bigger bacterial communities. Average R 2 values for predictions on in-distribution test sets with 95% confidence interval ( R 2 = 1 : perfect model, R 2 ≤ 0 : random model). The ensemble predictions across 5 model seeds were used and 5-folds CV was additionally used for A . B : Models were trained on communities of constrained sizes and tested on communitie",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_022_ev_005",
+      "page_number": 1,
+      "section_id": "paper_022_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Microorganisms are ubiquitous and essential: in our gut, they digest our food and influence our behavior (Cani et al., 2019); in industrial plants, they treat our wastewater (Mathew et al., 2022); their biomining ability outside of Earth was even tested on the International Space Station (Cockell et al., 2020). Accordingly, understanding their functioning and optimizing their use are crucial challenges.\n\nMicrobial communities are driven by interactions that dictate the assembly of communities and consequently microbial output. To comprehend the functioning of a community, it is necessary to characterize these interactions. Ideally, one would acquire time-series data for every combination of bacteria to obtain a complete understanding of their dynamics. However, in reality, this is not possible because the number of experiments grows exponentially with the number of bacteria. Accordingly,",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_022_ev_006",
+      "page_number": 22,
+      "section_id": "paper_022_openreview_2024_02_11_sec_b_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_022_openreview_2024_02_11_chunk_0031",
+      "evidence_mode": "quote",
+      "excerpt": "Table S3: Mean Squared Error of models on validation sets after 500 epochs of training and coefficient of determination R 2 on test sets, with a 95% confidence interval. #conv refers to the number of convolution layers, corresponding to the depth of information propagation in the graph. Dataset 2 Architecture # n hidden MSE R 2 conv features validation set test set F GCNII 1 50 0.0778 (0.0676, 0.0879) 0.0618 (-0.1410, 0.2822) F GATv2 1 50 0.0724 (0.0642, 0.0805) 0.0279 (-0.0808, 0.1266) BC GATv2 1 50 0.0468 (0.0379, 0.0556) 0.3569 (0.2455, 0.4711) BC GATv2 1 100 0.0478 (0.0399, 0.0556) 0.1034 (0.0075, 0.1914) BC GATv2 2 50 0.0539 (0.0464, 0.0613) -0.1621 (-0.2635, -0.0975) BC GATv2 2 100 0.0550 (0.0469, 0.0632) -0.1305 (-0.1993, -0.0840) BC GCNII 1 50 0.0405 (0.0327, 0.0483) 0.5059 (0.2705, 0.6959) BC GCNII 1 100 0.0435 (0.0311, 0.0558) 0.2080 (-0.1771, 0.4842) BC GCNII 2 50 0.0219 (0.01",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_022_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_022_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_022_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_022_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_022_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_022_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_022_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_022_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_022_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_022_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "annotation.schema.json",
+  "title": "Paper assessment",
+  "type": "object",
+  "required": ["assessment_id", "paper_version_id", "assessment_type", "schema_version", "rubric_id", "rubric_version", "dataset_version", "status", "is_provisional", "dimension_assessments", "evidence_references", "evidence_links", "reproducibility_checks"],
+  "properties": {
+    "assessment_id": {"type": "string", "minLength": 1},
+    "paper_version_id": {"type": "string", "minLength": 1},
+    "assessment_type": {"enum": ["ai", "human", "adjudicated"]},
+    "status": {"enum": ["draft", "completed", "approved"]},
+    "is_provisional": {"type": "boolean"},
+    "overall_score": {"type": ["number", "null"], "minimum": 1, "maximum": 10},
+    "dimension_assessments": {"type": "array", "minItems": 5, "maxItems": 5},
+    "evidence_references": {"type": "array", "minItems": 1},
+    "evidence_links": {"type": "array", "minItems": 1},
+    "reproducibility_checks": {"type": "array", "minItems": 6, "maxItems": 6}
+  },
+  "additionalProperties": true
+}

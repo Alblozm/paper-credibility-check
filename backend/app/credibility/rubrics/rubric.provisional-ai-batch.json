@@ -1,0 +1,32 @@
+{
+  "approved_by": null,
+  "approved_at": null,
+  "weights": {
+    "claim_evidence_consistency": 1,
+    "reference_verification": 1,
+    "code_reproduction_signals": 1
+  },
+  "claim_scores": {"supported": 10, "partially_supported": 7, "evidence_not_found": 4, "contradicted": 2},
+  "reference_scores": {"matched": 10, "metadata_conflict": 7, "unverified": 4},
+  "code_scores": {
+    "official_code_available": 7,
+    "independent_success_report": 9,
+    "failure_or_data_problem_report": 3,
+    "discussion_inconclusive": 7,
+    "no_relevant_public_feedback": 7,
+    "no_public_code_found": 4
+  },
+  "reference_aggregation": "mean",
+  "code_aggregation": "min",
+  "code_score_cap": 9,
+  "low_score_threshold": 6,
+  "categories": [
+    {"lower_bound": 0, "category": "critical_concerns"},
+    {"lower_bound": 3, "category": "significant_concerns"},
+    {"lower_bound": 6, "category": "some_concerns"},
+    {"lower_bound": 8, "category": "no_significant_concerns"}
+  ],
+  "rubric_id": "paper_credibility",
+  "version": "0.2-provisional-complete",
+  "status": "provisional"
+}

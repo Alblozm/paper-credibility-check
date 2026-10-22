@@ -1,0 +1,2053 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-1bc3ab945860fb4a",
+  "paper_version_id": "paper_015_openreview_2024_02_11",
+  "pdf_sha256": "1612e0abf7424cb6f4126efc4525fa99e6cff23c1798e4da9e55ce0037227dcb",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "1f8f9a0c94f9447e0faf5205d7d8f88f0712a3f6ec0262c486bf6e6a10e80481",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.404040404040404,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.212121212121212,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 33,
+        "extracted_count": 33,
+        "parsed_count": 31,
+        "queried_count": 31,
+        "matched_count": 8,
+        "metadata_conflict_count": 1,
+        "unverified_count": 13,
+        "parse_failed_count": 2,
+        "not_checked_count": 0,
+        "query_failed_count": 9,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=qBL04XXex6",
+            "checked_at": "2026-10-09T04:43:19.276419Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-f94adb429618",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 6,
+            "comments_checked": 28,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:43:19.763026Z",
+            "source_urls": [
+              "https://api.github.com/repos/iQua/llmpebase",
+              "https://api.github.com/repos/iQua/llmpebase/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/iQua/llmpebase/issues/11/comments?per_page=100&page=1",
+              "https://api.github.com/repos/iQua/llmpebase/issues/10/comments?per_page=100&page=1",
+              "https://api.github.com/repos/iQua/llmpebase/issues/8/comments?per_page=100&page=1",
+              "https://api.github.com/repos/iQua/llmpebase/issues/7/comments?per_page=100&page=1",
+              "https://api.github.com/repos/iQua/llmpebase/issues/6/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graph of thoughts: Solving elaborate problems with large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graph+of+thoughts%3A+Solving+elaborate+problems+with+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:09.921019Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+            "authors": [
+              "Luo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/qx0z9-wvk41",
+            "source_url": "https://doi.org/10.59350/qx0z9-wvk41",
+            "title_similarity": 0.6081081081081081
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+            "authors": [
+              "Luo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/xrj0n-men27",
+            "source_url": "https://doi.org/10.59350/xrj0n-men27",
+            "title_similarity": 0.6081081081081081
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+            "authors": [
+              "Besta",
+              "Blach",
+              "Kubicek",
+              "Gerstenberger",
+              "Podstawski",
+              "Gianinazzi",
+              "Gajda",
+              "Lehmann",
+              "Niewiadomski",
+              "Nyczyk",
+              "Hoefler"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1609/aaai.v38i16.29720",
+            "source_url": "https://doi.org/10.1609/aaai.v38i16.29720",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Solving large graph problems on coarse-greined multicomputers",
+            "authors": [
+              "Chan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2003-05444",
+            "source_url": "https://doi.org/10.22215/etd/2003-05444",
+            "title_similarity": 0.5151515151515151
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Graph-of-Thoughts for Fact-Checking with Large Language Models",
+            "authors": [
+              "Rolinger",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.fever-1.21",
+            "source_url": "https://doi.org/10.18653/v1/2025.fever-1.21",
+            "title_similarity": 0.7368421052631579
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:09.920394Z",
+        "response_sha256": "b1d17a7183ec9ac9a77493669f62cc28707542fad20e2ccc3d024f7e4ecbdbfc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graph+of+thoughts%3A+Solving+elaborate+problems+with+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:09.921019Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-2",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Language models are few-shot learners",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5",
+        "checked_at": "2026-10-09T04:43:09.072359Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Language Models are Few-Shot Learners",
+            "authors": [
+              "Malakar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.65525/svup.9788199778009.2026.224-230",
+            "source_url": "https://doi.org/10.65525/svup.9788199778009.2026.224-230",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adapting Language-Audio Models as Few-Shot Audio Learners",
+            "authors": [
+              "Liang",
+              "Liu",
+              "Liu",
+              "Phan",
+              "Benetos",
+              "Plumbley",
+              "Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21437/interspeech.2023-1082",
+            "source_url": "https://doi.org/10.21437/interspeech.2023-1082",
+            "title_similarity": 0.7446808510638298
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Language Models of Code are Few-Shot Commonsense Learners",
+            "authors": [
+              "Madaan",
+              "Zhou",
+              "Alon",
+              "Yang",
+              "Neubig"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.90",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.90",
+            "title_similarity": 0.7872340425531915
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Language Models are Few-shot Multilingual Learners",
+            "authors": [
+              "Winata",
+              "Madotto",
+              "Lin",
+              "Liu",
+              "Yosinski",
+              "Fung"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.18653/v1/2021.mrl-1.1",
+            "source_url": "https://doi.org/10.18653/v1/2021.mrl-1.1",
+            "title_similarity": 0.8505747126436781
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MaterialBrain: High-Performance Material Synthesis Extraction via HumanAI-Curated Few-Shot Large Language Models",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.5c02299.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.5c02299.s001",
+            "title_similarity": 0.20270270270270271
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:03.527518Z",
+        "response_sha256": "07f5926555c42d04c1b806c058e7e66db26a6d8f00a76df2d8520a0a4243b475",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:09.072359Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Xgboost: A scalable tree boosting system",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Xgboost%3A+A+scalable+tree+boosting+system&rows=5",
+        "checked_at": "2026-10-09T04:43:10.115414Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "XGBoost",
+            "authors": [
+              "Chen",
+              "Guestrin"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1145/2939672.2939785",
+            "source_url": "https://doi.org/10.1145/2939672.2939785",
+            "title_similarity": 0.30434782608695654
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Tree Modeling and Gradient Boosting with Scikit-Learn, XGBoost, PySpark, and H2O",
+            "authors": [
+              "Nokeri"
+            ],
+            "year": 2021,
+            "years": [
+              2021,
+              2022
+            ],
+            "doi": "10.1007/978-1-4842-7762-1_6",
+            "source_url": "https://doi.org/10.1007/978-1-4842-7762-1_6",
+            "title_similarity": 0.29310344827586204
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 2: Regression Model Comparison between Elastic Net, Support Vector Machine Regressor (SVR), Random Forest Regressor and eXtreme Gradient Boosting Tree based (XGBoost GBT).",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.586/table-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.586/table-2",
+            "title_similarity": 0.22115384615384615
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Mxb: Multi-Stage Xgboost For Efficient Tree-Based Gradient Boosting",
+            "authors": [
+              "Li",
+              "Cao",
+              "Jay Kuo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icipw68931.2025.11386108",
+            "source_url": "https://doi.org/10.1109/icipw68931.2025.11386108",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Robust Detection of Static and Moving Chipless RFID Tags Using Scalable Tree Boosting System",
+            "authors": [
+              "Afrin",
+              "Islam"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/wiecon-ece60392.2023.10456432",
+            "source_url": "https://doi.org/10.1109/wiecon-ece60392.2023.10456432",
+            "title_similarity": 0.5343511450381679
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:10.114459Z",
+        "response_sha256": "bfed391f8ab595fb637071a64fb568737d2d895a81ca6dc168c06263a7ba8f04",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Xgboost%3A+A+scalable+tree+boosting+system&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:10.115414Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Training verifiers to solve math word problems",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Training+verifiers+to+solve+math+word+problems&rows=5",
+        "checked_at": "2026-10-09T04:43:09.072810Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Misconception Analysis Borrowing From Literacy to Solve Math Word Problems With Technology",
+            "authors": [
+              "Groene"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.3102/1444452",
+            "source_url": "https://doi.org/10.3102/1444452",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The effect of creating and writing word problems on first and fourth grade students' abililty to solve word problems",
+            "authors": [
+              "Finkas"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.zgfb-e7xw",
+            "source_url": "https://doi.org/10.31979/etd.zgfb-e7xw",
+            "title_similarity": 0.2981366459627329
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Using logical prompts to automatically solve math word problems",
+            "authors": [
+              "Liu",
+              "Zou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/ncic61838.2023.00054",
+            "source_url": "https://doi.org/10.1109/ncic61838.2023.00054",
+            "title_similarity": 0.6238532110091743
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Understanding the Factors Affecting Students’ Ability to Solve Math Word Problems",
+            "authors": [
+              "Kwok",
+              "Kwan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.29333/aje.2025.1013a",
+            "source_url": "https://doi.org/10.29333/aje.2025.1013a",
+            "title_similarity": 0.6190476190476191
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MLIR — Verifiers",
+            "authors": [
+              "Kun"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.59350/ppz0a-g4t04",
+            "source_url": "https://doi.org/10.59350/ppz0a-g4t04",
+            "title_similarity": 0.36666666666666664
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:16.457247Z",
+        "response_sha256": "dfec8a557007c9ecf4841486e2ca1325e1fdaba4c8ba1e6394b1d7361d6ac2c1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Training+verifiers+to+solve+math+word+problems&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:09.072810Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Active prompting with chain-of-thought for large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Active+prompting+with+chain-of-thought+for+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:11.194424Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Active Prompting with Chain-of-Thought: Revolutionising Reasoning in Large Language Models",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/hqv3w-d3q61",
+            "source_url": "https://doi.org/10.59350/hqv3w-d3q61",
+            "title_similarity": 0.8235294117647058
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Active Prompting with Chain-of-Thought: Revolutionising Reasoning in Large Language Models",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/bkm9q-11k47",
+            "source_url": "https://doi.org/10.59350/bkm9q-11k47",
+            "title_similarity": 0.8235294117647058
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "R3 Prompting: Review, Rephrase and Resolve for Chain-of-Thought Reasoning in Large Language Models under Noisy Context Prompting: Review, Rephrase and Resolve for Chain-of-Thought Reasoning in Large Language Models under Noisy Context",
+            "authors": [
+              "Tian",
+              "Zhu",
+              "Wang",
+              "Li",
+              "Lan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-emnlp.114",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-emnlp.114",
+            "title_similarity": 0.006802721088435374
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Select Prompting with Chain-of-Thought Paired with Large Language Models",
+            "authors": [
+              "Che",
+              "Wu",
+              "Chen",
+              "Jiang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5074652",
+            "source_url": "https://doi.org/10.2139/ssrn.5074652",
+            "title_similarity": 0.8529411764705882
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Difficulty-aware Dynamic Chain-of-Thought Prompting for Large Language Models via BM25 and Semantic Retrieval",
+            "authors": [
+              "Zhuang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31449/inf.v50i13.14118",
+            "source_url": "https://doi.org/10.31449/inf.v50i13.14118",
+            "title_similarity": 0.5549132947976878
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:11.192517Z",
+        "response_sha256": "485a75ea085effc7d8ae6a9f1d34abe2025982c08770441ac23c654689645a9f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Active+prompting+with+chain-of-thought+for+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:11.194424Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Experiments with a new boosting algorithm",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Experiments+with+a+new+boosting+algorithm&rows=5",
+        "checked_at": "2026-10-09T04:43:12.146424Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:12.146377Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Experiments+with+a+new+boosting+algorithm&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:12.146424Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Complexity-based prompting for multi-step reasoning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Complexity-based+prompting+for+multi-step+reasoning&rows=5",
+        "checked_at": "2026-10-09T04:43:10.421903Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Review of Generative Pretrained Multi-step Prompting Schemes –and a New Multi-step Prompting Framework",
+            "authors": [
+              "Cohen",
+              "Aperstein"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202405.0720.v1",
+            "source_url": "https://doi.org/10.20944/preprints202405.0720.v1",
+            "title_similarity": 0.24675324675324675
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Meta-Reasoning Prompting with LLaMA-Adapter for Multi-Modal Task-Adaptive Reasoning",
+            "authors": [
+              "Abas",
+              "Mirjalili",
+              "Hassan",
+              "Rashid"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5588222",
+            "source_url": "https://doi.org/10.2139/ssrn.5588222",
+            "title_similarity": 0.5970149253731343
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "STEP-FACE: Sequential TExtual–Visual Prompting for multi-task face analysis",
+            "authors": [
+              "Greco",
+              "Spingola",
+              "Vento"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.knosys.2026.116679",
+            "source_url": "https://doi.org/10.1016/j.knosys.2026.116679",
+            "title_similarity": 0.512
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "From Multipoint Correlations to Multi-Step Reasoning: A Trajectory-Based Framework for Agentic Intelligence",
+            "authors": [
+              "YU"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-9511741/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-9511741/v1",
+            "title_similarity": 0.3821656050955414
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "CoT+ (Chain-of-Thought Extended): A Reproducible Multi-Reasoning Prompting Architecture for Deterministic PLC Code Generation",
+            "authors": [
+              "Adnyana",
+              "Schwung"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6247781",
+            "source_url": "https://doi.org/10.2139/ssrn.6247781",
+            "title_similarity": 0.36046511627906974
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:10.419799Z",
+        "response_sha256": "235508320a8747897ce215e6ccee98bfe871b70f020adafbf55b3a1fb2b72574",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Complexity-based+prompting+for+multi-step+reasoning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:10.421903Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-8",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Measuring mathematical problem solving with the math dataset",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Measuring+mathematical+problem+solving+with+the+math+dataset&rows=5",
+        "checked_at": "2026-10-09T04:43:11.930757Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Postsecondary mathematical education has little impact on mathematical problem solving",
+            "authors": [
+              "Cooney"
+            ],
+            "year": 1991,
+            "years": [
+              1991
+            ],
+            "doi": "10.1037/e665402011-514",
+            "source_url": "https://doi.org/10.1037/e665402011-514",
+            "title_similarity": 0.4794520547945205
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Traditional music and problem solving: The effect of Bugis music on mathematical problem solving",
+            "authors": [
+              "Saputra",
+              "Srisayekti"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1037/e627722013-472",
+            "source_url": "https://doi.org/10.1037/e627722013-472",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "‘Problem-solving’? Or problem solving?",
+            "authors": [
+              "Gardiner"
+            ],
+            "year": 1996,
+            "years": [
+              1996,
+              2016
+            ],
+            "doi": "10.2307/3620343",
+            "source_url": "https://doi.org/10.2307/3620343",
+            "title_similarity": 0.46808510638297873
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Representational transfer in math and logic problem solving",
+            "authors": [
+              "Novick",
+              "Hmelo"
+            ],
+            "year": 1991,
+            "years": [
+              1991
+            ],
+            "doi": "10.1037/e665402011-344",
+            "source_url": "https://doi.org/10.1037/e665402011-344",
+            "title_similarity": 0.5042016806722689
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Math Logic Mysteries",
+            "authors": [
+              "Buxton",
+              "Eustis"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.4324/9781003236498",
+            "source_url": "https://doi.org/10.4324/9781003236498",
+            "title_similarity": 0.175
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:11.929154Z",
+        "response_sha256": "5a2681c34ed87dbf1b9852ecc6519c2dc2d4ccc33cf78595b7f0b1999def8fa8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Measuring+mathematical+problem+solving+with+the+math+dataset&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:11.930757Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Promptboosting: Black-box text classification with ten forward passes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Promptboosting%3A+Black-box+text+classification+with+ten+forward+passes&rows=5",
+        "checked_at": "2026-10-09T04:43:12.918909Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "I Forward to black-box software",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1515/9783111319568-001",
+            "source_url": "https://doi.org/10.1515/9783111319568-001",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Forward Guidance: Opening the Black Box of the New Keynesian Model",
+            "authors": [
+              "Perazzi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6231298",
+            "source_url": "https://doi.org/10.2139/ssrn.6231298",
+            "title_similarity": 0.3609022556390977
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Forward Guidance: Opening the Black Box of the New Keynesian Model",
+            "authors": [
+              "Perazzi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6868519",
+            "source_url": "https://doi.org/10.2139/ssrn.6868519",
+            "title_similarity": 0.3609022556390977
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Chapter Ten Borden Place",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3138/9781487551971-012",
+            "source_url": "https://doi.org/10.3138/9781487551971-012",
+            "title_similarity": 0.32608695652173914
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Explaining Black-Box Models for Biomedical Text Classification",
+            "authors": [
+              "Moradi",
+              "Samwald"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/jbhi.2021.3056748",
+            "source_url": "https://doi.org/10.1109/jbhi.2021.3056748",
+            "title_similarity": 0.5230769230769231
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:12.917745Z",
+        "response_sha256": "c1bd5e31003ffc68785faaadb9492940f5e8ee1fbbe9c7953c303c176da7fd30",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Promptboosting%3A+Black-box+text+classification+with+ten+forward+passes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:12.918909Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Lightgbm: A highly efficient gradient boosting decision tree",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Lightgbm%3A+A+highly+efficient+gradient+boosting+decision+tree&rows=5",
+        "checked_at": "2026-10-09T04:43:13.290690Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:13.290586Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Lightgbm%3A+A+highly+efficient+gradient+boosting+decision+tree&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:13.290690Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-16",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gpt-4 technical report",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report&rows=5",
+        "checked_at": "2026-10-09T04:43:15.070918Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:15.070876Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:15.070918Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Are nlp models really able to solve simple math word problems? arXiv preprint arXiv:2103.07191 , 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Are+nlp+models+really+able+to+solve+simple+math+word+problems%3F+arXiv+preprint+arXiv%3A2103.07191+%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:43:13.585485Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Are NLP Models really able to Solve Simple Math Word Problems?",
+            "authors": [
+              "Patel",
+              "Bhattamishra",
+              "Goyal"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.18653/v1/2021.naacl-main.168",
+            "source_url": "https://doi.org/10.18653/v1/2021.naacl-main.168",
+            "title_similarity": 0.7672955974842768
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.38866396761133604
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.2535211267605634
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The future of evaluation of child and adolescent psychiatric treatments",
+            "authors": [
+              "Falissard"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.14744/iacapaparxiv.2020.20007",
+            "source_url": "https://doi.org/10.14744/iacapaparxiv.2020.20007",
+            "title_similarity": 0.15384615384615385
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.23668639053254437
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:13.582746Z",
+        "response_sha256": "4f47ce2b0320eaad5951d054d6920e94fd48f2cf13e5372cd49c688505cbb754",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Are+nlp+models+really+able+to+solve+simple+math+word+problems%3F+arXiv+preprint+arXiv%3A2103.07191+%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:13.585485Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Refiner: Reasoning feedback on intermediate representations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Refiner%3A+Reasoning+feedback+on+intermediate+representations&rows=5",
+        "checked_at": "2026-10-09T04:43:15.818564Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:15.818499Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Refiner%3A+Reasoning+feedback+on+intermediate+representations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:15.818564Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Boosted prompt ensembles for large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Boosted+prompt+ensembles+for+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:16.107834Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:16.107781Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Boosted+prompt+ensembles+for+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:16.107834Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Autoprompt: Eliciting knowledge from language models with automatically generated prompts",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Autoprompt%3A+Eliciting+knowledge+from+language+models+with+automatically+generated+prompts&rows=5",
+        "checked_at": "2026-10-09T04:43:16.392870Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:16.392778Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Autoprompt%3A+Eliciting+knowledge+from+language+models+with+automatically+generated+prompts&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:16.392870Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Llama 2: Open foundation and fine-tuned chat models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models&rows=5",
+        "checked_at": "2026-10-09T04:43:14.326314Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Explainable Deepfake Audio Detection Using Fine-Tuned Foundation Models",
+            "authors": [
+              "Manoharan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.54rk-euuc",
+            "source_url": "https://doi.org/10.31979/etd.54rk-euuc",
+            "title_similarity": 0.4297520661157025
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge",
+            "authors": [
+              "Li",
+              "Li",
+              "Zhang",
+              "Dan",
+              "Jiang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7759/cureus.40895",
+            "source_url": "https://doi.org/10.7759/cureus.40895",
+            "title_similarity": 0.34355828220858897
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "PowerPulse: Power Energy Chat Model with LLaMA Model Fine-tuned on Chinese and Power Sector Domain Knowledge",
+            "authors": [
+              "nong",
+              "Yin",
+              "Du",
+              "Zhang",
+              "Yang",
+              "Yan",
+              "Xiang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.169152136.62259950/v1",
+            "source_url": "https://doi.org/10.22541/au.169152136.62259950/v1",
+            "title_similarity": 0.36942675159235666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Legal text summarization with optimized hybrid models and fine-tuned LLaMA-2",
+            "authors": [
+              "Patel",
+              "Patil",
+              "Vora",
+              "Shahade"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10791-026-09916-y",
+            "source_url": "https://doi.org/10.1007/s10791-026-09916-y",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "METRIC-BASED COMPARISON OF FINE-TUNED LLAMA 2 AND MIXTRAL LARGE LANGUAGE MODELS FOR INSTRUCTION TASKS",
+            "authors": [
+              "Pavlyshenko",
+              "Bulka"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.30970/eli.26.2",
+            "source_url": "https://doi.org/10.30970/eli.26.2",
+            "title_similarity": 0.3708609271523179
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:56.645252Z",
+        "response_sha256": "8e1a0a3c78affec5caa7e91452ddc9f3dcaa7343672ed9c2d04f3b3bd484d8f9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:14.326314Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Self-consistency improves chain of thought reasoning in language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Self-consistency+improves+chain+of+thought+reasoning+in+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:14.328868Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [
+              "Thoram"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/90sh1-hbs94",
+            "source_url": "https://doi.org/10.59350/90sh1-hbs94",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/jpfzn-8vz49",
+            "source_url": "https://doi.org/10.59350/jpfzn-8vz49",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/xzk7z-f8x49",
+            "source_url": "https://doi.org/10.59350/xzk7z-f8x49",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [
+              "Thoram"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/73qcj-wyt28",
+            "source_url": "https://doi.org/10.59350/73qcj-wyt28",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Structured Chain-of-Thought Reasoning to Mitigate Hallucinations in Large Language Models",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.y2dz-empz",
+            "source_url": "https://doi.org/10.31979/etd.y2dz-empz",
+            "title_similarity": 0.6125
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:30.289537Z",
+        "response_sha256": "d4e8ae510cc55cbc22ed111e4abbe50483c5cf9e7a64a80a3515482a7d8a424e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Self-consistency+improves+chain+of+thought+reasoning+in+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:14.328868Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Tree of thoughts: Deliberate problem solving with large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Tree+of+thoughts%3A+Deliberate+problem+solving+with+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:15.068371Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+            "authors": [
+              "Yao",
+              "Yu",
+              "Zhao",
+              "Shafran",
+              "Griffiths",
+              "Cao",
+              "Narasimhan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-0517",
+            "source_url": "https://doi.org/10.52202/075280-0517",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+            "authors": [
+              "Luo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/qx0z9-wvk41",
+            "source_url": "https://doi.org/10.59350/qx0z9-wvk41",
+            "title_similarity": 0.8027210884353742
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+            "authors": [
+              "Luo"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/xrj0n-men27",
+            "source_url": "https://doi.org/10.59350/xrj0n-men27",
+            "title_similarity": 0.8027210884353742
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Automatic Bug Fixing via Deliberate Problem Solving with Large Language Models",
+            "authors": [
+              "Weng",
+              "Andrzejak"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/issrew60843.2023.00040",
+            "source_url": "https://doi.org/10.1109/issrew60843.2023.00040",
+            "title_similarity": 0.7837837837837838
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MDToC:  Metacognitive  Dynamic  Tree  of  Concepts  for  BoostingMathematical Problem-Solving of Large Language Models",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31276/ict.2026.0056",
+            "source_url": "https://doi.org/10.31276/ict.2026.0056",
+            "title_similarity": 0.6111111111111112
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:32.045513Z",
+        "response_sha256": "f28edddf4343d6d22d7593ddc61c8f812ff9aaf35b4ca1005cd2448d7c1ecaa1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Tree+of+thoughts%3A+Deliberate+problem+solving+with+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:15.068371Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Prefer: Prompt ensemble learning via feedback-reflect-refine",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Prefer%3A+Prompt+ensemble+learning+via+feedback-reflect-refine&rows=5",
+        "checked_at": "2026-10-09T04:43:17.877424Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:17.877369Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Prefer%3A+Prompt+ensemble+learning+via+feedback-reflect-refine&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:17.877424Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Cumulative reasoning with large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Cumulative+reasoning+with+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:18.002020Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:18.001920Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Cumulative+reasoning+with+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:18.002020Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Automatic chain of thought prompting in large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Automatic+chain+of+thought+prompting+in+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:16.662055Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Active Prompting with Chain-of-Thought: Revolutionising Reasoning in Large Language Models",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/hqv3w-d3q61",
+            "source_url": "https://doi.org/10.59350/hqv3w-d3q61",
+            "title_similarity": 0.7333333333333333
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Active Prompting with Chain-of-Thought: Revolutionising Reasoning in Large Language Models",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/bkm9q-11k47",
+            "source_url": "https://doi.org/10.59350/bkm9q-11k47",
+            "title_similarity": 0.7333333333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "R3 Prompting: Review, Rephrase and Resolve for Chain-of-Thought Reasoning in Large Language Models under Noisy Context Prompting: Review, Rephrase and Resolve for Chain-of-Thought Reasoning in Large Language Models under Noisy Context",
+            "authors": [
+              "Tian",
+              "Zhu",
+              "Wang",
+              "Li",
+              "Lan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-emnlp.114",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-emnlp.114",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Select Prompting with Chain-of-Thought Paired with Large Language Models",
+            "authors": [
+              "Che",
+              "Wu",
+              "Chen",
+              "Jiang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5074652",
+            "source_url": "https://doi.org/10.2139/ssrn.5074652",
+            "title_similarity": 0.7218045112781954
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Difficulty-aware Dynamic Chain-of-Thought Prompting for Large Language Models via BM25 and Semantic Retrieval",
+            "authors": [
+              "Zhuang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31449/inf.v50i13.14118",
+            "source_url": "https://doi.org/10.31449/inf.v50i13.14118",
+            "title_similarity": 0.6352941176470588
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:16.660413Z",
+        "response_sha256": "5e2d1f9ba2c8a826e5119f5e32feabaadcc2a1161d6849455fee15892a1d2a66",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Automatic+chain+of+thought+prompting+in+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:16.662055Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Progressive-hint prompting improves reasoning in large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Progressive-hint+prompting+improves+reasoning+in+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:43:19.274189Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:19.274111Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Progressive-hint+prompting+improves+reasoning+in+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:19.274189Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Solving challenging math word problems using gpt-4 code interpreter with code-based self-verification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Solving+challenging+math+word+problems+using+gpt-4+code+interpreter+with+code-based+self-verification&rows=5",
+        "checked_at": "2026-10-09T04:43:16.664966Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Solving Math Word Problems Using Estimation Verification and Equation Generation",
+            "authors": [
+              "Piehl",
+              "Wilson",
+              "Kalita",
+              "Kalita"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5166090",
+            "source_url": "https://doi.org/10.2139/ssrn.5166090",
+            "title_similarity": 0.5414364640883977
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Self-controlling Code",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/9781837677351-00187",
+            "source_url": "https://doi.org/10.1039/9781837677351-00187",
+            "title_similarity": 0.18032786885245902
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Self-verification of large language models for math word problems",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013246559203412",
+            "source_url": "https://doi.org/10.14711/thesis-991013246559203412",
+            "title_similarity": 0.3132530120481928
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Context-Driven Approach for Co-Auditing Smart Contracts Using Gpt-4 Code Interpreter",
+            "authors": [
+              "Bouafif",
+              "Zhang",
+              "Ahmed Qasse",
+              "Zulkoski",
+              "Hamdaqa",
+              "Khomh"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4951036",
+            "source_url": "https://doi.org/10.2139/ssrn.4951036",
+            "title_similarity": 0.44919786096256686
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Automated verification of systems code using type-based memory abstractions",
+            "authors": [
+              "Nicole"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/543093c7zdd4fz49d3z9018ze1350ab125e8",
+            "source_url": "https://doi.org/10.70675/543093c7zdd4fz49d3z9018ze1350ab125e8",
+            "title_similarity": 0.2159090909090909
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:34.191537Z",
+        "response_sha256": "aab8f34adb32403f281b645407580e66bb498d8a9a8c1d9f10b46b657271e39f",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Solving+challenging+math+word+problems+using+gpt-4+code+interpreter+with+code-based+self-verification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:43:16.664966Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_015_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_015_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_015_openreview_2024_02_11_credibility-33",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.212121212121212
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 33,
+    "extracted_count": 33,
+    "parsed_count": 31,
+    "queried_count": 31,
+    "matched_count": 8,
+    "metadata_conflict_count": 1,
+    "unverified_count": 13,
+    "parse_failed_count": 2,
+    "not_checked_count": 0,
+    "query_failed_count": 9,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available"
+  ],
+  "created_at": "2026-10-09T06:14:41.729362Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

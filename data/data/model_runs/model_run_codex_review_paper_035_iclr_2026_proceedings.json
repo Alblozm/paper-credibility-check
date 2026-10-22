@@ -1,0 +1,198 @@
+{
+  "model_run_id": "model_run_codex_review_paper_035_iclr_2026_proceedings",
+  "paper_id": "paper_035",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "cbacd92f93fc8cf36206eac5dd7bf9fbcca0b1dea4757781719ed781797b5c04",
+  "raw_output": {
+    "paper_summary": "Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these signals by representing them as attributed graphs, where tokens are nodes, edges follow attentional flows, and both carry features from attention scores and activations. Our approach, CHARM, casts hallucination detection as a graph learning task and tackles it by applying GNNs over the above attributed graphs. We show that CHARM provably subsumes prior attention-based heuristics and, experim",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Neural Message-Passing on Attention Graphs for Hallucination Detection》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these sign",
+      "论文提供方法或实证支持：We evaluate different aspects of learning with CHARM through the following research questions: (Q1) Is our GNN-based formulation effective in practice? (Q2) Is CHARM effective at detecting different 3 This assumption ensures the log is continuous on an appropr"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these sign；边界证据为：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach",
+        "strengths": [
+          "可定位正文支持：Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these sign"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：We evaluate different aspects of learning with CHARM through the following research questions: (Q1) Is our GNN-based formulation effective in practice? (Q2) Is CHARM effective at detecting different 3 This assumption ensures the log is continuous on an appropr；边界证据为：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach",
+        "strengths": [
+          "可定位正文支持：We evaluate different aspects of learning with CHARM through the following research questions: (Q1) Is our GNN-based formulation effective in practice? (Q2) Is CHARM effective at detecting different 3 This assumption ensures the log is continuous on an appropr"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0012"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Hallucinations and their detection in LLMs. The term “hallucinations” in LLMs broadly refers to errors in text generation where outputs are unfaithful to the input or external facts (Orgad et al., 2025). These include knowledge inaccuracies, flawed reasoning, ；边界证据为：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach",
+        "strengths": [
+          "可定位正文支持：Hallucinations and their detection in LLMs. The term “hallucinations” in LLMs broadly refers to errors in text generation where outputs are unfaithful to the input or external facts (Orgad et al., 2025). These include knowledge inaccuracies, flawed reasoning, "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0004"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：In this section, we compare against baseline methods that rely on additional prompting, specifically P(True) Kadavath et al. (2022) and Semantic Entropy (SE) Kuhn et al. (2023). Both approaches operate over multiple LLM generations or prompts, which introduces；边界证据为：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach",
+        "strengths": [
+          "可定位正文支持：In this section, we compare against baseline methods that rely on additional prompting, specifically P(True) Kadavath et al. (2022) and Semantic Entropy (SE) Kuhn et al. (2023). Both approaches operate over multiple LLM generations or prompts, which introduces"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0034"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：Thee implementation of CHARM was realised by means of PyTorch (Paszke et al., 2019) and PyTorch Geometric (Fey & Lenssen, 2019) (available respectively under the BSD and MIT license). We performed hyperparameter tuning using the Weight and Biases framework (Bi；边界证据为：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach",
+        "strengths": [
+          "可定位正文支持：Thee implementation of CHARM was realised by means of PyTorch (Paszke et al., 2019) and PyTorch Geometric (Fey & Lenssen, 2019) (available respectively under the BSD and MIT license). We performed hyperparameter tuning using the Weight and Biases framework (Bi"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we proposed attributed graphs as a principled formulation of LLM computational traces, showing how diverse signals can be unified in this framework and how neural message passing can be applied thereon for diverse HD tasks. We showed our approach"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0042"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0013"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到random_seed披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0012"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0012"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0017"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0040"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these signals by representing them as attributed graphs, where tokens are nodes, edges follow attentional flows, and both carry features from attention scores and activations. Our approach, CHARM, casts hallucination detection as a graph learning task and tackles it by applying GNNs over the above attributed graphs. We show that CHARM provably subsumes prior attention-based heuristics and, experim",
+        "type": "method_or_finding",
+        "chunk_id": "paper_035_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Large Language Models (LLMs) often generate incorrect or unsupported content, known as hallucinations. Existing detection methods rely on heuristics or simple models over isolated computational traces such as activations, or attention maps. We unify these signals by representing them as attributed graphs , where tokens are nodes, edges follow attentional flows, and both carry features from attention scores and activa",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0012"
+        ],
+        "limiting_chunk_ids": [
+          "paper_035_iclr_2026_proceedings_chunk_0019"
+        ]
+      }
+    ]
+  }
+}

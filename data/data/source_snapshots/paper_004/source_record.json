@@ -1,0 +1,62 @@
+{
+  "paper_id": "paper_004",
+  "paper_version_id": "paper_004_v1",
+  "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+  "authors": [
+    "Albert Gu",
+    "Tri Dao"
+  ],
+  "abstract": "Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. Many subquadratic-time architectures such as linear attention, gated convolution and recurrent models, and structured state space models (SSMs) have been developed to address Transformers' computational inefficiency on long sequences, but they have not performed as well as attention on important modalities such as language. We identify that a key weakness of such models is their inability to perform content-based reasoning, and make several improvements. First, simply letting the SSM parameters be functions of the input addresses their weakness with discrete modalities, allowing the model to selectively propagate or forget information along the sequence length dimension depending on the current token. Second, even though this change prevents the use of efficient convolutions, we design a hardware-aware parallel algorithm in recurrent mode. We integrate these selective SSMs into a simplified end-to-end neural network architecture without attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5x higher throughput than Transformers) and linear scaling in sequence length, and its performance improves on real data up to million-length sequences. As a general sequence model backbone, Mamba achieves state-of-the-art performance across several modalities such as language, audio, and genomics. On language modeling, our Mamba-3B model outperforms Transformers of the same size and matches Transformers twice its size, both in pretraining and downstream evaluation.",
+  "abstract_source": "arxiv abstract page, read 2026-09-02",
+  "language": "en",
+  "arxiv_id": "2312.00752",
+  "arxiv_version": "v1",
+  "doi": "10.48550/arXiv.2312.00752",
+  "subjects": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "source_url": "https://arxiv.org/pdf/2312.00752v1",
+  "abs_url": "https://arxiv.org/abs/2312.00752",
+  "arxiv_comments": null,
+  "version_history": [
+    {
+      "version": "v1",
+      "submitted_at": "2023-12-01T18:01:34Z",
+      "size": "1,264 KB"
+    },
+    {
+      "version": "v2",
+      "submitted_at": "2024-05-31T17:55:27Z",
+      "size": "1,017 KB"
+    }
+  ],
+  "venue": "ICLR",
+  "publication_year": 2024,
+  "decision": "Reject",
+  "decision_verified": false,
+  "retrieved_at": "2026-09-07T14:18:19Z",
+  "pdf_sha256": "83044ebdd02276f922b6d0915a344f0c501fc7c214d1b88622c33971bb149199",
+  "pdf_sha256_status": "verified",
+  "page_count": 37,
+  "local_pdf_path": "data/raw_pdfs/paper_004/2312.00752v1.pdf",
+  "page_count_status": "verified",
+  "parse_status": "completed",
+  "version_choice_reason": "v1 (2023-12-01) is the version in front of the ICLR 2024 reviewers. v2 postdates the decision by six months. Because this sample exists to compare our paper-internal score against the public reviews, the reviewed version is the correct one to lock.",
+  "verification_notes": [
+    "Title, authors, abstract, version history, DOI and subjects read from the arXiv abstract page on 2026-09-02.",
+    "The arXiv record carries NO ICLR comments field, unlike paper_001/002/005/006 which all do. That absence is consistent with rejection but is not proof of it.",
+    "The reject decision is reported by multiple secondary sources and the paper does not appear in the ICLR 2024 proceedings or virtual site. The OpenReview forum itself could not be read (browser-verification challenge), so decision_verified is false."
+  ],
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "blocking": "Cannot enter paper_versions: sql/001_initial_schema.sql requires pdf_sha256 CHAR(64) NOT NULL and pdf_object_key NOT NULL. Identity can be seeded into papers now; the version row waits for the PDF.",
+  "parse_quality": "good",
+  "data_status": "parsed",
+  "source_type": "arxiv",
+  "tags": [
+    "mixed_or_borderline",
+    "sequence_modeling"
+  ],
+  "authors_status": "verified"
+}

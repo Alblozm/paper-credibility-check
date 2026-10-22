@@ -1,0 +1,82 @@
+[
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_001",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "research_problem",
+    "descriptor_type": "problem_statement",
+    "text": "Summarizing book-length documents ($>$100K tokens)  that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries. Despite the complexity and importance of this task, it has yet to be meaningfully studied due to the challenges of evaluation: existing book-length summarization datasets (e.g., BookSum) are in the pretraining data of most public LLMs, and existing evaluation methods struggle to capture errors made by modern LLM summarizers.",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_002",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "In this paper, we present the first study of the coherence of LLM-based book-length summarizers implemented via two prompting workflows: (1) hierarchically merging chunk-level summaries, and (2) incrementally updating a running summary.",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_003",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "Because human evaluation is expensive and time-consuming, we develop an automatic metric, BooookScore, that measures the proportion of sentences in a summary that do not contain any of the identified error types.",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_004",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "claims",
+    "descriptor_type": "major_claim",
+    "text": "While LLaMA 2 falls behind other models, Mixtral achieves performance on par with GPT-3.5-Turbo.",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0014",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_005",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "method",
+    "descriptor_type": "metho_summary",
+    "text": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在研究价值方面的正文支持是：Summarizing book-length documents ( > 100K tokens) that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries.  限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_006",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "evaluation",
+    "descriptor_type": "evaluatio_summary",
+    "text": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在可靠性与证据方面的正文支持是：B OOOOK S CORE : A SYSTEMATIC EXPLORATION OF BOOK - LENGTH SUMMARIZATION IN THE ERA OF LLM S Yapei Chang Kyle Lo University of Massachusetts Amherst Allen Institute for AI yapeichang@umass.edu kylel@allenai.org Tanya Goyal Mohit Iyyer Princeton University University of Massachus… 限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0000",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_007",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "reliability_checks",
+    "descriptor_type": "reliability_check_summary",
+    "text": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在可复现性与透明度方面的正文支持是：We use ellipsis here to keep this prompt concise. The complete version includes two full summaries and 42 sentence-level annotations, and will be made available in our codebase. Given a book summary and a sentence from that summary, determine if that sentence causes any confusio… 限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0051",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_008_openreview_2024_02_11_descriptor_008",
+    "paper_version_id": "paper_008_openreview_2024_02_11",
+    "descriptor_group": "limitations",
+    "descriptor_type": "boundary_or_gap",
+    "text": "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. ",
+    "evidence_chunk_id": "paper_008_openreview_2024_02_11_chunk_0018",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  }
+]

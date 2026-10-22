@@ -1,0 +1,3882 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-84266d84e0e70075",
+  "paper_version_id": "paper_034_iclr_2026_proceedings",
+  "pdf_sha256": "9f0ba59d3146a8c2ae0d11d9aea2f85e0a45d6a9a542fb4e45f7a9d150b6a305",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "fc68cc16b382b784161cef56d065c725ee2543dbbcc6268e74c9bea84562e60c",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.507042253521127,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.52112676056338,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 71,
+        "extracted_count": 71,
+        "parsed_count": 60,
+        "queried_count": 60,
+        "matched_count": 19,
+        "metadata_conflict_count": 6,
+        "unverified_count": 22,
+        "parse_failed_count": 11,
+        "not_checked_count": 0,
+        "query_failed_count": 13,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/00c5c0f92581f8b8230c9f349126a73a-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:50:43.203002Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-27c0cc74b621",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 1,
+            "comments_checked": 5,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:50:43.621074Z",
+            "source_urls": [
+              "https://api.github.com/repos/pandeyakash23/TimeSliver",
+              "https://api.github.com/repos/pandeyakash23/TimeSliver/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/pandeyakash23/TimeSliver/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "query_failed",
+          "official_code_available"
+        ]
+      },
+      "failure_reasons": [
+        "repository_query_failed",
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-2",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Time series classification with ensembles of elastic distance measures",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Time+series+classification+with+ensembles+of+elastic+distance+measures&rows=5",
+        "checked_at": "2026-10-09T04:50:23.206962Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Ensembles of Elastic Distance Measures for Time Series Classification",
+            "authors": [
+              "Lines",
+              "Bagnall"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1137/1.9781611973440.60",
+            "source_url": "https://doi.org/10.1137/1.9781611973440.60",
+            "title_similarity": 0.5467625899280576
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Time series classification with ensembles of elastic distance measures",
+            "authors": [
+              "Lines",
+              "Bagnall"
+            ],
+            "year": 2014,
+            "years": [
+              2014,
+              2015
+            ],
+            "doi": "10.1007/s10618-014-0361-2",
+            "source_url": "https://doi.org/10.1007/s10618-014-0361-2",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Effect of Dynamic Time Warping using different Distance Measures on Time Series Classification",
+            "authors": [
+              "Kulkarni"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.5120/ijca2017915974",
+            "source_url": "https://doi.org/10.5120/ijca2017915974",
+            "title_similarity": 0.3170731707317073
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Time series classification by class-specific Mahalanobis distance measures",
+            "authors": [
+              "Prekopcsák",
+              "Lemire"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1007/s11634-012-0110-6",
+            "source_url": "https://doi.org/10.1007/s11634-012-0110-6",
+            "title_similarity": 0.7083333333333334
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Time series data mining",
+            "authors": [
+              "Καραμητόπουλος"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.12681/eadd/18348",
+            "source_url": "https://doi.org/10.12681/eadd/18348",
+            "title_similarity": 0.3655913978494624
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:23.205918Z",
+        "response_sha256": "0ddf75142631a0540dfa44afabefbce9632ffa8b152bb0abf2b9a2506752c1ab",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Time+series+classification+with+ensembles+of+elastic+distance+measures&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:23.206962Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-3",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The uea multivariate time series classification archive, 2018",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+uea+multivariate+time+series+classification+archive%2C+2018&rows=5",
+        "checked_at": "2026-10-09T04:50:21.848560Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Scale-varying dynamic time warping based on hesitant fuzzy sets for multivariate time series classification",
+            "authors": [
+              "Liu",
+              "Liu"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1016/j.measurement.2018.07.094",
+            "source_url": "https://doi.org/10.1016/j.measurement.2018.07.094",
+            "title_similarity": 0.5508982035928144
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multivariate Time Series Classification from Multiple Sources Using Fusion Models",
+            "authors": [
+              "Bastos"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/d.55.2025.tde-26062026-170449",
+            "source_url": "https://doi.org/10.11606/d.55.2025.tde-26062026-170449",
+            "title_similarity": 0.624113475177305
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Scalable Classification of Univariate and Multivariate Time Series",
+            "authors": [
+              "Karimi-Bidhendi",
+              "Munshi",
+              "Munshi"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/bigdata.2018.8621889",
+            "source_url": "https://doi.org/10.1109/bigdata.2018.8621889",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Tssi: Time Series as Screenshot Images for Multivariate Time Series Classification Using Convolutional Neural Networks",
+            "authors": [
+              "Oh",
+              "Kim",
+              "Kim"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5192160",
+            "source_url": "https://doi.org/10.2139/ssrn.5192160",
+            "title_similarity": 0.5536723163841808
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "SDKT:Similar domain knowledge transfer for multivariate time series classification tasks",
+            "authors": [
+              "Wen",
+              "Zhou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.168853327.79129688/v1",
+            "source_url": "https://doi.org/10.22541/au.168853327.79129688/v1",
+            "title_similarity": 0.6216216216216216
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:21.847331Z",
+        "response_sha256": "4abc355f11a2dfc14a1e5dcfee6cf7c64b9065b80b5dc4324fc4a3ecd2c0007e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+uea+multivariate+time+series+classification+archive%2C+2018&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:21.848560Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-4",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Grad-sam: Explaining transformers via gradient self-attention maps",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Grad-sam%3A+Explaining+transformers+via+gradient+self-attention+maps&rows=5",
+        "checked_at": "2026-10-09T04:50:21.861448Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Grad-SAM",
+            "authors": [
+              "Barkan",
+              "Hauon",
+              "Caciularu",
+              "Katz",
+              "Malkiel",
+              "Armstrong",
+              "Koenigstein"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1145/3459637.3482126",
+            "source_url": "https://doi.org/10.1145/3459637.3482126",
+            "title_similarity": 0.2191780821917808
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Spatial Sensitive Grad-Cam++: Towards High-Quality Visual Explanations for Object Detectors Via Weighted Combination of Gradient Maps",
+            "authors": [
+              "Yamauchi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5261383",
+            "source_url": "https://doi.org/10.2139/ssrn.5261383",
+            "title_similarity": 0.41025641025641024
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "SAM-Net: Self-Attention based Feature Matching with Spatial Transformers and Knowledge Distillation",
+            "authors": [
+              "Kelenyi",
+              "Domsa",
+              "Tamas"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.eswa.2023.122804",
+            "source_url": "https://doi.org/10.1016/j.eswa.2023.122804",
+            "title_similarity": 0.31901840490797545
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Backdoor Attack Against Vision Transformers via Attention Gradient-Based Image Erosion",
+            "authors": [
+              "Guo",
+              "Li",
+              "Jiang",
+              "Lu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/globecom52923.2024.10901210",
+            "source_url": "https://doi.org/10.1109/globecom52923.2024.10901210",
+            "title_similarity": 0.4900662251655629
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Post-Hoc Explainability for Contrastive Graph Anomaly Detection via Gradient Attention Maps",
+            "authors": [
+              "NEKKA",
+              "Seba",
+              "Hidouci",
+              "Amrouche"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10827412/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10827412/v1",
+            "title_similarity": 0.5897435897435898
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:21.859954Z",
+        "response_sha256": "5b09d902812e4e7aebfbbab808f44d432ab5c204260a73af8c8d45ac26a59a3c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Grad-sam%3A+Explaining+transformers+via+gradient+self-attention+maps&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:21.861448Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-5",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A theoretical analysis of feature pooling in visual recognition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+theoretical+analysis+of+feature+pooling+in+visual+recognition&rows=5",
+        "checked_at": "2026-10-09T04:50:23.498155Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:23.498097Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+theoretical+analysis+of+feature+pooling+in+visual+recognition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:23.498155Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-6",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Intelligible models for healthcare: Predicting pneumonia risk and hospital 30-day readmission",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Intelligible+models+for+healthcare%3A+Predicting+pneumonia+risk+and+hospital+30-day+readmission&rows=5",
+        "checked_at": "2026-10-09T04:50:24.894386Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:24.894311Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Intelligible+models+for+healthcare%3A+Predicting+pneumonia+risk+and+hospital+30-day+readmission&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:24.894386Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-8",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-8",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/w19-4828"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2Fw19-4828",
+        "checked_at": "2026-10-09T04:50:22.745248Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "What Does BERT Look at? An Analysis of BERT’s Attention",
+            "authors": [
+              "Clark",
+              "Khandelwal",
+              "Levy",
+              "Manning"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/w19-4828",
+            "source_url": "https://doi.org/10.18653/v1/w19-4828",
+            "title_similarity": 0.16393442622950818
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:22.744194Z",
+        "response_sha256": "6850d6ecb9979fff4d175e9cb51a8c94caf9781f553c9f2266012cc418a5b7e2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2Fw19-4828"
+      ],
+      "checked_at": "2026-10-09T04:50:22.745248Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-11",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards a rigorous science of interpretable machine learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+a+rigorous+science+of+interpretable+machine+learning&rows=5",
+        "checked_at": "2026-10-09T04:50:26.296230Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:26.296156Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+a+rigorous+science+of+interpretable+machine+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:26.296230Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inherently interpretable time series classification via multiple instance learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inherently+interpretable+time+series+classification+via+multiple+instance+learning&rows=5",
+        "checked_at": "2026-10-09T04:50:25.144462Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "HITS: Hierarchical Interpretable Time Series Classification via Multiple Instance Learning",
+            "authors": [
+              "Han",
+              "Koay"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/ijcnn64981.2025.11227767",
+            "source_url": "https://doi.org/10.1109/ijcnn64981.2025.11227767",
+            "title_similarity": 0.9005847953216374
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Inherently Interpretable Machine Learning Models for Time-Series: A Systematic Literature Review",
+            "authors": [
+              "Nabage",
+              "Varzaneh",
+              "Malekian",
+              "Abtahi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10985595/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10985595/v1",
+            "title_similarity": 0.5310734463276836
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multiple instance learning on tile level-pathology images provides accurate and interpretable classification for breast cancer molecular subtypes",
+            "authors": [
+              "Papagoras",
+              "Lund",
+              "Barra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.64898/2025.12.19.695372",
+            "source_url": "https://doi.org/10.64898/2025.12.19.695372",
+            "title_similarity": 0.2290748898678414
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Interpretable time series classification",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/07ed6f76z6e51z4803zb2cez6cdac7921444",
+            "source_url": "https://doi.org/10.70675/07ed6f76z6e51z4803zb2cez6cdac7921444",
+            "title_similarity": 0.6557377049180327
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ShapeletMIL: a multi-instance learning framework for interpretable multivariate time series classification",
+            "authors": [
+              "Xu",
+              "Xu",
+              "Jia",
+              "Jin",
+              "Liu",
+              "Zhu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1117/12.3090225",
+            "source_url": "https://doi.org/10.1117/12.3090225",
+            "title_similarity": 0.4919786096256685
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:25.142590Z",
+        "response_sha256": "3d40cbd924720b0fcf42d42058a93ffe2c20d60ffc5ad3cfd84b8b57985f0ab6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inherently+interpretable+time+series+classification+via+multiple+instance+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:25.144462Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inceptiontime: Finding alexnet for time series classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inceptiontime%3A+Finding+alexnet+for+time+series+classification&rows=5",
+        "checked_at": "2026-10-09T04:50:28.053297Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:28.053238Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inceptiontime%3A+Finding+alexnet+for+time+series+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:28.053297Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-16",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-16",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-17",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-17",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-18",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A benchmark for interpretability methods in deep neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+benchmark+for+interpretability+methods+in+deep+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:50:27.765636Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.67599/anr-21-chr4-0006",
+            "source_url": "https://doi.org/10.67599/anr-21-chr4-0006",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Methods of Interpretability of Deep Neural Networks in Decision-Making Tasks",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.63282/3050-9262.ijaidsml-v6i4p119",
+            "source_url": "https://doi.org/10.63282/3050-9262.ijaidsml-v6i4p119",
+            "title_similarity": 0.6
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Reliable interpretability of biology-inspired deep neural networks",
+            "authors": [
+              "Esser-Skala",
+              "Fortelny"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1101/2023.07.17.549297",
+            "source_url": "https://doi.org/10.1101/2023.07.17.549297",
+            "title_similarity": 0.7076923076923077
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Neural Networks for Deep Learning",
+            "authors": [
+              "Somani",
+              "Horsch",
+              "Prasad"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1007/978-3-031-20639-9_2",
+            "source_url": "https://doi.org/10.1007/978-3-031-20639-9_2",
+            "title_similarity": 0.30927835051546393
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Interpretability of deep neural networks: A review of methods, classification and hardware",
+            "authors": [
+              "Antamis",
+              "Drosou",
+              "Vafeiadis",
+              "Nizamis",
+              "Ioannidis",
+              "Tzovaras"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neucom.2024.128204",
+            "source_url": "https://doi.org/10.1016/j.neucom.2024.128204",
+            "title_similarity": 0.5131578947368421
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:27.764361Z",
+        "response_sha256": "ff50dc7dd8f89347e5e76f45250c525bc0f0f043ffeb64784b546f3e56a00536",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+benchmark+for+interpretability+methods+in+deep+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:27.765636Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-19",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/n19-1357"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2Fn19-1357",
+        "checked_at": "2026-10-09T04:50:26.166086Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Attention is not Explanation",
+            "authors": [
+              "Jain",
+              "Wallace"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/n19-1357",
+            "source_url": "https://doi.org/10.18653/v1/n19-1357",
+            "title_similarity": 0.17142857142857143
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:26.165148Z",
+        "response_sha256": "8eb3da556147eefbd81436ee2082fdd4cdcf089a06887f68315d51928a8c5307",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2Fn19-1357"
+      ],
+      "checked_at": "2026-10-09T04:50:26.166086Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-20",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Lstm fully convolutional networks for time series classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Lstm+fully+convolutional+networks+for+time+series+classification&rows=5",
+        "checked_at": "2026-10-09T04:50:27.055643Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Insights Into LSTM Fully Convolutional Networks for Time Series Classification",
+            "authors": [
+              "Karim",
+              "Majumdar",
+              "Darabi"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/access.2019.2916828",
+            "source_url": "https://doi.org/10.1109/access.2019.2916828",
+            "title_similarity": 0.9014084507042254
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "LSTM Fully Convolutional Networks for Time Series Classification",
+            "authors": [
+              "Karim",
+              "Majumdar",
+              "Darabi",
+              "Chen"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/access.2017.2779939",
+            "source_url": "https://doi.org/10.1109/access.2017.2779939",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "LSTM based on Adaptive Convolutional Network for Time Series Classification",
+            "authors": [
+              "Li",
+              "Wu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.21203/rs.3.rs-1940259/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-1940259/v1",
+            "title_similarity": 0.8345323741007195
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Encoding Time Series as Multi-Scale Signed Recurrence Plots for Classification Using Fully Convolutional Networks",
+            "authors": [
+              "Zhang",
+              "Hou",
+              "Zhou",
+              "Ouyang"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3390/s20143818",
+            "source_url": "https://doi.org/10.3390/s20143818",
+            "title_similarity": 0.3615819209039548
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Time Series Segmentation for Driving Scenario Detection with Fully Convolutional Networks",
+            "authors": [
+              "Elspas",
+              "Klose",
+              "Isele",
+              "Bach",
+              "Sax"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.5220/0010404700560064",
+            "source_url": "https://doi.org/10.5220/0010404700560064",
+            "title_similarity": 0.40522875816993464
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:27.054230Z",
+        "response_sha256": "624c077c98978a77c4881bc43386bc95781981388b3657bed8b0bb5c21b677d0",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Lstm+fully+convolutional+networks+for+time+series+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:27.055643Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-21",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mr-seql: Multiple representation sequence learner",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mr-seql%3A+Multiple+representation+sequence+learner&rows=5",
+        "checked_at": "2026-10-09T04:50:28.993785Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:28.993739Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mr-seql%3A+Multiple+representation+sequence+learner&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:28.993785Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-22",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Concept bottleneck models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Concept+bottleneck+models&rows=5",
+        "checked_at": "2026-10-09T04:50:27.214640Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sparse Concept Absence Network for Concept Bottleneck Models",
+            "authors": [
+              "Cockayne",
+              "Ortolani",
+              "Al-Bander"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6517596",
+            "source_url": "https://doi.org/10.2139/ssrn.6517596",
+            "title_similarity": 0.5882352941176471
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An Agent-Based Concept Generation ApproachUsing Concept Bottleneck Models for ChestRadiograph Classification",
+            "authors": [
+              "Varan",
+              "Soygazi",
+              "Oguz"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-9487691/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-9487691/v1",
+            "title_similarity": 0.37593984962406013
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Energy-Ensemble Concept Bottleneck Models for Enhancing Interpretability and Accuracy in Concept-Based Learning",
+            "authors": [
+              "Ahn",
+              "Kim",
+              "Ko"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5774584",
+            "source_url": "https://doi.org/10.2139/ssrn.5774584",
+            "title_similarity": 0.36764705882352944
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Enhancing Usability in Concept Bottleneck Models via Grouped Concept Interventions",
+            "authors": [
+              "Zaccaria",
+              "Susto"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.ifacol.2025.12.013",
+            "source_url": "https://doi.org/10.1016/j.ifacol.2025.12.013",
+            "title_similarity": 0.4672897196261682
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Hierarchical Concept Bottleneck Models for Explainable Images Segmentation, Objects Fine Classification and Tracking",
+            "authors": [
+              "Pittino",
+              "Dimitrievska",
+              "Heer"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.2139/ssrn.3994205",
+            "source_url": "https://doi.org/10.2139/ssrn.3994205",
+            "title_similarity": 0.35714285714285715
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:27.213500Z",
+        "response_sha256": "a3668648c38b12c2045bbba9e719cd47d34a1cc611ac97c8667339665abd58c7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Concept+bottleneck+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:27.214640Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-23",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-23",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-24",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-24",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-26",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Time series classification with hive-cote: The hierarchical vote collective of transformation-based ensembles",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Time+series+classification+with+hive-cote%3A+The+hierarchical+vote+collective+of+transformation-based+ensembles&rows=5",
+        "checked_at": "2026-10-09T04:50:29.450289Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "HIVE-COTE: The Hierarchical Vote Collective of Transformation-Based Ensembles for Time Series Classification",
+            "authors": [
+              "Lines",
+              "Taylor",
+              "Bagnall"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/icdm.2016.0133",
+            "source_url": "https://doi.org/10.1109/icdm.2016.0133",
+            "title_similarity": 0.7069767441860465
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Time Series Classification with HIVE-COTE",
+            "authors": [
+              "Lines",
+              "Taylor",
+              "Bagnall"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1145/3182382",
+            "source_url": "https://doi.org/10.1145/3182382",
+            "title_similarity": 0.5503355704697986
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Time-series classification with COTE: The collective of transformation-based ensembles",
+            "authors": [
+              "Bagnall",
+              "Lines",
+              "Hills",
+              "Bostrom"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/icde.2016.7498418",
+            "source_url": "https://doi.org/10.1109/icde.2016.7498418",
+            "title_similarity": 0.8808290155440415
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles",
+            "authors": [
+              "Bagnall",
+              "Lines",
+              "Hills",
+              "Bostrom"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/tkde.2015.2416723",
+            "source_url": "https://doi.org/10.1109/tkde.2015.2416723",
+            "title_similarity": 0.8808290155440415
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "On the Usage and Performance of the Hierarchical Vote Collective of Transformation-Based Ensembles Version 1.0 (HIVE-COTE v1.0)",
+            "authors": [
+              "Bagnall",
+              "Flynn",
+              "Large",
+              "Lines",
+              "Middlehurst"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1007/978-3-030-65742-0_1",
+            "source_url": "https://doi.org/10.1007/978-3-030-65742-0_1",
+            "title_similarity": 0.6523605150214592
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:29.448042Z",
+        "response_sha256": "320857f083bee2f2a8a5cac27417fa2a62840865677dbdb2e851e1c1977554f1",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Time+series+classification+with+hive-cote%3A+The+hierarchical+vote+collective+of+transformation-based+ensembles&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:29.450289Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-27",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Timex++: learning time-series explanations with information bottleneck",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Timex%2B%2B%3A+learning+time-series+explanations+with+information+bottleneck&rows=5",
+        "checked_at": "2026-10-09T04:50:29.133289Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Variational Information Bottleneck with Gaussian Processes for Time-Series Classification",
+            "authors": [
+              "Efrati",
+              "Fine"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icmla61862.2024.00126",
+            "source_url": "https://doi.org/10.1109/icmla61862.2024.00126",
+            "title_similarity": 0.3974358974358974
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Decision-information explanations (DIxAI): A bottleneck approach to minimal sufficient interpretability",
+            "authors": [
+              "Ghazouani"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.ins.2026.123651",
+            "source_url": "https://doi.org/10.1016/j.ins.2026.123651",
+            "title_similarity": 0.3712574850299401
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Generating Explanations for Explainable Recommendations Using Time-Series Information",
+            "authors": [
+              "Qu",
+              "Nobuhara"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-3160018/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3160018/v1",
+            "title_similarity": 0.42105263157894735
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multivariate Time Series Information Bottleneck",
+            "authors": [
+              "Ullmann",
+              "Taran",
+              "Voloshynovskiy"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3390/e25050831",
+            "source_url": "https://doi.org/10.3390/e25050831",
+            "title_similarity": 0.7017543859649122
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Recurrent Variational Information Bottleneck for Time Series Trend Prediction",
+            "authors": [
+              "Pang",
+              "Goupil",
+              "Vrabie",
+              "Kolodziejczak"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/itw55543.2023.10161650",
+            "source_url": "https://doi.org/10.1109/itw55543.2023.10161650",
+            "title_similarity": 0.4583333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:29.131786Z",
+        "response_sha256": "234a88e8099d6afb8fa968fe8448d2134e968af5dbca6fd786d53033949e7c3b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Timex%2B%2B%3A+learning+time-series+explanations+with+information+bottleneck&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:29.133289Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-28",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A unified approach to interpreting model predictions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+unified+approach+to+interpreting+model+predictions&rows=5",
+        "checked_at": "2026-10-09T04:50:30.923524Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:30.923466Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+unified+approach+to+interpreting+model+predictions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:30.923524Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-29",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarial dynamic shapelet networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarial+dynamic+shapelet+networks&rows=5",
+        "checked_at": "2026-10-09T04:50:31.031717Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:31.031650Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarial+dynamic+shapelet+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:31.031717Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-30",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-30",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Specifying user preferences using weighted signal temporal logic",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Specifying+user+preferences+using+weighted+signal+temporal+logic&rows=5",
+        "checked_at": "2026-10-09T04:50:30.257431Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Specifying User Preferences using Weighted Signal Temporal Logic",
+            "authors": [
+              "Mehdipour",
+              "Vasile",
+              "Belta"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.23919/acc50511.2021.9482835",
+            "source_url": "https://doi.org/10.23919/acc50511.2021.9482835",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Specifying User Preferences Using Weighted Signal Temporal Logic",
+            "authors": [
+              "Mehdipour",
+              "Vasile",
+              "Belta"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/lcsys.2020.3047362",
+            "source_url": "https://doi.org/10.1109/lcsys.2020.3047362",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Preferences on Partial Satisfaction using Weighted Signal Temporal Logic Specifications",
+            "authors": [
+              "Cardona",
+              "Vasile"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.23919/ecc57647.2023.10178201",
+            "source_url": "https://doi.org/10.23919/ecc57647.2023.10178201",
+            "title_similarity": 0.6357615894039735
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Specifying Safety of Autonomous Vehicles in Signal Temporal Logic",
+            "authors": [
+              "Aréchiga"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/ivs.2019.8813875",
+            "source_url": "https://doi.org/10.1109/ivs.2019.8813875",
+            "title_similarity": 0.6511627906976745
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning user preferences using temporal functional data",
+            "authors": [
+              "Weinberger"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/3713ecb4z797dz46a3z82a9ze06ef327ba90",
+            "source_url": "https://doi.org/10.70675/3713ecb4z797dz46a3z82a9ze06ef327ba90",
+            "title_similarity": 0.6333333333333333
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:30.255285Z",
+        "response_sha256": "7563e96739d3cb2a5b242ab67f6b1c19fa446acbf490bd81e3262b36c5df3d4e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Specifying+user+preferences+using+weighted+signal+temporal+logic&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:30.257431Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-34",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Maestro: Adaptive sparse attention and robust learning for multimodal dynamic time series",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Maestro%3A+Adaptive+sparse+attention+and+robust+learning+for+multimodal+dynamic+time+series&rows=5",
+        "checked_at": "2026-10-09T04:50:32.543514Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "MAESTRO : Adaptive Sparse Attention and Robust Learning for Multimodal Dynamic Time Series",
+            "authors": [
+              "Mohapatra",
+              "Sui",
+              "Pandey",
+              "Xia",
+              "Zhu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-2694",
+            "source_url": "https://doi.org/10.52202/085713-2694",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multimodal Adaptive Dynamic Graph Learning for Multivariate Time Series Forecasting",
+            "authors": [
+              "Lee",
+              "Lee",
+              "Park"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4872537",
+            "source_url": "https://doi.org/10.2139/ssrn.4872537",
+            "title_similarity": 0.5380116959064327
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Efficient time series adaptive representation learning via Dynamic Routing Sparse Attention",
+            "authors": [
+              "Wang",
+              "Zuo",
+              "Chen",
+              "Chen",
+              "Zhong",
+              "Yan",
+              "Lv"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.patcog.2024.111058",
+            "source_url": "https://doi.org/10.1016/j.patcog.2024.111058",
+            "title_similarity": 0.3240223463687151
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Modality-Adaptive Multimodal Deep Learning Framework with Uncertainty-Aware Attention for Robust Heart Disease Prediction",
+            "authors": [
+              "."
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.24321/2394.6539.202603",
+            "source_url": "https://doi.org/10.24321/2394.6539.202603",
+            "title_similarity": 0.3033175355450237
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multimodal Video Content Understanding Based on Dynamic Sparse Attention Mechanism",
+            "authors": [
+              "Zhang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icmlca66850.2025.11336225",
+            "source_url": "https://doi.org/10.1109/icmlca66850.2025.11336225",
+            "title_similarity": 0.36470588235294116
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:32.541878Z",
+        "response_sha256": "4816fc495534b0f07d3f7f00b8ebf0d46d6d8be6e140e19837afe0f95a1803ab",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Maestro%3A+Adaptive+sparse+attention+and+robust+learning+for+multimodal+dynamic+time+series&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:32.543514Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-35",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-35",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-36",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Interpretable machine learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Interpretable+machine+learning&rows=5",
+        "checked_at": "2026-10-09T04:50:33.272434Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Model Interpretability: Advances in Interpretable Machine Learning",
+            "authors": [
+              "Kamath",
+              "Liu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1007/978-3-030-83356-5_4",
+            "source_url": "https://doi.org/10.1007/978-3-030-83356-5_4",
+            "title_similarity": 0.631578947368421
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Interpretable Machine Learning for Evaluating Nanogenerators Structural Design",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsnano.5c02525.s001",
+            "source_url": "https://doi.org/10.1021/acsnano.5c02525.s001",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Interpretable Machine Learning Assessment",
+            "authors": [
+              "Han"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4146556",
+            "source_url": "https://doi.org/10.2139/ssrn.4146556",
+            "title_similarity": 0.8450704225352113
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Interpretable Machine Learning for Evaluating Nanogenerators Structural Design",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsnano.5c02525.s002",
+            "source_url": "https://doi.org/10.1021/acsnano.5c02525.s002",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Interpretable machine learning for undeclared work prediction",
+            "authors": [
+              "Αλογογιάννη"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.12681/eadd/62058",
+            "source_url": "https://doi.org/10.12681/eadd/62058",
+            "title_similarity": 0.6593406593406593
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:33.270929Z",
+        "response_sha256": "e2e9b5aca1c59d1cbf2e918a4a8cfe093adac989ae5a52298e00c66f41676042",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Interpretable+machine+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:33.272434Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-37",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Oppenheim, Ronald W",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Oppenheim%2C+Ronald+W&rows=5",
+        "checked_at": "2026-10-09T04:50:31.820644Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Work At Home",
+            "authors": [
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks",
+              "Ronald marks"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.4016/26554.01",
+            "source_url": "https://doi.org/10.4016/26554.01",
+            "title_similarity": 0.13333333333333333
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Nfinity - The Best Girls Basketball Shoes On The Planet!",
+            "authors": [
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby",
+              "Ronald doby"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.4016/26409.01",
+            "source_url": "https://doi.org/10.4016/26409.01",
+            "title_similarity": 0.22535211267605634
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Oppenheim-Barnes, Baroness, (Sally Oppenheim-Barnes) (born 26 July 1930)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.28924",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.28924",
+            "title_similarity": 0.38095238095238093
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Oppenheim-Barnes, Baroness, (Sally Oppenheim-Barnes) (26 July 1928–1 Jan. 2025)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u28924",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u28924",
+            "title_similarity": 0.35555555555555557
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Oppenheim, Dennis",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gao/9781884446054.article.t063645",
+            "source_url": "https://doi.org/10.1093/gao/9781884446054.article.t063645",
+            "title_similarity": 0.6470588235294118
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:31.817246Z",
+        "response_sha256": "977e7257e147b5b8ecb0ef2b0f0168a5f7285fc8c2074ca937b9b2c82d121962",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Oppenheim%2C+Ronald+W&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:31.820644Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-40",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-40",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1145/2733373.2806390"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1145%2F2733373.2806390",
+        "checked_at": "2026-10-09T04:50:32.608032Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ESC",
+            "authors": [
+              "Piczak"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1145/2733373.2806390",
+            "source_url": "https://doi.org/10.1145/2733373.2806390",
+            "title_similarity": 0.2222222222222222
+          }
+        ],
+        "conflicting_fields": [
+          "title",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:32.606596Z",
+        "response_sha256": "42d19c5bb18d6957490e509e9a88b0ce1088bb5e6b6f47a5f1cf13a5fa326b40",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1145%2F2733373.2806390"
+      ],
+      "checked_at": "2026-10-09T04:50:32.608032Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-41",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-41",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-42",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-42",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-44",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-44",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "why should i trust you?",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=why+should+i+trust+you%3F&rows=5",
+        "checked_at": "2026-10-09T04:50:34.764102Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Resistant Weeds: What You Should Know and Why You Should Care",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1094/grow-cot-02-17-102",
+            "source_url": "https://doi.org/10.1094/grow-cot-02-17-102",
+            "title_similarity": 0.3902439024390244
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "“Don’t You Trust Your Students?”",
+            "authors": [
+              "Lawrence"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.5040/9798216414391.ch10",
+            "source_url": "https://doi.org/10.5040/9798216414391.ch10",
+            "title_similarity": 0.5098039215686274
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Notes",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1515/9781503611214-013",
+            "source_url": "https://doi.org/10.1515/9781503611214-013",
+            "title_similarity": 0.07407407407407407
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contents",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1515/9781503611214-toc",
+            "source_url": "https://doi.org/10.1515/9781503611214-toc",
+            "title_similarity": 0.06666666666666667
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bibliography",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1515/9781503611214-014",
+            "source_url": "https://doi.org/10.1515/9781503611214-014",
+            "title_similarity": 0.11764705882352941
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:34.762108Z",
+        "response_sha256": "c6b312e412db3be24e84dc362f75602d3f21c71dbc5aa8b3a4fbdc7d49d1b57b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=why+should+i+trust+you%3F&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:34.764102Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-45",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-45",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A primer in bertology: What we know about how bert works",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+primer+in+bertology%3A+What+we+know+about+how+bert+works&rows=5",
+        "checked_at": "2026-10-09T04:50:35.598811Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:35.598763Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+primer+in+bertology%3A+What+we+know+about+how+bert+works&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:35.598811Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-48",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Exploring explainability in video action recognition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Exploring+explainability+in+video+action+recognition&rows=5",
+        "checked_at": "2026-10-09T04:50:36.843429Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ASPERA: Exploring Multimodal Action Recognition in Football Through Video, Audio, and Commentary",
+            "authors": [
+              "Kumakura",
+              "Orihara",
+              "Tahara",
+              "Ohsuga",
+              "Sei"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013300700003890",
+            "source_url": "https://doi.org/10.5220/0013300700003890",
+            "title_similarity": 0.4413793103448276
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Exploring multimodal video representation for action recognition",
+            "authors": [
+              "Cheng Wang",
+              "Haojin Yang",
+              "Meinel"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/ijcnn.2016.7727435",
+            "source_url": "https://doi.org/10.1109/ijcnn.2016.7727435",
+            "title_similarity": 0.6551724137931034
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Domain adaptation for video action recognition",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/172273",
+            "source_url": "https://doi.org/10.32657/10356/172273",
+            "title_similarity": 0.6530612244897959
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Towards effective and unbiased video action recognition",
+            "authors": [
+              "Chung"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991012980422003412",
+            "source_url": "https://doi.org/10.14711/thesis-991012980422003412",
+            "title_similarity": 0.616822429906542
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning effective video representations for action recognition",
+            "authors": [
+              "Yang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/4046013fz7818z4acdza84bze9be293f2334",
+            "source_url": "https://doi.org/10.70675/4046013fz7818z4acdza84bze9be293f2334",
+            "title_similarity": 0.5739130434782609
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:36.841428Z",
+        "response_sha256": "f95591897f2efa3a69949bb5ab96bf6ae91003cc907306040ca32d1b1b131018",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Exploring+explainability+in+video+action+recognition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:36.843429Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-49",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Sfa: a symbolic fourier approximation and index for similarity search in high dimensional datasets",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Sfa%3A+a+symbolic+fourier+approximation+and+index+for+similarity+search+in+high+dimensional+datasets&rows=5",
+        "checked_at": "2026-10-09T04:50:35.770939Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "SFA",
+            "authors": [
+              "Schäfer",
+              "Högqvist"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1145/2247596.2247656",
+            "source_url": "https://doi.org/10.1145/2247596.2247656",
+            "title_similarity": 0.06
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Scalable high-dimensional vector similarity search",
+            "authors": [
+              "Azizi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/6ee48278zb9f4z4a2az9373z9f93585c4145",
+            "source_url": "https://doi.org/10.70675/6ee48278zb9f4z4a2az9373z9f93585c4145",
+            "title_similarity": 0.4217687074829932
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Similarity search in high-dimensional datasets",
+            "authors": [
+              "Ramakrishnan",
+              "Goldstein",
+              "Shaft"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1145/1160939.1160941",
+            "source_url": "https://doi.org/10.1145/1160939.1160941",
+            "title_similarity": 0.6433566433566433
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "High-Dimensional Similarity Retrieval Using Dimensional Choice",
+            "authors": [
+              "Tahmoush",
+              "Samet"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1109/sisap.2008.20",
+            "source_url": "https://doi.org/10.1109/sisap.2008.20",
+            "title_similarity": 0.27672955974842767
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "EncSIM: An encrypted similarity search service for distributed high-dimensional datasets",
+            "authors": [
+              "Liu",
+              "Yuan",
+              "Wang"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1109/iwqos.2017.7969151",
+            "source_url": "https://doi.org/10.1109/iwqos.2017.7969151",
+            "title_similarity": 0.5760869565217391
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:35.769621Z",
+        "response_sha256": "34f19d1b04231ac1ec3b7b1eef09e8605d3c2a8b9917fad79a601bc1cd692983",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Sfa%3A+a+symbolic+fourier+approximation+and+index+for+similarity+search+in+high+dimensional+datasets&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:35.770939Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-50",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-50",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Multivariate time series classification with weasel+muse",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Multivariate+time+series+classification+with+weasel%2Bmuse&rows=5",
+        "checked_at": "2026-10-09T04:50:35.993645Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multivariate Time Series Classification from Multiple Sources Using Fusion Models",
+            "authors": [
+              "Bastos"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/d.55.2025.tde-26062026-170449",
+            "source_url": "https://doi.org/10.11606/d.55.2025.tde-26062026-170449",
+            "title_similarity": 0.656934306569343
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fast and Accurate Time Series Classification with WEASEL",
+            "authors": [
+              "Schäfer",
+              "Leser"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1145/3132847.3132980",
+            "source_url": "https://doi.org/10.1145/3132847.3132980",
+            "title_similarity": 0.7857142857142857
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Tssi: Time Series as Screenshot Images for Multivariate Time Series Classification Using Convolutional Neural Networks",
+            "authors": [
+              "Oh",
+              "Kim",
+              "Kim"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5192160",
+            "source_url": "https://doi.org/10.2139/ssrn.5192160",
+            "title_similarity": 0.5433526011560693
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "SDKT:Similar domain knowledge transfer for multivariate time series classification tasks",
+            "authors": [
+              "Wen",
+              "Zhou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.168853327.79129688/v1",
+            "source_url": "https://doi.org/10.22541/au.168853327.79129688/v1",
+            "title_similarity": 0.6111111111111112
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Symbolic Representation of Multivariate Time Series for Sport Activity Classification",
+            "authors": [
+              "Jarno"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21203/rs.3.rs-3425280/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3425280/v1",
+            "title_similarity": 0.5531914893617021
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:35.992097Z",
+        "response_sha256": "843aeae5dff8910a13bd0cad3650755321f73d16c62d127c3f1860dbdf0937e6",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Multivariate+time+series+classification+with+weasel%2Bmuse&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:35.993645Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-51",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-51",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Grad-cam: Visual explanations from deep networks via gradient-based localization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Grad-cam%3A+Visual+explanations+from+deep+networks+via+gradient-based+localization&rows=5",
+        "checked_at": "2026-10-09T04:50:37.826010Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:37.825936Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Grad-cam%3A+Visual+explanations+from+deep+networks+via+gradient-based+localization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:37.826010Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-52",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-52",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Sax-vsm: Interpretable time series classification using sax and vector space model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Sax-vsm%3A+Interpretable+time+series+classification+using+sax+and+vector+space+model&rows=5",
+        "checked_at": "2026-10-09T04:50:36.623923Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "SAX-VSM: Interpretable Time Series Classification Using SAX and Vector Space Model",
+            "authors": [
+              "Senin",
+              "Malinchik"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.21236/ada603196",
+            "source_url": "https://doi.org/10.21236/ada603196",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "SAX-VSM: Interpretable Time Series Classification Using SAX and Vector Space Model",
+            "authors": [
+              "Senin",
+              "Malinchik"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1109/icdm.2013.52",
+            "source_url": "https://doi.org/10.1109/icdm.2013.52",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "tsbox: Class-Agnostic Time Series",
+            "authors": [
+              "Sax"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.32614/cran.package.tsbox",
+            "source_url": "https://doi.org/10.32614/cran.package.tsbox",
+            "title_similarity": 0.3185840707964602
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Time series classification using MACD-Histogram-based SAX and its performance evaluation",
+            "authors": [
+              "Tamura",
+              "Sakai",
+              "Ichimura"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1109/smc.2016.7844601",
+            "source_url": "https://doi.org/10.1109/smc.2016.7844601",
+            "title_similarity": 0.5798816568047337
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Time Series Classification Using Images: The Case Of SAX-Like Transformation",
+            "authors": [
+              "Wrzesien",
+              "Wrzesien",
+              "Homenda"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.62036/isd.2023.56",
+            "source_url": "https://doi.org/10.62036/isd.2023.56",
+            "title_similarity": 0.5512820512820513
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:36.622589Z",
+        "response_sha256": "fdb1fedb14709846c0c3c283f281f8efc60b4287323e37b29939e5d0e2247e90",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Sax-vsm%3A+Interpretable+time+series+classification+using+sax+and+vector+space+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:36.623923Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-53",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-53",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-53",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Is attention interpretable? arXiv preprint arXiv:1906.03731 , 2019.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Is+attention+interpretable%3F+arXiv+preprint+arXiv%3A1906.03731+%2C+2019.&rows=5",
+        "checked_at": "2026-10-09T04:50:37.837183Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.4056603773584906
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.3364485981308411
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.29850746268656714
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.2764227642276423
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preprint site arXiv is banning computer-science reviews: here’s why",
+            "authors": [
+              "Castelvecchi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1038/d41586-025-03664-7",
+            "source_url": "https://doi.org/10.1038/d41586-025-03664-7",
+            "title_similarity": 0.26356589147286824
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:37.835892Z",
+        "response_sha256": "312559b579ee34f8759e6c5ef6a8781e6da1d16b6405bd5df5300e504aebcd8b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Is+attention+interpretable%3F+arXiv+preprint+arXiv%3A1906.03731+%2C+2019.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:37.837183Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-54",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-54",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning important features through propagating activation differences",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+important+features+through+propagating+activation+differences&rows=5",
+        "checked_at": "2026-10-09T04:50:37.094009Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Graph Representations Through Learning and Propagating Edge Features",
+            "authors": [
+              "Zhang",
+              "Xia",
+              "Zhang",
+              "Xu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/tnnls.2022.3228102",
+            "source_url": "https://doi.org/10.1109/tnnls.2022.3228102",
+            "title_similarity": 0.5578231292517006
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Exploring Important Features in Continuous Spectral Datasets Using Supervised Learning",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.analchem.6c00048.s001",
+            "source_url": "https://doi.org/10.1021/acs.analchem.6c00048.s001",
+            "title_similarity": 0.5384615384615384
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An Analysis for the Most Important Features of Learning Management Systems",
+            "authors": [
+              "Momani"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.2139/ssrn.1578392",
+            "source_url": "https://doi.org/10.2139/ssrn.1578392",
+            "title_similarity": 0.4722222222222222
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Appendix 1—table 7. Significant brain activation differences determined through volumetric based comparisons.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7554/elife.41723.029",
+            "source_url": "https://doi.org/10.7554/elife.41723.029",
+            "title_similarity": 0.3954802259887006
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Maskless Fabrication of Highly Conductive and Ultrastretchable Liquid Metal Features through Selective Laser Activation",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsami.3c06308.s002",
+            "source_url": "https://doi.org/10.1021/acsami.3c06308.s002",
+            "title_similarity": 0.455026455026455
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:37.092435Z",
+        "response_sha256": "aefa38972bf89f95daf3541437fca7122d6a54ddabf63c2d7d56552b4255056e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+important+features+through+propagating+activation+differences&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:37.094009Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-55",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-55",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Limesegment: Meaningful, realistic time series explanations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Limesegment%3A+Meaningful%2C+realistic+time+series+explanations&rows=5",
+        "checked_at": "2026-10-09T04:50:39.416226Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:39.416185Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Limesegment%3A+Meaningful%2C+realistic+time+series+explanations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:39.416226Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-56",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-56",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Axiomatic attribution for deep networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Axiomatic+attribution+for+deep+networks&rows=5",
+        "checked_at": "2026-10-09T04:50:39.654196Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:39.654147Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Axiomatic+attribution+for+deep+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:39.654196Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-58",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-58",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Enforcing interpretability in time series transformers: A concept bottleneck framework",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Enforcing+interpretability+in+time+series+transformers%3A+A+concept+bottleneck+framework&rows=5",
+        "checked_at": "2026-10-09T04:50:40.328971Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Energy-Ensemble Concept Bottleneck Models for Enhancing Interpretability and Accuracy in Concept-Based Learning",
+            "authors": [
+              "Ahn",
+              "Kim",
+              "Ko"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5774584",
+            "source_url": "https://doi.org/10.2139/ssrn.5774584",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Energy-ensemble concept bottleneck models for enhancing interpretability and accuracy in concept-based learning",
+            "authors": [
+              "Ahn",
+              "Kim",
+              "Ko"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.knosys.2026.115821",
+            "source_url": "https://doi.org/10.1016/j.knosys.2026.115821",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An Early Identification of Central Precocious Puberty Using a Contrastive Learning Framework with Time Series Transformers",
+            "authors": [
+              "Ezhilarasi",
+              "Kala"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0014159900004932",
+            "source_url": "https://doi.org/10.5220/0014159900004932",
+            "title_similarity": 0.3961352657004831
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Time series representations classroom (TSRC): a teacher-student-based framework for interpretability-enhanced unsupervised time series representation learning",
+            "authors": [
+              "Skaf",
+              "Baratchi",
+              "Hoos"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s10994-025-06895-x",
+            "source_url": "https://doi.org/10.1007/s10994-025-06895-x",
+            "title_similarity": 0.375
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Local Interpretability Methods for Time Series Modeling",
+            "authors": [
+              "Ozyegen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32920/26052709",
+            "source_url": "https://doi.org/10.32920/26052709",
+            "title_similarity": 0.4857142857142857
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:40.327215Z",
+        "response_sha256": "eca5da4ce2099b56e013e99945ae240cf1b6b7ea2919c09dfe1c8db1488ebd9c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Enforcing+interpretability+in+time+series+transformers%3A+A+concept+bottleneck+framework&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:40.328971Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-59",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-59",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-59",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Attention is all you need",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Attention+is+all+you+need&rows=5",
+        "checked_at": "2026-10-09T04:50:37.839925Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Is Attention All You Need?",
+            "authors": [
+              "Mineault"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-031-84300-6_13",
+            "source_url": "https://doi.org/10.1007/978-3-031-84300-6_13",
+            "title_similarity": 0.88
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Attention Is All You Need: An Analysis Of The Valuation Of Artificial Intelligence Tokens",
+            "authors": [
+              "Akpan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4993784",
+            "source_url": "https://doi.org/10.2139/ssrn.4993784",
+            "title_similarity": 0.4424778761061947
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Attention is All You Need... Unless You Are a CISO: The Inherent Incompatibility Between Transformer Architectures and Zero-Trust Environments",
+            "authors": [
+              "Canale"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.5967774",
+            "source_url": "https://doi.org/10.2139/ssrn.5967774",
+            "title_similarity": 0.3067484662576687
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "One Vector Is All You Need for O(1) Self-Attention: The Ocean State",
+            "authors": [
+              "YU"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10916252/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10916252/v1",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "All You Need Is LSD",
+            "authors": [
+              "Butler"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.5040/9781350101272.00000005",
+            "source_url": "https://doi.org/10.5040/9781350101272.00000005",
+            "title_similarity": 0.5454545454545454
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:36.880184Z",
+        "response_sha256": "271087e8e66bc45e0cd59f21a59453cda7dd37d875f64fff240115e34f4b7312",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Attention+is+all+you+need&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:37.839925Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-60",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-60",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Varshney, Caiming Xiong, richard socher, and Nazneen Rajani",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Varshney%2C+Caiming+Xiong%2C+richard+socher%2C+and+Nazneen+Rajani&rows=5",
+        "checked_at": "2026-10-09T04:50:38.982462Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BERTology Meets Biology: Interpreting Attention in Protein Language Models",
+            "authors": [
+              "Vig",
+              "Madani",
+              "Varshney",
+              "Xiong",
+              "Socher",
+              "Rajani"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1101/2020.06.26.174417",
+            "source_url": "https://doi.org/10.1101/2020.06.26.174417",
+            "title_similarity": 0.29457364341085274
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Explain Yourself! Leveraging Language Models for Commonsense Reasoning",
+            "authors": [
+              "Rajani",
+              "McCann",
+              "Xiong",
+              "Socher"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/p19-1487",
+            "source_url": "https://doi.org/10.18653/v1/p19-1487",
+            "title_similarity": 0.304
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ERASER: A Benchmark to Evaluate Rationalized NLP Models",
+            "authors": [
+              "DeYoung",
+              "Jain",
+              "Rajani",
+              "Lehman",
+              "Xiong",
+              "Socher",
+              "Wallace"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.acl-main.408",
+            "source_url": "https://doi.org/10.18653/v1/2020.acl-main.408",
+            "title_similarity": 0.2
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Universal Natural Language Processing with Limited Annotations: Try Few-shot Textual Entailment as a Start",
+            "authors": [
+              "Yin",
+              "Rajani",
+              "Radev",
+              "Socher",
+              "Xiong"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.emnlp-main.660",
+            "source_url": "https://doi.org/10.18653/v1/2020.emnlp-main.660",
+            "title_similarity": 0.2360248447204969
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ESPRIT: Explaining Solutions to Physical Reasoning Tasks",
+            "authors": [
+              "Rajani",
+              "Zhang",
+              "Tan",
+              "Zheng",
+              "Weiss",
+              "Vyas",
+              "Gupta",
+              "Xiong",
+              "Socher",
+              "Radev"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.acl-main.706",
+            "source_url": "https://doi.org/10.18653/v1/2020.acl-main.706",
+            "title_similarity": 0.2702702702702703
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:38.980953Z",
+        "response_sha256": "0d1b5d1a8009b51f8daf7b8880f7208b4b85c54ce2418d3a4920324bc7ebbb9d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Varshney%2C+Caiming+Xiong%2C+richard+socher%2C+and+Nazneen+Rajani&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:38.982462Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-62",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-62",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-62",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Abstracted shapes as tokens-a generalizable and interpretable model for time-series classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Abstracted+shapes+as+tokens-a+generalizable+and+interpretable+model+for+time-series+classification&rows=5",
+        "checked_at": "2026-10-09T04:50:42.207941Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:42.207888Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Abstracted+shapes+as+tokens-a+generalizable+and+interpretable+model+for+time-series+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:42.207941Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-63",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-63",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-63",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-64",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-64",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-64",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-66",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-66",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-66",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Timesnet: Temporal 2d-variation modeling for general time series analysis",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Timesnet%3A+Temporal+2d-variation+modeling+for+general+time+series+analysis&rows=5",
+        "checked_at": "2026-10-09T04:50:40.756568Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Spatio-Temporal Modeling for Small Area Health Analysis",
+            "authors": [],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1201/b19485-26",
+            "source_url": "https://doi.org/10.1201/b19485-26",
+            "title_similarity": 0.5984251968503937
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Evaluating economic policy uncertainty forecasts via TimesNet time series modeling of IoT and digital circular economy historical indicators",
+            "authors": [
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.aej.2025.05.066",
+            "source_url": "https://doi.org/10.1016/j.aej.2025.05.066",
+            "title_similarity": 0.2641509433962264
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Modeling bivariate long‐range dependence with general phase",
+            "authors": [
+              "Kechagias",
+              "Pipiras"
+            ],
+            "year": 2019,
+            "years": [
+              2019,
+              2020
+            ],
+            "doi": "10.1111/jtsa.12504",
+            "source_url": "https://doi.org/10.1111/jtsa.12504",
+            "title_similarity": 0.33587786259541985
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning High-Dimensional Temporal Variations for General Time Series Analysis",
+            "authors": [
+              "Wu",
+              "Liu",
+              "Zhou",
+              "Long"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003616719-2",
+            "source_url": "https://doi.org/10.1201/9781003616719-2",
+            "title_similarity": 0.76
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Nonlinear Time Series Prediction of Landfill Leachate: A TimesNet Model Integrating Time Series Decomposition and Attention Mechanism",
+            "authors": [
+              "Sun",
+              "Chen",
+              "jia",
+              "Nai",
+              "Ya"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6624308",
+            "source_url": "https://doi.org/10.2139/ssrn.6624308",
+            "title_similarity": 0.2647058823529412
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:40.754972Z",
+        "response_sha256": "1f7d2018c01652a607ea5dd53f5372f3a078d68f4f355fd7106ee7d800eca513",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Timesnet%3A+Temporal+2d-variation+modeling+for+general+time+series+analysis&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:40.756568Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-67",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-67",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-67",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Structured self-attention weights encode semantics in sentiment analysis",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Structured+self-attention+weights+encode+semantics+in+sentiment+analysis&rows=5",
+        "checked_at": "2026-10-09T04:50:42.257720Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Structured Self-Attention Weights Encode Semantics in Sentiment Analysis",
+            "authors": [
+              "Wu",
+              "Nguyen",
+              "Ong"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.blackboxnlp-1.24",
+            "source_url": "https://doi.org/10.18653/v1/2020.blackboxnlp-1.24",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Aspect-Level Sentiment Analysis Based on Disentangled Attention and Aspect Proximity Weights",
+            "authors": [
+              "Chen",
+              "Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.23919/ccc58697.2023.10240529",
+            "source_url": "https://doi.org/10.23919/ccc58697.2023.10240529",
+            "title_similarity": 0.3048780487804878
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Enhancing Self-Attention via Knowledge Fusion: Deriving Sentiment Lexical Attention from Semantic-Polarity Scores",
+            "authors": [
+              "Jang",
+              "Kim",
+              "Shin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.starsem-1.27",
+            "source_url": "https://doi.org/10.18653/v1/2024.starsem-1.27",
+            "title_similarity": 0.4673913043478261
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "VBCSNet: A Hybrid Attention-Based Multimodal Framework with Structured Self-Attention for Sentiment Classification",
+            "authors": [
+              "Liu",
+              "Kang",
+              "Matsumoto",
+              "Zhou"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.62762/cjif.2025.537775",
+            "source_url": "https://doi.org/10.62762/cjif.2025.537775",
+            "title_similarity": 0.44324324324324327
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "SLPL-Sentiment at SemEval-2022 Task 10: Making Use of Pre-Trained Model’s Attention Values in Structured Sentiment Analysis",
+            "authors": [
+              "Barikbin"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.semeval-1.192",
+            "source_url": "https://doi.org/10.18653/v1/2022.semeval-1.192",
+            "title_similarity": 0.44329896907216493
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:42.256284Z",
+        "response_sha256": "132cc6056ec21bb50ec17d6ced47f6a4823e47a01ca8a70999beaad3740df8f2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Structured+self-attention+weights+encode+semantics+in+sentiment+analysis&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:42.257720Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-68",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-68",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-68",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neuro-symbolic models for interpretable time series classification using temporal logic description",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neuro-symbolic+models+for+interpretable+time+series+classification+using+temporal+logic+description&rows=5",
+        "checked_at": "2026-10-09T04:50:43.202079Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:50:43.202025Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neuro-symbolic+models+for+interpretable+time+series+classification+using+temporal+logic+description&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:50:43.202079Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-70",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-70",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-70",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_034_iclr_2026_proceedings_credibility-71",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_034_iclr_2026_proceedings_credibility-71",
+        "paper_reference_id": "ref-paper_034_iclr_2026_proceedings_credibility-71",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.52112676056338
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 71,
+    "extracted_count": 71,
+    "parsed_count": 60,
+    "queried_count": 60,
+    "matched_count": 19,
+    "metadata_conflict_count": 6,
+    "unverified_count": 22,
+    "parse_failed_count": 11,
+    "not_checked_count": 0,
+    "query_failed_count": 13,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "query_failed",
+    "official_code_available"
+  ],
+  "created_at": "2026-10-09T06:14:43.024479Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

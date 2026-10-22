@@ -1,0 +1,357 @@
+{
+  "assessment_id": "assessment_ai_paper_018_openreview_2024_02_11",
+  "paper_version_id": "paper_018_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_018_openreview_2024_02_11",
+    "raw_output_sha256": "df2d301f36b41d08744ec4042111efac1d51a6248e1ff0eb33b88935938d1da8"
+  },
+  "paper_summary": "This paper introduces VLAP, a novel approach that bridges pretrained vision models and large language models (LLMs) to make frozen LLMs understand the visual world. VLAP transforms the embedding space of pretrained vision models into the LLMs' word embedding space using a single linear layer for efficient and general-purpose visual and language understanding.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "This paper introduces VLAP, a novel approach that bridges pretrained vision models and large language models (LLMs) to make frozen LLMs understand the visual world.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_018_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Experimental results show that VLAP achieves substantial improvements over the previous linear transformation-based approaches across a range of vision-language tasks, including image captioning, visual question answering, and cross-modal retrieval.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_018_ev_004",
+        "paper_018_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Bridging Vision and Language Spaces with Assignment Prediction》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.0/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：ThispaperintroducesVLAP,anovelapproachthatbridgespretrainedvisionmodels and large language models (LLMs) to make frozen LLMs understand the visual world. ",
+    "正文可定位证据支持该维度判断：Assignment Prediction Assignment Prediction Prediction Prediction OT Our primary goal is to make pretrained LLMs compre- 𝐙 ത 𝑣 ⋯ 𝐐 𝑣 hend visual inputs with minimum training for general- Image Embed. ",
+    "正文可定位证据支持该维度判断：We previously defined the transport polytope with the word distribution of a given dataset. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Bridging Vision and Language Spaces with Assignment Prediction》在研究价值方面的正文支持是：ThispaperintroducesVLAP,anovelapproachthatbridgespretrainedvisionmodels and large language models (LLMs) to make frozen LLMs understand the visual world.  限制或边界证据是：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：ThispaperintroducesVLAP,anovelapproachthatbridgespretrainedvisionmodels and large language models (LLMs) to make frozen LLMs understand the visual world. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_018_ev_001",
+        "paper_018_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Bridging Vision and Language Spaces with Assignment Prediction》在可靠性与证据方面的正文支持是：Assignment Prediction Assignment Prediction Prediction Prediction OT Our primary goal is to make pretrained LLMs compre- 𝐙 ത 𝑣 ⋯ 𝐐 𝑣 hend visual inputs with minimum training for general- Image Embed.  限制或边界证据是：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Assignment Prediction Assignment Prediction Prediction Prediction OT Our primary goal is to make pretrained LLMs compre- 𝐙 ത 𝑣 ⋯ 𝐐 𝑣 hend visual inputs with minimum training for general- Image Embed. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_018_ev_003",
+        "paper_018_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Bridging Vision and Language Spaces with Assignment Prediction》在原创性定位方面的正文支持是：We previously defined the transport polytope with the word distribution of a given dataset.  限制或边界证据是：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We previously defined the transport polytope with the word distribution of a given dataset. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_018_ev_004",
+        "paper_018_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Bridging Vision and Language Spaces with Assignment Prediction》在清晰度与可用性方面的正文支持是：• We present VLAP that efficiently bridges pretrained vision models and LLMs.  限制或边界证据是：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：• We present VLAP that efficiently bridges pretrained vision models and LLMs. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_018_ev_005",
+        "paper_018_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Bridging Vision and Language Spaces with Assignment Prediction》在可复现性与透明度方面的正文支持是：To verify the impact of the training dataset scale on the zero-shot capability, we train VLAP on the CC12M (Changpinyo et al., 2021) dataset, which contains about 4 × more images than CC3M.  限制或边界证据是：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：To verify the impact of the training dataset scale on the zero-shot capability, we train VLAP on the CC12M (Changpinyo et al., 2021) dataset, which contains about 4 × more images than CC3M. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_018_ev_006",
+        "paper_018_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_018_ev_001",
+      "page_number": 1,
+      "section_id": "paper_018_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "ThispaperintroducesVLAP,anovelapproachthatbridgespretrainedvisionmodels and large language models (LLMs) to make frozen LLMs understand the visual world. VLAP transforms the embedding space of pretrained vision models into the LLMs’ word embedding space using a single linear layer for efficient and general-purpose visual and language understanding. Specifically, we harnesswell-establishedwordembeddingstobridgetwomodalityembeddingspaces. The visual and text representations are simultaneously assigned to a set of word embeddings within pretrained LLMs by formulating the assigning procedure as an optimal transport problem. We predict the assignment of one modality from the representation of another modality data, enforcing consistent assignments for paired multimodal data. This allows vision and language representations to contain the same information, grounding the frozen LLMs’ word embedd",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "page_number": 9,
+      "section_id": "paper_018_openreview_2024_02_11_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "We propose VLAP to bridge pretrained vision encoders and LLMs using a single linear layer for vision-language tasks. VLAP efficiently and effectively learns the linear mapping between image and text data by formulating assignment prediction using LLMs’ word embeddings as the optimal transport. Experimental findings corroborate the effectiveness of VLAP, demonstrating significant performance compared to the previous linear transformation-based methods on a spectrum of visionlanguage tasks. Furthermore, we demonstrate that VLAP holds a semantic taxonomy of LLMs, highlighting the emerging flexibility and applicability of the proposed approach. While linear transformation-based methods excel in computation and memory efficiency, there is still a substantial performance gap against modular-based methods, such as Flamingo and BLIP-2. We attribute such gap to a lot of trainable parameters in th",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_018_ev_003",
+      "page_number": 3,
+      "section_id": "paper_018_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "Assignment Prediction Assignment Prediction Prediction Prediction OT Our primary goal is to make pretrained LLMs compre- 𝐙 ത 𝑣 ⋯ 𝐐 𝑣 hend visual inputs with minimum training for general- Image Embed. purpose vision-language tasks. More precisely, we Prediction 𝐙 ത 𝑣 𝐙 ത 𝑡 aim to bridge ⋯ OT pretrained ⋯ vision ⋯ OT models ⋯ and LLMs by ⋯ Prediction learning a linear layer only (i.e., keeping the original Word Embed. parameters LLM Vocab. frozen) 𝐐 𝑣 while preserving 𝐐 𝑡 LLM Vocab. the representative 𝐙 ത 𝑡 ⋯ 𝐐 𝑡 OT power of pretrained vision models and the general- Text Embed. Assigned Word Embeddings ization ability of pretrained LLMs. To this end, we Assigned Word Embeddings proposed a novel linear transformation-based method VLAP: bridging vision and language models with as- Figure 2: Assignment prediction. The modalsignment prediction. The key component to bridge ity gap can be relaxe",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_018_ev_004",
+      "page_number": 5,
+      "section_id": "paper_018_openreview_2024_02_11_sec_4_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0010",
+      "evidence_mode": "quote",
+      "excerpt": "We previously defined the transport polytope with the word distribution of a given dataset. This assumption poses one possible problem: VLAP often fails when the word distribution of training\n\nTable 2: Performance comparisons between Frozen (Tsimpoukelli et al., 2021), MAGMA (Eichenberg et al., 2022), LiMBeR (Merullo et al., 2023), and VLAP for zero- and few-shot visual question answering on the VQA2 datasets. We report the architectures of visual and language models and accuracy (%).\n\nn -shots Method Vision Encoder LM 0 1 2 4 Frozen NFRN50 GPT-2 29.5 35.7 - 38.2 MAGMA CLIP RN50x16 GPT-J 32.7 40.2 42.5 43.8 LiMBeR BEiT GPT-J 24.9 34.4 34.7 31.7 LiMBeR CLIP RN50x16 GPT-J 33.3 39.9 40.8 40.3 VLAP BEiT OPT 34.5 44.2 45.1 45.7 1.3B VLAP BEiT T5 34.7 43.3 45.4 45.5 Base VLAP CLIP ViT-B/32 OPT 40.4 52.6 53.8 54.7 1.3B VLAP CLIP ViT-B/32 T5 41.1 51.3 51.9 52.6 Base\n\nTable 3: Performance compari",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_018_ev_005",
+      "page_number": 2,
+      "section_id": "paper_018_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "• We present VLAP that efficiently bridges pretrained vision models and LLMs. VLAP employs an optimal transport-based assignment prediction objective to make visual and text representations compatible with each other. • VLAP leverages the word embeddings of pretrained LLMs as a fixed central space for optimal transport. This allows us to easily bridge two pretrained frozen unimodal models by exploiting the fundamental components of LLMs. • Mapping visual data to LLMs’ word embeddings results in learned visual representations that hold a semantic taxonomy of LLMs, facilitating the operation in a textual way for visual data, e.g. visual semantic arithmetic operation.\n\n• VLAP substantially outperforms existing linear transformation-based methods (Merullo et al., 2023; Koh et al., 2023) in a range of vision-language tasks, while also demonstrating high computational and memory efficiency.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_018_ev_006",
+      "page_number": 19,
+      "section_id": "paper_018_openreview_2024_02_11_sec_d_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_018_openreview_2024_02_11_chunk_0036",
+      "evidence_mode": "quote",
+      "excerpt": "To verify the impact of the training dataset scale on the zero-shot capability, we train VLAP on the CC12M (Changpinyo et al., 2021) dataset, which contains about 4 × more images than CC3M. We report the performance on zero-shot vision-language tasks in Table 9. The performance of VLAP is marginally improved across all tasks despite the considerable increase in the amount of training data. Since VLAP defines transportation polytope with a marginal word distribution, simply increasing the number of training data while keeping a similar word distribution could not derive a significant performance improvement. Namely, VLAP has training efficiency for a relatively small amount of data that might cover a word distribution.",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_018_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_018_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_018_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_018_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_018_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_018_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_018_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_018_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_018_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_018_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_018_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

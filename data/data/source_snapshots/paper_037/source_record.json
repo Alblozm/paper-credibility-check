@@ -1,0 +1,40 @@
+{
+  "paper_id": "paper_037",
+  "paper_version_id": "paper_037_iclr_2026_proceedings",
+  "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+  "authors": [
+    "Dass, Shivin",
+    "Khaddaj, Alaa",
+    "Engstrom, Logan",
+    "Madry, Aleksander",
+    "Ilyas, Andrew",
+    "Martín-Martín, Roberto"
+  ],
+  "abstract": "Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks and require further tuning on newly acquired task-specific data. Combining task-specific data with carefully curated subsets of large prior datasets via co-training can produce better specialized policies, but selecting data naively may actually harm downstream performance. To address this, we introduce DataMIL, a data selection framework built on the datamodels paradigm that reasons about data selection in an end-to-end manner, using the policy itself to identify which data points will most improve performance. Unlike standard practices that filter data using human notions of quality (e.g., based on semantic or visual similarity), DataMIL directly optimizes data selection for task success, allowing us to select data that improves the policy while dropping data that degrade it. To avoid performing expensive rollouts in the environment during selection, we introduce a surrogate loss function on task-specific data, allowing us to use DataMIL in the real world without degrading performance. We validate our approach on 60+ simulation and real-world manipulation tasks, notably showing successful data selection from the largest open collections of robot datasets (OXE); demonstrating consistent gains in success rates over prior works. Our results underscore the importance of end-to-end, performance-aware data selection for unlocking the potential of large prior datasets in robotics.",
+  "language": "en",
+  "source_type": "pdf",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/033d9e8dbbbc0ad90e59222cf1db0fc2-Paper-Conference.pdf",
+  "tags": [
+    "iclr_2026",
+    "official_proceedings",
+    "recent_holdout",
+    "robotics"
+  ],
+  "venue": "ICLR",
+  "publication_year": 2026,
+  "dataset_split": "test",
+  "decision": "Accept (proceedings)",
+  "decision_verified": true,
+  "landing_page_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+  "retrieved_at": "2026-09-08T08:23:20Z",
+  "pdf_sha256": "d6033f58ff41529f20097a50dde1e97bce9e9db87e443c0d0efa7688a82d58c1",
+  "pdf_sha256_status": "verified",
+  "page_count": 26,
+  "page_count_status": "verified",
+  "local_pdf_path": "data/raw_pdfs/paper_037/033d9e8dbbbc0ad90e59222cf1db0fc2-Paper-Conference.pdf",
+  "parse_status": "completed",
+  "data_status": "parsed",
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "parse_quality": "good"
+}

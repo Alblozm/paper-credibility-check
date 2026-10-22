@@ -1,0 +1,2755 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-e65b50534b2e6993",
+  "paper_version_id": "paper_009_openreview_2024_02_11",
+  "pdf_sha256": "9b7c46c74e2010bacf663ba46e9663dc0d6dc445f27e5d4a3197699dc3e09ceb",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "724887c16ff0326a8276f4ec10b22fffb952656454d4bbab53f8d0cc78f67846",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.621621621621621,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.864864864864865,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 37,
+        "extracted_count": 37,
+        "parsed_count": 37,
+        "queried_count": 37,
+        "matched_count": 11,
+        "metadata_conflict_count": 2,
+        "unverified_count": 21,
+        "parse_failed_count": 0,
+        "not_checked_count": 0,
+        "query_failed_count": 3,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=ANvmVS2Yr0",
+            "checked_at": "2026-10-09T04:41:33.509767Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-3fe3c4210beb",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 7,
+            "comments_checked": 14,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:41:33.510728Z",
+            "source_urls": [
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/6/comments?per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/5/comments?per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4/comments?per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/3/comments?per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/2/comments?per_page=100&page=1",
+              "https://api.github.com/repos/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/1/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Extracting training data from diffusion models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Extracting+training+data+from+diffusion+models&rows=5",
+        "checked_at": "2026-10-09T04:41:31.100527Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:31.100498Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Extracting+training+data+from+diffusion+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.100527Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Investigating data memorization in 3d latent diffusion models for medical image synthesis",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Investigating+data+memorization+in+3d+latent+diffusion+models+for+medical+image+synthesis&rows=5",
+        "checked_at": "2026-10-09T04:41:28.181590Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Investigating Data Memorization in 3D Latent Diffusion Models for Medical Image Synthesis",
+            "authors": [
+              "Dar",
+              "Ghanaat",
+              "Kahmann",
+              "Ayx",
+              "Papavassiliu",
+              "Schoenberg",
+              "Engelhardt"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-3-031-53767-7_6",
+            "source_url": "https://doi.org/10.1007/978-3-031-53767-7_6",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Conditional Diffusion Models for Semantic 3D Medical Image Synthesis",
+            "authors": [
+              "Dorjsembe",
+              "Pao",
+              "Odonchimed",
+              "Xiao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.23723787",
+            "source_url": "https://doi.org/10.36227/techrxiv.23723787",
+            "title_similarity": 0.6496815286624203
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Conditional Diffusion Models for Semantic 3D Medical Image Synthesis",
+            "authors": [
+              "Dorjsembe",
+              "Pao",
+              "Odonchimed",
+              "Xiao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.23723787.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.23723787.v1",
+            "title_similarity": 0.6496815286624203
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Conditional Diffusion Models for Semantic 3D Medical Image Synthesis",
+            "authors": [
+              "Dorjsembe",
+              "Pao",
+              "Odonchimed",
+              "Xiao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.23723787.v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.23723787.v2",
+            "title_similarity": 0.6496815286624203
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review of the Stable Diffusion Model: Generative Image Synthesis Using Latent Diffusion Models",
+            "authors": [
+              "Chew",
+              "Hakam"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31219/osf.io/gdb2f",
+            "source_url": "https://doi.org/10.31219/osf.io/gdb2f",
+            "title_similarity": 0.4175824175824176
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:04.994890Z",
+        "response_sha256": "af47a3857bdc8295b48753590f3ff21db4ec133730b43a7aa9ca05cf273c7c84",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Investigating+data+memorization+in+3d+latent+diffusion+models+for+medical+image+synthesis&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:28.181590Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Denoising by soft-thresholding",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Denoising+by+soft-thresholding&rows=5",
+        "checked_at": "2026-10-09T04:41:29.277473Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A New Soft-Thresholding Image Denoising Method",
+            "authors": [
+              "Biswas",
+              "Om"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1016/j.protcy.2012.10.002",
+            "source_url": "https://doi.org/10.1016/j.protcy.2012.10.002",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Two-step group-based adaptive soft-thresholding algorithm for image denoising",
+            "authors": [
+              "Pan",
+              "Huang",
+              "Ma"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1016/j.ijleo.2015.08.131",
+            "source_url": "https://doi.org/10.1016/j.ijleo.2015.08.131",
+            "title_similarity": 0.411214953271028
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Electrocardiogram signal denoising by clustering and soft thresholding",
+            "authors": [
+              "Vargas",
+              "Paschoarelli Veiga"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1049/iet-spr.2018.5162",
+            "source_url": "https://doi.org/10.1049/iet-spr.2018.5162",
+            "title_similarity": 0.6
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Robust and Efficient Harmonics Denoising in Large Dataset Based on Random SVD and Soft Thresholding",
+            "authors": [
+              "Yang",
+              "Rao"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/access.2019.2921579",
+            "source_url": "https://doi.org/10.1109/access.2019.2921579",
+            "title_similarity": 0.4496124031007752
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A New Image Denoising Scheme Using Soft-Thresholding",
+            "authors": [
+              "Om",
+              "Biswas"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.4236/jsip.2012.33046",
+            "source_url": "https://doi.org/10.4236/jsip.2012.33046",
+            "title_similarity": 0.6829268292682927
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:29.275999Z",
+        "response_sha256": "fd6a7423af886dd40e118fb088064f21de1cb2e79b43eeb722eeba67db85a075",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Denoising+by+soft-thresholding&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.277473Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Dossal, E",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Dossal%2C+E&rows=5",
+        "checked_at": "2026-10-09T04:41:28.183310Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dossal",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gao/9781884446054.article.t023429",
+            "source_url": "https://doi.org/10.1093/gao/9781884446054.article.t023429",
+            "title_similarity": 0.8571428571428571
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "dossal | dossel, n.",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1093/oed/1160561349",
+            "source_url": "https://doi.org/10.1093/oed/1160561349",
+            "title_similarity": 0.6956521739130435
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Impact of Family Counseling on Development of Special Children",
+            "authors": [
+              "Sabeen Dossal",
+              "Shagufta Shahzadi",
+              "Farheen Dossal"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.58622/vjes.v4i2.154",
+            "source_url": "https://doi.org/10.58622/vjes.v4i2.154",
+            "title_similarity": 0.2
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Réenchanteur de ville, Jean Blaise",
+            "authors": [
+              "Dossal"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.3917/ahd.doss.2015.01",
+            "source_url": "https://doi.org/10.3917/ahd.doss.2015.01",
+            "title_similarity": 0.14634146341463414
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Impact Of Inclusive Sports and Games on The Independent Life Skills of The Intellectually Challenged Individuals",
+            "authors": [
+              "Farheen Dossal",
+              "Shagufta Shehzadi",
+              "Sabeen Dossal"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.58622/vjes.v4i2.155",
+            "source_url": "https://doi.org/10.58622/vjes.v4i2.155",
+            "title_similarity": 0.13333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:06.925461Z",
+        "response_sha256": "569c909e0984e7b4ac6b0fdb841d0a53b1d6fe5d0ce69f51ad00e501f4b5a2a4",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Dossal%2C+E&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:28.183310Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-10",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inductive biases for deep learning of higher-level cognition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inductive+biases+for+deep+learning+of+higher-level+cognition&rows=5",
+        "checked_at": "2026-10-09T04:41:31.215184Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:31.215110Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inductive+biases+for+deep+learning+of+higher-level+cognition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.215184Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bayes in the age of intelligent machines",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bayes+in+the+age+of+intelligent+machines&rows=5",
+        "checked_at": "2026-10-09T04:41:29.172404Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bayes in the Age of Intelligent Machines",
+            "authors": [
+              "Griffiths",
+              "Zhu",
+              "Grant",
+              "Thomas McCoy"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1177/09637214241262329",
+            "source_url": "https://doi.org/10.1177/09637214241262329",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Machines That Think",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.7551/mitpress/11853.003.0004",
+            "source_url": "https://doi.org/10.7551/mitpress/11853.003.0004",
+            "title_similarity": 0.2711864406779661
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Wisdom and Intelligent Machines: Who Is in Control?",
+            "authors": [
+              "Spence"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-031-93883-2_6",
+            "source_url": "https://doi.org/10.1007/978-3-031-93883-2_6",
+            "title_similarity": 0.5393258426966292
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Machines at the Helm",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.7551/mitpress/11853.003.0006",
+            "source_url": "https://doi.org/10.7551/mitpress/11853.003.0006",
+            "title_similarity": 0.26666666666666666
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Wise Guys and Smart Machines",
+            "authors": [
+              "Spence"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-031-93883-2_7",
+            "source_url": "https://doi.org/10.1007/978-3-031-93883-2_7",
+            "title_similarity": 0.47058823529411764
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:07.680459Z",
+        "response_sha256": "261e42139c3320140eecc046729f65703b1260b0a8965524ac562f59ea67d10a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bayes+in+the+age+of+intelligent+machines&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.172404Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Denoising diffusion probabilistic models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Denoising+diffusion+probabilistic+models&rows=5",
+        "checked_at": "2026-10-09T04:41:29.173671Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Discriminator-Augmented Denoising Diffusion Probabilistic Models for Seismic Data",
+            "authors": [
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5194/egusphere-egu26-10528",
+            "source_url": "https://doi.org/10.5194/egusphere-egu26-10528",
+            "title_similarity": 0.6611570247933884
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Denoising Diffusion Probabilistic Models for Probabilistic Energy Forecasting",
+            "authors": [
+              "Capel",
+              "Dumas"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/powertech55446.2023.10202713",
+            "source_url": "https://doi.org/10.1109/powertech55446.2023.10202713",
+            "title_similarity": 0.6837606837606838
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Riemannian Denoising Diffusion Probabilistic Models",
+            "authors": [
+              "Liu",
+              "Zhang",
+              "Schütte",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5358689",
+            "source_url": "https://doi.org/10.2139/ssrn.5358689",
+            "title_similarity": 0.8791208791208791
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Modelling Solar Images from Sdo/Aia with Denoising Diffusion Probabilistic Models",
+            "authors": [
+              "Ramunno"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4504193",
+            "source_url": "https://doi.org/10.2139/ssrn.4504193",
+            "title_similarity": 0.6611570247933884
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Image Generation Framework Based on Denoising Diffusion Probabilistic Models",
+            "authors": [
+              "Ahuja",
+              "Vyas",
+              "Patel"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7345758",
+            "source_url": "https://doi.org/10.2139/ssrn.7345758",
+            "title_similarity": 0.6896551724137931
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:07.855042Z",
+        "response_sha256": "32793c16ac466112a276285f7e0602865422eabb601e99970d0b9a2858d60664",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Denoising+diffusion+probabilistic+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.173671Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Solving linear inverse problems using the prior implicit in a denoiser",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Solving+linear+inverse+problems+using+the+prior+implicit+in+a+denoiser&rows=5",
+        "checked_at": "2026-10-09T04:41:31.544256Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multi Task Denoiser Training for Solving Linear Inverse Problems",
+            "authors": [
+              "Bled",
+              "Pitié"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3756863.3769703",
+            "source_url": "https://doi.org/10.1145/3756863.3769703",
+            "title_similarity": 0.4626865671641791
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Regularizing the Deep Image Prior with a Learned Denoiser for Linear Inverse Problems",
+            "authors": [
+              "Fermanian",
+              "Le Pendu",
+              "Guillemot"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/mmsp53017.2021.9733691",
+            "source_url": "https://doi.org/10.1109/mmsp53017.2021.9733691",
+            "title_similarity": 0.36129032258064514
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Solving Linear Inverse Problems using Higher-Order Annealed Langevin Diffusion_supp1-3348202.pdf",
+            "authors": [
+              "Zilberstein"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tsp.2023.3348202/mm1",
+            "source_url": "https://doi.org/10.1109/tsp.2023.3348202/mm1",
+            "title_similarity": 0.6144578313253012
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Solving an inverse heat convection problem with an implicit forward operator by using a projected quasi-Newton method",
+            "authors": [
+              "Rothermel",
+              "Schuster"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1088/1361-6420/abe4a8",
+            "source_url": "https://doi.org/10.1088/1361-6420/abe4a8",
+            "title_similarity": 0.5240641711229946
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Solving linear Bayesian inverse problems using a fractional total variation-Gaussian (FTG) prior and transport map",
+            "authors": [
+              "Sun",
+              "Zheng"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1007/s00180-023-01332-w",
+            "source_url": "https://doi.org/10.1007/s00180-023-01332-w",
+            "title_similarity": 0.5494505494505495
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:31.542915Z",
+        "response_sha256": "6b685cf77161422785e63ad5e4d94d60f9e4c047d5fcee4947d2d57f1806bfb5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Solving+linear+inverse+problems+using+the+prior+implicit+in+a+denoiser&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.544256Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Stochastic solutions for linear inverse problems using the prior implicit in a denoiser",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Stochastic+solutions+for+linear+inverse+problems+using+the+prior+implicit+in+a+denoiser&rows=5",
+        "checked_at": "2026-10-09T04:41:29.248961Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Regularizing the Deep Image Prior with a Learned Denoiser for Linear Inverse Problems",
+            "authors": [
+              "Fermanian",
+              "Le Pendu",
+              "Guillemot"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/mmsp53017.2021.9733691",
+            "source_url": "https://doi.org/10.1109/mmsp53017.2021.9733691",
+            "title_similarity": 0.4186046511627907
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Implicit regularization of the deep inverse prior trained with inertia",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/bs.hna.2025.09.005",
+            "source_url": "https://doi.org/10.1016/bs.hna.2025.09.005",
+            "title_similarity": 0.445859872611465
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stochastic asymptotical regularization for linear inverse problems",
+            "authors": [
+              "Zhang",
+              "Chen"
+            ],
+            "year": 2022,
+            "years": [
+              2022,
+              2023
+            ],
+            "doi": "10.1088/1361-6420/aca70f",
+            "source_url": "https://doi.org/10.1088/1361-6420/aca70f",
+            "title_similarity": 0.6143790849673203
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Stochastic variance reduced gradient method for linear ill-posed inverse problems",
+            "authors": [
+              "Jin",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1088/1361-6420/add04b",
+            "source_url": "https://doi.org/10.1088/1361-6420/add04b",
+            "title_similarity": 0.47619047619047616
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "On the convergence of stochastic variance reduced gradient for linear inverse problems\n                    <sup>*</sup>",
+            "authors": [
+              "Jin",
+              "Zhou"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1088/1361-6420/ae5845",
+            "source_url": "https://doi.org/10.1088/1361-6420/ae5845",
+            "title_similarity": 0.47398843930635837
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:08.963048Z",
+        "response_sha256": "6fa482e581077988fdfcb1ea752dbea372b5e81fd8f2f8ca72ebf4ea547f74a6",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Stochastic+solutions+for+linear+inverse+problems+using+the+prior+implicit+in+a+denoiser&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.248961Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning multi-scale local conditional probability models of images",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+multi-scale+local+conditional+probability+models+of+images&rows=5",
+        "checked_at": "2026-10-09T04:41:29.253275Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Mcnn: Conditional Focus Probability Learning to Multi-Focus Images Via Mutually Coupled Neural Network",
+            "authors": [
+              "Nie",
+              "wang",
+              "Cao",
+              "Ma",
+              "Yu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4001587",
+            "source_url": "https://doi.org/10.2139/ssrn.4001587",
+            "title_similarity": 0.44047619047619047
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Conditional Probability and Conditional Expectation",
+            "authors": [
+              "Ross"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1016/b978-0-12-407948-9.00003-7",
+            "source_url": "https://doi.org/10.1016/b978-0-12-407948-9.00003-7",
+            "title_similarity": 0.4745762711864407
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Conditional Probability and Conditional Expectation",
+            "authors": [
+              "Ross"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1016/b978-0-12-375686-2.00013-3",
+            "source_url": "https://doi.org/10.1016/b978-0-12-375686-2.00013-3",
+            "title_similarity": 0.4745762711864407
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Conditional Probability and Conditional Expectation",
+            "authors": [
+              "Ross"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/b978-0-44-318761-2.00008-7",
+            "source_url": "https://doi.org/10.1016/b978-0-44-318761-2.00008-7",
+            "title_similarity": 0.4745762711864407
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Conditional Probability and Conditional Expectation",
+            "authors": [
+              "Ross"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1016/b978-0-12-598455-3.50006-4",
+            "source_url": "https://doi.org/10.1016/b978-0-12-598455-3.50006-4",
+            "title_similarity": 0.4745762711864407
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:08.976489Z",
+        "response_sha256": "eac00d01333b90c9c4ab40354b7b706fcd604752cb6f1082d5e4d82b7778f60d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+multi-scale+local+conditional+probability+models+of+images&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.253275Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Progressive growing of GANs for improved quality, stability, and variation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Progressive+growing+of+GANs+for+improved+quality%2C+stability%2C+and+variation&rows=5",
+        "checked_at": "2026-10-09T04:41:29.255258Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GANSim: Conditional Facies Simulation Using an Improved Progressive Growing of Generative Adversarial Networks (GANs)",
+            "authors": [
+              "Song",
+              "Mukerji",
+              "Hou"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.31223/osf.io/fm24b",
+            "source_url": "https://doi.org/10.31223/osf.io/fm24b",
+            "title_similarity": 0.41935483870967744
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GANSim: Conditional Facies Simulation Using an Improved Progressive Growing of Generative Adversarial Networks (GANs)",
+            "authors": [
+              "Song",
+              "Mukerji",
+              "Hou"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1007/s11004-021-09934-0",
+            "source_url": "https://doi.org/10.1007/s11004-021-09934-0",
+            "title_similarity": 0.41935483870967744
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Geological Facies Modeling Based on Progressive Growing of Generative Adversarial Networks (GANs)",
+            "authors": [
+              "Song",
+              "Mukerji",
+              "Hou"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.31223/osf.io/ycufs",
+            "source_url": "https://doi.org/10.31223/osf.io/ycufs",
+            "title_similarity": 0.46706586826347307
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Importance of Growing Up: Progressive Growing GANs for Image Inpainting",
+            "authors": [
+              "Speck",
+              "Rosin",
+              "Kerzel",
+              "Wermter"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/icdl55364.2023.10364530",
+            "source_url": "https://doi.org/10.1109/icdl55364.2023.10364530",
+            "title_similarity": 0.5205479452054794
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Progressive GANomaly:  anomaly detection with progressively growing GANs",
+            "authors": [
+              "Madzia-Madzou",
+              "Kuijf"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1117/12.2611105",
+            "source_url": "https://doi.org/10.1117/12.2611105",
+            "title_similarity": 0.3380281690140845
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:09.144876Z",
+        "response_sha256": "2ae03a90445054c178eaad531fdc83818e34f380053b288e863e6c6fc6bff81e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Progressive+growing+of+GANs+for+improved+quality%2C+stability%2C+and+variation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.255258Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "P",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=P&rows=5",
+        "checked_at": "2026-10-09T04:41:29.257745Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:10.844834Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=P&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.257745Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A wavelet tour of signal processing: The sparse way",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+wavelet+tour+of+signal+processing%3A+The+sparse+way&rows=5",
+        "checked_at": "2026-10-09T04:41:29.278931Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sparse Representations",
+            "authors": [
+              "Stéphane"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/b978-0-12-374370-1.00005-7",
+            "source_url": "https://doi.org/10.1016/b978-0-12-374370-1.00005-7",
+            "title_similarity": 0.2222222222222222
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Preface to the Sparse Edition",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/b978-0-12-374370-1.00003-3",
+            "source_url": "https://doi.org/10.1016/b978-0-12-374370-1.00003-3",
+            "title_similarity": 0.43037974683544306
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Wavelet Tour of Signal Processing",
+            "authors": [],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1016/b978-0-12-466606-1.x5000-4",
+            "source_url": "https://doi.org/10.1016/b978-0-12-466606-1.x5000-4",
+            "title_similarity": 0.8235294117647058
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Wavelet Tour of Signal Processing",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/b978-0-12-374370-1.x0001-8",
+            "source_url": "https://doi.org/10.1016/b978-0-12-374370-1.x0001-8",
+            "title_similarity": 0.8235294117647058
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Wavelet Zoom",
+            "authors": [
+              "Stéphane"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/b978-0-12-374370-1.00010-0",
+            "source_url": "https://doi.org/10.1016/b978-0-12-374370-1.00010-0",
+            "title_similarity": 0.3225806451612903
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:11.125857Z",
+        "response_sha256": "5a5d2697443661626d384072646f5d7afd32d7e140f3d68b4555fd14288970a5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+wavelet+tour+of+signal+processing%3A+The+sparse+way&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:29.278931Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A tour of modern image filtering: New insights and methods, both practical and theoretical",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+tour+of+modern+image+filtering%3A+New+insights+and+methods%2C+both+practical+and+theoretical&rows=5",
+        "checked_at": "2026-10-09T04:41:31.294460Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Tour of Modern Image Filtering: New Insights and Methods, Both Practical and Theoretical",
+            "authors": [
+              "Milanfar"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1109/msp.2011.2179329",
+            "source_url": "https://doi.org/10.1109/msp.2011.2179329",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Enhancing Digital Literacies with Adult English Language Learners",
+            "authors": [
+              "Tour",
+              "Creely",
+              "Waterhouse"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.4324/9781003132684",
+            "source_url": "https://doi.org/10.4324/9781003132684",
+            "title_similarity": 0.20915032679738563
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Developing theoretical perspectives on institutional practices",
+            "authors": [
+              "Tour",
+              "Creely",
+              "Waterhouse"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.4324/9781003132684-2",
+            "source_url": "https://doi.org/10.4324/9781003132684-2",
+            "title_similarity": 0.25333333333333335
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Researching Langfield",
+            "authors": [
+              "Tour",
+              "Creely",
+              "Waterhouse"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.4324/9781003132684-3",
+            "source_url": "https://doi.org/10.4324/9781003132684-3",
+            "title_similarity": 0.1651376146788991
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Enabling leadership for effective practice",
+            "authors": [
+              "Tour",
+              "Creely",
+              "Waterhouse"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.4324/9781003132684-7",
+            "source_url": "https://doi.org/10.4324/9781003132684-7",
+            "title_similarity": 0.2923076923076923
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:31.291953Z",
+        "response_sha256": "6f2c026dfd15320d167a08ac623b1f5b71144770d7ff89f997d7b943c5c284b9",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+tour+of+modern+image+filtering%3A+New+insights+and+methods%2C+both+practical+and+theoretical&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.294460Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An empirical Bayes estimator of the mean of a normal population",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+empirical+Bayes+estimator+of+the+mean+of+a+normal+population&rows=5",
+        "checked_at": "2026-10-09T04:41:33.353651Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:33.353604Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+empirical+Bayes+estimator+of+the+mean+of+a+normal+population&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.353651Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust and interpretable blind image denoising via bias-free convolutional neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+and+interpretable+blind+image+denoising+via+bias-free+convolutional+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:31.101480Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Machine learning and interpretable convolutional networks for supervised and unsupervised image denoising with application to satellite imagery",
+            "authors": [
+              "Herbreteau"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/0040bfaez813ez4b1dza992z8c64f7cb0aa1",
+            "source_url": "https://doi.org/10.70675/0040bfaez813ez4b1dza992z8c64f7cb0aa1",
+            "title_similarity": 0.463519313304721
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Noise Removal from the Image Using Convolutional Neural Networks-Based Denoising Auto Encoder",
+            "authors": [
+              "FAROOQ",
+              "SAVAŞ"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.57020/ject.1390428",
+            "source_url": "https://doi.org/10.57020/ject.1390428",
+            "title_similarity": 0.4918032786885246
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Deep Learning-based Image Denoising for Enhanced Image Quality using Convolutional Neural Networks",
+            "authors": [
+              "nsim"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31219/osf.io/vy9zk",
+            "source_url": "https://doi.org/10.31219/osf.io/vy9zk",
+            "title_similarity": 0.6276595744680851
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Image Denoising with Convolutional Neural Networks: A Promising Approach for Better Image Quality",
+            "authors": [
+              "nsim"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31219/osf.io/ra8sf",
+            "source_url": "https://doi.org/10.31219/osf.io/ra8sf",
+            "title_similarity": 0.5053763440860215
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Robust and interpretable tabular data classification via multi-channel image conversion and channel-wise gating",
+            "authors": [
+              "Wang",
+              "Zheng",
+              "Liu"
+            ],
+            "year": 2027,
+            "years": [
+              2027
+            ],
+            "doi": "10.1016/j.neunet.2026.109316",
+            "source_url": "https://doi.org/10.1016/j.neunet.2026.109316",
+            "title_similarity": 0.46766169154228854
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:12.142265Z",
+        "response_sha256": "4ff5d25eb4441982b99302b91dfb70e7eb873083da639cef04774772bbb9f091",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+and+interpretable+blind+image+denoising+via+bias-free+convolutional+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.101480Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Peyré and S",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Peyr%C3%A9+and+S&rows=5",
+        "checked_at": "2026-10-09T04:41:32.920316Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fontaine-les-Bassets",
+            "authors": [
+              "Quévillon"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.4000/adlfi.3737",
+            "source_url": "https://doi.org/10.4000/adlfi.3737",
+            "title_similarity": 0.25806451612903225
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Avant-propos",
+            "authors": [
+              "Taquet",
+              "Vénec-Peyré",
+              "Taquet",
+              "Vénec-Peyré"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1016/s1631-0683(02)00082-9",
+            "source_url": "https://doi.org/10.1016/s1631-0683(02)00082-9",
+            "title_similarity": 0.34782608695652173
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Un classique du roman de montagne : Joseph Peyré (1892-1968)",
+            "authors": [
+              "Peyré"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.4000/books.cths.11412",
+            "source_url": "https://doi.org/10.4000/books.cths.11412",
+            "title_similarity": 0.208955223880597
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Avant-propos",
+            "authors": [
+              "Taquet",
+              "Vénec-Peyré",
+              "Taquet",
+              "Vénec-Peyré"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1016/s1631-0683(02)00063-5",
+            "source_url": "https://doi.org/10.1016/s1631-0683(02)00063-5",
+            "title_similarity": 0.34782608695652173
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "L'enfant dans l'adoption",
+            "authors": [
+              "Peyré"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.3917/eres.lerun.2006.01.0061",
+            "source_url": "https://doi.org/10.3917/eres.lerun.2006.01.0061",
+            "title_similarity": 0.22857142857142856
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:32.919091Z",
+        "response_sha256": "d8628bc162a504a807e3e1ae37cd16ee8d4631e2625d49eaaf332378c58e54c1",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Peyr%C3%A9+and+S&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.920316Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-25",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An empirical bayes approach to statistics",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+empirical+bayes+approach+to+statistics&rows=5",
+        "checked_at": "2026-10-09T04:41:31.220790Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "AN EMPIRICAL BAYES APPROACH TO STATISTICS",
+            "authors": [
+              "Robbins"
+            ],
+            "year": 1956,
+            "years": [
+              1956
+            ],
+            "doi": "10.1525/9780520313880-015",
+            "source_url": "https://doi.org/10.1525/9780520313880-015",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An Empirical Bayes Approach to Statistics",
+            "authors": [
+              "Robbins"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/978-1-4612-0919-5_26",
+            "source_url": "https://doi.org/10.1007/978-1-4612-0919-5_26",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A General Approach to Nonparametric Empirical Bayes Estimation",
+            "authors": [
+              "Marianna"
+            ],
+            "year": 1997,
+            "years": [
+              1997,
+              2007
+            ],
+            "doi": "10.1080/02331889708802574",
+            "source_url": "https://doi.org/10.1080/02331889708802574",
+            "title_similarity": 0.46601941747572817
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "An Empirical Bayes Approach to Statistics",
+            "authors": [
+              "Robbins"
+            ],
+            "year": 1985,
+            "years": [
+              1985
+            ],
+            "doi": "10.1007/978-1-4612-5110-1_3",
+            "source_url": "https://doi.org/10.1007/978-1-4612-5110-1_3",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Robbins (1955) An Empirical Bayes Approach to Statistics",
+            "authors": [
+              "Good"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/978-1-4612-0919-5_25",
+            "source_url": "https://doi.org/10.1007/978-1-4612-0919-5_25",
+            "title_similarity": 0.7387387387387387
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:14.410502Z",
+        "response_sha256": "f75b83235fed96d1dd24030d5f3a1f232ee79530eb2a3fd04942b857755a2a56",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+empirical+bayes+approach+to+statistics&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.220790Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-27",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "U-net: Convolutional networks for biomedical image segmentation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=U-net%3A+Convolutional+networks+for+biomedical+image+segmentation&rows=5",
+        "checked_at": "2026-10-09T04:41:31.224213Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Invited Talk: U-Net Convolutional Networks for Biomedical Image Segmentation",
+            "authors": [
+              "Ronneberger"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1007/978-3-662-54345-0_3",
+            "source_url": "https://doi.org/10.1007/978-3-662-54345-0_3",
+            "title_similarity": 0.9051094890510949
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Eevou-Net: An Ensemble of Evolutionary Deep Fully Convolutional Neural Networks for Medical Image Segmentation",
+            "authors": [
+              "HassanZadeh",
+              "Essam",
+              "Sarker"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4108586",
+            "source_url": "https://doi.org/10.2139/ssrn.4108586",
+            "title_similarity": 0.6900584795321637
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "U-Net Convolutional Networks for Real-Time Biomedical Image Segmentation and Anomaly Detection",
+            "authors": [
+              "Murugesakumar",
+              "S",
+              "Arunmanikandan",
+              "Chithra",
+              "Dhasaranjan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iconstem65670.2025.11374860",
+            "source_url": "https://doi.org/10.1109/iconstem65670.2025.11374860",
+            "title_similarity": 0.7948717948717948
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "INet: Convolutional Networks for Biomedical Image Segmentation",
+            "authors": [
+              "Weng",
+              "Zhu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/access.2021.3053408",
+            "source_url": "https://doi.org/10.1109/access.2021.3053408",
+            "title_similarity": 0.975609756097561
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Automatic Transcription of Piano Music Based on Convolutional Neural Networks and Convolutional Networks for Biomedical Image Segmentation Model",
+            "authors": [
+              "Zhang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icicr65456.2025.00028",
+            "source_url": "https://doi.org/10.1109/icicr65456.2025.00028",
+            "title_similarity": 0.6019417475728155
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:13.529562Z",
+        "response_sha256": "c970ddd86469ce7ae352b5beac9704ede324afa0834caeaf495b00777be13cc1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=U-net%3A+Convolutional+networks+for+biomedical+image+segmentation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:31.224213Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep unsupervised learning using nonequilibrium thermodynamics",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+unsupervised+learning+using+nonequilibrium+thermodynamics&rows=5",
+        "checked_at": "2026-10-09T04:41:32.406294Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Video anomaly detection using unsupervised deep learning methods",
+            "authors": [
+              "Yan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10220/46011",
+            "source_url": "https://doi.org/10.32657/10220/46011",
+            "title_similarity": 0.5079365079365079
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Unsupervised satellite image time series analysis using deep learning techniques",
+            "authors": [
+              "Kalinicheva"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/534cbaa0z78ebz4febzb21czc5ffb3f074c8",
+            "source_url": "https://doi.org/10.70675/534cbaa0z78ebz4febzb21czc5ffb3f074c8",
+            "title_similarity": 0.38028169014084506
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Using the second law of thermodynamics",
+            "authors": [
+              "Demirel"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1016/b978-044450886-7/50006-0",
+            "source_url": "https://doi.org/10.1016/b978-044450886-7/50006-0",
+            "title_similarity": 0.48
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Nonequilibrium thermodynamics approaches",
+            "authors": [
+              "Demirel"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1016/b978-044450886-7/50013-8",
+            "source_url": "https://doi.org/10.1016/b978-044450886-7/50013-8",
+            "title_similarity": 0.5686274509803921
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Linear nonequilibrium thermodynamics",
+            "authors": [
+              "Demirel"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1016/b978-044450886-7/50003-5",
+            "source_url": "https://doi.org/10.1016/b978-044450886-7/50003-5",
+            "title_similarity": 0.6938775510204082
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:32.404899Z",
+        "response_sha256": "fb8062d76181f965055cea993cdc2862e76be368d1ffa69ba8cbcedb50fdb0ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+unsupervised+learning+using+nonequilibrium+thermodynamics&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.406294Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Generative modeling by estimating gradients of the data distribution",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Generative+modeling+by+estimating+gradients+of+the+data+distribution&rows=5",
+        "checked_at": "2026-10-09T04:41:32.632702Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Estimating Distribution of Cascaded Outages Using Observed Utility Data and Simulation Modeling",
+            "authors": [
+              "Das",
+              "Wang"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/naps52732.2021.9654745",
+            "source_url": "https://doi.org/10.1109/naps52732.2021.9654745",
+            "title_similarity": 0.2822085889570552
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Semantic-Constrained Generative Modeling for Health-Care Data Under Distribution Shift",
+            "authors": [
+              "Bassem El-Khaled",
+              "Fadul",
+              "Jillahi",
+              "Mahir"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202608.0884.v1",
+            "source_url": "https://doi.org/10.20944/preprints202608.0884.v1",
+            "title_similarity": 0.5714285714285714
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Estimating robustness and parameter distribution in compartmental models of neurons",
+            "authors": [
+              "Peled",
+              "Korngreen"
+            ],
+            "year": 2007,
+            "years": [
+              2007,
+              2012
+            ],
+            "doi": "10.1142/9789812709691_0007",
+            "source_url": "https://doi.org/10.1142/9789812709691_0007",
+            "title_similarity": 0.3841059602649007
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Estimating link flows from limited traffic volume and sparse trajectory data: generative modelling approaches",
+            "authors": [
+              "Zhong"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14264/65f129c",
+            "source_url": "https://doi.org/10.14264/65f129c",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Estimating the distribution of sensorimotor synchronization data: A Bayesian hierarchical modeling approach",
+            "authors": [
+              "Bååth"
+            ],
+            "year": 2015,
+            "years": [
+              2015,
+              2016
+            ],
+            "doi": "10.3758/s13428-015-0591-2",
+            "source_url": "https://doi.org/10.3758/s13428-015-0591-2",
+            "title_similarity": 0.3103448275862069
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:32.631322Z",
+        "response_sha256": "d0b63cf29fce6e50b2169a9df9a391862987fc3262f01252820df37e6afec673",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Generative+modeling+by+estimating+gradients+of+the+data+distribution&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.632702Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-31",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Maximum likelihood training of score-based diffusion models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Maximum+likelihood+training+of+score-based+diffusion+models&rows=5",
+        "checked_at": "2026-10-09T04:41:32.408282Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Pseudo-Maximum Likelihood Estimation in Two Classes of Semiparametric Diffusion Models",
+            "authors": [
+              "Kristensen"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.2139/ssrn.1476737",
+            "source_url": "https://doi.org/10.2139/ssrn.1476737",
+            "title_similarity": 0.6344827586206897
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Maximum likelihood based discriminative training of acoustic models",
+            "authors": [
+              "Nogueiras-Rodriguez",
+              "Marino"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.21437/eurospeech.1995-21",
+            "source_url": "https://doi.org/10.21437/eurospeech.1995-21",
+            "title_similarity": 0.6825396825396826
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Maximum Likelihood Estimation for Generalized Autoregressive Score Models",
+            "authors": [
+              "Blasques",
+              "Koopman",
+              "Lucas"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.2139/ssrn.2404276",
+            "source_url": "https://doi.org/10.2139/ssrn.2404276",
+            "title_similarity": 0.5606060606060606
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "MAXIMUM LIKELIHOOD AND MAXIMUM MUTUAL INFORMATION TRAINING OF CONTINUOUS DENSITY HIDDEN MARKOV MODELS - EXPERIMENTS ON THE E-SET",
+            "authors": [
+              "KAPADIA",
+              "VALTCHEV",
+              "YOUNG"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.25144/20951",
+            "source_url": "https://doi.org/10.25144/20951",
+            "title_similarity": 0.4972972972972973
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Maximum Likelihood Estimation of Continuous-time Diffusion Models for Exchange Rates",
+            "authors": [
+              "Choi",
+              "Lee"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.2139/ssrn.3577328",
+            "source_url": "https://doi.org/10.2139/ssrn.3577328",
+            "title_similarity": 0.6573426573426573
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:15.053551Z",
+        "response_sha256": "9bf6771b9faaca499f8a0c09956d5ed5e655afdb7494d2840bba4dbc0d221529",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Maximum+likelihood+training+of+score-based+diffusion+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.408282Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bayesian deep learning and a probabilistic perspective of generalization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bayesian+deep+learning+and+a+probabilistic+perspective+of+generalization&rows=5",
+        "checked_at": "2026-10-09T04:41:32.413126Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sparsity in deep learning : from the efficiency and generalization perspective",
+            "authors": [
+              "Zhou"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013248657603412",
+            "source_url": "https://doi.org/10.14711/thesis-991013248657603412",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Perspective on Deep Learning for Earth Sciences",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1142/9789811218842_0007",
+            "source_url": "https://doi.org/10.1142/9789811218842_0007",
+            "title_similarity": 0.42016806722689076
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Concluding Perspective",
+            "authors": [
+              "Peng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1201/9781003511601-6",
+            "source_url": "https://doi.org/10.1201/9781003511601-6",
+            "title_similarity": 0.375
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Learning: A Bayesian Perspective",
+            "authors": [
+              "Polson",
+              "Sokolov"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1214/17-ba1082",
+            "source_url": "https://doi.org/10.1214/17-ba1082",
+            "title_similarity": 0.5740740740740741
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bayesian Deep Learning and Probabilistic Forecasting of Stock Prices",
+            "authors": [
+              "Nelufhangani",
+              "Maposa"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3390/a19050391",
+            "source_url": "https://doi.org/10.3390/a19050391",
+            "title_similarity": 0.7285714285714285
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:17.187300Z",
+        "response_sha256": "bbe80ddb75f06b3c7a97897380ffde36ccb86f0f4cf405a8d6b77fe161d03c3d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bayesian+deep+learning+and+a+probabilistic+perspective+of+generalization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.413126Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Diffusion probabilistic models generalize when they fail to memorize",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Diffusion+probabilistic+models+generalize+when+they+fail+to+memorize&rows=5",
+        "checked_at": "2026-10-09T04:41:32.415161Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "How do flow matching models memorize and generalize in sample data subspaces",
+            "authors": [
+              "Gao",
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1038/s44387-026-00149-4",
+            "source_url": "https://doi.org/10.1038/s44387-026-00149-4",
+            "title_similarity": 0.3611111111111111
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hallucinate or Memorize? The Two Sides of Probabilistic Learning in Large Language Models",
+            "authors": [
+              "Niimi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014393300004052",
+            "source_url": "https://doi.org/10.5220/0014393300004052",
+            "title_similarity": 0.32051282051282054
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "When Transformers Fail to Generalize: A Cross-Dataset Study of Acute and Chronic Stroke Lesion Segmentation",
+            "authors": [
+              "Nobari Azar",
+              "Atalay"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/aicconf69182.2026.11600690",
+            "source_url": "https://doi.org/10.1109/aicconf69182.2026.11600690",
+            "title_similarity": 0.3218390804597701
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Memorize-Generalize: An online algorithm for learning higher-order sequential structure with cloned Hidden Markov Models",
+            "authors": [
+              "Rikhye",
+              "Guntupalli",
+              "Gothoskar",
+              "Lázaro-Gredilla",
+              "George"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1101/764456",
+            "source_url": "https://doi.org/10.1101/764456",
+            "title_similarity": 0.26737967914438504
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Memorize-Generalize: An online algorithm for learning higher-order sequential structure with cloned Hidden Markov Models",
+            "authors": [
+              "Rikhye",
+              "Guntupalli",
+              "Gothoskar",
+              "Lazaro-Gredilla",
+              "George"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.32470/ccn.2019.1407-0",
+            "source_url": "https://doi.org/10.32470/ccn.2019.1407-0",
+            "title_similarity": 0.26737967914438504
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:16.320514Z",
+        "response_sha256": "c703e965feb953a57f9bd540b8ae53fb325dabe933c2fd35c5b3466883125c60",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Diffusion+probabilistic+models+generalize+when+they+fail+to+memorize&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.415161Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "LSUN: Construction of a large-scale image dataset using deep learning with humans in the loop",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=LSUN%3A+Construction+of+a+large-scale+image+dataset+using+deep+learning+with+humans+in+the+loop&rows=5",
+        "checked_at": "2026-10-09T04:41:32.418253Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "LSUN-Stanford Car Dataset: Enhancing Large-Scale Car Image Datasets Using Deep Learning for Usage in GAN Training",
+            "authors": [
+              "Kramberger",
+              "Potočnik"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3390/app10144913",
+            "source_url": "https://doi.org/10.3390/app10144913",
+            "title_similarity": 0.6568627450980392
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "EMPIAR dataset",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.6019/empiar-10592",
+            "source_url": "https://doi.org/10.6019/empiar-10592",
+            "title_similarity": 0.20754716981132076
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "CEM500K, a large-scale heterogeneous unlabeled cellular electron microscopy image dataset for deep learning",
+            "authors": [
+              "Conrad",
+              "Narayan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7554/elife.65894",
+            "source_url": "https://doi.org/10.7554/elife.65894",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "CEM500K – A large-scale heterogeneous unlabeled cellular electron microscopy image dataset for deep learning",
+            "authors": [
+              "Conrad",
+              "Narayan"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1101/2020.12.11.421792",
+            "source_url": "https://doi.org/10.1101/2020.12.11.421792",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Author response: CEM500K, a large-scale heterogeneous unlabeled cellular electron microscopy image dataset for deep learning",
+            "authors": [
+              "Conrad",
+              "Narayan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7554/elife.65894.sa2",
+            "source_url": "https://doi.org/10.7554/elife.65894.sa2",
+            "title_similarity": 0.4485981308411215
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:17.159917Z",
+        "response_sha256": "d092b565c979bf37ea5a05b4b4e4965e407885d512b0ee8ccd03aca722e32bd8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=LSUN%3A+Construction+of+a+large-scale+image+dataset+using+deep+learning+with+humans+in+the+loop&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.418253Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_009_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_009_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_009_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The emergence of reproducibility and consistency in diffusion models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+emergence+of+reproducibility+and+consistency+in+diffusion+models&rows=5",
+        "checked_at": "2026-10-09T04:41:32.421176Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Improving Consistency in Diffusion Models for Image Super-Resolution_supp1-3719173.pdf",
+            "authors": [
+              "Yang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tmm.2026.3719173/mm1",
+            "source_url": "https://doi.org/10.1109/tmm.2026.3719173/mm1",
+            "title_similarity": 0.4935064935064935
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Accelerate Conditional Diffusion Via Consistency Models",
+            "authors": [
+              "Zhang",
+              "Lin",
+              "Zhou"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4850586",
+            "source_url": "https://doi.org/10.2139/ssrn.4850586",
+            "title_similarity": 0.45528455284552843
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Assessing Consistency and Reproducibility in the Outputs of Large Language Models: Evidence Across Diverse Finance and Accounting Tasks",
+            "authors": [
+              "Wang",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5189069",
+            "source_url": "https://doi.org/10.2139/ssrn.5189069",
+            "title_similarity": 0.33663366336633666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Accelerate Diffusion Based Human Image Generation Via Consistency Models",
+            "authors": [
+              "Zhang",
+              "Lin",
+              "Zhou"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4719919",
+            "source_url": "https://doi.org/10.2139/ssrn.4719919",
+            "title_similarity": 0.45714285714285713
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Enhancing Sketch Animation: Text-to-Video Diffusion Models with Temporal Consistency and Rigidity Constraints",
+            "authors": [
+              "Rai",
+              "Sharma"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013304800003912",
+            "source_url": "https://doi.org/10.5220/0013304800003912",
+            "title_similarity": 0.3522727272727273
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:18.630129Z",
+        "response_sha256": "b248c8c2757585d7d61f1a29072f7f5f033401226497571980bfc88200e3a00a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+emergence+of+reproducibility+and+consistency+in+diffusion+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:32.421176Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-signal-repo-3fe3c4210beb-4",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-3fe3c4210beb-4",
+        "repository_id": "repo-3fe3c4210beb",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4",
+        "source_title": "Preprocessing for the celebA dataset",
+        "source_excerpt": "Preprocessing for the celebA dataset\nHi, I'm trying to reproduce the result but don't seem to able to get the same training set and testing set as you do. I followed the other issue #3 and the provided code code/celebA_to_torch.py but got something that's a bit off:\r\n\r\nSpecifically, I downloaded img_align_celeba from the website and used their provided list_eval_partition.txt to separate training ",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:33.513912Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4#issuecomment-2342951571",
+            "excerpt": "Hi,\r\n\r\nI also tried running the pre-processing code on all 202,599 images, but after using the remove repeats function, I ended up with only 196,018 images of size 80x80, instead of the 198,650 images of 80x80 mentioned in your checkpoint. Could you clarify why this discrepancy occurs, or if there's a step I might have missed? Did the remove repeats function use 20X20 downsampled images (as writte",
+            "login": "chenzeno"
+          },
+          {
+            "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4#issuecomment-2343127461",
+            "excerpt": "I would like to jump in with a related problem. \r\nI noticed that in `Demo_UNet_CelebA80x80.ipynb` in the `Load datasets` (cell No. 5) the split is determined by the order of the images loaded (since `train = data[0:N]`, and `test = data[-N:]`.  \r\nSince the images were loaded in `celebA_to_torch.py:L17`>`dataloader_func.py:load_CelebA_dataset` by simply using `os.listdir`, the order of the loaded i",
+            "login": "HilaManor"
+          },
+          {
+            "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4#issuecomment-2353456823",
+            "excerpt": "> Hi, I'm trying to reproduce the result but don't seem to able to get the same training set and testing set as you do. I followed the other issue #3 and the provided code code/celebA_to_torch.py but got something that's a bit off:\r\n> \r\n> Specifically, I downloaded img_align_celeba from the website and used their provided list_eval_partition.txt to separate training and testing sets. There are 202",
+            "login": "Zahra-Kadkhodaie"
+          },
+          {
+            "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4#issuecomment-2353478887",
+            "excerpt": "> Hi,\r\n> \r\n> I also tried running the pre-processing code on all 202,599 images, but after using the remove repeats function, I ended up with only 196,018 images of size 80x80, instead of the 198,650 images of 80x80 mentioned in your checkpoint. Could you clarify why this discrepancy occurs, or if there's a step I might have missed? Did the remove repeats function use 20X20 downsampled images (as ",
+            "login": "Zahra-Kadkhodaie"
+          },
+          {
+            "source_url": "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4#issuecomment-2353481862",
+            "excerpt": "> I would like to jump in with a related problem. I noticed that in `Demo_UNet_CelebA80x80.ipynb` in the `Load datasets` (cell No. 5) the split is determined by the order of the images loaded (since `train = data[0:N]`, and `test = data[-N:]`. Since the images were loaded in `celebA_to_torch.py:L17`>`dataloader_func.py:load_CelebA_dataset` by simply using `os.listdir`, the order of the loaded imag",
+            "login": "Zahra-Kadkhodaie"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/LabForComputationalVision/memorization_generalization_in_diffusion_models/issues/4"
+      ],
+      "checked_at": "2026-10-09T04:41:33.513912Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.864864864864865
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 37,
+    "extracted_count": 37,
+    "parsed_count": 37,
+    "queried_count": 37,
+    "matched_count": 11,
+    "metadata_conflict_count": 2,
+    "unverified_count": 21,
+    "parse_failed_count": 0,
+    "not_checked_count": 0,
+    "query_failed_count": 3,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available"
+  ],
+  "created_at": "2026-10-09T06:14:41.421840Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

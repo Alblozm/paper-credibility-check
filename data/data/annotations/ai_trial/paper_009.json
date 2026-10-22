@@ -1,0 +1,357 @@
+{
+  "assessment_id": "assessment_ai_paper_009_openreview_2024_02_11",
+  "paper_version_id": "paper_009_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_009_openreview_2024_02_11",
+    "raw_output_sha256": "feb489275bfa44c341b344bbfca7123ce8ab576cd900d436c6713f35d8d5363f"
+  },
+  "paper_summary": "Deep neural networks (DNNs) trained for image denoising are able to generate high-quality samples with score-based reverse diffusion algorithms. These impressive capabilities seem to imply an escape from the curse of dimensionality, but recent reports of memorization of the training set raise the question of whether these networks are learning the \"true\" continuous density of the data.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Here, we show that two DNNs trained on non-overlapping subsets of a dataset learn nearly the same score function, and thus the same density, when the number of training images is large enough.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_009_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "We demonstrate that trained denoisers are inductively biased towards these geometry-adaptive harmonic bases since they arise not only when the network is trained on photographic images, but also when it is trained on image classes supported on low-dimensional manifolds for which the harmonic basis is suboptimal.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_009_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "Finally, we show that when trained on regular image classes for which the optimal basis is known to be geometry-adaptive and harmonic, the denoising performance of the networks is near-optimal.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_009_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Here, we show that two DNNs trained on non-overlapping subsets of a dataset learn nearly the same score function, and thus the same density, when the number of training images is large enough.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_009_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.4,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Generalization in diffusion models arises from geometry-adaptive harmonic representations》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.4/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Deep neural networks (DNNs) trained for imagedenoising are able to generatehighquality samples with score-based reverse diffusion algorithms. ",
+    "正文可定位证据支持该维度判断：G ENERALIZATION IN DIFFUSION MODELS ARISES FROM GEOMETRY - ADAPTIVE HARMONIC REPRESENTATIONS Zahra Kadkhodaie Florentin Guth Ctr. ",
+    "正文可定位证据支持该维度判断：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Generalization in diffusion models arises from geometry-adaptive harmonic representations》在研究价值方面的正文支持是：Deep neural networks (DNNs) trained for imagedenoising are able to generatehighquality samples with score-based reverse diffusion algorithms.  限制或边界证据是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Deep neural networks (DNNs) trained for imagedenoising are able to generatehighquality samples with score-based reverse diffusion algorithms. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_009_ev_001",
+        "paper_009_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Generalization in diffusion models arises from geometry-adaptive harmonic representations》在可靠性与证据方面的正文支持是：G ENERALIZATION IN DIFFUSION MODELS ARISES FROM GEOMETRY - ADAPTIVE HARMONIC REPRESENTATIONS Zahra Kadkhodaie Florentin Guth Ctr.  限制或边界证据是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：G ENERALIZATION IN DIFFUSION MODELS ARISES FROM GEOMETRY - ADAPTIVE HARMONIC REPRESENTATIONS Zahra Kadkhodaie Florentin Guth Ctr. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_009_ev_003",
+        "paper_009_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Generalization in diffusion models arises from geometry-adaptive harmonic representations》在原创性定位方面的正文支持是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance.  限制或边界证据是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_009_ev_002",
+        "paper_009_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Generalization in diffusion models arises from geometry-adaptive harmonic representations》在清晰度与可用性方面的正文支持是：Deep neural networks (DNNs) have demonstrated ever-more impressive capabilities for sampling from high-dimensional image densities, most recently through the development of diffusion methods.  限制或边界证据是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Deep neural networks (DNNs) have demonstrated ever-more impressive capabilities for sampling from high-dimensional image densities, most recently through the development of diffusion methods. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_009_ev_004",
+        "paper_009_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Generalization in diffusion models arises from geometry-adaptive harmonic representations》在可复现性与透明度方面的正文支持是：Shuffled Clean Noisy Denoised non-shuffled 14 2.5 identity 12 2.0 R 35 5 =1.182 17 =1.07 29 =0.974 41 =0.91 53 =0.87 e k 10 1.5 y ) N S P x , 8 ( k t u 6 1.0 p t u 22 4 o 0.5 0 0.0 0 1000 2000 3000 4000 5000 6000 10 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 k input PSNR Figure 21… 限制或边界证据是：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Shuffled Clean Noisy Denoised non-shuffled 14 2.5 identity 12 2.0 R 35 5 =1.182 17 =1.07 29 =0.974 41 =0.91 53 =0.87 e k 10 1.5 y ) N S P x , 8 ( k t u 6 1.0 p t u 22 4 o 0.5 0 0.0 0 1000 2000 3000 4000 5000 6000 10 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 k input PSNR Figure 21…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：C.1 M ORE C α EXAMPLES Figure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_009_ev_005",
+        "paper_009_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_009_ev_001",
+      "page_number": 1,
+      "section_id": "paper_009_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_009_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Deep neural networks (DNNs) trained for imagedenoising are able to generatehighquality samples with score-based reverse diffusion algorithms. These impressive capabilities seem to imply an escape from the curse of dimensionality, but recent reports of memorization of the training set raise the question of whether these networks are learning the “true” continuous density of the data. Here, we show that two DNNs trained on non-overlapping subsets of a dataset learn nearly the same score function, and thus the same density, when the number of training images is large enough. In this regime of strong generalization, diffusion-generated images are distinct from the training set, and are of high visual quality, suggesting that the inductive biases of the DNNs are well-aligned with the data density. We analyze the learned denoising functions and show that the inductive biases give rise to a shr",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "page_number": 18,
+      "section_id": "paper_009_openreview_2024_02_11_sec_c",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_009_openreview_2024_02_11_chunk_0027",
+      "evidence_mode": "quote",
+      "excerpt": "C.1 M ORE C α EXAMPLES\n\nFigure16: BF-CNNdenoiserstrainedon C α imagesofsize 40 × 40 achievenear-optimalperformance. Top. PSNR curves of trained networks for various regularity levels α . The empirical slopes achieved for different values of α closely match the optimal slopes (dashed lines). Bottom. Eigenvectors for two C α images (top row: α = 4 , bottom row: α = 2 ), which consist of harmonics on the two regions and harmonics along the boundary. The frequency of the harmonics increases with k . For less regular images, the harmonics are more localized along the contours.\n\nFigure 17: Geometric-adaptive harmonic basis shown for three test images from C α class. Here the regularity of the one-dimensional contours α is different from the regularity of the two-dimensional background α . Top. Three example images. The regularity of the contour increases from left to right: α = 1 . 5 , 2 , 4 .",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_009_ev_003",
+      "page_number": 1,
+      "section_id": "paper_009_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_009_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "G ENERALIZATION IN DIFFUSION MODELS ARISES FROM GEOMETRY - ADAPTIVE HARMONIC REPRESENTATIONS\n\nZahra Kadkhodaie Florentin Guth Ctr. for Data Science, New York University Ctr. for Data Science, New York University zk388@nyu.edu Flatiron Institute, Simons Foundation florentin.guth@nyu.edu\n\nEero P. Simoncelli Stéphane Mallat New York University Collège de France Flatiron Institute, Simons Foundation Flatiron Institute, Simons Foundation eero.simoncelli@nyu.edu stephane.mallat@ens.fr",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_009_ev_004",
+      "page_number": 1,
+      "section_id": "paper_009_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_009_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Deep neural networks (DNNs) have demonstrated ever-more impressive capabilities for sampling from high-dimensional image densities, most recently through the development of diffusion methods. These methods operate by training a denoiser, which provides an estimate of the score (the gradient of the log of the noisy image distribution). The score is then used to sample from the corresponding estimated density, using an iterative reverse diffusion procedure (Sohl-Dickstein et al., 2015; Song & Ermon, 2019; Ho et al., 2020; Kadkhodaie & Simoncelli, 2020). However, approximating a continuous density in a high-dimensional space is notoriously difficult: do these networks actually achieve this feat, learning from a relatively small training set to generate high-quality samples, in apparent defiance of the curse of dimensionality? If so, this must be due to their inductive biases, that is, the r",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_009_ev_005",
+      "page_number": 20,
+      "section_id": "paper_009_openreview_2024_02_11_sec_c_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_009_openreview_2024_02_11_chunk_0029",
+      "evidence_mode": "quote",
+      "excerpt": "Shuffled Clean Noisy Denoised non-shuffled 14 2.5 identity 12 2.0 R 35 5 =1.182 17 =1.07 29 =0.974 41 =0.91 53 =0.87 e k 10 1.5 y ) N S P x , 8 ( k t u 6 1.0 p t u 22 4 o 0.5\n\n0 0.0 0 1000 2000 3000 4000 5000 6000 10 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 k input PSNR\n\nFigure 21: DNN denoiser trained on a dataset of shuffled faces obtained by permuting the pixels of 10 5 face images in the CelebA dataset. The permutation was chosen randomly, and does not preserve locality, as neighboring pixels are mapped to independent positions. By construction, the optimal denoiser on shuffled faces has the same performance as the optimal denoiser on ordinary faces (unshuffling the image pixels, optimally denoising the face image, and then shuffling the pixels back). For visualization purposes, we “unshuffle” the pixels by applying the inverse of the permutation to the images before display. Top lef",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_009_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_009_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_009_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_009_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_009_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_009_ev_005"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_009_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_009_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_009_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_009_ev_005"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

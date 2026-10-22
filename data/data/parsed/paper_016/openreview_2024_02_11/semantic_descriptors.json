@@ -1,0 +1,72 @@
+[
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_001",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "research_problem",
+    "descriptor_type": "problem_statement",
+    "text": "Acquiring an accurate world model $\\textit{online}$ for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs). From the online learning perspective, a Follow-The-Leader (FTL) world model is desirable, which optimally fits all previous experiences at each round.",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_002",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "To best trade off model capacity and computation efficiency, we introduce a locality sensitive sparse encoding, which allows us to conduct efficient sparse updates even with very high dimensional nonlinear features.",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_003",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "claims",
+    "descriptor_type": "major_claim",
+    "text": "Unfortunately, NN-based models need re-training on all accumulated data at every interaction step to achieve FTL, which is computationally expensive for lifelong agents.",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0013",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_004",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "method",
+    "descriptor_type": "metho_summary",
+    "text": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在研究价值方面的正文支持是：Acquiring an accurate world model online for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs).  限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_005",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "evaluation",
+    "descriptor_type": "evaluatio_summary",
+    "text": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在可靠性与证据方面的正文支持是：We provide more implementation details of Losse-FTL in this section. Referring to Figure 3, the input x is first pre-processed to be bounded between [ 3 , 3] , and then projected with a matrix t − 2 https://github.com/jannerm/mbpo containing values sampled from an isotropic Gaus… 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0031",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_006",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "reliability_checks",
+    "descriptor_type": "reliability_check_summary",
+    "text": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在可复现性与透明度方面的正文支持是：81 def update( 82 self, 83 params: LosseParams, 84 x: jax.Array, 85 y: jax.Array, 86 ) -> LosseParams: 87 chex.assert_tree_shape_prefix((x, y), (1,)) # assert non-batched 88 indices, values = self._indices_and_values(params.projection, x) 89 params = self._update_memory(params,… 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0032",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_016_openreview_2024_02_11_descriptor_007",
+    "paper_version_id": "paper_016_openreview_2024_02_11",
+    "descriptor_group": "limitations",
+    "descriptor_type": "boundary_or_gap",
+    "text": "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+    "evidence_chunk_id": "paper_016_openreview_2024_02_11_chunk_0019",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  }
+]

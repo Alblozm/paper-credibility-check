@@ -1,0 +1,4891 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-dea06ca2fc590b15",
+  "paper_version_id": "paper_020_openreview_2024_02_11",
+  "pdf_sha256": "99f71a06c1db95c33f8704072d3337ab2e120799d898de86f41f0522ae4203a4",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "e8e25f5d133ea0c4384988a422193041645baa62a3eecc64732df2003f2bea5b",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.051282051282051,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.153846153846154,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 78,
+        "extracted_count": 78,
+        "parsed_count": 61,
+        "queried_count": 61,
+        "matched_count": 7,
+        "metadata_conflict_count": 2,
+        "unverified_count": 33,
+        "parse_failed_count": 17,
+        "not_checked_count": 0,
+        "query_failed_count": 19,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=7vVWiCrFnd",
+            "checked_at": "2026-10-09T04:46:07.433146Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Expressive power of invariant and equivariant graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Expressive+power+of+invariant+and+equivariant+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:46.329912Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The Expressive Power of Graph Neural Networks",
+            "authors": [
+              "Li",
+              "Leskovec"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1007/978-981-16-6054-2_5",
+            "source_url": "https://doi.org/10.1007/978-981-16-6054-2_5",
+            "title_similarity": 0.7321428571428571
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Equivariant Graph Neural Networks for Toxicity Prediction",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.chemrestox.3c00032.s001",
+            "source_url": "https://doi.org/10.1021/acs.chemrestox.3c00032.s001",
+            "title_similarity": 0.532258064516129
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "On the theoretical expressive power of graph transformers for solving graph problems",
+            "authors": [
+              "Nikolentzos",
+              "Kelesis",
+              "Vazirgiannis"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108112",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108112",
+            "title_similarity": 0.4105960264900662
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Crystallographic point group equivariant graph neural networks",
+            "authors": [
+              "Heilman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20868122",
+            "source_url": "https://doi.org/10.17760/d20868122",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Small molecule protonation using graph equivariant neural networks",
+            "authors": [
+              "Schapin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1021/scimeetings.3c10160",
+            "source_url": "https://doi.org/10.1021/scimeetings.3c10160",
+            "title_similarity": 0.556390977443609
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:46.327430Z",
+        "response_sha256": "634cfccd2ba1d64d5fc29a312c6ec92414b7a5ee482a5cc8b95b4b5001129e86",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Expressive+power+of+invariant+and+equivariant+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:46.329912Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Zico Kolter, and Vladlen Koltun",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Zico+Kolter%2C+and+Vladlen+Koltun&rows=5",
+        "checked_at": "2026-10-09T04:45:46.370650Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Optimal Planning and Learning in Uncertain Environments for the Management of Wind Farms",
+            "authors": [
+              "Memarzadeh",
+              "Pozzi",
+              "Zico Kolter"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1061/(asce)cp.1943-5487.0000390",
+            "source_url": "https://doi.org/10.1061/(asce)cp.1943-5487.0000390",
+            "title_similarity": 0.23728813559322035
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Automated Generation of Modular PLC Control Software from P&amp;ID Diagrams in Process Industry",
+            "authors": [
+              "Koltun",
+              "Kolter",
+              "Vogel-Heuser"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1109/syseng.2018.8544401",
+            "source_url": "https://doi.org/10.1109/syseng.2018.8544401",
+            "title_similarity": 0.208
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Stanford LittleDog: A learning and rapid replanning approach to quadruped locomotion",
+            "authors": [
+              "Zico Kolter",
+              "Ng"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1177/0278364910390537",
+            "source_url": "https://doi.org/10.1177/0278364910390537",
+            "title_similarity": 0.27350427350427353
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "FizzClean Toilet Cleaning Foam Germany",
+            "authors": [
+              "Zico"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.y1xc0mpw.1",
+            "source_url": "https://doi.org/10.55277/researchhub.y1xc0mpw.1",
+            "title_similarity": 0.2647058823529412
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "['ASSISTIR'] Zico, Zuzubalândia O Filme [.FilmeCompleto.] Dublado Em Portuguêse",
+            "authors": [
+              "hs"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.kgjwuort.1",
+            "source_url": "https://doi.org/10.55277/researchhub.kgjwuort.1",
+            "title_similarity": 0.34
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:46.369104Z",
+        "response_sha256": "255ce85c07dcfd44f84c0293471ce9d41abcfd14fbd156695588bdc10cb2f9a8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Zico+Kolter%2C+and+Vladlen+Koltun&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:46.370650Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reutter, and Maksimilian Ryschkov",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reutter%2C+and+Maksimilian+Ryschkov&rows=5",
+        "checked_at": "2026-10-09T04:45:48.370016Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:48.369990Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reutter%2C+and+Maksimilian+Ryschkov&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:48.370016Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-4",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-5",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Balamurugan, Michael M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Balamurugan%2C+Michael+M&rows=5",
+        "checked_at": "2026-10-09T04:45:46.534452Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Three-Dimensional Finite Element Analysis of the End-Milling Process in Machining AISI 1045 Steel",
+            "authors": [
+              "Sivaprakash",
+              "Sugumar",
+              "Balamurugan",
+              "Michael Thomas Rex"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3390/engproc2025093018",
+            "source_url": "https://doi.org/10.3390/engproc2025093018",
+            "title_similarity": 0.22033898305084745
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Michael-Type Addition to 2-Nitrogalactal - A Simple Method to Access 1,1-Linked Oligosaccharides",
+            "authors": [
+              "Schmidt",
+              "Balamurugan",
+              "Pachamuthu"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1055/s-2004-836059",
+            "source_url": "https://doi.org/10.1055/s-2004-836059",
+            "title_similarity": 0.1565217391304348
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Michael‐Type Addition to 2‐Nitrogalactal — A Simple Method to Access 1,1‐Linked Oligosaccharides.",
+            "authors": [
+              "Balamurugan",
+              "Pachamuthu",
+              "Schmidt"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1002/chin.200522195",
+            "source_url": "https://doi.org/10.1002/chin.200522195",
+            "title_similarity": 0.1565217391304348
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "In situ formed acetals facilitated direct Michael addition of unactivated ketones",
+            "authors": [
+              "Koppolu",
+              "Balamurugan"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1039/c6nj02954j",
+            "source_url": "https://doi.org/10.1039/c6nj02954j",
+            "title_similarity": 0.2549019607843137
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Optimizing Recommendation Systems : A Hybrid Approach for Improved Accuracy",
+            "authors": [
+              "B",
+              "Balamurugan",
+              "Balamurugan",
+              "Balamurugan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icici62254.2024.00084",
+            "source_url": "https://doi.org/10.1109/icici62254.2024.00084",
+            "title_similarity": 0.1702127659574468
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:46.532261Z",
+        "response_sha256": "b9cdddaed180e6d80e4980802aade2b91281f96f66b09ddaa3900bdd1b6e7a29",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Balamurugan%2C+Michael+M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:46.534452Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-7",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-8",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-9",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bronstein",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bronstein&rows=5",
+        "checked_at": "2026-10-09T04:45:48.369628Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:48.369566Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bronstein&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:48.369628Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Spectral networks and locally connected networks on graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Spectral+networks+and+locally+connected+networks+on+graphs&rows=5",
+        "checked_at": "2026-10-09T04:45:48.193996Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Partially Connected Locally Recurrent Probabilistic Neural Networks",
+            "authors": [
+              "D.",
+              "E.",
+              "N.",
+              "D."
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.5772/5552",
+            "source_url": "https://doi.org/10.5772/5552",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Locally connected graphs",
+            "authors": [
+              "Chartrand",
+              "Pippert"
+            ],
+            "year": 1974,
+            "years": [
+              1974,
+              2008
+            ],
+            "doi": "10.21136/cpm.1974.117838",
+            "source_url": "https://doi.org/10.21136/cpm.1974.117838",
+            "title_similarity": 0.5853658536585366
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Locally connected oscillatory networks acting as fully connected oscillatory networks",
+            "authors": [
+              "Corinto",
+              "Gilli",
+              "Roska"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1109/iscas.2010.5537187",
+            "source_url": "https://doi.org/10.1109/iscas.2010.5537187",
+            "title_similarity": 0.44755244755244755
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Connected Components in General Inhomogeneous Random Graphs",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1017/9781316795552.004",
+            "source_url": "https://doi.org/10.1017/9781316795552.004",
+            "title_similarity": 0.41025641025641024
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Graphs",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1017/cbo9780511761942.003",
+            "source_url": "https://doi.org/10.1017/cbo9780511761942.003",
+            "title_similarity": 0.1875
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:48.192373Z",
+        "response_sha256": "df72282cd6b1926e9159e03a532ca377d3caf485999db8cd896186a80e748b20",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Spectral+networks+and+locally+connected+networks+on+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:48.193996Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-11",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An optimal lower bound on the number of variables for graph identification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+optimal+lower+bound+on+the+number+of+variables+for+graph+identification&rows=5",
+        "checked_at": "2026-10-09T04:45:47.522356Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "An optimal lower bound on the number of variables for graph identification",
+            "authors": [
+              "Cai",
+              "Furer",
+              "Immerman"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1109/sfcs.1989.63543",
+            "source_url": "https://doi.org/10.1109/sfcs.1989.63543",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An optimal lower bound on the number of variables for graph identification",
+            "authors": [
+              "Cai",
+              "F�rer",
+              "Immerman"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/bf01305232",
+            "source_url": "https://doi.org/10.1007/bf01305232",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A lower bound for the crossing number ofCm � Cn",
+            "authors": [
+              "Salazar"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1002/1097-0118(200011)35:3<222::aid-jgt7>3.0.co;2-e",
+            "source_url": "https://doi.org/10.1002/1097-0118(200011)35:3<222::aid-jgt7>3.0.co;2-e",
+            "title_similarity": 0.5210084033613446
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Lower bound on the domination number of a tree",
+            "authors": [
+              "Lemańska"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.7151/dmgt.1222",
+            "source_url": "https://doi.org/10.7151/dmgt.1222",
+            "title_similarity": 0.55
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A lower bound on the independence number of arbitrary hypergraphs",
+            "authors": [
+              "Thiele"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.1002/(sici)1097-0118(199903)30:3<213::aid-jgt6>3.3.co;2-h",
+            "source_url": "https://doi.org/10.1002/(sici)1097-0118(199903)30:3<213::aid-jgt6>3.3.co;2-h",
+            "title_similarity": 0.60431654676259
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:47.520972Z",
+        "response_sha256": "975c64ecfae14375c532f2edd78659fb4dcffea4e0638dc6f68047c852634b16",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+optimal+lower+bound+on+the+number+of+variables+for+graph+identification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:47.522356Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-12",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An optimal lower bound on the number of variables for graph identification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+optimal+lower+bound+on+the+number+of+variables+for+graph+identification&rows=5",
+        "checked_at": "2026-10-09T04:45:49.392075Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:49.392005Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+optimal+lower+bound+on+the+number+of+variables+for+graph+identification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:49.392075Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graph neural networks for link prediction with subgraph sketching",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graph+neural+networks+for+link+prediction+with+subgraph+sketching&rows=5",
+        "checked_at": "2026-10-09T04:45:49.759466Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dual-branch subgraph-pattern attention graph neural network for link prediction",
+            "authors": [
+              "Ouyang",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1117/12.3049976",
+            "source_url": "https://doi.org/10.1117/12.3049976",
+            "title_similarity": 0.5555555555555556
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Enhancing drug repurposing through graph neural networks and link prediction",
+            "authors": [
+              "Prieto Santamaría",
+              "Ayuso-Muñoz",
+              "Rodríguez-González"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.58647/rexpo.23000022.v1",
+            "source_url": "https://doi.org/10.58647/rexpo.23000022.v1",
+            "title_similarity": 0.5390070921985816
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Graph Neural Networks: Link Prediction",
+            "authors": [
+              "Zhang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1007/978-981-16-6054-2_10",
+            "source_url": "https://doi.org/10.1007/978-981-16-6054-2_10",
+            "title_similarity": 0.7254901960784313
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Subgraph Sampling and Common Neighbors Fusion-based Graph Neural Networks for Link Prediction",
+            "authors": [
+              "Zhang",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/cvidl62147.2024.10604254",
+            "source_url": "https://doi.org/10.1109/cvidl62147.2024.10604254",
+            "title_similarity": 0.5189873417721519
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Anonymous reweighted subgraph sampling-based graph neural networks for link prediction",
+            "authors": [
+              "Zhang",
+              "Han",
+              "Wang",
+              "Huang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.chaos.2025.117693",
+            "source_url": "https://doi.org/10.1016/j.chaos.2025.117693",
+            "title_similarity": 0.543046357615894
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:49.757611Z",
+        "response_sha256": "5435d7699e70fa6b303a1a2fa9c908933dc541a504d3c5f354205564f71f3f7b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graph+neural+networks+for+link+prediction+with+subgraph+sketching&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:49.759466Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-14",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Can graph neural networks count substructures? ArXiv , abs/2002.04025, 2020b",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Can+graph+neural+networks+count+substructures%3F+ArXiv+%2C+abs%2F2002.04025%2C+2020b&rows=5",
+        "checked_at": "2026-10-09T04:45:49.144059Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Can Graph Neural Networks Understand Chemical Elements?",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.6c00384.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.6c00384.s001",
+            "title_similarity": 0.5238095238095238
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "SHAP-Guided Graph Neural Networks for Hepatotoxicity Prediction Using Molecular Substructures and Cytotoxicity Profiles",
+            "authors": [
+              "Mansour",
+              "Saeed"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.51847/tfwercxy9u",
+            "source_url": "https://doi.org/10.51847/tfwercxy9u",
+            "title_similarity": 0.5026178010471204
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Can Graph Neural Networks Tackle Heterophily? Yes, With a Label-Guided Graph Rewiring Approach!_supp1-3565108.pdf",
+            "authors": [
+              "Das"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tnnls.2025.3565108/mm1",
+            "source_url": "https://doi.org/10.1109/tnnls.2025.3565108/mm1",
+            "title_similarity": 0.4371584699453552
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review of Bidirected Graph Neural Networks and Multidirected Graph Neural Networks",
+            "authors": [
+              "Fujita"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.174889082.28798268/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.174889082.28798268/v1",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review of Bidirected Graph Neural Networks and Multidirected Graph Neural Networks",
+            "authors": [
+              "Fujita"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.174889082.28798268/v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.174889082.28798268/v2",
+            "title_similarity": 0.42857142857142855
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:49.142413Z",
+        "response_sha256": "35f9ebcafcf451b88c990bb8b6ff61eb21f32ded1aaa336e1171d28f2fce5dbe",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Can+graph+neural+networks+count+substructures%3F+ArXiv+%2C+abs%2F2002.04025%2C+2020b&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:49.144059Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Markov fields on finite graphs and lattices",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Markov+fields+on+finite+graphs+and+lattices&rows=5",
+        "checked_at": "2026-10-09T04:45:49.421991Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "III. Finite lattices",
+            "authors": [
+              "Kindermann",
+              "Snell"
+            ],
+            "year": 1980,
+            "years": [
+              1980
+            ],
+            "doi": "10.1090/conm/001/03",
+            "source_url": "https://doi.org/10.1090/conm/001/03",
+            "title_similarity": 0.5483870967741935
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Lattices from elliptic curves over finite fields",
+            "authors": [
+              "Fukshansky",
+              "Maharaj"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1016/j.ffa.2014.01.007",
+            "source_url": "https://doi.org/10.1016/j.ffa.2014.01.007",
+            "title_similarity": 0.37362637362637363
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "On the lattices from elliptic curves over finite fields",
+            "authors": [
+              "Sha"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1016/j.ffa.2014.10.004",
+            "source_url": "https://doi.org/10.1016/j.ffa.2014.10.004",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Markov Random Fields on Undirected Graphs",
+            "authors": [
+              "Grenander",
+              "Miller"
+            ],
+            "year": 2006,
+            "years": [
+              2006,
+              2020
+            ],
+            "doi": "10.1093/oso/9780198505709.003.0005",
+            "source_url": "https://doi.org/10.1093/oso/9780198505709.003.0005",
+            "title_similarity": 0.6428571428571429
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Model selection for discrete Markov random fields on graphs",
+            "authors": [
+              "Frondana"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/t.45.2018.tde-02022018-151123",
+            "source_url": "https://doi.org/10.11606/t.45.2018.tde-02022018-151123",
+            "title_similarity": 0.45098039215686275
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:49.420760Z",
+        "response_sha256": "361d681a1f326a4ad0cab69a0d5341894a4c6c7dfa9cd47ce34f7789cab60619",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Markov+fields+on+finite+graphs+and+lattices&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:49.421991Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reconstruction for powerful graph representations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reconstruction+for+powerful+graph+representations&rows=5",
+        "checked_at": "2026-10-09T04:45:50.398265Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graphical Regular Representations and Pseudosimilarity",
+            "authors": [],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.1017/cbo9781316669846.007",
+            "source_url": "https://doi.org/10.1017/cbo9781316669846.007",
+            "title_similarity": 0.4077669902912621
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Real numbers in graph representations",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1090/fim/019/05",
+            "source_url": "https://doi.org/10.1090/fim/019/05",
+            "title_similarity": 0.6511627906976745
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Some Results on Graph Representations and Graph Colorings",
+            "authors": [
+              "Heissan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.23860/diss-heissan-arlene-2013",
+            "source_url": "https://doi.org/10.23860/diss-heissan-arlene-2013",
+            "title_similarity": 0.49056603773584906
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Graph Signal Representations",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781108552349.008",
+            "source_url": "https://doi.org/10.1017/9781108552349.008",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Enhancing Molecular Representations Via Graph Transformation Layers",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c00059.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c00059.s001",
+            "title_similarity": 0.3620689655172414
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:50.396580Z",
+        "response_sha256": "7007da792f31d89bafb75a5452a8b5b6d0e68177e57d89e032b624f3d001f8ab",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reconstruction+for+powerful+graph+representations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:50.398265Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Discriminative embeddings of latent variable models for structured data",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Discriminative+embeddings+of+latent+variable+models+for+structured+data&rows=5",
+        "checked_at": "2026-10-09T04:45:52.052545Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:52.052470Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Discriminative+embeddings+of+latent+variable+models+for+structured+data&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.052545Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bronstein, and Haggai Maron",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bronstein%2C+and+Haggai+Maron&rows=5",
+        "checked_at": "2026-10-09T04:45:52.287260Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:52.287205Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bronstein%2C+and+Haggai+Maron&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.287260Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reutter",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reutter&rows=5",
+        "checked_at": "2026-10-09T04:45:50.265617Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Reutter, Hermann (opera)",
+            "authors": [
+              "Levi"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.o004335",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.o004335",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reutter, Stephan",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00151494",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00151494",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Reutter, Georg (i)",
+            "authors": [
+              "Badura-Skoda"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.23277",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.23277",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Reutter, Hermann",
+            "authors": [
+              "Riethmüller"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.23279",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.23279",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reutter,  Familie",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1553/0x0001df15",
+            "source_url": "https://doi.org/10.1553/0x0001df15",
+            "title_similarity": 0.6363636363636364
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:50.262960Z",
+        "response_sha256": "2b8008096a289a51899af81a7a447a93e993c4191be8120370e607c89f928983",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reutter&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:50.265617Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-22",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pebble games and linear equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pebble+games+and+linear+equations&rows=5",
+        "checked_at": "2026-10-09T04:45:51.332531Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "PEBBLE GAMES AND LINEAR EQUATIONS",
+            "authors": [
+              "GROHE",
+              "OTTO"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1017/jsl.2015.28",
+            "source_url": "https://doi.org/10.1017/jsl.2015.28",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On a class of linear pursuit games",
+            "authors": [
+              "Matsumoto",
+              "Shimemura"
+            ],
+            "year": 1972,
+            "years": [
+              1972
+            ],
+            "doi": "10.1016/0022-0396(72)90044-7",
+            "source_url": "https://doi.org/10.1016/0022-0396(72)90044-7",
+            "title_similarity": 0.417910447761194
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Riccati equations in disturbed linear quadratic differential games",
+            "authors": [
+              "Jank",
+              "Kun"
+            ],
+            "year": 1999,
+            "years": [
+              1999
+            ],
+            "doi": "10.23919/ecc.1999.7099870",
+            "source_url": "https://doi.org/10.23919/ecc.1999.7099870",
+            "title_similarity": 0.24242424242424243
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Mean-field linear-quadratic stochastic differential games",
+            "authors": [
+              "Sun",
+              "Wang",
+              "Wu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.jde.2021.06.004",
+            "source_url": "https://doi.org/10.1016/j.jde.2021.06.004",
+            "title_similarity": 0.4666666666666667
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Linear-quadratic extended mean field games with common noises",
+            "authors": [
+              "Hua",
+              "Luo"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.jde.2024.07.038",
+            "source_url": "https://doi.org/10.1016/j.jde.2024.07.038",
+            "title_similarity": 0.2765957446808511
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:51.331110Z",
+        "response_sha256": "e47f84b99de14fd735e52dd26985af645fde97e1dd84e3ed4094998e9a0c4b5d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pebble+games+and+linear+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:51.332531Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Implicit graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Implicit+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:51.585341Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Implicit graph neural networks with flexible propagation operators",
+            "authors": [
+              "Pi",
+              "Huang",
+              "Shi",
+              "Chen",
+              "Wang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108143",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108143",
+            "title_similarity": 0.625
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph contrastive learning with implicit augmentations",
+            "authors": [
+              "Liang",
+              "Du",
+              "Zhu",
+              "Ma",
+              "Chen",
+              "Gao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.neunet.2023.04.001",
+            "source_url": "https://doi.org/10.1016/j.neunet.2023.04.001",
+            "title_similarity": 0.30952380952380953
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "IGNN-Solver: A Graph Neural Solver for Implicit Graph Neural Networks_supp1-3729092.pdf",
+            "authors": [
+              "Ling"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2026.3729092/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2026.3729092/mm1",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Implicit Graph Neural Networks with Flexible Propagation Operators",
+            "authors": [
+              "Pi",
+              "Huang",
+              "Shi",
+              "Chen",
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5291140",
+            "source_url": "https://doi.org/10.2139/ssrn.5291140",
+            "title_similarity": 0.625
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Hierarchical Information Fusion Graph Neural Networks for Chinese Implicit Rhetorical Questions Recognition",
+            "authors": [
+              "Li",
+              "Qian",
+              "Li",
+              "Zhu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/ijcnn55064.2022.9892514",
+            "source_url": "https://doi.org/10.1109/ijcnn55064.2022.9892514",
+            "title_similarity": 0.39416058394160586
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:51.582736Z",
+        "response_sha256": "bc15933bb8cdfeb8824d21ef03fd1c2533aa294b58e8e7254c1c03f95cae1d1c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Implicit+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:51.585341Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inductive representation learning on large graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5",
+        "checked_at": "2026-10-09T04:45:51.334549Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unsupervised Inductive Node Representation Learning for Dynamic Graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/access.2025.3553377",
+            "source_url": "https://doi.org/10.1109/access.2025.3553377",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Unsupervised Inductive node representation learning for dynamic graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-3972512/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3972512/v1",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Label Deconvolution for Node Representation Learning on Large-scale Attributed Graphs against Learning Bias_supp1-3459408.pdf",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2024.3459408/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2024.3459408/mm1",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial Caching Training: Unsupervised Inductive Network Representation Learning on Large-Scale Graphs",
+            "authors": [
+              "Chen",
+              "Gong",
+              "Wang",
+              "Wang",
+              "Xu",
+              "Lv",
+              "Li",
+              "Wu",
+              "Liu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/tnnls.2021.3084195",
+            "source_url": "https://doi.org/10.1109/tnnls.2021.3084195",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FunQG: Molecular Representation Learning via Quotient Graphs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c00445.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c00445.s001",
+            "title_similarity": 0.6666666666666666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:01.302213Z",
+        "response_sha256": "e53f1790ca49ff85ae4341b59ec6fcf354d063683a772008b2b4511d0e9c476e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:51.334549Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-25",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-26",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Borgwardt",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Borgwardt&rows=5",
+        "checked_at": "2026-10-09T04:45:54.217578Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:54.217535Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Borgwardt&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:54.217578Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "´ Universal invariant and equivariant graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%C2%B4+Universal+invariant+and+equivariant+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:52.417407Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Equivariant Graph Neural Networks for Toxicity Prediction",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.chemrestox.3c00032.s001",
+            "source_url": "https://doi.org/10.1021/acs.chemrestox.3c00032.s001",
+            "title_similarity": 0.5789473684210527
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Crystallographic point group equivariant graph neural networks",
+            "authors": [
+              "Heilman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20868122",
+            "source_url": "https://doi.org/10.17760/d20868122",
+            "title_similarity": 0.7226890756302521
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Small molecule protonation using graph equivariant neural networks",
+            "authors": [
+              "Schapin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1021/scimeetings.3c10160",
+            "source_url": "https://doi.org/10.1021/scimeetings.3c10160",
+            "title_similarity": 0.5691056910569106
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Small molecule protonation using graph equivariant neural networks",
+            "authors": [
+              "Schapin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1021/scimeetings.3c10161",
+            "source_url": "https://doi.org/10.1021/scimeetings.3c10161",
+            "title_similarity": 0.5691056910569106
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Predicting Enzyme pH Optima from Structure Using Equivariant Graph Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.6c01482.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.6c01482.s001",
+            "title_similarity": 0.5899280575539568
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:52.416130Z",
+        "response_sha256": "f18a8c413071c23351780752c2063480a8c31a530efb5f5cfe5e10d82dd0b163",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%C2%B4+Universal+invariant+and+equivariant+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.417407Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kingma and Jimmy Ba",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kingma+and+Jimmy+Ba&rows=5",
+        "checked_at": "2026-10-09T04:45:52.761072Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hill, James William Thomas, (Jimmy), (22 July 1928–19 Dec. 2015), Chairman, Jimmy Hill &amp; Co. (formerly Jimmy Hill Ltd), 1972–2008; Presenter, Jimmy Hill’s Sunday Supplement, Sky Sports, 2001–07",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u20157",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u20157",
+            "title_similarity": 0.11224489795918367
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Wade, Jimmy",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.j469900",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.j469900",
+            "title_similarity": 0.5517241379310345
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Locca, Jimmy",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00110882",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00110882",
+            "title_similarity": 0.4666666666666667
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "16011064 / JIMMY / JUMAT PAGI",
+            "authors": [
+              "Jimmy"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.31219/osf.io/js3t9",
+            "source_url": "https://doi.org/10.31219/osf.io/js3t9",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Jimmy Ryan’s",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.j230100",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.j230100",
+            "title_similarity": 0.45161290322580644
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:52.759564Z",
+        "response_sha256": "97459d5143d790ab6f10bbf2aaab682ececc17e99bb556b0d02931d4804b5038",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kingma+and+Jimmy+Ba&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.761072Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-30",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-31",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Semi-supervised classification with graph convolutional networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Semi-supervised+classification+with+graph+convolutional+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:52.098085Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hybrid Graph Convolutional Networks for Semi-Supervised Classification",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18178/wcse.2019.06.016",
+            "source_url": "https://doi.org/10.18178/wcse.2019.06.016",
+            "title_similarity": 0.44776119402985076
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Progressive Graph Convolutional Networks for Semi-Supervised Node Classification",
+            "authors": [
+              "Heidari",
+              "Iosifidis"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/access.2021.3085905",
+            "source_url": "https://doi.org/10.1109/access.2021.3085905",
+            "title_similarity": 0.4583333333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Example-feature graph convolutional networks for semi-supervised classification",
+            "authors": [
+              "Fu",
+              "Liu",
+              "Zhang",
+              "Zhou"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neucom.2021.07.048",
+            "source_url": "https://doi.org/10.1016/j.neucom.2021.07.048",
+            "title_similarity": 0.4195804195804196
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Deep Graph Wavelet Convolutional Neural Network for Semi-supervised Node Classification",
+            "authors": [
+              "Wang",
+              "Deng"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/ijcnn52387.2021.9533634",
+            "source_url": "https://doi.org/10.1109/ijcnn52387.2021.9533634",
+            "title_similarity": 0.40522875816993464
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Dual Graph Convolutional Networks for Graph-Based Semi-Supervised Classification",
+            "authors": [
+              "Zhuang",
+              "Ma"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1145/3178876.3186116",
+            "source_url": "https://doi.org/10.1145/3178876.3186116",
+            "title_similarity": 0.4166666666666667
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:39.377867Z",
+        "response_sha256": "857c69ac7c177683f8a93a6f7a0236782459fdfce4bb46a455b4ab2d1bb655b8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Semi-supervised+classification+with+graph+convolutional+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.098085Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A&rows=5",
+        "checked_at": "2026-10-09T04:45:52.099948Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:43:54.386361Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:52.099948Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-33",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-34",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-35",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Liu, Bernardo Cuenca Grau, Ian Horrocks, and Egor V",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Liu%2C+Bernardo+Cuenca+Grau%2C+Ian+Horrocks%2C+and+Egor+V&rows=5",
+        "checked_at": "2026-10-09T04:45:54.992201Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:54.992115Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Liu%2C+Bernardo+Cuenca+Grau%2C+Ian+Horrocks%2C+and+Egor+V&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:54.992201Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Invariant and equivariant graph networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Invariant+and+equivariant+graph+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:54.267144Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Equivariant Graph Neural Networks for Toxicity Prediction",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.chemrestox.3c00032.s001",
+            "source_url": "https://doi.org/10.1021/acs.chemrestox.3c00032.s001",
+            "title_similarity": 0.5360824742268041
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Molecule Graph Networks with Many-Body Equivariant Interactions",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jctc.5c00466.s001",
+            "source_url": "https://doi.org/10.1021/acs.jctc.5c00466.s001",
+            "title_similarity": 0.3300970873786408
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Invariant and Equivariant Machine Learning Models",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1142/9789819806638_0002",
+            "source_url": "https://doi.org/10.1142/9789819806638_0002",
+            "title_similarity": 0.7191011235955056
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Crystallographic point group equivariant graph neural networks",
+            "authors": [
+              "Heilman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17760/d20868122",
+            "source_url": "https://doi.org/10.17760/d20868122",
+            "title_similarity": 0.6274509803921569
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Small molecule protonation using graph equivariant neural networks",
+            "authors": [
+              "Schapin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1021/scimeetings.3c10161",
+            "source_url": "https://doi.org/10.1021/scimeetings.3c10161",
+            "title_similarity": 0.5094339622641509
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:54.266295Z",
+        "response_sha256": "7a53401db2faba750f29cf9848bab490f1e854e49615d0eae6401959248d130b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Invariant+and+equivariant+graph+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:54.267144Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-37",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Provably powerful graph networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Provably+powerful+graph+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:53.414372Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Provably Powerful Graph Neural Networks for Directed Multigraphs",
+            "authors": [
+              "Egressy",
+              "Von Niederhäusern",
+              "Blanuša",
+              "Altman",
+              "Wattenhofer",
+              "Atasu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1609/aaai.v38i10.29069",
+            "source_url": "https://doi.org/10.1609/aaai.v38i10.29069",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Provably Expressive Temporal Graph Networks",
+            "authors": [
+              "Souza",
+              "Mesquita",
+              "Kaski",
+              "Garg"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-2337",
+            "source_url": "https://doi.org/10.52202/068431-2337",
+            "title_similarity": 0.7466666666666667
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "GNCC: A Provably Identifiable Graph Neural Network for Binary Linear Programming",
+            "authors": [
+              "Dou",
+              "Gao"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1145/3821725.3821808",
+            "source_url": "https://doi.org/10.1145/3821725.3821808",
+            "title_similarity": 0.46846846846846846
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.3030/758815",
+            "source_url": "https://doi.org/10.3030/758815",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Towards Powerful Graph Contrastive Learning without Negative Examples",
+            "authors": [
+              "Cen",
+              "Shen",
+              "Cao",
+              "Xu",
+              "Cheng"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/ijcnn55064.2022.9892636",
+            "source_url": "https://doi.org/10.1109/ijcnn55064.2022.9892636",
+            "title_similarity": 0.4158415841584158
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:53.412502Z",
+        "response_sha256": "a81a26091371ce3cb30be9b3cd191af23760dbf9362301ad7d73315f5ea68b10",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Provably+powerful+graph+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:53.414372Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-38",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-38",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the universality of invariant networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+universality+of+invariant+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:55.574265Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:55.574179Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+universality+of+invariant+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:55.574265Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-39",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "M",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=M&rows=5",
+        "checked_at": "2026-10-09T04:45:53.416203Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:44:32.342172Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=M&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:53.416203Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-40",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hamilton, Jan Eric Lenssen, Gaurav Rattan, and Martin Grohe",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hamilton%2C+Jan+Eric+Lenssen%2C+Gaurav+Rattan%2C+and+Martin+Grohe&rows=5",
+        "checked_at": "2026-10-09T04:45:54.172082Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Weisfeiler and Leman Go Neural: Higher-Order Graph Neural Networks",
+            "authors": [
+              "Morris",
+              "Ritzert",
+              "Fey",
+              "Hamilton",
+              "Lenssen",
+              "Rattan",
+              "Grohe"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1609/aaai.v33i01.33014602",
+            "source_url": "https://doi.org/10.1609/aaai.v33i01.33014602",
+            "title_similarity": 0.2809917355371901
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Owen, Eric Hamilton, (4 Aug. 1903–2 Jan. 1989), retired",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u167790",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u167790",
+            "title_similarity": 0.36538461538461536
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Homomorphism Tensors and Linear Equations",
+            "authors": [
+              "Grohe",
+              "Rattan",
+              "Seppelt"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.19086/aic.2025.4",
+            "source_url": "https://doi.org/10.19086/aic.2025.4",
+            "title_similarity": 0.3711340206185567
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Wyndham White, Sir Eric, (26 Jan. 1913–27 Jan. 1980)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u161250",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u161250",
+            "title_similarity": 0.37254901960784315
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Holland-Martin, Adm. Sir Deric (Douglas Eric), (10 April 1906–6 Jan. 1977), Lord-Lieutenant of Hereford and Worcester, since 1976 (Lieutenant, 1974–76)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u155729",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u155729",
+            "title_similarity": 0.1958762886597938
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:54.170516Z",
+        "response_sha256": "744fcdf51c83e39e16df21cd4909a508447cd70c80c006e3ed7807cbe6f9e24c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hamilton%2C+Jan+Eric+Lenssen%2C+Gaurav+Rattan%2C+and+Martin+Grohe&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:54.172082Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-41",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-41",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Loopy belief propagation for approximate inference: an empirical study",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Loopy+belief+propagation+for+approximate+inference%3A+an+empirical+study&rows=5",
+        "checked_at": "2026-10-09T04:45:56.963239Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:56.963164Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Loopy+belief+propagation+for+approximate+inference%3A+an+empirical+study&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:56.963239Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-42",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hinton",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hinton&rows=5",
+        "checked_at": "2026-10-09T04:45:56.321383Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "AIM2Change: making the changes that matter to you",
+            "authors": [
+              "Hinton",
+              "Hinton",
+              "Hinton"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1186/isrctn16607863",
+            "source_url": "https://doi.org/10.1186/isrctn16607863",
+            "title_similarity": 0.18518518518518517
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hinton, Christopher, Baron Hinton of Bankside (1901–1983)",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1093/odnb/9780192683120.013.31237",
+            "source_url": "https://doi.org/10.1093/odnb/9780192683120.013.31237",
+            "title_similarity": 0.2033898305084746
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Life in nature / by James Hinton.",
+            "authors": [
+              "Hinton"
+            ],
+            "year": 1862,
+            "years": [
+              1862
+            ],
+            "doi": "10.5962/bhl.title.33796",
+            "source_url": "https://doi.org/10.5962/bhl.title.33796",
+            "title_similarity": 0.3333333333333333
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Hinton of Bankside, Baron, (Christopher Hinton) (12 May 1901–22 June 1983)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u165328",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u165328",
+            "title_similarity": 0.16216216216216217
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Perry, Roland Hinton",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00139305",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00139305",
+            "title_similarity": 0.48
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:56.320044Z",
+        "response_sha256": "3ab30ca9ff2a6208b436f841a7f7a4c63c5de5602d4bf0477df0500b48cbd0b4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hinton&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:56.321383Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-43",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Query-driven active surveying for collective classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Query-driven+active+surveying+for+collective+classification&rows=5",
+        "checked_at": "2026-10-09T04:45:56.182282Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Active Rules for Embedded Databases: Lightweight Event-Driven Query Processing for Resource-Constrained Devices",
+            "authors": [
+              "Richards",
+              "Lawrence"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0015049800004018",
+            "source_url": "https://doi.org/10.5220/0015049800004018",
+            "title_similarity": 0.35502958579881655
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Review for \"Hydrodynamics-driven phase-locking and collective motility of sessile active dumbbells\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/d5sm00049a/v1/review4",
+            "source_url": "https://doi.org/10.1039/d5sm00049a/v1/review4",
+            "title_similarity": 0.47435897435897434
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Review for \"Hydrodynamics-driven phase-locking and collective motility of sessile active dumbbells\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/d5sm00049a/v2/review1",
+            "source_url": "https://doi.org/10.1039/d5sm00049a/v2/review1",
+            "title_similarity": 0.47435897435897434
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Hydrodynamics-driven phase-locking and collective motility of sessile active dumbbells\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/d5sm00049a/v1/review2",
+            "source_url": "https://doi.org/10.1039/d5sm00049a/v1/review2",
+            "title_similarity": 0.47435897435897434
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review for \"Hydrodynamics-driven phase-locking and collective motility of sessile active dumbbells\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/d5sm00049a/v2/review3",
+            "source_url": "https://doi.org/10.1039/d5sm00049a/v2/review3",
+            "title_similarity": 0.47435897435897434
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:56.181042Z",
+        "response_sha256": "0e47677cfea64feced8c63b7eb9667f21049c3bccc0d007e0671ad8f993f61af",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Query-driven+active+surveying+for+collective+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:56.182282Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-44",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-44",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the complexity of the subgraph problem",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+complexity+of+the+subgraph+problem&rows=5",
+        "checked_at": "2026-10-09T04:45:57.954421Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:57.954367Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+complexity+of+the+subgraph+problem&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:57.954421Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-45",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A theoretical comparison of graph neural network extensions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+theoretical+comparison+of+graph+neural+network+extensions&rows=5",
+        "checked_at": "2026-10-09T04:45:56.837113Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Extensions and Applications of Graph Neural Networks",
+            "authors": [
+              "Lachaud"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/aa2fa4a4zd79az4eadzab54z9f1655a395c8",
+            "source_url": "https://doi.org/10.70675/aa2fa4a4zd79az4eadzab54z9f1655a395c8",
+            "title_similarity": 0.5945945945945946
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph Neural Network",
+            "authors": [
+              "Nadaf",
+              "Patil"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1002/9781394422791.ch6",
+            "source_url": "https://doi.org/10.1002/9781394422791.ch6",
+            "title_similarity": 0.5063291139240507
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Figure 3: Graph neural network.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3366/fig-3",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3366/fig-3",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "NuGraph2: A Graph Neural Network for Neutrino Event Reconstruction",
+            "authors": [
+              "Cerati"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2172/2432449",
+            "source_url": "https://doi.org/10.2172/2432449",
+            "title_similarity": 0.532258064516129
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Hopfield neural network and genetic algorithm, a comparison in the case of hierarchical graph visualization",
+            "authors": [
+              "Kusnadi",
+              "Carothers"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1995.487701",
+            "source_url": "https://doi.org/10.1109/icnn.1995.487701",
+            "title_similarity": 0.30303030303030304
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:56.834105Z",
+        "response_sha256": "71b550f623350712711018312f5f143946d82743c8ee35a6380a4e70ffbd162b",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+theoretical+comparison+of+graph+neural+network+extensions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:56.837113Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-46",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-46",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Dropgnn: Random dropouts increase the expressiveness of graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Dropgnn%3A+Random+dropouts+increase+the+expressiveness+of+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:45:57.572250Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Logical Expressiveness of Graph Neural Networks with Hierarchical Node Individualization",
+            "authors": [
+              "Soeteman",
+              "ten Cate"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-3226",
+            "source_url": "https://doi.org/10.52202/085713-3226",
+            "title_similarity": 0.524390243902439
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Mathematical Expressiveness of Graph Neural Networks",
+            "authors": [
+              "Lachaud",
+              "Conde-Cespedes",
+              "Trocan"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.3390/math10244770",
+            "source_url": "https://doi.org/10.3390/math10244770",
+            "title_similarity": 0.6875
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Androgen Receptor Binding Prediction with Random Forest, Deep Neural Networks, and Graph Convolutional Neural Networks",
+            "authors": [
+              "García-Sosa"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.20944/preprints202102.0318.v1",
+            "source_url": "https://doi.org/10.20944/preprints202102.0318.v1",
+            "title_similarity": 0.3854166666666667
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contribution to the theory of graph neural networks on large random graphs",
+            "authors": [
+              "Cordonnier"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/932270a6z450ez46dcz952bz5b0c277f2f4e",
+            "source_url": "https://doi.org/10.70675/932270a6z450ez46dcz952bz5b0c277f2f4e",
+            "title_similarity": 0.5066666666666667
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "An Empirical Study of the Expressiveness of Graph Kernels and Graph Neural Networks",
+            "authors": [
+              "Nikolentzos",
+              "Panagopoulos",
+              "Vazirgiannis"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1007/978-3-030-86365-4_12",
+            "source_url": "https://doi.org/10.1007/978-3-030-86365-4_12",
+            "title_similarity": 0.6289308176100629
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:57.571185Z",
+        "response_sha256": "b0abd23c2c0c3a15b07498b574a4df2631ac43aafb4fb689ac7683cd478ec5db",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Dropgnn%3A+Random+dropouts+increase+the+expressiveness+of+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:57.572250Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-47",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-47",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Convergent graph solvers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Convergent+graph+solvers&rows=5",
+        "checked_at": "2026-10-09T04:45:57.329704Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "On graph sparsifiers, graph sketches, fast linear solvers and network flow optimization",
+            "authors": [
+              "Qin"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991012530668903412",
+            "source_url": "https://doi.org/10.14711/thesis-991012530668903412",
+            "title_similarity": 0.29357798165137616
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Direct, Fast and Convergent Solvers for the Non-Convex and Non-Smooth Tdoa Localization Problem",
+            "authors": [
+              "Gur",
+              "Amar",
+              "Sabach"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4377034",
+            "source_url": "https://doi.org/10.2139/ssrn.4377034",
+            "title_similarity": 0.3050847457627119
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Implementing Low-Stretch Spanning Trees for Efficient Graph Approximation and Linear  System Solvers",
+            "authors": [
+              "Tadamalla"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/5374",
+            "source_url": "https://doi.org/10.31224/5374",
+            "title_similarity": 0.3252032520325203
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Problem Solvers: Which Graph Is Which?",
+            "authors": [
+              "Sakshaug"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.5951/tcm.6.7.0454",
+            "source_url": "https://doi.org/10.5951/tcm.6.7.0454",
+            "title_similarity": 0.3333333333333333
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Graph-Based Diffusion Solvers for Combinatorial Optimization",
+            "authors": [
+              "Sun",
+              "Yang"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/978-1-4614-6624-6_97-1",
+            "source_url": "https://doi.org/10.1007/978-1-4614-6624-6_97-1",
+            "title_similarity": 0.30952380952380953
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:57.326958Z",
+        "response_sha256": "ab5d990fe494a14bcb614d7b09f2352e69f81a3817ff874b29264a773cb4d5af",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Convergent+graph+solvers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:57.329704Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-50",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-50",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neural structured prediction for inductive node classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neural+structured+prediction+for+inductive+node+classification&rows=5",
+        "checked_at": "2026-10-09T04:45:59.512679Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Transformation from CNN to Graph‐Structured Data",
+            "authors": [
+              "Vijayarangan",
+              "Kumar",
+              "Umadevi",
+              "Kumar"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1002/9781394356362.ch3",
+            "source_url": "https://doi.org/10.1002/9781394356362.ch3",
+            "title_similarity": 0.3090909090909091
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning node embedding for inductive link prediction in sparse observation network",
+            "authors": [
+              "Li",
+              "He",
+              "Ban"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/ijcnn55064.2022.9892469",
+            "source_url": "https://doi.org/10.1109/ijcnn55064.2022.9892469",
+            "title_similarity": 0.45517241379310347
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Diffusion Probabilistic Models for Structured Node Classification",
+            "authors": [
+              "Jang",
+              "Park",
+              "Mo",
+              "Ahn"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1392",
+            "source_url": "https://doi.org/10.52202/075280-1392",
+            "title_similarity": 0.5354330708661418
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "IMCGNN: Information Maximization based Continual Graph Neural Networks for inductive node classification",
+            "authors": [
+              "Yuan",
+              "Guan",
+              "Luo",
+              "Man",
+              "Lim"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neucom.2025.129362",
+            "source_url": "https://doi.org/10.1016/j.neucom.2025.129362",
+            "title_similarity": 0.509090909090909
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ChemInform Abstract: Application of Adaptive Mixture of Local Neural Networks in Chemistry. Prediction and Classification of Resonance and Inductive Effects of Substituents",
+            "authors": [
+              "KVASNICKA"
+            ],
+            "year": 1996,
+            "years": [
+              1996,
+              2010
+            ],
+            "doi": "10.1002/chin.199622314",
+            "source_url": "https://doi.org/10.1002/chin.199622314",
+            "title_similarity": 0.33620689655172414
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:45:59.510902Z",
+        "response_sha256": "a3cc32585a18b67ebc43dfd4844acfd6b0140f632b060cbac9acdebe33d569de",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neural+structured+prediction+for+inductive+node+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:45:59.512679Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-51",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neural enhanced belief propagation on factor graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neural+enhanced+belief+propagation+on+factor+graphs&rows=5",
+        "checked_at": "2026-10-09T04:46:00.373490Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:00.373428Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neural+enhanced+belief+propagation+on+factor+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:00.373490Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-52",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Schlichtkrull, Thomas Kipf, Peter Bloem, Rianne van den Berg, Ivan Titov, and Max Welling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Schlichtkrull%2C+Thomas+Kipf%2C+Peter+Bloem%2C+Rianne+van+den+Berg%2C+Ivan+Titov%2C+and+Max+Welling&rows=5",
+        "checked_at": "2026-10-09T04:46:00.490159Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:00.490104Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Schlichtkrull%2C+Thomas+Kipf%2C+Peter+Bloem%2C+Rianne+van+den+Berg%2C+Ivan+Titov%2C+and+Max+Welling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:00.490159Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-55",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-55",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Arnetminer: extraction and mining of academic social networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Arnetminer%3A+extraction+and+mining+of+academic+social+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:01.113731Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ArnetMiner: Deep Mining for Academic Social Networks",
+            "authors": [
+              "Tang",
+              "Li"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1007/978-3-031-79462-9_5",
+            "source_url": "https://doi.org/10.1007/978-3-031-79462-9_5",
+            "title_similarity": 0.8288288288288288
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArnetMiner",
+            "authors": [
+              "Tang",
+              "Zhang",
+              "Yao",
+              "Li",
+              "Zhang",
+              "Su"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1145/1401890.1402008",
+            "source_url": "https://doi.org/10.1145/1401890.1402008",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Discover Academic Experts in Novel Social Network Model",
+            "authors": [
+              "Bhukya"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/asonam.2011.96",
+            "source_url": "https://doi.org/10.1109/asonam.2011.96",
+            "title_similarity": 0.46956521739130436
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Social Network Extraction of Academic Researchers",
+            "authors": [
+              "Tang",
+              "Zhang",
+              "Yao"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1109/icdm.2007.30",
+            "source_url": "https://doi.org/10.1109/icdm.2007.30",
+            "title_similarity": 0.27522935779816515
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Subgraph Extraction for Trust Inference in Social Networks",
+            "authors": [
+              "Yao",
+              "Tong",
+              "Xu",
+              "Lu"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1109/asonam.2012.37",
+            "source_url": "https://doi.org/10.1109/asonam.2012.37",
+            "title_similarity": 0.576271186440678
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:01.112178Z",
+        "response_sha256": "af95975c4eed53f0a657c3e9c0ba8635281621b87b2a2a7c673f9a0ea379306d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Arnetminer%3A+extraction+and+mining+of+academic+social+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:01.113731Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-56",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-56",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Teru, E",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Teru%2C+E&rows=5",
+        "checked_at": "2026-10-09T04:46:02.328855Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:02.328777Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Teru%2C+E&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:02.328855Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-57",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-57",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-57",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Thiede, Wenda Zhou, and Risi Kondor",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Thiede%2C+Wenda+Zhou%2C+and+Risi+Kondor&rows=5",
+        "checked_at": "2026-10-09T04:46:01.297063Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graph neural networks for biochemistry that incorporate substructure",
+            "authors": [
+              "Thiede",
+              "Zhou",
+              "Kondor"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.bpj.2021.11.2799",
+            "source_url": "https://doi.org/10.1016/j.bpj.2021.11.2799",
+            "title_similarity": 0.1188118811881188
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Unifying O(3) equivariant neural networks design with tensor-network formalism",
+            "authors": [
+              "Li",
+              "Pengmei",
+              "Zheng",
+              "Thiede",
+              "Liu",
+              "Kondor"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1088/2632-2153/ad4a04",
+            "source_url": "https://doi.org/10.1088/2632-2153/ad4a04",
+            "title_similarity": 0.14545454545454545
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Discovery of the Centrality of Culture in Art: Wenda Gu",
+            "authors": [
+              "Zhou"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1007/978-3-662-45411-4_3",
+            "source_url": "https://doi.org/10.1007/978-3-662-45411-4_3",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Gu, Wenda",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b2230981",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b2230981",
+            "title_similarity": 0.2926829268292683
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Kondor, Béla",
+            "authors": [
+              "Németh"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gao/9781884446054.article.t047277",
+            "source_url": "https://doi.org/10.1093/gao/9781884446054.article.t047277",
+            "title_similarity": 0.2727272727272727
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:01.295371Z",
+        "response_sha256": "1defb15e20f12cb762346fdc8fb08b592a1429aea5d228b1f5529befcaf14365",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Thiede%2C+Wenda+Zhou%2C+and+Risi+Kondor&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:01.297063Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-58",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-58",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Compositional learning of embeddings for relation paths in knowledge base and text",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Compositional+learning+of+embeddings+for+relation+paths+in+knowledge+base+and+text&rows=5",
+        "checked_at": "2026-10-09T04:46:03.349410Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:03.349356Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Compositional+learning+of+embeddings+for+relation+paths+in+knowledge+base+and+text&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:03.349410Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-59",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-59",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-59",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The reduction of a graph to canonical form and the algebra which appears therein",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+reduction+of+a+graph+to+canonical+form+and+the+algebra+which+appears+therein&rows=5",
+        "checked_at": "2026-10-09T04:46:01.562231Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Smith form and Kronecker canonical form",
+            "authors": [
+              "Rodman"
+            ],
+            "year": 2014,
+            "years": [
+              2014,
+              2017
+            ],
+            "doi": "10.23943/princeton/9780691161853.003.0007",
+            "source_url": "https://doi.org/10.23943/princeton/9780691161853.003.0007",
+            "title_similarity": 0.3865546218487395
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The Jordan Canonical Form",
+            "authors": [],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1201/b18994-10",
+            "source_url": "https://doi.org/10.1201/b18994-10",
+            "title_similarity": 0.41904761904761906
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Chapter Seven. Smith form and Kronecker canonical form",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1515/9781400852741.153",
+            "source_url": "https://doi.org/10.1515/9781400852741.153",
+            "title_similarity": 0.3458646616541353
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Jordan canonical form",
+            "authors": [],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1201/b18294-7",
+            "source_url": "https://doi.org/10.1201/b18294-7",
+            "title_similarity": 0.41904761904761906
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Smith form and Kronecker canonical form",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.2307/j.ctt6wpz0p.10",
+            "source_url": "https://doi.org/10.2307/j.ctt6wpz0p.10",
+            "title_similarity": 0.3865546218487395
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:01.560623Z",
+        "response_sha256": "f4bfe05387d98ac2abbdf938f98696c1f36dcdf9658cb178e9400708051f69fd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+reduction+of+a+graph+to+canonical+form+and+the+algebra+which+appears+therein&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:01.562231Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-60",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-60",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How powerful are graph neural networks? arXiv preprint arXiv:1810.00826 , 2018.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+powerful+are+graph+neural+networks%3F+arXiv+preprint+arXiv%3A1810.00826+%2C+2018.&rows=5",
+        "checked_at": "2026-10-09T04:46:01.116074Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.4107142857142857
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.3025210084033613
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.273972602739726
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.2518518518518518
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Model sensitivity analysis on arxiv",
+            "authors": [
+              "Pagnini"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.5194/gmd-2018-33-ac4",
+            "source_url": "https://doi.org/10.5194/gmd-2018-33-ac4",
+            "title_similarity": 0.2909090909090909
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:05.124191Z",
+        "response_sha256": "073615f31525c4dec72786aacf3e399f5905f46a9dc6fa76930cc9762dc3814a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+powerful+are+graph+neural+networks%3F+arXiv+preprint+arXiv%3A1810.00826+%2C+2018.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:01.116074Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-61",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-61",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-61",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Yedidia, William T",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Yedidia%2C+William+T&rows=5",
+        "checked_at": "2026-10-09T04:46:03.893721Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:03.893664Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Yedidia%2C+William+T&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:03.893721Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-63",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-63",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-63",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gomes-Selman, Rex Ying, and Jure Leskovec",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gomes-Selman%2C+Rex+Ying%2C+and+Jure+Leskovec&rows=5",
+        "checked_at": "2026-10-09T04:46:03.461020Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Identity-aware Graph Neural Networks",
+            "authors": [
+              "You",
+              "Gomes-Selman",
+              "Ying",
+              "Leskovec"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1609/aaai.v35i12.17283",
+            "source_url": "https://doi.org/10.1609/aaai.v35i12.17283",
+            "title_similarity": 0.29333333333333333
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Jure Leskovec, Anand Rajaraman, and Jeffrey D. Ullman. Mining of Massive Datasets. Cambridge, Cambridge University Press",
+            "authors": [
+              "Richter"
+            ],
+            "year": 2018,
+            "years": [
+              2018,
+              2019
+            ],
+            "doi": "10.1111/biom.12982",
+            "source_url": "https://doi.org/10.1111/biom.12982",
+            "title_similarity": 0.16993464052287582
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Diffusion and Cascading Behavior in Networks",
+            "authors": [
+              "Leskovec Jure"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.3233/978-1-58603-898-4-169",
+            "source_url": "https://doi.org/10.3233/978-1-58603-898-4-169",
+            "title_similarity": 0.24096385542168675
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Hill‐climbing Search",
+            "authors": [
+              "Selman",
+              "Gomes"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.1002/0470018860.s00015",
+            "source_url": "https://doi.org/10.1002/0470018860.s00015",
+            "title_similarity": 0.2711864406779661
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "O Diário do Tiranossauro Rex",
+            "authors": [
+              "GOMES"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.48021/978-65-270-3075-1",
+            "source_url": "https://doi.org/10.48021/978-65-270-3075-1",
+            "title_similarity": 0.23880597014925373
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:03.459390Z",
+        "response_sha256": "ed62f752f3bb85539120c3369995ee553ca6cc5f6a267bad1b0bbb112f532426",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gomes-Selman%2C+Rex+Ying%2C+and+Jure+Leskovec&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:03.461020Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-64",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-64",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-64",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The concave-convex procedure (cccp)",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+concave-convex+procedure+%28cccp%29&rows=5",
+        "checked_at": "2026-10-09T04:46:05.244368Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:05.244307Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+concave-convex+procedure+%28cccp%29&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:05.244368Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-66",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-66",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-66",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-67",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-67",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-67",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Beyond weisfeilerlehman: A quantitative framework for gnn expressiveness",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Beyond+weisfeilerlehman%3A+A+quantitative+framework+for+gnn+expressiveness&rows=5",
+        "checked_at": "2026-10-09T04:46:04.654997Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Calibrate and Boost Logical Expressiveness of GNN Over Multi-Relational and Temporal Graphs",
+            "authors": [
+              "Wang",
+              "Chen"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-2912",
+            "source_url": "https://doi.org/10.52202/075280-2912",
+            "title_similarity": 0.2716049382716049
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Figure 2: Overview of the proposed multi-tissue GNN framework.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3820/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3820/fig-2",
+            "title_similarity": 0.2900763358778626
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Quantitative grading of hydroponic lettuce seedlings using an improved BlendMask framework with GNN-assisted canopy optimization",
+            "authors": [
+              "Jiang",
+              "He",
+              "Tan"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.inpa.2026.07.002",
+            "source_url": "https://doi.org/10.1016/j.inpa.2026.07.002",
+            "title_similarity": 0.3316582914572864
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multi-forcefield-enhanced GNN-based machine learning model framework",
+            "authors": [
+              "Lee"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1021/scimeetings.5c11530",
+            "source_url": "https://doi.org/10.1021/scimeetings.5c11530",
+            "title_similarity": 0.28776978417266186
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "PSA-GNN: An augmented GNN framework with priori subgraph knowledge",
+            "authors": [
+              "Xue",
+              "Zhong",
+              "Qian",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2024.106155",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.106155",
+            "title_similarity": 0.4117647058823529
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:04.653534Z",
+        "response_sha256": "b4667e80e5bc5364fa32a8f9efd800562482d9823a83c7574982c812218b14d5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Beyond+weisfeilerlehman%3A+A+quantitative+framework+for+gnn+expressiveness&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:04.654997Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-68",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-68",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-68",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Link prediction based on graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Link+prediction+based+on+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:06.692988Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:06.692934Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Link+prediction+based+on+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:06.692988Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-69",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-69",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-69",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inductive matrix completion based on graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inductive+matrix+completion+based+on+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:07.000236Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:07.000079Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inductive+matrix+completion+based+on+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:07.000236Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-70",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-70",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-70",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Nested graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Nested+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:07.431698Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:07.431636Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Nested+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:07.431698Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-71",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-71",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-71",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Labeling trick: A theory of using graph neural networks for multi-node representation learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Labeling+trick%3A+A+theory+of+using+graph+neural+networks+for+multi-node+representation+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:05.643225Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Structure-aware graph representation learning using graph neural networks",
+            "authors": [
+              "Sium"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/td-20260223-98",
+            "source_url": "https://doi.org/10.31274/td-20260223-98",
+            "title_similarity": 0.39759036144578314
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph anomaly detection based on hybrid node representation learning",
+            "authors": [
+              "Wang",
+              "Dou",
+              "Dong",
+              "Meng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107169",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107169",
+            "title_similarity": 0.5341614906832298
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Review for \"Preserving node similarity adversarial learning graph representation with graph neural network\"",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1002/eng2.12854/v2/review1",
+            "source_url": "https://doi.org/10.1002/eng2.12854/v2/review1",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multi-View and Multi-Kernel Graph Neural Networks with Node Relationship Embedding for Graph Representation Learning",
+            "authors": [
+              "Xiong",
+              "Wang",
+              "Wu",
+              "Wang",
+              "Ouyang",
+              "Gu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/mlccim60412.2023.00069",
+            "source_url": "https://doi.org/10.1109/mlccim60412.2023.00069",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning of High-Fidelity Electronic Structure Using Graph Neural Networks with Modified Node-Level Features",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsmaterialslett.5c00857.s001",
+            "source_url": "https://doi.org/10.1021/acsmaterialslett.5c00857.s001",
+            "title_similarity": 0.5472636815920398
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:05.641337Z",
+        "response_sha256": "d807dd09e6725197984101a083555fad60e964a11e7fc7cb07eca9a3d0c68c00",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Labeling+trick%3A+A+theory+of+using+graph+neural+networks+for+multi-node+representation+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:05.643225Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-72",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-72",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-72",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-73",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-73",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-73",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "From stars to subgraphs: Uplifting any gnn with local structure awareness",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=From+stars+to+subgraphs%3A+Uplifting+any+gnn+with+local+structure+awareness&rows=5",
+        "checked_at": "2026-10-09T04:46:06.067386Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Framework for Extracting Rules from Explanation Subgraphs for Gnn-Based Knowledge Graph Link Prediction",
+            "authors": [
+              "Yao",
+              "Yuan",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4734189",
+            "source_url": "https://doi.org/10.2139/ssrn.4734189",
+            "title_similarity": 0.3728813559322034
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Proposal for the Establishment of the African Ocean Literacy Civil Society Action Network: A Key Necessity for Uplifting Voices of Local Actors, Creating Public Awareness and Increasing Ocean Education and Literacy in Africa.",
+            "authors": [
+              "Akpan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5194/oos2025-75",
+            "source_url": "https://doi.org/10.5194/oos2025-75",
+            "title_similarity": 0.034013605442176874
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Disjoint stars and forbidden subgraphs",
+            "authors": [
+              "Fujita"
+            ],
+            "year": 2006,
+            "years": [
+              2006
+            ],
+            "doi": "10.32917/hmj/1171377081",
+            "source_url": "https://doi.org/10.32917/hmj/1171377081",
+            "title_similarity": 0.34545454545454546
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Mass loss from stars",
+            "authors": [],
+            "year": 1994,
+            "years": [
+              1994
+            ],
+            "doi": "10.1017/cbo9781139170741.009",
+            "source_url": "https://doi.org/10.1017/cbo9781139170741.009",
+            "title_similarity": 0.21739130434782608
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Metallicities and Kinematics of RR Lyrae Variables.II. Galactic Structure and Formation from Local Stars",
+            "authors": [
+              "Layden"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1086/117690",
+            "source_url": "https://doi.org/10.1086/117690",
+            "title_similarity": 0.33519553072625696
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:06.065740Z",
+        "response_sha256": "af45a6fa1d86123630a70ffd2d9567694f21f597003fdf9bee05fdfbd8bc5a9a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=From+stars+to+subgraphs%3A+Uplifting+any+gnn+with+local+structure+awareness&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:06.067386Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-74",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-74",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-74",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-75",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-75",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-75",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-76",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-76",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-76",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-77",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-77",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-77",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_020_openreview_2024_02_11_credibility-78",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_020_openreview_2024_02_11_credibility-78",
+        "paper_reference_id": "ref-paper_020_openreview_2024_02_11_credibility-78",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.153846153846154
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 78,
+    "extracted_count": 78,
+    "parsed_count": 61,
+    "queried_count": 61,
+    "matched_count": 7,
+    "metadata_conflict_count": 2,
+    "unverified_count": 33,
+    "parse_failed_count": 17,
+    "not_checked_count": 0,
+    "query_failed_count": 19,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.057503Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

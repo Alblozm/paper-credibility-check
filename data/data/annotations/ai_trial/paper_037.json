@@ -1,0 +1,389 @@
+{
+  "assessment_id": "assessment_ai_paper_037_iclr_2026_proceedings",
+  "paper_version_id": "paper_037_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_037_iclr_2026_proceedings",
+    "raw_output_sha256": "d04ad16a94d8636fd526ce435c7eb07178b002c11dc6cf38d529b4c43b70d0af"
+  },
+  "paper_summary": "Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks and require further tuning on newly acquired task-specific data. Combining task-specific data with carefully curated subsets of large prior datasets via co-training can produce better specialized policies, but selecting data naively may actually harm downstream performance. To address this, we introduce DataMIL, a data selection framework built on the datamodels paradigm that reasons abou",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks and require further tuning on newly acquired task-specific data. Combining task-specific data with carefully curated subsets of large prior datasets via co-training can produce better specialized policies, but selecting data naively may actually harm downstream performance. To address this, we introduce DataMIL, a data selection framework built on the datamodels paradigm that reasons abou",
+      "type": "method_or_finding",
+      "evidence_id": "paper_037_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks and require further tuning on newly acquired task-specific data. Combining task-specific data with carefully curated subsets of large prior datasets via co-train",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_037_ev_003",
+        "paper_037_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《DataMIL: Selecting Data for Robot Imitation Learning with Datamodels》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks a",
+    "论文提供方法或实证支持：How does data selected using DataMIL impact policy performance? e t a 30 Metaworld. MetaWorld’s 50 manipulation tasks offer a rigorous testbed r ss e cc for data selection. We construct our prior multi-task dataset by com- u S 25 D bining (1) expert demonstrat"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks a；边界证据为：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi",
+      "strengths": [
+        "可定位正文支持：Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks a"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+      "evidence_ids": [
+        "paper_037_ev_001",
+        "paper_037_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：How does data selected using DataMIL impact policy performance? e t a 30 Metaworld. MetaWorld’s 50 manipulation tasks offer a rigorous testbed r ss e cc for data selection. We construct our prior multi-task dataset by com- u S 25 D bining (1) expert demonstrat；边界证据为：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi",
+      "strengths": [
+        "可定位正文支持：How does data selected using DataMIL impact policy performance? e t a 30 Metaworld. MetaWorld’s 50 manipulation tasks offer a rigorous testbed r ss e cc for data selection. We construct our prior multi-task dataset by com- u S 25 D bining (1) expert demonstrat"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_037_ev_003",
+        "paper_037_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Data curation for robot learning. Recent advances in robotics have leveraged ever-larger demonstration collections—both in simulation (Mandlekar et al., 2021; 2023; Sharma et al., 2018), and on real hardware (Walke et al., 2023; Khazatsky et al., 2024; Mandlek；边界证据为：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi",
+      "strengths": [
+        "可定位正文支持：Data curation for robot learning. Recent advances in robotics have leveraged ever-larger demonstration collections—both in simulation (Mandlekar et al., 2021; 2023; Sharma et al., 2018), and on real hardware (Walke et al., 2023; Khazatsky et al., 2024; Mandlek"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_037_ev_004",
+        "paper_037_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Recently we have witnessed a revolution in robot learning: inspired by the successes of large-scale language and vision models, the robotics community has begun training large foundation policies (Brohan et al., 2023; Black et al., 2024; Bjorck et al., 2025) b；边界证据为：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi",
+      "strengths": [
+        "可定位正文支持：Recently we have witnessed a revolution in robot learning: inspired by the successes of large-scale language and vision models, the robotics community has begun training large foundation policies (Brohan et al., 2023; Black et al., 2024; Bjorck et al., 2025) b"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_037_ev_005",
+        "paper_037_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Implementation details of the baselines are provided below. • FlowRetrieval (Lin et al., 2024) and BehaviorRetrieval (Du et al., 2023): FlowRetrieval( Flow )andBehaviorRetrieval( BR )baselinescomputesimilarityontheimageflows and state-action pairs respectively；边界证据为：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi",
+      "strengths": [
+        "可定位正文支持：Implementation details of the baselines are provided below. • FlowRetrieval (Lin et al., 2024) and BehaviorRetrieval (Du et al., 2023): FlowRetrieval( Flow )andBehaviorRetrieval( BR )baselinescomputesimilarityontheimageflows and state-action pairs respectively"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensi"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+      "evidence_ids": [
+        "paper_037_ev_006",
+        "paper_037_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_037_ev_001",
+      "page_number": 1,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Recently, the robotics community has amassed ever larger and more diverse datasets to train generalist policies. However, while these policies achieve strong mean performance across a variety of tasks, they often underperform on individual, specialized tasks and require further tuning on newly acquired task-specific data. Combining task-specific data with carefully curated subsets of large prior datasets via co-training can produce better specialized policies, but selecting data naively may actually harm downstream performance. To address this, we introduce DataMIL, a data selection framework built on the datamodels paradigm that reasons about data selection in an end-to-end manner, using the policy itself to identify which data points will most improve performance. Unlike standard practices that filter data using human notions of quality (e.g., based on semantic or visual similarity), D",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "page_number": 10,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "We present DataMIL, a data-driven method for data selection for imitation learning. DataMIL builds upon the framework of datamodels, which has been applied successfully to data selection in NLP and CV, and extends it to real-world robotic applications. Extensive experiments in simulation and real-world settings empirically support that DataMIL retrieves data to train higher-performing policies than multiple existing state-of-the-art baselines, particularly in complex scenarios. At the same time, several limitations remain. First, despite employing an efficient metagradient-based estimator, estimating datamodels still incurs computational costs several times higher than training a policy on all data (see App. G), making scalability an important challenge. Accelerating datamodel training, for instance through smaller proxy models (Khaddaj et al., 2025), is a promising direction. Second, Da",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_003",
+      "page_number": 7,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_5_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "How does data selected using DataMIL impact policy performance? e t a 30 Metaworld. MetaWorld’s 50 manipulation tasks offer a rigorous testbed r ss e cc for data selection. We construct our prior multi-task dataset by com- u S 25 D bining (1) expert demonstrations generated by scripted policies and (2) lower-quality exploration trajectories sampled from the replay buffer of 20 a multi-task SAC agent trained across all tasks (see App. F.1 for details). (b) Avg. success over For each task, we use 5 expert demos as , and use the regressiontarget LIBERO-10 D based datamodel estimator to select the top 10% of samples (Sec. 4). Figure 3: Performance This setup is challenging as the selection method must both identify releof policy trained on sevant tasks and filter noisy, suboptimal actions from the autonomous data. lected datasets in sim. In Fig. 3a, we report policy performance averaged over",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_004",
+      "page_number": 2,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "Data curation for robot learning. Recent advances in robotics have leveraged ever-larger demonstration collections—both in simulation (Mandlekar et al., 2021; 2023; Sharma et al., 2018), and on real hardware (Walke et al., 2023; Khazatsky et al., 2024; Mandlekar et al., 2018)—to train generalist policies capable of tackling diverse tasks (Brohan et al., 2023; Kim et al., 2024; Black et al., 2024; Bjorck et al., 2025). However, the sheer scale and heterogeneity of these datasets (varying robots, scenes, and objectives) has motivated a body of work on data curation. For generalist training, methods like Re-Mix (Hejna et al., 2024) use DoReMi (Xie et al., 2023) style optimization to learn optimal mixtures of data domains for improving model training, while others identify “highquality” trajectories via mutual information criteria (Hejna et al., 2025) or by scoring samples with policy rollou",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_005",
+      "page_number": 1,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Recently we have witnessed a revolution in robot learning: inspired by the successes of large-scale language and vision models, the robotics community has begun training large foundation policies (Brohan et al., 2023; Black et al., 2024; Bjorck et al., 2025) by amassing large diverse robotic datasets comprising of a variety of tasks, scenes, and robots (O’Neill et al., 2024; Walke et al., 2023; Fang et al., 2024). The resulting generalist policies achieve a strong mean performance across tasks and environments, but often underperform on individual tasks (Kim et al., 2024; 2025), highlighting a gap between generalization and task-specific competence. To bridge this gap, researchers have explored a post-training paradigm (Black et al., 2024), where pre-trained foundation models are fine-tuned (Black et al., 2024; Kim et al., 2025) for specific tasks, though this process demands a considera",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_006",
+      "page_number": 23,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_e",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0046",
+      "evidence_mode": "quote",
+      "excerpt": "Implementation details of the baselines are provided below.\n\n• FlowRetrieval (Lin et al., 2024) and BehaviorRetrieval (Du et al., 2023): FlowRetrieval( Flow )andBehaviorRetrieval( BR )baselinescomputesimilarityontheimageflows and state-action pairs respectively. Since these features typically include high-dimensional image observations, Flow and BR train VAEs to encode the features into a more manageable latent space, which they can use to compute similarities between prior and target data. We used the implementation provided by the authors of FlowRetrieval (Lin et al., 2024) for training the VAEs and computing the similarity for both, Flow and BR , in the LIBERO and OXE settings ( https://github.com/lihenglin/bridge_training_code ). For both Flow and BR (and other heuristics such as Action Retrieval ( AR ) and State Retrieval ( SR )), once each state in the prior data is assigned a scor",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_007",
+      "page_number": 12,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_references",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0023",
+      "evidence_mode": "quote",
+      "excerpt": "The garage contributors. Garage: A toolkit for reproducible reinforcement learning research. https://github.com/rlworkgroup/garage , 2019.\n\nZayd Hammoudeh and Daniel Lowd. Training data influence analysis and estimation: A survey. Machine Learning , 113(5):2351–2403, 2024.\n\nFrank R Hampel. The influence curve and its role in robust estimation. Journal of the american statistical association , 69(346):383–393, 1974.\n\nJoey Hejna, Chethan Bhateja, Yichen Jiang, Karl Pertsch, and Dorsa Sadigh. Re-mix: Optimizing data mixtures for large scale imitation learning. arXiv preprint arXiv:2408.14037 , 2024.\n\nJoeyHejna, SuvirMirchandani, AshwinBalakrishna, AnnieXie, AyzaanWahid, JonathanTompson, Pannag Sanketi, Dhruv Shah, Coline Devin, and Dorsa Sadigh. Robot data curation with mutual information estimators. arXiv preprint arXiv:2502.08623 , 2025.\n\nAndrew Ilyas and Logan Engstrom. Magic: Near-optim",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_008",
+      "page_number": 19,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_c_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0038",
+      "evidence_mode": "quote",
+      "excerpt": "0.02 In Figure 3 of the main paper, we presented results on MetaWorld with Target-Only AR goal conditioning , where policies receive explicit goal information pro- All-Data BR 0.00 vided by the simulator. Goal-conditioning is often essential in settings SR DataMIL like LIBERO and OXE, where the target task has limited demonstrations 0.02 100 and generalization from other tasks is required. However, in MetaWorld, the prior dataset already includes expert demonstrations for the target 0.04 tasks. Therefore, an effective data selection method should be capable e t a r ss 60 of retrieving relevant examples—even in the absence of goal informa- e cc u S 0.04 0.02 0.00 0.02 0.04 tion. To test this, we repeat the MetaWorld experiments described in Appendix F.1, but mask out goal states during both data selection and policy training. Results averaged over all 50 tasks are shown in Figure 12. Figu",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_037_ev_009",
+      "page_number": 2,
+      "section_id": "paper_037_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_037_iclr_2026_proceedings_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "policy rollouts in the real world—a time-consuming and often dangerous procedure. Prior data selection methods in robotics remove the dependency on policy rollouts by selecting data based on heuristics, i.e., assuming that the most useful data is the most similar in language description Zha et al. (2024), visually (Memmel et al., 2024), in motion (Lin et al., 2024), or in state-action pairs (Du et al., 2023) to a small number of task-specific demonstrations. While intuitive (and effective in some cases), these heuristics often make several assumptions and fail to consider the real impact of a datapoint on policy performance (see Fig. 1 (left)). In other fields such as natural language processing (NLP) and computer vision (CV), researchers have developed an efficient framework for data selection based on model performance: datamodels (Ilyas et al., 2022). Training a datamodel is a meta-pr",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_037_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_037_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_037_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_037_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_037_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_037_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_037_ev_007"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_037_ev_001"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到random_seed披露。",
+      "evidence_ids": [
+        "paper_037_ev_008"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_037_ev_002"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+      "evidence_ids": [
+        "paper_037_ev_009"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确preprocessing_details披露。",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

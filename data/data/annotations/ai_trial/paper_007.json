@@ -1,0 +1,367 @@
+{
+  "assessment_id": "assessment_ai_paper_007_openreview_2024_02_11",
+  "paper_version_id": "paper_007_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_007_openreview_2024_02_11",
+    "raw_output_sha256": "9ad9d75f1d3729a5734b380ba1f64200a90340bfed34cac9af8c6c039112ed2c"
+  },
+  "paper_summary": "Large language models are trained on vast amounts of internet data, prompting concerns that they have memorized public benchmarks. Detecting this type of contamination is challenging because the pretraining data used by proprietary models are often not publicly accessible.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "We propose a procedure for detecting test set contamination of language models with exact false positive guarantees and without access to pretraining data or model weights.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_007_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Our approach leverages the fact that when there is no data contamination, all orderings of an exchangeable benchmark should be equally likely.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_007_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "We demonstrate that our procedure is sensitive enough to reliably detect contamination in challenging situations, including models as small as 1.4 billion parameters, on small test sets only 1000 examples, and datasets that appear only a few times in the pretraining corpus.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_007_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "We demonstrate that our procedure is sensitive enough to reliably detect contamination in challenging situations, including models as small as 1.4 billion parameters, on small test sets only 1000 examples, and datasets that appear only a few times in the pretraining corpus.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_007_ev_004",
+        "paper_007_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Proving Test Set Contamination in Black-Box Language Models》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 8.0/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Large language models are trained on vast amounts of internet data, prompting concerns and speculation that they have memorized public benchmarks. ",
+    "正文可定位证据支持该维度判断：The core idea of our statistical test is to compare the log probability of the dataset under its original ordering to the log probability under random permutations. ",
+    "正文可定位证据支持该维度判断：We list in table 4 the full set of MMLU results used to generate the omnibus p-values for contamination by MMLU listed in table 2, before filtering out for suspected non-exchangeability."
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Proving Test Set Contamination in Black-Box Language Models》在研究价值方面的正文支持是：Large language models are trained on vast amounts of internet data, prompting concerns and speculation that they have memorized public benchmarks.  限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Large language models are trained on vast amounts of internet data, prompting concerns and speculation that they have memorized public benchmarks. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 9/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_007_ev_001",
+        "paper_007_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Proving Test Set Contamination in Black-Box Language Models》在可靠性与证据方面的正文支持是：The core idea of our statistical test is to compare the log probability of the dataset under its original ordering to the log probability under random permutations.  限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The core idea of our statistical test is to compare the log probability of the dataset under its original ordering to the log probability under random permutations. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_007_ev_003",
+        "paper_007_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Proving Test Set Contamination in Black-Box Language Models》在原创性定位方面的正文支持是：We list in table 4 the full set of MMLU results used to generate the omnibus p-values for contamination by MMLU listed in table 2, before filtering out for suspected non-exchangeability. 限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We list in table 4 the full set of MMLU results used to generate the omnibus p-values for contamination by MMLU listed in table 2, before filtering out for suspected non-exchangeability."
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_007_ev_004",
+        "paper_007_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Proving Test Set Contamination in Black-Box Language Models》在清晰度与可用性方面的正文支持是：Large language models (LLMs) have driven remarkable improvements on a number of natural language processing benchmarks (Wang et al., 2019) and professional exams (OpenAI, 2023).  限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Large language models (LLMs) have driven remarkable improvements on a number of natural language processing benchmarks (Wang et al., 2019) and professional exams (OpenAI, 2023). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_007_ev_005",
+        "paper_007_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Proving Test Set Contamination in Black-Box Language Models》在可复现性与透明度方面的正文支持是：Dataset Size LLaMA2-7B Mistral-7B Pythia-1.4B GPT-2 XL BioMedLM Abstract-Algebra 100 0.103 0.246 0.645 0.894 0.861 Anatomy 135 0.586 0.605 0.605 0.439 0.649 Astronomy 152 0.550 0.657 0.050 0.003 0.050 Business-Ethics 100 0.936 0.440 0.107 0.808 0.499 Clinical-Knowledge 265 0.199… 限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Dataset Size LLaMA2-7B Mistral-7B Pythia-1.4B GPT-2 XL BioMedLM Abstract-Algebra 100 0.103 0.246 0.645 0.894 0.861 Anatomy 135 0.586 0.605 0.605 0.439 0.649 Astronomy 152 0.550 0.657 0.050 0.003 0.050 Business-Ethics 100 0.936 0.440 0.107 0.808 0.499 Clinical-Knowledge 265 0.199…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_007_ev_006",
+        "paper_007_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_007_ev_001",
+      "page_number": 1,
+      "section_id": "paper_007_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Large language models are trained on vast amounts of internet data, prompting concerns and speculation that they have memorized public benchmarks. Going from speculation to proof of contamination is challenging, as the pretraining data used by proprietary models are often not publicly accessible. We show that it is possibletoprovideprovableguaranteesoftestsetcontaminationinlanguagemodels without access to pretraining data or model weights. Our approach leverages the fact that when there is no data contamination, all orderings of an exchangeable benchmark should be equally likely. In contrast, the tendency for language models to memorize example order means that a contaminated language model will find certain canonical orderings to be much more likely than others. Our test flags potential contamination whenever the likelihood of a canonically ordered benchmark dataset is significantly hig",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "page_number": 10,
+      "section_id": "paper_007_openreview_2024_02_11_sec_limitations",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "We highlight a few limitations of our approach for detecting test set contamination. First, the pvalues presented in this paper do not have multiple test corrections applied, as it is difficult to define the ‘total number of hypotheses’ tested throughout development.\n\nSecond, any application of this test in practice will likely involve taking an off-the-shelf benchmark dataset X , for which it will be difficult to know if the dataset is truly exchangable. Heuristic negative controls such as our BioMedLM experiments can be helpful, but we cannot ever prove that a dataset\n\nis exchangable without knowing its data generating process. We strongly encourage future dataset creators to apply a random shuffle to their datasets (and to publicize this fact), which would allow our tests to be applied.\n\nFinally, our tests focus on the case of verbatim contamination where a language model ingests a te",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_007_ev_003",
+      "page_number": 4,
+      "section_id": "paper_007_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "The core idea of our statistical test is to compare the log probability of the dataset under its original ordering to the log probability under random permutations. We begin by describing the basic version of this idea, which directly implements a permutation test on the log probabilities. We then identify some drawbacks of this approach and describe a sharded test which improves the statistical power and computational efficiency of the test.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_007_ev_004",
+      "page_number": 16,
+      "section_id": "paper_007_openreview_2024_02_11_sec_d",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0027",
+      "evidence_mode": "quote",
+      "excerpt": "We list in table 4 the full set of MMLU results used to generate the omnibus p-values for contamination by MMLU listed in table 2, before filtering out for suspected non-exchangeability.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_007_ev_005",
+      "page_number": 1,
+      "section_id": "paper_007_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Large language models (LLMs) have driven remarkable improvements on a number of natural language processing benchmarks (Wang et al., 2019) and professional exams (OpenAI, 2023). These gains are driven by large-scale pretraining on massive datasets collected from the internet. While this paradigm is powerful, the minimal curation involved has led to growing concerns of dataset contamination, where the pretraining dataset contains various evaluation benchmarks. This contamination leads to difficulties in understanding the true performance of language models – such as whether they simply memorize the answers to difficult exam questions. Disentangling the effects of generalization and test set memorization is critical to our understanding of language model performance, but this is becoming increasingly difficult as the pretraining datasets are rarely public for many of the LMs deployed today",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_007_ev_006",
+      "page_number": 18,
+      "section_id": "paper_007_openreview_2024_02_11_sec_e",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_007_openreview_2024_02_11_chunk_0029",
+      "evidence_mode": "quote",
+      "excerpt": "Dataset Size LLaMA2-7B Mistral-7B Pythia-1.4B GPT-2 XL BioMedLM Abstract-Algebra 100 0.103 0.246 0.645 0.894 0.861 Anatomy 135 0.586 0.605 0.605 0.439 0.649 Astronomy 152 0.550 0.657 0.050 0.003 0.050 Business-Ethics 100 0.936 0.440 0.107 0.808 0.499 Clinical-Knowledge 265 0.199 0.108 0.081 0.004 0.268 College-Biology 144 0.108 0.051 0.152 0.260 0.779 College-Chemistry 100 0.526 0.614 0.595 0.355 0.265 College-Computer-Science 100 0.060 0.498 0.383 0.532 0.267 College-Mathematics 100 0.059 0.151 0.162 0.321 0.727 College-Medicine 173 0.397 0.106 0.340 0.440 0.067 College-Physics 102 0.694 0.757 0.972 0.719 0.262 Computer-Security 100 0.214 0.007 0.314 0.180 0.928 Conceptual-Physics 235 0.554 0.333 0.811 0.710 0.924 Econometrics 114 0.616 0.761 0.540 0.508 0.035 Electrical-Engineering 145 0.266 0.364 0.595 0.490 0.277 Elementary-Mathematics 378 0.059 0.416 0.260 0.355 0.528 Formal-Logic 1",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_007_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_007_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_007_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_007_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_007_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_007_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_007_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_007_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_007_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_007_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

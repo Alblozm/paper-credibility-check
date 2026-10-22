@@ -1,0 +1,41 @@
+{
+  "paper_id": "paper_048",
+  "paper_version_id": "paper_048_iclr_2025_proceedings",
+  "title": "Can Textual Gradient Work in Federated Learning?",
+  "authors": [
+    "Chen, Minghui",
+    "Jin, Ruinan",
+    "Deng, Wenlong",
+    "Chen, Yuanyuan",
+    "Huang, Zhi",
+    "Yu, Han",
+    "Li, Xiaoxiao"
+  ],
+  "abstract": "Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad, which automates ``differentiation'' via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in various real-world applications that do not support numerical gradient propagation or loss calculation.  It opens new avenues for optimization in decentralized, resource-constrained environments, suggesting that users of black-box LLMs (e.g., ChatGPT) could enhance components of LLM agentic systems (such as prompt optimization) through collaborative paradigms like federated learning (FL). In this paper, we systematically explore the potential and challenges of incorporating textual gradient into FL. Our contributions are fourfold. Firstly , we introduce a novel FL paradigm, Federated Textual Gradient (FedTextGrad), that allows FL clients to upload their locally optimized prompts derived from textual gradients, while the FL server aggregates the received prompts through text summarization. Unlike traditional FL frameworks, which are designed for numerical aggregation, FedTextGrad is specifically tailored for handling textual data, expanding the applicability of FL to a broader range of problems that lack well-defined numerical loss functions.  Secondly , building on this design, we conduct extensive experiments to explore the feasibility of federated textual gradients. Our findings highlight the importance of properly tuning key factors (e.g., local steps) in FL training to effectively integrate textual gradients.  Thirdly , we highlight a major challenge in federated textual gradient aggregation: retaining essential information from distributed prompt updates. Concatenation often produces prompts that exceed the LLM API’s context window, while summarization can degrade performance by generating overly condensed or complex text that lacks key context.  Last but not least , in response to this issue, we improve the vanilla variant of FedTextGrad by providing actionable guidance to the LLM when summarizing client prompts by leveraging the Uniform Information Density principle. Such a design reduces the complexity of the aggregated global prompt, thereby better incentivizing the LLM's reasoning ability. Through this principled study, we enable the adoption of textual gradients in FL for optimizing LLMs, identify important issues, and pinpoint future directions, thereby opening up a new research area that warrants further investigation.",
+  "language": "en",
+  "source_type": "pdf",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/1a25185fe1b0d46241de7738ea320710-Paper-Conference.pdf",
+  "tags": [
+    "iclr_2025",
+    "official_proceedings",
+    "recent_holdout",
+    "federated_learning"
+  ],
+  "venue": "ICLR",
+  "publication_year": 2025,
+  "dataset_split": "test",
+  "decision": "Accept (proceedings)",
+  "decision_verified": true,
+  "landing_page_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/1a25185fe1b0d46241de7738ea320710-Abstract-Conference.html",
+  "retrieved_at": "2026-09-08T08:23:38Z",
+  "pdf_sha256": "869de3c5b17719d83e693210d905710c0b10430e76b5407dd80a54cd5f7f827f",
+  "pdf_sha256_status": "verified",
+  "page_count": 22,
+  "page_count_status": "verified",
+  "local_pdf_path": "data/raw_pdfs/paper_048/1a25185fe1b0d46241de7738ea320710-Paper-Conference.pdf",
+  "parse_status": "completed",
+  "data_status": "parsed",
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "parse_quality": "good"
+}

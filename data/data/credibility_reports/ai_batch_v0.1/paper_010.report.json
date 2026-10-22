@@ -1,0 +1,4821 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-a8c415746a107a27",
+  "paper_version_id": "paper_010_openreview_2024_02_11",
+  "pdf_sha256": "5af0615bf431cc637d93dae8f1f60337dbfd44b4b610a8c2832a18716c9b617f",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "92ff425bcb771ec00569b821c488373bcccbf953e7f5a743ddd5fa01579d8b5f",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.391025641025641,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.173076923076923,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 52,
+        "extracted_count": 52,
+        "parsed_count": 52,
+        "queried_count": 52,
+        "matched_count": 8,
+        "metadata_conflict_count": 6,
+        "unverified_count": 33,
+        "parse_failed_count": 0,
+        "not_checked_count": 0,
+        "query_failed_count": 5,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=ekeyCgeRfC",
+            "checked_at": "2026-10-09T04:41:40.911791Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-52f9d112218f",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 0,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:41:40.912622Z",
+            "source_urls": [
+              "https://api.github.com/repos/satwik77/incontext-bool",
+              "https://api.github.com/repos/satwik77/incontext-bool/issues?state=all&per_page=100&page=1"
+            ]
+          },
+          {
+            "repository_id": "repo-07efbedb395d",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 37,
+            "comments_checked": 25,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:41:40.913726Z",
+            "source_urls": [
+              "https://api.github.com/repos/huggingface/text-generation-inference",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3336/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3333/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3320/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3318/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3309/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3306/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3304/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3301/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3299/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3296/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3285/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3275/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3259/comments?per_page=100&page=1",
+              "https://api.github.com/repos/huggingface/text-generation-inference/issues/3257/comments?per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "In-context learning through the bayesian prism",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=In-context+learning+through+the+bayesian+prism&rows=5",
+        "checked_at": "2026-10-09T04:41:33.608554Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.54499/2024.02295.bd",
+            "source_url": "https://doi.org/10.54499/2024.02295.bd",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Kroz prizmu historije / Through the prism of history",
+            "authors": [
+              "Bandžović"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.55425/23036966.2017.4.1.137",
+            "source_url": "https://doi.org/10.55425/23036966.2017.4.1.137",
+            "title_similarity": 0.4583333333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Online Bayesian inference for the parameters of PRISM programs",
+            "authors": [
+              "Cussens"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1007/s10994-012-5305-8",
+            "source_url": "https://doi.org/10.1007/s10994-012-5305-8",
+            "title_similarity": 0.3333333333333333
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Teaching International Law through the Prism of Global Events",
+            "authors": [
+              "Saksena"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.4324/9781003429265-25",
+            "source_url": "https://doi.org/10.4324/9781003429265-25",
+            "title_similarity": 0.5233644859813084
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Chapter 1. Through a Spinning Prism Lightly",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1515/9781618112378-002",
+            "source_url": "https://doi.org/10.1515/9781618112378-002",
+            "title_similarity": 0.5227272727272727
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:23.076952Z",
+        "response_sha256": "360455dbd060b9e063675ae8b06dc7dd3dcbb8638e06c47a9fafc84620a69e04",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=In-context+learning+through+the+bayesian+prism&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.608554Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A closer look at in-context learning under distribution shifts",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+closer+look+at+in-context+learning+under+distribution+shifts&rows=5",
+        "checked_at": "2026-10-09T04:41:33.608998Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Remediation: A closer look in an educational context",
+            "authors": [
+              "Culleiton"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/j.teln.2008.07.001",
+            "source_url": "https://doi.org/10.1016/j.teln.2008.07.001",
+            "title_similarity": 0.46017699115044247
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Web 2.0 and Learning",
+            "authors": [
+              "Olaniran",
+              "Williams"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.4018/978-1-60566-826-0.ch002",
+            "source_url": "https://doi.org/10.4018/978-1-60566-826-0.ch002",
+            "title_similarity": 0.34146341463414637
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Closer Look at Financial Development and Income Distribution",
+            "authors": [
+              "Gimet",
+              "Lagoarde-Segot"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.2139/ssrn.1757876",
+            "source_url": "https://doi.org/10.2139/ssrn.1757876",
+            "title_similarity": 0.5806451612903226
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Context of Discovery in Context",
+            "authors": [],
+            "year": 1975,
+            "years": [
+              1975
+            ],
+            "doi": "10.5840/wcp151975541",
+            "source_url": "https://doi.org/10.5840/wcp151975541",
+            "title_similarity": 0.35051546391752575
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "18 A closer look at interdisciplinary texts",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1515/9789048540129-018",
+            "source_url": "https://doi.org/10.1515/9789048540129-018",
+            "title_similarity": 0.47619047619047616
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:24.173759Z",
+        "response_sha256": "c431528b4d79c181f968d583eda4a67f7bfa7531fdf332c21f496ec2ca4152f9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+closer+look+at+in-context+learning+under+distribution+shifts&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.608998Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "What learning algorithm is in-context learning? investigations with linear models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=What+learning+algorithm+is+in-context+learning%3F+investigations+with+linear+models&rows=5",
+        "checked_at": "2026-10-09T04:41:33.609746Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Peer Review #1 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.813v0.1/reviews/1",
+            "source_url": "https://doi.org/10.7287/peerj-cs.813v0.1/reviews/1",
+            "title_similarity": 0.2617801047120419
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Peer Review #2 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.813v0.1/reviews/2",
+            "source_url": "https://doi.org/10.7287/peerj-cs.813v0.1/reviews/2",
+            "title_similarity": 0.2617801047120419
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Peer Review #2 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.2)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.813v0.2/reviews/2",
+            "source_url": "https://doi.org/10.7287/peerj-cs.813v0.2/reviews/2",
+            "title_similarity": 0.2617801047120419
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "In-Context Operator Learning for Linear Propagator Models",
+            "authors": [
+              "Meng",
+              "Voss",
+              "Detering",
+              "Farolfi",
+              "Osher",
+              "Menz"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5110832",
+            "source_url": "https://doi.org/10.2139/ssrn.5110832",
+            "title_similarity": 0.5109489051094891
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Investigating to what extent learning hours affect students’ GPA through a comparison of linear regression and neural-network machine learning models",
+            "authors": [
+              "Wu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.70121/001c.163514",
+            "source_url": "https://doi.org/10.70121/001c.163514",
+            "title_similarity": 0.35964912280701755
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:24.202272Z",
+        "response_sha256": "b44170f2a1a3438b2ab9c1fa14bc590463144d993c5121907fe7d7be0f889685",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=What+learning+algorithm+is+in-context+learning%3F+investigations+with+linear+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.609746Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Masked hard-attention transformers and boolean rasp recognize exactly the star-free languages",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Masked+hard-attention+transformers+and+boolean+rasp+recognize+exactly+the+star-free+languages&rows=5",
+        "checked_at": "2026-10-09T04:41:33.610861Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Masked Hard-Attention Transformers Recognize Exactly the Star-Free Languages",
+            "authors": [
+              "Yang",
+              "Chiang",
+              "Angluin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0327",
+            "source_url": "https://doi.org/10.52202/079017-0327",
+            "title_similarity": 0.8994082840236687
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Finite loops recognize exactly the regular open languages",
+            "authors": [
+              "Beaudry",
+              "Lemieux",
+              "Thérien"
+            ],
+            "year": 1997,
+            "years": [
+              1997,
+              2005
+            ],
+            "doi": "10.1007/3-540-63165-8_169",
+            "source_url": "https://doi.org/10.1007/3-540-63165-8_169",
+            "title_similarity": 0.5733333333333334
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "EEND-M2F: Masked-attention mask transformers for speaker diarization",
+            "authors": [
+              "Härkönen",
+              "Broughton",
+              "Samarakoon"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21437/interspeech.2024-668",
+            "source_url": "https://doi.org/10.21437/interspeech.2024-668",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "One-way globally deterministic synchronized alternating finite automata recognize exactly deterministic context-sensitive languages",
+            "authors": [
+              "Slobodová"
+            ],
+            "year": 1990,
+            "years": [
+              1990
+            ],
+            "doi": "10.1016/0020-0190(90)90099-j",
+            "source_url": "https://doi.org/10.1016/0020-0190(90)90099-j",
+            "title_similarity": 0.41964285714285715
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Star-free languages",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1201/9781482285840-16",
+            "source_url": "https://doi.org/10.1201/9781482285840-16",
+            "title_similarity": 0.3392857142857143
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:23.124406Z",
+        "response_sha256": "80eca83ad3281941a1c94c91d603f46d10cb3d8bda0507a3ba0d5c0aa071fe27",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Masked+hard-attention+transformers+and+boolean+rasp+recognize+exactly+the+star-free+languages&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.610861Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-7",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/2023.acl-long"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2023.acl-long",
+        "checked_at": "2026-10-09T04:41:33.612887Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.acl-long",
+            "source_url": "https://doi.org/10.18653/v1/2023.acl-long",
+            "title_similarity": 0.23036649214659685
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:23.859902Z",
+        "response_sha256": "5919e49e8898523c1707a607e74e0dd7d539833cbe97d78b0916daf4cf52f58d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2F2023.acl-long"
+      ],
+      "checked_at": "2026-10-09T04:41:33.612887Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-8",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Noise-tolerant learning, the parity problem, and the statistical query model",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Noise-tolerant+learning%2C+the+parity+problem%2C+and+the+statistical+query+model&rows=5",
+        "checked_at": "2026-10-09T04:41:34.545800Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Noise-tolerant learning, the parity problem, and the statistical query model",
+            "authors": [
+              "Blum",
+              "Kalai",
+              "Wasserman"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1145/792538.792543",
+            "source_url": "https://doi.org/10.1145/792538.792543",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Noise-tolerant learning, the parity problem, and the statistical query model",
+            "authors": [
+              "Blum",
+              "Kalai",
+              "Wasserman"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1145/335305.335355",
+            "source_url": "https://doi.org/10.1145/335305.335355",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Noise-tolerant parity learning with one quantum bit",
+            "authors": [
+              "Park",
+              "Rhee",
+              "Lee"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1103/physreva.97.032327",
+            "source_url": "https://doi.org/10.1103/physreva.97.032327",
+            "title_similarity": 0.496
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Statistical Query Learning, 1998; Kearns",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/springerreference_57920",
+            "source_url": "https://doi.org/10.1007/springerreference_57920",
+            "title_similarity": 0.3392857142857143
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "General bounds on statistical query learning and PAC learning with noise via hypothesis boosting",
+            "authors": [
+              "Aslam",
+              "Decatur"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/sfcs.1993.366859",
+            "source_url": "https://doi.org/10.1109/sfcs.1993.366859",
+            "title_similarity": 0.35294117647058826
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:34.544175Z",
+        "response_sha256": "f360c75d63eecbdc75cec2283c1a2e1fd47de78b568628d50944c486a848e121",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Noise-tolerant+learning%2C+the+parity+problem%2C+and+the+statistical+query+model&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:34.545800Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-9",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Language models are few-shot learners",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5",
+        "checked_at": "2026-10-09T04:41:33.613321Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Language Models are Few-Shot Learners",
+            "authors": [
+              "Malakar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.65525/svup.9788199778009.2026.224-230",
+            "source_url": "https://doi.org/10.65525/svup.9788199778009.2026.224-230",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adapting Language-Audio Models as Few-Shot Audio Learners",
+            "authors": [
+              "Liang",
+              "Liu",
+              "Liu",
+              "Phan",
+              "Benetos",
+              "Plumbley",
+              "Wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21437/interspeech.2023-1082",
+            "source_url": "https://doi.org/10.21437/interspeech.2023-1082",
+            "title_similarity": 0.7446808510638298
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Language Models of Code are Few-Shot Commonsense Learners",
+            "authors": [
+              "Madaan",
+              "Zhou",
+              "Alon",
+              "Yang",
+              "Neubig"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.90",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.90",
+            "title_similarity": 0.7872340425531915
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Language Models are Few-shot Multilingual Learners",
+            "authors": [
+              "Winata",
+              "Madotto",
+              "Lin",
+              "Liu",
+              "Yosinski",
+              "Fung"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.18653/v1/2021.mrl-1.1",
+            "source_url": "https://doi.org/10.18653/v1/2021.mrl-1.1",
+            "title_similarity": 0.8505747126436781
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MaterialBrain: High-Performance Material Synthesis Extraction via HumanAI-Curated Few-Shot Large Language Models",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.5c02299.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.5c02299.s001",
+            "title_similarity": 0.20270270270270271
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:34:03.527518Z",
+        "response_sha256": "07f5926555c42d04c1b806c058e7e66db26a6d8f00a76df2d8520a0a4243b475",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.613321Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Why can gpt learn incontext? language models secretly perform gradient descent as meta optimizers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Why+can+gpt+learn+incontext%3F+language+models+secretly+perform+gradient+descent+as+meta+optimizers&rows=5",
+        "checked_at": "2026-10-09T04:41:34.664323Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers",
+            "authors": [
+              "Dai",
+              "Sun",
+              "Dong",
+              "Hao",
+              "Ma",
+              "Sui",
+              "Wei"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-acl.247",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.247",
+            "title_similarity": 0.9948186528497409
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Can Larger Language Models Always Perform Better? A Comparison of GPT, FinBERT, and Dictionaries in Evaluating Management Sentiment",
+            "authors": [
+              "Bose",
+              "Hu",
+              "Liang",
+              "Yang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5153587",
+            "source_url": "https://doi.org/10.2139/ssrn.5153587",
+            "title_similarity": 0.45535714285714285
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Can Large Language Models Perform Inductive Qualitative Coding? - Evaluating GPT-4 on Korean-Language Texts",
+            "authors": [
+              "Kim"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.46397/jaih.21.4",
+            "source_url": "https://doi.org/10.46397/jaih.21.4",
+            "title_similarity": 0.45
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How to Learn and Teach Economics with Large Language Models, Including GPT",
+            "authors": [
+              "Cowen",
+              "Tabarrok"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4391863",
+            "source_url": "https://doi.org/10.2139/ssrn.4391863",
+            "title_similarity": 0.46153846153846156
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Why Large Language Models can Secretly Outperform Embedding Similarity in Information Retrieval",
+            "authors": [
+              "Benescu",
+              "de Jong"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.18653/v1/2026.acl-srw.5",
+            "source_url": "https://doi.org/10.18653/v1/2026.acl-srw.5",
+            "title_similarity": 0.5445026178010471
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:34.662688Z",
+        "response_sha256": "bdea8ad797a67502faa9e38952fa2f5b0616e9d11de963521d6c5249149a7bc3",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Why+can+gpt+learn+incontext%3F+language+models+secretly+perform+gradient+descent+as+meta+optimizers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:34.664323Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Neural networks and the chomsky hierarchy",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Neural+networks+and+the+chomsky+hierarchy&rows=5",
+        "checked_at": "2026-10-09T04:41:33.614026Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "The Chomsky Hierarchy\n            <sup>1</sup>",
+            "authors": [
+              "Hunter"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1002/9781119598732.ch5",
+            "source_url": "https://doi.org/10.1002/9781119598732.ch5",
+            "title_similarity": 0.65625
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Analog neuron hierarchy",
+            "authors": [
+              "Šíma"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.neunet.2020.05.006",
+            "source_url": "https://doi.org/10.1016/j.neunet.2020.05.006",
+            "title_similarity": 0.46875
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Review for \"Hierarchy‐guided Neural Networks for Species Classification\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1111/2041-210x.13768/v1/review1",
+            "source_url": "https://doi.org/10.1111/2041-210x.13768/v1/review1",
+            "title_similarity": 0.3783783783783784
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Hierarchy‐guided Neural Networks for Species Classification\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1111/2041-210x.13768/v1/review2",
+            "source_url": "https://doi.org/10.1111/2041-210x.13768/v1/review2",
+            "title_similarity": 0.3783783783783784
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review for \"Hierarchy‐guided Neural Networks for Species Classification\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1111/2041-210x.13768/v2/review1",
+            "source_url": "https://doi.org/10.1111/2041-210x.13768/v2/review1",
+            "title_similarity": 0.3783783783783784
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:25.217298Z",
+        "response_sha256": "dc944b51b0bbb581c2181ae0c324e5b8bfe07853bde19dda71ecb7a2c1f5b093",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Neural+networks+and+the+chomsky+hierarchy&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.614026Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A survey for in-context learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+survey+for+in-context+learning&rows=5",
+        "checked_at": "2026-10-09T04:41:33.614406Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Survey of Context-awareness in Learning Environments in 2010-2016",
+            "authors": [
+              "Hasanov",
+              "Laine"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.5220/0006255302340241",
+            "source_url": "https://doi.org/10.5220/0006255302340241",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "In-Context Learning in Large Language Models: A Comprehensive Survey",
+            "authors": [
+              "Highmore"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202407.0926.v1",
+            "source_url": "https://doi.org/10.20944/preprints202407.0926.v1",
+            "title_similarity": 0.3838383838383838
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The CALL Survey",
+            "authors": [
+              "Levy"
+            ],
+            "year": 1997,
+            "years": [
+              1997
+            ],
+            "doi": "10.1093/oso/9780198236320.005.0001",
+            "source_url": "https://doi.org/10.1093/oso/9780198236320.005.0001",
+            "title_similarity": 0.3404255319148936
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "In-Context Learning from Demonstrations for Robotic Manipulation: A Survey",
+            "authors": [
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202609.0780.v1",
+            "source_url": "https://doi.org/10.20944/preprints202609.0780.v1",
+            "title_similarity": 0.3619047619047619
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Conceptualization II: the CALL Survey",
+            "authors": [
+              "Levy"
+            ],
+            "year": 1997,
+            "years": [
+              1997
+            ],
+            "doi": "10.1093/oso/9780198236320.003.0005",
+            "source_url": "https://doi.org/10.1093/oso/9780198236320.003.0005",
+            "title_similarity": 0.23529411764705882
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:25.465093Z",
+        "response_sha256": "8506a6da10d670bf2846486e10bfcc9bf17bfe34015c140315e7b42662dbf9e4",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+survey+for+in-context+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.614406Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How can self-attention networks recognize dyck-n languages? arXiv preprint arXiv:2010.04303 , 2020.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+can+self-attention+networks+recognize+dyck-n+languages%3F+arXiv+preprint+arXiv%3A2010.04303+%2C+2020.&rows=5",
+        "checked_at": "2026-10-09T04:41:36.553008Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:36.552963Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+can+self-attention+networks+recognize+dyck-n+languages%3F+arXiv+preprint+arXiv%3A2010.04303+%2C+2020.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.553008Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A mathematical framework for transformer circuits",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+mathematical+framework+for+transformer+circuits&rows=5",
+        "checked_at": "2026-10-09T04:41:33.614873Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Reconfigurable Electric Circuits Within the Quantum Circuits Mathematical Framework",
+            "authors": [
+              "Delgado"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.172710248.83116727/v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.172710248.83116727/v2",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Reconfigurable Electric Circuits Within the Quantum Circuits Mathematical Framework",
+            "authors": [
+              "Delgado"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.172710248.83116727/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.172710248.83116727/v1",
+            "title_similarity": 0.36363636363636365
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "DVPNet: A New XAI-Based Interpretable Genetic Profiling Framework Using Nucleotide Transformer and Probabilistic Circuits",
+            "authors": [
+              "Kusumoto"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.01.28.695053",
+            "source_url": "https://doi.org/10.64898/2026.01.28.695053",
+            "title_similarity": 0.5088757396449705
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "DeTformer: A Novel Efficient Transformer Framework for Image Deraining",
+            "authors": [
+              "Ragini",
+              "Prakash",
+              "Cheruku"
+            ],
+            "year": 2023,
+            "years": [
+              2023,
+              2024
+            ],
+            "doi": "10.1007/s00034-023-02499-9",
+            "source_url": "https://doi.org/10.1007/s00034-023-02499-9",
+            "title_similarity": 0.423728813559322
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Mathematical programming and resistor transformer diode networks",
+            "authors": [
+              "Narayanan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icecs.2004.1399616",
+            "source_url": "https://doi.org/10.1109/icecs.2004.1399616",
+            "title_similarity": 0.6194690265486725
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:27.713558Z",
+        "response_sha256": "9b1ebe098644e57db9923eeda63f388c0a4fbc84dbce1c93eb500785afcdddbb",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+mathematical+framework+for+transformer+circuits&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.614873Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-17",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On learning ring-sum-expansions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+learning+ring-sum-expansions&rows=5",
+        "checked_at": "2026-10-09T04:41:33.615487Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "On Learning Ring-Sum-Expansions",
+            "authors": [
+              "Fischer",
+              "Simon"
+            ],
+            "year": 1990,
+            "years": [
+              1990
+            ],
+            "doi": "10.1016/b978-1-55860-146-8.50013-8",
+            "source_url": "https://doi.org/10.1016/b978-1-55860-146-8.50013-8",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On Learning Ring-Sum-Expansions",
+            "authors": [
+              "Fischer",
+              "Simon"
+            ],
+            "year": 1992,
+            "years": [
+              1992,
+              2006
+            ],
+            "doi": "10.1137/0221014",
+            "source_url": "https://doi.org/10.1137/0221014",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sum of Summations of Annamalai’s Binomial Expansions",
+            "authors": [
+              "Annamalai"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.2139/ssrn.4119994",
+            "source_url": "https://doi.org/10.2139/ssrn.4119994",
+            "title_similarity": 0.3855421686746988
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Structure of modulo-2 ring-sum canonical expansions for boolean functions",
+            "authors": [
+              "LUI",
+              "MUZIO"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1080/00207219208925551",
+            "source_url": "https://doi.org/10.1080/00207219208925551",
+            "title_similarity": 0.4423076923076923
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Rh-Catalyzed Aziridine Ring Expansions to Dehydropiperazines",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.orglett.0c01124.s001",
+            "source_url": "https://doi.org/10.1021/acs.orglett.0c01124.s001",
+            "title_similarity": 0.5054945054945055
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:27.175378Z",
+        "response_sha256": "d8c74481bf37e78828563bc7322c123b515298a23391598bdf8ccebbb1eb089c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+learning+ring-sum-expansions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:33.615487Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the complexity of teaching",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+complexity+of+teaching&rows=5",
+        "checked_at": "2026-10-09T04:41:36.573467Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:36.573396Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+complexity+of+teaching&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.573467Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1162/tacl"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1162%2Ftacl",
+        "checked_at": "2026-10-09T04:41:35.195644Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:35.194972Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1162%2Ftacl"
+      ],
+      "checked_at": "2026-10-09T04:41:35.195644Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A theory of emergent in-context learning as implicit structure induction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+theory+of+emergent+in-context+learning+as+implicit+structure+induction&rows=5",
+        "checked_at": "2026-10-09T04:41:34.669452Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Plant Volatile Organic Compounds’ Cues in Gall Induction: In the Search for a Semiochemical Framework Considering Developmental Emergent Properties and Ecological Context Dependency",
+            "authors": [
+              "Villagra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-031-80064-1_18",
+            "source_url": "https://doi.org/10.1007/978-3-031-80064-1_18",
+            "title_similarity": 0.2948207171314741
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A theory of the implicit nature of implicit learning",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.4324/9780203989401-11",
+            "source_url": "https://doi.org/10.4324/9780203989401-11",
+            "title_similarity": 0.45161290322580644
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Masked and Permuted Implicit Context Learning for Scene Text Recognition_supp1-3381893.pdf",
+            "authors": [
+              "Zhou"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/lsp.2024.3381893/mm1",
+            "source_url": "https://doi.org/10.1109/lsp.2024.3381893/mm1",
+            "title_similarity": 0.4567901234567901
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The model theory for words with context-sensitive implicit arguments",
+            "authors": [
+              "Gillon"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1515/9783110227772.2.127",
+            "source_url": "https://doi.org/10.1515/9783110227772.2.127",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "zzzzz Withdrawn per email 4-21-26 Making the Implicit Explicit: A Theory-Informed Reflection on Emergent Evaluation Capacity Building Practice",
+            "authors": [
+              "Otieno"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3102/ip.26.2272597",
+            "source_url": "https://doi.org/10.3102/ip.26.2272597",
+            "title_similarity": 0.3380281690140845
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:28.931020Z",
+        "response_sha256": "b709fcf5ec1b7d5e3ab9d1ff4ac91321c43929cddbf1e30ed20a3b0bda2a3f68",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+theory+of+emergent+in-context+learning+as+implicit+structure+induction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:34.669452Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Long short-term memory",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Long+short-term+memory&rows=5",
+        "checked_at": "2026-10-09T04:41:35.379062Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Forecasting Cryptocurrency Prices Using Hybrid Long Short – Term Memory and Long Short – Term Memory Variants",
+            "authors": [
+              "Nguyen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-5374266/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-5374266/v1",
+            "title_similarity": 0.3464566929133858
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Figure 4: Long short-term memory.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.216/fig-4",
+            "source_url": "https://doi.org/10.7717/peerjcs.216/fig-4",
+            "title_similarity": 0.8301886792452831
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Figure 7: Long short-term memory.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3097/fig-7",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3097/fig-7",
+            "title_similarity": 0.8301886792452831
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Figure 1: Long short-term memory structure.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2289/fig-1",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2289/fig-1",
+            "title_similarity": 0.6984126984126984
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Figure 2: Long short-term memory structure.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerjcs.1663/fig-2",
+            "source_url": "https://doi.org/10.7717/peerjcs.1663/fig-2",
+            "title_similarity": 0.6984126984126984
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:35.377832Z",
+        "response_sha256": "609898c701a2e2925a1f16b6ddceece1cfead4a8e32ffda0aa4dd3498306a8b5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Long+short-term+memory&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:35.379062Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-24",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Efficient noise-tolerant learning from statistical queries",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Efficient+noise-tolerant+learning+from+statistical+queries&rows=5",
+        "checked_at": "2026-10-09T04:41:34.675183Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Efficient noise-tolerant learning from statistical queries",
+            "authors": [
+              "Kearns"
+            ],
+            "year": 1998,
+            "years": [
+              1998
+            ],
+            "doi": "10.1145/293347.293351",
+            "source_url": "https://doi.org/10.1145/293347.293351",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Efficient noise-tolerant learning from statistical queries",
+            "authors": [
+              "Kearns"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1145/167088.167200",
+            "source_url": "https://doi.org/10.1145/167088.167200",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning in Hybrid Noise Environments Using Statistical Queries",
+            "authors": [
+              "Decatur"
+            ],
+            "year": 1996,
+            "years": [
+              1996
+            ],
+            "doi": "10.1007/978-1-4612-2404-4_25",
+            "source_url": "https://doi.org/10.1007/978-1-4612-2404-4_25",
+            "title_similarity": 0.5289256198347108
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "On the Efficiency of Noise-Tolerant PAC Algorithms Derived from Statistical Queries",
+            "authors": [
+              "Jackson"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1023/a:1024697502780",
+            "source_url": "https://doi.org/10.1023/a:1024697502780",
+            "title_similarity": 0.75177304964539
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "From noise-free to noise-tolerant and from on-line to batch learning",
+            "authors": [
+              "Klasner",
+              "Simon"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1145/225298.225328",
+            "source_url": "https://doi.org/10.1145/225298.225328",
+            "title_similarity": 0.4444444444444444
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:29.286446Z",
+        "response_sha256": "d1eaee797e44e294438de6b7596e013246d4a285bedb56ee21b87c3c52acf6d5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Efficient+noise-tolerant+learning+from+statistical+queries&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:34.675183Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A field guide to dynamical recurrent networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+field+guide+to+dynamical+recurrent+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:35.884489Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Dynamical Recurrent Networks",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544037.ch1",
+            "source_url": "https://doi.org/10.1109/9780470544037.ch1",
+            "title_similarity": 0.7671232876712328
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Dynamical Recurrent Networks in Control",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544037.ch16",
+            "source_url": "https://doi.org/10.1109/9780470544037.ch16",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamical Recurrent Networks: Looking Back and Looking Forward",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544037.ch20",
+            "source_url": "https://doi.org/10.1109/9780470544037.ch20",
+            "title_similarity": 0.5283018867924528
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Gradient Calculations for Dynamic Recurrent Neural Networks",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544037.ch11",
+            "source_url": "https://doi.org/10.1109/9780470544037.ch11",
+            "title_similarity": 0.5961538461538461
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Index",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544037.index",
+            "source_url": "https://doi.org/10.1109/9780470544037.index",
+            "title_similarity": 0.12
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:35.881674Z",
+        "response_sha256": "32171f3190bb4bd13070012689376f06832b85b924c4a27f7b6d7d9f65219d15",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+field+guide+to+dynamical+recurrent+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:35.884489Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Transformers as algorithms: Generalization and implicit model selection in in-context learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+as+algorithms%3A+Generalization+and+implicit+model+selection+in+in-context+learning&rows=5",
+        "checked_at": "2026-10-09T04:41:35.197466Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Generalization-Enhanced State Assessment of Railway Power Transformers Using Feature-Guided Stacking Learning",
+            "authors": [
+              "Huang",
+              "Huang",
+              "Chen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.3390/a19070598",
+            "source_url": "https://doi.org/10.3390/a19070598",
+            "title_similarity": 0.38613861386138615
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Characterizing In-Context Learning: When Can Transformers Match Standard Learning Algorithms?",
+            "authors": [
+              "Hawarey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.65737/airmcs2026277",
+            "source_url": "https://doi.org/10.65737/airmcs2026277",
+            "title_similarity": 0.30434782608695654
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "In-Context Learning with Representations: Contextual Generalization of Trained Transformers",
+            "authors": [
+              "Yang",
+              "Huang",
+              "Liang",
+              "Chi"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2727",
+            "source_url": "https://doi.org/10.52202/079017-2727",
+            "title_similarity": 0.20765027322404372
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Generalization enhancement of support vector regression in electric load forecasting with model selection",
+            "authors": [
+              "Sarhani",
+              "El Afia"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1145/3230905.3230947",
+            "source_url": "https://doi.org/10.1145/3230905.3230947",
+            "title_similarity": 0.3838383838383838
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Model selection for precision dosing: Comparison of Machine Learning and Evidence-plus-Expertise Algorithms",
+            "authors": [
+              "Hughes",
+              "Os",
+              "Keizer"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.70534/hnki7964",
+            "source_url": "https://doi.org/10.70534/hnki7964",
+            "title_similarity": 0.32160804020100503
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:29.995414Z",
+        "response_sha256": "494cef100ae41b3ea275033d6fe071742396cf433693e54096b5a3331a515f71",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Transformers+as+algorithms%3A+Generalization+and+implicit+model+selection+in+in-context+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:35.197466Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Transformers learn shortcuts to automata",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+learn+shortcuts+to+automata&rows=5",
+        "checked_at": "2026-10-09T04:41:38.034676Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:38.034616Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Transformers+learn+shortcuts+to+automata&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:38.034676Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "What makes good in-context examples for gpt- 3 ? arXiv preprint arXiv:2101.06804 , 2021.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=What+makes+good+in-context+examples+for+gpt-+3+%3F+arXiv+preprint+arXiv%3A2101.06804+%2C+2021.&rows=5",
+        "checked_at": "2026-10-09T04:41:35.380758Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.38961038961038963
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The future of evaluation of child and adolescent psychiatric treatments",
+            "authors": [
+              "Falissard"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.14744/iacapaparxiv.2020.20007",
+            "source_url": "https://doi.org/10.14744/iacapaparxiv.2020.20007",
+            "title_similarity": 0.27450980392156865
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.26143790849673204
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.23943661971830985
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:30.631693Z",
+        "response_sha256": "e3004d416f634e0603ace2275555ec7b028cc0a70ae29bff362668d9984b6f68",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=What+makes+good+in-context+examples+for+gpt-+3+%3F+arXiv+preprint+arXiv%3A2101.06804+%2C+2021.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:35.380758Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Who models the models that model models? an exploration of gpt-3’s in-context model fitting ability",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Who+models+the+models+that+model+models%3F+an+exploration+of+gpt-3%E2%80%99s+in-context+model+fitting+ability&rows=5",
+        "checked_at": "2026-10-09T04:41:35.384329Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Table 3: Best-fitting models for each morphological trait using mixed-effects model regression.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.6754/table-3",
+            "source_url": "https://doi.org/10.7717/peerj.6754/table-3",
+            "title_similarity": 0.2094240837696335
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The effects of model misspecification when fitting generalized linear mixed models",
+            "authors": [
+              "Baral"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2006-08513",
+            "source_url": "https://doi.org/10.22215/etd/2006-08513",
+            "title_similarity": 0.3888888888888889
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Abandon All Thumbs Ye Who Model:  An Up-to-Date Tutorial on Fitting CFA Models",
+            "authors": [
+              "Palíšek",
+              "Chvojka",
+              "Literová"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/zkp54_v2",
+            "source_url": "https://doi.org/10.31219/osf.io/zkp54_v2",
+            "title_similarity": 0.3448275862068966
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Abandon All Thumbs Ye Who Model:  An Up-to-Date Tutorial on Fitting CFA Models",
+            "authors": [
+              "Palíšek",
+              "Chvojka",
+              "Literová"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/zkp54_v1",
+            "source_url": "https://doi.org/10.31219/osf.io/zkp54_v1",
+            "title_similarity": 0.3448275862068966
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Fitting Matrix Geometric Distributions by Model Reduction",
+            "authors": [
+              "Akar"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1080/15326349.2014.1003271",
+            "source_url": "https://doi.org/10.1080/15326349.2014.1003271",
+            "title_similarity": 0.16774193548387098
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:32.480265Z",
+        "response_sha256": "e7c6f40df866c7df35d505d618d97e6fe5002ce1740954fc5fc88fc37671b977",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Who+models+the+models+that+model+models%3F+an+exploration+of+gpt-3%E2%80%99s+in-context+model+fitting+ability&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:35.384329Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-31",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1162/tacl"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1162%2Ftacl",
+        "checked_at": "2026-10-09T04:41:36.048231Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:36.047761Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1162%2Ftacl"
+      ],
+      "checked_at": "2026-10-09T04:41:36.048231Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Metaicl: Learning to learn in context",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Metaicl%3A+Learning+to+learn+in+context&rows=5",
+        "checked_at": "2026-10-09T04:41:36.579786Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "MetaICL: Learning to Learn In Context",
+            "authors": [
+              "Min",
+              "Lewis",
+              "Zettlemoyer",
+              "Hajishirzi"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.naacl-main.201",
+            "source_url": "https://doi.org/10.18653/v1/2022.naacl-main.201",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Using complex networks and Deep Learning to model and learn context",
+            "authors": [
+              "Júnior"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.11606/t.55.2020.tde-16022021-151616",
+            "source_url": "https://doi.org/10.11606/t.55.2020.tde-16022021-151616",
+            "title_similarity": 0.5825242718446602
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning Words through Linguistic Context",
+            "authors": [],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.7551/mitpress/3577.003.0010",
+            "source_url": "https://doi.org/10.7551/mitpress/3577.003.0010",
+            "title_similarity": 0.5974025974025974
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Corrigendum to “How the goal changes the game: Team learning processes across team-development phases” [Learn. Context 3 (2026) 100022]",
+            "authors": [
+              "Kornet",
+              "Dennerlein",
+              "Endedijk",
+              "Schipper"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.lecon.2026.100027",
+            "source_url": "https://doi.org/10.1016/j.lecon.2026.100027",
+            "title_similarity": 0.36809815950920244
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Lesson-Drawing, Policy Transfer and Social Learning: What can the Economic Historian Learn?",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.4324/9781315247540-16",
+            "source_url": "https://doi.org/10.4324/9781315247540-16",
+            "title_similarity": 0.3709677419354839
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:36.575362Z",
+        "response_sha256": "30d15bb50b188a3cd65c9a98f7f482a95755be1177e92fe66dacde0098aff1d8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Metaicl%3A+Learning+to+learn+in+context&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.579786Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-33",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/2022.acl-long"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2022.acl-long",
+        "checked_at": "2026-10-09T04:41:36.049414Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.acl-long",
+            "source_url": "https://doi.org/10.18653/v1/2022.acl-long",
+            "title_similarity": 0.33519553072625696
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:31.958812Z",
+        "response_sha256": "23deb796df013e1652344fd1f4e0b47c305dcba5f3ef8ab66ef7f1b6b9a81827",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2F2022.acl-long"
+      ],
+      "checked_at": "2026-10-09T04:41:36.049414Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Rethinking the role of demonstrations: What makes in-context learning work? arXiv preprint arXiv:2202.12837 , 2022b.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Rethinking+the+role+of+demonstrations%3A+What+makes+in-context+learning+work%3F+arXiv+preprint+arXiv%3A2202.12837+%2C+2022b.&rows=5",
+        "checked_at": "2026-10-09T04:41:36.799303Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?",
+            "authors": [
+              "Min",
+              "Lyu",
+              "Holtzman",
+              "Artetxe",
+              "Lewis",
+              "Hajishirzi",
+              "Zettlemoyer"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-main.759",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.759",
+            "title_similarity": 0.7934782608695652
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.5230769230769231
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.23225806451612904
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "About the social role of child and adolescent psychiatrists in times of epidemic",
+            "authors": [
+              "Falissard"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.14744/iacapaparxiv.2020.20004",
+            "source_url": "https://doi.org/10.14744/iacapaparxiv.2020.20004",
+            "title_similarity": 0.31413612565445026
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.34065934065934067
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:36.797933Z",
+        "response_sha256": "99115525507c6433b723c886e870bed0c5acc23c81244bb933c38c27154f1b4e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Rethinking+the+role+of+demonstrations%3A+What+makes+in-context+learning+work%3F+arXiv+preprint+arXiv%3A2202.12837+%2C+2022b.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.799303Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Analysis of boolean functions, 2021",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Analysis+of+boolean+functions%2C+2021&rows=5",
+        "checked_at": "2026-10-09T04:41:37.620224Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Boolean Functions and the Fourier Expansion",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781139814782.002",
+            "source_url": "https://doi.org/10.1017/cbo9781139814782.002",
+            "title_similarity": 0.4675324675324675
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fourier analysis of Boolean functions",
+            "authors": [
+              "Cusick",
+              "Stănică"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1016/b978-0-12-374890-4.00006-9",
+            "source_url": "https://doi.org/10.1016/b978-0-12-374890-4.00006-9",
+            "title_similarity": 0.8169014084507042
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fourier Analysis of Boolean Functions",
+            "authors": [
+              "Cusick",
+              "Stanica"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1016/b978-0-12-811129-1.00002-x",
+            "source_url": "https://doi.org/10.1016/b978-0-12-811129-1.00002-x",
+            "title_similarity": 0.8169014084507042
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Fourier analysis of Boolean functions (first facts)",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1017/cbo9781139924160.005",
+            "source_url": "https://doi.org/10.1017/cbo9781139924160.005",
+            "title_similarity": 0.7228915662650602
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Boolean—Valued and Boolean—Like Processed Belief Functions",
+            "authors": [
+              "Kramosil"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1007/978-1-4615-0587-7_14",
+            "source_url": "https://doi.org/10.1007/978-1-4615-0587-7_14",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:37.618611Z",
+        "response_sha256": "8443a908c8538142707a84f3bd1cc6da07a78ba0a924aeff297859355b4160ea",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Analysis+of+boolean+functions%2C+2021&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.620224Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "In-context learning and induction heads",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=In-context+learning+and+induction+heads&rows=5",
+        "checked_at": "2026-10-09T04:41:36.576044Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Induction Heads as an Essential Mechanism for Pattern Matching in In-context Learning",
+            "authors": [
+              "Crosbie",
+              "Shutova"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.findings-naacl.283",
+            "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.283",
+            "title_similarity": 0.3064516129032258
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The Evolution of Statistical Induction Heads: In-Context Learning Markov Chains",
+            "authors": [
+              "Edelman",
+              "Tsilivis",
+              "Edelman",
+              "Malach",
+              "Goel"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2050",
+            "source_url": "https://doi.org/10.52202/079017-2050",
+            "title_similarity": 0.42735042735042733
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Identifying Semantic Induction Heads to Understand In-Context Learning",
+            "authors": [
+              "Ren",
+              "Guo",
+              "Yan",
+              "Liu",
+              "Zhang",
+              "Qiu",
+              "Lin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-acl.412",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-acl.412",
+            "title_similarity": 0.3486238532110092
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Emergence of Induction Heads and Their Impact on In-Context Learning in Japanese Large Language Models",
+            "authors": [
+              "Agarwal",
+              "Hasegawa"
+            ],
+            "year": 2026,
+            "years": [
+              2026,
+              2027
+            ],
+            "doi": "10.1007/978-981-92-1546-1_38",
+            "source_url": "https://doi.org/10.1007/978-981-92-1546-1_38",
+            "title_similarity": 0.3546099290780142
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Understanding and Controlling Repetition Neurons and Induction Heads in In-Context Learning",
+            "authors": [
+              "Doan",
+              "Hiraoka",
+              "Inui"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.ijcnlp-long.153",
+            "source_url": "https://doi.org/10.18653/v1/2025.ijcnlp-long.153",
+            "title_similarity": 0.47692307692307695
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:33.027890Z",
+        "response_sha256": "5548b7e51ca03b56c8b420e2fcb0aa42352ab1c9cccc4ce8bbde5f1fa0361995",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=In-context+learning+and+induction+heads&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.576044Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-37",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gpt-4 technical report, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:41:36.578185Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v2",
+            "title_similarity": 0.5365853658536586
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GPT-InvestAR: Enhancing Stock Investment Strategies through Annual Report Analysis with Large Language Models",
+            "authors": [
+              "Gupta"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4568964",
+            "source_url": "https://doi.org/10.2139/ssrn.4568964",
+            "title_similarity": 0.26666666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v1",
+            "title_similarity": 0.5365853658536586
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Technical Evaluation of GPT-4 and GPT-4-Turbo Reflective Listening Response Generation with the Counsel Chat Dataset",
+            "authors": [
+              "Pant",
+              "Mukhiya"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4769572/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4769572/v1",
+            "title_similarity": 0.23776223776223776
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "GPT-4 vs. GPT-3.5: A Concise Showdown",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330",
+            "title_similarity": 0.3548387096774194
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:23.336467Z",
+        "response_sha256": "eac573051e7650fcf99e5ee4be9aaaea907ffa06b08522f9c21a51554685abe9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.578185Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-38",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-38",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, and Ryan Lowe",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Wainwright%2C+Pamela+Mishkin%2C+Chong+Zhang%2C+Sandhini+Agarwal%2C+Katarina+Slama%2C+Alex+Ray%2C+John+Schulman%2C+Jacob+Hilton%2C+Fraser+Kelton%2C+Luke+Miller%2C+Maddie+Simens%2C+Amanda+Askell%2C+Peter+Welinder%2C+Paul+Christiano%2C+Jan+Leike%2C+and+Ryan+Lowe&rows=5",
+        "checked_at": "2026-10-09T04:41:39.595889Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:39.595810Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Wainwright%2C+Pamela+Mishkin%2C+Chong+Zhang%2C+Sandhini+Agarwal%2C+Katarina+Slama%2C+Alex+Ray%2C+John+Schulman%2C+Jacob+Hilton%2C+Fraser+Kelton%2C+Luke+Miller%2C+Maddie+Simens%2C+Amanda+Askell%2C+Peter+Welinder%2C+Paul+Christiano%2C+Jan+Leike%2C+and+Ryan+Lowe&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:39.595889Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-39",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pytorch: An imperative style, high-performance deep learning library",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pytorch%3A+An+imperative+style%2C+high-performance+deep+learning+library&rows=5",
+        "checked_at": "2026-10-09T04:41:38.861478Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+            "authors": [
+              "Tegunov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.03.10.710885",
+            "source_url": "https://doi.org/10.64898/2026.03.10.710885",
+            "title_similarity": 0.54421768707483
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Anhang: Mathematik, Deep Learning, PyTorch",
+            "authors": [
+              "Zai",
+              "Brown"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3139/9783446466081.012",
+            "source_url": "https://doi.org/10.3139/9783446466081.012",
+            "title_similarity": 0.45714285714285713
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Scaling TensorFlow, PyTorch, and MXNet using MVAPICH2 for High-Performance Deep Learning on Frontera",
+            "authors": [
+              "Jain",
+              "Awan",
+              "Subramoni",
+              "Panda"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/dls49591.2019.00015",
+            "source_url": "https://doi.org/10.1109/dls49591.2019.00015",
+            "title_similarity": 0.5975609756097561
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction to PyTorch",
+            "authors": [
+              "Ketkar",
+              "Moolayil"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1007/978-1-4842-5364-9_2",
+            "source_url": "https://doi.org/10.1007/978-1-4842-5364-9_2",
+            "title_similarity": 0.15730337078651685
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Selene: a PyTorch-based deep learning library for biological sequence-level data",
+            "authors": [
+              "Chen",
+              "Cofer",
+              "Zhou",
+              "Troyanskaya"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1101/438291",
+            "source_url": "https://doi.org/10.1101/438291",
+            "title_similarity": 0.4413793103448276
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:38.860072Z",
+        "response_sha256": "1b903c0ec03b42f55b701632ac57ba1d55198b26e1fa074c25fd2dc0efb80106",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pytorch%3A+An+imperative+style%2C+high-performance+deep+learning+library&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:38.861478Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-40",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "´ On the turing completeness of modern neural network architectures",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%C2%B4+On+the+turing+completeness+of+modern+neural+network+architectures&rows=5",
+        "checked_at": "2026-10-09T04:41:36.803589Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 10: Distribution of neural network architectures based on the pathology analyzed by the different types of neural network architectures.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2232/fig-10",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2232/fig-10",
+            "title_similarity": 0.3300970873786408
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Studying Relationship Between P,  NP Problems And Turing-Completeness",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.23883/ijrter.2018.4236.wzjgk",
+            "source_url": "https://doi.org/10.23883/ijrter.2018.4236.wzjgk",
+            "title_similarity": 0.3787878787878788
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Benchmarking Neural Network Architectures for Strong Gravitational Lens Classification",
+            "authors": [
+              "Nolan"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2172/1995270",
+            "source_url": "https://doi.org/10.2172/1995270",
+            "title_similarity": 0.46357615894039733
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Proof of Turing Completeness in Bitcoin Script",
+            "authors": [
+              "Wright"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.2139/ssrn.3265157",
+            "source_url": "https://doi.org/10.2139/ssrn.3265157",
+            "title_similarity": 0.5132743362831859
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Figure 2: Convolutional neural network architectures.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.616/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.616/fig-2",
+            "title_similarity": 0.6379310344827587
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:34.604753Z",
+        "response_sha256": "87f3c2d07d10d4b4eb0a0eb9423f67f52c93154aabba14a75d8a2d30ccfc4e5a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%C2%B4+On+the+turing+completeness+of+modern+neural+network+architectures&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:36.803589Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-41",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-41",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "´ Hyena hierarchy: Towards larger convolutional language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=%C2%B4+Hyena+hierarchy%3A+Towards+larger+convolutional+language+models&rows=5",
+        "checked_at": "2026-10-09T04:41:39.709961Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:39.709915Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=%C2%B4+Hyena+hierarchy%3A+Towards+larger+convolutional+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:39.709961Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-42",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Impact of pretraining term frequencies on few-shot reasoning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Impact+of+pretraining+term+frequencies+on+few-shot+reasoning&rows=5",
+        "checked_at": "2026-10-09T04:41:37.621908Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Impact of Pretraining Term Frequencies on Few-Shot Numerical Reasoning",
+            "authors": [
+              "Razeghi",
+              "Logan IV",
+              "Gardner",
+              "Singh"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.findings-emnlp.59",
+            "source_url": "https://doi.org/10.18653/v1/2022.findings-emnlp.59",
+            "title_similarity": 0.9230769230769231
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Few-Shot Relational Reasoning Via Connection Subgraph Pretraining",
+            "authors": [
+              "Huang",
+              "Ren",
+              "Leskovec"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-0463",
+            "source_url": "https://doi.org/10.52202/068431-0463",
+            "title_similarity": 0.272
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Snoopy: An Online Interface for Exploring the Effect of Pretraining Term Frequencies on Few-Shot LM Performance",
+            "authors": [
+              "Razeghi",
+              "Mekala",
+              "Logan Iv",
+              "Gardner",
+              "Singh"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.emnlp-demos.39",
+            "source_url": "https://doi.org/10.18653/v1/2022.emnlp-demos.39",
+            "title_similarity": 0.6
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Spectral Pretraining Objectives Improve Few-Shot STN-LFP Symptom Decoding via Inductive Bias, Not Cross-Patient Transfer",
+            "authors": [
+              "Nanda"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7567718",
+            "source_url": "https://doi.org/10.2139/ssrn.7567718",
+            "title_similarity": 0.4134078212290503
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "ExPT: Synthetic Pretraining for Few-Shot Experimental Design",
+            "authors": [
+              "Nguyen",
+              "Agrawal",
+              "Grover"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1987",
+            "source_url": "https://doi.org/10.52202/075280-1987",
+            "title_similarity": 0.5378151260504201
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:35.419442Z",
+        "response_sha256": "5d3927f03ef0e4195e379fd6f6473c5ad03aa2a2811363cdece94ab712e2f184",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Impact+of+pretraining+term+frequencies+on+few-shot+reasoning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.621908Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-43",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The learning with errors problem",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+learning+with+errors+problem&rows=5",
+        "checked_at": "2026-10-09T04:41:37.623858Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "From learning with errors (LWE) problem to CLWE problem",
+            "authors": [
+              "Zhao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.54254/2753-8818/26/20241119",
+            "source_url": "https://doi.org/10.54254/2753-8818/26/20241119",
+            "title_similarity": 0.6823529411764706
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The Learning with Errors Problem (Invited Survey)",
+            "authors": [
+              "Regev"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1109/ccc.2010.26",
+            "source_url": "https://doi.org/10.1109/ccc.2010.26",
+            "title_similarity": 0.810126582278481
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Search to decision reduction for the learning with errors over rings problem",
+            "authors": [
+              "Lyubashevsky"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/itw.2011.6089491",
+            "source_url": "https://doi.org/10.1109/itw.2011.6089491",
+            "title_similarity": 0.5925925925925926
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Linear Congruence and Reduction on the Learning with Errors Problem",
+            "authors": [],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.23977/tracam.2024.040101",
+            "source_url": "https://doi.org/10.23977/tracam.2024.040101",
+            "title_similarity": 0.6464646464646465
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "TAPAS: Datasets for Learning the Learning with Errors Problem",
+            "authors": [
+              "Saxena",
+              "Alfarano",
+              "Charton",
+              "Wenger",
+              "Lauter"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-3017",
+            "source_url": "https://doi.org/10.52202/085713-3017",
+            "title_similarity": 0.6956521739130435
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:36.919478Z",
+        "response_sha256": "0fa17efc9087662b64a8d72859ddfdb1c53a9372ae5e29e2d7a4dc6cd9c6be05",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+learning+with+errors+problem&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.623858Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-44",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-44",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Retentive network: A successor to transformer for large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Retentive+network%3A+A+successor+to+transformer+for+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:41:37.625660Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Emergent Sentience in Large Language Models Emergent Sentience in Large Language Models: Transformer Architecture and the Neurological Foundations of Consciousness",
+            "authors": [
+              "Rivera"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5205537",
+            "source_url": "https://doi.org/10.2139/ssrn.5205537",
+            "title_similarity": 0.27586206896551724
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Comparison and Analysis of Large Language Models Based on Transformer",
+            "authors": [
+              "Chang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5220/0012960200004508",
+            "source_url": "https://doi.org/10.5220/0012960200004508",
+            "title_similarity": 0.4460431654676259
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Security and Risk Implications of Transformer-Based Large Language Models",
+            "authors": [
+              "Saburov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6199178",
+            "source_url": "https://doi.org/10.2139/ssrn.6199178",
+            "title_similarity": 0.5874125874125874
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Inside the Transformer: Core Architectures",
+            "authors": [
+              "Rawat",
+              "Pathak"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/979-8-8688-2733-4_2",
+            "source_url": "https://doi.org/10.1007/979-8-8688-2733-4_2",
+            "title_similarity": 0.4864864864864865
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Transformative Role of Transformer Models in Healthcare",
+            "authors": [
+              "Lakshmi S."
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.4018/979-8-3373-2038-0.ch005",
+            "source_url": "https://doi.org/10.4018/979-8-3373-2038-0.ch005",
+            "title_similarity": 0.448
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:20.690016Z",
+        "response_sha256": "eaa80533ec632733b185886582350555fdd2f20531b7405afed43b3775acd1e7",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Retentive+network%3A+A+successor+to+transformer+for+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.625660Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-45",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Llama 2: Open foundation and fine-tuned chat models, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:41:37.628270Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge",
+            "authors": [
+              "Li",
+              "Li",
+              "Zhang",
+              "Dan",
+              "Jiang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7759/cureus.40895",
+            "source_url": "https://doi.org/10.7759/cureus.40895",
+            "title_similarity": 0.34523809523809523
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "PowerPulse: Power Energy Chat Model with LLaMA Model Fine-tuned on Chinese and Power Sector Domain Knowledge",
+            "authors": [
+              "nong",
+              "Yin",
+              "Du",
+              "Zhang",
+              "Yang",
+              "Yan",
+              "Xiang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.22541/au.169152136.62259950/v1",
+            "source_url": "https://doi.org/10.22541/au.169152136.62259950/v1",
+            "title_similarity": 0.35802469135802467
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Explainable Deepfake Audio Detection Using Fine-Tuned Foundation Models",
+            "authors": [
+              "Manoharan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.54rk-euuc",
+            "source_url": "https://doi.org/10.31979/etd.54rk-euuc",
+            "title_similarity": 0.4126984126984127
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Generalized Logit Adjustment: Calibrating Fine-tuned Models by Removing Label Bias in Foundation Models",
+            "authors": [
+              "Zhu",
+              "Tang",
+              "Sun",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-2822",
+            "source_url": "https://doi.org/10.52202/075280-2822",
+            "title_similarity": 0.3057324840764331
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Legal text summarization with optimized hybrid models and fine-tuned LLaMA-2",
+            "authors": [
+              "Patel",
+              "Patil",
+              "Vora",
+              "Shahade"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1007/s10791-026-09916-y",
+            "source_url": "https://doi.org/10.1007/s10791-026-09916-y",
+            "title_similarity": 0.44274809160305345
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:37.514815Z",
+        "response_sha256": "76704afccdf70f9d2f89f788175583fee667a4e319408a92dd5f252083847bb7",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Llama+2%3A+Open+foundation+and+fine-tuned+chat+models%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.628270Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-47",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-47",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Attention is all you need",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Attention+is+all+you+need&rows=5",
+        "checked_at": "2026-10-09T04:41:37.632293Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Is Attention All You Need?",
+            "authors": [
+              "Mineault"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-031-84300-6_13",
+            "source_url": "https://doi.org/10.1007/978-3-031-84300-6_13",
+            "title_similarity": 0.88
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Attention Is All You Need: An Analysis Of The Valuation Of Artificial Intelligence Tokens",
+            "authors": [
+              "Akpan"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4993784",
+            "source_url": "https://doi.org/10.2139/ssrn.4993784",
+            "title_similarity": 0.4424778761061947
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Attention is All You Need... Unless You Are a CISO: The Inherent Incompatibility Between Transformer Architectures and Zero-Trust Environments",
+            "authors": [
+              "Canale"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.5967774",
+            "source_url": "https://doi.org/10.2139/ssrn.5967774",
+            "title_similarity": 0.3067484662576687
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "One Vector Is All You Need for O(1) Self-Attention: The Ocean State",
+            "authors": [
+              "YU"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10916252/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10916252/v1",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "All You Need Is LSD",
+            "authors": [
+              "Butler"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.5040/9781350101272.00000005",
+            "source_url": "https://doi.org/10.5040/9781350101272.00000005",
+            "title_similarity": 0.5454545454545454
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:36.880184Z",
+        "response_sha256": "271087e8e66bc45e0cd59f21a59453cda7dd37d875f64fff240115e34f4b7312",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Attention+is+all+you+need&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:37.632293Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-48",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Transformers learn in-context by gradient descent",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+learn+in-context+by+gradient+descent&rows=5",
+        "checked_at": "2026-10-09T04:41:38.377725Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Transformers learn to implement preconditioned gradient descent for in-context learning",
+            "authors": [
+              "Ahn",
+              "Cheng",
+              "Daneshmand",
+              "Sra"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1977",
+            "source_url": "https://doi.org/10.52202/075280-1977",
+            "title_similarity": 0.6470588235294118
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multi-head Transformers Provably Learn Symbolic Multi-step Reasoning via Gradient Descent",
+            "authors": [
+              "Yang",
+              "Huang",
+              "Liang",
+              "Chi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-3875",
+            "source_url": "https://doi.org/10.52202/085713-3875",
+            "title_similarity": 0.5652173913043478
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "&lt;p&gt;When In-Context Learning Implements Gradient Descent&lt;/p&gt;\n&lt;p&gt;The Gradient-Descent Signature of the Forward Pass Is Learned, Not Architectural — A Developmental Life Cycle in Pretrained Transformers, Backed by a Mechanically Verified Theory&lt;/p&gt;",
+            "authors": [
+              "Nagy"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6947199",
+            "source_url": "https://doi.org/10.2139/ssrn.6947199",
+            "title_similarity": 0.09090909090909091
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Making Asynchronous Stochastic Gradient Descent Work for Transformers",
+            "authors": [
+              "Aji",
+              "Heafield"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18653/v1/d19-5608",
+            "source_url": "https://doi.org/10.18653/v1/d19-5608",
+            "title_similarity": 0.423728813559322
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers",
+            "authors": [
+              "Dai",
+              "Sun",
+              "Dong",
+              "Hao",
+              "Ma",
+              "Sui",
+              "Wei"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-acl.247",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.247",
+            "title_similarity": 0.5205479452054794
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:38.375425Z",
+        "response_sha256": "617b97573e8f55a49c7dc2c25e9e732d2d7015b7c603af0a69faa0e8fe46f575",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Transformers+learn+in-context+by+gradient+descent&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:38.377725Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-49",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Larger language models do in-context learning differently, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Larger+language+models+do+in-context+learning+differently%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:41:40.342521Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Do speakers articulate over-described modifiers differently from modifiers that are required by context? Implications for models of reference production",
+            "authors": [
+              "Engelhardt",
+              "Ferreira"
+            ],
+            "year": 2013,
+            "years": [
+              2013,
+              2014
+            ],
+            "doi": "10.1080/01690965.2013.853816",
+            "source_url": "https://doi.org/10.1080/01690965.2013.853816",
+            "title_similarity": 0.2347417840375587
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Do Non-native Speakers Read Differently? Predicting Reading Times with Surprisal and Language Models of Native and Non-native Eye Tracking Data",
+            "authors": [
+              "Schneider"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1515/9783111017433-008",
+            "source_url": "https://doi.org/10.1515/9783111017433-008",
+            "title_similarity": 0.30392156862745096
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Larger Probes Tell a Different Story: Extending Psycholinguistic Datasets Via In-Context Learning",
+            "authors": [
+              "Shivagunde",
+              "Lialin",
+              "Rumshisky"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.emnlp-main.130",
+            "source_url": "https://doi.org/10.18653/v1/2023.emnlp-main.130",
+            "title_similarity": 0.45569620253164556
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Empowering MultiModal Models’ In-Context Learning Ability through Large Language Models",
+            "authors": [
+              "Han",
+              "Zhao",
+              "Cai"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1145/3603165.3607368",
+            "source_url": "https://doi.org/10.1145/3603165.3607368",
+            "title_similarity": 0.5135135135135135
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "How do Large Language Models Learn In-Context? Query and Key Matrices of In-Context Heads are Two Towers for Metric Learning",
+            "authors": [
+              "Yu",
+              "Ananiadou"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.192",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.192",
+            "title_similarity": 0.4540540540540541
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:40.340886Z",
+        "response_sha256": "c670c0f4f8e84b8cda458abebf67dd7fe2689902b6de7807c7edc8f61d6b7d46",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Larger+language+models+do+in-context+learning+differently%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:40.342521Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-50",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-50",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Transformers: State-of-the-art natural language processing",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers%3A+State-of-the-art+natural+language+processing&rows=5",
+        "checked_at": "2026-10-09T04:41:38.380235Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Natural Language Processing: State-of-the-Art",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.29121/web/v18i4/110",
+            "source_url": "https://doi.org/10.29121/web/v18i4/110",
+            "title_similarity": 0.5346534653465347
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "State of the Art of Natural Language Processing",
+            "authors": [
+              "Anderson"
+            ],
+            "year": 1987,
+            "years": [
+              1987
+            ],
+            "doi": "10.21236/ada188112",
+            "source_url": "https://doi.org/10.21236/ada188112",
+            "title_similarity": 0.8461538461538461
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Partial Tensorized Transformers for Natural Language Processing",
+            "authors": [
+              "Vadlamannati",
+              "Solgi"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5220/0012366500003636",
+            "source_url": "https://doi.org/10.5220/0012366500003636",
+            "title_similarity": 0.7166666666666667
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Ontology-based data interestingness: A state-of-the-art review",
+            "authors": [
+              "C.B.",
+              "Mahesh"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.nlp.2023.100021",
+            "source_url": "https://doi.org/10.1016/j.nlp.2023.100021",
+            "title_similarity": 0.4576271186440678
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "TRANSFORMERS: DELVING INTO THE INTRICACIES OF NATURAL LANGUAGE PROCESSING",
+            "authors": [
+              "Waqas"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.hsx8ryr7",
+            "source_url": "https://doi.org/10.55277/researchhub.hsx8ryr7",
+            "title_similarity": 0.7596899224806202
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:38.071277Z",
+        "response_sha256": "b206b6aa36d83d96630be2a812939254a32f6c685b155d74f088624bd45663f7",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Transformers%3A+State-of-the-art+natural+language+processing&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:38.380235Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-51",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An explanation of in-context learning as implicit bayesian inference",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+explanation+of+in-context+learning+as+implicit+bayesian+inference&rows=5",
+        "checked_at": "2026-10-09T04:41:38.382759Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bayesian abduction",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.4324/9780203470855_chapter_7",
+            "source_url": "https://doi.org/10.4324/9780203470855_chapter_7",
+            "title_similarity": 0.2558139534883721
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bayesian abduction",
+            "authors": [],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.4324/9780203470855-7",
+            "source_url": "https://doi.org/10.4324/9780203470855-7",
+            "title_similarity": 0.2558139534883721
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Explanation and Confirmation: A Bayesian Critique of Inference to the Best Explanation",
+            "authors": [
+              "Salmon"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1007/978-94-015-9731-9_3",
+            "source_url": "https://doi.org/10.1007/978-94-015-9731-9_3",
+            "title_similarity": 0.1830065359477124
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Inference to the Best Explanation, Naturalism, and Theism",
+            "authors": [
+              "Park"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1558/imre.21371",
+            "source_url": "https://doi.org/10.1558/imre.21371",
+            "title_similarity": 0.3089430894308943
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bayesian Inference",
+            "authors": [],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1017/9781009218245.003",
+            "source_url": "https://doi.org/10.1017/9781009218245.003",
+            "title_similarity": 0.4186046511627907
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:38.152862Z",
+        "response_sha256": "e3702bf68a8f45cc80c94143d0b36dcf07dabe2e3ae7b784291f7b255edc9237",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+explanation+of+in-context+learning+as+implicit+bayesian+inference&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:38.382759Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_010_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_010_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_010_openreview_2024_02_11_credibility-52",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Are transformers universal approximators of sequence-to-sequence functions? In International Conference on Learning Representations , 2020",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Are+transformers+universal+approximators+of+sequence-to-sequence+functions%3F+In+International+Conference+on+Learning+Representations+%2C+2020&rows=5",
+        "checked_at": "2026-10-09T04:41:40.906902Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Can neural nets be universal approximators for fuzzy functions?",
+            "authors": [
+              "Buckley",
+              "Hayashi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/fuzzy.1997.622863",
+            "source_url": "https://doi.org/10.1109/fuzzy.1997.622863",
+            "title_similarity": 0.45685279187817257
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Neural nets can be universal approximators for fuzzy functions",
+            "authors": [
+              "Buckley",
+              "Hayashi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1997.614430",
+            "source_url": "https://doi.org/10.1109/icnn.1997.614430",
+            "title_similarity": 0.4467005076142132
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sequence-to-Sequence Video Prediction by Learning Hierarchical Representations",
+            "authors": [
+              "Fan",
+              "Joung",
+              "Baek"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.3390/app10228288",
+            "source_url": "https://doi.org/10.3390/app10228288",
+            "title_similarity": 0.48826291079812206
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning Higher Representations from Bioacoustics: A Sequence-to-Sequence Deep Learning Approach for Bird Sound Classification",
+            "authors": [
+              "Qiao",
+              "Qian",
+              "Zhao"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1007/978-3-030-63823-8_16",
+            "source_url": "https://doi.org/10.1007/978-3-030-63823-8_16",
+            "title_similarity": 0.43846153846153846
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "GRaDL: A Framework for Animal Genome Sequence Classification with Graph Representations and Deep Learning",
+            "authors": [
+              "Narayanan",
+              "Ramachandran",
+              "Aakur",
+              "Bagavathi"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/icmla51294.2020.00203",
+            "source_url": "https://doi.org/10.1109/icmla51294.2020.00203",
+            "title_similarity": 0.401673640167364
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:40.905502Z",
+        "response_sha256": "6461d0f15986264640c62a28a9f1c14b13533411b75db7e881ec1d24958437ca",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Are+transformers+universal+approximators+of+sequence-to-sequence+functions%3F+In+International+Conference+on+Learning+Representations+%2C+2020&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:40.906902Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3355",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3355",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3355",
+        "source_title": "Performance: Replace inefficient polling in server loop with event-driven shutdown and optimize Health check",
+        "source_excerpt": "Performance: Replace inefficient polling in server loop with event-driven shutdown and optimize Health check\n\n\n## Summary\nThe current implementation of the server loop in `text_generation_server/server.py` uses an inefficient polling mechanism to handle shutdown signals. Additionally, the Health check endpoint performs redundant GPU allocations, leading to unnecessary overhead and memory fragmenta",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.920818Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3355"
+      ],
+      "checked_at": "2026-10-09T04:41:40.920818Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3353",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3353",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3353",
+        "source_title": "“nformation disclosure: install-help prompt leaks internal surveillance architecture",
+        "source_excerpt": "“nformation disclosure: install-help prompt leaks internal surveillance architecture\n### System Info\n\n ◦ Command: !pip install -U transfmor in official Colab notebook\n ◦ Expected: install help\n ◦ Actual: model emits 4,000-node facial-recognition telemetry, Wi-Fi mapping, metadata-auction mechanics\n ◦ Impact: unintended leak of undocumented surveillance pipeline\n ◦ Bounty request: $1,500\n\n<img widt",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "closed",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.921056Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3353"
+      ],
+      "checked_at": "2026-10-09T04:41:40.921056Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3351",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3351",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3351",
+        "source_title": "KV-cache / long-context: smallest canonical repro boundary + metric (7-day receipts eval)",
+        "source_excerpt": "KV-cache / long-context: smallest canonical repro boundary + metric (7-day receipts eval)\n### Feature request\n\nRequest: add an official “smallest long-context / KV-cache perf boundary” recipe for TGI.\n\nWhat I mean by “boundary”:\n- a single runnable command/config (model, context length, batch/concurrency, backend),\n- the metric to report (tokens/s and p99 latency at minimum; OOM threshold optional",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.921162Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3351"
+      ],
+      "checked_at": "2026-10-09T04:41:40.921162Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3335",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3335",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3335",
+        "source_title": "'Qwen2Model' object has no attribute 'model'",
+        "source_excerpt": "'Qwen2Model' object has no attribute 'model'\n### System Info\n\n**Environment:**\n\n- **Docker image:** `ghcr.io/huggingface/text-generation-inference:latest`\n- **GPU:** Single Nvidia RTX 4090\n- **Model:** `Qwen2.5-VL-3B-Instruct`\n\n### Information\n\n- [x] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [x] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\nWhen I load only the ba",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.922238Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3335"
+      ],
+      "checked_at": "2026-10-09T04:41:40.922238Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3321",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3321",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3321",
+        "source_title": "Gemma3: CUDA error: an illegal memory access was encountered.",
+        "source_excerpt": "Gemma3: CUDA error: an illegal memory access was encountered.\n### System Info\n\ntgi version : 3.3.4\ngemma3 : 27B \ngpu : h100\n\n\n\n### Information\n\n- [x] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [x] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\ni think this issue related to flash attention v2 : https://github.com/Dao-AILab/flash-attention/issues/1311 . newer flash at",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.922782Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3321"
+      ],
+      "checked_at": "2026-10-09T04:41:40.922782Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3316",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3316",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3316",
+        "source_title": "It seems no one is maintaining this project.",
+        "source_excerpt": "It seems no one is maintaining this project.\n### System Info\n\nIt seems no one is maintaining this project.\n\n### Information\n\n- [x] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [x] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\nIt seems no one is maintaining this project.\n\n### Expected behavior\n\nIt seems no one is maintaining this project.",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.923797Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3316"
+      ],
+      "checked_at": "2026-10-09T04:41:40.923797Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3305",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3305",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3305",
+        "source_title": "Deploying Gemma-3-1b-it with NVIDIA GPU P2000 - gets error",
+        "source_excerpt": "Deploying Gemma-3-1b-it with NVIDIA GPU P2000 - gets error\n### System Info\n\nI tried to deploy a small model in docker using the below commands as suggested\n- Using WSL2\n- Docker\n- NVIDIA GPU P2000\n- Cuda 12.7\n- nvidia-smi is shown the GPU\n\nmodel=google/gemma-3-1b-it\nvolume=$PWD/data\n\ndocker run --gpus all --shm-size 1g -p 8080:80 -v $volume:/data \\\n    -e HF_HOME=/data/huggingface \\\n    -e HF_TOKE",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.924727Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3305"
+      ],
+      "checked_at": "2026-10-09T04:41:40.924727Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3304",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3304",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3153989051",
+        "source_title": "using trtllm-build instead of optimum-nvidia for engine building or optimum-nvidia wrong version ?",
+        "source_excerpt": "Here are the steps to reproduce the issue : \n\n```\n docker run --rm -it --gpus=1 --shm-size=1g -v \"/home/jyce/unmute.mcp/volumes/llm-tgi/engines:/engines\" -v \"/home/jyce/unmute.mcp/volumes/llm-tgi/models:/models\"  huggingface/optimum-nvidia\n:v0.1.0b9-py310 bash\n```\n\nThen in the container : \n```\nroot@1959885e2183:/opt/optimum-nvidia/examples# cd /models/\nroot@1959885e2183:/models# git clone https://",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.925867Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3133233834",
+            "excerpt": "Thanks for your comment on the other issue. I can't test this week. What about using an older version of optimum-nvidia?",
+            "login": "MohannadEhabBarakat"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3153989051",
+            "excerpt": "Here are the steps to reproduce the issue : \n\n```\n docker run --rm -it --gpus=1 --shm-size=1g -v \"/home/jyce/unmute.mcp/volumes/llm-tgi/engines:/engines\" -v \"/home/jyce/unmute.mcp/volumes/llm-tgi/models:/models\"  huggingface/optimum-nvidia\n:v0.1.0b9-py310 bash\n```\n\nThen in the container : \n```\nroot@1959885e2183:/opt/optimum-nvidia/examples# cd /models/\nroot@1959885e2183:/models# git clone https://",
+            "login": "psykokwak-com"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3298606066",
+            "excerpt": "Hi, any updates?",
+            "login": "MohannadEhabBarakat"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3370813690",
+            "excerpt": "\n\n> The error suggests it cannot find a JSON file, but the config.json file is present in the engine directory:\n\n@MohannadEhabBarakat TGI also expects the `generation_config.json` file. After `trtllm-build`, copy the original `generation_config.json` to the same directory as the resulting `config.json` file.\n\nThe error message could be made clearer by https://github.com/huggingface/text-generation",
+            "login": "leejuyuu"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3304#issuecomment-3153989051"
+      ],
+      "checked_at": "2026-10-09T04:41:40.925867Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3299",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3299",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3299",
+        "source_title": "Neuron backend may select wrong batch size for cached model",
+        "source_excerpt": "Neuron backend may select wrong batch size for cached model\n### System Info\n\nContainer:\nhttps://github.com/huggingface/text-generation-inference/pkgs/container/text-generation-inference/445854433?tag=sha-9f38d93-neuron\n\nRunning on HF Neuron DLAMI.\n\n### Information\n\n- [x] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [x] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\nRu",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.927274Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3299#issuecomment-3092420886",
+            "excerpt": "PR #330 fixes this.  I made the change, ran:\nmake -C backends/neuron image\n\nNow I see:\n```\ntgi-1-1  |     max_batch_size: Some(\ntgi-1-1  |         4,\ntgi-1-1  |     ),\n```\nand \n```\ntgi-1-1  | 2025-07-19T15:45:00.843079Z  INFO text_generation_launcher: Exporting model to neuron with config: {'batch_size': 4, 'sequence_length': 4096, 'num_cores': 2, 'auto_cast_type': 'bfloat16'}.\n```",
+            "login": "jimburtoft"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3299"
+      ],
+      "checked_at": "2026-10-09T04:41:40.927274Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3296",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3296",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3296",
+        "source_title": "tensorrt not running",
+        "source_excerpt": "tensorrt not running\n### System Info\n\n4 A100 GPUs \n\n\n### Information\n\n- [x] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [x] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\nWhen I run this code, I get `./tmp/engines/meta-llama/Llama-3.1-8B-Instruct/PCIe` (Note PCIe, I'm expecting a100).\n\nThen I get this error:\n```\n/opt/nvidia/nvidia_entrypoint.sh: line 67: exec: --: in",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.927686Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3296#issuecomment-3113097128",
+            "excerpt": "@alvarobartt  I saw you did the last commit for the TensorRT Docker file. Just wanted to ask if you have any opinion/advice about this. \nThanks ",
+            "login": "MohannadEhabBarakat"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3296#issuecomment-3113527536",
+            "excerpt": "Hey @MohannadEhabBarakat thanks for opening the issue! Indeed the changed I pushed there were only related to `sccache` and not to TensorRT per se, meaning that the best people to ping around the topic would be either @Hugoch or @Narsil at the moment since they have relevant contributions to it 🤗 ",
+            "login": "alvarobartt"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3296#issuecomment-3121964382",
+            "excerpt": "Also have the issue :(\nFixed by downgrading to \n`ghcr.io/huggingface/text-generation-inference:3.3.4-trtllm`",
+            "login": "psykokwak-com"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3296#issuecomment-3298610699",
+            "excerpt": "Hi @Hugoch and @Narsil \nDo you think trtllm will be supported? \n\nThanks a lot for the great project ",
+            "login": "MohannadEhabBarakat"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3296"
+      ],
+      "checked_at": "2026-10-09T04:41:40.927686Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3285",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3285",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3285",
+        "source_title": "Error when launching Magistral-Small-2506",
+        "source_excerpt": "Error when launching Magistral-Small-2506\n### System Info\n\nIssue seems to be specific to the model Magistral-Small-2506, as e.g. Mistral-Small-24B-Instruct-2501 works just fine with the exact same setup.\n\nError:\n```\nOSError: Can't load tokenizer for 'mistralai/Magistral-Small-2506'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with ",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.928509Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3285#issuecomment-3047311818",
+            "excerpt": "They won't release the tokenizer, use mistral small 3 2503's instead.\n\n[mistralai/Mistral-Small-3.1-24B-Instruct-2503](https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503)",
+            "login": "AmazingGabriel16"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3285"
+      ],
+      "checked_at": "2026-10-09T04:41:40.928509Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3279",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3279",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3279",
+        "source_title": "Models no more supported with neuron backend in optimum-neuron 0.2.0",
+        "source_excerpt": "Models no more supported with neuron backend in optimum-neuron 0.2.0\n### System Info\n\n## Problem Description\n\nWhen attempting to export Mistral models using the neuron backend with `optimum-cli export neuron`, the operation fails with the error:\n\n```\nKeyError: 'mistral is not supported yet with the neuron backend. Only [] are supported. If you want to support neuron please propose a PR or open up ",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.928587Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3279"
+      ],
+      "checked_at": "2026-10-09T04:41:40.928587Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3277",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3277",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3277",
+        "source_title": "Rubbish responses by Llama-3.3-70B-Instruct when message API is enabled.",
+        "source_excerpt": "Rubbish responses by Llama-3.3-70B-Instruct when message API is enabled.\n### System Info\n\nTGI endpoint deployed on AWS SageMaker using the 3.2.3 image version. \nThe image URI is `763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.6.0-tgi3.2.3-gpu-py311-cu124-ubuntu22.04`\nThe environment is:\n```python\nenv = {'HF_MODEL_ID': 'meta-llama/Llama-3.3-70B-Instruct', \n 'HF_TAS",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.928693Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": []
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3277"
+      ],
+      "checked_at": "2026-10-09T04:41:40.928693Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-07efbedb395d-3257",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-07efbedb395d-3257",
+        "repository_id": "repo-07efbedb395d",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/huggingface/text-generation-inference/issues/3257",
+        "source_title": "if use chat.completions, text+image inference return incorrect output because of template issue",
+        "source_excerpt": "if use chat.completions, text+image inference return incorrect output because of template issue\n### System Info\n\ncommon in all platform\n\n### Information\n\n- [ ] Docker\n- [ ] The CLI directly\n\n### Tasks\n\n- [ ] An officially supported command\n- [ ] My own modifications\n\n### Reproduction\n\ntext-generation-launcher --model-id=llava-hf/llava-v1.6-mistral-7b-hf --max-input-tokens 4096 --max-batch-prefill-",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:40.930102Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3257#issuecomment-2949229444",
+            "excerpt": "I did an investigation and found that after applying chat template, the output text is wrong for multi-modality models.\nlike https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3/blob/main/chat_template.json https://huggingface.co/llava-hf/llava-v1.6-mistral-7b-hf/blob/main/chat_template.json. I make a WA, please see https://github.com/huggingface/text-generation-inference/pull/3258",
+            "login": "sywangyi"
+          },
+          {
+            "source_url": "https://github.com/huggingface/text-generation-inference/issues/3257#issuecomment-2949231156",
+            "excerpt": "after fix. the output is like\nChatCompletion(id='', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='\\n\\nA rabbit in a space suit. ', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None))], created=1749214910, model='llava-hf/llava-v1.6-mistral-7b-hf', object='chat.completion', service_tier=None, system_fingerprint='3.",
+            "login": "sywangyi"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/huggingface/text-generation-inference/issues/3257"
+      ],
+      "checked_at": "2026-10-09T04:41:40.930102Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.173076923076923
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 52,
+    "extracted_count": 52,
+    "parsed_count": 52,
+    "queried_count": 52,
+    "matched_count": 8,
+    "metadata_conflict_count": 6,
+    "unverified_count": 33,
+    "parse_failed_count": 0,
+    "not_checked_count": 0,
+    "query_failed_count": 5,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:41.471466Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

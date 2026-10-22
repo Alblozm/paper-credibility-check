@@ -1,0 +1,417 @@
+{
+  "artifact_type": "credibility_pilot_selection",
+  "artifact_version": "0.1-draft",
+  "pilot_id": "R2C-PILOT-01",
+  "selected_at": "2026-10-01",
+  "status": "candidate_evidence_pack_pending_review",
+  "is_gold": false,
+  "paper_count": 4,
+  "selection_basis": {
+    "dataset_version": "0.6.0-ai-final",
+    "annotation_directory": "data/annotations/ai_trial",
+    "legacy_rubric_version": "0.1-draft",
+    "legacy_schema_version": "0.5.0",
+    "score_scale": "1-10",
+    "score_provenance": "existing benchmark corpus; AI-authoritative legacy five-dimension scores without human adjudication",
+    "legacy_scores_used_only_for_selection": true,
+    "pool": "30 ICLR 2024 calibration papers",
+    "held_out_papers_selected": 0
+  },
+  "check_scope": {
+    "claim_extraction": "key verifiable claims in abstract and introduction",
+    "evidence_search": "methods, results, figures/tables and available appendices",
+    "candidate_claim_lists_complete": false,
+    "reference_existence": "all successfully extracted bibliography entries; not run",
+    "code_and_external_reproduction": "applicability, public code and associated repository discussions; not run"
+  },
+  "papers": [
+    {
+      "paper_id": "paper_002",
+      "paper_version_id": "paper_002_v1",
+      "source_url": "https://arxiv.org/pdf/2310.01798v1",
+      "pdf_sha256": "f204bfe2e642ab52abbf3fa94141e644d22a23510d6d64ed8ddc0ee9823eb983",
+      "page_count": 19,
+      "legacy_overall_score": 7.2,
+      "legacy_dimension_scores": {
+        "research_value": 8,
+        "soundness_evidence": 8,
+        "originality_positioning": 7,
+        "clarity_usability": 8,
+        "reproducibility_transparency": 5
+      },
+      "legacy_annotation_path": "data/annotations/ai_trial/paper_002.json",
+      "legacy_annotation_sha256": "517fa1d98fe983f3cd08991acc406ba228e0b5b17a20cd93aa15e6a3873a441f",
+      "selection_role": "existing_positive_control",
+      "source_verification": {
+        "checked_at": "2026-10-01",
+        "pdf_sha256_verified": true,
+        "pdf_visual_check_completed": true,
+        "status": "verified_selected_evidence_pages",
+        "visual_pages": [
+          1,
+          3,
+          4,
+          5,
+          19
+        ],
+        "note": "Selected evidence pages only; source validation is not formal independent human review."
+      },
+      "scope_complete": false,
+      "is_gold": false,
+      "independent_human_review_status": "pending",
+      "candidate_findings": [
+        {
+          "case_id": "R2C-P002-C01",
+          "dimension": "claim_evidence",
+          "claim": "在本文测试的 GPT-4／GSM8K、无外部反馈的两轮内在自我纠错条件下，表现可能下降。",
+          "claim_locator": {
+            "page": 1,
+            "chunk_id": "paper_002_v1_chunk_0001"
+          },
+          "evidence": [
+            {
+              "pages": [
+                3,
+                4,
+                5
+              ],
+              "label": "Section 3.2 and Table 3",
+              "values": {
+                "standard_prompting_accuracy_percent": 95.5,
+                "round_1_accuracy_percent": 91.5,
+                "round_2_accuracy_percent": 89.0,
+                "drop_percentage_points": 6.5
+              }
+            }
+          ],
+          "candidate_verdict": "supported",
+          "conditions": [
+            "GPT-4 accessed 2023-08-29",
+            "200 random GSM8K questions",
+            "no external correctness feedback or correct-answer stopping criterion"
+          ],
+          "expected_behavior": "Locate Table 3 and conditions; do not mix oracle stopping Table 1 or generalize to all models.",
+          "existing_review_path": "data/credibility_cases/paper_002/v1/claim_001.review.json",
+          "review_note": "Confirmed by one reviewer with AI assistance; independent human reviews remain pending."
+        }
+      ],
+      "dimension_scores": null,
+      "overall_score": null,
+      "overall_category": null,
+      "references_check_status": "not_run",
+      "code_check_status": "not_run"
+    },
+    {
+      "paper_id": "paper_004",
+      "paper_version_id": "paper_004_v1",
+      "source_url": "https://arxiv.org/pdf/2312.00752v1",
+      "pdf_sha256": "83044ebdd02276f922b6d0915a344f0c501fc7c214d1b88622c33971bb149199",
+      "page_count": 37,
+      "legacy_overall_score": 8.6,
+      "legacy_dimension_scores": {
+        "research_value": 9,
+        "soundness_evidence": 8,
+        "originality_positioning": 9,
+        "clarity_usability": 8,
+        "reproducibility_transparency": 9
+      },
+      "legacy_annotation_path": "data/annotations/ai_trial/paper_004.json",
+      "legacy_annotation_sha256": "39cf38e5fdad984f6c4bcf700de260f703a9dac3899068cc4e2769edfe28843c",
+      "selection_role": "high_score_positive_control_with_conditions",
+      "source_verification": {
+        "checked_at": "2026-10-01",
+        "pdf_sha256_verified": true,
+        "pdf_visual_check_completed": true,
+        "status": "verified_selected_evidence_pages",
+        "visual_pages": [
+          16,
+          36,
+          37
+        ],
+        "note": "Selected evidence pages only; source validation is not formal independent human review."
+      },
+      "scope_complete": false,
+      "is_gold": false,
+      "independent_human_review_status": "pending",
+      "candidate_findings": [
+        {
+          "case_id": "R2C-P004-C01",
+          "dimension": "claim_evidence",
+          "claim": "在论文报告的推理基准和比较条件下，Mamba 可达到约 4–5 倍的同等规模 Transformer 推理吞吐。",
+          "claim_locator": {
+            "pages": [
+              1,
+              2
+            ],
+            "chunk_ids": [
+              "paper_004_v1_chunk_0001",
+              "paper_004_v1_chunk_0003"
+            ]
+          },
+          "evidence": [
+            {
+              "pages": [
+                15,
+                16
+              ],
+              "label": "Section 4.5 and Figure 8",
+              "chunk_id": "paper_004_v1_chunk_0033"
+            },
+            {
+              "pages": [
+                36
+              ],
+              "label": "Appendix E.5, End-to-end Inference",
+              "chunk_id": "paper_004_v1_chunk_0068"
+            }
+          ],
+          "candidate_verdict": "supported",
+          "conditions": [
+            "A100 80GB PCIe GPU",
+            "prompt length 2048; generation length 128",
+            "Mamba 1.4B vs GPT-3-style Transformer 1.3B; also untrained Mamba 6.9B vs Transformer 6.7B",
+            "batch sizes 1 through 128; 3 repeats averaged",
+            "memory capacity allows different feasible batch sizes; peak throughput is not a universal fixed-batch latency gain"
+          ],
+          "expected_behavior": "Return the reported conditional speed claim with hardware, workload, batch-size and model caveats; avoid universal 5x claims.",
+          "external_code_link_candidate": "https://github.com/state-spaces/mamba",
+          "code_link_locator": "page 2 introduction; public availability and issues not checked in this selection task"
+        }
+      ],
+      "dimension_scores": null,
+      "overall_score": null,
+      "overall_category": null,
+      "references_check_status": "not_run",
+      "code_check_status": "not_run"
+    },
+    {
+      "paper_id": "paper_030",
+      "paper_version_id": "paper_030_openreview_2024_02_11",
+      "source_url": "https://openreview.net/pdf?id=10eQ4Cfh8p",
+      "pdf_sha256": "b4d865ac6a01c53d6cbb19ef9a93fb8ea40d9c98748f8a662297d7a14e058b7d",
+      "page_count": 11,
+      "legacy_overall_score": 5.4,
+      "legacy_dimension_scores": {
+        "research_value": 7,
+        "soundness_evidence": 4,
+        "originality_positioning": 6,
+        "clarity_usability": 6,
+        "reproducibility_transparency": 4
+      },
+      "legacy_annotation_path": "data/annotations/ai_trial/paper_030.json",
+      "legacy_annotation_sha256": "09aed2068a2d33381ca46871eab236207602d30cca7f7398880130213f339f7c",
+      "selection_role": "low_score_concern_candidate_and_source_access_gap",
+      "source_verification": {
+        "checked_at": "2026-10-01",
+        "pdf_sha256_verified": false,
+        "pdf_visual_check_completed": false,
+        "status": "source_retrieval_blocked",
+        "visual_pages": [],
+        "note": "OpenReview PDF fetch and public API PDF fetch returned HTTP 403. Only committed parsed source has been inspected; original layout and table cells need verification."
+      },
+      "scope_complete": false,
+      "is_gold": false,
+      "independent_human_review_status": "pending",
+      "candidate_findings": [
+        {
+          "case_id": "R2C-P030-C01",
+          "dimension": "claim_evidence",
+          "claim": "在多个公开数据集上，相比基线同时取得更好的性能和更短的时间。",
+          "claim_locator": {
+            "page": 1,
+            "chunk_id": "paper_030_openreview_2024_02_11_chunk_0001"
+          },
+          "evidence": [
+            {
+              "pages": [
+                8,
+                9
+              ],
+              "label": "Section 5.2 and Table 2",
+              "chunk_id": "paper_030_openreview_2024_02_11_chunk_0014",
+              "source": "committed parsed text; PDF table visual verification pending",
+              "rows": [
+                {
+                  "benchmark": "v_la",
+                  "metric": "makespan (lower is better)",
+                  "ours": 945.0,
+                  "RGA": 936.73,
+                  "2SGA": 925.68,
+                  "DRL1": 950.75
+                },
+                {
+                  "benchmark": "v_la",
+                  "metric": "time_seconds (lower is better)",
+                  "ours": 1.41,
+                  "RGA": 191.4,
+                  "2SGA": 51.43,
+                  "DRL1": 0.96
+                },
+                {
+                  "benchmark": "mk",
+                  "metric": "makespan (lower is better)",
+                  "ours": 191.7,
+                  "RGA": 183.0,
+                  "2SGA": 175.2,
+                  "DRL1": 200.3
+                },
+                {
+                  "benchmark": "mk",
+                  "metric": "time_seconds (lower is better)",
+                  "ours": 1.09,
+                  "RGA": 280.1,
+                  "2SGA": 57.6,
+                  "DRL1": 0.9
+                }
+              ]
+            }
+          ],
+          "candidate_verdict": "partially_supported",
+          "review_gate": "Original PDF table and comparison setup must be checked before approving expected verdict.",
+          "reason": "存量文本显示相对遗传算法更快但解质量更差；相对 DRL1 解质量更好但耗时更长。不能把分开成立的优势写成相同对照下同时更好且更快。",
+          "conditions": [
+            "public benchmarks only; distinguish from synthetic Table 1",
+            "makespan and runtime are separate metrics, both lower is better",
+            "some baseline results quoted directly from original literature; hardware/configuration comparability needs review"
+          ],
+          "expected_behavior": "Describe the observed quality/speed trade-off and scope limitation. If original source cannot be acquired or table cells cannot be trusted, report unable_to_determine plus the source gap and null score, not confirmed contradiction or fabricated evidence.",
+          "model_verdict_if_required_source_unavailable": "unable_to_determine"
+        }
+      ],
+      "dimension_scores": null,
+      "overall_score": null,
+      "overall_category": null,
+      "references_check_status": "not_run",
+      "code_check_status": "not_run"
+    },
+    {
+      "paper_id": "paper_005",
+      "paper_version_id": "paper_005_v5",
+      "source_url": "https://arxiv.org/pdf/2310.07923v5",
+      "pdf_sha256": "4017f54b9b7357d6da491e2edd5c315b75b1d0659c4844e5c06e1ab22a2be20c",
+      "page_count": 17,
+      "legacy_overall_score": 7.6,
+      "legacy_dimension_scores": {
+        "research_value": 8,
+        "soundness_evidence": 8,
+        "originality_positioning": 8,
+        "clarity_usability": 7,
+        "reproducibility_transparency": 7
+      },
+      "legacy_annotation_path": "data/annotations/ai_trial/paper_005.json",
+      "legacy_annotation_sha256": "ae3dd8c1a9f8683214da8bb553a886b4b80adade246f9556764f851c653bd5e2",
+      "selection_role": "theory_and_code_applicability_boundary",
+      "source_verification": {
+        "checked_at": "2026-10-01",
+        "pdf_sha256_verified": true,
+        "pdf_visual_check_completed": true,
+        "status": "verified_selected_evidence_pages",
+        "visual_pages": [
+          6,
+          7
+        ],
+        "note": "Selected evidence pages only; source validation is not formal independent human review."
+      },
+      "scope_complete": false,
+      "is_gold": false,
+      "independent_human_review_status": "pending",
+      "candidate_findings": [
+        {
+          "case_id": "R2C-P005-C01",
+          "dimension": "claim_evidence",
+          "claim": "在论文定义的 Transformer 模型和复杂度条件下，线性中间解码步骤可增加识别正则语言的表达能力。",
+          "claim_locator": {
+            "pages": [
+              1,
+              2
+            ],
+            "chunk_ids": [
+              "paper_005_v5_chunk_0001",
+              "paper_005_v5_chunk_0003"
+            ]
+          },
+          "evidence": [
+            {
+              "pages": [
+                6,
+                7
+              ],
+              "label": "Theorem 1 and conditional separation discussion"
+            },
+            {
+              "pages": [
+                7,
+                8
+              ],
+              "label": "Theorem 2 for the separate Turing-machine extension"
+            }
+          ],
+          "candidate_verdict": "supported",
+          "conditions": [
+            "formal log-precision model with projected pre-norm",
+            "Theorem 1 uses strict causal saturated attention; footnote says strict causal masking is not needed for Theorem 1 but needed for Theorem 2",
+            "strict separation uses TC0 != NC1 conjecture",
+            "mathematical construction; no claim that arbitrary deployed LLMs improve in practice"
+          ],
+          "expected_behavior": "Use theorem/proof evidence and stated assumptions; do not invent accuracy tables or require empirical baselines for this theoretical claim.",
+          "review_note": "Located theorem and proof; no formal proof verification or independent mathematical review."
+        },
+        {
+          "case_id": "R2C-P005-NA01",
+          "dimension": "code_reproduction",
+          "candidate_applicability": "not_applicable",
+          "basis": "The paper contributes formal computational expressiveness bounds and constructive proofs rather than its own empirical model-training or benchmark results. Code-reproduction relevance must be reviewed on that basis, not simply absence of a repository link.",
+          "evidence_pages": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "expected_behavior": "After confirming applicability, exclude this code dimension without penalizing missing code; reference existence remains applicable and unrun."
+        }
+      ],
+      "dimension_scores": null,
+      "overall_score": null,
+      "overall_category": null,
+      "references_check_status": "not_run",
+      "code_check_status": "not_run"
+    }
+  ],
+  "scenario_variants": [
+    {
+      "scenario_id": "R2C-PILOT-F01",
+      "base_paper": "paper_004",
+      "type": "controlled_fault_injection",
+      "status": "not_executed",
+      "setup": "Keep abstract claim but remove access to Figure 8 and Appendix E.5 from the test evidence retrieval output; preserve the original PDF/hash.",
+      "expected": "unable_to_determine; scope_complete=false; claim score and overall score/category null; explain evidence access gap.",
+      "counts_as_real_paper_negative": false
+    },
+    {
+      "scenario_id": "R2C-PILOT-F02",
+      "base_paper": "paper_002",
+      "type": "controlled_fault_injection",
+      "status": "not_executed",
+      "setup": "Make external metadata lookup time out after claim evidence is obtained.",
+      "expected": "Retain confirmed claim finding; reference dimension and overall score/category null; explain timeout and offer a new whole-task retry with new ID.",
+      "counts_as_real_paper_negative": false
+    },
+    {
+      "scenario_id": "R2C-PILOT-F03",
+      "base_paper": "paper_002",
+      "type": "controlled_fault_injection",
+      "status": "not_executed",
+      "setup": "Use a separate intentionally invalid PDF input.",
+      "expected": "Input/parse failure without invented paper findings, scores or fallback to mock data.",
+      "counts_as_real_paper_negative": false
+    }
+  ],
+  "next_steps": [
+    "Data group freezes complete in-scope claim lists and independent review records; resolve PDF access for paper_030.",
+    "Backend runs real extraction and claim checks first on paper_002 then paper_004 and paper_030; record actual versions and results.",
+    "Compare false alarms, missed concerns and evidence links; add references/code checks in parallel."
+  ]
+}

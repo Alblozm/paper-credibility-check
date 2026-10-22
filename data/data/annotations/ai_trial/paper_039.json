@@ -1,0 +1,328 @@
+{
+  "assessment_id": "assessment_ai_paper_039_iclr_2026_proceedings",
+  "paper_version_id": "paper_039_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_039_iclr_2026_proceedings",
+    "raw_output_sha256": "188f4d816b1e23d8fb50918213ea7b19f7ae3f23a36c8604c4475fcfae2cb225"
+  },
+  "paper_summary": "Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to parameters that govern its smoothness, which significantly impact the estimation accuracy. In this article, we propose a novel graphon cross-validation method for selecting tuning parameters and estimation approaches. Our method is both theoretically sound and computationally efficient. We show that our proposed cross-validation score is asymptotically parallel to the estimation error. Th",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to parameters that govern its smoothness, which significantly impact the estimation accuracy. In this article, we propose a novel graphon cross-validation method for selecting tuning parameters and estimation approaches. Our method is both theoretically sound and computationally efficient. We show that our proposed cross-validation score is asymptotically parallel to the estimation error. Th",
+      "type": "method_or_finding",
+      "evidence_id": "paper_039_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to parameters that govern its smoothness, which significantly impact the estimation accuracy. In this article, we propose a novel graphon crossvalidation method for",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_039_ev_003",
+        "paper_039_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Graphon Cross-Validation: Assessing Models on Network Data》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to p",
+    "论文提供方法或实证支持：A set of potential graphon estimates is denoted by P ˆ ( M A ) , where M . The CV-imputation | ↗ M score is crafted to fine-tune M to select the best estimate from this set. In this section, we offer asymptotic justifications for the CV-imputation score. We ai"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to p；边界证据为：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic",
+      "strengths": [
+        "可定位正文支持：Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to p"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 7/10。",
+      "evidence_ids": [
+        "paper_039_ev_001",
+        "paper_039_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：A set of potential graphon estimates is denoted by P ˆ ( M A ) , where M . The CV-imputation | ↗ M score is crafted to fine-tune M to select the best estimate from this set. In this section, we offer asymptotic justifications for the CV-imputation score. We ai；边界证据为：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic",
+      "strengths": [
+        "可定位正文支持：A set of potential graphon estimates is denoted by P ˆ ( M A ) , where M . The CV-imputation | ↗ M score is crafted to fine-tune M to select the best estimate from this set. In this section, we offer asymptotic justifications for the CV-imputation score. We ai"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_039_ev_003",
+        "paper_039_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Graphon models represent cutting-edge statistical and machine-learning techniques for describing intricate network structures. In these models, the presence of an edge between nodes i and j hinges on a probability, independently determined by a measurable symm；边界证据为：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic",
+      "strengths": [
+        "可定位正文支持：Graphon models represent cutting-edge statistical and machine-learning techniques for describing intricate network structures. In these models, the presence of an edge between nodes i and j hinges on a probability, independently determined by a measurable symm"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_039_ev_004",
+        "paper_039_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Graphon models represent cutting-edge statistical and machine-learning techniques for describing intricate network structures. In these models, the presence of an edge between nodes i and j hinges on a probability, independently determined by a measurable symm；边界证据为：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic",
+      "strengths": [
+        "可定位正文支持：Graphon models represent cutting-edge statistical and machine-learning techniques for describing intricate network structures. In these models, the presence of an edge between nodes i and j hinges on a probability, independently determined by a measurable symm"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 7/10。",
+      "evidence_ids": [
+        "paper_039_ev_004",
+        "paper_039_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to p；边界证据为：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic",
+      "strengths": [
+        "可定位正文支持：Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to p"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applic"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 5/10。",
+      "evidence_ids": [
+        "paper_039_ev_001",
+        "paper_039_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_039_ev_001",
+      "page_number": 1,
+      "section_id": "paper_039_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_039_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Graphon models have emerged as powerful tools for modeling complex network structures by capturing connection probabilities among nodes. A key challenge in their application lies in accurately characterizing the graphon function, particularly with respect to parameters that govern its smoothness, which significantly impact the estimation accuracy. In this article, we propose a novel graphon crossvalidation method for selecting tuning parameters and estimation approaches. Our method is both theoretically sound and computationally efficient. We show that our proposed cross-validation score is asymptotically parallel to the estimation error, and the selected model asymptotically converges to the optimal model. Through extensive simulations and real-world applications, we demonstrate that our method consistently delivers superior computational efficiency and accuracy.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "page_number": 10,
+      "section_id": "paper_039_iclr_2026_proceedings_sec_7",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_039_iclr_2026_proceedings_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "Our proposed method, denoted as CV-imputation, offers several key advantages that make it a valuable tool for analyzing network data. Firstly, CV-imputation is versatile as it does not assume any specific form for the graphon function, making it broadly applicable across different types of networks. This flexibility enables researchers to apply CV-imputation to various network structures without conforming to a specific model. Moreover, CV-imputation is supported by rigorous theoretical foundations, showing that the minimizer of CV-imputation asymptotically converges to the minimizer of the mean squared error (MSE) in our model. This theoretical basis enhances confidence in the accuracy and consistency of CV-imputation results. In terms of computation efficiency, CV-imputation outperforms existing methods by eliminating costly singular value decomposition (SVD) steps, making it particula",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_039_ev_003",
+      "page_number": 4,
+      "section_id": "paper_039_iclr_2026_proceedings_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_039_iclr_2026_proceedings_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "A set of potential graphon estimates is denoted by P ˆ ( M A ) , where M . The CV-imputation | ↗ M score is crafted to fine-tune M to select the best estimate from this set. In this section, we offer asymptotic justifications for the CV-imputation score. We aim to demonstrate that V ( M ) approximates L ( M ) uniformly up to a constant by postulating K assumptions on the maximum K -fold optimism bias: 1 2 Q ( M ) = sup P ˆ ( M A ) P ˆ ( M ) , K k n ( n 1) | ↘ F 1 k K ↔ ↔ ↘ # # # # where denotes the Frobenius norm. The optimism # bias quantifies the # maximum prediction bias F ≃ · ≃ between the full-sample estimate and the estimate obtained after data splitting and imputation. Then, under the following conditions: Condition 1. There exists a positive constant ε > 0 such that for any M and any ϑ > 0 , there ↗ M exist a constant ϖ and an integer K such that 0 0 Q ( M ) K P ϖ ϑ K K , ω 0 0 K",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_039_ev_004",
+      "page_number": 1,
+      "section_id": "paper_039_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_039_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Graphon models represent cutting-edge statistical and machine-learning techniques for describing intricate network structures. In these models, the presence of an edge between nodes i and j hinges on a probability, independently determined by a measurable symmetric graphon function f across the unit square (Lovász and Szegedy, 2006). The graphon function f , the key to the model, gauges the probability of node connections. Accurately estimating f poses a significant challenge to the models’ general application. The efficacy of existing estimation methods is intrinsically linked to the precise calibration of tuning parameters. For instance, the accuracy of the graphon function estimated using the sort-and-smoothing (SAS) method (Chan and Airoldi, 2014) or the neighborhood-smoothing (NS) method (Zhang et al., 2017) is heavily contingent on the chosen size of the neighborhood. This paramete",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_039_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_039_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_039_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_039_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_039_ev_001",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_039_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确code_availability披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_039_ev_004"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_039_ev_004"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确preprocessing_details披露。",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

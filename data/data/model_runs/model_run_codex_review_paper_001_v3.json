@@ -1,0 +1,231 @@
+{
+  "model_run_id": "model_run_codex_review_paper_001_v3",
+  "paper_id": "paper_001",
+  "version": "v3",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:32:32.432703Z",
+  "raw_output_sha256": "1c97af9620fbff0d23a4a72490b278a584b7bc739dbdfcd1e883556a73b09703",
+  "raw_output": {
+    "paper_summary": "TAFT linearizes pretrained transformers to enable efficient composition, parallel training, shard-based removal and private fine-tuning, evaluated on visual classification.",
+    "overall_assessment": "A valuable and clearly positioned method with broad enabling ideas. Its central feasibility evidence is credible, but the empirical scope is one backbone/task family and reported margins lack run-to-run uncertainty.",
+    "strengths": [
+      "Connects one linearization mechanism to composition, unlearning and privacy.",
+      "Tests the mechanism on seven downstream datasets with ablations and cost comparisons.",
+      "States important limits, including initialization sensitivity and potentially doubled inference cost."
+    ],
+    "concerns": [
+      "No variance, confidence interval or repeated-run evidence is reported for central margins.",
+      "Average TAFT accuracy is slightly below nonlinear fine-tuning and degrades on distant domains.",
+      "Hardware/software and the fixed random-seed value are not disclosed."
+    ],
+    "unresolved_questions": [
+      "Are reported gains stable across seeds?",
+      "How well does the method transfer beyond visual classification and ViT-L/16?"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "dimension_question": "research value",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Connects one linearization mechanism to composition, unlearning and privacy. No variance, confidence interval or repeated-run evidence is reported for central margins.",
+        "strengths": [
+          "Connects one linearization mechanism to composition, unlearning and privacy."
+        ],
+        "weaknesses": [
+          "No variance, confidence interval or repeated-run evidence is reported for central margins."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_001_ev_001",
+          "paper_001_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "dimension_question": "soundness evidence",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Tests the mechanism on seven downstream datasets with ablations and cost comparisons. Average TAFT accuracy is slightly below nonlinear fine-tuning and degrades on distant domains.",
+        "strengths": [
+          "Tests the mechanism on seven downstream datasets with ablations and cost comparisons."
+        ],
+        "weaknesses": [
+          "Average TAFT accuracy is slightly below nonlinear fine-tuning and degrades on distant domains."
+        ],
+        "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_001_ev_002",
+          "paper_001_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "dimension_question": "originality positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "States important limits, including initialization sensitivity and potentially doubled inference cost. Hardware/software and the fixed random-seed value are not disclosed.",
+        "strengths": [
+          "States important limits, including initialization sensitivity and potentially doubled inference cost."
+        ],
+        "weaknesses": [
+          "Hardware/software and the fixed random-seed value are not disclosed."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_001_ev_003",
+          "paper_001_ev_001"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "dimension_question": "clarity usability",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "States important limits, including initialization sensitivity and potentially doubled inference cost. Hardware/software and the fixed random-seed value are not disclosed.",
+        "strengths": [
+          "States important limits, including initialization sensitivity and potentially doubled inference cost."
+        ],
+        "weaknesses": [
+          "Hardware/software and the fixed random-seed value are not disclosed."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_001_ev_001",
+          "paper_001_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "dimension_question": "reproducibility transparency",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "States important limits, including initialization sensitivity and potentially doubled inference cost. Hardware/software and the fixed random-seed value are not disclosed.",
+        "strengths": [
+          "States important limits, including initialization sensitivity and potentially doubled inference cost."
+        ],
+        "weaknesses": [
+          "Hardware/software and the fixed random-seed value are not disclosed."
+        ],
+        "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_001_ev_005",
+          "paper_001_ev_004"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "code availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "data availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "random seed is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "hyperparameters is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "not_available",
+        "detail": "hardware environment is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "not_available",
+        "detail": "preprocessing details is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_001_ev_005"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "contribution_id": "c1",
+        "text": "Efficient tangent transformer linearization by a single-pass JVP.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_001_ev_001"
+      },
+      {
+        "contribution_id": "c2",
+        "text": "Constant-cost weight-space composition and shard-based forgetting.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_001_ev_001"
+      },
+      {
+        "contribution_id": "c3",
+        "text": "Improved private fine-tuning in the tangent parameter space.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_001_ev_001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_id": "cl1",
+        "claim_text": "TAFT is broadly comparable to nonlinear fine-tuning on the evaluated tasks.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "partially_supported",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_001_ev_002",
+          "paper_001_ev_004"
+        ]
+      },
+      {
+        "claim_id": "cl2",
+        "claim_text": "Tangent-model composition outperforms Model Soup across tested shard counts.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "supported_within_stated_scope",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_001_ev_002",
+          "paper_001_ev_004"
+        ]
+      }
+    ],
+    "review_note": "Existing evidence-linked AI assessment reviewed in the Codex session under rubric v0.1."
+  }
+}

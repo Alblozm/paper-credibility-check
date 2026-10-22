@@ -1,0 +1,366 @@
+{
+  "assessment_id": "assessment_ai_paper_026_openreview_2024_02_11",
+  "paper_version_id": "paper_026_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_026_openreview_2024_02_11",
+    "raw_output_sha256": "aec56aee5352aa22f8f0f64a0cfec2bea5a2ae8847af90ec75bf9b6b76d3637d"
+  },
+  "paper_summary": "Evaluating the performance of deep reinforcement learning (DRL) agents under adversarial attacks that aim to induce specific behaviors, i.e., behavior-oriented adversarial attacks, is crucial for understanding the robustness of DRL agents. Prior research primarily focuses on directing agents towards pre-determined states or policies, lacking generality and flexibility.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In this work, we propose BATTLE, a universal behavior-oriented adversarial attack method.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_026_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "To improve the attack performance, we introduce a weighting function that assigns importance weights over each state.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_026_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "To improve the attack performance, we introduce a weighting function that assigns importance weights over each state.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_026_ev_004",
+        "paper_026_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 5.8,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 5.8/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Evaluating the performance of deep reinforcement learning (DRL) agents under adversarial attacks that aim to induce specific behaviors, i.e., behavior-oriented adversarial attacks, is crucial for understanding the robustness of DRL agents. ",
+    "正文可定位证据支持该维度判断：In this section, we introduce our method BATTLE. The core idea of BATTLE is twofold: firstly, it learns an intention policy that acts as the learning target for the adversarial policy, effectively guiding the victim towards behaving human-desired behavior. Secondly, we introduce…",
+    "正文可定位证据支持该维度判断：Contribution of Each Component. We conduct additional experiments to investigate the effect of each component in BATTLE on Drawer Open, Drawer Close for the manipulation scenario and on Faucet Open, Faucet Close for the opposite behavior scenario. BATTLE contains three critical…"
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+    "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+    "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+    "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》在研究价值方面的正文支持是：Evaluating the performance of deep reinforcement learning (DRL) agents under adversarial attacks that aim to induce specific behaviors, i.e., behavior-oriented adversarial attacks, is crucial for understanding the robustness of DRL agents.  限制或边界证据是：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Evaluating the performance of deep reinforcement learning (DRL) agents under adversarial attacks that aim to induce specific behaviors, i.e., behavior-oriented adversarial attacks, is crucial for understanding the robustness of DRL agents. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_026_ev_001",
+        "paper_026_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》在可靠性与证据方面的正文支持是：In this section, we introduce our method BATTLE. The core idea of BATTLE is twofold: firstly, it learns an intention policy that acts as the learning target for the adversarial policy, effectively guiding the victim towards behaving human-desired behavior. Secondly, we introduce… 限制或边界证据是：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this section, we introduce our method BATTLE. The core idea of BATTLE is twofold: firstly, it learns an intention policy that acts as the learning target for the adversarial policy, effectively guiding the victim towards behaving human-desired behavior. Secondly, we introduce…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 5/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_026_ev_003",
+        "paper_026_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》在原创性定位方面的正文支持是：Contribution of Each Component. We conduct additional experiments to investigate the effect of each component in BATTLE on Drawer Open, Drawer Close for the manipulation scenario and on Faucet Open, Faucet Close for the opposite behavior scenario. BATTLE contains three critical… 限制或边界证据是：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Contribution of Each Component. We conduct additional experiments to investigate the effect of each component in BATTLE on Drawer Open, Drawer Close for the manipulation scenario and on Faucet Open, Faucet Close for the opposite behavior scenario. BATTLE contains three critical…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_026_ev_004",
+        "paper_026_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》在清晰度与可用性方面的正文支持是：Reinforcement learning (RL) (Sutton & Barto, 2018) combined with deep neural networks (DNN) (Le- Cun et al., 2015) shows extraordinary capabilities of allowing agents to master complex behaviors in various domains.  限制或边界证据是：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Reinforcement learning (RL) (Sutton & Barto, 2018) combined with deep neural networks (DNN) (Le- Cun et al., 2015) shows extraordinary capabilities of allowing agents to master complex behaviors in various domains. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_026_ev_005",
+        "paper_026_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BATTLE: Towards Behavior-oriented Adversarial Attacks against Deep Reinforcement Learning》在可复现性与透明度方面的正文支持是：Our experiment is divided into two phases. In the first phase, we conduct experiments using a variety of simulated robotic manipulation tasks from the Meta-world environment. In the second phase, we shift our focus to two continuous control environments from the OpenAI Gym MuJoC… 限制或边界证据是：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Our experiment is divided into two phases. In the first phase, we conduct experiments using a variety of simulated robotic manipulation tasks from the Meta-world environment. In the second phase, we shift our focus to two continuous control environments from the OpenAI Gym MuJoC…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 5/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_026_ev_006",
+        "paper_026_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_026_ev_001",
+      "page_number": 1,
+      "section_id": "paper_026_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Evaluating the performance of deep reinforcement learning (DRL) agents under adversarial attacks that aim to induce specific behaviors, i.e., behavior-oriented adversarial attacks, is crucial for understanding the robustness of DRL agents. Prior research primarily focuses on directing agents towards pre-determined states or policies, lacking generality and flexibility. Therefore, it is important to devise universal attacks that target inducing specific behaviors in a victim. In this work, we propose BATTLE, a universal behavior-oriented adversarial attack method. In BATTLE, an intention policy is trained to align with human preferences for flexible behavior orientation, while the adversary is trained to guide the victim policy to imitate the intention policy. To improve the attack performance, we introduce a weighting function that assigns importance weights over each state. Our empirica",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "page_number": 9,
+      "section_id": "paper_026_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "In this paper, we propose BATTLE, a behavior-oriented adversarial attack approach against DRL learners, which can manipulate the victim to perform desired behaviors of human. BATTLE involves an adversary adding imperceptible perturbations on the observations of the victim, an intention policy learned through PbRL as a flexible behavior orientation, and a weighting function to identify essential states for the efficient adversarial attack. We analyze the convergence of BATTLE and prove that BATTLE converges to critical points under some mild conditions. Empirically, we design two scenarios on several manipulation tasks of Meta-world, and the results demonstrate that BATTLE outperforms the baselines under the targeted adversarial setting. Additionally, BATTLE can enhance the robustness of agents by training with adversary. We further show embodied agents’ vulnerability by attacking Decisio",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_026_ev_003",
+      "page_number": 3,
+      "section_id": "paper_026_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we introduce our method BATTLE. The core idea of BATTLE is twofold: firstly, it learns an intention policy that acts as the learning target for the adversarial policy, effectively guiding the victim towards behaving human-desired behavior. Secondly, we introduce a weighting function to enhance the adversary’s performance and formulate BATTLE as a bi-level optimization problem. The framework of BATTLE is shown in Figure 2 and detailed procedure is summarized in Appendix A.\n\nouter level: optimize replay reward buffer learning outer loss\n\ninner loss human env preferences\n\ninner level: optimize\n\nFigure 2: Overview of BATTLE. BATTLE jointly learns an intention policy π , an adversary π and θ α a weighting function h under bi-level optimization framework. In the inner-level, the adversary is ω optimized such that π approaches the intention policy which learns via PbRL. In the ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_026_ev_004",
+      "page_number": 8,
+      "section_id": "paper_026_openreview_2024_02_11_sec_5_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "Contribution of Each Component. We conduct additional experiments to investigate the effect of each component in BATTLE on Drawer Open, Drawer Close for the manipulation scenario and on Faucet Open, Faucet Close for the opposite behavior scenario. BATTLE contains three critical components: the weight function h , the intention policy π , and the combined policy. Table 2 shows ω θ that the intention policy plays an essential role in the BATTLE. As shown in Figure 7d, the intention policy can mitigate exploration difficulty caused by the restriction of victim policy and improve the exploration ability of BATTLE leading to a better adversary. We also observe that the combined policy balances the discrepancy between π and π on the state distribution and improves the θ ν ◦ α adversary’s performance. In addition, we can economically train the weighting function to distinguish state importance ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_026_ev_005",
+      "page_number": 1,
+      "section_id": "paper_026_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Reinforcement learning (RL) (Sutton & Barto, 2018) combined with deep neural networks (DNN) (Le- Cun et al., 2015) shows extraordinary capabilities of allowing agents to master complex behaviors in various domains. However, recent findings (Huang et al., 2017; Pattanaik et al., 2018; Zhang et al., 2020) reveal that well-trained RL agents parameterized by DNN suffer from vulnerability against test-time attacks, raising concerns in high-risk or safety-critical situations. To understand adversarial attacks on learning algorithms and enhance the robustness of DRL agents, it is crucial to evaluate the performance of the agents under any potential adversarial attacks with certain constraints. In other words, identifying a universal and strong adversary is essential.\n\nTwo main challenges persist in devising effective universal and strong attacks. Firstly, existing strategies, which primarily ai",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_026_ev_006",
+      "page_number": 19,
+      "section_id": "paper_026_openreview_2024_02_11_sec_f_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_026_openreview_2024_02_11_chunk_0034",
+      "evidence_mode": "quote",
+      "excerpt": "Our experiment is divided into two phases. In the first phase, we conduct experiments using a variety of simulated robotic manipulation tasks from the Meta-world environment. In the second phase, we shift our focus to two continuous control environments from the OpenAI Gym MuJoCo suite.\n\nMeta-world. We train the victim models on the Meta-world tasks using the SAC (Soft Actor-Critic) algorithm proposed by Haarnoja et al. (2018). We employ a fully connected neural network as the\n\npolicy network for the SAC algorithm. The detailed hyperparameters used in our experiments are provided in Table 5.\n\nTable 5: Hyper-parameters of SAC for victim training.\n\nHyper-parameter Value Hyper-parameter Value Number of layers 3 Initial temperature 0 . 1 Hidden units of each layer 256 Optimizer Adam Learning rate 0 . 0001 Critic target update freq 2 Discount γ 0 . 99 Critic EMA τ 0 . 005 Batch size 1024 ( β ",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_026_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_026_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_026_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_026_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_026_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_026_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_026_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_026_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_026_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_026_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_026_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

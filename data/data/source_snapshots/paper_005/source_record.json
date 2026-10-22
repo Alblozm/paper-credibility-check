@@ -1,0 +1,80 @@
+{
+  "paper_id": "paper_005",
+  "paper_version_id": "paper_005_v5",
+  "title": "The Expressive Power of Transformers with Chain of Thought",
+  "authors": [
+    "William Merrill",
+    "Ashish Sabharwal"
+  ],
+  "abstract": "Recent theoretical work has identified surprisingly simple reasoning problems, such as checking if two nodes in a graph are connected or simulating finite-state machines, that are provably unsolvable by standard transformers that answer immediately after reading their input. However, in practice, transformers' reasoning can be improved by allowing them to use a \"chain of thought\" or \"scratchpad\", i.e., generate and condition on a sequence of intermediate tokens before answering. Motivated by this, we ask: Does such intermediate generation fundamentally extend the computational power of a decoder-only transformer? We show that the answer is yes, but the amount of increase depends crucially on the amount of intermediate generation. Our results also imply that linear steps keep transformer decoders within context-sensitive languages, and polynomial steps with generalized pre-norm make them recognize exactly the class of polynomial-time solvable problems -- the first exact characterization of a type of transformers in terms of standard complexity classes. Together, this provides a nuanced framework for understanding how the length of a transformer's chain of thought or scratchpad impacts its reasoning power.",
+  "abstract_source": "arxiv abstract page, read 2026-09-02",
+  "language": "en",
+  "arxiv_id": "2310.07923",
+  "arxiv_version": "v5",
+  "doi": "10.48550/arXiv.2310.07923",
+  "subjects": [
+    "cs.LG",
+    "cs.CC",
+    "cs.CL",
+    "cs.LO"
+  ],
+  "source_url": "https://arxiv.org/pdf/2310.07923v5",
+  "abs_url": "https://arxiv.org/abs/2310.07923",
+  "arxiv_comments": "9-page preprint. ICLR camera ready posted April 11",
+  "version_history": [
+    {
+      "version": "v1",
+      "submitted_at": "2023-10-11T22:35:18Z",
+      "size": "86 KB"
+    },
+    {
+      "version": "v2",
+      "submitted_at": "2023-10-16T16:30:21Z",
+      "size": "86 KB"
+    },
+    {
+      "version": "v3",
+      "submitted_at": "2023-10-18T02:38:02Z",
+      "size": "86 KB"
+    },
+    {
+      "version": "v4",
+      "submitted_at": "2024-03-20T17:55:48Z",
+      "size": "100 KB"
+    },
+    {
+      "version": "v5",
+      "submitted_at": "2024-04-11T18:03:53Z",
+      "size": "105 KB"
+    }
+  ],
+  "venue": "ICLR",
+  "publication_year": 2024,
+  "decision": "Accept (poster)",
+  "decision_verified": true,
+  "retrieved_at": "2026-09-07T14:18:21Z",
+  "pdf_sha256": "4017f54b9b7357d6da491e2edd5c315b75b1d0659c4844e5c06e1ab22a2be20c",
+  "pdf_sha256_status": "verified",
+  "page_count": 17,
+  "local_pdf_path": "data/raw_pdfs/paper_005/2310.07923v5.pdf",
+  "page_count_status": "verified",
+  "parse_status": "completed",
+  "version_choice_reason": "v5, identified by the arXiv comments field as the ICLR camera ready. This sample exists to exercise the not_applicable rule rather than to calibrate against reviews, so the published version is the right one. If it is later used for review calibration, switch to v3 (the last pre-decision version).",
+  "verification_notes": [
+    "Five versions on arXiv, which also makes this a useful version-discipline sample.",
+    "Accept (poster) confirmed from the ICLR 2024 virtual site poster page, independently of OpenReview.",
+    "Content verified from the arXiv v5 HTML rendering: no experiments, no datasets, no baselines, no metrics, and no code or data release URL anywhere. Structure is 5 numbered sections plus appendices A-E, with 4 theorems, 10 lemmas and 1 corollary.",
+    "Expected consequence for scoring: several reproducibility checks should resolve to not_applicable rather than not_available. If the model instead returns not_available and lowers the score, that is the failure this sample is designed to catch."
+  ],
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "blocking": "Cannot enter paper_versions: sql/001_initial_schema.sql requires pdf_sha256 CHAR(64) NOT NULL and pdf_object_key NOT NULL. Identity can be seeded into papers now; the version row waits for the PDF.",
+  "parse_quality": "good",
+  "data_status": "parsed",
+  "source_type": "arxiv",
+  "tags": [
+    "high_consensus",
+    "theory_only"
+  ],
+  "authors_status": "verified"
+}

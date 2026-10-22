@@ -1,0 +1,196 @@
+{
+  "model_run_id": "model_run_codex_review_paper_034_iclr_2026_proceedings",
+  "paper_id": "paper_034",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "16497fd1188b906092984515736afd0d06430acf05ae17638a006b4f5261c874",
+  "raw_output": {
+    "paper_summary": "Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popular, they suffer from reference state sensitivity and struggle to generalize across time-series datasets, as they treat time points independently and ignore sequential dependencies. Another perspective on explainable time-series classification is through interpretable components of the model, for instance, leveraging self-attention mechanisms to estimate temporal attribution; however, re",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《TIMESLIVER : SYMBOLIC-LINEAR DECOMPOSITION FOR EXPLAINABLE TIME SERIES CLASSIFICATION》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popu",
+      "论文提供方法或实证支持：Table 4 presents the predictive performance of the four deep learning models used as backbones in the interpretability study. The CNN backbone is used for all post-hoc interpretability methods, while the Transformer is employed for attention tracing and the Gr"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popu；边界证据为：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig",
+        "strengths": [
+          "可定位正文支持：Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popu"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：Table 4 presents the predictive performance of the four deep learning models used as backbones in the interpretability study. The CNN backbone is used for all post-hoc interpretability methods, while the Transformer is employed for attention tracing and the Gr；边界证据为：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig",
+        "strengths": [
+          "可定位正文支持：Table 4 presents the predictive performance of the four deep learning models used as backbones in the interpretability study. The CNN backbone is used for all post-hoc interpretability methods, while the Transformer is employed for attention tracing and the Gr"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0032"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Deep-learning (DL) models such as Convolutional Neural Network (CNN), Long Short-Term Memory (LSTM), and Transformer have proven to be successful as predictive models for time series classification tasks. However, while most DL models offer strong predictive p；边界证据为：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig",
+        "strengths": [
+          "可定位正文支持：Deep-learning (DL) models such as Convolutional Neural Network (CNN), Long Short-Term Memory (LSTM), and Transformer have proven to be successful as predictive models for time series classification tasks. However, while most DL models offer strong predictive p"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：In this section, we present our explainability-driven novel deep learning model, TimeSliver , illustrated in Figure 1 which comprises of three key modules: (I) conversion of the raw time-series input x into temporal segments and learning their representations ；边界证据为：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig",
+        "strengths": [
+          "可定位正文支持：In this section, we present our explainability-driven novel deep learning model, TimeSliver , illustrated in Figure 1 which comprises of three key modules: (I) conversion of the raw time-series input x into temporal segments and learning their representations "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0006"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：We evaluate TimeSliver against twelve temporal attribution methods across 7 datasets, using the explainability metrics from Section 2.2.5. We also report its accuracy on the UEA benchmark to demonstrate predictive performance. Datasets. We use four synthetic d；边界证据为：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig",
+        "strengths": [
+          "可定位正文支持：We evaluate TimeSliver against twelve temporal attribution methods across 7 datasets, using the explainability metrics from Section 2.2.5. We also report its accuracy on the UEA benchmark to demonstrate predictive performance. Datasets. We use four synthetic d"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：In this work, we presented TimeSliver —a novel deep learning framework that linearly combines raw time series with their symbolic counterparts to construct a global representation facilitating temporal attribution calculation. Our importance scores offer insig"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0015"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0008"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+        "chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0003"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0031"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0008"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popular, they suffer from reference state sensitivity and struggle to generalize across time-series datasets, as they treat time points independently and ignore sequential dependencies. Another perspective on explainable time-series classification is through interpretable components of the model, for instance, leveraging self-attention mechanisms to estimate temporal attribution; however, re",
+        "type": "method_or_finding",
+        "chunk_id": "paper_034_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "Identifying the extent to which every temporal segment influences a model’s predictions is essential for explaining model decisions and increasing transparency. While post-hoc explainable methods based on gradients and feature-based attributions have been popular, they suffer from reference state sensitivity and struggle to generalize across time-series datasets, as they treat time points independently and ignore seq",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0032"
+        ],
+        "limiting_chunk_ids": [
+          "paper_034_iclr_2026_proceedings_chunk_0020"
+        ]
+      }
+    ]
+  }
+}

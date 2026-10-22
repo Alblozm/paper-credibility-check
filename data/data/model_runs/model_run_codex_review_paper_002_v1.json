@@ -1,0 +1,229 @@
+{
+  "model_run_id": "model_run_codex_review_paper_002_v1",
+  "paper_id": "paper_002",
+  "version": "v1",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:32:32.432703Z",
+  "raw_output_sha256": "656d4a4c8967f1654f6268bcc96f0921e0a8afa0605e01a1fe4289b7f3c65741",
+  "raw_output": {
+    "paper_summary": "The paper critically tests intrinsic LLM self-correction on reasoning tasks and finds that performance often stagnates or degrades without external feedback.",
+    "overall_assessment": "A useful negative-result paper with a clear question, controlled call-budget comparisons and appropriately bounded conclusions. Reproduction is limited by incomplete environment, seed and implementation disclosure.",
+    "strengths": [
+      "Challenges a popular assumption with direct experiments rather than leaderboard framing.",
+      "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets.",
+      "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+    ],
+    "concerns": [
+      "Results depend on a limited set of proprietary model snapshots and prompts.",
+      "Some prompts are described as casually written, leaving prompt sensitivity unresolved.",
+      "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+    ],
+    "unresolved_questions": [
+      "Would the conclusions hold for current open-weight models?",
+      "How sensitive are the negative results to prompt optimization and sampling variance?"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "dimension_question": "research value",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Challenges a popular assumption with direct experiments rather than leaderboard framing. Results depend on a limited set of proprietary model snapshots and prompts.",
+        "strengths": [
+          "Challenges a popular assumption with direct experiments rather than leaderboard framing."
+        ],
+        "weaknesses": [
+          "Results depend on a limited set of proprietary model snapshots and prompts."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_002_ev_001",
+          "paper_002_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "dimension_question": "soundness evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets. Some prompts are described as casually written, leaving prompt sensitivity unresolved.",
+        "strengths": [
+          "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets."
+        ],
+        "weaknesses": [
+          "Some prompts are described as casually written, leaving prompt sensitivity unresolved."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_002_ev_002",
+          "paper_002_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "dimension_question": "originality positioning",
+        "applicability": "applicable",
+        "score": 7,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+        "strengths": [
+          "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+        ],
+        "weaknesses": [
+          "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+        ],
+        "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_002_ev_003",
+          "paper_002_ev_001"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "dimension_question": "clarity usability",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+        "strengths": [
+          "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+        ],
+        "weaknesses": [
+          "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_002_ev_001",
+          "paper_002_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "dimension_question": "reproducibility transparency",
+        "applicability": "applicable",
+        "score": 5,
+        "rating": "adequate",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+        "strengths": [
+          "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+        ],
+        "weaknesses": [
+          "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+        ],
+        "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_002_ev_005",
+          "paper_002_ev_004"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "not_available",
+        "detail": "code availability is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_002_ev_005"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "data availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_002_ev_005"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "random seed is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_002_ev_005"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "unable_to_verify",
+        "detail": "hyperparameters is unable to verify in the assessed PDF.",
+        "evidence_ids": [
+          "paper_002_ev_005"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "not_available",
+        "detail": "hardware environment is not available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_002_ev_005"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "not_applicable",
+        "detail": "preprocessing details is not applicable in the assessed PDF.",
+        "evidence_ids": []
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "contribution_id": "c1",
+        "text": "Empirical distinction between oracle and intrinsic self-correction.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_002_ev_001"
+      },
+      {
+        "contribution_id": "c2",
+        "text": "Evidence that intrinsic correction can degrade reasoning performance.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_002_ev_001"
+      },
+      {
+        "contribution_id": "c3",
+        "text": "Call-budget comparison of multi-agent debate and self-consistency.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_002_ev_001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_id": "cl1",
+        "claim_text": "Intrinsic self-correction does not reliably improve reasoning without external feedback.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "supported_within_stated_scope",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_002_ev_002",
+          "paper_002_ev_004"
+        ]
+      },
+      {
+        "claim_id": "cl2",
+        "claim_text": "Multi-agent debate offers no benefit over self-consistency at equal response budgets.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "supported_within_stated_scope",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_002_ev_002",
+          "paper_002_ev_004"
+        ]
+      }
+    ],
+    "review_note": "Existing evidence-linked AI assessment reviewed in the Codex session under rubric v0.1."
+  }
+}

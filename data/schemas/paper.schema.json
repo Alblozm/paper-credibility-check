@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "paper.schema.json",
+  "title": "Paper source record",
+  "type": "object",
+  "required": ["paper_id", "paper_version_id", "title", "authors", "source_type", "source_url", "retrieved_at", "pdf_sha256", "page_count", "parse_status", "data_status"],
+  "properties": {
+    "paper_id": {"type": "string", "pattern": "^paper_[0-9]{3,}$"},
+    "paper_version_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "authors": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "authors_status": {"enum": ["verified", "anonymous_at_assessed_version", "missing_requires_review"]},
+    "abstract": {"type": ["string", "null"]},
+    "source_type": {"enum": ["arxiv", "openreview", "pdf"]},
+    "source_url": {"type": "string", "pattern": "^https?://"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "pdf_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "page_count": {"type": "integer", "minimum": 1},
+    "parse_status": {"enum": ["pending", "processing", "completed", "failed"]},
+    "data_status": {"enum": ["candidate", "selected", "sources_verified", "parsed", "annotation_in_progress", "double_annotated", "adjudicated", "approved", "excluded"]}
+  },
+  "additionalProperties": true
+}

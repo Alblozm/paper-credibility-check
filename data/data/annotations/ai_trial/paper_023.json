@@ -1,0 +1,352 @@
+{
+  "assessment_id": "assessment_ai_paper_023_openreview_2024_02_11",
+  "paper_version_id": "paper_023_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_023_openreview_2024_02_11",
+    "raw_output_sha256": "d44f656c27219fbc9dcec480f9e02d0bec1edf34219071d5694d8394057a7703"
+  },
+  "paper_summary": "Numerical solution of partial differential equations (PDEs) plays a vital role in various fields of science and engineering. In recent years, deep neural networks (DNNs) have emerged as a powerful tool for solving PDEs.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "By using operator splitting and boundary integral techniques, we propose particular neural network architectures which approximate evolutionary kernels of solutions and preserve structures of time-dependent PDEs.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_023_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Experimental results demonstrate the efficiency and accuracy of the NEKM in solving heat equations and Allen-Cahn equations in complex domains and on manifolds, showcasing its promising potential for applications in data driven scientific computing.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_023_ev_004",
+        "paper_023_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 5.6,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 5.6/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Numerical solution of partial differential equations (PDEs) plays a vital role in various fields of science and engineering. ",
+    "正文可定位证据支持该维度判断：In this section, we detail our method in two parts: the main framework of NEKM and a variant that possesses some properties. ",
+    "正文可定位证据支持该维度判断：The Allen-Cahn equation is a type of nonlinear equation that is often used to test the accuracy and stability of numerical methods. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+    "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+    "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+    "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》在研究价值方面的正文支持是：Numerical solution of partial differential equations (PDEs) plays a vital role in various fields of science and engineering.  限制或边界证据是：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Numerical solution of partial differential equations (PDEs) plays a vital role in various fields of science and engineering. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_023_ev_001",
+        "paper_023_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》在可靠性与证据方面的正文支持是：In this section, we detail our method in two parts: the main framework of NEKM and a variant that possesses some properties.  限制或边界证据是：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this section, we detail our method in two parts: the main framework of NEKM and a variant that possesses some properties. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 5/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_023_ev_003",
+        "paper_023_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》在原创性定位方面的正文支持是：The Allen-Cahn equation is a type of nonlinear equation that is often used to test the accuracy and stability of numerical methods.  限制或边界证据是：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The Allen-Cahn equation is a type of nonlinear equation that is often used to test the accuracy and stability of numerical methods. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_023_ev_004",
+        "paper_023_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》在清晰度与可用性方面的正文支持是：Partial differential equations (PDEs) find extensive applications in describing a wide range of physical and chemical phenomena, including but not limited to diffusion, heat transfer, fluid dynamics, and other related processes.  限制或边界证据是：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Partial differential equations (PDEs) find extensive applications in describing a wide range of physical and chemical phenomena, including but not limited to diffusion, heat transfer, fluid dynamics, and other related processes. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_023_ev_005",
+        "paper_023_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 4,
+      "rating": "weak",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Neural Evolutionary Kernel Method: A Knowledge-Based Learning Architechture for Evolutionary PDEs》在可复现性与透明度方面的正文支持是：In this subsection, we solve the Allen-Cahn equation on a disk domain using NEKM method and show that PINNs did not perform well in this example, while our method still had good performance.  限制或边界证据是：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this subsection, we solve the Allen-Cahn equation on a disk domain using NEKM method and show that PINNs did not perform well in this example, while our method still had good performance. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 4/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_023_ev_006",
+        "paper_023_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_023_ev_001",
+      "page_number": 1,
+      "section_id": "paper_023_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Numerical solution of partial differential equations (PDEs) plays a vital role in various fields of science and engineering. In recent years, deep neural networks (DNNs) have emerged as a powerful tool for solving PDEs. DNN-based methods exploit the approximation capabilities of neural networks to obtain solutions to PDEs in general domains or high-dimensional spaces. However, many of these methods lack the use of mathematical prior knowledge, and DNN-based methods usually require a large number of sample points and parameters, making them computationally expensive and challenging to train. This paper aims to introduce a novel method named the Neural Evolutionary Kernel Method (NEKM) for solving a class of evolutionary PDEs through DNNs based kernels. By using operator splitting and boundary integral techniques, we propose particular neural network architectures which approximate evoluti",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "page_number": 9,
+      "section_id": "paper_023_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "In summary, this paper presents the Neural Evolutionary Kernel Method (NEKM) for solving a class of semi-linear time-dependent PDEs. NEKM combines operator splitting, boundary integral techniques, and DNNs to establish evolutionary blocks and accurate numerical solutions in complex domains. The method can be combined with other time discretization schemes that possess desirable properties such as energy stability, thereby preserving the structure of the PDEs. Experiments on heat equations, Allen-Cahn equations in different domains confirms the high accuracy and generalizability of the method. Extensions of the proposed method are also available, for example, solving systems of PDEs and even equations with discrete operators. These promote neural network modeling and solutions of general evolutionary problems in real world, as many realistic dynamics are represented using manifold operato",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_023_ev_003",
+      "page_number": 3,
+      "section_id": "paper_023_openreview_2024_02_11_sec_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we detail our method in two parts: the main framework of NEKM and a variant that possesses some properties. Let Ω ⊂ R d be a bounded domain, we consider this evolutionary PDE with initial condition and Dirichlet boundary condition (other conditions can also be handled by our method with a little modification of the following method):  ∂u = L ˜ u ( x,t ) , x ∈ Ω , t ≥ 0  ∂t u ( x, 0) = f ( x ) , x ∈ Ω , (1)  u ( x,t ) = g ( x,t ) , x ∈ ∂ Ω , t > 0 , where L ˜ isanlinearorsemi-linearoperatorcomposedofdifferentialoperations(onspatialvariables) and other operations acting on the value of u . For example, L ˜ u = ∆ u or L ˜ u = ∆ u + ϕ ( u ) , here ϕ is a scalar function. In fact, we need to impose some restrictions on the operator L ˜ and function g : Assumption 1. (1.1) L ˜ could be written as L ˜ = L + ϕ , where L is an linear operator that the fundamental solution for ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_023_ev_004",
+      "page_number": 15,
+      "section_id": "paper_023_openreview_2024_02_11_sec_d",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0024",
+      "evidence_mode": "quote",
+      "excerpt": "The Allen-Cahn equation is a type of nonlinear equation that is often used to test the accuracy and stability of numerical methods. In other words, for a traditional numerical method, we hope that it has the property of stability. However, our NEKM method does not have such concerns because it does not discretize in space.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_023_ev_005",
+      "page_number": 1,
+      "section_id": "paper_023_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Partial differential equations (PDEs) find extensive applications in describing a wide range of physical and chemical phenomena, including but not limited to diffusion, heat transfer, fluid dynamics, and other related processes. For general PDEs, obtaining exact solutions is usually not feasible, while numerical approximations are often important alternatives for scientific discovery. Over the past century, numerous numerical methods based on linear approximation theory have been developed to solve PDEs, including finite difference/finite element/finite volume methods, and spectral method. However, these traditional methods usually suffer from the curse of dimensionality (E et al., 2019). And establishing high-order and sufficiently stable numerical schemes are often difficult for problems in complex geometries. With the Universal Approximation Theorem of neural network by Cybenko (1989)",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_023_ev_006",
+      "page_number": 17,
+      "section_id": "paper_023_openreview_2024_02_11_sec_d_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_023_openreview_2024_02_11_chunk_0027",
+      "evidence_mode": "quote",
+      "excerpt": "In this subsection, we solve the Allen-Cahn equation on a disk domain using NEKM method and show that PINNs did not perform well in this example, while our method still had good performance. We consider an Allen-Cahn equation in a disk domain as following:  u = 0 . 5∆ u + 2( u − u 3 ) , x ∈ Ω = 0 . 2 B 2 and t ∈ [0 , 0 . 1]  t | x |− 1 . 5cos(6arctan( y ) − 6 u ( x, 0) = tanh(100 √ x ) , x ∈ Ω (33) 0 . 5 2  u ( x,t ) = 1 , x ∈ ∂ Ω and t > 0 where B 2 is the 2 -dimensional ball in R 2 . In NEKM, we choose τ = 0 . 1 . To solve equation 12, we use NEKM of case 1. And we need to get v (the result of ‘KF’ block) by BINet method. For this, we use the fully connected n +1 , 2\n\n(a) u 0 (b) u 1 (c) u 2\n\nFigure 11: Predict solution for the Allen-Cahn equation. These figures show the predict solution of Allen-Cahn equation given by NEKM at time t = 0 ,t = 0 . 1 ,t = 0 . 2\n\nFigure 12: Value of ",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_023_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_023_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_023_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_023_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_023_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_023_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "not_available",
+      "detail": "data availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_023_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "hardware environment is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

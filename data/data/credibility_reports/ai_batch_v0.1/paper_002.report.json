@@ -1,0 +1,3865 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-b538b69695a19f12",
+  "paper_version_id": "paper_002_v1",
+  "pdf_sha256": "f204bfe2e642ab52abbf3fa94141e644d22a23510d6d64ed8ddc0ee9823eb983",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "0392bf527ec8fef2acac0eccb185b2f17bcbffd495bbd4a1cdae63dc5db530bf",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.503401360544218,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 2,
+        "deduplicated_claim_count": 2,
+        "checked_claim_count": 2,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 5.510204081632653,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 49,
+        "extracted_count": 49,
+        "parsed_count": 48,
+        "queried_count": 48,
+        "matched_count": 12,
+        "metadata_conflict_count": 2,
+        "unverified_count": 31,
+        "parse_failed_count": 1,
+        "not_checked_count": 0,
+        "query_failed_count": 3,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://arxiv.org/pdf/2310.01798v1",
+            "checked_at": "2026-10-09T04:41:02.135220Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-2",
+        "paper_reference_id": "ref-paper_002_v1_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Palm 2 technical report",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Palm+2+technical+report&rows=5",
+        "checked_at": "2026-10-09T04:40:58.456696Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "TECHNICAL EFFICIENCY OF OIL PALM PLASMA SMALLHOLDERS IN INDONESIA",
+            "authors": [
+              "ABDUL"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.21894/opiej.2023.03",
+            "source_url": "https://doi.org/10.21894/opiej.2023.03",
+            "title_similarity": 0.2727272727272727
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Satellite monitoring - palm oil",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.54394/00000008",
+            "source_url": "https://doi.org/10.54394/00000008",
+            "title_similarity": 0.2692307692307692
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Evaluation Report. Oil Palm Portfolio. An Outcome Evaluation of FTA’s Research Portfolio on Oil Palm",
+            "authors": [
+              "FTA"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.17528/cifor/007936",
+            "source_url": "https://doi.org/10.17528/cifor/007936",
+            "title_similarity": 0.18181818181818182
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Technical Reviewer",
+            "authors": [],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1016/b978-192899432-9/50004-x",
+            "source_url": "https://doi.org/10.1016/b978-192899432-9/50004-x",
+            "title_similarity": 0.6341463414634146
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Estimating Technical Efficiency of Crude Palm Oil in Malaysia",
+            "authors": [
+              "Sabar",
+              "Kamil"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.5220/0012446800003848",
+            "source_url": "https://doi.org/10.5220/0012446800003848",
+            "title_similarity": 0.38095238095238093
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:50.885168Z",
+        "response_sha256": "4cc0642c38f6eba4600ce8406d3b9511a856d95b8c99df93457e3aeb02c8c62c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Palm+2+technical+report&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.456696Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-3",
+        "paper_reference_id": "ref-paper_002_v1_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Constitutional ai: Harmlessness from ai feedback",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Constitutional+ai%3A+Harmlessness+from+ai+feedback&rows=5",
+        "checked_at": "2026-10-09T04:40:58.454571Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Estimating the Harmlessness-Accuracy Trade-off in AI: Evidence from LLM-based Hiring Audits",
+            "authors": [
+              "Zhou"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5464597",
+            "source_url": "https://doi.org/10.2139/ssrn.5464597",
+            "title_similarity": 0.43795620437956206
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Toward a Constitutional Framework for the AI Transition : Insights from Technofeudalism",
+            "authors": [
+              "Lee"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.35901/kjcl.2026.32.2.1",
+            "source_url": "https://doi.org/10.35901/kjcl.2026.32.2.1",
+            "title_similarity": 0.45454545454545453
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Human Reinforcement Learning from AI Feedback: Feedback Mechanisms, Meta-Collaborative Monitoring, and Identity Positioning in Long-Term Human-AI Collaboration",
+            "authors": [
+              "Du"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6928698",
+            "source_url": "https://doi.org/10.2139/ssrn.6928698",
+            "title_similarity": 0.23645320197044334
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Transforming Human-ai Interactions through Reinforcement Learning from Human Feedback and Ai Feedback: a Human-ai Classification Report",
+            "authors": [
+              "SHARMA",
+              "SINGH"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36948/ijfmr.2025.v07i04.52186",
+            "source_url": "https://doi.org/10.36948/ijfmr.2025.v07i04.52186",
+            "title_similarity": 0.30939226519337015
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Operationalising Harmlessness in Online AI Systems",
+            "authors": [
+              "Ni"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3701716.3715277",
+            "source_url": "https://doi.org/10.1145/3701716.3715277",
+            "title_similarity": 0.5773195876288659
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:14.365829Z",
+        "response_sha256": "3cacade665417e2caf537e26c64ad337836c4dd2b9863e91149300f47e353b65",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Constitutional+ai%3A+Harmlessness+from+ai+feedback&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.454571Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-5",
+        "paper_reference_id": "ref-paper_002_v1_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Sparks of artificial general intelligence: Early experiments with gpt-4",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Sparks+of+artificial+general+intelligence%3A+Early+experiments+with+gpt-4&rows=5",
+        "checked_at": "2026-10-09T04:40:58.458166Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sparks of Artificial General Recommender (AGR): Experiments with ChatGPT",
+            "authors": [
+              "Lin",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3390/a16090432",
+            "source_url": "https://doi.org/10.3390/a16090432",
+            "title_similarity": 0.8201438848920863
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Écrire-avec l’intelligence artificielle, ou l’esthéthique de la sympoïèse",
+            "authors": [
+              "Fülöp"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.35562/marge.956",
+            "source_url": "https://doi.org/10.35562/marge.956",
+            "title_similarity": 0.4225352112676056
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "To GPT or not GPT? Empowering our students to learn with AI",
+            "authors": [
+              "Steele"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.caeai.2023.100160",
+            "source_url": "https://doi.org/10.1016/j.caeai.2023.100160",
+            "title_similarity": 0.375
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "RM-GPT: Enhance the comprehensive generative ability of molecular GPT model via LocalRNN and RealFormer",
+            "authors": [
+              "Fan",
+              "He",
+              "Zhu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.artmed.2024.102827",
+            "source_url": "https://doi.org/10.1016/j.artmed.2024.102827",
+            "title_similarity": 0.2558139534883721
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A General Framework of Generative Artificial Intelligence for Early Childhood Education",
+            "authors": [
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.35542/osf.io/j2rzy_v1",
+            "source_url": "https://doi.org/10.35542/osf.io/j2rzy_v1",
+            "title_similarity": 0.5095541401273885
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:15.534787Z",
+        "response_sha256": "4259791579873c6336c1788ffde68e6f01cfd3db72c624bad336d4cd72dd0349",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Sparks+of+artificial+general+intelligence%3A+Early+experiments+with+gpt-4&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.458166Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-6",
+        "paper_reference_id": "ref-paper_002_v1_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Extracting training data from large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Extracting+training+data+from+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.457538Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Use of Large Language Models for Extracting and Analyzing Data from Heterogeneous Catalysis Literature",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acscatal.5c03844.s001",
+            "source_url": "https://doi.org/10.1021/acscatal.5c03844.s001",
+            "title_similarity": 0.32679738562091504
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Using Multimodal Large Language Models for Extracting Structured Life-Cycle Inventory Data from Scientific Literature",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.est.6c12624.s001",
+            "source_url": "https://doi.org/10.1021/acs.est.6c12624.s001",
+            "title_similarity": 0.35714285714285715
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Extracting Financial Data from Unstructured Sources: Leveraging Large Language Models",
+            "authors": [
+              "Li",
+              "Gao",
+              "Wu",
+              "Vasarhelyi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4567607",
+            "source_url": "https://doi.org/10.2139/ssrn.4567607",
+            "title_similarity": 0.6814814814814815
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Model Inversion Attacks on Llama 3: Extracting PII from Large Language Models",
+            "authors": [
+              "P.Sivashanmugam"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5341233",
+            "source_url": "https://doi.org/10.2139/ssrn.5341233",
+            "title_similarity": 0.6299212598425197
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Can Large Language Models Reduce the Cost of Extracting Data from Electronic Health Records for Research?",
+            "authors": [
+              "Hagler",
+              "Adibuzzaman",
+              "McWeeney",
+              "Cohen"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.01.09.26343792",
+            "source_url": "https://doi.org/10.64898/2026.01.09.26343792",
+            "title_similarity": 0.3096774193548387
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:16.316869Z",
+        "response_sha256": "3d7498dd5b829edfda13c73abd0f92f56651e6d6687af90e2bb177b7d00b801b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Extracting+training+data+from+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.457538Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-7",
+        "paper_reference_id": "ref-paper_002_v1_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reconcile: Round-table conference improves reasoning via consensus among diverse llms",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reconcile%3A+Round-table+conference+improves+reasoning+via+consensus+among+diverse+llms&rows=5",
+        "checked_at": "2026-10-09T04:40:59.178177Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs",
+            "authors": [
+              "Chen",
+              "Saha",
+              "Bansal"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.acl-long.381",
+            "source_url": "https://doi.org/10.18653/v1/2024.acl-long.381",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table 2: Statements reaching consensus (&gt;70%) in Round One.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.4667/table-2",
+            "source_url": "https://doi.org/10.7717/peerj.4667/table-2",
+            "title_similarity": 0.44285714285714284
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Think before You Fetch: Smarter Retrieval for Smarter LLMs with Enhanced Table Understanding and Long-Form Reasoning",
+            "authors": [
+              "Mohandas",
+              "Majumdar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014232000004052",
+            "source_url": "https://doi.org/10.5220/0014232000004052",
+            "title_similarity": 0.3015075376884422
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "No Consensus with the Commonwealth, No Consensus with Itself? Canada and the Iraq War",
+            "authors": [
+              "Fawn"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.1080/00358530802207229",
+            "source_url": "https://doi.org/10.1080/00358530802207229",
+            "title_similarity": 0.23952095808383234
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MedAtlas: Evaluating LLMs for Multi-Round, Multi-Task Medical Reasoning Across Diverse Imaging Modalities and Clinical Text",
+            "authors": [
+              "Xu",
+              "Huang",
+              "Wei",
+              "Zhou",
+              "Xu",
+              "Liu",
+              "Jiang",
+              "Zhou"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1609/aaai.v40i44.41142",
+            "source_url": "https://doi.org/10.1609/aaai.v40i44.41142",
+            "title_similarity": 0.3804878048780488
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:59.176144Z",
+        "response_sha256": "36c4eae4892606ba40039c39a6fb9effd6adf87dc199b99a8ed5044603ef7a98",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reconcile%3A+Round-table+conference+improves+reasoning+via+consensus+among+diverse+llms&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:59.178177Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-8",
+        "paper_reference_id": "ref-paper_002_v1_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Teaching large language models to self-debug",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Teaching+large+language+models+to+self-debug&rows=5",
+        "checked_at": "2026-10-09T04:40:58.457064Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Augmenting Teaching Material Development with Large Language Models: A Novel AI-Assisted Application for Medical Educators",
+            "authors": [
+              "Ranjan"
+            ],
+            "year": 2025,
+            "years": [
+              2025,
+              2026
+            ],
+            "doi": "10.38192/1.10.1.ac25.ab.098",
+            "source_url": "https://doi.org/10.38192/1.10.1.ac25.ab.098",
+            "title_similarity": 0.4121212121212121
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Teaching Case: Improving Government Operations with Large Language Models",
+            "authors": [
+              "Strauss"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6584460",
+            "source_url": "https://doi.org/10.2139/ssrn.6584460",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Self-verification of large language models for math word problems",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013246559203412",
+            "source_url": "https://doi.org/10.14711/thesis-991013246559203412",
+            "title_similarity": 0.5504587155963303
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review of: \"Self-Pluralising Culture Alignment for Large Language Models\"",
+            "authors": [
+              "Arsentev"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32388/dbcpmz",
+            "source_url": "https://doi.org/10.32388/dbcpmz",
+            "title_similarity": 0.47368421052631576
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review of: \"Self-Pluralising Culture Alignment for Large Language Models\"",
+            "authors": [
+              "Zewail"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32388/bojvog",
+            "source_url": "https://doi.org/10.32388/bojvog",
+            "title_similarity": 0.47368421052631576
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:51.009982Z",
+        "response_sha256": "aac5848526969af0098a040947aeb56e827c95854b3e7ac53c9dcaaf5c11e497",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Teaching+large+language+models+to+self-debug&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.457064Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-9",
+        "paper_reference_id": "ref-paper_002_v1_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Training verifiers to solve math word problems",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Training+verifiers+to+solve+math+word+problems&rows=5",
+        "checked_at": "2026-10-09T04:40:58.460072Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Misconception Analysis Borrowing From Literacy to Solve Math Word Problems With Technology",
+            "authors": [
+              "Groene"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.3102/1444452",
+            "source_url": "https://doi.org/10.3102/1444452",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "The effect of creating and writing word problems on first and fourth grade students' abililty to solve word problems",
+            "authors": [
+              "Finkas"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.zgfb-e7xw",
+            "source_url": "https://doi.org/10.31979/etd.zgfb-e7xw",
+            "title_similarity": 0.2981366459627329
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Using logical prompts to automatically solve math word problems",
+            "authors": [
+              "Liu",
+              "Zou"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/ncic61838.2023.00054",
+            "source_url": "https://doi.org/10.1109/ncic61838.2023.00054",
+            "title_similarity": 0.6238532110091743
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Understanding the Factors Affecting Students’ Ability to Solve Math Word Problems",
+            "authors": [
+              "Kwok",
+              "Kwan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.29333/aje.2025.1013a",
+            "source_url": "https://doi.org/10.29333/aje.2025.1013a",
+            "title_similarity": 0.6190476190476191
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MLIR — Verifiers",
+            "authors": [
+              "Kun"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.59350/ppz0a-g4t04",
+            "source_url": "https://doi.org/10.59350/ppz0a-g4t04",
+            "title_similarity": 0.36666666666666664
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:16.457247Z",
+        "response_sha256": "dfec8a557007c9ecf4841486e2ca1325e1fdaba4c8ba1e6394b1d7361d6ac2c1",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Training+verifiers+to+solve+math+word+problems&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.460072Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-10",
+        "paper_reference_id": "ref-paper_002_v1_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Improving factuality and reasoning in language models through multiagent debate",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Improving+factuality+and+reasoning+in+language+models+through+multiagent+debate&rows=5",
+        "checked_at": "2026-10-09T04:40:58.459147Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "ShanZhiXingYu: Address Factuality Issues in Large Language Models Through Multi-Dimensions",
+            "authors": [
+              "Yao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.20944/preprints202502.0533.v1",
+            "source_url": "https://doi.org/10.20944/preprints202502.0533.v1",
+            "title_similarity": 0.6309523809523809
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Can You Trust What I Think? Analyzing and Improving Verbalized Uncertainty and Factuality in Reasoning-Based Large Language Models",
+            "authors": [
+              "Xu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1609/aaai.v40i48.42331",
+            "source_url": "https://doi.org/10.1609/aaai.v40i48.42331",
+            "title_similarity": 0.47115384615384615
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Evaluating and Improving the Reasoning Abilities of Language Models",
+            "authors": [
+              "Helwe"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/7fc70e59zdd27z4b0fza38dz03a2c67cda50",
+            "source_url": "https://doi.org/10.70675/7fc70e59zdd27z4b0fza38dz03a2c67cda50",
+            "title_similarity": 0.5342465753424658
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Operationalizing Reliability Gaps in Large Language Models: A Semi-Systematic Evidence Map of Reasoning, Factuality, Evaluation, and Retrieval-Augmented Generation",
+            "authors": [
+              "Budha",
+              "Lagun"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-9882260/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-9882260/v1",
+            "title_similarity": 0.3865546218487395
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Reasoning Models Hallucinate More: Factuality-Aware Reinforcement Learning for Large Reasoning Models",
+            "authors": [
+              "Li",
+              "Ng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.52202/085713-5052",
+            "source_url": "https://doi.org/10.52202/085713-5052",
+            "title_similarity": 0.4022346368715084
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:51.438048Z",
+        "response_sha256": "eb36ab430021434085f7233f23a3ed8273f8c584d3209b9adbac242b3aacf17d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Improving+factuality+and+reasoning+in+language+models+through+multiagent+debate&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.459147Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-11",
+        "paper_reference_id": "ref-paper_002_v1_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The capacity for moral self-correction in large language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+capacity+for+moral+self-correction+in+large+language+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.462178Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Smaller Large Language Models Can Do Moral Self-Correction",
+            "authors": [
+              "Liu",
+              "Xue",
+              "Zhang",
+              "Wang",
+              "Johnson"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.trustnlp-main.5",
+            "source_url": "https://doi.org/10.18653/v1/2025.trustnlp-main.5",
+            "title_similarity": 0.4628099173553719
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Moral Decision-Making Without Self-Image: Implications from Large Language Models",
+            "authors": [
+              "Hua"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1257/rct.17567-1.5",
+            "source_url": "https://doi.org/10.1257/rct.17567-1.5",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Moral Decision-Making Without Self-Image: Implications from Large Language Models",
+            "authors": [
+              "Hua"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1257/rct.17567",
+            "source_url": "https://doi.org/10.1257/rct.17567",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Moral Decision-Making Without Self-Image: Implications from Large Language Models",
+            "authors": [
+              "Hua"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1257/rct.17567-1.4",
+            "source_url": "https://doi.org/10.1257/rct.17567-1.4",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Moral Decision-Making Without Self-Image: Implications from Large Language Models",
+            "authors": [
+              "Hua"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1257/rct.17567-1.0",
+            "source_url": "https://doi.org/10.1257/rct.17567-1.0",
+            "title_similarity": 0.5454545454545454
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:17.639119Z",
+        "response_sha256": "f15e621d628eb77b176997919323c144a525a6687dd65bbb3e162d773f3f0d20",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+capacity+for+moral+self-correction+in+large+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.462178Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-13",
+        "paper_reference_id": "ref-paper_002_v1_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Critic: Large language models can self-correct with tool-interactive critiquing",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Critic%3A+Large+language+models+can+self-correct+with+tool-interactive+critiquing&rows=5",
+        "checked_at": "2026-10-09T04:40:58.461454Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Can Large Language Models Self-Correct in Medical Question Answering? An Exploratory Study",
+            "authors": [
+              "Zhan",
+              "Cui",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/ichi69079.2026.00215",
+            "source_url": "https://doi.org/10.1109/ichi69079.2026.00215",
+            "title_similarity": 0.5748502994011976
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Large Language Models Can Self-Correct with Key Condition Verification",
+            "authors": [
+              "Wu",
+              "Zeng",
+              "Zhang",
+              "Tan",
+              "Shen",
+              "Jiang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.714",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.714",
+            "title_similarity": 0.7027027027027027
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Leveraging Large Language Models for Interactive\nExploration of MRI Research Reproducibility: A Self-Evolving\nReview",
+            "authors": [
+              "Karakuzu",
+              "Boudreau",
+              "Stikov"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.55458/neurolibre.00021",
+            "source_url": "https://doi.org/10.55458/neurolibre.00021",
+            "title_similarity": 0.48704663212435234
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Integrating large language models into project-based learning based on self-determination theory",
+            "authors": [
+              "Zhang",
+              "Zhang"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1080/10494820.2024.2446535",
+            "source_url": "https://doi.org/10.1080/10494820.2024.2446535",
+            "title_similarity": 0.5057471264367817
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Large Language Models",
+            "authors": [
+              "McTear",
+              "Ashurkina"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/979-8-8688-0110-5_4",
+            "source_url": "https://doi.org/10.1007/979-8-8688-0110-5_4",
+            "title_similarity": 0.42424242424242425
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:18.364074Z",
+        "response_sha256": "9906fd703e32b7af46bca27d361cf0825495cad099dcb99f64beb3b68f7e273d",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Critic%3A+Large+language+models+can+self-correct+with+tool-interactive+critiquing&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.461454Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-14",
+        "paper_reference_id": "ref-paper_002_v1_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards reasoning in large language models: A survey",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+reasoning+in+large+language+models%3A+A+survey&rows=5",
+        "checked_at": "2026-10-09T04:41:01.513364Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:01.513304Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+reasoning+in+large+language+models%3A+A+survey&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.513364Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-15",
+        "paper_reference_id": "ref-paper_002_v1_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Are large pre-trained language models leaking your personal information? In Findings of the Association for Computational Linguistics: EMNLP 2022 , pp",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Are+large+pre-trained+language+models+leaking+your+personal+information%3F+In+Findings+of+the+Association+for+Computational+Linguistics%3A+EMNLP+2022+%2C+pp&rows=5",
+        "checked_at": "2026-10-09T04:40:58.463879Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Are Large Pre-Trained Language Models Leaking Your Personal Information?",
+            "authors": [
+              "Huang",
+              "Shao",
+              "Chang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.findings-emnlp.148",
+            "source_url": "https://doi.org/10.18653/v1/2022.findings-emnlp.148",
+            "title_similarity": 0.6543778801843319
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "You Are My Type! Type Embeddings for Pre-trained Language Models",
+            "authors": [
+              "Saeed",
+              "Papotti"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.findings-emnlp.336",
+            "source_url": "https://doi.org/10.18653/v1/2022.findings-emnlp.336",
+            "title_similarity": 0.3157894736842105
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Efficient Data Learning for Open Information Extraction with Pre-trained Language Models",
+            "authors": [
+              "Fan",
+              "He"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-emnlp.869",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-emnlp.869",
+            "title_similarity": 0.2905982905982906
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Data-Efficient Concept Extraction from Pre-trained Language Models for Commonsense Explanation Generation",
+            "authors": [
+              "Fang",
+              "Zhang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.findings-emnlp.433",
+            "source_url": "https://doi.org/10.18653/v1/2022.findings-emnlp.433",
+            "title_similarity": 0.398406374501992
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Distance-aware Calibration for Pre-trained Language Models",
+            "authors": [
+              "Gasparin",
+              "Detommaso"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-emnlp.725",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.725",
+            "title_similarity": 0.3431372549019608
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:19.700383Z",
+        "response_sha256": "d0f942384acf2fc9676fee1657eb4a548a58263fb72207ec7453a786da36df27",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Are+large+pre-trained+language+models+leaking+your+personal+information%3F+In+Findings+of+the+Association+for+Computational+Linguistics%3A+EMNLP+2022+%2C+pp&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.463879Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-16",
+        "paper_reference_id": "ref-paper_002_v1_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Language models (mostly) know what they know",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+%28mostly%29+know+what+they+know&rows=5",
+        "checked_at": "2026-10-09T04:40:58.463370Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Mycoplasma hyosynoviae: What we know (and mostly what we do not know)",
+            "authors": [
+              "Pieters"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.54846/am2025/s7-3",
+            "source_url": "https://doi.org/10.54846/am2025/s7-3",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Measuring What AI Models Know and Whether They Know What They Don't Know: A Three-Run, Blind, Cross-Domain Benchmark of Six Leading Large Language Models",
+            "authors": [
+              "Pandit"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-8937831/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8937831/v1",
+            "title_similarity": 0.3645833333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "What we know (And Mostly Don't Know) about Technical Work",
+            "authors": [
+              "Barley"
+            ],
+            "year": 2006,
+            "years": [
+              2006,
+              2009
+            ],
+            "doi": "10.1093/oxfordhb/9780199299249.003.0020",
+            "source_url": "https://doi.org/10.1093/oxfordhb/9780199299249.003.0020",
+            "title_similarity": 0.4742268041237113
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "What Large Language Models Know",
+            "authors": [
+              "Alvarado"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1215/2834703x-11205161",
+            "source_url": "https://doi.org/10.1215/2834703x-11205161",
+            "title_similarity": 0.547945205479452
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "When models do not know what they do not know",
+            "authors": [
+              "elbert"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7027101",
+            "source_url": "https://doi.org/10.2139/ssrn.7027101",
+            "title_similarity": 0.7126436781609196
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:19.306290Z",
+        "response_sha256": "97a8930c582e507379d5dcdb670a1f96260bccc26defa29e6cd852eef5e70069",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Language+models+%28mostly%29+know+what+they+know&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.463370Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-19",
+        "paper_reference_id": "ref-paper_002_v1_credibility-19",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gradient-based learning applied to document recognition",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gradient-based+learning+applied+to+document+recognition&rows=5",
+        "checked_at": "2026-10-09T04:40:58.465382Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Gradient-based learning applied to document recognition",
+            "authors": [
+              "Lecun",
+              "Bottou",
+              "Bengio",
+              "Haffner"
+            ],
+            "year": 1998,
+            "years": [
+              1998
+            ],
+            "doi": "10.1109/5.726791",
+            "source_url": "https://doi.org/10.1109/5.726791",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GradientBased Learning Applied to Document Recognition",
+            "authors": [],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/9780470544976.ch9",
+            "source_url": "https://doi.org/10.1109/9780470544976.ch9",
+            "title_similarity": 0.9908256880733946
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An Unsupervised Character Recognition Method for Tibetan Historical Document Images Based on Deep Learning",
+            "authors": [
+              "Wang",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.3390/app14052142",
+            "source_url": "https://doi.org/10.3390/app14052142",
+            "title_similarity": 0.2732919254658385
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Document image quality assessment based on improved gradient magnitude similarity deviation",
+            "authors": [
+              "Alaei",
+              "Conte",
+              "Raveaux"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/icdar.2015.7333747",
+            "source_url": "https://doi.org/10.1109/icdar.2015.7333747",
+            "title_similarity": 0.3972602739726027
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning of Pattern-Based Rules for Document Classification",
+            "authors": [
+              "Dengel"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1109/icdar.2007.4378688",
+            "source_url": "https://doi.org/10.1109/icdar.2007.4378688",
+            "title_similarity": 0.5263157894736842
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:21.549229Z",
+        "response_sha256": "92891033395aaa2d2d39d9f2f4d2526e9bc173336c20852d7e27f8769177a154",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gradient-based+learning+applied+to+document+recognition&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.465382Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-21",
+        "paper_reference_id": "ref-paper_002_v1_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Encouraging divergent thinking in large language models through multiagent debate",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Encouraging+divergent+thinking+in+large+language+models+through+multiagent+debate&rows=5",
+        "checked_at": "2026-10-09T04:40:58.466783Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+            "authors": [
+              "Liang",
+              "He",
+              "Jiao",
+              "Wang",
+              "Wang",
+              "Wang",
+              "Yang",
+              "Shi",
+              "Tu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.992",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.992",
+            "title_similarity": 0.9938650306748467
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Critical Thinking through Debate",
+            "authors": [
+              "Wade"
+            ],
+            "year": 2016,
+            "years": [
+              2016
+            ],
+            "doi": "10.4324/9781315707808-9",
+            "source_url": "https://doi.org/10.4324/9781315707808-9",
+            "title_similarity": 0.4778761061946903
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Beyond semantic distance: Automated scoring of divergent thinking greatly improves with large language models",
+            "authors": [
+              "Organisciak",
+              "Acar",
+              "Dumas",
+              "Berthiaume"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.tsc.2023.101356",
+            "source_url": "https://doi.org/10.1016/j.tsc.2023.101356",
+            "title_similarity": 0.5396825396825397
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A pleasant surprise: perplexity from large language models assesses divergent thinking",
+            "authors": [
+              "Yu",
+              "Raffaelli",
+              "Luchini",
+              "Beaty",
+              "Andrews-Hanna"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21428/8e6ba8ef.e8b0ea47",
+            "source_url": "https://doi.org/10.21428/8e6ba8ef.e8b0ea47",
+            "title_similarity": 0.4457831325301205
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Encouraging Divergent Thinking",
+            "authors": [
+              "Raviv"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18260/1-2--21283",
+            "source_url": "https://doi.org/10.18260/1-2--21283",
+            "title_similarity": 0.5405405405405406
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:54.163877Z",
+        "response_sha256": "c696d86bb05ed9ca1da53f2187f47aa41d465d7fe1f933baf0ebbede89553c6b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Encouraging+divergent+thinking+in+large+language+models+through+multiagent+debate&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.466783Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-22",
+        "paper_reference_id": "ref-paper_002_v1_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Let’s verify step by step",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Let%E2%80%99s+verify+step+by+step&rows=5",
+        "checked_at": "2026-10-09T04:40:58.468442Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Let’s Verify and Reinforce Image Generation Step by Step",
+            "authors": [
+              "Zhang",
+              "Tong",
+              "Zhao",
+              "Guo",
+              "Zhang",
+              "Zhang",
+              "Liu",
+              "Gao",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/cvpr52734.2025.02669",
+            "source_url": "https://doi.org/10.1109/cvpr52734.2025.02669",
+            "title_similarity": 0.6172839506172839
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "How Do I Verify KYC in Kraken? Step by Step 2026",
+            "authors": [
+              "diton"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.omx6q5yq",
+            "source_url": "https://doi.org/10.55277/researchhub.omx6q5yq",
+            "title_similarity": 0.5833333333333334
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "How to Verify Your Robinhood Account Step-by-Step (Complete 2026 Guide)",
+            "authors": [
+              "John"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.3h01fsnd",
+            "source_url": "https://doi.org/10.55277/researchhub.3h01fsnd",
+            "title_similarity": 0.44680851063829785
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How to Verify Your Uphold Account Step-by-Step (Complete 2026 Guide)",
+            "authors": [
+              "John"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.1ejy21i9",
+            "source_url": "https://doi.org/10.55277/researchhub.1ejy21i9",
+            "title_similarity": 0.46153846153846156
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Let’s Enjoy Ukrainian B1",
+            "authors": [
+              "Ihnatyeva",
+              "Pchelintseva"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.57088/978-3-7329-8744-3",
+            "source_url": "https://doi.org/10.57088/978-3-7329-8744-3",
+            "title_similarity": 0.4489795918367347
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:23.089666Z",
+        "response_sha256": "89e562b40823e6d5378c78f1e239ca3fc0fa9c1515a291ae5819b44f4febd1c9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Let%E2%80%99s+verify+step+by+step&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.468442Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-24",
+        "paper_reference_id": "ref-paper_002_v1_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Demystifying gpt self-repair for code generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Demystifying+gpt+self-repair+for+code+generation&rows=5",
+        "checked_at": "2026-10-09T04:40:58.468909Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Code Generation: GPT vs Llama 4",
+            "authors": [
+              "Yao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/1t0ah-cwh14",
+            "source_url": "https://doi.org/10.59350/1t0ah-cwh14",
+            "title_similarity": 0.38461538461538464
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Code Generation: GPT vs Llama 4",
+            "authors": [
+              "Yao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/a2hpk-y8k30",
+            "source_url": "https://doi.org/10.59350/a2hpk-y8k30",
+            "title_similarity": 0.38461538461538464
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "SAGE: A Self-Adaptive Agentic Framework for Execution-Guided Code Generation and Self-Repair",
+            "authors": [
+              "Lodhiya"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10523195/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10523195/v1",
+            "title_similarity": 0.4460431654676259
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Comparative Analysis of GPT and xAI's Grok for Code Generation and Research",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/pjk7n-hrk93",
+            "source_url": "https://doi.org/10.59350/pjk7n-hrk93",
+            "title_similarity": 0.5528455284552846
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Comparative Analysis of GPT and xAI's Grok for Code Generation and Research",
+            "authors": [
+              "Bhirawa"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/5x18c-wyr17",
+            "source_url": "https://doi.org/10.59350/5x18c-wyr17",
+            "title_similarity": 0.5528455284552846
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:54.497417Z",
+        "response_sha256": "476b7d17a7d03a8e3b2ea08cdbc19a10a88c069278d38342bc2c602876a0252c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Demystifying+gpt+self-repair+for+code+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.468909Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-25",
+        "paper_reference_id": "ref-paper_002_v1_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gpt-4 technical report, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:40:58.469344Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v2",
+            "title_similarity": 0.5365853658536586
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GPT-InvestAR: Enhancing Stock Investment Strategies through Annual Report Analysis with Large Language Models",
+            "authors": [
+              "Gupta"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4568964",
+            "source_url": "https://doi.org/10.2139/ssrn.4568964",
+            "title_similarity": 0.26666666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v1",
+            "title_similarity": 0.5365853658536586
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Technical Evaluation of GPT-4 and GPT-4-Turbo Reflective Listening Response Generation with the Counsel Chat Dataset",
+            "authors": [
+              "Pant",
+              "Mukhiya"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4769572/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4769572/v1",
+            "title_similarity": 0.23776223776223776
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "GPT-4 vs. GPT-3.5: A Concise Showdown",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330",
+            "title_similarity": 0.3548387096774194
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:23.336467Z",
+        "response_sha256": "eac573051e7650fcf99e5ee4be9aaaea907ffa06b08522f9c21a51554685abe9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gpt-4+technical+report%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.469344Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-27",
+        "paper_reference_id": "ref-paper_002_v1_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Automatically correcting large language models: Surveying the landscape of diverse selfcorrection strategies",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Automatically+correcting+large+language+models%3A+Surveying+the+landscape+of+diverse+selfcorrection+strategies&rows=5",
+        "checked_at": "2026-10-09T04:40:58.469871Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automatically Correcting Large Language Models:\n                    <i>Surveying the Landscape of Diverse Automated Correction Strategies</i>",
+            "authors": [
+              "Pan",
+              "Saxon",
+              "Xu",
+              "Nathani",
+              "Wang",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1162/tacl_a_00660",
+            "source_url": "https://doi.org/10.1162/tacl_a_00660",
+            "title_similarity": 0.9454545454545454
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Introduction to Large Language Models with OpenAI",
+            "authors": [
+              "Martra"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/979-8-8688-0515-8_1",
+            "source_url": "https://doi.org/10.1007/979-8-8688-0515-8_1",
+            "title_similarity": 0.44871794871794873
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Large Language Models Projects",
+            "authors": [
+              "Martra"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/979-8-8688-0515-8",
+            "source_url": "https://doi.org/10.1007/979-8-8688-0515-8",
+            "title_similarity": 0.40875912408759124
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Evaluating Models",
+            "authors": [
+              "Martra"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/979-8-8688-0515-8_4",
+            "source_url": "https://doi.org/10.1007/979-8-8688-0515-8_4",
+            "title_similarity": 0.20967741935483872
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "AutoRNet: Automatically Optimizing Heuristics for Robust Network Design via Large Language Models",
+            "authors": [
+              "Yu",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-5401686/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-5401686/v1",
+            "title_similarity": 0.4039408866995074
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:25.397594Z",
+        "response_sha256": "30097c86f4c4b6ea6adb24fb341e733b2fe0ffdb09db0739e659f6b28c9be779",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Automatically+correcting+large+language+models%3A+Surveying+the+landscape+of+diverse+selfcorrection+strategies&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.469871Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-28",
+        "paper_reference_id": "ref-paper_002_v1_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Refiner: Reasoning feedback on intermediate representations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Refiner%3A+Reasoning+feedback+on+intermediate+representations&rows=5",
+        "checked_at": "2026-10-09T04:41:01.513517Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:01.513496Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Refiner%3A+Reasoning+feedback+on+intermediate+representations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.513517Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-29",
+        "paper_reference_id": "ref-paper_002_v1_credibility-29",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "True few-shot learning with language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=True+few-shot+learning+with+language+models&rows=5",
+        "checked_at": "2026-10-09T04:40:58.471262Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Few-Shot Learning of TTPs Classification Using Large Language Models",
+            "authors": [
+              "Fengrui",
+              "Du"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202401.0372.v1",
+            "source_url": "https://doi.org/10.20944/preprints202401.0372.v1",
+            "title_similarity": 0.6486486486486487
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Language Models are Few-Shot Learners",
+            "authors": [
+              "Malakar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.65525/svup.9788199778009.2026.224-230",
+            "source_url": "https://doi.org/10.65525/svup.9788199778009.2026.224-230",
+            "title_similarity": 0.475
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multi-Label Classification for Fashion Data: Zero-Shot Classifiers via Few-Shot Learning on Large Language Models",
+            "authors": [
+              "Jiang",
+              "Shah",
+              "Yeung",
+              "Zhu",
+              "Singh",
+              "Goldenberg"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.5220/0012899100003838",
+            "source_url": "https://doi.org/10.5220/0012899100003838",
+            "title_similarity": 0.49032258064516127
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Using Large Language Models in Real Estate Transactions: A Few-shot Learning Approach",
+            "authors": [
+              "Yang",
+              "Zhao",
+              "Gao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31219/osf.io/kb9cu",
+            "source_url": "https://doi.org/10.31219/osf.io/kb9cu",
+            "title_similarity": 0.3464566929133858
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Evaluation of Few-Shot Learning with Vision Language Models for Needle Bearing Defect Detection",
+            "authors": [
+              "Chandrasekaran",
+              "Perumal"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/southeastcon56624.2025.10971495",
+            "source_url": "https://doi.org/10.1109/southeastcon56624.2025.10971495",
+            "title_similarity": 0.5797101449275363
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:25.270608Z",
+        "response_sha256": "7a89bd6cdf393dddaab3a6a2faaf82e5eed83ced27010ca15a5c30d582be2571",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=True+few-shot+learning+with+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:58.471262Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-30",
+        "paper_reference_id": "ref-paper_002_v1_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Is chatgpt a general-purpose natural language processing task solver? arXiv preprint arXiv:2302.06476 , 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Is+chatgpt+a+general-purpose+natural+language+processing+task+solver%3F+arXiv+preprint+arXiv%3A2302.06476+%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:40:59.328905Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Is ChatGPT a General-Purpose Natural Language Processing Task Solver?",
+            "authors": [
+              "Qin",
+              "Zhang",
+              "Zhang",
+              "Chen",
+              "Yasunaga",
+              "Yang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.emnlp-main.85",
+            "source_url": "https://doi.org/10.18653/v1/2023.emnlp-main.85",
+            "title_similarity": 0.7861271676300579
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.4330708661417323
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.24161073825503357
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.22727272727272727
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.20606060606060606
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:40:59.327207Z",
+        "response_sha256": "cd91ae8c991606e6e3237a83a65545532f1edeace28bb9abba43d464043a809c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Is+chatgpt+a+general-purpose+natural+language+processing+task+solver%3F+arXiv+preprint+arXiv%3A2302.06476+%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:59.328905Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-31",
+        "paper_reference_id": "ref-paper_002_v1_credibility-31",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning representations by backpropagating errors",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+representations+by+backpropagating+errors&rows=5",
+        "checked_at": "2026-10-09T04:40:59.181540Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Backpropagating Errors",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.7551/mitpress/11474.003.0011",
+            "source_url": "https://doi.org/10.7551/mitpress/11474.003.0011",
+            "title_similarity": 0.6111111111111112
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Backpropagating Errors Through Memristive Spiking Neural Networks",
+            "authors": [
+              "Zhou",
+              "Choi",
+              "Kang",
+              "Eshraghian"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/iscas46773.2023.10182006",
+            "source_url": "https://doi.org/10.1109/iscas46773.2023.10182006",
+            "title_similarity": 0.3826086956521739
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning Representations by Back-Propagating Errors",
+            "authors": [
+              "Rumelhart",
+              "Hinton",
+              "Williams"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.7551/mitpress/1888.003.0013",
+            "source_url": "https://doi.org/10.7551/mitpress/1888.003.0013",
+            "title_similarity": 0.9900990099009901
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning representations by back-propagating errors",
+            "authors": [
+              "Rumelhart",
+              "Hinton",
+              "Williams"
+            ],
+            "year": 1986,
+            "years": [
+              1986
+            ],
+            "doi": "10.1038/323533a0",
+            "source_url": "https://doi.org/10.1038/323533a0",
+            "title_similarity": 0.9900990099009901
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning French Liaison with Gradient Symbolic Representations: Errors, Predictions, Consequences",
+            "authors": [
+              "Tessier",
+              "Jesney"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.3765/amp.v9i0.4940",
+            "source_url": "https://doi.org/10.3765/amp.v9i0.4940",
+            "title_similarity": 0.4305555555555556
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:27.271824Z",
+        "response_sha256": "eab50124f85226e245d026342fc0d4fca75fe5bb811b9b04c71df9f97523bfea",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+representations+by+backpropagating+errors&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:59.181540Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-32",
+        "paper_reference_id": "ref-paper_002_v1_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Quantifying association capabilities of large language models and its implications on privacy leakage",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Quantifying+association+capabilities+of+large+language+models+and+its+implications+on+privacy+leakage&rows=5",
+        "checked_at": "2026-10-09T04:41:01.310870Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Quantifying Association Capabilities of Large Language Models and Its Implications on Privacy Leakage",
+            "authors": [
+              "Shao",
+              "Huang",
+              "Zheng",
+              "Chang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-eacl.54",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-eacl.54",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Local Large Language Models for Text-to-SQL under Privacy Constraints: A Leakage-Controlled Evaluation against Domestic and Frontier Commercial Models",
+            "authors": [
+              "Yoon",
+              "Kim"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7509778",
+            "source_url": "https://doi.org/10.2139/ssrn.7509778",
+            "title_similarity": 0.36
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Applying Machine Unlearning Techniques to Mitigate Privacy Leakage in Large Language Models: An Empirical Study",
+            "authors": [
+              "Wang",
+              "Chen",
+              "Li",
+              "Zhao",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.22541/au.172712647.70020033/v1",
+            "source_url": "https://doi.org/10.22541/au.172712647.70020033/v1",
+            "title_similarity": 0.4549763033175355
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "PRvL: Quantifying the Capabilities and Risks of Large Language Models for PII Redaction",
+            "authors": [
+              "Garza",
+              "Kotal",
+              "Piplai",
+              "Elluri",
+              "Das",
+              "Chadha"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/tps-isa67132.2025.00025",
+            "source_url": "https://doi.org/10.1109/tps-isa67132.2025.00025",
+            "title_similarity": 0.6203208556149733
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Association Attacks: Understanding Privacy Threats in Large Language Models",
+            "authors": [
+              "HOUSSEL",
+              "Yu",
+              "Singh"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.5076569",
+            "source_url": "https://doi.org/10.2139/ssrn.5076569",
+            "title_similarity": 0.4228571428571429
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:01.309108Z",
+        "response_sha256": "bce7e22dddda7911ed96e05ca795dedb3efb9e0b2004cf89bcbf7790d01689ab",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Quantifying+association+capabilities+of+large+language+models+and+its+implications+on+privacy+leakage&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.310870Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-33",
+        "paper_reference_id": "ref-paper_002_v1_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Large language models can be easily distracted by irrelevant context",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Large+language+models+can+be+easily+distracted+by+irrelevant+context&rows=5",
+        "checked_at": "2026-10-09T04:40:59.332002Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Security Knowledge Dilution in Large Language Models: How Irrelevant Context Degrades Critical Domain Expertise",
+            "authors": [
+              "Shukla",
+              "Joshi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.176184397.77169395/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.176184397.77169395/v1",
+            "title_similarity": 0.4606741573033708
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multimodal large language models can make context-sensitive hate speech evaluations aligned with human judgment",
+            "authors": [
+              "Davidson"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31235/osf.io/f2p7d_v3",
+            "source_url": "https://doi.org/10.31235/osf.io/f2p7d_v3",
+            "title_similarity": 0.39106145251396646
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Losing Visual Needles in Image Haystacks: Vision Language Models are Easily Distracted in Short and Long Contexts",
+            "authors": [
+              "Sharma",
+              "Saxon",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.findings-emnlp.312",
+            "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.312",
+            "title_similarity": 0.6
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How Is LLM Reasoning Distracted by Irrelevant Context? An Analysis Using a Controlled Benchmark",
+            "authors": [
+              "Yang",
+              "Huang",
+              "Zhang",
+              "Surdeanu",
+              "Wang",
+              "Pan"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.18653/v1/2025.emnlp-main.674",
+            "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.674",
+            "title_similarity": 0.49382716049382713
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Large Language Models",
+            "authors": [
+              "Benedetti"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/978-3-032-01563-1_1",
+            "source_url": "https://doi.org/10.1007/978-3-032-01563-1_1",
+            "title_similarity": 0.4
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:55.439789Z",
+        "response_sha256": "3bb5787ca2f39302ed3af185a1e795e88a54c338b40a4491555ada1b2823e86e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Large+language+models+can+be+easily+distracted+by+irrelevant+context&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:40:59.332002Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-34",
+        "paper_reference_id": "ref-paper_002_v1_credibility-34",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reflexion: Language agents with verbal reinforcement learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reflexion%3A+Language+agents+with+verbal+reinforcement+learning&rows=5",
+        "checked_at": "2026-10-09T04:41:02.134150Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:02.134091Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reflexion%3A+Language+agents+with+verbal+reinforcement+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.134150Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-35",
+        "paper_reference_id": "ref-paper_002_v1_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Reinforcement learning: An introduction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5",
+        "checked_at": "2026-10-09T04:41:00.472684Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Introduction: The Challenge of Reinforcement Learning",
+            "authors": [
+              "Sutton"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/978-1-4615-3618-5_1",
+            "source_url": "https://doi.org/10.1007/978-1-4615-3618-5_1",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Basic Mathematics behind Deep Reinforcement Learning",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1201/9781032659800-3",
+            "source_url": "https://doi.org/10.1201/9781032659800-3",
+            "title_similarity": 0.4888888888888889
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introduction of Reinforcement Learning (RL)",
+            "authors": [
+              "Xiao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-19-4933-3_1",
+            "source_url": "https://doi.org/10.1007/978-981-19-4933-3_1",
+            "title_similarity": 0.6075949367088608
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.7551/mitpress/14207.003.0003",
+            "source_url": "https://doi.org/10.7551/mitpress/14207.003.0003",
+            "title_similarity": 0.48
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introduction to Reinforcement Learning",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1017/9781009023870.027",
+            "source_url": "https://doi.org/10.1017/9781009023870.027",
+            "title_similarity": 0.5789473684210527
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:28.141037Z",
+        "response_sha256": "d7b5edcd7d110dc7bb3209b412a9ae023a77aaf625bb28fdbdf3d6bfc59739da",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Reinforcement+learning%3A+An+introduction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:00.472684Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-37",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-37",
+        "paper_reference_id": "ref-paper_002_v1_credibility-37",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Shepherd: A critic for language model generation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Shepherd%3A+A+critic+for+language+model+generation&rows=5",
+        "checked_at": "2026-10-09T04:41:00.476533Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Masking the Critic: A Critical Discourse Analysis of Newspaper Editorials",
+            "authors": [
+              "Shepherd"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-3-031-45047-1_6",
+            "source_url": "https://doi.org/10.1007/978-3-031-45047-1_6",
+            "title_similarity": 0.3025210084033613
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Vision-Language Models for Design Concept Generation: An Actor–Critic Framework",
+            "authors": [
+              "Ghasemi",
+              "Moghaddam"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1115/1.4067619",
+            "source_url": "https://doi.org/10.1115/1.4067619",
+            "title_similarity": 0.464
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Figure 2: Steps for language model generation.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.532/fig-2",
+            "source_url": "https://doi.org/10.7717/peerj-cs.532/fig-2",
+            "title_similarity": 0.7252747252747253
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Suppressing echo cascades in language-model agents with multi-critic plan selection",
+            "authors": [
+              "Li",
+              "Cao",
+              "Liu",
+              "Duprey"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-8769125/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8769125/v1",
+            "title_similarity": 0.4461538461538462
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Faintest Praise: Using the Unfriendly Critic",
+            "authors": [
+              "Shepherd"
+            ],
+            "year": 1974,
+            "years": [
+              1974
+            ],
+            "doi": "10.58680/ce197417350",
+            "source_url": "https://doi.org/10.58680/ce197417350",
+            "title_similarity": 0.2978723404255319
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:56.436595Z",
+        "response_sha256": "6d18eea2cd63182a4311371cd2dd7db56e89bfb1ee2bce12f53d63c51e42848b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Shepherd%3A+A+critic+for+language+model+generation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:00.476533Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-38",
+        "paper_reference_id": "ref-paper_002_v1_credibility-38",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Self-consistency improves chain of thought reasoning in language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Self-consistency+improves+chain+of+thought+reasoning+in+language+models&rows=5",
+        "checked_at": "2026-10-09T04:41:00.478221Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [
+              "Thoram"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/90sh1-hbs94",
+            "source_url": "https://doi.org/10.59350/90sh1-hbs94",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/jpfzn-8vz49",
+            "source_url": "https://doi.org/10.59350/jpfzn-8vz49",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/xzk7z-f8x49",
+            "source_url": "https://doi.org/10.59350/xzk7z-f8x49",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Multimodal Chain-of-Thought Reasoning in Language Models",
+            "authors": [
+              "Thoram"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.59350/73qcj-wyt28",
+            "source_url": "https://doi.org/10.59350/73qcj-wyt28",
+            "title_similarity": 0.8031496062992126
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Structured Chain-of-Thought Reasoning to Mitigate Hallucinations in Large Language Models",
+            "authors": [
+              "Liu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.y2dz-empz",
+            "source_url": "https://doi.org/10.31979/etd.y2dz-empz",
+            "title_similarity": 0.6125
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:30.289537Z",
+        "response_sha256": "d4e8ae510cc55cbc22ed111e4abbe50483c5cf9e7a64a80a3515482a7d8a424e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Self-consistency+improves+chain+of+thought+reasoning+in+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:00.478221Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-39",
+        "paper_reference_id": "ref-paper_002_v1_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Jailbroken: How does llm safety training fail? arXiv preprint arXiv:2307.02483 , 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Jailbroken%3A+How+does+llm+safety+training+fail%3F+arXiv+preprint+arXiv%3A2307.02483+%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:41:00.480051Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Jailbroken: How Does LLM Safety Training Fail?",
+            "authors": [
+              "Wei",
+              "Haghtalab",
+              "Steinhardt"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-3508",
+            "source_url": "https://doi.org/10.52202/075280-3508",
+            "title_similarity": 0.704
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.40869565217391307
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.288
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.2631578947368421
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.24113475177304963
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:58.370561Z",
+        "response_sha256": "c590a0399c5653b79053f77926c1caa09566da58d3bfa99e41541c0e47c28783",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Jailbroken%3A+How+does+llm+safety+training+fail%3F+arXiv+preprint+arXiv%3A2307.02483+%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:00.480051Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-41",
+        "paper_reference_id": "ref-paper_002_v1_credibility-41",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Generating sequences by learning to self-correct",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Generating+sequences+by+learning+to+self-correct&rows=5",
+        "checked_at": "2026-10-09T04:41:00.484516Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Generating Novel Protein Sequences with Self-Supervised Learning",
+            "authors": [
+              "Paul",
+              "Karłowski",
+              "Girgis"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/imsa65733.2025.11166839",
+            "source_url": "https://doi.org/10.1109/imsa65733.2025.11166839",
+            "title_similarity": 0.5357142857142857
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A self-organizing neural network for learning and generating sequences of target-directed movements in the context of a delta-lognormal synergy",
+            "authors": [
+              "Privitera",
+              "Plamondon"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1995.488979",
+            "source_url": "https://doi.org/10.1109/icnn.1995.488979",
+            "title_similarity": 0.3036649214659686
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 3: The BERTScore of correct and incorrect in generating sentences.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2724/table-3",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2724/table-3",
+            "title_similarity": 0.3050847457627119
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "An Extendible Software for Learning to Write Chinese Characters in Correct Stroke Sequences on Smartphones",
+            "authors": [
+              "Tam",
+              "Huang"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/icalt.2011.40",
+            "source_url": "https://doi.org/10.1109/icalt.2011.40",
+            "title_similarity": 0.38961038961038963
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "PandoGen: Generating complete instances of future SARS-CoV-2 sequences using Deep Learning",
+            "authors": [
+              "Ramachandran",
+              "Lumetta",
+              "Chen"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1101/2023.05.10.540124",
+            "source_url": "https://doi.org/10.1101/2023.05.10.540124",
+            "title_similarity": 0.43795620437956206
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:37:57.911598Z",
+        "response_sha256": "ae8f8f8bba54930c96f319b1d2d226f022472a0d01dbd594acf90e76e28d1b01",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Generating+sequences+by+learning+to+self-correct&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:00.484516Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-42",
+        "paper_reference_id": "ref-paper_002_v1_credibility-42",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Le, Denny Zhou, and Xinyun Chen",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Le%2C+Denny+Zhou%2C+and+Xinyun+Chen&rows=5",
+        "checked_at": "2026-10-09T04:41:01.451232Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Congestion-Aware Indoor Emergency Navigation Algorithm for Wireless Sensor Networks",
+            "authors": [
+              "Yongle Chen",
+              "Limin Sun",
+              "Feng Wang",
+              "Xinyun Zhou"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/glocom.2011.6134571",
+            "source_url": "https://doi.org/10.1109/glocom.2011.6134571",
+            "title_similarity": 0.125
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Author response for \"Association Between Irisin Level and Cognitive Function: A Systematic Review and Meta-Analysis\"",
+            "authors": [
+              "Han, Chengyan",
+              "Zhou, Zining",
+              "Kong, Linlin",
+              "Lu, Jing",
+              "Li, Xinyun"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1002/brb3.70662/v3/response1",
+            "source_url": "https://doi.org/10.1002/brb3.70662/v3/response1",
+            "title_similarity": 0.2112676056338028
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Author response for \"Association Between Irisin Level and Cognitive Function: A Systematic Review and Meta-Analysis\"",
+            "authors": [
+              "Han, Chengyan",
+              "Zhou, Zining",
+              "Kong, Linlin",
+              "Lu, Jing",
+              "Li, Xinyun"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1002/brb3.70662/v2/response1",
+            "source_url": "https://doi.org/10.1002/brb3.70662/v2/response1",
+            "title_similarity": 0.2112676056338028
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Characteristics and Translation Strategies of Medical Technology English",
+            "authors": [
+              "TANG Jiamin",
+              "HU Xinyun",
+              "TAN Jing",
+              "ZHANG Le"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.17265/1539-8080/2022.02.008",
+            "source_url": "https://doi.org/10.17265/1539-8080/2022.02.008",
+            "title_similarity": 0.25742574257425743
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Diagram representations of charge pumping processes in CMOS transistors",
+            "authors": [
+              "Xinyun",
+              "Guangfan",
+              "Chen",
+              "Wei",
+              "Darning",
+              "Mingfu"
+            ],
+            "year": 2010,
+            "years": [
+              2010
+            ],
+            "doi": "10.1088/1674-4926/31/8/084003",
+            "source_url": "https://doi.org/10.1088/1674-4926/31/8/084003",
+            "title_similarity": 0.18
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:01.447614Z",
+        "response_sha256": "57e1397cc4174b4f981655ba3d5fbd9b5907ce3c0895c84614cdde48238353bb",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Le%2C+Denny+Zhou%2C+and+Xinyun+Chen&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.451232Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-45",
+        "paper_reference_id": "ref-paper_002_v1_credibility-45",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Why does chatgpt fall short in providing truthful answers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Why+does+chatgpt+fall+short+in+providing+truthful+answers&rows=5",
+        "checked_at": "2026-10-09T04:41:01.319787Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Why Does Capitalism Fall Short?",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1142/9789819822683_0002",
+            "source_url": "https://doi.org/10.1142/9789819822683_0002",
+            "title_similarity": 0.5287356321839081
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Does ChatGPT-Permitted Assessments Help Students Generate Better Answers and Learn More?",
+            "authors": [
+              "Cheong",
+              "Chen"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013095500003932",
+            "source_url": "https://doi.org/10.5220/0013095500003932",
+            "title_similarity": 0.4027777777777778
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "What Is ChatGPT Doing … and Why Does It Work?",
+            "authors": [
+              "Wolfram"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31855/bc47ee6b-75c",
+            "source_url": "https://doi.org/10.31855/bc47ee6b-75c",
+            "title_similarity": 0.46464646464646464
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "WHY DO STUDENTS USE CHATGPT AND WHY DOES IT MATTER?",
+            "authors": [
+              "Nebieridze",
+              "Jojua"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52340/putk.2024.2346-8149.09.12",
+            "source_url": "https://doi.org/10.52340/putk.2024.2346-8149.09.12",
+            "title_similarity": 0.2616822429906542
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Why Company Health and Wellness Plans Fall Short",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.13007/786",
+            "source_url": "https://doi.org/10.13007/786",
+            "title_similarity": 0.38095238095238093
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:33.443946Z",
+        "response_sha256": "e385ddfcb79a39c028115886d7e3d952053a7327e86ae9bf9ce7d795d9d4ebc8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Why+does+chatgpt+fall+short+in+providing+truthful+answers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.319787Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-46",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-46",
+        "paper_reference_id": "ref-paper_002_v1_credibility-46",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Solving challenging math word problems using gpt-4 code interpreter with code-based self-verification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Solving+challenging+math+word+problems+using+gpt-4+code+interpreter+with+code-based+self-verification&rows=5",
+        "checked_at": "2026-10-09T04:41:01.321624Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Solving Math Word Problems Using Estimation Verification and Equation Generation",
+            "authors": [
+              "Piehl",
+              "Wilson",
+              "Kalita",
+              "Kalita"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5166090",
+            "source_url": "https://doi.org/10.2139/ssrn.5166090",
+            "title_similarity": 0.5414364640883977
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Self-controlling Code",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1039/9781837677351-00187",
+            "source_url": "https://doi.org/10.1039/9781837677351-00187",
+            "title_similarity": 0.18032786885245902
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Self-verification of large language models for math word problems",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013246559203412",
+            "source_url": "https://doi.org/10.14711/thesis-991013246559203412",
+            "title_similarity": 0.3132530120481928
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Context-Driven Approach for Co-Auditing Smart Contracts Using Gpt-4 Code Interpreter",
+            "authors": [
+              "Bouafif",
+              "Zhang",
+              "Ahmed Qasse",
+              "Zulkoski",
+              "Hamdaqa",
+              "Khomh"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4951036",
+            "source_url": "https://doi.org/10.2139/ssrn.4951036",
+            "title_similarity": 0.44919786096256686
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Automated verification of systems code using type-based memory abstractions",
+            "authors": [
+              "Nicole"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/543093c7zdd4fz49d3z9018ze1350ab125e8",
+            "source_url": "https://doi.org/10.70675/543093c7zdd4fz49d3z9018ze1350ab125e8",
+            "title_similarity": 0.2159090909090909
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:34.191537Z",
+        "response_sha256": "aab8f34adb32403f281b645407580e66bb498d8a9a8c1d9f10b46b657271e39f",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Solving+challenging+math+word+problems+using+gpt-4+code+interpreter+with+code-based+self-verification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.321624Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-47",
+        "paper_reference_id": "ref-paper_002_v1_credibility-47",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-48",
+        "paper_reference_id": "ref-paper_002_v1_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Large language models are human-level prompt engineers",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Large+language+models+are+human-level+prompt+engineers&rows=5",
+        "checked_at": "2026-10-09T04:41:01.323862Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Prompt Engineering for Large Language Models",
+            "authors": [
+              "Gao"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4504303",
+            "source_url": "https://doi.org/10.2139/ssrn.4504303",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Prompt Engineering and the Effectiveness of Large Language Models in Enhancing Human Productivity",
+            "authors": [
+              "Anam"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31219/osf.io/ad9y5_v1",
+            "source_url": "https://doi.org/10.31219/osf.io/ad9y5_v1",
+            "title_similarity": 0.46357615894039733
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Token-level Optimization for Enhanced Text Generation: A Prompt Engineering Framework with Large Language Models",
+            "authors": [
+              "Lococ",
+              "Ivanov",
+              "Kowalski",
+              "Montoya"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.36227/techrxiv.172840514.49217800/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.172840514.49217800/v1",
+            "title_similarity": 0.2545454545454545
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Unveiling the Potential: Large Language Models",
+            "authors": [
+              "Tripathi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2174/9798898813604126010003",
+            "source_url": "https://doi.org/10.2174/9798898813604126010003",
+            "title_similarity": 0.42424242424242425
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Tokenization in Large Language Models (LLMs)",
+            "authors": [
+              "Tripathi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2174/9798898813604126010004",
+            "source_url": "https://doi.org/10.2174/9798898813604126010004",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:32.891890Z",
+        "response_sha256": "bc82d853df2006616f6f1ea0348ecdae7452611389a70fd3ef476368b46231ad",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Large+language+models+are+human-level+prompt+engineers&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.323862Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_002_v1_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_002_v1_credibility-49",
+        "paper_reference_id": "ref-paper_002_v1_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Universal and transferable adversarial attacks on aligned language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Universal+and+transferable+adversarial+attacks+on+aligned+language+models&rows=5",
+        "checked_at": "2026-10-09T04:41:01.325308Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "CommanderUAP: a practical and transferable universal adversarial attacks on speech recognition models",
+            "authors": [
+              "Sun",
+              "Zhao",
+              "Guo",
+              "Chen",
+              "Ju"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1186/s42400-024-00218-8",
+            "source_url": "https://doi.org/10.1186/s42400-024-00218-8",
+            "title_similarity": 0.6473988439306358
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Universal and Transferable Adversarial Attack on Large Language Models Using Exponentiated Gradient Descent",
+            "authors": [
+              "Biswas",
+              "Nishino",
+              "Jacob Chacko",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5445960",
+            "source_url": "https://doi.org/10.2139/ssrn.5445960",
+            "title_similarity": 0.7555555555555555
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "GLEAM: Enhanced Transferable Adversarial Attacks for Vision-Language Pre-Training Models via Global-Local Transformations",
+            "authors": [
+              "Liu",
+              "Ouyang",
+              "Cui"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iccv51701.2025.00163",
+            "source_url": "https://doi.org/10.1109/iccv51701.2025.00163",
+            "title_similarity": 0.5803108808290155
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Framework to Benchmark Adversarial Attacks on Language Models",
+            "authors": [
+              "Aasi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32920/29873867",
+            "source_url": "https://doi.org/10.32920/29873867",
+            "title_similarity": 0.6567164179104478
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Framework to Benchmark Adversarial Attacks on Language Models",
+            "authors": [
+              "Aasi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32920/29873867.v1",
+            "source_url": "https://doi.org/10.32920/29873867.v1",
+            "title_similarity": 0.6567164179104478
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:35.117814Z",
+        "response_sha256": "5c7443553edcc716fe6d49d43d016f6d3fa135bc6956c11f3cc25262cc4dc6d2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Universal+and+transferable+adversarial+attacks+on+aligned+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:01.325308Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 5.510204081632653
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 49,
+    "extracted_count": 49,
+    "parsed_count": 48,
+    "queried_count": 48,
+    "matched_count": 12,
+    "metadata_conflict_count": 2,
+    "unverified_count": 31,
+    "parse_failed_count": 1,
+    "not_checked_count": 0,
+    "query_failed_count": 3,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:40.806040Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

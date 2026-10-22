@@ -1,0 +1,45 @@
+# 完整版栈。日常开发用 `make run`（SQLite + 内置后台任务）即可，
+# 需要 Postgres / Redis / Celery / GROBID 时再起这个。
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://pcc:pcc@postgres:5432/pcc
+      REDIS_URL: redis://redis:6379/0
+      TASK_RUNNER: celery
+      GROBID_URL: http://grobid:8070
+    depends_on: [postgres, redis]
+    volumes: ["./:/srv"]
+
+  worker:
+    build: .
+    command: celery -A app.pipeline.celery_app worker -l info
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://pcc:pcc@postgres:5432/pcc
+      REDIS_URL: redis://redis:6379/0
+      TASK_RUNNER: celery
+    depends_on: [postgres, redis]
+    volumes: ["./:/srv"]
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pcc
+      POSTGRES_PASSWORD: pcc
+      POSTGRES_DB: pcc
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  grobid:
+    image: lfoppiano/grobid:0.8.0
+    ports: ["8070:8070"]
+
+volumes:
+  pgdata:

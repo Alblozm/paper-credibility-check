@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence.schema.json",
+  "title": "Evidence reference",
+  "type": "object",
+  "required": ["evidence_id", "page_number", "locator_type", "locator_label", "evidence_mode", "excerpt", "location_confidence"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "page_number": {"type": "integer", "minimum": 1},
+    "locator_type": {"enum": ["text", "figure", "table", "equation", "theorem"]},
+    "locator_label": {"type": "string", "minLength": 1},
+    "evidence_mode": {"enum": ["quote", "paraphrase"]},
+    "excerpt": {"type": "string", "minLength": 1},
+    "location_confidence": {"enum": ["high", "medium", "low"]}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,77 @@
+{
+  "paper_id": "paper_006",
+  "paper_version_id": "paper_006_v3",
+  "title": "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts",
+  "authors": [
+    "Pan Lu",
+    "Hritik Bansal",
+    "Tony Xia",
+    "Jiacheng Liu",
+    "Chunyuan Li",
+    "Hannaneh Hajishirzi",
+    "Hao Cheng",
+    "Kai-Wei Chang",
+    "Michel Galley",
+    "Jianfeng Gao"
+  ],
+  "abstract": "Large Language Models (LLMs) and Large Multimodal Models (LMMs) exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied. To bridge this gap, we present MathVista, a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of 6,141 examples, derived from 28 existing multimodal datasets involving mathematics and 3 newly created datasets (i.e., IQTest, FunctionQA, and PaperQA). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging. With MathVista, we have conducted a comprehensive, quantitative evaluation of 12 prominent foundation models. The best-performing GPT-4V model achieves an overall accuracy of 49.9%, substantially outperforming Bard, the second-best performer, by 15.1%. However, GPT-4V still falls short of human performance by 10.4%, as it often struggles to understand complex figures and perform rigorous reasoning.",
+  "abstract_source": "arxiv abstract page, read 2026-09-02",
+  "language": "en",
+  "arxiv_id": "2310.02255",
+  "arxiv_version": "v3",
+  "doi": "10.48550/arXiv.2310.02255",
+  "subjects": [
+    "cs.CV",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "source_url": "https://arxiv.org/pdf/2310.02255v3",
+  "abs_url": "https://arxiv.org/abs/2310.02255",
+  "arxiv_comments": "116 pages, 120 figures. Accepted to ICLR 2024",
+  "version_history": [
+    {
+      "version": "v1",
+      "submitted_at": "2023-10-03T17:57:24Z",
+      "size": "12,562 KB"
+    },
+    {
+      "version": "v2",
+      "submitted_at": "2023-10-25T20:22:24Z",
+      "size": "21,304 KB"
+    },
+    {
+      "version": "v3",
+      "submitted_at": "2024-01-21T03:47:06Z",
+      "size": "21,346 KB"
+    }
+  ],
+  "venue": "ICLR",
+  "publication_year": 2024,
+  "decision": "Accept (oral)",
+  "decision_verified": true,
+  "retrieved_at": "2026-09-07T14:18:21Z",
+  "pdf_sha256": "ee5a616e9481f0f0d6b8ccc9e6d261f1c35fcb0b9c64d1c5c9d2d9462d6fc5e9",
+  "pdf_sha256_status": "verified",
+  "page_count": 116,
+  "local_pdf_path": "data/raw_pdfs/paper_006/2310.02255v3.pdf",
+  "page_count_status": "verified",
+  "parse_status": "completed",
+  "version_choice_reason": "v3, the version whose arXiv comments field records the ICLR acceptance.",
+  "verification_notes": [
+    "Accept (oral) confirmed from the ICLR 2024 virtual site oral page and the ICLR proceedings entry, independently of OpenReview.",
+    "The arXiv comments field states 116 pages and 120 figures. Page count is therefore expected to be ~116 but is NOT yet confirmed against the downloaded PDF.",
+    "Expected consequence for parsing: the current one-chunk-per-page pilot parser would emit ~116 chunks and several hundred elements. This sample is selected precisely because it should force parse_quality below good and expose whatever the chunker does at scale."
+  ],
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "blocking": "Cannot enter paper_versions: sql/001_initial_schema.sql requires pdf_sha256 CHAR(64) NOT NULL and pdf_object_key NOT NULL. Identity can be seeded into papers now; the version row waits for the PDF.",
+  "parse_quality": "good",
+  "data_status": "parsed",
+  "source_type": "arxiv",
+  "tags": [
+    "high_consensus",
+    "benchmark"
+  ],
+  "authors_status": "verified"
+}

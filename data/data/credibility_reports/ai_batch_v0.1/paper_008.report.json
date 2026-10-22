@@ -1,0 +1,1902 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-5e0ff9b79d89db36",
+  "paper_version_id": "paper_008_openreview_2024_02_11",
+  "pdf_sha256": "7cb08c05297b2bd606572708ea2b98aa09f82fc2f0c6016ef870e7301ff765ec",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "45573285332f69c4c1a1f143902b1ee0c288f2953b79f8a1ea2381ed55093e7c",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.962962962962963,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 6.888888888888889,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 36,
+        "extracted_count": 36,
+        "parsed_count": 32,
+        "queried_count": 32,
+        "matched_count": 17,
+        "metadata_conflict_count": 2,
+        "unverified_count": 13,
+        "parse_failed_count": 4,
+        "not_checked_count": 0,
+        "query_failed_count": 0,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=7Ttk3RzDeu",
+            "checked_at": "2026-10-09T04:41:28.110704Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-b6bef96e5a3a",
+            "completed": false,
+            "truncated": true,
+            "issues_checked": 25,
+            "comments_checked": 28,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:41:28.111070Z",
+            "source_urls": [
+              "https://api.github.com/repos/openai/tiktoken",
+              "https://api.github.com/repos/openai/tiktoken/issues?state=all&per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/608/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/601/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/589/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/578/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/571/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/568/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/541/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/536/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/533/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/532/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/530/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/524/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/521/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/513/comments?per_page=100&page=1",
+              "https://api.github.com/repos/openai/tiktoken/issues/511/comments?per_page=100&page=1"
+            ]
+          },
+          {
+            "repository_id": "repo-e626b77cd7d0",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 3,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:41:28.119525Z",
+            "source_urls": [
+              "https://api.github.com/repos/togethercomputer/Llama-2-7B-32K-Instruct",
+              "https://api.github.com/repos/togethercomputer/Llama-2-7B-32K-Instruct/issues?state=all&per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": [
+        "repository_feedback_query_incomplete"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Awesome: Gpu memory-constrained long document summarization using memory mechanism and global salient content, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Awesome%3A+Gpu+memory-constrained+long+document+summarization+using+memory+mechanism+and+global+salient+content%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:41:25.884860Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "AWESOME: GPU Memory-constrained Long Document Summarization using Memory Mechanism and Global Salient Content",
+            "authors": [
+              "Cao",
+              "Wang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.naacl-long.330",
+            "source_url": "https://doi.org/10.18653/v1/2024.naacl-long.330",
+            "title_similarity": 0.9773755656108597
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Design of an English Document Automatic Summarization and Translation System using Long Short-Term Memory Networks",
+            "authors": [
+              "Wang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iciscn64258.2025.10934432",
+            "source_url": "https://doi.org/10.1109/iciscn64258.2025.10934432",
+            "title_similarity": 0.3964757709251101
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Design of English Document Automatic Summarization and Translation System using Long Short-Term Memory Network",
+            "authors": [
+              "Xu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/icdcece65353.2025.11035871",
+            "source_url": "https://doi.org/10.1109/icdcece65353.2025.11035871",
+            "title_similarity": 0.40358744394618834
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Efficient Memory-Enhanced Transformer for Long-Document Summarization in Low-Resource Regimes",
+            "authors": [
+              "Moro",
+              "Ragazzi",
+              "Valgimigli",
+              "Frisoni",
+              "Sartori",
+              "Marfia"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3390/s23073542",
+            "source_url": "https://doi.org/10.3390/s23073542",
+            "title_similarity": 0.49514563106796117
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Speech Summarization of Long Spoken Document: Improving Memory Efficiency of Speech/Text Encoders",
+            "authors": [
+              "Kano",
+              "Ogawa",
+              "Delcroix",
+              "Sharma",
+              "Matsuura",
+              "Watanabe"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/icassp49357.2023.10095019",
+            "source_url": "https://doi.org/10.1109/icassp49357.2023.10095019",
+            "title_similarity": 0.3827751196172249
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:46.076874Z",
+        "response_sha256": "38046dfdb095c5f7e5400f0d8712b868bc2b462a641dfe4be6cf72c2c56d4514",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Awesome%3A+Gpu+memory-constrained+long+document+summarization+using+memory+mechanism+and+global+salient+content%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.884860Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-3",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Chang, Mackenzie Cramer, Sandeep Soni, and David Bamman",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Chang%2C+Mackenzie+Cramer%2C+Sandeep+Soni%2C+and+David+Bamman&rows=5",
+        "checked_at": "2026-10-09T04:41:25.886552Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Speak, Memory: An Archaeology of Books Known to ChatGPT/GPT-4",
+            "authors": [
+              "Chang",
+              "Cramer",
+              "Soni",
+              "Bamman"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.emnlp-main.453",
+            "source_url": "https://doi.org/10.18653/v1/2023.emnlp-main.453",
+            "title_similarity": 0.1981981981981982
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Measuring the Stories in Contemporary Songs",
+            "authors": [
+              "Bamman",
+              "Baur",
+              "Cramer",
+              "Ho",
+              "McEnaney"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31235/osf.io/5ys9c_v2",
+            "source_url": "https://doi.org/10.31235/osf.io/5ys9c_v2",
+            "title_similarity": 0.3368421052631579
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Measuring the Stories in Contemporary Songs",
+            "authors": [
+              "Bamman",
+              "Baur",
+              "Cramer",
+              "Ho",
+              "McEnaney"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31235/osf.io/5ys9c_v1",
+            "source_url": "https://doi.org/10.31235/osf.io/5ys9c_v1",
+            "title_similarity": 0.3368421052631579
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Cramer, David",
+            "authors": [
+              "Karstädt"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.06778",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.06778",
+            "title_similarity": 0.375
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Multimodal Conversation Structure Understanding",
+            "authors": [
+              "Chang",
+              "Cramer",
+              "Ho",
+              "Nguyen",
+              "Yuan",
+              "Bamman"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.18653/v1/2026.eacl-long.349",
+            "source_url": "https://doi.org/10.18653/v1/2026.eacl-long.349",
+            "title_similarity": 0.2828282828282828
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:46.901324Z",
+        "response_sha256": "cade9327345344849f12cb207bead7e1450ef3bf21d38994820c4d8a684f292b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Chang%2C+Mackenzie+Cramer%2C+Sandeep+Soni%2C+and+David+Bamman&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.886552Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Smith, and Yejin Choi",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Smith%2C+and+Yejin+Choi&rows=5",
+        "checked_at": "2026-10-09T04:41:25.887013Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Factors Affecting First-Mile Travel Time of Urban Commutes: A Machine-Learning-Based Analysis Using Trip Decomposition Data",
+            "authors": [
+              "Yejin",
+              "Choi",
+              "Lee"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5388490",
+            "source_url": "https://doi.org/10.2139/ssrn.5388490",
+            "title_similarity": 0.2112676056338028
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Empath: A framework for evaluating entity-level sentiment analysis",
+            "authors": [
+              "Ward",
+              "Yejin Choi",
+              "Skiena",
+              "Xavier"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/cewit.2011.6135866",
+            "source_url": "https://doi.org/10.1109/cewit.2011.6135866",
+            "title_similarity": 0.25882352941176473
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "High performance nanofiber-supported thin film composite forward osmosis membranes based on continuous thermal-rolling pretreated electrospun PES/PAN blend substrates",
+            "authors": [
+              "Kallem",
+              "Banat",
+              "Yejin",
+              "Choi"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.chemosphere.2020.127687",
+            "source_url": "https://doi.org/10.1016/j.chemosphere.2020.127687",
+            "title_similarity": 0.11827956989247312
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Advertising Attributes of One-Person Media Distribution in Purchase Intent",
+            "authors": [
+              "Young-Jin Choi",
+              "Sojeong LEE",
+              "Hayeong JE",
+              "Yejin LEE",
+              "Yujin LEE",
+              "Youngbae YUN",
+              "Seulbi LEE"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.15722/jds.17.11.201911.17",
+            "source_url": "https://doi.org/10.15722/jds.17.11.201911.17",
+            "title_similarity": 0.2765957446808511
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Application of data mining and artificial modeling for coagulant dosage of water treatment plants corresponding to water quality",
+            "authors": [
+              "Hyeon Bae",
+              "Dae-Won Choi",
+              "Seng-Tai Lee",
+              "Yejin Kim",
+              "Sungshin Kim"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/iecon.2004.1432134",
+            "source_url": "https://doi.org/10.1109/iecon.2004.1432134",
+            "title_similarity": 0.1891891891891892
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:47.420202Z",
+        "response_sha256": "6243109185a7815541b694a0bafbb612c7512ec9c71398370094221ece5a7377",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Smith%2C+and+Yejin+Choi&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.887013Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Hashimoto",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Hashimoto&rows=5",
+        "checked_at": "2026-10-09T04:41:26.628573Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hashimoto, Heihachi",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00084381",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00084381",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hashimoto, Okiie",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00084384",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00084384",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Hashimoto, Kansetsu",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00084382",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00084382",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Hashimoto, Heihachi",
+            "authors": [
+              "Saito"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.1093/gao/9781884446054.article.t036845",
+            "source_url": "https://doi.org/10.1093/gao/9781884446054.article.t036845",
+            "title_similarity": 0.6666666666666666
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Hashimoto, Gaho",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00084380",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00084380",
+            "title_similarity": 0.782608695652174
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:26.626769Z",
+        "response_sha256": "3a923133bcdf1bac777c1d979d1b4ab069d36b203818cc7b6b409668f8894832",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Hashimoto&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:26.628573Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-7",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Summeval: Re-evaluating summarization evaluation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Summeval%3A+Re-evaluating+summarization+evaluation&rows=5",
+        "checked_at": "2026-10-09T04:41:25.887967Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "SummEval: Re-evaluating Summarization Evaluation",
+            "authors": [
+              "Fabbri",
+              "Kryściński",
+              "McCann",
+              "Xiong",
+              "Socher",
+              "Radev"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1162/tacl_a_00373",
+            "source_url": "https://doi.org/10.1162/tacl_a_00373",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Re-evaluating Evaluation in Text Summarization",
+            "authors": [
+              "Bhandari",
+              "Gour",
+              "Ashfaq",
+              "Liu",
+              "Neubig"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.emnlp-main.751",
+            "source_url": "https://doi.org/10.18653/v1/2020.emnlp-main.751",
+            "title_similarity": 0.5806451612903226
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Re-Evaluating Evaluation for Multilingual Summarization",
+            "authors": [
+              "Forde",
+              "Zhang",
+              "Sutawika",
+              "Aji",
+              "Cahyawijaya",
+              "Winata",
+              "Wu",
+              "Eickhoff",
+              "Biderman",
+              "Pavlick"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.emnlp-main.1085",
+            "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1085",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Re-evaluating Automatic Summarization with BLEU and 192 Shades of ROUGE",
+            "authors": [
+              "Graham"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.18653/v1/d15-1013",
+            "source_url": "https://doi.org/10.18653/v1/d15-1013",
+            "title_similarity": 0.5254237288135594
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Text Summarization Challenge: An Evaluation Program for Text Summarization",
+            "authors": [
+              "Nanba",
+              "Hirao",
+              "Fukushima",
+              "Okumura"
+            ],
+            "year": 2020,
+            "years": [
+              2020,
+              2021
+            ],
+            "doi": "10.1007/978-981-15-5554-1_3",
+            "source_url": "https://doi.org/10.1007/978-981-15-5554-1_3",
+            "title_similarity": 0.45
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:48.151134Z",
+        "response_sha256": "36a0563839b56e4a464f51c5d175b69eb4362e737299e93620a54e20ace93e47",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Summeval%3A+Re-evaluating+summarization+evaluation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.887967Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "T",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=T&rows=5",
+        "checked_at": "2026-10-09T04:41:28.109901Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:28.109425Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=T&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:28.109901Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1162/tacl"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1162%2Ftacl",
+        "checked_at": "2026-10-09T04:41:26.662993Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:26.662720Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1162%2Ftacl"
+      ],
+      "checked_at": "2026-10-09T04:41:26.662993Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Gptscore: Evaluate as you desire",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Gptscore%3A+Evaluate+as+you+desire&rows=5",
+        "checked_at": "2026-10-09T04:41:25.887781Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GPTScore: Evaluate as You Desire",
+            "authors": [
+              "Fu",
+              "Ng",
+              "Jiang",
+              "Liu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.18653/v1/2024.naacl-long.365",
+            "source_url": "https://doi.org/10.18653/v1/2024.naacl-long.365",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "As You Desire Me",
+            "authors": [
+              "Whitemore"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.5040/9781350432307.00000003",
+            "source_url": "https://doi.org/10.5040/9781350432307.00000003",
+            "title_similarity": 0.5531914893617021
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "I DESIRE ONLY YOU",
+            "authors": [],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.4324/9781315679037-17",
+            "source_url": "https://doi.org/10.4324/9781315679037-17",
+            "title_similarity": 0.2916666666666667
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "How Do You Evaluate Service?",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.4135/9781526497260",
+            "source_url": "https://doi.org/10.4135/9781526497260",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "As You Like It",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1057/9781137305060.0010",
+            "source_url": "https://doi.org/10.1057/9781137305060.0010",
+            "title_similarity": 0.4
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:48.512157Z",
+        "response_sha256": "58b6eaf3f8cdd7f807f291f6461e25d8072c33d471af28db28fb1bb47e5a9fcb",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Gptscore%3A+Evaluate+as+you+desire&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.887781Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-13",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-14",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "News Summarization and Evaluation in the Era of GPT-3",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=News+Summarization+and+Evaluation+in+the+Era+of+GPT-3&rows=5",
+        "checked_at": "2026-10-09T04:41:25.889051Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Prompt scoring system for dialogue summarization using GPT-3",
+            "authors": [
+              "Prodan",
+              "Pelican"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.36227/techrxiv.16652392",
+            "source_url": "https://doi.org/10.36227/techrxiv.16652392",
+            "title_similarity": 0.46017699115044247
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Prompt scoring system for dialogue summarization using GPT-3",
+            "authors": [
+              "Prodan",
+              "Pelican"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.36227/techrxiv.16652392.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.16652392.v1",
+            "title_similarity": 0.46017699115044247
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Prompt scoring system for dialogue summarization using GPT-3",
+            "authors": [
+              "Prodan",
+              "Pelican"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.36227/techrxiv.16652392.v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.16652392.v2",
+            "title_similarity": 0.46017699115044247
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ABSTRACTIVE-BASED AUTOMATIC TEXT SUMMARIZATION ON  INDONESIAN NEWS USING GPT-2",
+            "authors": [
+              "Khasanah",
+              "Hayaty"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.33330/jurteksi.v10i1.2492",
+            "source_url": "https://doi.org/10.33330/jurteksi.v10i1.2492",
+            "title_similarity": 0.46153846153846156
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Summarizing News: Unleashing the Power of BART, GPT-2, T5, and Pegasus Models in Text Summarization",
+            "authors": [
+              "Asmitha",
+              "Kavitha",
+              "Radha"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/conit61985.2024.10626617",
+            "source_url": "https://doi.org/10.1109/conit61985.2024.10626617",
+            "title_similarity": 0.24324324324324326
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:49.274493Z",
+        "response_sha256": "e25d07dc9058431d97fbebf758e082bc19673493197a3807a56a5488505dd0fa",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=News+Summarization+and+Evaluation+in+the+Era+of+GPT-3&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.889051Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "ROUGE: A package for automatic evaluation of summaries",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=ROUGE%3A+A+package+for+automatic+evaluation+of+summaries&rows=5",
+        "checked_at": "2026-10-09T04:41:25.890640Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Table 6: ROUGE scores for 90-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-6",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-6",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Table 4: ROUGE scores for 10-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-4",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-4",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 5: ROUGE scores for 50-word summaries.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.2667/table-5",
+            "source_url": "https://doi.org/10.7717/peerj-cs.2667/table-5",
+            "title_similarity": 0.5052631578947369
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Manual and automatic evaluation of summaries",
+            "authors": [
+              "Lin",
+              "Hovy"
+            ],
+            "year": 2002,
+            "years": [
+              2002
+            ],
+            "doi": "10.3115/1118162.1118168",
+            "source_url": "https://doi.org/10.3115/1118162.1118168",
+            "title_similarity": 0.7628865979381443
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Table 2: Timing summaries of desktop software by package and platform.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj.9414/table-2",
+            "source_url": "https://doi.org/10.7717/peerj.9414/table-2",
+            "title_similarity": 0.2809917355371901
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:49.907845Z",
+        "response_sha256": "f6790f081fc621265cdc9b2f1379a7953d66b3bad35b2f83b722f18435a650d6",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=ROUGE%3A+A+package+for+automatic+evaluation+of+summaries&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.890640Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Liu%2C+Kevin+Lin%2C+John+Hewitt%2C+Ashwin+Paranjape%2C+Michele+Bevilacqua%2C+Fabio+Petroni%2C+and+Percy+Liang&rows=5",
+        "checked_at": "2026-10-09T04:41:25.891592Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Lost in the Middle: How Language Models Use Long Contexts",
+            "authors": [
+              "Liu",
+              "Lin",
+              "Hewitt",
+              "Paranjape",
+              "Bevilacqua",
+              "Petroni",
+              "Liang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1162/tacl_a_00638",
+            "source_url": "https://doi.org/10.1162/tacl_a_00638",
+            "title_similarity": 0.2585034013605442
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hewitt, Edgar Percy, (died 24 Dec. 1928)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u197833",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u197833",
+            "title_similarity": 0.2698412698412698
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learmont, Captain Percy Hewitt, (25 June 1894–10 Nov. 1983), RIN retired",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u166261",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u166261",
+            "title_similarity": 0.267515923566879
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Smith, Percy John",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00171174",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00171174",
+            "title_similarity": 0.205607476635514
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Percy, John Francis",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00138550",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00138550",
+            "title_similarity": 0.2018348623853211
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:50.245761Z",
+        "response_sha256": "fdad3640bb81a2aadd40d1166f5e552634c0a3f37a52f6f27ffb43f260e107e5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Liu%2C+Kevin+Lin%2C+John+Hewitt%2C+Ashwin+Paranjape%2C+Michele+Bevilacqua%2C+Fabio+Petroni%2C+and+Percy+Liang&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:25.891592Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-21",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-27",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-28",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bowman",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bowman&rows=5",
+        "checked_at": "2026-10-09T04:41:26.630288Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bowman, Ann",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00025092",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00025092",
+            "title_similarity": 0.75
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bowman, Nora",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00025100",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00025100",
+            "title_similarity": 0.7058823529411765
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Bowman, Richard",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00025101",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00025101",
+            "title_similarity": 0.6
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Bowman, Geoffrey",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00025093",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00025093",
+            "title_similarity": 0.5714285714285714
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Bowman, Henry",
+            "authors": [
+              "Holman"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/gmo/9781561592630.article.03764",
+            "source_url": "https://doi.org/10.1093/gmo/9781561592630.article.03764",
+            "title_similarity": 0.6666666666666666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:52.512049Z",
+        "response_sha256": "394b6d3c09632423b1f2430cc2b29088b5ba011d2b0a09155be587d62741baf6",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bowman&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:26.630288Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Ziegler, Nisan Stiennon, Ryan Lowe, Jan Leike, and Paul Christiano",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Ziegler%2C+Nisan+Stiennon%2C+Ryan+Lowe%2C+Jan+Leike%2C+and+Paul+Christiano&rows=5",
+        "checked_at": "2026-10-09T04:41:26.634194Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Training Language Models to Follow Instructions with Human Feedback",
+            "authors": [
+              "Ouyang",
+              "Wu",
+              "Jiang",
+              "Almeida",
+              "Wainwright",
+              "Mishkin",
+              "Zhang",
+              "Agarwal",
+              "Slama",
+              "Ray",
+              "Schulman",
+              "Hilton",
+              "Kelton",
+              "Miller",
+              "Simens",
+              "Askell",
+              "Welinder",
+              "Christiano",
+              "Leike",
+              "Lowe"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-2011",
+            "source_url": "https://doi.org/10.52202/068431-2011",
+            "title_similarity": 0.15503875968992248
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Ziegler, Eustace Paul",
+            "authors": [],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1093/benz/9780199773787.article.b00201924",
+            "source_url": "https://doi.org/10.1093/benz/9780199773787.article.b00201924",
+            "title_similarity": 0.3902439024390244
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Lowe, Charles, (died 18 Jan. 1931), author and journalist",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u213076",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u213076",
+            "title_similarity": 0.336283185840708
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Holder, Rear-Adm. Henry Lowe, (1832–5 Jan. 1924)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u197991",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u197991",
+            "title_similarity": 0.38461538461538464
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Lowe, Rouxville Mark, (21 Oct. 1881–27 Jan. 1957)",
+            "authors": [],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1093/ww/9780199540884.013.u240010",
+            "source_url": "https://doi.org/10.1093/ww/9780199540884.013.u240010",
+            "title_similarity": 0.17142857142857143
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:51.665673Z",
+        "response_sha256": "451202784b61ba9e7aa3ed88b86ad76b223257b521a485bad75146a0b10ecb55",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Ziegler%2C+Nisan+Stiennon%2C+Ryan+Lowe%2C+Jan+Leike%2C+and+Paul+Christiano&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:26.634194Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adapting pretrained text-to-text models for long text sequences, 2022.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adapting+pretrained+text-to-text+models+for+long+text+sequences%2C+2022.&rows=5",
+        "checked_at": "2026-10-09T04:41:26.638993Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Adapting Pretrained Text-to-Text Models for Long Text Sequences",
+            "authors": [
+              "Xiong",
+              "Gupta",
+              "Toshniwal",
+              "Mehdad",
+              "Yih"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.18653/v1/2023.findings-emnlp.370",
+            "source_url": "https://doi.org/10.18653/v1/2023.findings-emnlp.370",
+            "title_similarity": 0.9618320610687023
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Leveraging Text-to-Text Pretrained Language Models for Question Answering in Chemistry",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsomega.3c08842.s001",
+            "source_url": "https://doi.org/10.1021/acsomega.3c08842.s001",
+            "title_similarity": 0.44155844155844154
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Logical Structure-based Pretrained Models for Legal Text Processing",
+            "authors": [
+              "Nguyen",
+              "Nguyen"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.5220/0010852000003116",
+            "source_url": "https://doi.org/10.5220/0010852000003116",
+            "title_similarity": 0.5333333333333333
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "CLIP-Mesh: Generating textured meshes from text using pretrained image-text models",
+            "authors": [
+              "Mohammad Khalid",
+              "Xie",
+              "Belilovsky",
+              "Popa"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1145/3550469.3555392",
+            "source_url": "https://doi.org/10.1145/3550469.3555392",
+            "title_similarity": 0.4161073825503356
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning Embeddings from Free-text Triage Notes using Pretrained Transformer Models",
+            "authors": [
+              "Arnaud",
+              "Elbattah",
+              "Gignon",
+              "Dequen"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.5220/0011012800003123",
+            "source_url": "https://doi.org/10.5220/0011012800003123",
+            "title_similarity": 0.3708609271523179
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:54.842820Z",
+        "response_sha256": "371e1c0905ec2568c8b2066719618f30c9de67b9262ce48cce7d98f78e9665c3",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adapting+pretrained+text-to-text+models+for+long+text+sequences%2C+2022.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:26.638993Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_008_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_008_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_008_openreview_2024_02_11_credibility-35",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.18653/v1/2020.findings-emnlp.203"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2020.findings-emnlp.203",
+        "checked_at": "2026-10-09T04:41:26.640865Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Reducing Quantity Hallucinations in Abstractive Summarization",
+            "authors": [
+              "Zhao",
+              "Cohen",
+              "Webber"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.18653/v1/2020.findings-emnlp.203",
+            "source_url": "https://doi.org/10.18653/v1/2020.findings-emnlp.203",
+            "title_similarity": 0.19047619047619047
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:39:53.319151Z",
+        "response_sha256": "fe5c880e8f17f3fac1c33c58e46fdb2a2cbdd2c11745abcc3340308d04a112c0",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.18653%2Fv1%2F2020.findings-emnlp.203"
+      ],
+      "checked_at": "2026-10-09T04:41:26.640865Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-signal-repo-b6bef96e5a3a-608",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-b6bef96e5a3a-608",
+        "repository_id": "repo-b6bef96e5a3a",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-6030734517",
+        "source_title": "Update for gpt-6 models",
+        "source_excerpt": "I reproduced the lookup failure with `tiktoken==0.14.0` on macOS/Apple Silicon, Python 3.14.5. The installed `tiktoken/model.py` matches current `main` at `4e71bbe0c078468e00fefbf94b39849389f346e5` byte-for-byte.\n\nThis runs without API credentials or model calls:\n\n```python\nfrom tiktoken.model import encoding_name_for_model\n\nfor name in (\"gpt-6-astra\", \"gpt-6-sol\", \"gpt-6-luna\", \"gpt-5.6-sol\", \"gp",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:28.114749Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-5957858605",
+            "excerpt": "@hauntsaninja Do you still work here? Any update on this issue?",
+            "login": "impredicative"
+          },
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-6030734517",
+            "excerpt": "I reproduced the lookup failure with `tiktoken==0.14.0` on macOS/Apple Silicon, Python 3.14.5. The installed `tiktoken/model.py` matches current `main` at `4e71bbe0c078468e00fefbf94b39849389f346e5` byte-for-byte.\n\nThis runs without API credentials or model calls:\n\n```python\nfrom tiktoken.model import encoding_name_for_model\n\nfor name in (\"gpt-6-astra\", \"gpt-6-sol\", \"gpt-6-luna\", \"gpt-5.6-sol\", \"gp",
+            "login": "rksharma-owg"
+          },
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-6030956362",
+            "excerpt": "@hintz-openai Does anyone still work here?",
+            "login": "impredicative"
+          },
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-6071803831",
+            "excerpt": "https://github.com/williamliu-ai/token-count-compare/commit/8d8a2178538bb37beb548fc37378135e4ff4b0c8 is an experiment that strongly suggests that GPT-6 models use the same tokenizer as GPT-5:\n\n> - All seven GPT models (5.5, 5.6 Sol/Terra/Luna, 6 Astra/Sol/Luna) report 44,794 tokens and match each other on every one of the 31 fixtures. GPT-6 introduces no input-count change on this corpus.\n",
+            "login": "simonw"
+          },
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/608#issuecomment-6072178497",
+            "excerpt": "> suggests that GPT-6 models use the same tokenizer as GPT-5\n\nThat may be so, and many users already fallback to the GPT-5 encoding, but this issue is more about enforcing discipline wrt updates. A lack of timely updates is a recurring problem with tiktoken. It's not the first time they've failed to update the package. Every single time they have to be begged to add the new model. I'll let you get",
+            "login": "impredicative"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/openai/tiktoken/issues/608#issuecomment-6030734517"
+      ],
+      "checked_at": "2026-10-09T04:41:28.114749Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-b6bef96e5a3a-536",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-b6bef96e5a3a-536",
+        "repository_id": "repo-b6bef96e5a3a",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/openai/tiktoken/issues/536",
+        "source_title": "Encoding.is_special_token() raises AttributeError - undefined attribute _special_token_values",
+        "source_excerpt": "Encoding.is_special_token() raises AttributeError - undefined attribute _special_token_values\n## Description\n\n`Encoding.is_special_token()` in `tiktoken/core.py` (line 367) references `self._special_token_values` which is never defined in `__init__` or anywhere else in the class.\n\nAny call to this method immediately raises `AttributeError`.\n\n## Steps to reproduce\n\n```python\nimport tiktoken\n\nenc = ",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "closed",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:28.117331Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/536#issuecomment-4456996874",
+            "excerpt": "Thanks, this was caused by an incomplete redaction from the internal codebase. Fixed in the latest release",
+            "login": "hauntsaninja"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/openai/tiktoken/issues/536"
+      ],
+      "checked_at": "2026-10-09T04:41:28.117331Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-b6bef96e5a3a-530",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-b6bef96e5a3a-530",
+        "repository_id": "repo-b6bef96e5a3a",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/openai/tiktoken/issues/530",
+        "source_title": "encode_ordinary_batch — reproducible multi-second tail stalls on 32-core box (o200k_base, num_threads=8)",
+        "source_excerpt": "encode_ordinary_batch — reproducible multi-second tail stalls on 32-core box (o200k_base, num_threads=8)\n\nRunning `encode_ordinary_batch` with its default `num_threads=8` on a 32-core Sapphire Rapids box, I'm seeing large tail spikes on the slowest run of every 10-run batch. Same input, same build, the worst run is 1.1× to 7.6× slower than the median depending on corpus. Multilingual text is the w",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:28.118130Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/530#issuecomment-4502961983",
+            "excerpt": "I've put up a benchmark harness based on the methodology you described in this issue — PR #548.\nIt measures median and worst-of-N wall-clock time across four synthetic corpora (english prose, python source, multilingual+emoji, random ascii) with configurable runs, batch size, encoding, and thread counts. No external data files required — corpora are generated at runtime.\nHappy to extend it if you ",
+            "login": "alobroke"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/openai/tiktoken/issues/530"
+      ],
+      "checked_at": "2026-10-09T04:41:28.118130Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    },
+    {
+      "finding_id": "f-signal-repo-b6bef96e5a3a-513",
+      "dimension_id": "code_reproduction_signals",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "discussion_inconclusive",
+      "description": "关键词检索候选，需人工确认是否讨论论文结果。",
+      "reproduction_signal": {
+        "signal_id": "signal-repo-b6bef96e5a3a-513",
+        "repository_id": "repo-b6bef96e5a3a",
+        "signal_type": "discussion_inconclusive",
+        "review_status": "candidate",
+        "source_url": "https://github.com/openai/tiktoken/issues/513",
+        "source_title": "[Bug] tiktoken 0.9.0 ignores TIKTOKEN_OFFLINE and TIKTOKEN_CACHE_DIR, still attempts network download",
+        "source_excerpt": "[Bug] tiktoken 0.9.0 ignores TIKTOKEN_OFFLINE and TIKTOKEN_CACHE_DIR, still attempts network download\n### Bug Description\n在离线环境（无互联网连接）下，`tiktoken==0.9.0` 即使已经设置了 `TIKTOKEN_CACHE_DIR` 环境变量且本地缓存文件完整，仍然会尝试从网络下载编码文件，导致 `requests.exceptions.ConnectionError` 异常。\n\n降级到 `tiktoken==0.5.0` 后问题消失，说明 0.9.0 版本的缓存机制存在回归。\n\n### Steps to Reproduce\n1. **准备环境**（在有网机器上）：\n   ```bash\n   # 下载编码文件到默认缓存目录\n   mkdir -p ~/.c",
+        "third_party_claim": "关键词检索候选，需人工确认是否讨论论文结果。",
+        "third_party": null,
+        "author_response": null,
+        "resolution_status": "open",
+        "resolution_url": null,
+        "observed_at": "2026-10-09T04:41:28.118785Z",
+        "confidence": null,
+        "limitations": [
+          "未运行代码；关键词命中不能证明复现成功或失败。",
+          "作者身份仅依据显式提供的 author_logins。"
+        ],
+        "comments": [
+          {
+            "source_url": "https://github.com/openai/tiktoken/issues/513#issuecomment-4525023762",
+            "excerpt": "Hi! Triaging older issues — I think this is a cache-layout misunderstanding rather than a regression. Want to lay out the evidence so you can confirm before closing.\n\nTwo things going on:\n\n1. **`TIKTOKEN_OFFLINE` is not a supported env var in any released tiktoken.** The loader only reads `TIKTOKEN_CACHE_DIR` and the older `DATA_GYM_CACHE_DIR` — see `tiktoken/load.py:37-43` on `main` (commit `fa8b",
+            "login": "jbbqqf"
+          }
+        ]
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://github.com/openai/tiktoken/issues/513"
+      ],
+      "checked_at": "2026-10-09T04:41:28.118785Z",
+      "uncertainty": "第三方公开线索；系统没有运行代码。关闭 issue 不等于结果已复现。"
+    }
+  ],
+  "alerts": [],
+  "reference_coverage": {
+    "expected_count": 36,
+    "extracted_count": 36,
+    "parsed_count": 32,
+    "queried_count": 32,
+    "matched_count": 17,
+    "metadata_conflict_count": 2,
+    "unverified_count": 13,
+    "parse_failed_count": 4,
+    "not_checked_count": 0,
+    "query_failed_count": 0,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:41.382094Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

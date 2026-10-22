@@ -1,0 +1,85 @@
+# Hand-verified core samples. These keep their paper_id, band and coverage role
+# across every re-run of the pipeline; the discovery step never renumbers them.
+# Every field here was read from a primary source on 2026-09-02 (see the
+# verification_notes in each data/source_snapshots/<id>/source_record.json).
+- paper_id: paper_001
+  arxiv_id: "2307.08122"
+  lock_version: v3
+  openreview_forum_id: VLFhbOCz5D
+  decision: "Accept (poster)"
+  decision_verified: true
+  sample_quality_band: high_consensus
+  data_status: parsed
+  challenge_tags: theory_and_experiments;code_available;privacy_and_unlearning
+  coverage_role: baseline_upper_band
+  selection_reason: >-
+    Theory plus experiments with public code and broadly positive reviews while
+    retaining bounded concerns. The only sample with a completed PDF parse.
+- paper_id: paper_002
+  arxiv_id: "2310.01798"
+  lock_version: v1
+  openreview_forum_id: IkmD3fKBPQ
+  decision: "Accept (poster)"
+  decision_verified: true
+  sample_quality_band: mixed_or_borderline
+  data_status: selected
+  challenge_tags: reviewer_disagreement;negative_result;claim_scope;no_sota_claim
+  coverage_role: negative_result_no_sota
+  selection_reason: >-
+    Negative-result study making no SOTA claim, so the rubric cannot equate
+    leaderboard gains with research value. v1 is the reviewed version.
+- paper_id: paper_004
+  arxiv_id: "2312.00752"
+  lock_version: v1
+  openreview_forum_id: AL1fq05o7H
+  decision: "Reject"
+  decision_verified: true
+  sample_quality_band: mixed_or_borderline
+  data_status: selected
+  challenge_tags: explicit_sota_claim;rejected_despite_high_impact;decision_is_not_quality_truth
+  coverage_role: sota_claim_and_reject
+  selection_reason: >-
+    Abstract states outright that the method achieves state-of-the-art
+    performance, and the submission was rejected yet became influential. Tests
+    both hard rules at once.
+- paper_id: paper_005
+  arxiv_id: "2310.07923"
+  lock_version: v5
+  openreview_forum_id: NjNGlPh8Wh
+  decision: "Accept (poster)"
+  decision_verified: true
+  sample_quality_band: high_consensus
+  data_status: selected
+  challenge_tags: theory_only;no_code;no_experiments;not_applicable_expected;theorem_and_equation_elements
+  coverage_role: theory_only_not_applicable
+  selection_reason: >-
+    Verified to contain no experiments, datasets, baselines or code. The only
+    sample that can positively exercise not_applicable, and the first to produce
+    theorem and equation element types.
+- paper_id: paper_006
+  arxiv_id: "2310.02255"
+  lock_version: v3
+  openreview_forum_id: KUNzEQMWU7
+  decision: "Accept (oral)"
+  decision_verified: true
+  sample_quality_band: high_consensus
+  data_status: selected
+  challenge_tags: parse_stress_116_pages;120_figures;benchmark_paper;ten_authors
+  coverage_role: parse_stress_large_document
+  selection_reason: >-
+    116 pages and 120 figures per the arXiv comments field. Selected to break
+    the one-chunk-per-page parser and show its behaviour at scale.
+- paper_id: paper_003
+  arxiv_id: ""
+  lock_version: openreview_2024_02_11
+  openreview_forum_id: Pmrc0nEvxf
+  decision: "Reject"
+  decision_verified: true
+  sample_quality_band: substantial_concerns
+  data_status: parsed
+  challenge_tags: rejected_submission;soundness_concerns;evaluation_design;graph_learning
+  coverage_role: lower_band_concern_rich
+  selection_reason: >-
+    The OpenReview forum, public decision, authors, locked 24-page PDF and PDF
+    checksum were verified on 2026-09-07. The assessed score remains based only
+    on paper-internal evidence; the decision is calibration metadata, not truth.

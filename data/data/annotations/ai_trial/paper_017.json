@@ -1,0 +1,361 @@
+{
+  "assessment_id": "assessment_ai_paper_017_openreview_2024_02_11",
+  "paper_version_id": "paper_017_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_017_openreview_2024_02_11",
+    "raw_output_sha256": "d128c1589491ae6325a7ea9724f153c4feb51322ae413a164dbf6ea6112a222c"
+  },
+  "paper_summary": "Learning neural subset selection tasks, such as compound selection in AI-aided drug discovery, have become increasingly pivotal across diverse applications. The existing methodologies in the field primarily concentrate on constructing models that capture the relationship between utility function values and subsets within their respective supersets.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Motivated by these insights, we propose a simple yet effective information aggregation module designed to merge the representations of subsets and supersets from a permutation invariance perspective.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_017_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Comprehensive empirical evaluations across diverse tasks and datasets validate the enhanced efficacy of our approach over conventional methods, underscoring the practicality and potency of our proposed strategies in real-world contexts.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_017_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Our theoretical findings demonstrate that when the target value is conditioned on both the input set and subset, it is essential to incorporate an invariant sufficient statistic of the superset into the subset of interest for effective learning.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_017_ev_004",
+        "paper_017_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 6.8,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 6.8/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Learning neural subset selection tasks, such as compound selection in AI-aided drug discovery, have become increasingly pivotal across diverse applications. ",
+    "正文可定位证据支持该维度判断：In theory, invariant sufficient representations can be computed by selecting a representative element for each orbit under the group G . ",
+    "正文可定位证据支持该维度判断：The proposed methods are assessed across multiple tasks, including product recommendation, set anomaly detection, and compound selection. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》在研究价值方面的正文支持是：Learning neural subset selection tasks, such as compound selection in AI-aided drug discovery, have become increasingly pivotal across diverse applications.  限制或边界证据是：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Learning neural subset selection tasks, such as compound selection in AI-aided drug discovery, have become increasingly pivotal across diverse applications. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_017_ev_001",
+        "paper_017_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》在可靠性与证据方面的正文支持是：In theory, invariant sufficient representations can be computed by selecting a representative element for each orbit under the group G .  限制或边界证据是：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In theory, invariant sufficient representations can be computed by selecting a representative element for each orbit under the group G . "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_017_ev_003",
+        "paper_017_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》在原创性定位方面的正文支持是：The proposed methods are assessed across multiple tasks, including product recommendation, set anomaly detection, and compound selection.  限制或边界证据是：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：The proposed methods are assessed across multiple tasks, including product recommendation, set anomaly detection, and compound selection. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_017_ev_004",
+        "paper_017_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》在清晰度与可用性方面的正文支持是：Eq. 1 holds for all possible ( V ,S ) . During practical training, with limited data ( S ∗ ,V ) N sampled i i i i i =1 from the underlying data distribution P ( S,V ) , the empirical log likelihood (cid:80) N [log p ( S ∗ | V )] is i =1 θ maximized among all data pairs { S,V } ,… 限制或边界证据是：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Eq. 1 holds for all possible ( V ,S ) . During practical training, with limited data ( S ∗ ,V ) N sampled i i i i i =1 from the underlying data distribution P ( S,V ) , the empirical log likelihood (cid:80) N [log p ( S ∗ | V )] is i =1 θ maximized among all data pairs { S,V } ,…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_017_ev_005",
+        "paper_017_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Enhancing Neural Subset Selection: Integrating Background Information into Set Representations》在可复现性与透明度方面的正文支持是：In this experiment, we further perform set anomaly detection on CIFAR-10.  限制或边界证据是：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this experiment, we further perform set anomaly detection on CIFAR-10. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_017_ev_006",
+        "paper_017_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_017_ev_001",
+      "page_number": 1,
+      "section_id": "paper_017_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Learning neural subset selection tasks, such as compound selection in AI-aided drug discovery, have become increasingly pivotal across diverse applications. The existing methodologies in the field primarily concentrate on constructing models that capture the relationship between utility function values and subsets within their respective supersets. However, these approaches tend to overlook the valuable information contained within the superset when utilizing neural networks to model set functions. In this work, we address this oversight by adopting a probabilistic perspective. Our theoretical findings demonstrate that when the target value is conditioned on both the input set and subset, it is essential to incorporate an invariant sufficient statistic of the superset into the subset of interest for effective learning. This ensures that the output value remains invariant to permutations ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "page_number": 9,
+      "section_id": "paper_017_openreview_2024_02_11_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "In this study, we have identified a significant limitation in subset encoding methods, such as neural subset selection, where the output is either the subset itself or a function value associated with the subset. By incorporating the concept of permutation invariance, we reformulate this problem as the modeling of a conditional distribution P ( Y | S,V ) that adheres to Property 3.1. Our theoretical analysis further reveals that to accomplish this objective, it is essential to construct a neural network based on the invariant sufficient representation of both S and V . In response, we introduce INSET , a highly accurate and theoretical-driven approach for neural subset selection, which also consistently outperforms previous methods according to empirical evaluations. Limitations and Future Work. INSET is a simple yet effective method in terms of implementation, indicating that there is s",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_017_ev_003",
+      "page_number": 6,
+      "section_id": "paper_017_openreview_2024_02_11_sec_3_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0010",
+      "evidence_mode": "quote",
+      "excerpt": "In theory, invariant sufficient representations can be computed by selecting a representative element for each orbit under the group G . However, this approach is impractical due to the high dimensions of the input space and the potentially enormous number of orbits. Instead, in practice, a neural network can be employed to approximate this process and generate the desired representations (Zaheer et al., 2017; Bloem-Reddy & Teh, 2020), particularly in tasks involving sets or set-like structures. However, the approach to approximating such a representation for ( S,V ) under G remains unclear. To simplify the problem, we can divide the task of finding the invariant sufficient representation of S and V under H and R , respectively, as defined in Section 3.2. This concept is guaranteed by the following proposition: Proposition 3.7. Assuming that M : S → S and M : V → V serve as invariant suf",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_017_ev_004",
+      "page_number": 6,
+      "section_id": "paper_017_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0012",
+      "evidence_mode": "quote",
+      "excerpt": "The proposed methods are assessed across multiple tasks, including product recommendation, set anomaly detection, and compound selection. To ensure robustness, all experiments are repeated five times using different random seeds, and the means and standard deviations of the results are reported. For additional experimental details and settings, we provide comprehensive information in Appendix E. Evaluations. The main goal of the following tasks is to predict the corresponding S ⋆ given V. Therefore, we evaluate the methods using the mean Jaccard coefficient (MJC) metric. Specifically,\n\nTable 1: Product recommendation results on all categories.\n\nCategories Random PGM DeepSet Set Transformer EquiVSet INSET Toys 0.083 0.441 ± 0.004 0.421 ± 0.005 0.625 ± 0.020 0.684 ± 0.004 0.769 ± 0.005 Furniture 0.065 0.175 ± 0.007 0.168 ± 0.002 0.176 ± 0.008 0.162 ± 0.020 0.169 ± 0.050 Gear 0.077 0.471 ± ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_017_ev_005",
+      "page_number": 2,
+      "section_id": "paper_017_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "Eq. 1 holds for all possible ( V ,S ) . During practical training, with limited data ( S ∗ ,V ) N sampled i i i i i =1 from the underlying data distribution P ( S,V ) , the empirical log likelihood (cid:80) N [log p ( S ∗ | V )] is i =1 θ maximized among all data pairs { S,V } , where p ( S | V ) ∝ F ( S ; V ) for all S ∈ 2 V . To achieve this θ θ objective, Ou et al. (2022) proposed to use a variational distribution q ( Y | S,V ) to approximate the distribution of P ( S | V ) within the variational inference framework, where Y ∈ [0 , 1] | V | represents a set of | V | independent Bernoulli distributions, representing the odds or probabilities of selecting element i in an output subset S. (More details can be found in Appendix D.1.) Thus, the main challenge lies in characterizing the structure of neural networks capable of modeling hierarchical permutation invariant conditional distribut",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_017_ev_006",
+      "page_number": 22,
+      "section_id": "paper_017_openreview_2024_02_11_sec_f_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_017_openreview_2024_02_11_chunk_0036",
+      "evidence_mode": "quote",
+      "excerpt": "In this experiment, we further perform set anomaly detection on CIFAR-10. Following the setup of (Ou et al., 2022), we randomly sample n ∈ { 2 , 3 } images as the OS oracle S ∗ , and then select 8 −| S ∗ | images with different labels to construct the set V \\ S ∗ . We finally obtain the training, validation, and test set with the size of 10 , 000 , 1 , 000 , 1 , 000 , respectively. We report all the set anomaly detection results in Table 10. It is obviously that INSET outperform the baselines significantly across different datasets on set anomaly detection tasks.\n\nTable 10: Empirical results of set anomaly detection Tasks\n\nDouble MNIST CelebA F-MNIST CIFAR-10 R ANDOM 0.0816 0.2187 0.1930 0.1926 PGM 0.300 ± 0.010 0.481 ± 0.006 0.540 ± 0.020 0.450 ± 0.020 D EEP S ET 0.111 ± 0.003 0.440 ± 0.006 0.490 ± 0.020 0.320 ± 0.008 S ET T RANSFORMER 0.512 ± 0.005 0.527 ± 0.008 0.581 ± 0.010 0.650 ± 0",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_017_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_017_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_017_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_017_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_017_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_017_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_017_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "random seed is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_017_ev_006"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_017_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_017_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

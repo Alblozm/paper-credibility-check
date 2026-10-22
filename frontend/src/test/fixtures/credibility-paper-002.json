@@ -1,0 +1,1565 @@
+{
+  "schema_version": "credibility-0.5.0-draft",
+  "analysis_mode": "credibility",
+  "assessment_id": "cred_7ffe66e9d2404682960b497830f19a0e",
+  "data_origin": "live",
+  "source": {
+    "type": "arxiv",
+    "arxiv_id": "2310.01798v1",
+    "upload_id": null
+  },
+  "model_id": "model_standard_v1",
+  "status": "completed",
+  "stage": "done",
+  "progress_percent": 100,
+  "created_at": "2026-10-21T02:45:03Z",
+  "started_at": "2026-10-21T02:45:10Z",
+  "completed_at": "2026-10-21T03:08:36Z",
+  "paper": {
+    "paper_id": "arxiv_2310_01798v1",
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "arxiv_id": "2310.01798v1",
+    "source_sha256": "f204bfe2e642ab52abbf3fa94141e644d22a23510d6d64ed8ddc0ee9823eb983",
+    "page_count": 19,
+    "language": "en",
+    "parse_quality": "good"
+  },
+  "report": {
+    "report_id": "cred_report_cred_7ffe66e9d2404682960b497830f19a0e",
+    "rubric_id": "paper_credibility",
+    "rubric_version": "0.2-provisional-complete",
+    "rubric_status": "provisional",
+    "rubric_sha256": "a30c99a871c0b98c861d7d90c48055d765829c0f015325340357be0a48752c40",
+    "scope_complete": false,
+    "is_provisional": true,
+    "versions": {
+      "pipeline_version": "credibility-0.13-model-release-labels",
+      "parser_version": "live:generic-pypdf-v4",
+      "prompt_version": "credibility-claims-live-1.6",
+      "model_calls": [
+        {
+          "purpose": "claim_extraction",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "claim_extraction_repair",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "claim_judgment",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "claim_judgment_repair",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "external_code_discovery_native_tools",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "external_code_discovery_native_tools",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        },
+        {
+          "purpose": "external_code_discovery_native_tools",
+          "provider": "deepseek",
+          "model_version": "deepseek-flash"
+        }
+      ]
+    },
+    "generated_at": "2026-10-21T03:08:36Z",
+    "dimensions": [
+      {
+        "dimension_id": "claim_evidence",
+        "applicability": "applicable",
+        "applicability_reason": "The paper makes claims in its abstract or introduction that can be compared with later evidence.",
+        "check_status": "partial",
+        "score_status": "scored",
+        "score": 3.0,
+        "weight": 1.0,
+        "score_rule_ids": [
+          "P_C_UNVERIFIABLE",
+          "P_C_SUPPORTED",
+          "P_C_SCOPE_FALLBACK"
+        ],
+        "summary": "6 of 6 selected claim(s) compared. The claim selection is incomplete. Trial verifiability score under rubric 0.2-provisional-complete. Scoring gaps: claim item could not be verified; claim scope or parsed material is incomplete.",
+        "unassessed_reason": null,
+        "evidence_ids": [
+          "live_claim_E1",
+          "live_claim_E2",
+          "live_claim_E3",
+          "live_claim_G2",
+          "live_claim_E4",
+          "live_claim_E5",
+          "live_claim_G3",
+          "live_claim_G5",
+          "live_claim_E7",
+          "live_claim_E8",
+          "live_claim_G6",
+          "live_claim_G7",
+          "live_claim_E9",
+          "live_claim_E10",
+          "live_claim_G8",
+          "live_claim_G9",
+          "live_claim_E11",
+          "live_claim_G10",
+          "live_claim_G11",
+          "live_claim_E12",
+          "live_claim_G12",
+          "live_claim_G13"
+        ],
+        "finding_ids": [
+          "find_C1",
+          "find_C2",
+          "find_C4",
+          "find_C5",
+          "find_C6",
+          "find_C7"
+        ]
+      },
+      {
+        "dimension_id": "reference_verification",
+        "applicability": "undetermined",
+        "applicability_reason": "reference_check could not complete (TimeoutError); no positive or negative finding was inferred.",
+        "check_status": "failed",
+        "score_status": "scored",
+        "score": 3.0,
+        "weight": 1.0,
+        "score_rule_ids": [
+          "P_R_NO_ITEMS_FALLBACK"
+        ],
+        "summary": "reference_check could not complete (TimeoutError); no positive or negative finding was inferred. Trial verifiability score under rubric 0.2-provisional-complete. Scoring gaps: reference extraction is incomplete; no reference items available.",
+        "unassessed_reason": null,
+        "evidence_ids": [],
+        "finding_ids": []
+      },
+      {
+        "dimension_id": "code_reproduction",
+        "applicability": "applicable",
+        "applicability_reason": "Based on inspected parsed text and confirmed implementation evidence.",
+        "check_status": "completed",
+        "score_status": "scored",
+        "score": 4.0,
+        "weight": 1.0,
+        "score_rule_ids": [
+          "P_K_NO_PUBLIC_CODE_FOUND",
+          "P_K_MINIMUM_WITH_CAP"
+        ],
+        "summary": "Code: not_found_in_scope; public feedback: unable_to_verify. Trial verifiability score under rubric 0.2-provisional-complete. Scoring gaps: code search coverage is incomplete.",
+        "unassessed_reason": null,
+        "evidence_ids": [
+          "code_discovery_ev_abdba443bc_1",
+          "code_discovery_ev_abdba443bc_2",
+          "code_discovery_ev_abdba443bc_3"
+        ],
+        "finding_ids": [
+          "code_finding_summary"
+        ]
+      }
+    ],
+    "checks": {
+      "claims": {
+        "selection_scope": "All distinct checkable claims about this paper's own contributions, methods, and results in the supplied abstract and introduction, including empirical, methodological, and reproducibility claims.",
+        "scope_complete": false,
+        "scope_limitations": [
+          "Only abstract and introduction were supplied; later body/tables/appendices are handled in stage 2.",
+          "Specific datasets, models, and metrics are not named in these sections, so claim conditions are left null where unstated.",
+          "Claim C3 source evidence failed validation: span E6 excluded: the quote for E6 was not found in arxiv_2310_01798v1_chunk_0003",
+          "Claim C3 excluded: no validated source quotes cover its statement.",
+          "Claim C1 evidence failed validation: span G1 excluded: the quote for G1 was not found in arxiv_2310_01798v1_chunk_0013",
+          "Claim C2 evidence failed validation: span G4 excluded: arxiv_2310_01798v1_chunk_0002 is in a 'introduction' section, which cannot serve as evidence here",
+          "Structured element extraction may be incomplete for: arxiv_2310_01798v1_table_1, arxiv_2310_01798v1_table_2, arxiv_2310_01798v1_table_3, arxiv_2310_01798v1_figure_1, arxiv_2310_01798v1_figure_2, arxiv_2310_01798v1_table_4, arxiv_2310_01798v1_table_5, arxiv_2310_01798v1_figure_3, arxiv_2310_01798v1_figure_4, arxiv_2310_01798v1_figure_5, arxiv_2310_01798v1_figure_6, arxiv_2310_01798v1_figure_7, arxiv_2310_01798v1_figure_8, arxiv_2310_01798v1_table_6.",
+          "Parser warning: TABLE_STRUCTURE_UNVERIFIED",
+          "Human review is pending for: C1, C2, C4, C5, C6, C7."
+        ],
+        "items": [
+          {
+            "claim_id": "C1",
+            "statement": "The paper critically examines the role and efficacy of self-correction in LLMs, focusing on intrinsic self-correction where the model corrects its initial responses based solely on inherent capabilities without external feedback.",
+            "importance": "core",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = not stated, setting = intrinsic self-correction without external feedback | live_claim_G2: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E1",
+              "live_claim_E2",
+              "live_claim_E3"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G2"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements (tables/figures); excluded front matter/abstract/introduction/related work/references/acknowledgments.",
+            "outcome": "unable_to_determine",
+            "reason": "Claim C1 evidence failed validation: span G1 excluded: the quote for G1 was not found in arxiv_2310_01798v1_chunk_0013. Original judgment: Later sections explicitly define and investigate intrinsic self-correction without labels/external feedback, consistent with the claim's focus.",
+            "score_rule_id": "P_C_UNVERIFIABLE",
+            "item_score": 3.0,
+            "reconciled_from": null
+          },
+          {
+            "claim_id": "C2",
+            "statement": "In the context of reasoning, LLMs struggle to self-correct their responses without external feedback, and their performance may even degrade after self-correction.",
+            "importance": "core",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = not stated, setting = reasoning tasks, intrinsic self-correction without external feedback | live_claim_G3: conditions not recorded | live_claim_G5: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E4",
+              "live_claim_E5"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G3",
+              "live_claim_G5"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements; excluded abstract/introduction.",
+            "outcome": "unable_to_determine",
+            "reason": "Claim C2 evidence failed validation: span G4 excluded: arxiv_2310_01798v1_chunk_0002 is in a 'introduction' section, which cannot serve as evidence here. Original judgment: Intrinsic self-correction results show performance drops on all reasoning benchmarks, and analysis shows correct answers more often changed to incorrect.",
+            "score_rule_id": "P_C_UNVERIFIABLE",
+            "item_score": 3.0,
+            "reconciled_from": null
+          },
+          {
+            "claim_id": "C4",
+            "statement": "The paper investigates multi-agent debate as a means to improve reasoning and finds its efficacy is no better than self-consistency when considering an equivalent number of responses.",
+            "importance": "core",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = self-consistency with equivalent number of responses, setting = multi-agent debate for reasoning | live_claim_G6: conditions not recorded | live_claim_G7: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E7",
+              "live_claim_E8"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G6",
+              "live_claim_G7"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements; excluded introduction.",
+            "outcome": "supported",
+            "reason": "Section 3.3 reports multi-agent debate underperforms self-consistency with equivalent responses, matching the claim.",
+            "score_rule_id": "P_C_SUPPORTED",
+            "item_score": 10.0,
+            "reconciled_from": null
+          },
+          {
+            "claim_id": "C5",
+            "statement": "The paper frames self-correction as a form of post-hoc prompting and analyzes that the enhancement attributed to self-correction in certain tasks may stem from an ill-crafted initial instruction overshadowed by a carefully-crafted feedback prompt.",
+            "importance": "core",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = not stated, setting = tasks where self-correction appears beneficial | live_claim_G8: conditions not recorded | live_claim_G9: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E9",
+              "live_claim_E10"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G8",
+              "live_claim_G9"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements; excluded introduction.",
+            "outcome": "supported",
+            "reason": "Section 4 frames self-correction as post-hoc prompting and argues gains can stem from ill-crafted pre-hoc prompts overshadowed by crafted feedback prompts.",
+            "score_rule_id": "P_C_SUPPORTED",
+            "item_score": 10.0,
+            "reconciled_from": null
+          },
+          {
+            "claim_id": "C6",
+            "statement": "The paper suggests that integrating feedback into the initial instruction or crafting a better initial prompt might yield better results and lower inference cost than self-correction.",
+            "importance": "supporting",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = self-correction with feedback prompt, setting = not stated | live_claim_G10: conditions not recorded | live_claim_G11: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E11"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G10",
+              "live_claim_G11"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements; excluded introduction.",
+            "outcome": "supported",
+            "reason": "Section 4 and Discussion recommend embedding feedback in the initial instruction as more cost-effective than post-hoc self-correction.",
+            "score_rule_id": "P_C_SUPPORTED",
+            "item_score": 10.0,
+            "reconciled_from": null
+          },
+          {
+            "claim_id": "C7",
+            "statement": "The paper notes that while self-correction has limitations in enhancing reasoning, it shows promising results in other tasks such as altering style or improving appropriateness of responses.",
+            "importance": "supporting",
+            "conditions": "Claim: metric = not stated, dataset = not stated, baseline = not stated, setting = non-reasoning tasks (style alteration, appropriateness) | live_claim_G12: conditions not recorded | live_claim_G13: conditions not recorded",
+            "claim_evidence_ids": [
+              "live_claim_E12"
+            ],
+            "comparison_evidence_ids": [
+              "live_claim_G12",
+              "live_claim_G13"
+            ],
+            "search_scope": "Later body chunks 0006-0025, 0032-0038 and structured elements; excluded introduction.",
+            "outcome": "supported",
+            "reason": "Discussion states self-correction is not useless and can align style/safety while reasoning tasks showed no improvement, consistent with the claim.",
+            "score_rule_id": "P_C_SUPPORTED",
+            "item_score": 10.0,
+            "reconciled_from": null
+          }
+        ]
+      },
+      "references": {
+        "extraction_status": "failed",
+        "extraction_reason": "reference_check could not complete (TimeoutError); no positive or negative finding was inferred.",
+        "original_total": null,
+        "extracted_count": 0,
+        "checked_count": 0,
+        "matched_count": 0,
+        "conflict_count": 0,
+        "unverified_count": 0,
+        "not_checked_count": 0,
+        "query_completion_ratio": null,
+        "extraction_coverage_ratio": null,
+        "gaps": [
+          "reference_check could not complete (TimeoutError); no positive or negative finding was inferred."
+        ],
+        "items": []
+      },
+      "code": {
+        "scope_complete": false,
+        "scope_limitations": [
+          "No code was executed. Public reports are not system reproduction results.",
+          "Bounded check: at most 4 repositories, 4 official pages, 2 issue pages per repository, 20 issues per page and 2 comment pages per issue; 40 external requests per check.",
+          "Only GitHub repositories and public issues/comments are supported; GitHub Discussions is not checked.",
+          "Rule-based English feedback classification requires human review; conditions are not assumed equivalent.",
+          "Binary supplements are not parsed here; only supplied parsed supplement blocks and textual pages are checked."
+        ],
+        "searches": [
+          {
+            "scope_id": "code_search_paper_body",
+            "scope_type": "paper_body",
+            "outcome": "checked",
+            "reason": "Scanned available parsed blocks for code and official-page links.",
+            "evidence_ids": [],
+            "source_ids": []
+          },
+          {
+            "scope_id": "code_search_appendix",
+            "scope_type": "appendix",
+            "outcome": "checked",
+            "reason": "Scanned available parsed blocks for code and official-page links.",
+            "evidence_ids": [],
+            "source_ids": []
+          },
+          {
+            "scope_id": "code_search_supplement",
+            "scope_type": "supplement",
+            "outcome": "not_checked",
+            "reason": "No reliably identified parsed blocks; absence from the PDF is not proven.",
+            "evidence_ids": [],
+            "source_ids": []
+          },
+          {
+            "scope_id": "code_search_project_page",
+            "scope_type": "project_page",
+            "outcome": "not_checked",
+            "reason": "This scope has not been inspected.",
+            "evidence_ids": [],
+            "source_ids": []
+          },
+          {
+            "scope_id": "code_search_repository",
+            "scope_type": "repository",
+            "outcome": "not_checked",
+            "reason": "This scope has not been inspected.",
+            "evidence_ids": [],
+            "source_ids": []
+          },
+          {
+            "scope_id": "code_search_discussion_list",
+            "scope_type": "discussion_list",
+            "outcome": "not_checked",
+            "reason": "This scope has not been inspected.",
+            "evidence_ids": [],
+            "source_ids": []
+          }
+        ],
+        "code_availability": "not_found_in_scope",
+        "reproduction_signal": "unable_to_verify",
+        "repositories": [],
+        "discussions": [],
+        "base_score_rule_id": "P_K_NO_PUBLIC_CODE_FOUND",
+        "score_rule_id": "P_K_MINIMUM_WITH_CAP"
+      }
+    },
+    "evidence": [
+      {
+        "evidence_id": "live_claim_E1",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "this paper critically\nexamines the role and efficacy of self-correction within LLMs, shedding light on\nits true potential and limitations.",
+        "paper_locator": {
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0001",
+          "section_title": "Abstract",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E2",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "Central to our investigation is the notion of in-\ntrinsic self-correction, whereby an LLM attempts to correct its initial responses\nbased solely on its inherent capabilities, without the crutch of external feedback.",
+        "paper_locator": {
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0001",
+          "section_title": "Abstract",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E3",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "we first define the concept of intrinsic self-correction, a scenario wherein the model\nendeavors to rectify its initial responses based solely on its inherent capabilities, without the crutch\nof external feedback.",
+        "paper_locator": {
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0002",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G2",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "In this paper, we focus on the intrinsic self-\ncorrection setting.",
+        "paper_locator": {
+          "page_start": 8,
+          "page_end": 8,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0021",
+          "section_title": "Discussion",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E4",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "In the context of reasoning, our research indicates that LLMs struggle to self-\ncorrect their responses without external feedback, and at times, their performance\nmight even degrade post self-correction.",
+        "paper_locator": {
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0001",
+          "section_title": "Abstract",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E5",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "our findings indicate that LLMs struggle to amend\ntheir prior responses in this setting. In most instances, the performance post self-correction even\ndeteriorates.",
+        "paper_locator": {
+          "page_start": 1,
+          "page_end": 1,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0002",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G3",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "We observe that, after self-correction,\nthe model’s performance drops on all benchmarks.",
+        "paper_locator": {
+          "page_start": 5,
+          "page_end": 5,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0013",
+          "section_title": "Intrinsic Self-Correction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G5",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "For GSM8K, 74.7% of\nthe time, the model retains its initial answer. Among the remaining instances, the model is more\nlikely to modify a correct answer to an incorrect one than to revise an incorrect answer to a correct\none.",
+        "paper_locator": {
+          "page_start": 5,
+          "page_end": 5,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0014",
+          "section_title": "Why Does The Performance Not Increase , But Instead Decrease ?",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E7",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "we investigate the potential of\nmulti-agent debate (Du et al., 2023; Liang et al., 2023) as a means to improve reasoning.",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E8",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "our results reveal\nthat its efficacy is no better than self-consistency (Wang et al., 2022) when considering an equivalent\nnumber of responses, highlighting the limitations of such an approach.",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G6",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "for self-\nconsistency with an equivalent number of responses, multi-agent debate significantly underperforms\nsimple self-consistency using majority voting.",
+        "paper_locator": {
+          "page_start": 7,
+          "page_end": 7,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0018",
+          "section_title": "Multi-Agent Debate And Self-Consistency",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G7",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "the per-\nformance of multi-agent is only slightly\nbetter than that of self-consistency with\nthe same number of agents (3 re-\nsponses, the baseline also compared in\nDu et al. (2023)).",
+        "paper_locator": {
+          "page_start": 7,
+          "page_end": 7,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0018",
+          "section_title": "Multi-Agent Debate And Self-Consistency",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E9",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "we perceive self-correction as a form of\npost-hoc prompting, wherein the prompting involves the responses of LLMs.",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E10",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "our analysis reveals that the enhancement attributed to\nself-correction in certain tasks may stem from an ill-crafted initial instruction that is overshadowed\nby a carefully-crafted feedback prompt.",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G8",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "Based on its form, self-correction can be viewed as a type\nof post-hoc prompting.",
+        "paper_locator": {
+          "page_start": 7,
+          "page_end": 7,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0019",
+          "section_title": "Self-Correction As Post-Hoc Prompting",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G9",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "It is meaningless to employ a well-crafted post-hoc prompt to guide the\nmodel in “self-correcting” a response generated through a poorly constructed pre-hoc prompt.",
+        "paper_locator": {
+          "page_start": 8,
+          "page_end": 8,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0020",
+          "section_title": "Self-Correction As Post-Hoc Prompting",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E11",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "integrating the feedback into the initial in-\nstruction or crafting a better initial prompt might yield better results and lower the inference cost.",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G10",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "instead of feeding these requirements as feedback in the post-hoc prompt, a more cost-effective\nalternative strategy is to embed these requirements directly (and explicitly) into the pre-hoc prompt.",
+        "paper_locator": {
+          "page_start": 8,
+          "page_end": 8,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0020",
+          "section_title": "Self-Correction As Post-Hoc Prompting",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G11",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "if the “feedback” can be encoded in the\ninitial instruction, pre-hoc prompting is the more advantageous choice.",
+        "paper_locator": {
+          "page_start": 9,
+          "page_end": 9,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0022",
+          "section_title": "Discussion",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_E12",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "while self-correction has limitations in enhancing reasoning, it does show\npromising results in other tasks like altering the style or improving the appropriateness of responses",
+        "paper_locator": {
+          "page_start": 2,
+          "page_end": 2,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0003",
+          "section_title": "Introduction",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G12",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "Self-correction can be\neffectively employed to make responses align with specific preferences, such as altering the style\nof responses or enhancing their safety",
+        "paper_locator": {
+          "page_start": 8,
+          "page_end": 8,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0021",
+          "section_title": "Discussion",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "live_claim_G13",
+        "origin": "paper",
+        "mode": "quote",
+        "excerpt": "in the reasoning tasks studied in this paper, we did not observe any\nimprovement through self-correction.",
+        "paper_locator": {
+          "page_start": 8,
+          "page_end": 8,
+          "chunk_id": "arxiv_2310_01798v1_chunk_0021",
+          "section_title": "Discussion",
+          "element_label": null
+        },
+        "source_id": null,
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "code_discovery_ev_abdba443bc_1",
+        "origin": "external",
+        "mode": "quote",
+        "excerpt": "* **Reflexion: Language Agents with Verbal Reinforcement Learning** \\[arxiv 2023\\.3\\] paper code\n  * **Interscript: A dataset for interactive learning of scripts through error feedback** \\[arxiv 2021\\.12\\] paper code\n  * **NL-EDIT: Correcting Semantic Parse Errors through Natural Language Interaction** \\[ACL 2021\\] paper code\n  * **Learning to repair: Repairing model output errors after deployment using a dynamic memory of feedback** \\[ACL 2022\\] paper code\n  * **CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing** \\[ICLR 2024\\] paper code\n  * **Teaching Large Language Models to Self-Debug** \\[ICLR 2024\\] paper\n  * **RARR: Researching and Revising What Language Models Say, Using Language Models** \\[ACL 2023\\] paper code\n  * **Graph-based, Self-Supervised Program Repair from Diagnostic Feedback** \\[ICML 2020\\] paper\n  * **Improving Factuality and Reasoning in Language Models through Multiagent Debate** \\[arxiv 2023\\.5\\] paper code\n  * **Examining Inter-Consistency of Large Language Models Collaboration: An In-depth Analysis via Debate** \\[EMNLP 2023\\] paper code\n  * **Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate** \\[arxiv 2023\\.5\\] paper code\n  * **ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs** \\[ACL 2024\\] paper code\n  * **Mixture-of-Agents Enhances Large Language Model Capabilities** \\[arxiv 2024\\.6\\] paper code\n  * **Can LLMs Produce Faithful Explanations For Fact-checking? Towards Faithful Explainable Fact-Checking via Multi-Agent Debate** \\[arxiv 2024\\.7\\] paper\n  * **Debating with More Persuasive LLMs Leads to More Truthful Answers** \\[ICML 2024\\] paper code\n  * **Examining Inter-Consistency of Large Language Models Collaboration: An In-depth Analysis via Debate** \\[EMNLP 2023\\] paper code\n  * **ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate** \\[ICLR 2024\\] pdf \n  * **ChainLM: Empowering Large Language Models with Improved Chain-of-Thought Prompting** \\[IREC 2024\\] paper\n  * **Are You Sure? Challenging LLMs Leads to Performance Drops in The FlipFlop Experiment** \\[arxiv 2023\\.11\\] paper\n  * **MultiAgent Collaboration Attack: Investigating Adversarial Attacks in Large Language Model Collaborations via Debate** \\[arxiv 2024\\.6\\] paper\n  * **Teaching Models to Balance Resisting and Accepting Persuasion** \\[arxiv 2024\\.10\\] paper code\n  * **GroupDebate: Enhancing the Efficiency of Multi-Agent Debate Using Group Discussion** \\[arxiv 2024\\.9\\] paper\n  * **Improving Multi-Agent Debate with Sparse Communication Topology** \\[arxiv 2024\\.6\\] paper\n  * **Self-Rewarding Language Models** \\[arxiv 2024\\.1\\] paper\n  * **Constitutional AI: Harmlessness from AI Feedback** \\[arxiv 2022\\.12\\] paper code\n  * **Self-Refine: Iterative Refinement with Self-Feedback** \\[NeurIPS 2023\\] paper\n  * **Language Models can Solve Computer Tasks** \\[arxiv 2023\\.3\\] paper code\n  * **Confidence Matters: Revisiting Intrinsic Self-Correction Capabilities of Large Language Models** \\[arxiv 2024\\.2\\] paper code\n  * **Is Self-Repair a Silver Bullet for Code Generation?** \\[ICLR 2024\\] paper code\n  * **Large Language Models Cannot Self-Correct Reasoning Yet** \\[ICLR 2024\\] paper\n  * **Reasoning in Token Economies: Budget-Aware Evaluation of LLM Reasoning Strategies** \\[arxiv 2024\\.6\\] paper\n  * **Can Large Language Models Really Improve by Self-critiquing Their Own Plans?** \\[arxiv 2023\\.10\\] paper\n  * **GPT-4 Doesn't Know It's Wrong: An Analysis of Iterative Prompting for Reasoning Problems** \\[arxiv 2023\\.10\\] paper\n  * **When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs** \\[arxiv 2024\\.6\\] paper\n  * **LLMs cannot find reasoning errors, but can correct them given the error location** \\[ACL 2024\\] paper code\n  * **Self-critiquing models for assisting human evaluators** \\[arxiv 2022\\.6\\] paper\n  * **Recursive Introspection: Teaching Language Model Agents How to Self-Improve** \\[arxiv 2024\\.7\\] paper\n  * **Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning** \\[arxiv 2024\\.10\\] paper\n  * **Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning** \\[arxiv 2024\\.6\\] paper code\n  * **GLoRe: When, Where, and How to Improve LLM Reasoning via Global and Local Refinements** \\[arxiv 2024\\.2\\] paper\n  * **Generating Sequences by Learning to Self-Correct** \\[ICLR 2023\\] paper code\n  * **Training Language Models to Self-Correct via Reinforcement Learning** \\[arxiv 2024\\.9\\] paper",
+        "paper_locator": null,
+        "source_id": "code_discovery_src_abdba443bc_4",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "code_discovery_ev_abdba443bc_2",
+        "origin": "external",
+        "mode": "quote",
+        "excerpt": "- When More Thinking Hurts: Overthinking in LLM Test-Time Compute Scaling: https://arxiv.org/abs/2604.10739\n- Inverse Scaling in Test-Time Compute: https://arxiv.org/abs/2507.14417\n- Large Language Models Cannot Self-Correct Reasoning Yet: https://openreview.net/forum?id=IkmD3fKBPQ",
+        "paper_locator": null,
+        "source_id": "code_discovery_src_abdba443bc_5",
+        "location_confidence": "high"
+      },
+      {
+        "evidence_id": "code_discovery_ev_abdba443bc_3",
+        "origin": "external",
+        "mode": "quote",
+        "excerpt": "ID | Citation | Type | Used In \n---|---|---|---\n\\[1\\] | Huang et al., \"Large Language Models Cannot Self-Correct Reasoning Yet\", ICLR 2024 | Academic | 1.1, 1.5, Contradictions \n\\[2\\] | Dhuliawala et al., \"Chain-of-Verification Reduces Hallucination in LLMs\", ACL Findings 2024 | Academic | 1.2, 1.3, 2.1, 4 \n\\[3\\] | Shi et al., \"Socratic Self-Refine \\(SSR\\)\", Salesforce AI 2025 | Academic | 1.3, 2.2, 3.2, 3.5, 3.6 \n\\[4\\] | Lu et al., \"Verifier Gain and Cross-Family Verification\", 2025 | Academic | 2.1, 2.3, 3.3, 5.1, 5.5 \n\\[5\\] | Wu et al., \"ProCo: Progressive Correction via Key-Condition Verification\", EMNLP 2024 | Academic | 3.3, 4, Contradictions \n\\[6\\] | Zhang et al., \"SCORE: Self-Correction with External Verifiers\", ACL Findings 2024 | Academic | 3.4, 5.5 \n\\[7\\] | Kamoi et al., \"No Reliable Intrinsic Self-Correction Without External Signals\", TACL | Academic | 1.1 \n\\[8\\] | Cobbe et al., \"Training Verifiers to Solve Math Word Problems\", 2021 | Academic | 1.2, 3.4, 5.5 \n\\[9\\] | Lightman et al., \"Let's Verify Step by Step\", OpenAI 2023 | Academic | 1.2, 3.1, 5.1 \n\\[10\\] | Du et al., \"Improving Factuality and Reasoning through Multi-Agent Debate\", ICML 2023 | Academic | 1.4, 3.8, Contradictions \n\\[11\\] | \"Stop Overvaluing Multi-Agent Debate\", 2025 | Academic | 1.4, 4 \n\\[12\\] | SelfOrg, 2026 | Academic | 1.4, 2.3, 3.7, 5.4 \n\\[13\\] | Yao et al., \"Tree of Thoughts\", NeurIPS 2023 | Academic | 3.7 \\(context\\) \n\\[14\\] | Bi et al., \"Forest of Thoughts \\(FoT\\)\", ICML 2025 | Academic | 3.7 \\(context\\) \n\\[15\\] | GSM8K 2026 benchmark comparison | Benchmark | 1.4, 4 \n\\[16\\] | CorrectBench \\(CoVe as standard baseline\\) | Benchmark | 1.3 \n\\[17\\] | Sycophancy literature \\(multiple studies\\, 2023\\-2026\\) | Survey | 1.5, 5.3 ",
+        "paper_locator": null,
+        "source_id": "code_discovery_src_abdba443bc_6",
+        "location_confidence": "high"
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "code_discovery_src_abdba443bc_1",
+        "kind": "metadata",
+        "url": "https://api.deepseek.com/v1/tools/search",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:46:48+00:00",
+        "observed_at": "2026-10-21T02:46:48+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:d7092057ec6e5f952e015ca232032cdda8187bd6c3f285ed092dec7a0b3c6aa5",
+        "association_reason": "Search response is a candidate registry, not implementation evidence."
+      },
+      {
+        "source_id": "code_discovery_src_abdba443bc_2",
+        "kind": "metadata",
+        "url": "https://api.deepseek.com/v1/tools/search",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:46:50+00:00",
+        "observed_at": "2026-10-21T02:46:50+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:b756286a2ce4c0f4c5aad2d6ef4141af52099581ea03ae61cd649b0650574375",
+        "association_reason": "Search response is a candidate registry, not implementation evidence."
+      },
+      {
+        "source_id": "code_discovery_src_abdba443bc_3",
+        "kind": "metadata",
+        "url": "https://api.deepseek.com/v1/tools/search",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:46:58+00:00",
+        "observed_at": "2026-10-21T02:46:58+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:d7073fe2da4671ac29cffba44454bac213e7691f1bdbf3d7c32bbecad509d2a8",
+        "association_reason": "Search response is a candidate registry, not implementation evidence."
+      },
+      {
+        "source_id": "code_discovery_src_abdba443bc_4",
+        "kind": "project_page",
+        "url": "https://github.com/distributedstatemachine/awesome_test_time_llms",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:47:49+00:00",
+        "observed_at": "2026-10-21T02:47:49+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:b3bb4e0b05ecc689073c0e0a3979311f907de8871b177c4109bc290c650ffb16",
+        "association_reason": "Fetched discovery candidate; public relationship is not yet confirmed."
+      },
+      {
+        "source_id": "code_discovery_src_abdba443bc_5",
+        "kind": "project_page",
+        "url": "https://github.com/openai/codex/issues/45100",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:48:03+00:00",
+        "observed_at": "2026-10-21T02:48:04+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:11f017a4c608425573b13cd31a42196eb49e27cf7168db9a344c55bce437e5e9",
+        "association_reason": "Fetched discovery candidate; public relationship is not yet confirmed."
+      },
+      {
+        "source_id": "code_discovery_src_abdba443bc_6",
+        "kind": "project_page",
+        "url": "https://github.com/Wiktor-Potapczyk/agent-governance-research/blob/e4389151f629b933f7ec6f4e41a8a2198567371e/theories/perplexity-synthesis.md",
+        "fetch_status": "ok",
+        "http_status": 200,
+        "retrieved_at": "2026-10-21T02:48:26+00:00",
+        "observed_at": "2026-10-21T02:48:29+00:00",
+        "is_cached": false,
+        "snapshot_ref": "snapshot:v1:6615a38cbfc21e5c29fb2aa813c9421a90ded192089ca474b3cd4c2b7846d705",
+        "association_reason": "Fetched discovery candidate; public relationship is not yet confirmed."
+      }
+    ],
+    "findings": [
+      {
+        "finding_id": "find_C1",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C1"
+        ],
+        "kind": "verification_gap",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim could not be determined from the evidence",
+        "detail": "Claim C1 evidence failed validation: span G1 excluded: the quote for G1 was not found in arxiv_2310_01798v1_chunk_0013. Original judgment: Later sections explicitly define and investigate intrinsic self-correction without labels/external feedback, consistent with the claim's focus.",
+        "evidence_ids": [
+          "live_claim_E1",
+          "live_claim_E2",
+          "live_claim_E3",
+          "live_claim_G2"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "find_C2",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C2"
+        ],
+        "kind": "verification_gap",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim could not be determined from the evidence",
+        "detail": "Claim C2 evidence failed validation: span G4 excluded: arxiv_2310_01798v1_chunk_0002 is in a 'introduction' section, which cannot serve as evidence here. Original judgment: Intrinsic self-correction results show performance drops on all reasoning benchmarks, and analysis shows correct answers more often changed to incorrect.",
+        "evidence_ids": [
+          "live_claim_E4",
+          "live_claim_E5",
+          "live_claim_G3",
+          "live_claim_G5"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "find_C4",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C4"
+        ],
+        "kind": "context",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim supported by later evidence",
+        "detail": "Section 3.3 reports multi-agent debate underperforms self-consistency with equivalent responses, matching the claim.",
+        "evidence_ids": [
+          "live_claim_E7",
+          "live_claim_E8",
+          "live_claim_G6",
+          "live_claim_G7"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "find_C5",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C5"
+        ],
+        "kind": "context",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim supported by later evidence",
+        "detail": "Section 4 frames self-correction as post-hoc prompting and argues gains can stem from ill-crafted pre-hoc prompts overshadowed by crafted feedback prompts.",
+        "evidence_ids": [
+          "live_claim_E9",
+          "live_claim_E10",
+          "live_claim_G8",
+          "live_claim_G9"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "find_C6",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C6"
+        ],
+        "kind": "context",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim supported by later evidence",
+        "detail": "Section 4 and Discussion recommend embedding feedback in the initial instruction as more cost-effective than post-hoc self-correction.",
+        "evidence_ids": [
+          "live_claim_E11",
+          "live_claim_G10",
+          "live_claim_G11"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "find_C7",
+        "dimension_id": "claim_evidence",
+        "item_ids": [
+          "C7"
+        ],
+        "kind": "context",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Claim supported by later evidence",
+        "detail": "Discussion states self-correction is not useless and can align style/safety while reasoning tasks showed no improvement, consistent with the claim.",
+        "evidence_ids": [
+          "live_claim_E12",
+          "live_claim_G12",
+          "live_claim_G13"
+        ],
+        "source_ids": [],
+        "limitations": [
+          "Human review pending: check both locations against the PDF before relying on this finding.",
+          "Paper-internal evidence only. The comparison was generated by a model and checked against the source."
+        ]
+      },
+      {
+        "finding_id": "code_finding_summary",
+        "dimension_id": "code_reproduction",
+        "item_ids": [],
+        "kind": "verification_gap",
+        "severity": "info",
+        "certainty": "unresolved",
+        "title": "Code and public reproduction evidence",
+        "detail": "Code: not_found_in_scope; feedback: unable_to_verify.",
+        "evidence_ids": [
+          "code_discovery_ev_abdba443bc_1",
+          "code_discovery_ev_abdba443bc_2",
+          "code_discovery_ev_abdba443bc_3"
+        ],
+        "source_ids": [
+          "code_discovery_src_abdba443bc_1",
+          "code_discovery_src_abdba443bc_2",
+          "code_discovery_src_abdba443bc_3",
+          "code_discovery_src_abdba443bc_4",
+          "code_discovery_src_abdba443bc_5",
+          "code_discovery_src_abdba443bc_6"
+        ],
+        "limitations": [
+          "No code was executed. Public reports are not system reproduction results.",
+          "Bounded check: at most 4 repositories, 4 official pages, 2 issue pages per repository, 20 issues per page and 2 comment pages per issue; 40 external requests per check.",
+          "Only GitHub repositories and public issues/comments are supported; GitHub Discussions is not checked.",
+          "Rule-based English feedback classification requires human review; conditions are not assumed equivalent.",
+          "Binary supplements are not parsed here; only supplied parsed supplement blocks and textual pages are checked."
+        ]
+      }
+    ],
+    "overall": {
+      "status": "assessed",
+      "score": 3.3333333333333335,
+      "category": "significant_concerns",
+      "summary": "Trial verifiability score: the equal-weight average of non-excluded dimension scores. Incomplete or unresolved checks can receive provisional fallback scores. This is not an approved assessment or a finding of misconduct.",
+      "unassessed_reason": null,
+      "calculation": {
+        "method": "equal_weight_trial_dimensions",
+        "included_dimension_ids": [
+          "claim_evidence",
+          "reference_verification",
+          "code_reproduction"
+        ],
+        "excluded_dimension_ids": [],
+        "blocking_dimension_ids": [],
+        "assessed_dimension_count": 3,
+        "fallback_dimension_ids": [
+          "claim_evidence",
+          "reference_verification"
+        ]
+      }
+    },
+    "alerts": [
+      {
+        "type": "low_dimension_score",
+        "dimension_id": "claim_evidence",
+        "finding_ids": [
+          "find_C1",
+          "find_C2",
+          "find_C4",
+          "find_C5",
+          "find_C6",
+          "find_C7"
+        ],
+        "message": "This check scores 3. Other dimensions do not cancel it."
+      },
+      {
+        "type": "assessment_gap",
+        "dimension_id": "claim_evidence",
+        "finding_ids": [
+          "find_C1",
+          "find_C2",
+          "find_C4",
+          "find_C5",
+          "find_C6",
+          "find_C7"
+        ],
+        "message": "6 of 6 selected claim(s) compared. The claim selection is incomplete. Trial verifiability score under rubric 0.2-provisional-complete. Scoring gaps: claim item could not be verified; claim scope or parsed material is incomplete."
+      },
+      {
+        "type": "low_dimension_score",
+        "dimension_id": "reference_verification",
+        "finding_ids": [],
+        "message": "This check scores 3. Other dimensions do not cancel it."
+      },
+      {
+        "type": "assessment_gap",
+        "dimension_id": "reference_verification",
+        "finding_ids": [],
+        "message": "reference_check could not complete (TimeoutError); no positive or negative finding was inferred. Trial verifiability score under rubric 0.2-provisional-complete. Scoring gaps: reference extraction is incomplete; no reference items available."
+      },
+      {
+        "type": "low_dimension_score",
+        "dimension_id": "code_reproduction",
+        "finding_ids": [
+          "code_finding_summary"
+        ],
+        "message": "This check scores 4. Other dimensions do not cancel it."
+      }
+    ],
+    "limitations": [
+      "Claims, comparison evidence and judgments were generated by the selected model in this task lineage. Evidence anchors and quotations were checked against the parsed paper. These are paper-internal model judgments, not human-reviewed or external verification.",
+      "Page numbers, sections and table labels come from the parsed paper, not from the claim candidates.",
+      "Paper-internal evidence and external evidence are labelled separately by origin.",
+      "These are provisional trial verifiability scores, not approved or human-Gold assessments.",
+      "Coverage, failures and pending review remain unchanged even when numeric scores are shown.",
+      "Reference scores average extracted items; unextracted references do not create imaginary scored rows.",
+      "Categories use the unrounded total. Display precision must preserve the side of each threshold.",
+      "Code states use the delivered minimum: available code (7) plus independent success (9) stays 7."
+    ],
+    "coverage": [
+      {
+        "dimension_id": "claim_evidence",
+        "check_status": "partial",
+        "scope_complete": false,
+        "population": "selected_claims",
+        "inspected_count": 6,
+        "total_count": 6,
+        "completion_ratio": 1.0,
+        "extraction_coverage_ratio": null,
+        "outcomes": {
+          "unable_to_determine": 2,
+          "supported": 4
+        },
+        "confirmed_concern_count": 0,
+        "unresolved_count": 2,
+        "technical_failure_count": 0,
+        "fallback_rule_ids": [
+          "P_C_UNVERIFIABLE",
+          "P_C_SCOPE_FALLBACK"
+        ],
+        "limitations": [
+          "Only abstract and introduction were supplied; later body/tables/appendices are handled in stage 2.",
+          "Specific datasets, models, and metrics are not named in these sections, so claim conditions are left null where unstated.",
+          "Claim C3 source evidence failed validation: span E6 excluded: the quote for E6 was not found in arxiv_2310_01798v1_chunk_0003",
+          "Claim C3 excluded: no validated source quotes cover its statement.",
+          "Claim C1 evidence failed validation: span G1 excluded: the quote for G1 was not found in arxiv_2310_01798v1_chunk_0013",
+          "Claim C2 evidence failed validation: span G4 excluded: arxiv_2310_01798v1_chunk_0002 is in a 'introduction' section, which cannot serve as evidence here",
+          "Structured element extraction may be incomplete for: arxiv_2310_01798v1_table_1, arxiv_2310_01798v1_table_2, arxiv_2310_01798v1_table_3, arxiv_2310_01798v1_figure_1, arxiv_2310_01798v1_figure_2, arxiv_2310_01798v1_table_4, arxiv_2310_01798v1_table_5, arxiv_2310_01798v1_figure_3, arxiv_2310_01798v1_figure_4, arxiv_2310_01798v1_figure_5, arxiv_2310_01798v1_figure_6, arxiv_2310_01798v1_figure_7, arxiv_2310_01798v1_figure_8, arxiv_2310_01798v1_table_6.",
+          "Parser warning: TABLE_STRUCTURE_UNVERIFIED",
+          "Human review is pending for: C1, C2, C4, C5, C6, C7."
+        ]
+      },
+      {
+        "dimension_id": "reference_verification",
+        "check_status": "failed",
+        "scope_complete": false,
+        "population": "extracted_references",
+        "inspected_count": 0,
+        "total_count": 0,
+        "completion_ratio": null,
+        "extraction_coverage_ratio": null,
+        "outcomes": {},
+        "confirmed_concern_count": 0,
+        "unresolved_count": 0,
+        "technical_failure_count": 1,
+        "fallback_rule_ids": [
+          "P_R_NO_ITEMS_FALLBACK"
+        ],
+        "limitations": [
+          "reference_check could not complete (TimeoutError); no positive or negative finding was inferred."
+        ]
+      },
+      {
+        "dimension_id": "code_reproduction",
+        "check_status": "completed",
+        "scope_complete": false,
+        "population": "bounded_repository_search",
+        "inspected_count": 0,
+        "total_count": null,
+        "completion_ratio": null,
+        "extraction_coverage_ratio": null,
+        "outcomes": {},
+        "confirmed_concern_count": 0,
+        "unresolved_count": 0,
+        "technical_failure_count": 0,
+        "fallback_rule_ids": [],
+        "limitations": [
+          "No code was executed. Public reports are not system reproduction results.",
+          "Bounded check: at most 4 repositories, 4 official pages, 2 issue pages per repository, 20 issues per page and 2 comment pages per issue; 40 external requests per check.",
+          "Only GitHub repositories and public issues/comments are supported; GitHub Discussions is not checked.",
+          "Rule-based English feedback classification requires human review; conditions are not assumed equivalent.",
+          "Binary supplements are not parsed here; only supplied parsed supplement blocks and textual pages are checked."
+        ]
+      }
+    ],
+    "execution": {
+      "workers": 3,
+      "checks": {
+        "claim_check": {
+          "status": "partial",
+          "reused": false,
+          "elapsed_seconds": 100.4514
+        },
+        "reference_check": {
+          "status": "failed",
+          "reused": false,
+          "error": {
+            "code": "TimeoutError",
+            "retryable": false
+          },
+          "elapsed_seconds": 1317.5487
+        },
+        "code_check": {
+          "status": "completed",
+          "reused": false,
+          "elapsed_seconds": 120.879
+        }
+      }
+    },
+    "external_review": {
+      "mode": "prefetch",
+      "status": "not_needed",
+      "audit_ref": "snapshot:v1:89399439f0988e296a5b758761afaad8b83a6bbbbb13b21965169de354020b76",
+      "warnings": [],
+      "base_facts_reused": false
+    },
+    "reference_verification_summary": {
+      "verification_rate": null,
+      "denominator": "extracted_references",
+      "extracted_count": 0,
+      "matched_count": 0,
+      "unverified_count": 0,
+      "not_checked_count": 0,
+      "metadata_conflict_count": 0,
+      "extraction_complete": false,
+      "unresolved_items": []
+    },
+    "code_discovery": {
+      "status": "completed",
+      "reason": "Attempted 3 registered identity queries and read 3 candidate pages; 0 implementation candidates passed source-bound discovery validation. 16 registered URLs remain unread. This bounded search does not establish global code absence.",
+      "scope_complete": false,
+      "queries": [
+        {
+          "query_id": "discovery_query_1",
+          "provider": "deepseek_search",
+          "query": "\"2310.01798\" site:github.com",
+          "status": "completed",
+          "result_count": 5,
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "reason": "search_results"
+        },
+        {
+          "query_id": "discovery_query_2",
+          "provider": "deepseek_search",
+          "query": "\"Large Language Models Cannot Self-Correct Reasoning Yet\" site:github.com",
+          "status": "completed",
+          "result_count": 5,
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2"
+          ],
+          "reason": "search_results"
+        },
+        {
+          "query_id": "discovery_query_3",
+          "provider": "deepseek_search",
+          "query": "\"Large Language Models Cannot Self-Correct Reasoning Yet\" code",
+          "status": "completed",
+          "result_count": 5,
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "reason": "search_results"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "discovery_candidate_1",
+          "url": "https://arxiv.org/abs/2310.01798v1",
+          "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [],
+          "source_ids": [],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_2",
+          "url": "https://github.com/VerticalResearchGroup/Beyond-one-shot-prompts/blob/main/LLMs-in-Science.pdf?trk=article-ssr-frontend-pulse_little-text-block",
+          "title": "- [33] Jie Huang et al",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_1"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_3",
+          "url": "https://github.com/reda-baqechame/self-learning-24.7-agent/blob/ddb50c1469c9c3f0da80eb71b0f85b74f596c97f/repair.py",
+          "title": "self-learning-24.7-agent/repair.py at ddb50c1469c9c3f0da80eb71b0f85b74f596c97f · reda-baqechame/self-learning-24.7-agent · GitHub - !/usr/bin/env python3",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_1"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_4",
+          "url": "https://github.com/NousResearch/autoreason/raw/main/paper/autoreason.pdf",
+          "title": "Limitations",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_1"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_5",
+          "url": "https://github.com/reda-baqechame/self-learning-24.7-agent/blob/main/tests/test_repair.py",
+          "title": "self-learning-24.7-agent/tests/test_repair.py at main · reda-baqechame/self-learning-24.7-agent · GitHub - !/usr/bin/env python3",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_1"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_6",
+          "url": "https://github.com/davidamitchell/Research/blob/main/Research/completed/2026-05-18-rq4-2-adversarial-error-propagation.md",
+          "title": "Research/Research/completed/2026-05-18-rq4-2-adversarial-error-propagation.md at main · davidamitchell/Research - [inference] Corrupted perception state propagates into strategy selection, so later tool choices remain coherent relative to the...",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_1"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_1"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_7",
+          "url": "https://github.com/bcbeidel/toolkit/blob/2b19966eefe1ce7542e3b9a1dc0930f5940e6976/docs/research/llm-capabilities-limitations.md",
+          "title": "toolkit/docs/research/llm-capabilities-limitations.md at 2b19966eefe1ce7542e3b9a1dc0930f5940e6976 · bcbeidel/toolkit - Skip to content",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_8",
+          "url": "https://github.com/solatis/claude-config/blob/240e2598f5f005868dafd0c86a30bff6a0858365/skills/prompt-engineer/references/prompt-engineering-multi-turn.md",
+          "title": "claude-config/skills/prompt-engineer/references/prompt-engineering-multi-turn.md at 240e2598f5f005868dafd0c86a30bff6a0858365 · solatis/claude-config - Skip to content",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_9",
+          "url": "https://github.com/Wiktor-Potapczyk/agent-governance-research/blob/e4389151f629b933f7ec6f4e41a8a2198567371e/theories/perplexity-synthesis.md",
+          "title": "agent-governance-research/theories/perplexity-synthesis.md at e4389151f629b933f7ec6f4e41a8a2198567371e · Wiktor-Potapczyk/agent-governance-research",
+          "resource_kind": "reading_list",
+          "status": "rejected",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2",
+            "code_discovery_src_abdba443bc_6"
+          ],
+          "evidence_ids": [
+            "code_discovery_ev_abdba443bc_3"
+          ],
+          "reason": "Model-assisted discovery classification: Research synthesis document that uses Huang et al. as empirical evidence in a literature review and citation index; it contains no code or reproduction of this paper's experiments."
+        },
+        {
+          "candidate_id": "discovery_candidate_10",
+          "url": "https://github.com/openai/codex/issues/45100",
+          "title": "Possible failure mode in deep iterative reasoning: self-conditioning may reinforce an early interpretation instead of correcting it · Issue #45100 · openai/codex",
+          "resource_kind": "third_party_related",
+          "status": "rejected",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2",
+            "code_discovery_src_abdba443bc_5"
+          ],
+          "evidence_ids": [
+            "code_discovery_ev_abdba443bc_2"
+          ],
+          "reason": "Model-assisted discovery classification: openai/codex issue proposing a 'transient support concentration' hypothesis; it cites the paper only as related published research that reasoning depth is not monotonic, with no implementation of this paper's method."
+        },
+        {
+          "candidate_id": "discovery_candidate_11",
+          "url": "https://github.com/distributedstatemachine/awesome_test_time_llms",
+          "title": "GitHub - distributedstatemachine/awesome_test_time_llms · GitHub",
+          "resource_kind": "reading_list",
+          "status": "rejected",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_2",
+            "code_discovery_src_abdba443bc_4"
+          ],
+          "evidence_ids": [
+            "code_discovery_ev_abdba443bc_1"
+          ],
+          "reason": "Model-assisted discovery classification: Awesome Test-time Computing survey README; the paper appears only as a bibliography entry under 'Self-correction' with a 'paper' link and no code link, so it is a resource list rather than an implementation."
+        },
+        {
+          "candidate_id": "discovery_candidate_12",
+          "url": "https://ar5iv.labs.arxiv.org/html/2604.06066",
+          "title": "From Hallucination to Structure Snowballing: The Alignment Tax of Constrained Decoding in LLM Reflection",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_3"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_13",
+          "url": "https://www.linkedin.com/posts/dheerajpranav_the-self-correction-illusion-llms-correct-activity-7476991502422896640-Z775",
+          "title": "LLMs Cannot Self-Correct Reasoning Without External Truth | Dheeraj Pranav 发布的此话题相关的动态 | 领英",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_3"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_14",
+          "url": "https://pure.au.dk/portal/en/publications/reconciling-divergent-views-through-a-critical-analysis-of-iterat/",
+          "title": "Reconciling Divergent Views Through a Critical Analysis of Iterative Self-Improvement in LLMs",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_3"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_15",
+          "url": "https://ar5iv.labs.arxiv.org/html/2510.18254",
+          "title": "Illusions of reflection: open-ended task reveals systematic failures in Large Language Models’ reflective reasoning",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_3"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_16",
+          "url": "https://www.163.com/dy/article/IKICO3U10511AQHO.html?f=post2020_dy_recommends",
+          "title": "谷歌：LLM找不到推理错误，但能纠正它 - 谷歌：LLM找不到推理错误，但能纠正它",
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_3"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_3"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_17",
+          "url": "https://github.com/wind342/gfg-training-learning-inference-experiments",
+          "title": null,
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_5"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_18",
+          "url": "https://doi.org/10.5281/zenodo.22032772",
+          "title": null,
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_5"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        },
+        {
+          "candidate_id": "discovery_candidate_19",
+          "url": "https://openreview.net/forum?id=IkmD3fKBPQ",
+          "title": null,
+          "resource_kind": "undetermined",
+          "status": "candidate",
+          "repository_id": null,
+          "query_ids": [
+            "discovery_query_2"
+          ],
+          "source_ids": [
+            "code_discovery_src_abdba443bc_5"
+          ],
+          "evidence_ids": [],
+          "reason": "Discovered URL only; implementation relationship has not been verified."
+        }
+      ],
+      "budget": {
+        "max_queries": 3,
+        "queries_used": 3,
+        "max_candidates": 20,
+        "candidates_inspected": 3,
+        "max_source_reads": 7,
+        "source_reads_used": 6,
+        "max_model_rounds": 4,
+        "model_rounds_used": 3,
+        "max_tool_calls": 8,
+        "tool_calls_used": 4
+      },
+      "limitations": [],
+      "audit_ref": "snapshot:v1:0493d18f3328b721b8ddf81f9b3ce1f81099e5b410b041945a9def32d918d772"
+    }
+  },
+  "warnings": [
+    {
+      "code": "human_review_pending",
+      "message": "At least one claim finding has not been human-reviewed yet.",
+      "dimension_id": "claim_evidence"
+    },
+    {
+      "code": "provisional_rubric",
+      "message": "Trial scores use the benchmark rubric 0.2-provisional-complete. Unresolved checks or technical failures can receive low-verifiability scores; this does not establish false citations, wrong results or misconduct.",
+      "dimension_id": null
+    }
+  ],
+  "error": null
+}

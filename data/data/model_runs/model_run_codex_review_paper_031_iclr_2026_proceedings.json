@@ -1,0 +1,194 @@
+{
+  "model_run_id": "model_run_codex_review_paper_031_iclr_2026_proceedings",
+  "paper_id": "paper_031",
+  "version": "iclr_2026_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "fa4664544af40275641a15bae6cdbb2aa872ae0237f1ba0a6091d2d34d509a73",
+  "raw_output": {
+    "paper_summary": "Although agents based on multimodal large language models (MLLMs) demonstrate proficiency in general short-term graphical user interface (GUI) tasks, their robustness remains a significant challenge for handling complex long-horizon tasks in dynamic environments . In response, the LongHorizonUI framework is proposed to improve the sustained reliability of agents in long-horizon GUI tasks. To overcome core limitations, we establish a comprehensive long-horizon benchmark, LongGUIBench, covering multiple categories of games and complex general applications, with long-horizon tasks defined as requiring more than 15 steps for rigorous evaluation o",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《LongHorizonUI: A Unified Framework for Robust long-horizon Task Automation of GUI Agent》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：While multimodal large language models (MLLMs) have shown promise in short-horizon GUI agents, their performance degrades significantly on longhorizon tasks involving complex, dynamic interfaces. To address this, we present LongHorizonUI, a framework designed ",
+      "论文提供方法或实证支持：Long-horizon Reasoning Capability. To systematically evaluate long-horizon reasoning capabilities, we conducted extensive experiments comparing LongHorizonUI with state-of-the-art methods on our proposed LongGUIBench benchmark, which features long-horizon task"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：While multimodal large language models (MLLMs) have shown promise in short-horizon GUI agents, their performance degrades significantly on longhorizon tasks involving complex, dynamic interfaces. To address this, we present LongHorizonUI, a framework designed ；边界证据为：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h",
+        "strengths": [
+          "可定位正文支持：While multimodal large language models (MLLMs) have shown promise in short-horizon GUI agents, their performance degrades significantly on longhorizon tasks involving complex, dynamic interfaces. To address this, we present LongHorizonUI, a framework designed "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：Long-horizon Reasoning Capability. To systematically evaluate long-horizon reasoning capabilities, we conducted extensive experiments comparing LongHorizonUI with state-of-the-art methods on our proposed LongGUIBench benchmark, which features long-horizon task；边界证据为：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h",
+        "strengths": [
+          "可定位正文支持：Long-horizon Reasoning Capability. To systematically evaluate long-horizon reasoning capabilities, we conducted extensive experiments comparing LongHorizonUI with state-of-the-art methods on our proposed LongGUIBench benchmark, which features long-horizon task"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0013"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：Multimodal Large Language Models. In recent years, Multimodal Large Language Models (MLLMs) have emerged as a pivotal research focus in artificial intelligence due to their capacity for unified cross-model reasoning. Built upon conventional Large Language Mode；边界证据为：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h",
+        "strengths": [
+          "可定位正文支持：Multimodal Large Language Models. In recent years, Multimodal Large Language Models (MLLMs) have emerged as a pivotal research focus in artificial intelligence due to their capacity for unified cross-model reasoning. Built upon conventional Large Language Mode"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0024"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：In this section, as outlined in Figure 3, we introduce LongHorizonUI, a framework dedicated to long-horizon reasoning for GUI agents. Building upon the LongGUIBench benchmark spanning complex games and general application workflows, our approach integrates thr；边界证据为：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h",
+        "strengths": [
+          "可定位正文支持：In this section, as outlined in Figure 3, we introduce LongHorizonUI, a framework dedicated to long-horizon reasoning for GUI agents. Building upon the LongGUIBench benchmark spanning complex games and general application workflows, our approach integrates thr"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0004"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：To ensure fair evaluation across benchmarks, we select base models aligned with their architectures and configure consistent experimental settings. For LongHorizonBench, we adopt a representative MLLMs (Comanici et al., 2025) as the backbone to ensure stable r；边界证据为：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h",
+        "strengths": [
+          "可定位正文支持：To ensure fair evaluation across benchmarks, we select base models aligned with their architectures and configure consistent experimental settings. For LongHorizonBench, we adopt a representative MLLMs (Comanici et al., 2025) as the backbone to ensure stable r"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：The pursuit of robust long-horizon GUI agents necessitates addressing two critical challenges: adaptive long-horizon modeling and dynamic interrupt handling (e.g., pop-ups). For extended task sequences, future work could integrate reinforcement learning with h"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0011"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到code_availability披露。",
+        "chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0001"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0003"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确hyperparameters披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0026"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0007"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "Although agents based on multimodal large language models (MLLMs) demonstrate proficiency in general short-term graphical user interface (GUI) tasks, their robustness remains a significant challenge for handling complex long-horizon tasks in dynamic environments . In response, the LongHorizonUI framework is proposed to improve the sustained reliability of agents in long-horizon GUI tasks. To overcome core limitations, we establish a comprehensive long-horizon benchmark, LongGUIBench, covering multiple categories of games and complex general applications, with long-horizon tasks defined as requiring more than 15 steps for rigorous evaluation o",
+        "type": "method_or_finding",
+        "chunk_id": "paper_031_iclr_2026_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "While multimodal large language models (MLLMs) have shown promise in short-horizon GUI agents, their performance degrades significantly on longhorizon tasks involving complex, dynamic interfaces. To address this, we present LongHorizonUI, a framework designed to enhance the reliability and robustness of MLLM-based agents in extended interactive environments. Moreover, we establish a new long-horizon benchmark, named ",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0013"
+        ],
+        "limiting_chunk_ids": [
+          "paper_031_iclr_2026_proceedings_chunk_0039"
+        ]
+      }
+    ]
+  }
+}

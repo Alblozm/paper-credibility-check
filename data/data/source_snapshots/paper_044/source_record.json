@@ -1,0 +1,38 @@
+{
+  "paper_id": "paper_044",
+  "paper_version_id": "paper_044_iclr_2026_proceedings",
+  "title": "Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning",
+  "authors": [
+    "Wahdany, Dariush",
+    "Jagielski, Matthew",
+    "Dziedzic, Adam",
+    "Boenisch, Franziska"
+  ],
+  "abstract": "In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines can still leak private information. Specifically, we introduce novel attacks against popular curation methods, targeting every major step: the computation of curation scores, the selection of the curated subset, and the final trained model. We demonstrate that each stage reveals information about the private dataset and that even models trained exclusively on curated public data leak membership information about the private data that guided curation. These findings highlight the previously overlooked inherent privacy risks of data curation and show that privacy assessment must extend beyond the training procedure to include the data selection process. Our differentially private adaptations of curation methods effectively mitigate leakage, indicating that formal privacy guarantees for curation are a promising direction.",
+  "language": "en",
+  "source_type": "pdf",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/bf11e0bb868b6735afcdb35ff39ea831-Paper-Conference.pdf",
+  "tags": [
+    "iclr_2026",
+    "official_proceedings",
+    "recent_holdout",
+    "privacy"
+  ],
+  "venue": "ICLR",
+  "publication_year": 2026,
+  "dataset_split": "test",
+  "decision": "Accept (proceedings)",
+  "decision_verified": true,
+  "landing_page_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bf11e0bb868b6735afcdb35ff39ea831-Abstract-Conference.html",
+  "retrieved_at": "2026-09-08T08:23:30Z",
+  "pdf_sha256": "2934a7f12a865d9a6dbbfc566ef143f813d2d95bca75347abfccca7926ef89c0",
+  "pdf_sha256_status": "verified",
+  "page_count": 42,
+  "page_count_status": "verified",
+  "local_pdf_path": "data/raw_pdfs/paper_044/bf11e0bb868b6735afcdb35ff39ea831-Paper-Conference.pdf",
+  "parse_status": "completed",
+  "data_status": "parsed",
+  "storage_policy": "PDF excluded from Git; use private object storage in production.",
+  "assessment_scope": "Paper-internal evidence only; external reviews and decisions excluded.",
+  "parse_quality": "good"
+}

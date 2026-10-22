@@ -1,0 +1,389 @@
+{
+  "assessment_id": "assessment_ai_paper_050_iclr_2025_proceedings",
+  "paper_version_id": "paper_050_iclr_2025_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_050_iclr_2025_proceedings",
+    "raw_output_sha256": "f21f8c81fd1e8ae0ba6c036370e53642394e543b245ba02ca1e6750b646a7fed"
+  },
+  "paper_summary": "In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) can also learn in-context. Moreover, MLPs, and the closely related MLP-Mixer models, learn in-context comparably with Transformers under the same compute budget in this setting. We further show that MLPs outperform Transformers on a series of classical tasks from psychology designed to test relational reasoning, which are closely related to in-context classification. These results unders",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) can also learn in-context. Moreover, MLPs, and the closely related MLP-Mixer models, learn in-context comparably with Transformers under the same compute budget in this setting. We further show that MLPs outperform Transformers on a series of classical tasks from psychology designed to test relational reasoning, which are closely related to in-context classification. These results unders",
+      "type": "method_or_finding",
+      "evidence_id": "paper_050_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) can also learn in-context. Moreover, MLPs, and the closely related MLP-Mixer models, learn in-context comparably with Transformers under the same compute budget",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_050_ev_003",
+        "paper_050_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.8,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《MLPs Learn In-Context on Regression and Classification Tasks》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) ",
+    "论文提供方法或实证支持：We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification."
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) ；边界证据为：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a",
+      "strengths": [
+        "可定位正文支持：In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+      "evidence_ids": [
+        "paper_050_ev_001",
+        "paper_050_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification.；边界证据为：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a",
+      "strengths": [
+        "可定位正文支持：We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification."
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_050_ev_003",
+        "paper_050_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：In-context learning has been widely studied in a number of controlled settings. In particular, ICL has been reproduced for linear regression, where a Transformer trained to perform the task can extrapolate to novel input/label pairs provided in-context (Garg e；边界证据为：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a",
+      "strengths": [
+        "可定位正文支持：In-context learning has been widely studied in a number of controlled settings. In particular, ICL has been reproduced for linear regression, where a Transformer trained to perform the task can extrapolate to novel input/label pairs provided in-context (Garg e"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_050_ev_004",
+        "paper_050_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：The last few years have witnessed meteoric progress in neural language models. Catalyzed by the Transformer architecture and driven by a steady increase in scale, these aptly-named Large Language Models (LLMs) demonstrate unprecedented competence in drafting g；边界证据为：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a",
+      "strengths": [
+        "可定位正文支持：The last few years have witnessed meteoric progress in neural language models. Catalyzed by the Transformer architecture and driven by a steady increase in scale, these aptly-named Large Language Models (LLMs) demonstrate unprecedented competence in drafting g"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_050_ev_005",
+        "paper_050_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification.；边界证据为：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a",
+      "strengths": [
+        "可定位正文支持：We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification."
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the a"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+      "evidence_ids": [
+        "paper_050_ev_003",
+        "paper_050_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_050_ev_001",
+      "page_number": 1,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "In-context learning (ICL), the remarkable ability to solve a task from only input exemplars, is often assumed to be a unique hallmark of Transformer models. By examining commonly employed synthetic ICL tasks, we demonstrate that multi-layer perceptrons (MLPs) can also learn in-context. Moreover, MLPs, and the closely related MLP-Mixer models, learn in-context comparably with Transformers under the same compute budget in this setting. We further show that MLPs outperform Transformers on a series of classical tasks from psychology designed to test relational reasoning, which are closely related to in-context classification. These results underscore a need for studying in-context learning beyond attention-based architectures, while also challenging prior arguments against MLPs’ ability to solve relational tasks. Altogether, our results highlight the unexpected competence of MLPs in a synthe",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "page_number": 9,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "We observed that MLPs can learn in-context and moreover, perform at a level comparable to Transformers on in-context tasks. We also examined relational reasoning tasks, closely related to ICL classification, which have historically been considered beyond the ability of simple neural architectures like MLPs (Alhama and Zuidema, 2019; Marcus, 1998; Boix-Adsera et al., 2023). Surprisingly, MLPs learn these relational tasks well — and exhibit both better compute efficiency and generalization performance than Transformers. This observation diverges from earlier claims (Boix-Adsera et al., 2023; Webb et al., 2023), but is consistent with the emerging realization that, given sufficient data diversity and compute, an MLP can indeed learn to reason relationally (Geiger et al., 2023). We discuss our relationship with prior work in relational reasoning further in Appendix A.\n\nBroadly, our work is c",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_003",
+      "page_number": 3,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "We begin by exploring MLPs’ behavior in a controlled ICL format, where their specific capacities and weaknesses can be precisely characterized. Specifically, we examine two tasks: in-context regression and in-context classification.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_004",
+      "page_number": 2,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_1_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "In-context learning has been widely studied in a number of controlled settings. In particular, ICL has been reproduced for linear regression, where a Transformer trained to perform the task can extrapolate to novel input/label pairs provided in-context (Garg et al., 2022; Akyürek et al., 2024; Raventós et al., 2024; Wu et al., 2024; Bai et al., 2024; Li et al., 2023; Lu et al., 2024). Proposed mechanisms whereby a Transformer accomplishes the feat include that the Transformer implements some form of gradient descent (Von Oswald et al., 2023; Akyürek et al., 2024) or recapitulates least-squares or Ridge regression (Zhang et al., 2023; Akyürek et al., 2024; Lu et al., 2024). It has also been observed that a Transformer interpolates between in-weight learning (IWL), the traditional paradigm where the model learns specific examples through training, to in-context learning, where the model us",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_005",
+      "page_number": 1,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "The last few years have witnessed meteoric progress in neural language models. Catalyzed by the Transformer architecture and driven by a steady increase in scale, these aptly-named Large Language Models (LLMs) demonstrate unprecedented competence in drafting grammatical text, answering questions, summarizing content, generating creative output, and even reasoning through non-trivial puzzles (Bubeck et al., 2023; Brown et al., 2020; Achiam et al., 2023).\n\nCrucial to an LLM’s proficiency is its ability to learn in-context (Lu et al., 2023; Dong et al., 2022; Brown et al., 2020). In-context learning (ICL) refers to a task paradigm where exemplars from a novel task are presented during inference time rather than during training (Figure 1a). The model must then respond correctly to a query based only on these novel exemplars. No weight updates occur throughout this process; rather, the model ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_006",
+      "page_number": 12,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_references",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "Jerry A Fodor and Zenon W Pylyshyn. Connectionism and cognitive architecture: A critical analysis. Cognition , 28(1-2):3–71, 1988.\n\nPeter W Battaglia, Jessica B Hamrick, Victor Bapst, Alvaro Sanchez-Gonzalez, Vinicius Zambaldi, Mateusz Malinowski, Andrea Tacchetti, David Raposo, Adam Santoro, Ryan Faulkner, et al. Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261 , 2018.\n\nAndrew Y Ng. Feature selection, l 1 vs. l 2 regularization, and rotational invariance. In Proceedings of the twenty-first international conference on Machine learning , page 78, 2004.\n\nTomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 , 2013.\n\nGrigory Khromov and Sidak Pal Singh. Some intriguing aspects about lipschitz continuity of neural networks. arXiv preprint arXiv:2302.1",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_007",
+      "page_number": 17,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_a_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0026",
+      "evidence_mode": "quote",
+      "excerpt": "We now demonstrate empirically that a vanilla MLP trained with gradient descent will discover a solution that generalizes to unseen symbols. While the tasks we explore in Section 3 already indicate that MLPs solve relational tasks, to address any remaining doubt, we pursue an ostensibly impossible task as specified in Boix-Adsera et al. (2023). In particular, we examine the same-different task. As noted in Appendix A.1, the same-different task consists of two templates, z = αα and z = αβ , 1 2 with labels f ∗ ( αα ) = 1 and f ∗ ( αβ ) = 0 . Following Boix-Adsera et al. (2023), we consider input strings x = x x ∈ X 2 that are one-hot encoded before being passed through a randomly-initialized 1 2 embedding matrix. As previously discussed, this embedding enables the model to circumvent the impossibility result (Theorem A.1) from Boix-Adsera et al. (2023). The remainder of our model is exact",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_008",
+      "page_number": 24,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_c_13",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0045",
+      "evidence_mode": "quote",
+      "excerpt": "To measure the number of floating point operations (FLOPs) used to train a model, we use Jax’s cost analysis routines. Specifically, we compute the total number of FLOPs required to perform a single step of gradient descent, then multiply this quantity by the total number of gradient steps used to train the model. All experiment were run on the Harvard FASRC research cluster. CPU requirements are negligible compared to GPU time, so they are omitted. All experiments required no more than 16 GB of RAM. The per-experiment GPU time on an A100 to generate the above figures are estimated at\n\n• ICL regression : 1500 GPU hours • ICL classification : 500 GPU hours • Simple regression : 50 GPU hours • Simple classification : 50 GPU hours • Match-to-sample : 10 GPU hours • Sphere oddball : 10 GPU hours • Line oddball : 10 GPU hours\n\nThe total GPU time is therefore roughly 2130 GPU hours. The comput",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_050_ev_009",
+      "page_number": 20,
+      "section_id": "paper_050_iclr_2025_proceedings_sec_c_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_050_iclr_2025_proceedings_chunk_0035",
+      "evidence_mode": "quote",
+      "excerpt": "The MLP-Mixer accepts inputs X ∈ R L × D (length by token depth). If a task does not provide tokenized inputs, we assume D = 1 unless otherwise stated, and reshape accordingly. A model with ℓ hidden layers then proceeds as follows: ⊺ h ( X ) = ϕ ( Z ( b + XW ) + c ) 1 1 1 1 1 ⊺ h ( X ) = ϕ ( Z ( b + h ( X ) W ) + c ) 2 2 2 1 2 2 . . . ⊺ h ( X ) = ϕ ( Z ( b + h ( X ) W ) + c ) ℓ ℓ ℓ ℓ − 1 ℓ ℓ f ( X ) = W h ( X ) ( − 1) + b MIX out ℓ out\n\nThe matrices W mix within token dimensions, and share a fixed hidden width H , so W ∈ R H × H i for 1 < i < ℓ . The matrices Z mix across spatial dimensions, and share a fixed channel width C , so Z ∈ R C × C for 1 < i < ℓ . The bias vectors b and c are assumed to broadcast over unit dimensions i as expected. The index − 1 in h ( X ) ( − 1) refers to taking the last token in the layer, producing an ℓ output vector with length H . We again use point-wise R",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_050_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_050_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_050_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_050_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_050_ev_003",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_050_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_050_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_050_ev_004"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_050_ev_007"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+      "evidence_ids": [
+        "paper_050_ev_008"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_050_ev_009"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

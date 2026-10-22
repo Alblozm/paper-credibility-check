@@ -1,0 +1,1169 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-89f0ba5019c8f5ef",
+  "paper_version_id": "paper_023_openreview_2024_02_11",
+  "pdf_sha256": "9aa2ff29011659db26bfda017794989707c64efd43a28c84618450c5d1fa9d57",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "38f50cebbc92cd2ddff44c5f5a79e311b13047657dba60398b0cc4d54ab56825",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.676470588235294,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 6.029411764705882,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 34,
+        "extracted_count": 34,
+        "parsed_count": 32,
+        "queried_count": 32,
+        "matched_count": 14,
+        "metadata_conflict_count": 0,
+        "unverified_count": 5,
+        "parse_failed_count": 2,
+        "not_checked_count": 0,
+        "query_failed_count": 13,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=kKRbAY4CXv",
+            "checked_at": "2026-10-09T04:47:03.962775Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Advanced mathematical methods for scientists and engineers I: Asymptotic methods and perturbation theory , volume 1",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Advanced+mathematical+methods+for+scientists+and+engineers+I%3A+Asymptotic+methods+and+perturbation+theory+%2C+volume+1&rows=5",
+        "checked_at": "2026-10-09T04:46:51.617376Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:51.617305Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Advanced+mathematical+methods+for+scientists+and+engineers+I%3A+Asymptotic+methods+and+perturbation+theory+%2C+volume+1&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:51.617376Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Approximationbysuperpositionsofasigmoidalfunction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Approximationbysuperpositionsofasigmoidalfunction&rows=5",
+        "checked_at": "2026-10-09T04:46:51.619468Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:51.619422Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Approximationbysuperpositionsofasigmoidalfunction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:51.619468Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-7",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Convergence rate analysis for deep ritz method",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Convergence+rate+analysis+for+deep+ritz+method&rows=5",
+        "checked_at": "2026-10-09T04:46:52.786204Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:52.786158Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Convergence+rate+analysis+for+deep+ritz+method&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:52.786204Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-8",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The barron space and the flow-induced function spaces for neural network models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+barron+space+and+the+flow-induced+function+spaces+for+neural+network+models&rows=5",
+        "checked_at": "2026-10-09T04:46:53.537769Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:53.537711Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+barron+space+and+the+flow-induced+function+spaces+for+neural+network+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:53.537769Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-11",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Solving high-dimensional partial differential equations using deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Solving+high-dimensional+partial+differential+equations+using+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:54.551042Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:54.550987Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Solving+high-dimensional+partial+differential+equations+using+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:54.551042Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-12",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A rate of convergence of physics informed neural networks for the linear second order elliptic pdes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+rate+of+convergence+of+physics+informed+neural+networks+for+the+linear+second+order+elliptic+pdes&rows=5",
+        "checked_at": "2026-10-09T04:46:54.800576Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:54.800498Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+rate+of+convergence+of+physics+informed+neural+networks+for+the+linear+second+order+elliptic+pdes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:54.800576Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Foundations of potential theory , volume 31",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Foundations+of+potential+theory+%2C+volume+31&rows=5",
+        "checked_at": "2026-10-09T04:46:54.772566Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Foundations of Potential Theory",
+            "authors": [
+              "Yanushauskas"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1007/978-1-4684-1674-9_1",
+            "source_url": "https://doi.org/10.1007/978-1-4684-1674-9_1",
+            "title_similarity": 0.8611111111111112
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Author Index to Volume 31",
+            "authors": [],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1023/a:1017453211350",
+            "source_url": "https://doi.org/10.1023/a:1017453211350",
+            "title_similarity": 0.5151515151515151
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Potential",
+            "authors": [
+              "Kellogg"
+            ],
+            "year": 1929,
+            "years": [
+              1929
+            ],
+            "doi": "10.1007/978-3-642-90850-7_3",
+            "source_url": "https://doi.org/10.1007/978-3-642-90850-7_3",
+            "title_similarity": 0.4074074074074074
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The Potential",
+            "authors": [
+              "Kellogg"
+            ],
+            "year": 1967,
+            "years": [
+              1967
+            ],
+            "doi": "10.1007/978-3-642-86748-4_3",
+            "source_url": "https://doi.org/10.1007/978-3-642-86748-4_3",
+            "title_similarity": 0.4074074074074074
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Foundations of Potential Theory",
+            "authors": [
+              "Kellogg"
+            ],
+            "year": 1967,
+            "years": [
+              1967
+            ],
+            "doi": "10.1007/978-3-642-86748-4",
+            "source_url": "https://doi.org/10.1007/978-3-642-86748-4",
+            "title_similarity": 0.8611111111111112
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:54.771490Z",
+        "response_sha256": "5656906add801bc0dc035e08d5ceb29f10efee5d073d1dc271ef11f3a8aa6510",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Foundations+of+potential+theory+%2C+volume+31&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:54.772566Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fourier neural operator for parametric partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fourier+neural+operator+for+parametric+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:46:55.290259Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "D-Fno: A Decomposed Fourier Neural Operator for Large-Scale Parametric Partial Differential Equations",
+            "authors": [
+              "Li",
+              "Ye"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4944664",
+            "source_url": "https://doi.org/10.2139/ssrn.4944664",
+            "title_similarity": 0.8165680473372781
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph-informed Neural Operator for Parametric Partial Differential Equations",
+            "authors": [
+              "Ma"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5417024",
+            "source_url": "https://doi.org/10.2139/ssrn.5417024",
+            "title_similarity": 0.9103448275862069
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Multi-Fno: A Multi-Level Fourier Neural Operator for Parametric Partial Differential Equations",
+            "authors": [
+              "Gu",
+              "Zhang",
+              "Kang",
+              "Liu",
+              "He",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5228052",
+            "source_url": "https://doi.org/10.2139/ssrn.5228052",
+            "title_similarity": 0.8518518518518519
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "XFNO: Extended Fourier neural operator for solving parametric partial differential equations on general geometries",
+            "authors": [
+              "Sheng",
+              "Xie",
+              "Yang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.cpc.2025.109774",
+            "source_url": "https://doi.org/10.1016/j.cpc.2025.109774",
+            "title_similarity": 0.7582417582417582
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Continuous–Variable Quantum Fourier Neural Operator for Solving Partial Differential Equations",
+            "authors": [
+              "Marcandelli",
+              "Mariani",
+              "Siena",
+              "Markidis"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.20944/preprints202605.1199.v1",
+            "source_url": "https://doi.org/10.20944/preprints202605.1199.v1",
+            "title_similarity": 0.7361963190184049
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:55.288576Z",
+        "response_sha256": "0813d41dfb6794b4e3cd07fa4fcdc7986131b70898d7462ab1ea417e48d0d174",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fourier+neural+operator+for+parametric+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:55.290259Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-16",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-17",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-19",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Machine learning for elliptic PDEs: Fast rate generalization bound, neural scaling law and minimax optimality",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Machine+learning+for+elliptic+PDEs%3A+Fast+rate+generalization+bound%2C+neural+scaling+law+and+minimax+optimality&rows=5",
+        "checked_at": "2026-10-09T04:46:57.748446Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:57.748374Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Machine+learning+for+elliptic+PDEs%3A+Fast+rate+generalization+bound%2C+neural+scaling+law+and+minimax+optimality&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:57.748446Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mim: A deep mixed residual method for solving high-order partial differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mim%3A+A+deep+mixed+residual+method+for+solving+high-order+partial+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:46:57.618915Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:57.618852Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mim%3A+A+deep+mixed+residual+method+for+solving+high-order+partial+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:57.618915Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-21",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Numerical solutions of a system of odes based on lie-trotter and strang operator-splitting methods",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Numerical+solutions+of+a+system+of+odes+based+on+lie-trotter+and+strang+operator-splitting+methods&rows=5",
+        "checked_at": "2026-10-09T04:46:58.087530Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:58.087475Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Numerical+solutions+of+a+system+of+odes+based+on+lie-trotter+and+strang+operator-splitting+methods&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:58.087530Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Numericalsolutionofaphasefieldmodelforincompressibletwo-phase flows based on artificial compressibility",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Numericalsolutionofaphasefieldmodelforincompressibletwo-phase+flows+based+on+artificial+compressibility&rows=5",
+        "checked_at": "2026-10-09T04:46:58.937590Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Solving low-Mach two-phase flows in closed domains : from pressure centering to a novel artificial compressibility method",
+            "authors": [
+              "Phan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/641f03d5zfcc7z4a20z9679z6271c98dc427",
+            "source_url": "https://doi.org/10.70675/641f03d5zfcc7z4a20z9679z6271c98dc427",
+            "title_similarity": 0.4954954954954955
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Numerical solution of a phase field model for incompressible two-phase flows based on artificial compressibility",
+            "authors": [
+              "Shah",
+              "Yuan"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1016/j.compfluid.2010.10.021",
+            "source_url": "https://doi.org/10.1016/j.compfluid.2010.10.021",
+            "title_similarity": 0.958139534883721
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "An Artificial Compressibility Solver for Parallel Simulation of Incompressible Two-Phase Flows",
+            "authors": [
+              "Morinishi",
+              "Satofuka"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1016/b978-044482851-4.50038-4",
+            "source_url": "https://doi.org/10.1016/b978-044482851-4.50038-4",
+            "title_similarity": 0.29441624365482233
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "An artificial compressibility solver for parallel simulation of incompressible two-phase flows",
+            "authors": [
+              "MORINISHI",
+              "SATOFUKA"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1016/b978-044482851-4/50038-4",
+            "source_url": "https://doi.org/10.1016/b978-044482851-4/50038-4",
+            "title_similarity": 0.29441624365482233
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Numerical Study of Compressible and Weak Compressible Flows in Channel Based on Artificial Compressibility Method and Fully Artificial Compressibility Method",
+            "authors": [
+              "Mohammed",
+              "Al-Muslimawi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.24996/ijs.2023.64.3.27",
+            "source_url": "https://doi.org/10.24996/ijs.2023.64.3.27",
+            "title_similarity": 0.5538461538461539
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:58.935227Z",
+        "response_sha256": "182c16f5cc7f0ca015e197bf305cfa5218a917dc70783597ccba9d772938ec27",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Numericalsolutionofaphasefieldmodelforincompressibletwo-phase+flows+based+on+artificial+compressibility&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:58.937590Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep network approximation: Achieving arbitrary accuracy with fixed number of neurons",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+network+approximation%3A+Achieving+arbitrary+accuracy+with+fixed+number+of+neurons&rows=5",
+        "checked_at": "2026-10-09T04:46:59.039301Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep Network Approximation Characterized by Number of Neurons",
+            "authors": [
+              "Shen",
+              "Yang",
+              "Zhang"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.4208/cicp.oa-2020-0149",
+            "source_url": "https://doi.org/10.4208/cicp.oa-2020-0149",
+            "title_similarity": 0.7448275862068966
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On improvements of neural network accuracy with fixed number of active neurons",
+            "authors": [
+              "Sokolova",
+              "Nikolaev",
+              "Polevoy"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1117/12.2180943",
+            "source_url": "https://doi.org/10.1117/12.2180943",
+            "title_similarity": 0.5925925925925926
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Bispectral dual Hahn polynomials with an arbitrary number of continuous parameters",
+            "authors": [
+              "Durán"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.jat.2022.105811",
+            "source_url": "https://doi.org/10.1016/j.jat.2022.105811",
+            "title_similarity": 0.37349397590361444
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Method to design a neural network with minimal number of neurons for approximation problems",
+            "authors": [
+              "Ruppert",
+              "Krug",
+              "Shardt"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.ifacol.2022.07.504",
+            "source_url": "https://doi.org/10.1016/j.ifacol.2022.07.504",
+            "title_similarity": 0.4114285714285714
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The network approximation theorem for an infinite number of bodies",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1017/cbo9781139235952.006",
+            "source_url": "https://doi.org/10.1017/cbo9781139235952.006",
+            "title_similarity": 0.5733333333333334
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:59.031757Z",
+        "response_sha256": "4fd36bd43f25e041eba9824f4daa6d8c05e8e45358454e5e625567e010a80d57",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+network+approximation%3A+Achieving+arbitrary+accuracy+with+fixed+number+of+neurons&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:59.039301Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Green’s function of the screened poisson’s equation on the sphere, 2019.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Green%E2%80%99s+function+of+the+screened+poisson%E2%80%99s+equation+on+the+sphere%2C+2019.&rows=5",
+        "checked_at": "2026-10-09T04:47:00.440109Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Poisson’s Equation and Green’s Functions",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1017/9781108691536.013",
+            "source_url": "https://doi.org/10.1017/9781108691536.013",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Green’s Function Integral Equation Methods in Nano-Optics",
+            "authors": [
+              "Søndergaard"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1201/9781351260206",
+            "source_url": "https://doi.org/10.1201/9781351260206",
+            "title_similarity": 0.5511811023622047
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Calculation of Green’s Function for Poisson’s Equation in Plane Polar Coordinates using Eigenfunction Expansion in the Angular Variable",
+            "authors": [
+              "Couto"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.5540/03.2023.010.01.0029",
+            "source_url": "https://doi.org/10.5540/03.2023.010.01.0029",
+            "title_similarity": 0.4585365853658537
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Introduction",
+            "authors": [
+              "Søndergaard"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1201/9781351260206-1",
+            "source_url": "https://doi.org/10.1201/9781351260206-1",
+            "title_similarity": 0.17073170731707318
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Theoretical foundation",
+            "authors": [
+              "Søndergaard"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1201/9781351260206-2",
+            "source_url": "https://doi.org/10.1201/9781351260206-2",
+            "title_similarity": 0.2608695652173913
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:00.438633Z",
+        "response_sha256": "3ca667659724bd8bc1f6cea8c869513ff09efd0c5fe868a796a7022242f9f425",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Green%E2%80%99s+function+of+the+screened+poisson%E2%80%99s+equation+on+the+sphere%2C+2019.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:00.440109Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Alocaldeeplearningmethodforsolvinghighorderpartialdifferential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Alocaldeeplearningmethodforsolvinghighorderpartialdifferential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:01.755955Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:01.755890Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Alocaldeeplearningmethodforsolvinghighorderpartialdifferential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:01.755955Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-29",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Linear, first and second-order, unconditionally energy stable numerical schemes for the phase field model of homopolymer blends",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Linear%2C+first+and+second-order%2C+unconditionally+energy+stable+numerical+schemes+for+the+phase+field+model+of+homopolymer+blends&rows=5",
+        "checked_at": "2026-10-09T04:47:01.877263Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:01.877192Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Linear%2C+first+and+second-order%2C+unconditionally+energy+stable+numerical+schemes+for+the+phase+field+model+of+homopolymer+blends&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:01.877263Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-30",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Operator splitting methods for differential equations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Operator+splitting+methods+for+differential+equations&rows=5",
+        "checked_at": "2026-10-09T04:47:02.003262Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:02.003075Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Operator+splitting+methods+for+differential+equations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:02.003262Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_023_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_023_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_023_openreview_2024_02_11_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The deep ritz method: a deep learning-based numerical algorithm for solving variational problems",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+deep+ritz+method%3A+a+deep+learning-based+numerical+algorithm+for+solving+variational+problems&rows=5",
+        "checked_at": "2026-10-09T04:47:02.012754Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:47:02.012682Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+deep+ritz+method%3A+a+deep+learning-based+numerical+algorithm+for+solving+variational+problems&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:47:02.012754Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 34,
+    "extracted_count": 34,
+    "parsed_count": 32,
+    "queried_count": 32,
+    "matched_count": 14,
+    "metadata_conflict_count": 0,
+    "unverified_count": 5,
+    "parse_failed_count": 2,
+    "not_checked_count": 0,
+    "query_failed_count": 13,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.224120Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

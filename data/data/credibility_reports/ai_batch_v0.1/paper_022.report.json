@@ -1,0 +1,1986 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-f35f859d5b9277ac",
+  "paper_version_id": "paper_022_openreview_2024_02_11",
+  "pdf_sha256": "d8fff3387a0283242bb6a1a70f818d840bfc0d5bc8159f9ca446c1c5a9293ca6",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "23554088a2c8cd7f820d5b37109ef274992a46ef04d78d3617287c53c59c3d1b",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.833333333333333,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 6.5,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 36,
+        "extracted_count": 36,
+        "parsed_count": 35,
+        "queried_count": 35,
+        "matched_count": 13,
+        "metadata_conflict_count": 6,
+        "unverified_count": 11,
+        "parse_failed_count": 1,
+        "not_checked_count": 0,
+        "query_failed_count": 5,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=cXs5md5wAq",
+            "checked_at": "2026-10-09T04:46:48.503012Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-2",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1038/s41579-018-0024-1"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1038%2Fs41579-018-0024-1",
+        "checked_at": "2026-10-09T04:46:37.983830Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Keystone taxa as drivers of microbiome structure and functioning",
+            "authors": [
+              "Banerjee",
+              "Schlaeppi",
+              "van der Heijden"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1038/s41579-018-0024-1",
+            "source_url": "https://doi.org/10.1038/s41579-018-0024-1",
+            "title_similarity": 0.03076923076923077
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:37.982560Z",
+        "response_sha256": "a6488b9055cf5430993e129d7a75c9b0b2e5f656d19f8948ef7f5c5502bb77df",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1038%2Fs41579-018-0024-1"
+      ],
+      "checked_at": "2026-10-09T04:46:37.983830Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Relational inductive biases, deep learning, and graph networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Relational+inductive+biases%2C+deep+learning%2C+and+graph+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:37.118501Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graph Neural Networks for Relational Inductive Bias in Vision-based Deep Reinforcement Learning of Robot Control",
+            "authors": [
+              "Oliva",
+              "Banik",
+              "Josifovski",
+              "Knoll"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/ijcnn55064.2022.9892101",
+            "source_url": "https://doi.org/10.1109/ijcnn55064.2022.9892101",
+            "title_similarity": 0.5116279069767442
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bridging XAI and spectral analysis to investigate the inductive biases of deep graph networks",
+            "authors": [
+              "Fontanesi",
+              "Micheli",
+              "Podda",
+              "Tortorella"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s10994-025-06884-0",
+            "source_url": "https://doi.org/10.1007/s10994-025-06884-0",
+            "title_similarity": 0.5751633986928104
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Good, the Efficient and the Inductive Biases:",
+            "authors": [
+              "Romero Guzman"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.5463/thesis.738",
+            "source_url": "https://doi.org/10.5463/thesis.738",
+            "title_similarity": 0.37383177570093457
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Learning Precoding Policy with Inductive Biases: Graph Neural Networks or Meta-Learning?",
+            "authors": [
+              "Zhao",
+              "Ma",
+              "Wu",
+              "Yang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/globecom54140.2023.10436861",
+            "source_url": "https://doi.org/10.1109/globecom54140.2023.10436861",
+            "title_similarity": 0.4520547945205479
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Few-Sample Traffic Prediction With Graph Networks Using Locale as Relational Inductive Biases",
+            "authors": [
+              "Li",
+              "Tang",
+              "Ma"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/tits.2022.3219618",
+            "source_url": "https://doi.org/10.1109/tits.2022.3219618",
+            "title_similarity": 0.35294117647058826
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:37.112554Z",
+        "response_sha256": "1d74460d6e2e4f3e5d51ad1c171630d706093040e59b78a55cbe784134c93a6f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Relational+inductive+biases%2C+deep+learning%2C+and+graph+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:37.118501Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-6",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How attentive are graph attention networks? In International Conference on Learning Representations , 2022",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+attentive+are+graph+attention+networks%3F+In+International+Conference+on+Learning+Representations+%2C+2022&rows=5",
+        "checked_at": "2026-10-09T04:46:38.345253Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Relevant Molecular Representations via Self-Attentive Graph Neural Networks",
+            "authors": [
+              "Kikuchi",
+              "Takigawa",
+              "Oyama",
+              "Kurihara"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/bigdata47090.2019.9006087",
+            "source_url": "https://doi.org/10.1109/bigdata47090.2019.9006087",
+            "title_similarity": 0.26737967914438504
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph attentive transfer learning for few-shot session-based recommendation",
+            "authors": [
+              "Qi",
+              "zhang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1117/12.2637163",
+            "source_url": "https://doi.org/10.1117/12.2637163",
+            "title_similarity": 0.4157303370786517
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Introducing CARATE: Finally speaking chemistry through learning hidden wave-function representations on graph-based attention and convolutional neural networks",
+            "authors": [
+              "Kleber"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1101/2022.02.12.470636",
+            "source_url": "https://doi.org/10.1101/2022.02.12.470636",
+            "title_similarity": 0.3065134099616858
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Financial Fraud Detection using Jump-Attentive Graph Neural Networks",
+            "authors": [
+              "Kadam"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/icmla61862.2024.00091",
+            "source_url": "https://doi.org/10.1109/icmla61862.2024.00091",
+            "title_similarity": 0.32748538011695905
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Attentive Graph Neural Networks for Few-Shot Learning",
+            "authors": [
+              "Cheng",
+              "Zhou",
+              "Tay",
+              "Wen"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/mipr54900.2022.00033",
+            "source_url": "https://doi.org/10.1109/mipr54900.2022.00033",
+            "title_similarity": 0.5256410256410257
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:38.343974Z",
+        "response_sha256": "e45554136be2e49b92132e06b6cc8889641b35f9524ec7b2b496df71e38b0b7f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+attentive+are+graph+attention+networks%3F+In+International+Conference+on+Learning+Representations+%2C+2022&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:38.345253Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-7",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1038/s42255-018-0017-4"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1038%2Fs42255-018-0017-4",
+        "checked_at": "2026-10-09T04:46:39.569250Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Microbial regulation of organismal energy homeostasis",
+            "authors": [
+              "Cani",
+              "Van Hul",
+              "Lefort",
+              "Depommier",
+              "Rastelli",
+              "Everard"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1038/s42255-018-0017-4",
+            "source_url": "https://doi.org/10.1038/s42255-018-0017-4",
+            "title_similarity": 0.14666666666666667
+          }
+        ],
+        "conflicting_fields": [
+          "title",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:39.567936Z",
+        "response_sha256": "0c3d4d2b44a7101cac4d6bc6eff596043406244ac4ae3e71170763cdd39320e5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1038%2Fs42255-018-0017-4"
+      ],
+      "checked_at": "2026-10-09T04:46:39.569250Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：title",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-8",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "doi": "10.1126/science.adg0727"
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works/10.1126%2Fscience.adg0727",
+        "checked_at": "2026-10-09T04:46:39.271238Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Emergent coexistence in multispecies microbial communities",
+            "authors": [
+              "Chang",
+              "Bajić",
+              "Vila",
+              "Estrela",
+              "Sanchez"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1126/science.adg0727",
+            "source_url": "https://doi.org/10.1126/science.adg0727",
+            "title_similarity": 0.03389830508474576
+          }
+        ],
+        "conflicting_fields": [
+          "title"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:39.269462Z",
+        "response_sha256": "72c71d68fef9087ca65e67251dec8126604065d25b46adec2e44ef5e29fc7f34",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works/10.1126%2Fscience.adg0727"
+      ],
+      "checked_at": "2026-10-09T04:46:39.271238Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Simple and deep graph convolutional networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Simple+and+deep+graph+convolutional+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:38.769367Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Deep Learning on Graphs using Graph Convolutional Networks",
+            "authors": [
+              "Mithe"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.yca4-fmqh",
+            "source_url": "https://doi.org/10.31979/etd.yca4-fmqh",
+            "title_similarity": 0.6470588235294118
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deeper Insights into Deep Graph Convolutional Networks: Stability and Generalization_supp1-3616350.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2025.3616350/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2025.3616350/mm1",
+            "title_similarity": 0.5241379310344828
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Brain-Inspired GCN: Community-Based Siamese Simple Graph Convolutional Networks",
+            "authors": [
+              "Yao",
+              "Zhu",
+              "Gu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4415380",
+            "source_url": "https://doi.org/10.2139/ssrn.4415380",
+            "title_similarity": 0.5737704918032787
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Behavioral Malware Detection Using Deep Graph Convolutional Neural Networks",
+            "authors": [
+              "Oliveira",
+              "Sassi"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.36227/techrxiv.10043099.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.10043099.v1",
+            "title_similarity": 0.6218487394957983
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Androgen Receptor Binding Prediction with Random Forest, Deep Neural Networks, and Graph Convolutional Neural Networks",
+            "authors": [
+              "García-Sosa"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.20944/preprints202102.0318.v1",
+            "source_url": "https://doi.org/10.20944/preprints202102.0318.v1",
+            "title_similarity": 0.4625
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:38.766937Z",
+        "response_sha256": "21f4adc2714696ae2cb07c587044df0be48b1262382b77b7d91c38e73fddcb62",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Simple+and+deep+graph+convolutional+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:38.769367Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-10",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Design of synthetic human gut microbiome assembly and butyrate production",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Design+of+synthetic+human+gut+microbiome+assembly+and+butyrate+production&rows=5",
+        "checked_at": "2026-10-09T04:46:41.061119Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:41.061089Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Design+of+synthetic+human+gut+microbiome+assembly+and+butyrate+production&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:41.061119Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-12",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Approximation by superpositions of a sigmoidal function",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Approximation+by+superpositions+of+a+sigmoidal+function&rows=5",
+        "checked_at": "2026-10-09T04:46:39.763218Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Approximation Bounds For Superpositions Of A Sigmoidal Function",
+            "authors": [
+              "Barron"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/isit.1991.695141",
+            "source_url": "https://doi.org/10.1109/isit.1991.695141",
+            "title_similarity": 0.9152542372881356
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Degree of approximation by superpositions of a sigmoidal function",
+            "authors": [
+              "Debao"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1007/bf02836480",
+            "source_url": "https://doi.org/10.1007/bf02836480",
+            "title_similarity": 0.9166666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Universal approximation bounds for superpositions of a sigmoidal function",
+            "authors": [
+              "Barron"
+            ],
+            "year": 1993,
+            "years": [
+              1993
+            ],
+            "doi": "10.1109/18.256500",
+            "source_url": "https://doi.org/10.1109/18.256500",
+            "title_similarity": 0.84375
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Approximation by Superpositions of a Sigmoidal Function",
+            "authors": [
+              "Lewicki",
+              "Marino"
+            ],
+            "year": 2003,
+            "years": [
+              2003
+            ],
+            "doi": "10.4171/zaa/1156",
+            "source_url": "https://doi.org/10.4171/zaa/1156",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Approximation by superpositions of a sigmoidal function",
+            "authors": [
+              "Cybenko"
+            ],
+            "year": 1992,
+            "years": [
+              1992
+            ],
+            "doi": "10.1007/bf02134016",
+            "source_url": "https://doi.org/10.1007/bf02134016",
+            "title_similarity": 1.0
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:39.761588Z",
+        "response_sha256": "c1da3c06ad97c0eb8ff874847c12f19c4a9bf1920a185d88e12bcb39232d5bc8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Approximation+by+superpositions+of+a+sigmoidal+function&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:39.763218Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fast graph representation learning with pytorch geometric, 2019",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fast+graph+representation+learning+with+pytorch+geometric%2C+2019&rows=5",
+        "checked_at": "2026-10-09T04:46:40.378267Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Geometric molecular graph representation learning model for drug-drug interactions prediction_supp1-3453956.docx",
+            "authors": [
+              "Shen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/jbhi.2024.3453956/mm1",
+            "source_url": "https://doi.org/10.1109/jbhi.2024.3453956/mm1",
+            "title_similarity": 0.4827586206896552
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph Geometric Algebra networks for graph representation learning",
+            "authors": [
+              "Zhong",
+              "Cao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1038/s41598-024-84483-0",
+            "source_url": "https://doi.org/10.1038/s41598-024-84483-0",
+            "title_similarity": 0.484375
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Supervised Learning Using PyTorch",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1007/978-1-4842-4258-2_5",
+            "source_url": "https://doi.org/10.1007/978-1-4842-4258-2_5",
+            "title_similarity": 0.4842105263157895
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Fine-Tuning Deep Learning Models Using PyTorch",
+            "authors": [
+              "Mishra"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1007/978-1-4842-4258-2_6",
+            "source_url": "https://doi.org/10.1007/978-1-4842-4258-2_6",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "PocketFinderGNN: A Manufacturing Feature Recognition Software Based on Graph Neural Networks (GNNs) Using Pytorch Geometric and Networkx",
+            "authors": [
+              "Betkier",
+              "Oszczypała",
+              "Pobożniak",
+              "Sobieski",
+              "Betkier"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4427710",
+            "source_url": "https://doi.org/10.2139/ssrn.4427710",
+            "title_similarity": 0.41025641025641024
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:40.376380Z",
+        "response_sha256": "efd4fb5ed68e305af280674a3f04a7a9c45cb2693760b10fad89be9aeadcc645",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fast+graph+representation+learning+with+pytorch+geometric%2C+2019&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:40.378267Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Schoenholz, Patrick F",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Schoenholz%2C+Patrick+F&rows=5",
+        "checked_at": "2026-10-09T04:46:42.612586Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:42.612519Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Schoenholz%2C+Patrick+F&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:42.612586Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Microbial communities as dynamical systems",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Microbial+communities+as+dynamical+systems&rows=5",
+        "checked_at": "2026-10-09T04:46:43.519721Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:43.519660Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Microbial+communities+as+dynamical+systems&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:43.519721Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inductive representation learning on large graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5",
+        "checked_at": "2026-10-09T04:46:41.062144Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unsupervised Inductive Node Representation Learning for Dynamic Graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/access.2025.3553377",
+            "source_url": "https://doi.org/10.1109/access.2025.3553377",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Unsupervised Inductive node representation learning for dynamic graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-3972512/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3972512/v1",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Label Deconvolution for Node Representation Learning on Large-scale Attributed Graphs against Learning Bias_supp1-3459408.pdf",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2024.3459408/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2024.3459408/mm1",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial Caching Training: Unsupervised Inductive Network Representation Learning on Large-Scale Graphs",
+            "authors": [
+              "Chen",
+              "Gong",
+              "Wang",
+              "Wang",
+              "Xu",
+              "Lv",
+              "Li",
+              "Wu",
+              "Liu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/tnnls.2021.3084195",
+            "source_url": "https://doi.org/10.1109/tnnls.2021.3084195",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FunQG: Molecular Representation Learning via Quotient Graphs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c00445.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c00445.s001",
+            "title_similarity": 0.6666666666666666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:01.302213Z",
+        "response_sha256": "e53f1790ca49ff85ae4341b59ec6fcf354d063683a772008b2b4511d0e9c476e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:41.062144Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adam: A method for stochastic optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5",
+        "checked_at": "2026-10-09T04:46:41.063832Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "madgrad: 'MADGRAD' Method for Stochastic Optimization",
+            "authors": [
+              "Falbel"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.32614/cran.package.madgrad",
+            "source_url": "https://doi.org/10.32614/cran.package.madgrad",
+            "title_similarity": 0.8791208791208791
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+            "authors": [
+              "Hong",
+              "Lin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0346",
+            "source_url": "https://doi.org/10.52202/079017-0346",
+            "title_similarity": 0.5470085470085471
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stochastic Trust Region Inexact Newton Method",
+            "authors": [
+              "Chauhan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1201/9781003240167-10",
+            "source_url": "https://doi.org/10.1201/9781003240167-10",
+            "title_similarity": 0.37209302325581395
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The stochastic projected gradient method for optimization problems on Hadamard manifolds",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.69829/oper-026-0301-ta03",
+            "source_url": "https://doi.org/10.69829/oper-026-0301-ta03",
+            "title_similarity": 0.40310077519379844
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+            "authors": [
+              "Barakat",
+              "Bianchi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1137/19m1263443",
+            "source_url": "https://doi.org/10.1137/19m1263443",
+            "title_similarity": 0.5333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:38.201160Z",
+        "response_sha256": "a7167cde8616a0aa3cf624b44a95f485d53d343dc8b6a1053fe503ee63993481",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:41.063832Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Contrastive learning of structured world models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Contrastive+learning+of+structured+world+models&rows=5",
+        "checked_at": "2026-10-09T04:46:41.065192Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Orthogonalized Multimodal Contrastive Learning with Asymmetric Masking for Structured Representations",
+            "authors": [
+              "Cissee",
+              "Younis",
+              "Ahmadi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6486407",
+            "source_url": "https://doi.org/10.2139/ssrn.6486407",
+            "title_similarity": 0.4864864864864865
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s004",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s004",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s001",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s003",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s003",
+            "title_similarity": 0.3624161073825503
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Sequential Contrastive and Deep Learning Models to Identify Selective Butyrylcholinesterase Inhibitors",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.4c00397.s002",
+            "source_url": "https://doi.org/10.1021/acs.jcim.4c00397.s002",
+            "title_similarity": 0.3624161073825503
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:42:15.455936Z",
+        "response_sha256": "177865acba0ae22096f55358d87a232882a971cc07a588618507784569ef5b2b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Contrastive+learning+of+structured+world+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:41.065192Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kipf and Max Welling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kipf+and+Max+Welling&rows=5",
+        "checked_at": "2026-10-09T04:46:42.022882Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 6: Karate club network for LC convolution (Kipf &amp; Welling, 2017).",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.953/fig-6",
+            "source_url": "https://doi.org/10.7717/peerj-cs.953/fig-6",
+            "title_similarity": 0.33707865168539325
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph refinement based airway extraction using mean-field networks and graph neural networks",
+            "authors": [
+              "Selvan",
+              "Kipf",
+              "Welling",
+              "Juarez",
+              "Pedersen",
+              "Petersen",
+              "Bruijne"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.media.2020.101751",
+            "source_url": "https://doi.org/10.1016/j.media.2020.101751",
+            "title_similarity": 0.16071428571428573
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Plannable Approximations to MDP Homomorphisms: Equivariance under Actions",
+            "authors": [
+              "van der Pol",
+              "Kipf",
+              "Oliehoek",
+              "Welling"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.65109/daie3353",
+            "source_url": "https://doi.org/10.65109/daie3353",
+            "title_similarity": 0.1956521739130435
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Eugen‐Hartmann‐Preis/Max‐Born‐Preis 1980/Gordon Research Conferences",
+            "authors": [
+              "Welling"
+            ],
+            "year": 1979,
+            "years": [
+              1979,
+              2013
+            ],
+            "doi": "10.1002/phbl.19790350414",
+            "source_url": "https://doi.org/10.1002/phbl.19790350414",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Modeling Relational Data with Graph Convolutional Networks",
+            "authors": [
+              "Schlichtkrull",
+              "Kipf",
+              "Bloem",
+              "van den Berg",
+              "Titov",
+              "Welling"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1007/978-3-319-93417-4_38",
+            "source_url": "https://doi.org/10.1007/978-3-319-93417-4_38",
+            "title_similarity": 0.15384615384615385
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:42.021118Z",
+        "response_sha256": "00b94b51070d4949e876c3769f2a7c047d08e2dad170fb72da9d0bb925350298",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kipf+and+Max+Welling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:42.022882Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fast automated reconstruction of genome-scale metabolic models for microbial species and communities",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fast+automated+reconstruction+of+genome-scale+metabolic+models+for+microbial+species+and+communities&rows=5",
+        "checked_at": "2026-10-09T04:46:43.862402Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fast automated reconstruction of genome-scale metabolic models for microbial species and communities",
+            "authors": [
+              "Machado",
+              "Andrejev",
+              "Tramontano",
+              "Patil"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1093/nar/gky537",
+            "source_url": "https://doi.org/10.1093/nar/gky537",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fast automated reconstruction of genome-scale metabolic models for microbial species and communities",
+            "authors": [
+              "Machado",
+              "Andrejev",
+              "Tramontano",
+              "Patil"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1101/223198",
+            "source_url": "https://doi.org/10.1101/223198",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "CarveMe-GutMicrobes: Automated Metabolic Model Reconstruction for Gut Microbial Species and Communities",
+            "authors": [
+              "Basile",
+              "Roux",
+              "Madkaikar",
+              "Zorrilla",
+              "Kamrad",
+              "Patil"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.64898/2026.06.26.734454",
+            "source_url": "https://doi.org/10.64898/2026.06.26.734454",
+            "title_similarity": 0.6435643564356436
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Scaffold-based reconstruction method of genome-scale metabolic models",
+            "authors": [
+              "Loira"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/a627425fz64abz4d5cz956az31d70972e3d5",
+            "source_url": "https://doi.org/10.70675/a627425fz64abz4d5cz956az31d70972e3d5",
+            "title_similarity": 0.6272189349112426
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Evaluating and deploying genome-scale metabolic models for microbial cell factories",
+            "authors": [
+              "Pham"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18174/537210",
+            "source_url": "https://doi.org/10.18174/537210",
+            "title_similarity": 0.644808743169399
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:43.860582Z",
+        "response_sha256": "b6dbcfafef5c75e0b0cd3a67f9d7395ec9f96d94cb7bb35c9d294e4ea7768cd4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fast+automated+reconstruction+of+genome-scale+metabolic+models+for+microbial+species+and+communities&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:43.862402Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Predicting microbiome compositions from species assemblages through deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Predicting+microbiome+compositions+from+species+assemblages+through+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:45.786253Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:45.786197Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Predicting+microbiome+compositions+from+species+assemblages+through+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:45.786253Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-27",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Kaas: an automatic genome annotation and pathway reconstruction server",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Kaas%3A+an+automatic+genome+annotation+and+pathway+reconstruction+server&rows=5",
+        "checked_at": "2026-10-09T04:46:46.325174Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:46.325136Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Kaas%3A+an+automatic+genome+annotation+and+pathway+reconstruction+server&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:46.325174Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-28",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Microbial interactions in theory and practice: when are measurements compatible with models? Current Opinion in Microbiology , 75:102354, 2023.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Microbial+interactions+in+theory+and+practice%3A+when+are+measurements+compatible+with+models%3F+Current+Opinion+in+Microbiology+%2C+75%3A102354%2C+2023.&rows=5",
+        "checked_at": "2026-10-09T04:46:46.304868Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Microbial interactions in theory and practice: when are measurements compatible with models?",
+            "authors": [
+              "Picot",
+              "Shibasaki",
+              "Meacock",
+              "Mitri"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mib.2023.102354",
+            "source_url": "https://doi.org/10.1016/j.mib.2023.102354",
+            "title_similarity": 0.7929515418502202
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Synthesizing microbial biodiversity",
+            "authors": [
+              "Sun",
+              "Sanchez"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mib.2023.102348",
+            "source_url": "https://doi.org/10.1016/j.mib.2023.102348",
+            "title_similarity": 0.16279069767441862
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Modelling of microbial interactions in anaerobic digestion: from black to glass box",
+            "authors": [
+              "Basile",
+              "Zampieri",
+              "Kovalovszki",
+              "Karkaria",
+              "Treu",
+              "Patil",
+              "Campanaro"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mib.2023.102363",
+            "source_url": "https://doi.org/10.1016/j.mib.2023.102363",
+            "title_similarity": 0.4018264840182648
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The mycobiome: interactions with host and implications in diseases",
+            "authors": [
+              "Fan",
+              "Wu",
+              "Zhai"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mib.2023.102361",
+            "source_url": "https://doi.org/10.1016/j.mib.2023.102361",
+            "title_similarity": 0.40594059405940597
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Conditionally unutilized proteins and their profound effects on growth and adaptation across microbial species",
+            "authors": [
+              "Balakrishnan",
+              "Cremer"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.mib.2023.102366",
+            "source_url": "https://doi.org/10.1016/j.mib.2023.102366",
+            "title_similarity": 0.10526315789473684
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:46.303122Z",
+        "response_sha256": "72c437358e24473c1df81a5a6b96df5abbcfcd066a460b763eb62667a89d6af7",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Microbial+interactions+in+theory+and+practice%3A+when+are+measurements+compatible+with+models%3F+Current+Opinion+in+Microbiology+%2C+75%3A102354%2C+2023.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:46.304868Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-29",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year, authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-29",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-29",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Database resources of the national center for biotechnology information",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Database+resources+of+the+national+center+for+biotechnology+information&rows=5",
+        "checked_at": "2026-10-09T04:46:45.073989Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Database resources of the National Center for Biotechnology Information",
+            "authors": [
+              "Wheeler"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1093/nar/gki062",
+            "source_url": "https://doi.org/10.1093/nar/gki062",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Database resources of the National Center for Biotechnology Information",
+            "authors": [
+              "Wheeler"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1093/nar/28.1.10",
+            "source_url": "https://doi.org/10.1093/nar/28.1.10",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Database resources of the National Center for Biotechnology Information",
+            "authors": [
+              "Wheeler"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1093/nar/29.1.11",
+            "source_url": "https://doi.org/10.1093/nar/29.1.11",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Database resources of the National Center for Biotechnology Information",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1093/nar/gks1189",
+            "source_url": "https://doi.org/10.1093/nar/gks1189",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Database resources of the National Center for Biotechnology Information",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014,
+              2015
+            ],
+            "doi": "10.1093/nar/gku1130",
+            "source_url": "https://doi.org/10.1093/nar/gku1130",
+            "title_similarity": 1.0
+          }
+        ],
+        "conflicting_fields": [
+          "year",
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:45.072673Z",
+        "response_sha256": "e63819a46cd4aa42fd8d3f3c5473a4e5f315c05cc5b7bee14aac5c56880daf91",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Database+resources+of+the+national+center+for+biotechnology+information&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:45.073989Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graph attention networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graph+attention+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:45.998258Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graph Attention Site Prediction (GrASP): Identifying Druggable Binding Sites Using Graph Neural Networks with Attention",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c01698.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c01698.s001",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "IGAT: Interpretable Graph Attention Networks for Ligand Optimization",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsomega.5c02173.s001",
+            "source_url": "https://doi.org/10.1021/acsomega.5c02173.s001",
+            "title_similarity": 0.5274725274725275
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "AHEG : attention-based heterogeneous graph convolutional networks",
+            "authors": [
+              "Zhang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991012757468803412",
+            "source_url": "https://doi.org/10.14711/thesis-991012757468803412",
+            "title_similarity": 0.45977011494252873
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Predicting Cardiotoxicity of Molecules Using Attention-Based Graph Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c01286.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c01286.s001",
+            "title_similarity": 0.39622641509433965
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Advancing Force Fields Parameterization: A Directed Graph Attention Networks Approach",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jctc.3c01421.s001",
+            "source_url": "https://doi.org/10.1021/acs.jctc.3c01421.s001",
+            "title_similarity": 0.4444444444444444
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:03.435883Z",
+        "response_sha256": "afa1935a4b1172702bc57346465ef3ebde11e5d881ccf3e3db4986116b7047a5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graph+attention+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:45.998258Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-34",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Fluctuations in the abundance of a species considered mathematically",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Fluctuations+in+the+abundance+of+a+species+considered+mathematically&rows=5",
+        "checked_at": "2026-10-09T04:46:46.690740Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Fluctuations in the Abundance of a Species considered Mathematically",
+            "authors": [
+              "VOLTERRA"
+            ],
+            "year": 1927,
+            "years": [
+              1927
+            ],
+            "doi": "10.1038/119012b0",
+            "source_url": "https://doi.org/10.1038/119012b0",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Fluctuations in the Abundance of a Species considered Mathematically",
+            "authors": [
+              "LOTKA"
+            ],
+            "year": 1927,
+            "years": [
+              1927
+            ],
+            "doi": "10.1038/119012a0",
+            "source_url": "https://doi.org/10.1038/119012a0",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fluctuations in the Abundance of a Species considered Mathematically1",
+            "authors": [
+              "VOLTERRA"
+            ],
+            "year": 1926,
+            "years": [
+              1926
+            ],
+            "doi": "10.1038/118558a0",
+            "source_url": "https://doi.org/10.1038/118558a0",
+            "title_similarity": 0.9927007299270073
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Species abundance fluctuations over 31 years are associated with plant‐soil feedback in a species‐rich mountain meadow\"",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1111/1365-2745.13574/v1/review2",
+            "source_url": "https://doi.org/10.1111/1365-2745.13574/v1/review2",
+            "title_similarity": 0.39593908629441626
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Review for \"Species abundance fluctuations over 31 years are associated with plant‐soil feedback in a species‐rich mountain meadow\"",
+            "authors": [],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1111/1365-2745.13574/v1/review1",
+            "source_url": "https://doi.org/10.1111/1365-2745.13574/v1/review1",
+            "title_similarity": 0.39593908629441626
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:46.689456Z",
+        "response_sha256": "b52091902bfd6ddcc5e197bff6b03c4db0363309b64debeafc912debc9aa91fc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Fluctuations+in+the+abundance+of+a+species+considered+mathematically&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:46.690740Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_022_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_022_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_022_openreview_2024_02_11_credibility-36",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 36,
+    "extracted_count": 36,
+    "parsed_count": 35,
+    "queried_count": 35,
+    "matched_count": 13,
+    "metadata_conflict_count": 6,
+    "unverified_count": 11,
+    "parse_failed_count": 1,
+    "not_checked_count": 0,
+    "query_failed_count": 5,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.189052Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

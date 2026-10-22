@@ -1,0 +1,349 @@
+{
+  "assessment_id": "assessment_ai_paper_021_openreview_2024_02_11",
+  "paper_version_id": "paper_021_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_021_openreview_2024_02_11",
+    "raw_output_sha256": "1353910eae4bfba6c08cea081468ef2ea084e6377b75d8caefe53ea37799711a"
+  },
+  "paper_summary": "Predictive uncertainty--a model’s self-awareness regarding its accuracy on an input--is key for both building robust models via training interventions and for test-time applications such as selective classification. We propose a novel instance-conditional reweighting approach that captures predictive uncertainty using an auxiliary network, and unifies these train- and test-time applications.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "We propose a novel instance-conditional reweighting approach that captures predictive uncertainty using an auxiliary network, and unifies these train- and test-time applications.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_021_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "A key contribution of our proposal is the meta-objective of minimizing dropout variance, an approximation of Bayesian predictive uncertainty, We show in controlled experiments that we effectively capture diverse specific notions of uncertainty through this meta-objective, while previous approaches only capture certain aspects.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_021_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "A key contribution of our proposal is the meta-objective of minimizing dropout variance, an approximation of Bayesian predictive uncertainty, We show in controlled experiments that we effectively capture diverse specific notions of uncertainty through this meta-objective, while previous approaches only capture certain aspects.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_021_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Learning model uncertainty as variance-minimizing instance weights》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.2/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Predictive uncertainty–a model’s self-awareness regarding its accuracy on an input– is key for both building robust models via training interventions and for test-time applications such as selective classification. ",
+    "正文可定位证据支持该维度判断：As explained in the paper, these methods are train-time-only reweightings, since they learn free parameters for each training instance (Ren et al., 2018; Zhang & Pfister, 2021), or as a function of instance loss (requiring true label) (Shu et al., 2019). ",
+    "正文可定位证据支持该维度判断：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Learning model uncertainty as variance-minimizing instance weights》在研究价值方面的正文支持是：Predictive uncertainty–a model’s self-awareness regarding its accuracy on an input– is key for both building robust models via training interventions and for test-time applications such as selective classification.  限制或边界证据是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Predictive uncertainty–a model’s self-awareness regarding its accuracy on an input– is key for both building robust models via training interventions and for test-time applications such as selective classification. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_021_ev_001",
+        "paper_021_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Learning model uncertainty as variance-minimizing instance weights》在可靠性与证据方面的正文支持是：As explained in the paper, these methods are train-time-only reweightings, since they learn free parameters for each training instance (Ren et al., 2018; Zhang & Pfister, 2021), or as a function of instance loss (requiring true label) (Shu et al., 2019).  限制或边界证据是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：As explained in the paper, these methods are train-time-only reweightings, since they learn free parameters for each training instance (Ren et al., 2018; Zhang & Pfister, 2021), or as a function of instance loss (requiring true label) (Shu et al., 2019). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_021_ev_003",
+        "paper_021_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Learning model uncertainty as variance-minimizing instance weights》在原创性定位方面的正文支持是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification.  限制或边界证据是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_021_ev_002",
+        "paper_021_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Learning model uncertainty as variance-minimizing instance weights》在清晰度与可用性方面的正文支持是：In applications with significant cost of error, classifiers need to accurately quantify and communicate uncertainty about their predictions.  限制或边界证据是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In applications with significant cost of error, classifiers need to accurately quantify and communicate uncertainty about their predictions. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_021_ev_004",
+        "paper_021_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Learning model uncertainty as variance-minimizing instance weights》在可复现性与透明度方面的正文支持是：Another challenge in selective classification is that each method can choose to reject different instances, and end up reporting accuracy on nonidentical sets of data.  限制或边界证据是：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Another challenge in selective classification is that each method can choose to reject different instances, and end up reporting accuracy on nonidentical sets of data. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_021_ev_005",
+        "paper_021_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_021_ev_001",
+      "page_number": 1,
+      "section_id": "paper_021_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_021_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Predictive uncertainty–a model’s self-awareness regarding its accuracy on an input– is key for both building robust models via training interventions and for test-time applications such as selective classification. We propose a novel instance-conditional reweighting approach that captures predictive uncertainty using an auxiliary network, and unifies these train- and test-time applications. The auxiliary network is trained using a meta-objective in a bilevel optimization framework. A key contribution of our proposal is the meta-objective of minimizing dropout variance, an approximation of Bayesian predictive uncertainty, We show in controlled experiments that we effectively capture diverse specific notions of uncertainty through this meta-objective, while previous approaches only capture certain aspects. These results translate to significant gains in real-world settings–selective classi",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "page_number": 9,
+      "section_id": "paper_021_openreview_2024_02_11_sec_5_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_021_openreview_2024_02_11_chunk_0020",
+      "evidence_mode": "quote",
+      "excerpt": "We examined the contribution of the various components of our proposal to the overall efficacy of R E V A R in selective classification. We study the following variants: (1) R E V A R -NoVarMin: Drops the variance-reduction meta-regularization, (2) R E V A R -SR and R E V A R -MCD : Uses R E V A R classifier’s logits or MCD respectively at test time instead of U-S CORE , (3) MCD: baseline. Figure 2 shows this comparison on the DR dataset under country shift, for the accuracy metric. We make the following observations: (1) R E V A R performs best, and dropout variance reduction plays a very large role. (2) R E V A R-MCD beats MCD: R E V A R classifiers are inherently more robust. (3) R E V A R beats R E V A R-SR and R E V A R-MCD (differing only in test-time scoring): U-S CORE is a better measure of uncertainty than MCD or logits, even on the more-robust R E V A R classifier.\n\nR EPRODUCIB",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_021_ev_003",
+      "page_number": 23,
+      "section_id": "paper_021_openreview_2024_02_11_sec_g_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_021_openreview_2024_02_11_chunk_0041",
+      "evidence_mode": "quote",
+      "excerpt": "As explained in the paper, these methods are train-time-only reweightings, since they learn free parameters for each training instance (Ren et al., 2018; Zhang & Pfister, 2021), or as a function of instance loss (requiring true label) (Shu et al., 2019). In contrast, we learn a neural network which can readily be applied on unseen instances As a compromise, we used (Ren et al., 2018; Shu et al., 2019; Zhang & Pfister, 2021) for training the classifier, and used MCD at test-time for selective classification; this tells us if the training procedure in these results in better classifiers. For ours,\n\nTable 22: Comparison on the Kaggle dataset and the APTOS dataset under the country shift setup trained using entropy regularizer and then selecting based on SR.\n\nKaggleDataset( in-distribution ) 40%retained 50%retained 60%retained 80%retained 100%retained AUC (%) Acc. (%) AUC (%) Acc. (%) AUC (%",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_021_ev_004",
+      "page_number": 1,
+      "section_id": "paper_021_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_021_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "In applications with significant cost of error, classifiers need to accurately quantify and communicate uncertainty about their predictions. Test-time applications of uncertainty include OOD detection (Hendrycks & Gimpel, 2017), and selective classification (rejecting test instances where the model is not confident (El-Yaniv et al., 2010)). Intrinsic classifier measures of uncertainty (softmax probabilities, or derived metrics) perform poorly compared to more sophisticated approaches–e.g., methods that learn an extra “reject” category at train time (Liu et al., 2019), or estimate the Bayesian posterior predictive uncertainty given a distribution over model weights (Gal & Ghahramani, 2016). Other work show benefits of reweighting training instances or reweighting subpopulations within the data improving generalization (Zhou et al., 2022a; Faw et al., 2020; Ghosh et al., 2018). The intuiti",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_021_ev_005",
+      "page_number": 25,
+      "section_id": "paper_021_openreview_2024_02_11_sec_h_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_021_openreview_2024_02_11_chunk_0045",
+      "evidence_mode": "quote",
+      "excerpt": "Another challenge in selective classification is that each method can choose to reject different instances, and end up reporting accuracy on nonidentical sets of data. To control for this, we use the ImageNet-A dataset for testing so that the test set comprises mostly hard examples. We apply our selection method using the U-S CORE to select examples for each coverage and then test our classifier as well as the other baselines’ classifier on the same set of chosen examples. The results are reported in table 27. The column PSS (previous Selection scheme) denotes the result of previous comparison whereas column OSS (our selection scheme) denotes the result when our selection scheme for each of the baseline training methods is used. The results show that our selection scheme is capable of identifying less erroneous examples quite better than other selection schemes, since our selection impro",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_021_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_021_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_021_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_021_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_021_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_021_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_021_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_021_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_021_ev_005"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

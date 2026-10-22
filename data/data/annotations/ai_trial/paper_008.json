@@ -1,0 +1,363 @@
+{
+  "assessment_id": "assessment_ai_paper_008_openreview_2024_02_11",
+  "paper_version_id": "paper_008_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_008_openreview_2024_02_11",
+    "raw_output_sha256": "546fd59dafca3f6b1ff6b43a7af44f4cb9c00df333f5bcabe1221e0d32518ef0"
+  },
+  "paper_summary": "Summarizing book-length documents ($>$100K tokens)  that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries. Despite the complexity and importance of this task, it has yet to be meaningfully studied due to the challenges of evaluation: existing book-length summarization datasets (e.g., BookSum) are in the pretraining data of most public LLMs, and existing evaluation methods struggle to capture errors made by modern LLM summarizers.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In this paper, we present the first study of the coherence of LLM-based book-length summarizers implemented via two prompting workflows: (1) hierarchically merging chunk-level summaries, and (2) incrementally updating a running summary.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_008_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Because human evaluation is expensive and time-consuming, we develop an automatic metric, BooookScore, that measures the proportion of sentences in a summary that do not contain any of the identified error types.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_008_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "While LLaMA 2 falls behind other models, Mixtral achieves performance on par with GPT-3.5-Turbo.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_008_ev_004",
+        "paper_008_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 8.2/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Summarizing book-length documents ( > 100K tokens) that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries. ",
+    "正文可定位证据支持该维度判断：B OOOOK S CORE : A SYSTEMATIC EXPLORATION OF BOOK - LENGTH SUMMARIZATION IN THE ERA OF LLM S Yapei Chang Kyle Lo University of Massachusetts Amherst Allen Institute for AI yapeichang@umass.edu kylel@allenai.org Tanya Goyal Mohit Iyyer Princeton University University of Massachus…",
+    "正文可定位证据支持该维度判断：Armed with B OOOOK S CORE , we now investigate the impact of several critical implementation decisions on summary coherence, including the choice of prompting strategy, base LLM, and chunk size. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在研究价值方面的正文支持是：Summarizing book-length documents ( > 100K tokens) that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries.  限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Summarizing book-length documents ( > 100K tokens) that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 9/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_008_ev_001",
+        "paper_008_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在可靠性与证据方面的正文支持是：B OOOOK S CORE : A SYSTEMATIC EXPLORATION OF BOOK - LENGTH SUMMARIZATION IN THE ERA OF LLM S Yapei Chang Kyle Lo University of Massachusetts Amherst Allen Institute for AI yapeichang@umass.edu kylel@allenai.org Tanya Goyal Mohit Iyyer Princeton University University of Massachus… 限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：B OOOOK S CORE : A SYSTEMATIC EXPLORATION OF BOOK - LENGTH SUMMARIZATION IN THE ERA OF LLM S Yapei Chang Kyle Lo University of Massachusetts Amherst Allen Institute for AI yapeichang@umass.edu kylel@allenai.org Tanya Goyal Mohit Iyyer Princeton University University of Massachus…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_008_ev_003",
+        "paper_008_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在原创性定位方面的正文支持是：Armed with B OOOOK S CORE , we now investigate the impact of several critical implementation decisions on summary coherence, including the choice of prompting strategy, base LLM, and chunk size.  限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Armed with B OOOOK S CORE , we now investigate the impact of several critical implementation decisions on summary coherence, including the choice of prompting strategy, base LLM, and chunk size. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_008_ev_004",
+        "paper_008_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在清晰度与可用性方面的正文支持是：Just two years ago, automatically-generated summaries were riddled with artifacts such as grammar errors, repetition, and hallucination (Zhao et al., 2020; Fabbri et al., 2020; Goyal & Durrett, 2021).  限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Just two years ago, automatically-generated summaries were riddled with artifacts such as grammar errors, repetition, and hallucination (Zhao et al., 2020; Fabbri et al., 2020; Goyal & Durrett, 2021). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_008_ev_005",
+        "paper_008_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《BooookScore: A systematic exploration of book-length summarization in the era of LLMs》在可复现性与透明度方面的正文支持是：We use ellipsis here to keep this prompt concise. The complete version includes two full summaries and 42 sentence-level annotations, and will be made available in our codebase. Given a book summary and a sentence from that summary, determine if that sentence causes any confusio… 限制或边界证据是：Our work presents the first systematic study of book-length summarization using LLMs. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We use ellipsis here to keep this prompt concise. The complete version includes two full summaries and 42 sentence-level annotations, and will be made available in our codebase. Given a book summary and a sentence from that summary, determine if that sentence causes any confusio…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Our work presents the first systematic study of book-length summarization using LLMs. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_008_ev_006",
+        "paper_008_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_008_ev_001",
+      "page_number": 1,
+      "section_id": "paper_008_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Summarizing book-length documents ( > 100K tokens) that exceed the context window size of large language models (LLMs) requires first breaking the input document into smaller chunks and then prompting an LLM to merge, update, and compress chunk-level summaries. Despite the complexity and importance of this task, it has yet to be meaningfully studied due to the challenges of evaluation: existing book-length summarization datasets (e.g., BookSum) are in the pretraining data of most public LLMs, and existing evaluation methods struggle to capture errors made by modern LLM summarizers. In this paper, we present the first study of the coherence of LLM-based book-length summarizers implemented via two prompting workflows: (1) hierarchically merging chunk-level summaries, and (2) incrementally updating a running summary. We obtain 1193 fine-grained human annotations on GPT-4 generated summaries",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "page_number": 9,
+      "section_id": "paper_008_openreview_2024_02_11_sec_8",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "Our work presents the first systematic study of book-length summarization using LLMs. We establish a novel human evaluation protocol to assess summary coherence on newly-published books. Then, we develop an LLM-based automatic metric called B OOOOK S CORE that relies on a coherence error taxonomy derived from our human annotations. Using B OOOOK S CORE allows us to evaluate various prompting strategies and model choices, revealing insights such as: hierarchical merging produces more coherent summaries but may lack detail compared to incremental updating; and increasing chunk size can significantly improve incremental updating. Interesting future directions include automatically evaluating faithfulness in the book-length summarization setting, benchmarking newer long-context LLMs using B OOOOK S CORE , and expanding B OOOOK S CORE to multilingual texts. We release our B OOOOK S CORE metri",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_008_ev_003",
+      "page_number": 1,
+      "section_id": "paper_008_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "B OOOOK S CORE : A SYSTEMATIC EXPLORATION OF BOOK - LENGTH SUMMARIZATION IN THE ERA OF LLM S\n\nYapei Chang Kyle Lo University of Massachusetts Amherst Allen Institute for AI yapeichang@umass.edu kylel@allenai.org\n\nTanya Goyal Mohit Iyyer Princeton University University of Massachusetts Amherst tanyagoyal@princeton.edu miyyer@cs.umass.edu",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_008_ev_004",
+      "page_number": 7,
+      "section_id": "paper_008_openreview_2024_02_11_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "Armed with B OOOOK S CORE , we now investigate the impact of several critical implementation decisions on summary coherence, including the choice of prompting strategy, base LLM, and chunk size. Overall, Claude 2 produces the most coherent summaries as measured by B OOOOK S CORE , followed closely by GPT-4 and distantly by GPT-3.5-Turbo, Mixtral-8x7B, and LLaMA2-7B-Inst; however, GPT-4’s summaries are significantly longer and more detailed than the others across both prompting strategies. The rest of this section drills down into finer-grained results. Experimental setup: Table 2 contains results for five instruction-tuned LLMs: GPT-4, GPT-3.5- Turbo, Claude 2, Mixtral-8x7B, and LLaMA2-7B-Instruct. 13 Unless otherwise specified, we set the chunk size to 2048, maximum summary length G to 900, decoding temperature to 0.5, 14 and n p = 1 for ancestral sampling. 15 To avoid confounds, we use",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_008_ev_005",
+      "page_number": 1,
+      "section_id": "paper_008_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Just two years ago, automatically-generated summaries were riddled with artifacts such as grammar errors, repetition, and hallucination (Zhao et al., 2020; Fabbri et al., 2020; Goyal & Durrett, 2021). Nowadays, such artifacts have mostly disappeared; in fact, Pu et al. (2023b) find that summaries generated by large language models (LLMs) are preferred over those written by humans , leading them to pronounce the death of summarization research. However, as with most prior work on summarization, the input documents in their study are relatively short ( < 10K tokens). Widespread adoption of LLMs outside the research community has driven the development of a more ambitious task: summarizing book-length documents, which we define to be texts longer than 100K tokens.\n\nAs these documents exceed the context window limits of today’s LLMs (e.g., 8K tokens for GPT-4), summarizing them via prompt-ba",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_008_ev_006",
+      "page_number": 32,
+      "section_id": "paper_008_openreview_2024_02_11_sec_m_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_008_openreview_2024_02_11_chunk_0051",
+      "evidence_mode": "quote",
+      "excerpt": "We use ellipsis here to keep this prompt concise. The complete version includes two full summaries and 42 sentence-level annotations, and will be made available in our codebase.\n\nGiven a book summary and a sentence from that summary, determine if that sentence causes any confusion. Types of confusion include the following:\n\n- Entity omission: an entity, real or abstract (person, object, place, concept, etc.) is mentioned, but key details are missing or unclear - Event omission: an event is mentioned, but key details are missing or unclear - Causal omission: the reason or motivation for something is missing or unclear - Salience: inclusion of trivial details that do not contribute to the main storyline - Discontinuity: an interruption in the flow of the narrative, including but not restricted to: sudden jumps between perspectives, time periods, or settings; poor transition between sentenc",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_008_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_008_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_008_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_008_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_008_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_008_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_008_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_008_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_008_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_008_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_008_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

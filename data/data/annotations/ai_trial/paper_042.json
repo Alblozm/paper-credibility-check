@@ -1,0 +1,400 @@
+{
+  "assessment_id": "assessment_ai_paper_042_iclr_2026_proceedings",
+  "paper_version_id": "paper_042_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_042_iclr_2026_proceedings",
+    "raw_output_sha256": "487386414c6df5fc4714a33eeb6ebfbcaf3b26bc487a0d48659152d63fe2c5c8"
+  },
+  "paper_summary": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of real-world rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of real-world rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot",
+      "type": "method_or_finding",
+      "evidence_id": "paper_042_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World m",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_042_ev_003",
+        "paper_042_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Ctrl-World: A Controllable Generative World Model for Robot Manipulation》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout",
+    "论文提供方法或实证支持：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM "
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit",
+      "strengths": [
+        "可定位正文支持：Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollout"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+      "evidence_ids": [
+        "paper_042_ev_001",
+        "paper_042_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit",
+      "strengths": [
+        "可定位正文支持：Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al., Computation-based Model-based Evaluated Camera Method PSNR ↑ SSIM "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_042_ev_003",
+        "paper_042_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Video Generation Models for Robotics. Recent advances in video generation models (Agarwal et al., 2025; Wan et al., 2025; Blattmann et al., 2023a; Chi et al., 2025) have enabled the creation of realistic and temporally consistent content, reflecting a strong u；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit",
+      "strengths": [
+        "可定位正文支持：Video Generation Models for Robotics. Recent advances in video generation models (Agarwal et al., 2025; Wan et al., 2025; Blattmann et al., 2023a; Chi et al., 2025) have enabled the creation of realistic and temporally consistent content, reflecting a strong u"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_042_ev_004",
+        "paper_042_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Recent advances in vision-language-action (VLA) models have demonstrated competence across a wide range of manipulation tasks and scenarios (Black et al., 2024; Wen et al., 2025; Brohan et al., 2023; Kim et al., 2024; Cui et al., 2025; Guo et al., 2025; Zhang ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit",
+      "strengths": [
+        "可定位正文支持：Recent advances in vision-language-action (VLA) models have demonstrated competence across a wide range of manipulation tasks and scenarios (Black et al., 2024; Wen et al., 2025; Brohan et al., 2023; Kim et al., 2024; Cui et al., 2025; Guo et al., 2025; Zhang "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_042_ev_005",
+        "paper_042_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Policy Evaluation within World Model. Once a controllable and consistent world model is trained, we can conduct policy-in-the-loop rollouts in imagination space. Given an initial observation o and instruction l , a policy π together with the world model W can ；边界证据为：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit",
+      "strengths": [
+        "可定位正文支持：Policy Evaluation within World Model. Once a controllable and consistent world model is trained, we can conduct policy-in-the-loop rollouts in imagination space. Given an initial observation o and instruction l , a policy π together with the world model W can "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit "
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+      "evidence_ids": [
+        "paper_042_ev_006",
+        "paper_042_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_042_ev_001",
+      "page_number": 1,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of realworld rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot policies. This requires a world model compatible with modern generalist policies by supporting multi-view prediction, fine-grained action control, and consistent long-horizon interactions, which is not achieved by previous works. In this paper, we ma",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "page_number": 9,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "instruction-following by 44.7% on average. We presented Ctrl-World, a controllable world model for robot manipulation that supports closed-loop policy evaluation and improvement entirely within the model’s imagination. Policies evaluated in Ctrl-World exhibit instruction-following behaviors that closely mirror those in the real world. Notably, post-training on generated data boosts the pretrained robot policy’s success rate on novel instructions from 38.7% to 83.4%.\n\nDespite these promising results, important challenges remain. Our model can fail on tasks involving precise interactions or long-horizon reasoning, and performance is sensitive to initial observations.\n\nThese limitations may diminish as video backbones become more physically accurate and coherent over time (Ball et al., 2025; Agarwal et al., 2025). In addition, our experiments focus on improving instruction following, and we",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_003",
+      "page_number": 5,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_5_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0011",
+      "evidence_mode": "quote",
+      "excerpt": "Baselines and Evaluation Matrices. We quantitatively compare our model, Ctrl-World, against two prior action-conditioned world models: World-model-based Policy Evaluation (WPE) (Quevedo et al.,\n\nComputation-based Model-based Evaluated Camera Method PSNR ↑ SSIM ↑ LPIPS ↓ FID ↓ FVD ↓ WPE-Single-View 20.33 0.772 0.131 25.50 156.4 WPE-Multiview 21.17 - - - 147.1 Third-view IRASim-Single-View 21.36 0.774 0.117 26.46 138.1 Camera IRASim-Multiview 20.21 - - - 165.4 Ctrl-World-Single-View 21.27 0.793 0.110 23.47 127.5 Ctrl-World (ours) 23.56 0.828 0.091 25.00 97.4\n\nTable 1: Quantitative results for interactive long-trajectory generation on the validation set. We evaluate our world model’s quality by generating 10-second trajectories. Given a randomly sampled initial frame, the model receives a 15-step action chunk (spanning over 1 second) in each interaction and generates for 10 rounds auto-regr",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_004",
+      "page_number": 2,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "Video Generation Models for Robotics. Recent advances in video generation models (Agarwal et al., 2025; Wan et al., 2025; Blattmann et al., 2023a; Chi et al., 2025) have enabled the creation of realistic and temporally consistent content, reflecting a strong understanding of the physical world. Some works leverage video prediction models to synthesize robotic trajectories with fake action labels, and these synthetic trajectories can then be used for policy learning (Jang et al., 2025; Bharadhwaj et al., 2024). Other works directly employ video models as policy backbones, decoding actions through tracking or inverse dynamics (Black et al., 2023; Du et al., 2024; Yang et al., 2023; Hu et al., 2024; Liang et al., 2024; Liao et al., 2025; Tan et al., 2025; Feng et al., 2025). A complementary line of research integrates future-prediction objectives into generalist policies via co-training (Zh",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_005",
+      "page_number": 1,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Recent advances in vision-language-action (VLA) models have demonstrated competence across a wide range of manipulation tasks and scenarios (Black et al., 2024; Wen et al., 2025; Brohan et al., 2023; Kim et al., 2024; Cui et al., 2025; Guo et al., 2025; Zhang et al., 2024). Despite their promise, current policies remain brittle when tested in open-world circumstances (Shi et al., 2025). A central challenge is policy evaluation . Assessing generalist policy performance typically requires large numbers of real-world rollouts, carefully repeated across tasks and environments to achieve statistical significance (Atreya et al., 2025). Such protocols are logistically demanding, slow down iteration, and inhibit nuanced understanding of current policy capabilities. Equally critical is policy improvement : once weaknesses are revealed, existing methods offer few ways to strengthen policies on fai",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_006",
+      "page_number": 4,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_4_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0008",
+      "evidence_mode": "quote",
+      "excerpt": "Policy Evaluation within World Model. Once a controllable and consistent world model is trained, we can conduct policy-in-the-loop rollouts in imagination space. Given an initial observation o and instruction l , a policy π together with the world model W can generate a synthetic trajectory τ . The initial observation can be sampled from the validation dataset or recorded as a snapshot from a real-world setup. In our experiments, we label each trajectory as a success or failure based on human preference judgments. While recent works (Du et al., 2023) explore the use of Vision-Language Models as general-purpose reward models, we leave such extensions to future work. Policy Improvement with Synthetic Data. Beyond evaluation, the world model enables searching for successful synthetic trajectories to improve policy performance. We observe that, under fixed\n\nAlgorithm 1 World Model Rollout an",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_007",
+      "page_number": 1,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "C TRL -W ORLD : A C ONTROLLABLE G ENERATIVE W ORLD M ODEL FOR R OBOT M ANIPULATION\n\nYanjiang Guo ∗ 12 , Lucy Xiaoyang Shi ∗ 1 , Jianyu Chen 2 , Chelsea Finn 1 ∗ Equal Contribution, 1 Stanford University, 2 Tsinghua University Project page: https://ctrl-world.github.io",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_008",
+      "page_number": 16,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_a",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0021",
+      "evidence_mode": "quote",
+      "excerpt": "Model Architecture. Our world model closely follows the architecture of Stable Video Diffusion (SVD) (Blattmann et al., 2023a), and initializes from the SVD pretrained checkpoint. The only newly initialized component is a 3-layer MLP that projects 7-dimensional Cartesian-space actions into a 1024-dimensional latent embedding. The input images are first encoded by a VAE with a spatial downsampling ratio of 8 × 8 . In practice, we use k = 7 history frames, each perturbed with independent random noise to improve robustness. We set the action conditioning window to be one second, corresponding to 15 action steps. To reduce GPU memory consumption, we transform these 15 actions in the Cartesian space (see Section B) and temporally downsample them to 5 steps before feeding them into the model. Each frame contains three 192 × 320 images, which are encoded into latent features of shape 24 × 40 . ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_009",
+      "page_number": 5,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_5_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0010",
+      "evidence_mode": "quote",
+      "excerpt": "DROID Platform and Dataset. Our experiments use the DROID platform (Khazatsky et al., 2024), which features a Panda robot arm equipped with a Robotiq Gripper. The platform includes one wrist-view camera and two randomly positioned third-view cameras that observe the workspace. The DROID dataset (Khazatsky et al., 2024) contains 95,599 diverse trajectories collected from 564 scenes, providing dense coverage of the workspace. This includes about 76k successful and about 19k failed trajectories. The inclusion of diverse actions and failure data is crucial, as it allows us to train a controllable world model that can simulate a wide range of future scenarios. Training Details. During training, our model jointly predicts outputs from all three cameras, each with a resolution of 192x320. The model is conditioned on a history of 7 frames, with an interval of 1-2 seconds between frames. We condi",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_042_ev_010",
+      "page_number": 13,
+      "section_id": "paper_042_iclr_2026_proceedings_sec_references",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_042_iclr_2026_proceedings_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "Jiaming Liu, Hao Chen, Pengju An, Zhuoyang Liu, Renrui Zhang, Chenyang Gu, Xiaoqi Li, Ziyu Guo, Sixiang Chen, Mengzhen Liu, et al. Hybridvla: Collaborative diffusion and autoregression in a unified vision-language-action model. arXiv preprint arXiv:2503.10631 , 2025.\n\nSongming Liu, Lingxuan Wu, Bangguo Li, Hengkai Tan, Huayu Chen, Zhengyi Wang, Ke Xu, Hang Su, and Jun Zhu. Rdt-1b: a diffusion foundation model for bimanual manipulation. arXiv preprint arXiv:2410.07864 , 2024.\n\nYecheng Jason Ma. Foundation reward models for general robot skill acquisition. In Robotics: Science and Systems-Pioneers Workshop 2025 , 2025.\n\nAnusha Nagabandi, Kurt Konolige, Sergey Levine, and Vikash Kumar. Deep dynamics models for learning dexterous manipulation. In Conference on robot learning , pp. 1101–1112. PMLR, 2020.\n\nJunhyuk Oh, Xiaoxiao Guo, Honglak Lee, Richard L Lewis, and Satinder Singh. Action-condi",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_042_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_042_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_042_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_042_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_042_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_042_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_042_ev_007"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_042_ev_001"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_042_ev_008"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+      "evidence_ids": [
+        "paper_042_ev_009"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_042_ev_010"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

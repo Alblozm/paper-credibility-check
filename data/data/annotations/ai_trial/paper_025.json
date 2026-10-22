@@ -1,0 +1,358 @@
+{
+  "assessment_id": "assessment_ai_paper_025_openreview_2024_02_11",
+  "paper_version_id": "paper_025_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_025_openreview_2024_02_11",
+    "raw_output_sha256": "296eba613674b6b1f97c024d77452adeae45c77066f53492f08491cf5da5e3f7"
+  },
+  "paper_summary": "We study data distillation for auto-regressive machine learning tasks, where the input and output have a strict left-to-right causal structure. More specifically, we propose Farzi, which summarizes an event sequence dataset into a small number of synthetic sequences — Farzi Data — which are optimized to maintain (if not improve) model performance compared to training on the full dataset.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "More specifically, we propose Farzi, which summarizes an event sequence dataset into a small number of synthetic sequences — Farzi Data — which are optimized to maintain (if not improve) model performance compared to training on the full dataset.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_025_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "More specifically, we propose Farzi, which summarizes an event sequence dataset into a small number of synthetic sequences — Farzi Data — which are optimized to maintain (if not improve) model performance compared to training on the full dataset.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "partially_supported",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_025_ev_004",
+        "paper_025_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 6.8,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Farzi Data: Autoregressive Data Distillation》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 6.8/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：We study data distillation for auto-regressive machine learning tasks, where the input and output have a strict left-to-right causal structure. ",
+    "正文可定位证据支持该维度判断：Proof. We first begin by defining a few preliminary terms and properties: Definition B.1. (Representativeness of D ) For a given function-class F , task loss function l ( · ) , train-set D = { x ,x ,...,x } sampled from the true data distribution P n : 1 2 n (cid:16) (cid:17) Re…",
+    "正文可定位证据支持该维度判断：How sample efficient is F ARZI D ATA ? We evaluate the fidelity of F ARZI D ATA by first optimizing for D using Equation (2), followed by training Φ (from scratch) on D . We plot the performance syn syn of the trained Φ on the test-set for various amounts of data budgets ( µ ) i…"
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+    "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Farzi Data: Autoregressive Data Distillation》在研究价值方面的正文支持是：We study data distillation for auto-regressive machine learning tasks, where the input and output have a strict left-to-right causal structure.  限制或边界证据是：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We study data distillation for auto-regressive machine learning tasks, where the input and output have a strict left-to-right causal structure. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_025_ev_001",
+        "paper_025_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Farzi Data: Autoregressive Data Distillation》在可靠性与证据方面的正文支持是：Proof. We first begin by defining a few preliminary terms and properties: Definition B.1. (Representativeness of D ) For a given function-class F , task loss function l ( · ) , train-set D = { x ,x ,...,x } sampled from the true data distribution P n : 1 2 n (cid:16) (cid:17) Re… 限制或边界证据是：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Proof. We first begin by defining a few preliminary terms and properties: Definition B.1. (Representativeness of D ) For a given function-class F , task loss function l ( · ) , train-set D = { x ,x ,...,x } sampled from the true data distribution P n : 1 2 n (cid:16) (cid:17) Re…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_025_ev_003",
+        "paper_025_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Farzi Data: Autoregressive Data Distillation》在原创性定位方面的正文支持是：How sample efficient is F ARZI D ATA ? We evaluate the fidelity of F ARZI D ATA by first optimizing for D using Equation (2), followed by training Φ (from scratch) on D . We plot the performance syn syn of the trained Φ on the test-set for various amounts of data budgets ( µ ) i… 限制或边界证据是：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：How sample efficient is F ARZI D ATA ? We evaluate the fidelity of F ARZI D ATA by first optimizing for D using Equation (2), followed by training Φ (from scratch) on D . We plot the performance syn syn of the trained Φ on the test-set for various amounts of data budgets ( µ ) i…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_025_ev_004",
+        "paper_025_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Farzi Data: Autoregressive Data Distillation》在清晰度与可用性方面的正文支持是：Figure 1: Visualization of F ARZI D ATA in the context of language modeling.  限制或边界证据是：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Figure 1: Visualization of F ARZI D ATA in the context of language modeling. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_025_ev_005",
+        "paper_025_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Farzi Data: Autoregressive Data Distillation》在可复现性与透明度方面的正文支持是：We list the datasets used in this paper as well as brief data statistics in Table 3.  限制或边界证据是：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We list the datasets used in this paper as well as brief data statistics in Table 3. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_025_ev_006",
+        "paper_025_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_025_ev_001",
+      "page_number": 1,
+      "section_id": "paper_025_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "We study data distillation for auto-regressive machine learning tasks, where the input and output have a strict left-to-right causal structure. More specifically, we propose F ARZI , which summarizes an event sequence dataset into a small number of synthetic sequences — F ARZI D ATA — which are optimized to maintain (if not improve) model performance compared to training on the full dataset. Under the hood, F ARZI conducts memory-efficient data distillation by (i) deriving efficient reverse-mode differentiation of the Adam optimizer by leveraging Hessian-Vector Products; and (ii) factorizing the high-dimensional discrete event-space into a latent-space which provably promotes implicit regularization. Empirically, for sequential recommendation and language modeling tasks, we are able to achieve 98 − 120 % of downstream full-data performance when training state-of-the-art models on F ARZI ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "page_number": 9,
+      "section_id": "paper_025_openreview_2024_02_11_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "In this paper, we proposed F ARZI — a scalable technique to summarize large amounts of autoregressive data into a terse, high-fidelity data summary. Through extensive experiments on next-item recommendation and language modeling, we demonstrated that data synthesized by F ARZI (F ARZI D ATA ) is able to train various kinds of state-of-the-art models to the same quality (if not better) as training them on the full dataset, despite F ARZI D ATA being up to 3 orders of magnitude smaller. Having demonstrated F ARZI D ATA ’s prowess to train autoregressive models, we also highlight a few shortcomings and unexplored directions that we delay for future work. First, even though F ARZI performs distillation in a latent-space, it is hard to scale to applications that naturally consist of very-long sequences, e.g. , video, music, etc. because F ARZI D ATA is parameterized linearly in the length of ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_025_ev_003",
+      "page_number": 15,
+      "section_id": "paper_025_openreview_2024_02_11_sec_b_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0021",
+      "evidence_mode": "quote",
+      "excerpt": "Proof. We first begin by defining a few preliminary terms and properties:\n\nDefinition B.1. (Representativeness of D ) For a given function-class F , task loss function l ( · ) , train-set D = { x ,x ,...,x } sampled from the true data distribution P n : 1 2 n (cid:16) (cid:17) Rep( F , D ) ≜ sup E [ l ( f,x )] − E [ l ( f,x )] , f ∈F x ∼P x ∼D\n\nwhich intuitively measures the maximum discrepancy between the empirical risk and the true risk for a given training set. Naturally, a lower Rep( F , · ) avoids overfitting and is desirable.\n\nDefinition B.2. (Rademacher complexity) For a given given function-class F , and train-set D = { x ,x ,...,x } : 1 2 n (cid:34) (cid:35) σ · f ( x ) R ( F , D ) ≜ E sup i i , σ 1 ,σ 2 ,...,σ n ∈{± 1 } f ∈F n\n\nwhere σ ,σ ,...,σ are independent random variables from the Rademacher distribution. R ( F , D ) 1 2 n intuitively measures the learning capacity of F b",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_025_ev_004",
+      "page_number": 6,
+      "section_id": "paper_025_openreview_2024_02_11_sec_4_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0010",
+      "evidence_mode": "quote",
+      "excerpt": "How sample efficient is F ARZI D ATA ? We evaluate the fidelity of F ARZI D ATA by first optimizing for D using Equation (2), followed by training Φ (from scratch) on D . We plot the performance syn syn of the trained Φ on the test-set for various amounts of data budgets ( µ ) in Figures 3 and 4 for sequential recommendation and language modeling tasks respectively. A tabular version of the same results can be found in Appendix D, Table 6. We also plot semantically equivalent results for other\n\nAmazon Magazine ML-100k ML-1M Netflix\n\n25 20 18 20 16 15 0 18 1 12 @ 15 12 R 12 9 H 10 8 6 6 5 4 3 0.3% 1% 5% 20% 100% 1% 5% 20% 100% 0.2% 1% 5% 20% 100% 0.01%0.1% 1% 10% 100% Data summary size Data summary size Data summary size Data summary size\n\nFull Data Random Head Farzi\n\nFigure 3: Performance change of SASRec with increasing data (log-scale) for recommendation. For a tabular version of these",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_025_ev_005",
+      "page_number": 2,
+      "section_id": "paper_025_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "Figure 1: Visualization of F ARZI D ATA in the context of language modeling. F ARZI D ATA can be seen as a 3-D tensor comprising of sequences of distributions over tokens , where a single distribution sequence fuses the information content of multiple discrete sequences. E.g, a single distribution sentence can unfold into an entire tree of similar sentences like “the rabbit slept under the sofa” or “a dog stood at the bed” as depicted in the figure. Such a parameterization: (i) makes the dataset much more GPU/TPU friendly; (ii) reduces the cardinality of the dataset leading to efficient training; and (iii) enables models to be trained on fuzzy sequences , hopefully leading to robust learning.\n\nthe aforementioned characteristics of auto-regressive data by performing data distillation in a latent space by organizing F ARZI D ATA into (i) a latent data summary that captures the downstream t",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_025_ev_006",
+      "page_number": 18,
+      "section_id": "paper_025_openreview_2024_02_11_sec_c_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_025_openreview_2024_02_11_chunk_0024",
+      "evidence_mode": "quote",
+      "excerpt": "We list the datasets used in this paper as well as brief data statistics in Table 3. We discuss other task-specific preprocessing and train/test splitting strategy below.\n\nSequential Recommendation. Owing to recent work (Sachdeva et al., 2022c), we follow the minimal amount of preprocessing by only removing the users with less than two total interactions. We simulate the train/test split from the strong-generalization school-of-thought (Liang et al., 2018), where we keep a completely disjoint set of 80 / 10 / 10 % train, validation, and test users split randomly. For each user in the validation/test-set, the chronologically last interacted item is used for computing ranking metrics, whereas all previous interactions are used as context for the model. Further, to simulate a realistic recommendation scenario, we compute all metrics on the full item-space without any down-sampling (Krichene",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_025_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_025_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_025_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_025_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_025_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_025_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_025_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_025_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_025_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_025_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_025_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

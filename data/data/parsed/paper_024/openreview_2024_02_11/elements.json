@@ -1,0 +1,86 @@
+[
+  {
+    "element_id": "paper_024_openreview_2024_02_11_figure_1",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_2_1",
+    "element_type": "figure",
+    "label": "Figure 1",
+    "caption": "Architecture of PINNacle. It contains a dataset covering more than 20 PDEs, a toolbox that implements about 10 SOTA methods, and an evaluation module. These methods have a wide range of application scenarios like fluid mechanics, electromagnetism, heat conduction, geophysics, and so on. components — a diverse dataset, a toolbox, and evaluation modules. The dataset comprises tasks from over 20 different PDEs from various domains, including heat conduction, fluid dynamics,",
+    "page_number": 2,
+    "extracted_text": null,
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0002.png",
+    "parse_quality": "good"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_table_1",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_3_3_1",
+    "element_type": "table",
+    "label": "Table 1",
+    "caption": "Overview of our datasets along with their challenges. We chose 22 cases in total to evaluate the methods of PINNs. The left picture shows the visualization of cases with these four challenges, i.e., complex geometry, multi-scale, nonlinearity, and high dimension. 3.3 M ETHODS AND T OOLBOX After conducting an extensive literature review, we present an overview of diverse PINNs approaches",
+    "page_number": 5,
+    "extracted_text": null,
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0005.png",
+    "parse_quality": "partial"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_table_2",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_3_4",
+    "element_type": "table",
+    "label": "Table 2",
+    "caption": "Overivew of methods in our PINNacle. denotes the method is potentially designed to solve or show empirical improvements for problems encountering the challenge and vice versa. custom activation functions (Jagtap et al., 2020a;b), and domain decomposition (Jagtap & Karniadakis, 2021; Shukla et al., 2021; Jagtap et al., 2020c; Moseley et al., 2021). Among adaptive activations for PINNs, we choose LAAF (Jagtap et al., 2020a) and GAAF (Jagtap",
+    "page_number": 6,
+    "extracted_text": null,
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0006.png",
+    "parse_quality": "partial"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_table_3",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_4_1",
+    "element_type": "table",
+    "label": "Table 3",
+    "caption": "Mean L2RE of different PINN variants on our benchmark.Best results are highlighted in blue and second-places in lightblue. We do not bold any result if errors of all methods are about 100% . “NaN” means the method does not converge and “–” means the method is not suitable for the problem. 4 E XPERIMENTS",
+    "page_number": 7,
+    "extracted_text": "Vanilla |  |  | LossReweighting/Sampling |  | Optimizer | Lossfunctions | \nPINN PINN-w |  | LBFGS | LRA NTK RAR |  | MultiAdam | gPINN vPINN | \n1.45E-2 2.63E-2\n3.24E-1 2.70E-1 |  | 1.33E-2 |  |  |  |  | 1.43E-2\n | 2.70E-1 | 4.65E-1 | 2.60E-1 |  |  |  | \n |  |  |  | 1.23E-2 |  |  | \n |  |  |  | 1.43E-2 |  |  | \n |  |  | 1.02E-1 |  |  |  | ",
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0007.png",
+    "parse_quality": "good"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_table_4",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_4_3",
+    "element_type": "table",
+    "label": "Table 4",
+    "caption": "Results of different PINN variants on parametric PDEs. We report average L2RE on all examples within a class of PDE. We bold the best results across all methods. Discussion. For challenges related to complex geometries and multi-scale phenomena, some methods can mitigate these issues by implementing mechanisms like loss reweighting, novel optimizers, and better capacity through adaptive activation. This holds true for the 2D cases of Heat and Poisson",
+    "page_number": 8,
+    "extracted_text": "Vanilla | LossReweighting/Sampling | Optimizer | Lossfunctions\nPINN LRA NTK RAR |  | MultiAdam | gPINN vPINN",
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0008.png",
+    "parse_quality": "good"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_figure_2",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_5",
+    "element_type": "figure",
+    "label": "Figure 2",
+    "caption": "Performance of vanilla PINNs under different batch sizes (number of collocation points), which is shown in the left figure; and number of training epochs, which is shown in the right figure. 10 0 10 0 10 0 D x e l D 1 r p m on2",
+    "page_number": 9,
+    "extracted_text": null,
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0009.png",
+    "parse_quality": "good"
+  },
+  {
+    "element_id": "paper_024_openreview_2024_02_11_figure_3",
+    "paper_version_id": "paper_024_openreview_2024_02_11",
+    "section_id": "paper_024_openreview_2024_02_11_sec_5",
+    "element_type": "figure",
+    "label": "Figure 3",
+    "caption": "Convergence curve of PINNs with different learning rate schedules on Burgers1d, Heat2d- CG, and Poisson2d-C. Learning Rates. The performance of standard PINNs under various learning rates and learning rate schedules is shown in Figure 3. We observe that the influence of the learning rate on performance is intricate, with optimal learning rates varying across problems. Furthermore, PINN training tends to",
+    "page_number": 9,
+    "extracted_text": null,
+    "asset_object_key": "renders/paper_024/openreview_2024_02_11/page-0009.png",
+    "parse_quality": "good"
+  }
+]

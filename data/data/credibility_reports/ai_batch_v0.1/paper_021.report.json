@@ -1,0 +1,5015 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-214ec6a344512e5f",
+  "paper_version_id": "paper_021_openreview_2024_02_11",
+  "pdf_sha256": "246fa0bc5245c3762fa5b380735dce695ad3d31bada74f32710703b926653999",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "60db5e3a76431903ed759244745724d6123d8beef690b0736e9740737ec701ef",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.157407407407407,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.472222222222222,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 72,
+        "extracted_count": 72,
+        "parsed_count": 69,
+        "queried_count": 69,
+        "matched_count": 9,
+        "metadata_conflict_count": 2,
+        "unverified_count": 35,
+        "parse_failed_count": 3,
+        "not_checked_count": 0,
+        "query_failed_count": 23,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://openreview.net/pdf?id=bDWXhzZT40",
+            "checked_at": "2026-10-09T04:46:35.688765Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "diabetic retinopathy detection challenge, 2015, 2015",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=diabetic+retinopathy+detection+challenge%2C+2015%2C+2015&rows=5",
+        "checked_at": "2026-10-09T04:46:08.328363Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Surgical Techniques for Diabetic Retinopathy",
+            "authors": [
+              "Spandau",
+              "Tomic"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1007/978-3-319-14787-1_8",
+            "source_url": "https://doi.org/10.1007/978-3-319-14787-1_8",
+            "title_similarity": 0.425531914893617
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Diabetic Retinopathy",
+            "authors": [
+              "Lumbroso",
+              "Rispoli",
+              "Savastano"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.5005/jp/books/12596_3",
+            "source_url": "https://doi.org/10.5005/jp/books/12596_3",
+            "title_similarity": 0.5714285714285714
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Severe Proliferative Diabetic Retinopathy: Difficult PDR",
+            "authors": [
+              "Spandau",
+              "Tomic"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1007/978-3-319-14787-1_11",
+            "source_url": "https://doi.org/10.1007/978-3-319-14787-1_11",
+            "title_similarity": 0.45714285714285713
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Mild Proliferative Diabetic Retinopathy: Easy PDR",
+            "authors": [
+              "Spandau",
+              "Tomic"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1007/978-3-319-14787-1_10",
+            "source_url": "https://doi.org/10.1007/978-3-319-14787-1_10",
+            "title_similarity": 0.4489795918367347
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Diabetic Retinopathy Treatment",
+            "authors": [
+              "Lumbroso",
+              "Rispoli",
+              "Savastano"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.5005/jp/books/12596_11",
+            "source_url": "https://doi.org/10.5005/jp/books/12596_11",
+            "title_similarity": 0.625
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:08.326438Z",
+        "response_sha256": "e646c4dd03bfdc839e1a19065443f147e5931c4def3a24f110e11790faa84fbd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=diabetic+retinopathy+detection+challenge%2C+2015%2C+2015&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:08.328363Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Meta Soft Label Generation for Noisy Labels",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Meta+Soft+Label+Generation+for+Noisy+Labels&rows=5",
+        "checked_at": "2026-10-09T04:46:09.052530Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Meta Soft Label Generation for Noisy Labels",
+            "authors": [
+              "Algan",
+              "Ulusoy"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/icpr48806.2021.9412490",
+            "source_url": "https://doi.org/10.1109/icpr48806.2021.9412490",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning to Purify Noisy Labels via Meta Soft Label Corrector",
+            "authors": [
+              "Wu",
+              "Shu",
+              "Xie",
+              "Zhao",
+              "Meng"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1609/aaai.v35i12.17244",
+            "source_url": "https://doi.org/10.1609/aaai.v35i12.17244",
+            "title_similarity": 0.36538461538461536
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Noisy-label learning techniques",
+            "authors": [
+              "Carneiro"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/b978-0-44-315441-6.00013-7",
+            "source_url": "https://doi.org/10.1016/b978-0-44-315441-6.00013-7",
+            "title_similarity": 0.32432432432432434
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Noisy-label problems and datasets",
+            "authors": [
+              "Carneiro"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/b978-0-44-315441-6.00011-3",
+            "source_url": "https://doi.org/10.1016/b978-0-44-315441-6.00011-3",
+            "title_similarity": 0.3157894736842105
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Theoretical aspects of noisy-label learning",
+            "authors": [
+              "Carneiro"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/b978-0-44-315441-6.00012-5",
+            "source_url": "https://doi.org/10.1016/b978-0-44-315441-6.00012-5",
+            "title_similarity": 0.4418604651162791
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:09.050659Z",
+        "response_sha256": "6d8728973ed9852098f3432951d5d4621717b89bd89c053790db369516c89caa",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Meta+Soft+Label+Generation+for+Noisy+Labels&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:09.052530Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-3",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Implicit differentiation of lasso-type models for hyperparameter optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Implicit+differentiation+of+lasso-type+models+for+hyperparameter+optimization&rows=5",
+        "checked_at": "2026-10-09T04:46:10.494395Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:10.494314Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Implicit+differentiation+of+lasso-type+models+for+hyperparameter+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:10.494395Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-5",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Weight uncertainty in neural network",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Weight+uncertainty+in+neural+network&rows=5",
+        "checked_at": "2026-10-09T04:46:10.635621Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:10.635564Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Weight+uncertainty+in+neural+network&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:10.635621Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-6",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Verification of forecasts expressed in terms of probability",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Verification+of+forecasts+expressed+in+terms+of+probability&rows=5",
+        "checked_at": "2026-10-09T04:46:11.126041Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:11.125919Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Verification+of+forecasts+expressed+in+terms+of+probability&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:11.126041Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-7",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Bayesian backpropagation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Bayesian+backpropagation&rows=5",
+        "checked_at": "2026-10-09T04:46:11.336794Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:11.336736Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Bayesian+backpropagation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:11.336794Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Near optimal heteroscedastic regression with symbiotic learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Near+optimal+heteroscedastic+regression+with+symbiotic+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:11.340771Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Active Learning with Heteroscedastic Gaussian Process Regression Model",
+            "authors": [
+              "Ozbayram",
+              "Olivier",
+              "Graham-Brady"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6434896",
+            "source_url": "https://doi.org/10.2139/ssrn.6434896",
+            "title_similarity": 0.5413533834586466
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Optimal difference-based variance estimation in heteroscedastic nonparametric regression",
+            "authors": [
+              "Zhou",
+              "Cheng",
+              "Wang",
+              "Tong"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.5705/ss.2013.010",
+            "source_url": "https://doi.org/10.5705/ss.2013.010",
+            "title_similarity": 0.4503311258278146
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Optimal model selection in heteroscedastic regression using piecewise polynomial functions",
+            "authors": [
+              "Saumard"
+            ],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1214/13-ejs803",
+            "source_url": "https://doi.org/10.1214/13-ejs803",
+            "title_similarity": 0.5098039215686274
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Optimal designs for heteroscedastic regression models with two parameters",
+            "authors": [
+              "Zaigraev",
+              "Wilk"
+            ],
+            "year": 2019,
+            "years": [
+              2019,
+              2020
+            ],
+            "doi": "10.1080/02331888.2019.1702041",
+            "source_url": "https://doi.org/10.1080/02331888.2019.1702041",
+            "title_similarity": 0.6470588235294118
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A geometric characterization of c-optimal designs for heteroscedastic regression",
+            "authors": [
+              "Dette",
+              "Holland-Letz"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1214/09-aos708",
+            "source_url": "https://doi.org/10.1214/09-aos708",
+            "title_similarity": 0.5314685314685315
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:11.339268Z",
+        "response_sha256": "1c643c786e675f7034525a0387047c35fe77a976b9b8b1e8231ae63a6a187c98",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Near+optimal+heteroscedastic+regression+with+symbiotic+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:11.340771Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Large automatic learning, rule extraction, and generalization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Large+automatic+learning%2C+rule+extraction%2C+and+generalization&rows=5",
+        "checked_at": "2026-10-09T04:46:11.221576Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Automatic rule discovery and generalization in supervised and unsupervised learning tasks",
+            "authors": [
+              "Cattral"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.22215/etd/2008-06305",
+            "source_url": "https://doi.org/10.22215/etd/2008-06305",
+            "title_similarity": 0.4864864864864865
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Programming Assessment in E-Learning through Rule-Based Automatic Question Generation with Large Language Models",
+            "authors": [
+              "Saputro",
+              "Nurhasan",
+              "Nur Wijayaningrum"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.30871/jaic.v9i6.10901",
+            "source_url": "https://doi.org/10.30871/jaic.v9i6.10901",
+            "title_similarity": 0.3742690058479532
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Frontmatter",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1515/9783110803488.fm",
+            "source_url": "https://doi.org/10.1515/9783110803488.fm",
+            "title_similarity": 0.22857142857142856
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Contents",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1515/9783110803488.v",
+            "source_url": "https://doi.org/10.1515/9783110803488.v",
+            "title_similarity": 0.1791044776119403
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Register",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1515/9783110803488.287",
+            "source_url": "https://doi.org/10.1515/9783110803488.287",
+            "title_similarity": 0.14925373134328357
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:11.220456Z",
+        "response_sha256": "65ad07cb5c938a1f97e3e7be681a595d03da17ccedf9220cea6d00478ca2227d",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Large+automatic+learning%2C+rule+extraction%2C+and+generalization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:11.221576Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-10",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-10",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Uncertainty decomposition in bayesian neural networks with latent variables",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Uncertainty+decomposition+in+bayesian+neural+networks+with+latent+variables&rows=5",
+        "checked_at": "2026-10-09T04:46:13.089050Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Encoding the Latent Posterior of Bayesian Neural Networks for Uncertainty Quantification_supp1-3328829.pdf",
+            "authors": [
+              "Franchi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2023.3328829/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3328829/mm1",
+            "title_similarity": 0.5193370165745856
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bayesian estimation of multidimensional latent variables and its asymptotic accuracy",
+            "authors": [
+              "Yamazaki"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1016/j.neunet.2018.03.002",
+            "source_url": "https://doi.org/10.1016/j.neunet.2018.03.002",
+            "title_similarity": 0.37735849056603776
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Uncertainty decomposition and quantification of seasonal precipitation forecasting based on Bayesian neural networks",
+            "authors": [
+              "Pinheiro",
+              "Ouarda"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.atmosres.2026.108815",
+            "source_url": "https://doi.org/10.1016/j.atmosres.2026.108815",
+            "title_similarity": 0.5549738219895288
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Accuracy of latent-variable estimation in Bayesian semi-supervised learning",
+            "authors": [
+              "Yamazaki"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1016/j.neunet.2015.04.012",
+            "source_url": "https://doi.org/10.1016/j.neunet.2015.04.012",
+            "title_similarity": 0.4666666666666667
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Uncertainty propagation for dropout-based Bayesian neural networks",
+            "authors": [
+              "Mae",
+              "Kumagai",
+              "Kanamori"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neunet.2021.09.005",
+            "source_url": "https://doi.org/10.1016/j.neunet.2021.09.005",
+            "title_similarity": 0.624113475177305
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:13.087683Z",
+        "response_sha256": "c1031708f1bfece4b9f7cfe247f060208930b846f6d5df9f916e6c06ed1b1b4e",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Uncertainty+decomposition+in+bayesian+neural+networks+with+latent+variables&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:13.089050Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-11",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Decomposition of uncertainty in bayesian deep learning for efficient and risk-sensitive learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Decomposition+of+uncertainty+in+bayesian+deep+learning+for+efficient+and+risk-sensitive+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:13.509816Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bayesian Deep Learning for Uncertainty Quantification in Financial Stress Testing and Risk Forecasting",
+            "authors": [
+              "Umavezi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.55248/gengpi.6.0525.1786",
+            "source_url": "https://doi.org/10.55248/gengpi.6.0525.1786",
+            "title_similarity": 0.494949494949495
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "An efficient surrogate modeling method for high dimensional uncertainty propagation via deep Bayesian active learning",
+            "authors": [
+              "Liu",
+              "Feng",
+              "Ban",
+              "Wu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5895135",
+            "source_url": "https://doi.org/10.2139/ssrn.5895135",
+            "title_similarity": 0.4507042253521127
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Hybrid Deep Learning Framework for Cardiovascular Risk Prediction Using Temporal Embeddings, Ensemble Learning, and Bayesian Uncertainty Estimation",
+            "authors": [
+              "Joseph",
+              "Kartheeban"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.31449/inf.v50i1.13040",
+            "source_url": "https://doi.org/10.31449/inf.v50i1.13040",
+            "title_similarity": 0.35390946502057613
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Risk-Sensitive Joint Inventory-Maintenance Strategy for Bearing Health Management under Prognostic Uncertainty: An Uncertainty-Aware Deep Reinforcement Learning Approach",
+            "authors": [
+              "Zhang",
+              "Shen",
+              "Wang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-8614588/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-8614588/v1",
+            "title_similarity": 0.17424242424242425
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Uncertainty quantification in deep learning via Bayesian inference mechanism",
+            "authors": [
+              "Wei"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1117/12.3121454",
+            "source_url": "https://doi.org/10.1117/12.3121454",
+            "title_similarity": 0.47674418604651164
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:13.508182Z",
+        "response_sha256": "9c0ebd771e10dac999cdf2c9d79a935ae1e10bac54ce894ccdbd1911126d7e9c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Decomposition+of+uncertainty+in+bayesian+deep+learning+for+efficient+and+risk-sensitive+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:13.509816Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-12",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-12",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On the foundations of noise-free selective classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+the+foundations+of+noise-free+selective+classification&rows=5",
+        "checked_at": "2026-10-09T04:46:14.064902Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:14.064845Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+the+foundations+of+noise-free+selective+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:14.064902Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Trainable calibration measures for neural networks from kernel mean embeddings",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Trainable+calibration+measures+for+neural+networks+from+kernel+mean+embeddings&rows=5",
+        "checked_at": "2026-10-09T04:46:12.171859Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Calibration by Distribution Matching: Trainable Kernel Calibration Metrics",
+            "authors": [
+              "Marx",
+              "Zalouk",
+              "Ermon"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1127",
+            "source_url": "https://doi.org/10.52202/075280-1127",
+            "title_similarity": 0.33112582781456956
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Kernelized Cumulants: Beyond Kernel Mean Embeddings",
+            "authors": [
+              "Bonnier",
+              "Oberhauser",
+              "Szabo"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-0488",
+            "source_url": "https://doi.org/10.52202/075280-0488",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Improved Trainable Calibration Method for Neural Networks",
+            "authors": [
+              "Liang",
+              "Zhang",
+              "Wang",
+              "Jacobs"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.5244/c.34.16",
+            "source_url": "https://doi.org/10.5244/c.34.16",
+            "title_similarity": 0.6518518518518519
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A trainable controller based on neural network",
+            "authors": [],
+            "year": 1988,
+            "years": [
+              1988
+            ],
+            "doi": "10.1016/0893-6080(88)90364-4",
+            "source_url": "https://doi.org/10.1016/0893-6080(88)90364-4",
+            "title_similarity": 0.5483870967741935
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Leveraging Neural Networks and Calibration Measures for Confident Feature Selection_supp1-3535659.pdf",
+            "authors": [
+              "Gandomi"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tetci.2025.3535659/mm1",
+            "source_url": "https://doi.org/10.1109/tetci.2025.3535659/mm1",
+            "title_similarity": 0.49162011173184356
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:12.170550Z",
+        "response_sha256": "dd06078f0284d54fad44d896bc92c508b33245e2775447b4deac3334c37fb905",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Trainable+calibration+measures+for+neural+networks+from+kernel+mean+embeddings&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:12.171859Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mix and match: an optimistic tree-search approach for learning models from mixture distributions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mix+and+match%3A+an+optimistic+tree-search+approach+for+learning+models+from+mixture+distributions&rows=5",
+        "checked_at": "2026-10-09T04:46:14.182950Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:14.182888Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mix+and+match%3A+an+optimistic+tree-search+approach+for+learning+models+from+mixture+distributions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:14.182950Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Stop overcomplicating selective classification: Use max-logit",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Stop+overcomplicating+selective+classification%3A+Use+max-logit&rows=5",
+        "checked_at": "2026-10-09T04:46:14.281240Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Corporate Bankruptcy Prediction with the Use of the Logit Leaf Model",
+            "authors": [
+              "Pawełek",
+              "Pociecha"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1007/978-3-030-52348-0_9",
+            "source_url": "https://doi.org/10.1007/978-3-030-52348-0_9",
+            "title_similarity": 0.3125
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "STOP-ROP Results Suggest Selective Use of Supplemental Oxygen for Prethreshold ROP",
+            "authors": [
+              "Mills"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.1001/archopht.118.8.1121",
+            "source_url": "https://doi.org/10.1001/archopht.118.8.1121",
+            "title_similarity": 0.43661971830985913
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Controlling for misclassified land use data: A post-classification latent multinomial logit approach",
+            "authors": [
+              "Marcos Martinez",
+              "Baerenklau"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1016/j.rse.2015.09.025",
+            "source_url": "https://doi.org/10.1016/j.rse.2015.09.025",
+            "title_similarity": 0.4528301886792453
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "On the use of time-delay neural networks for highly accurate classification of stop consonants",
+            "authors": [
+              "Hou",
+              "Rabiner",
+              "Dusan"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.21437/interspeech.2007-41",
+            "source_url": "https://doi.org/10.21437/interspeech.2007-41",
+            "title_similarity": 0.38961038961038963
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Stop selective official harassment of minority groups",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1163/2210-7975_hrd-1184-20190006",
+            "source_url": "https://doi.org/10.1163/2210-7975_hrd-1184-20190006",
+            "title_similarity": 0.46017699115044247
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:14.279830Z",
+        "response_sha256": "fde6da5daf20e54a5384c520c5ae5f094f19fa61a8c921e8dd364879579baff8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Stop+overcomplicating+selective+classification%3A+Use+max-logit&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:14.281240Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A systematic comparison of bayesian deep learning robustness in diabetic retinopathy tasks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+systematic+comparison+of+bayesian+deep+learning+robustness+in+diabetic+retinopathy+tasks&rows=5",
+        "checked_at": "2026-10-09T04:46:15.644299Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Bayesian Deep Learning Applied to Diabetic Retinopathy with Uncertainty Quantification",
+            "authors": [
+              "Hassan",
+              "Ismail"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4402872",
+            "source_url": "https://doi.org/10.2139/ssrn.4402872",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Bayesian deep learning applied to diabetic retinopathy with uncertainty quantification",
+            "authors": [
+              "Hassan",
+              "Ismail"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.heliyon.2025.e41802",
+            "source_url": "https://doi.org/10.1016/j.heliyon.2025.e41802",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Deep Learning - Based Diabetic Retinopathy Detection: A Survey on Deep Learning Architectures",
+            "authors": [
+              "G A"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21275/sr24805160228",
+            "source_url": "https://doi.org/10.21275/sr24805160228",
+            "title_similarity": 0.4777777777777778
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Learning For Diabetic Retinopathy In Fundus Images",
+            "authors": [
+              "Rituraj"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.31224/2763",
+            "source_url": "https://doi.org/10.31224/2763",
+            "title_similarity": 0.5379310344827586
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Classification and Comparison of Diabetic Retinopathy Using Deep Learning Methods",
+            "authors": [
+              "Ural"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/siu66497.2025.11112223",
+            "source_url": "https://doi.org/10.1109/siu66497.2025.11112223",
+            "title_similarity": 0.5146198830409356
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:15.642664Z",
+        "response_sha256": "8ef005f64dacb8989aaa8f4a99351ed633cda426383b2576abcf8175fef3e0f9",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+systematic+comparison+of+bayesian+deep+learning+robustness+in+diabetic+retinopathy+tasks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:15.644299Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-17",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Calibrated selective classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Calibrated+selective+classification&rows=5",
+        "checked_at": "2026-10-09T04:46:16.325307Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:16.325211Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Calibrated+selective+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:16.325307Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Dropout as a bayesian approximation: Representing model uncertainty in deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Dropout+as+a+bayesian+approximation%3A+Representing+model+uncertainty+in+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:15.592012Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Model Uncertainty in Deep Learning Simulation of Daily Streamflow with Monte Carlo Dropout",
+            "authors": [
+              "Sadeghi Tabas",
+              "Samadi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.5194/egusphere-egu21-9145",
+            "source_url": "https://doi.org/10.5194/egusphere-egu21-9145",
+            "title_similarity": 0.3930635838150289
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Representing Uncertainty in Property Valuation Through a Bayesian Deep Learning Approach",
+            "authors": [
+              "Lee",
+              "Park"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1515/remav-2020-0028",
+            "source_url": "https://doi.org/10.1515/remav-2020-0028",
+            "title_similarity": 0.47953216374269003
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Uncertainty-Aware Reinforcement Learning for Zero Trust: An Empirical Evaluation of PPO, MC Dropout, and Bayesian Neural Networks",
+            "authors": [
+              "Kalekar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.5220/0014245800004061",
+            "source_url": "https://doi.org/10.5220/0014245800004061",
+            "title_similarity": 0.23923444976076555
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Uncertainty estimation in AVO inversion using Bayesian dropout based deep learning",
+            "authors": [
+              "Junhwan",
+              "Seokmin",
+              "Joongmoo"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.petrol.2021.109288",
+            "source_url": "https://doi.org/10.1016/j.petrol.2021.109288",
+            "title_similarity": 0.3393939393939394
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Quantifying predictive uncertainty in damage classification for nondestructive evaluation using Bayesian approximation and deep learning",
+            "authors": [
+              "Li",
+              "Deng"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1088/1361-6420/ad2f63",
+            "source_url": "https://doi.org/10.1088/1361-6420/ad2f63",
+            "title_similarity": 0.4383561643835616
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:15.589267Z",
+        "response_sha256": "9b884f3b4baf362324404dd86d588754f7bcf15039a3bdd77aa498b3c7552794",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Dropout+as+a+bayesian+approximation%3A+Representing+model+uncertainty+in+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:15.592012Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-19",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Selective classification via one-sided prediction",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Selective+classification+via+one-sided+prediction&rows=5",
+        "checked_at": "2026-10-09T04:46:16.257923Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Reliability-aware BERT-based Emotion Classification via Probability Calibration and Selective Prediction",
+            "authors": [
+              "Albzour"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7225999",
+            "source_url": "https://doi.org/10.2139/ssrn.7225999",
+            "title_similarity": 0.5490196078431373
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Indoor Air Quality Monitoring System with High Accuracy of Gas Classification and Concentration Prediction via Selective Mechanism Research",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acssensors.4c01178.s002",
+            "source_url": "https://doi.org/10.1021/acssensors.4c01178.s002",
+            "title_similarity": 0.3829787234042553
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Indoor Air Quality Monitoring System with High Accuracy of Gas Classification and Concentration Prediction via Selective Mechanism Research",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acssensors.4c01178.s001",
+            "source_url": "https://doi.org/10.1021/acssensors.4c01178.s001",
+            "title_similarity": 0.3829787234042553
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Right-Sizing Cloud Data Warehouses Under Asymmetric Loss via One-Sided Conformal Prediction",
+            "authors": [
+              "Ke"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/access.2026.3704918",
+            "source_url": "https://doi.org/10.1109/access.2026.3704918",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A complete classification of rings without nontrivial one-sided ideals in their one-sided ideal extensions",
+            "authors": [
+              "Nowakowska"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1080/00927872.2025.2483440",
+            "source_url": "https://doi.org/10.1080/00927872.2025.2483440",
+            "title_similarity": 0.5419354838709678
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:16.256643Z",
+        "response_sha256": "ea338d25a230aaf8e9ffd7bb232971feea7a74cde2df915b11f02707e5b297dc",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Selective+classification+via+one-sided+prediction&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:16.257923Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Domain-adversarialtrainingofneuralnetworks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Domain-adversarialtrainingofneuralnetworks&rows=5",
+        "checked_at": "2026-10-09T04:46:15.440473Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Domain-Domain Interactions",
+            "authors": [
+              "Kangueane",
+              "Nilofer"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1007/978-981-10-7347-2_12",
+            "source_url": "https://doi.org/10.1007/978-981-10-7347-2_12",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Public Domain",
+            "authors": [],
+            "year": 1996,
+            "years": [
+              1996
+            ],
+            "doi": "10.5040/9781350909090",
+            "source_url": "https://doi.org/10.5040/9781350909090",
+            "title_similarity": 0.21818181818181817
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Public Domain",
+            "authors": [],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.5040/9781350983120",
+            "source_url": "https://doi.org/10.5040/9781350983120",
+            "title_similarity": 0.21818181818181817
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Protein Subunit-Subunit to Domain-Domain Interactions",
+            "authors": [
+              "Kangueane",
+              "Nilofer"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1007/978-981-10-7347-2_11",
+            "source_url": "https://doi.org/10.1007/978-981-10-7347-2_11",
+            "title_similarity": 0.37894736842105264
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Frequency-Domain and Spatial-Domain Reconfigurable Metasurface",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsami.0c02467.s001",
+            "source_url": "https://doi.org/10.1021/acsami.0c02467.s001",
+            "title_similarity": 0.5
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:15.439057Z",
+        "response_sha256": "6574c7d297b9a2c60f08800c165b3f7ec8610c82652d22f9060339e53d0b95d5",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Domain-adversarialtrainingofneuralnetworks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:15.440473Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-21",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-21",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-21",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Selective classification for deep neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Selective+classification+for+deep+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:16.224116Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Landscape classification with deep neural networks.",
+            "authors": [
+              "Buscombe"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.31223/osf.io/5mx3c",
+            "source_url": "https://doi.org/10.31223/osf.io/5mx3c",
+            "title_similarity": 0.8080808080808081
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep neural networks for time series classification",
+            "authors": [
+              "Cheng"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/170362",
+            "source_url": "https://doi.org/10.32657/10356/170362",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Exploring Deep Neural Networks for Plant Image Classification",
+            "authors": [
+              "Bafandkar"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.36939/ir.202205031043",
+            "source_url": "https://doi.org/10.36939/ir.202205031043",
+            "title_similarity": 0.45454545454545453
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Neural Networks for Classification of LC-MS Spectral Peaks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.analchem.9b02983.s001",
+            "source_url": "https://doi.org/10.1021/acs.analchem.9b02983.s001",
+            "title_similarity": 0.35714285714285715
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep Convolutional Spiking Neural Networks for Image Classification",
+            "authors": [
+              "Vaila"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18122/td.1782.boisestate",
+            "source_url": "https://doi.org/10.18122/td.1782.boisestate",
+            "title_similarity": 0.3448275862068966
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:16.222705Z",
+        "response_sha256": "282a17c498254ff0dbbe061d6bdf78151ff08ac4c6fd1ebb05e281dfca0594c2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Selective+classification+for+deep+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:16.224116Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-22",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-22",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-22",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Selectivenet: A deep neural network with an integrated reject option",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Selectivenet%3A+A+deep+neural+network+with+an+integrated+reject+option&rows=5",
+        "checked_at": "2026-10-09T04:46:16.749455Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Reject-Option Ensemble Learning for Neural Network-Based Channel Equalization",
+            "authors": [
+              "Almeida",
+              "Neto"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/cai68641.2026.11536589",
+            "source_url": "https://doi.org/10.1109/cai68641.2026.11536589",
+            "title_similarity": 0.5138888888888888
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Neural network with reject option for error correction in data packets",
+            "authors": [
+              "Almeida",
+              "Rocha Neto"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.asoc.2025.114010",
+            "source_url": "https://doi.org/10.1016/j.asoc.2025.114010",
+            "title_similarity": 0.48175182481751827
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A neural network with reject option approach for equalization and error detection",
+            "authors": [
+              "Almeida",
+              "Rocha Neto"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s10489-025-06998-x",
+            "source_url": "https://doi.org/10.1007/s10489-025-06998-x",
+            "title_similarity": 0.47297297297297297
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Error Correction in Bluetooth Low Energy via Neural Network with Reject Option",
+            "authors": [
+              "Almeida",
+              "Marinho",
+              "de Almeida",
+              "Rocha Neto"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.3390/s25196191",
+            "source_url": "https://doi.org/10.3390/s25196191",
+            "title_similarity": 0.6068965517241379
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Deep Calibration With Artificial Neural Network: A Performance Comparison on Option Pricing Models",
+            "authors": [
+              "Kim",
+              "Kim",
+              "Choi"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4388782",
+            "source_url": "https://doi.org/10.2139/ssrn.4388782",
+            "title_similarity": 0.4146341463414634
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:16.747934Z",
+        "response_sha256": "61ad82b12c95917afeebd54963ba204005c90b8481beac0b039c83519e659cad",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Selectivenet%3A+A+deep+neural+network+with+an+integrated+reject+option&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:16.749455Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-24",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Efficient stochastic gradient descent for learning with distributionally robust optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Efficient+stochastic+gradient+descent+for+learning+with+distributionally+robust+optimization&rows=5",
+        "checked_at": "2026-10-09T04:46:19.103602Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:19.103521Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Efficient+stochastic+gradient+descent+for+learning+with+distributionally+robust+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:19.103602Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "On calibration of modern neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=On+calibration+of+modern+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:17.325246Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Newton–Puiseux analysis for interpretability and calibration of complex-valued neural networks",
+            "authors": [
+              "Migus"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108172",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108172",
+            "title_similarity": 0.5373134328358209
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Sensor calibration using artificial neural networks",
+            "authors": [
+              "Masory",
+              "Aguirre"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1109/ijcnn.1989.118324",
+            "source_url": "https://doi.org/10.1109/ijcnn.1989.118324",
+            "title_similarity": 0.6813186813186813
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Validation of neural networks in automotive engine calibration",
+            "authors": [
+              "Lowe"
+            ],
+            "year": 1997,
+            "years": [
+              1997
+            ],
+            "doi": "10.1049/cp:19970730",
+            "source_url": "https://doi.org/10.1049/cp:19970730",
+            "title_similarity": 0.5294117647058824
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Sensitivity for Multivariate Calibration Based on Multilayer Perceptron Artificial Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.analchem.0c01863.s001",
+            "source_url": "https://doi.org/10.1021/acs.analchem.0c01863.s001",
+            "title_similarity": 0.5217391304347826
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FX Volatility Calibration Using Artificial Neural Networks",
+            "authors": [
+              "Winter"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.2139/ssrn.3798513",
+            "source_url": "https://doi.org/10.2139/ssrn.3798513",
+            "title_similarity": 0.6326530612244898
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:17.323871Z",
+        "response_sha256": "120c1ad5b2f2d202ebc63393d21160a9d8d6112150ce56f13fad18c66a3433ea",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=On+calibration+of+modern+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:17.325246Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-26",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A baseline for detecting misclassified and out-of-distribution examples in neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+baseline+for+detecting+misclassified+and+out-of-distribution+examples+in+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:19.234991Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:19.234947Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+baseline+for+detecting+misclassified+and+out-of-distribution+examples+in+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:19.234991Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-27",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-27",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-27",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning sample reweighting for adversarial robustness",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+sample+reweighting+for+adversarial+robustness&rows=5",
+        "checked_at": "2026-10-09T04:46:18.821938Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Balanced-Wav2Vec: Enhancing Stability and Robustness of Representation Learning Through Sample Reweighting Techniques",
+            "authors": [
+              "Lee",
+              "Lee",
+              "Kim",
+              "Ko",
+              "Chang"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21437/interspeech.2024-1875",
+            "source_url": "https://doi.org/10.21437/interspeech.2024-1875",
+            "title_similarity": 0.38823529411764707
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adversarial robustness in meta-learning and contrastive learning",
+            "authors": [
+              "Chen",
+              "Hsieh"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/b978-0-12-824020-5.00028-4",
+            "source_url": "https://doi.org/10.1016/b978-0-12-824020-5.00028-4",
+            "title_similarity": 0.3728813559322034
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Adversarial Robustness for Machine Learning",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/c2020-0-01078-9",
+            "source_url": "https://doi.org/10.1016/c2020-0-01078-9",
+            "title_similarity": 0.4536082474226804
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial robustness of deep reinforcement learning",
+            "authors": [
+              "Qu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.32657/10356/154587",
+            "source_url": "https://doi.org/10.32657/10356/154587",
+            "title_similarity": 0.411214953271028
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Adversarial robustness of beyond neural network models",
+            "authors": [
+              "Chen",
+              "Hsieh"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/b978-0-12-824020-5.00027-2",
+            "source_url": "https://doi.org/10.1016/b978-0-12-824020-5.00027-2",
+            "title_similarity": 0.4074074074074074
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:18.820490Z",
+        "response_sha256": "c91707ab5cabce1674d28277c3a99a84d4f2fbc33d059b08acd6ed98581bf6a8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+sample+reweighting+for+adversarial+robustness&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:18.821938Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-28",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Self-adaptive training: beyond empirical risk minimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Self-adaptive+training%3A+beyond+empirical+risk+minimization&rows=5",
+        "checked_at": "2026-10-09T04:46:19.629000Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:19.628941Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Self-adaptive+training%3A+beyond+empirical+risk+minimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:19.629000Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Instance-conditionaltimescalesofdecayfornon-stationarylearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Instance-conditionaltimescalesofdecayfornon-stationarylearning&rows=5",
+        "checked_at": "2026-10-09T04:46:19.666025Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Figure 3: Visualization of abstracting a mission instance as a graph instance.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.1119/fig-3",
+            "source_url": "https://doi.org/10.7717/peerj-cs.1119/fig-3",
+            "title_similarity": 0.21739130434782608
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "IAN: Instance-Augmented Net for 3D Instance Segmentation_supp1-3281905.mp4",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/lra.2023.3281905/mm1",
+            "source_url": "https://doi.org/10.1109/lra.2023.3281905/mm1",
+            "title_similarity": 0.4148148148148148
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ENSEMBLE-BASED INSTANCE RELEVANCE ESTIMATION IN MULTIPLE-INSTANCE LEARNING",
+            "authors": [
+              "Waqas",
+              "Qureshi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.36227/techrxiv.14945712.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.14945712.v1",
+            "title_similarity": 0.39705882352941174
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "ENSEMBLE-BASED INSTANCE RELEVANCE ESTIMATION IN MULTIPLE-INSTANCE LEARNING",
+            "authors": [
+              "Waqas",
+              "Qureshi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.36227/techrxiv.14945712",
+            "source_url": "https://doi.org/10.36227/techrxiv.14945712",
+            "title_similarity": 0.39705882352941174
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Instance-Specific Algorithm Configuration",
+            "authors": [
+              "Malitsky"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1007/978-3-319-11230-5_3",
+            "source_url": "https://doi.org/10.1007/978-3-319-11230-5_3",
+            "title_similarity": 0.36893203883495146
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:19.664784Z",
+        "response_sha256": "ef9b27fae67bbbbab858dc8ddf8c6e2315f2493594e04d8a97e39d9e0cc379fe",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Instance-conditionaltimescalesofdecayfornon-stationarylearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:19.666025Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-31",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-31",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-31",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Suggala, and Pradeep Shenoy",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Suggala%2C+and+Pradeep+Shenoy&rows=5",
+        "checked_at": "2026-10-09T04:46:21.616679Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:21.616615Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Suggala%2C+and+Pradeep+Shenoy&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:21.616679Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "What uncertainties do we need in bayesian deep learning for computer vision? Advances in neural information processing systems, 30, 2017.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=What+uncertainties+do+we+need+in+bayesian+deep+learning+for+computer+vision%3F+Advances+in+neural+information+processing+systems%2C+30%2C+2017.&rows=5",
+        "checked_at": "2026-10-09T04:46:21.147906Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Why Do We Need Weight Decay in Modern Deep Learning?",
+            "authors": [
+              "D'Angelo",
+              "Andriushchenko",
+              "Varre",
+              "Flammarion"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0730",
+            "source_url": "https://doi.org/10.52202/079017-0730",
+            "title_similarity": 0.358695652173913
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Gold-Standard Solutions to the Schrödinger Equation Using Deep Learning: How Much Physics Do We Need?",
+            "authors": [
+              "Gerard",
+              "Scherbela",
+              "Marquetand",
+              "Grohs"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-0747",
+            "source_url": "https://doi.org/10.52202/068431-0747",
+            "title_similarity": 0.3017241379310345
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?",
+            "authors": [
+              "Yang",
+              "Chen",
+              "Li",
+              "Xie",
+              "Lin",
+              "Tao"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-2753",
+            "source_url": "https://doi.org/10.52202/068431-2753",
+            "title_similarity": 0.3764705882352941
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Collapsed Inference for Bayesian Deep Learning",
+            "authors": [
+              "Zeng",
+              "Broeck"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-3427",
+            "source_url": "https://doi.org/10.52202/075280-3427",
+            "title_similarity": 0.33519553072625696
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "How many classifiers do we need?",
+            "authors": [
+              "Kim",
+              "Hodgkinson",
+              "Theisen",
+              "Mahoney"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-2745",
+            "source_url": "https://doi.org/10.52202/079017-2745",
+            "title_similarity": 0.21951219512195122
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:21.146044Z",
+        "response_sha256": "374148db20e19488219ac2760acfb82ca53a7e8b4f491594832b2e053c0fb752",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=What+uncertainties+do+we+need+in+bayesian+deep+learning+for+computer+vision%3F+Advances+in+neural+information+processing+systems%2C+30%2C+2017.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:21.147906Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-33",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-33",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-33",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Wilds: A benchmark of in-the-wild distribution shifts",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Wilds%3A+A+benchmark+of+in-the-wild+distribution+shifts&rows=5",
+        "checked_at": "2026-10-09T04:46:21.114913Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "OOD-CV-v2 : An extended Benchmark for Robustness to Out-of-Distribution Shifts of Individual Nuisances in Natural Images_supp1-3462293.pdf",
+            "authors": [
+              "Zhao"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2024.3462293/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2024.3462293/mm1",
+            "title_similarity": 0.3829787234042553
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "5 Into Gospel Wilds: Divine, Demonic, and Animal",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1515/9780228025122-009",
+            "source_url": "https://doi.org/10.1515/9780228025122-009",
+            "title_similarity": 0.24742268041237114
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "(A Story by) On the Wild Side (The Wilds of Montana, #4) by Kristen Proby",
+            "authors": [
+              "meriyuderpoler"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.55277/researchhub.402ju7kb.1",
+            "source_url": "https://doi.org/10.55277/researchhub.402ju7kb.1",
+            "title_similarity": 0.3697478991596639
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Into Gospel Wilds:",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2307/jj.30979313.10",
+            "source_url": "https://doi.org/10.2307/jj.30979313.10",
+            "title_similarity": 0.14492753623188406
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Wild-Time: A Benchmark of in-The-Wild Distribution Shift Over Time",
+            "authors": [
+              "Yao",
+              "Choi",
+              "Cao",
+              "Lee",
+              "Koh",
+              "Finn"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52202/068431-0749",
+            "source_url": "https://doi.org/10.52202/068431-0749",
+            "title_similarity": 0.8547008547008547
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:21.113283Z",
+        "response_sha256": "6bb4ad3b0342b1b7fd2071934758ea37d0027c31fff69e9d6352adc55de6d7e9",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Wilds%3A+A+benchmark+of+in-the-wild+distribution+shifts&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:21.114913Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning multiple layers of features from tiny images",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+multiple+layers+of+features+from+tiny+images&rows=5",
+        "checked_at": "2026-10-09T04:46:20.739660Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Analysis of CNN features with multiple machine learning classifiers in diagnosis of monkeypox from digital skin images",
+            "authors": [
+              "Kumar"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1101/2022.09.11.22278797",
+            "source_url": "https://doi.org/10.1101/2022.09.11.22278797",
+            "title_similarity": 0.47953216374269003
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Alignment of Local and Global Features from Multiple Layers of Convolutional Neural Network for Image Classification",
+            "authors": [
+              "Pereira dos Santos",
+              "Antonelli Ponti"
+            ],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.1109/sibgrapi.2019.00040",
+            "source_url": "https://doi.org/10.1109/sibgrapi.2019.00040",
+            "title_similarity": 0.44970414201183434
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning General Features From Images and Audio With Stacked Denoising Autoencoders",
+            "authors": [
+              "Nifong"
+            ],
+            "year": 2000,
+            "years": [
+              2000
+            ],
+            "doi": "10.15760/etd.1549",
+            "source_url": "https://doi.org/10.15760/etd.1549",
+            "title_similarity": 0.4852941176470588
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Machine Learning Prediction Model for Myelitis and Multiple Sclerosis Based on Fourier Transform Features from MRI Images",
+            "authors": [
+              "Yılmaz Acar"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.17798/bitlisfen.1516713",
+            "source_url": "https://doi.org/10.17798/bitlisfen.1516713",
+            "title_similarity": 0.5454545454545454
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Using Unsupervised Learning Methods in Extracting Features for Classifying Rice Varieties from Rice Grains Images.",
+            "authors": [
+              "Martinez"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.63227/874.535.14",
+            "source_url": "https://doi.org/10.63227/874.535.14",
+            "title_similarity": 0.43373493975903615
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:20.738352Z",
+        "response_sha256": "232c80d5dad757b107149b07a1c6d9d18bc8906aa090607b42c8f43d1c824b48",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+multiple+layers+of+features+from+tiny+images&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:20.739660Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-35",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Max-margin inspired persamplereweighitngforrobustlearning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Max-margin+inspired+persamplereweighitngforrobustlearning&rows=5",
+        "checked_at": "2026-10-09T04:46:21.732005Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Margin of Appreciation",
+            "authors": [
+              "Jean-Pierre"
+            ],
+            "year": 2007,
+            "years": [
+              2007,
+              2019
+            ],
+            "doi": "10.1093/law:epil/9780199231690/e1438",
+            "source_url": "https://doi.org/10.1093/law:epil/9780199231690/e1438",
+            "title_similarity": 0.3291139240506329
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Max-Margin Classifications",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1007/978-0-387-69942-4_10",
+            "source_url": "https://doi.org/10.1007/978-0-387-69942-4_10",
+            "title_similarity": 0.3373493975903614
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Silences: Poems inspired by Max Picard",
+            "authors": [
+              "SILVEIRA"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.48021/978-65-274-1080-5",
+            "source_url": "https://doi.org/10.48021/978-65-274-1080-5",
+            "title_similarity": 0.3191489361702128
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "FedAMA: Neural Collapse Inspired Federated Adaptive Margin Adjustment Algorithm for Imbalanced Data_supp1-3602680.pdf",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/jiot.2025.3602680/mm1",
+            "source_url": "https://doi.org/10.1109/jiot.2025.3602680/mm1",
+            "title_similarity": 0.31213872832369943
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Max-margin clustering: Detecting margins from projections of points on lines",
+            "authors": [
+              "Gopalan",
+              "Sankaranarayanan"
+            ],
+            "year": 2011,
+            "years": [
+              2011
+            ],
+            "doi": "10.1109/cvpr.2011.5995485",
+            "source_url": "https://doi.org/10.1109/cvpr.2011.5995485",
+            "title_similarity": 0.3333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:21.730665Z",
+        "response_sha256": "e1b168cbd8a1686104e06f9573d2b6edd433882712b5c6b073d2436fe9d32247",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Max-margin+inspired+persamplereweighitngforrobustlearning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:21.732005Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-36",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-36",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-36",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Uncertainty quantification using bayesian neural networks in classification: Application to ischemic stroke lesion segmentation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Uncertainty+quantification+using+bayesian+neural+networks+in+classification%3A+Application+to+ischemic+stroke+lesion+segmentation&rows=5",
+        "checked_at": "2026-10-09T04:46:22.530213Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Uncertainty quantification using Bayesian neural networks in classification: Application to biomedical image segmentation",
+            "authors": [
+              "Kwon",
+              "Won",
+              "Kim",
+              "Paik"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.csda.2019.106816",
+            "source_url": "https://doi.org/10.1016/j.csda.2019.106816",
+            "title_similarity": 0.8943089430894309
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Ischemic Stroke Lesion Segmentation by Analyzing MRI Images Using Deep Convolutional Neural Networks",
+            "authors": [
+              "Joshi"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.29042/2018-3721-3725",
+            "source_url": "https://doi.org/10.29042/2018-3721-3725",
+            "title_similarity": 0.30973451327433627
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "NOVEL BAYESIAN NEURAL NETWORKS AND UNCERTAINTY QUANTIFICATION OF COMPUTATIONAL MECHANICS MODELS",
+            "authors": [
+              "Thiagarajan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.37099/mtu.dc.etdr/1674",
+            "source_url": "https://doi.org/10.37099/mtu.dc.etdr/1674",
+            "title_similarity": 0.3438914027149321
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Scaling Up Bayesian Uncertainty Quantification for Inverse Problems Using Deep Neural Networks",
+            "authors": [
+              "Lan",
+              "Li",
+              "Shahbaba"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1137/21m1439456",
+            "source_url": "https://doi.org/10.1137/21m1439456",
+            "title_similarity": 0.45454545454545453
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Quality Quantification in Deep Convolutional Neural Networks for Skin Lesion Segmentation using Fuzzy Uncertainty Measurement",
+            "authors": [
+              "Lin",
+              "Chen",
+              "Chen",
+              "Garibaldi"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/fuzz-ieee55066.2022.9882728",
+            "source_url": "https://doi.org/10.1109/fuzz-ieee55066.2022.9882728",
+            "title_similarity": 0.5099601593625498
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:22.528726Z",
+        "response_sha256": "894035c588c919ea4b4ac1e62a10537ae0b12f405b8b84fa8973fc37d9c957df",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Uncertainty+quantification+using+bayesian+neural+networks+in+classification%3A+Application+to+ischemic+stroke+lesion+segmentation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:22.530213Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-38",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-38",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-38",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Simple and scalable predictive uncertainty estimation using deep ensembles",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Simple+and+scalable+predictive+uncertainty+estimation+using+deep+ensembles&rows=5",
+        "checked_at": "2026-10-09T04:46:24.039198Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:24.039159Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Simple+and+scalable+predictive+uncertainty+estimation+using+deep+ensembles&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:24.039198Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-39",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-39",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-39",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Large-scale methods for distributionally robust optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Large-scale+methods+for+distributionally+robust+optimization&rows=5",
+        "checked_at": "2026-10-09T04:46:23.786392Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sizing Transmission and Energy Storage for Remote Large-Scale Renewable Power Plants",
+            "authors": [
+              "Xie",
+              "Wei"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-97-2566-3_8",
+            "source_url": "https://doi.org/10.1007/978-981-97-2566-3_8",
+            "title_similarity": 0.2361111111111111
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "f-Divergence Distributionally Robust Optimization",
+            "authors": [
+              "Xie",
+              "Wei"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-97-2566-3_5",
+            "source_url": "https://doi.org/10.1007/978-981-97-2566-3_5",
+            "title_similarity": 0.7706422018348624
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Moment-Based Distributionally Robust Optimization",
+            "authors": [
+              "Xie",
+              "Wei"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-97-2566-3_4",
+            "source_url": "https://doi.org/10.1007/978-981-97-2566-3_4",
+            "title_similarity": 0.7522935779816514
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Basic Distributionally Robust Optimization",
+            "authors": [
+              "Xie",
+              "Wei"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-97-2566-3_3",
+            "source_url": "https://doi.org/10.1007/978-981-97-2566-3_3",
+            "title_similarity": 0.7843137254901961
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Wasserstein-Distance Distributionally Robust Optimization",
+            "authors": [
+              "Xie",
+              "Wei"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/978-981-97-2566-3_6",
+            "source_url": "https://doi.org/10.1007/978-981-97-2566-3_6",
+            "title_similarity": 0.7521367521367521
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:23.784954Z",
+        "response_sha256": "0f7c0fc58203f51d950f4ac17fdc768da68ed4289f58f7d894eb4a57d5122063",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Large-scale+methods+for+distributionally+robust+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:23.786392Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-40",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-40",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-40",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Probabilistic margins for instance reweighting in adversarial training",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Probabilistic+margins+for+instance+reweighting+in+adversarial+training&rows=5",
+        "checked_at": "2026-10-09T04:46:24.580525Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:24.580470Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Probabilistic+margins+for+instance+reweighting+in+adversarial+training&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:24.580525Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-41",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-41",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-41",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep gamblers: Learning to abstain with portfolio theory",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+gamblers%3A+Learning+to+abstain+with+portfolio+theory&rows=5",
+        "checked_at": "2026-10-09T04:46:25.329044Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:25.328973Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+gamblers%3A+Learning+to+abstain+with+portfolio+theory&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:25.329044Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-42",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-42",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-42",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Predictive uncertainty estimation via prior networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Predictive+uncertainty+estimation+via+prior+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:26.108912Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:26.108830Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Predictive+uncertainty+estimation+via+prior+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:26.108912Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-43",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-43",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-43",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Agnostic federated learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Agnostic+federated+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:24.721247Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Towards Model-Agnostic Federated Learning over Networks",
+            "authors": [
+              "Jung"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22058978.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.22058978.v1",
+            "title_similarity": 0.6585365853658537
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards Model-Agnostic Federated Learning over Networks",
+            "authors": [
+              "Jung"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22058978",
+            "source_url": "https://doi.org/10.36227/techrxiv.22058978",
+            "title_similarity": 0.6585365853658537
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Robust and Fair Federated Learning Based on Model-Agnostic Shapley Value_supp1-3630314.pdf",
+            "authors": [
+              "Hu"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/ton.2025.3630314/mm1",
+            "source_url": "https://doi.org/10.1109/ton.2025.3630314/mm1",
+            "title_similarity": 0.39316239316239315
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Task-Agnostic Privacy-Preserving Representation Learning via Federated Learning",
+            "authors": [
+              "Li",
+              "Yang",
+              "Chen"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1007/978-3-030-63076-8_4",
+            "source_url": "https://doi.org/10.1007/978-3-030-63076-8_4",
+            "title_similarity": 0.5094339622641509
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Attack-Agnostic Robust Decentralized Federated Learning",
+            "authors": [
+              "Wu",
+              "Zhao",
+              "Guo",
+              "Zhou",
+              "Li",
+              "Yuan",
+              "Su",
+              "Zhou"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5369765",
+            "source_url": "https://doi.org/10.2139/ssrn.5369765",
+            "title_similarity": 0.6585365853658537
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:24.719806Z",
+        "response_sha256": "f13975577266b28eb6e5300cc1c810f9987cee8d76ac684f7635f0c03493eb28",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Agnostic+federated+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:24.721247Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-44",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-44",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-44",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inhibited softmax for uncertainty estimation in neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inhibited+softmax+for+uncertainty+estimation+in+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:46:26.835443Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:26.835388Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inhibited+softmax+for+uncertainty+estimation+in+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:26.835443Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-45",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-45",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-45",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Calibrating deep neural networks using focal loss",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Calibrating+deep+neural+networks+using+focal+loss&rows=5",
+        "checked_at": "2026-10-09T04:46:27.471989Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:27.471909Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Calibrating+deep+neural+networks+using+focal+loss&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:27.471989Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-47",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-47",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-47",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Interval neural networks: Uncertainty scores",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Interval+neural+networks%3A+Uncertainty+scores&rows=5",
+        "checked_at": "2026-10-09T04:46:26.549803Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Handling uncertainty in neural networks: an interval approach",
+            "authors": [
+              "Simoff"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1996.548964",
+            "source_url": "https://doi.org/10.1109/icnn.1996.548964",
+            "title_similarity": 0.5048543689320388
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "CreINNs: Credal-Set Interval Neural Networks for Uncertainty Estimation in Classification Tasks",
+            "authors": [
+              "Wang",
+              "Shariatmadar",
+              "Manchingal",
+              "Cuzzolin",
+              "Moens",
+              "Hallez"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107198",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107198",
+            "title_similarity": 0.5693430656934306
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Beyond prediction: Interval neural networks for uncertainty-aware system identification",
+            "authors": [
+              "Ferah",
+              "Kumbasar"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.asoc.2026.116223",
+            "source_url": "https://doi.org/10.1016/j.asoc.2026.116223",
+            "title_similarity": 0.6201550387596899
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Uncertainty: Ideas Behind Neural Networks Lead Us Beyond KL- Decomposition and Interval Fields",
+            "authors": [
+              "Beer",
+              "Kosheleva",
+              "Kreinovich"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/ssci50451.2021.9660145",
+            "source_url": "https://doi.org/10.1109/ssci50451.2021.9660145",
+            "title_similarity": 0.4740740740740741
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Introducing Interval Neural Networks for Uncertainty-Aware System Identification",
+            "authors": [
+              "Ferah",
+              "Kumbasar"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/ichora65333.2025.11017048",
+            "source_url": "https://doi.org/10.1109/ichora65333.2025.11017048",
+            "title_similarity": 0.6504065040650406
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:26.548139Z",
+        "response_sha256": "bc323b5790d340c467aaf73716835d1cddeb9de76de122c67e7473ba446185af",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Interval+neural+networks%3A+Uncertainty+scores&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:26.549803Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-48",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-48",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-48",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Uncertainty in neural networks: Approximately bayesian ensembling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Uncertainty+in+neural+networks%3A+Approximately+bayesian+ensembling&rows=5",
+        "checked_at": "2026-10-09T04:46:26.703081Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Semi-Supervised Deep Regression with Uncertainty Consistency and Variational Model Ensembling via Bayesian Neural Networks",
+            "authors": [
+              "Dai",
+              "Li",
+              "Cheng"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1609/aaai.v37i6.25890",
+            "source_url": "https://doi.org/10.1609/aaai.v37i6.25890",
+            "title_similarity": 0.3225806451612903
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Uncertainty propagation for dropout-based Bayesian neural networks",
+            "authors": [
+              "Mae",
+              "Kumagai",
+              "Kanamori"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neunet.2021.09.005",
+            "source_url": "https://doi.org/10.1016/j.neunet.2021.09.005",
+            "title_similarity": 0.46153846153846156
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "NOVEL BAYESIAN NEURAL NETWORKS AND UNCERTAINTY QUANTIFICATION OF COMPUTATIONAL MECHANICS MODELS",
+            "authors": [
+              "Thiagarajan"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.37099/mtu.dc.etdr/1674",
+            "source_url": "https://doi.org/10.37099/mtu.dc.etdr/1674",
+            "title_similarity": 0.37735849056603776
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Visualizing Bayesian Convolutional Neural Network Uncertainty In Coastal Images with Grad-Cam Ensembling",
+            "authors": [
+              "Rombado",
+              "Orescanin",
+              "Orescanin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/igarss53475.2024.10642011",
+            "source_url": "https://doi.org/10.1109/igarss53475.2024.10642011",
+            "title_similarity": 0.42857142857142855
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Can Bayesian Neural Networks Explicitly Model Input Uncertainty?",
+            "authors": [
+              "Valdenegro-Toro",
+              "Zullich"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5220/0013313300003912",
+            "source_url": "https://doi.org/10.5220/0013313300003912",
+            "title_similarity": 0.4881889763779528
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:26.701663Z",
+        "response_sha256": "ea78f2893f401ff70621b4686753dd1c47c113667fcb39c7755816c19eccf78f",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Uncertainty+in+neural+networks%3A+Approximately+bayesian+ensembling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:26.703081Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-49",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-49",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-49",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Selective classification via neural network training dynamics",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Selective+classification+via+neural+network+training+dynamics&rows=5",
+        "checked_at": "2026-10-09T04:46:28.482361Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Supervised fuzzy ART: training of a neural network for pattern classification via combining supervised and unsupervised learning",
+            "authors": [
+              "Lee",
+              "Lai"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/icnn.1993.298577",
+            "source_url": "https://doi.org/10.1109/icnn.1993.298577",
+            "title_similarity": 0.39361702127659576
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Classification of Samples via Neural-Network Augmented Two-Dimensional Infrared Spectroscopy",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jpcb.4c08573.s001",
+            "source_url": "https://doi.org/10.1021/acs.jpcb.4c08573.s001",
+            "title_similarity": 0.48366013071895425
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Decentralized deep neural network training via distributed ledger technology",
+            "authors": [
+              "Νικολαΐδης"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.12681/eadd/51333",
+            "source_url": "https://doi.org/10.12681/eadd/51333",
+            "title_similarity": 0.48175182481751827
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "GENDER CLASSIFICATION VIA HUMAN JOINTS USING CONVOLUTIONAL NEURAL NETWORK",
+            "authors": [
+              "Sung"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.hrw8-9n8k",
+            "source_url": "https://doi.org/10.31979/etd.hrw8-9n8k",
+            "title_similarity": 0.5373134328358209
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Expanding the training data for neural network based hate speech classification",
+            "authors": [
+              "D'Sa"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/e5736942z9e13z4754z926fzad5d682c3a40",
+            "source_url": "https://doi.org/10.70675/e5736942z9e13z4754z926fzad5d682c3a40",
+            "title_similarity": 0.44285714285714284
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:28.481799Z",
+        "response_sha256": "8c380c866197d5abb06c4c042f8d3c7dfcb345b66d2423576b99599fa427009c",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Selective+classification+via+neural+network+training+dynamics&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:28.482361Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-50",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-50",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-50",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning to reweight examples for robust deep learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+to+reweight+examples+for+robust+deep+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:27.502483Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Towards Adversarially Robust Text Classifiers by Learning to Reweight Clean Examples",
+            "authors": [
+              "Xu",
+              "Zhang",
+              "Zheng",
+              "Li",
+              "Hsieh",
+              "Chang",
+              "Huang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.18653/v1/2022.findings-acl.134",
+            "source_url": "https://doi.org/10.18653/v1/2022.findings-acl.134",
+            "title_similarity": 0.42028985507246375
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning to reweight examples in multi-label classification",
+            "authors": [
+              "Zhong",
+              "Du",
+              "Xu"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neunet.2021.03.022",
+            "source_url": "https://doi.org/10.1016/j.neunet.2021.03.022",
+            "title_similarity": 0.672566371681416
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "The Foundations of Deep Learning",
+            "authors": [
+              "Ugail"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003091356-2",
+            "source_url": "https://doi.org/10.1201/9781003091356-2",
+            "title_similarity": 0.46511627906976744
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Deep Learning Models for Visual Computing",
+            "authors": [
+              "Ugail"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003091356-3",
+            "source_url": "https://doi.org/10.1201/9781003091356-3",
+            "title_similarity": 0.2736842105263158
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Analysis of Skin Bums using Deep Learning",
+            "authors": [
+              "Ugail"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1201/9781003091356-7",
+            "source_url": "https://doi.org/10.1201/9781003091356-7",
+            "title_similarity": 0.4
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:27.500329Z",
+        "response_sha256": "369cad1f125b44b4ddf57d1a3ac3dcdf433aedc1839b962e540c3655d93dba67",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+to+reweight+examples+for+robust+deep+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:27.502483Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-51",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-51",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-51",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Evidential deep learning to quantify classification uncertainty",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Evidential+deep+learning+to+quantify+classification+uncertainty&rows=5",
+        "checked_at": "2026-10-09T04:46:28.818411Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Evidential Fuzzy Rule-Based Machine Learning to Quantify Classification Uncertainty",
+            "authors": [
+              "Shiraishi",
+              "Ishibuchi",
+              "Nakata"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.36227/techrxiv.174900814.43483543/v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.174900814.43483543/v1",
+            "title_similarity": 0.8356164383561644
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Evidential Fuzzy Rule-Based Machine Learning to Quantify Classification Uncertainty",
+            "authors": [
+              "Shiraishi",
+              "Ishibuchi",
+              "Nakata"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3712255.3734234",
+            "source_url": "https://doi.org/10.1145/3712255.3734234",
+            "title_similarity": 0.8356164383561644
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Uncertainty-aware music genre classification using evidential deep learning",
+            "authors": [
+              "Sidharrth",
+              "Jayan",
+              "Alatas"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.7717/peerj-cs.3948",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3948",
+            "title_similarity": 0.34782608695652173
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Reliable Uncertainty Estimation via Discriminative Feature Learning for Evidential Deep Classification_supp1-3712710.pdf",
+            "authors": [
+              "Chen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2026.3712710/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2026.3712710/mm1",
+            "title_similarity": 0.33879781420765026
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "MEDL-U : uncertainty-aware 3D automatic annotation based on evidential deep learning",
+            "authors": [
+              "Paat"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991013246558103412",
+            "source_url": "https://doi.org/10.14711/thesis-991013246558103412",
+            "title_similarity": 0.3310344827586207
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:28.817414Z",
+        "response_sha256": "c96fdbeee39655df31146499db9e78a28e29a137c1a032430ad642eec01621ac",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Evidential+deep+learning+to+quantify+classification+uncertainty&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:28.818411Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-52",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-52",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-52",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Metaweight-net: Learning an explicit mapping for sample weighting",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Metaweight-net%3A+Learning+an+explicit+mapping+for+sample+weighting&rows=5",
+        "checked_at": "2026-10-09T04:46:28.034035Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning_supp1-3271451.pdf",
+            "authors": [
+              "Meng"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2023.3271451/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3271451/mm1",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "CMW-Net: Learning a Class-Aware Sample Weighting Mapping for Robust Deep Learning",
+            "authors": [
+              "Shu",
+              "Yuan",
+              "Meng",
+              "Xu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/tpami.2023.3271451",
+            "source_url": "https://doi.org/10.1109/tpami.2023.3271451",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "FMW-Net: a first-order meta-weight-net approach for sample weighting",
+            "authors": [
+              "Zhou",
+              "Shu",
+              "Liu",
+              "Meng"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1007/s13042-025-02681-2",
+            "source_url": "https://doi.org/10.1007/s13042-025-02681-2",
+            "title_similarity": 0.5954198473282443
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Explicit vs. Implicit Embodied Learning",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.59668/2802.28303",
+            "source_url": "https://doi.org/10.59668/2802.28303",
+            "title_similarity": 0.27450980392156865
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Methodological contributions to off-policy evaluation under the sample weighting framework and empirical financial analysis using semiparametric machine learning",
+            "authors": [
+              "Li"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/td-20251215-359",
+            "source_url": "https://doi.org/10.31274/td-20251215-359",
+            "title_similarity": 0.29333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:28.031444Z",
+        "response_sha256": "ae5d6180d5a5658fa8a8a6057aadf3869e43540c5cca85175e7e3a8a09cc7919",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Metaweight-net%3A+Learning+an+explicit+mapping+for+sample+weighting&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:28.034035Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-54",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-54",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-54",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Understanding measures of uncertainty for adversarial example detection",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Understanding+measures+of+uncertainty+for+adversarial+example+detection&rows=5",
+        "checked_at": "2026-10-09T04:46:30.592178Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:30.592092Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Understanding+measures+of+uncertainty+for+adversarial+example+detection&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:30.592178Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-55",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-55",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-55",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Aptos 2019 blindness detection dataset, 2019.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Aptos+2019+blindness+detection+dataset%2C+2019.&rows=5",
+        "checked_at": "2026-10-09T04:46:30.830061Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:30.829989Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Aptos+2019+blindness+detection+dataset%2C+2019.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:30.830061Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-56",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-56",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-56",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Direct importance estimation with model selection and its application to covariate shift adaptation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Direct+importance+estimation+with+model+selection+and+its+application+to+covariate+shift+adaptation&rows=5",
+        "checked_at": "2026-10-09T04:46:30.030081Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Importance Estimation",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7551/mitpress/8494.003.0009",
+            "source_url": "https://doi.org/10.7551/mitpress/8494.003.0009",
+            "title_similarity": 0.35
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Importance Estimation",
+            "authors": [
+              "Sugiyama",
+              "Kawanabe"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7551/mitpress/9780262017091.003.0004",
+            "source_url": "https://doi.org/10.7551/mitpress/9780262017091.003.0004",
+            "title_similarity": 0.35
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Model Selection",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7551/mitpress/8494.003.0008",
+            "source_url": "https://doi.org/10.7551/mitpress/8494.003.0008",
+            "title_similarity": 0.2631578947368421
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Direct Density-Ratio Estimation with Dimensionality Reduction",
+            "authors": [],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7551/mitpress/8494.003.0010",
+            "source_url": "https://doi.org/10.7551/mitpress/8494.003.0010",
+            "title_similarity": 0.425
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Model Selection",
+            "authors": [
+              "Sugiyama",
+              "Kawanabe"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.7551/mitpress/9780262017091.003.0003",
+            "source_url": "https://doi.org/10.7551/mitpress/9780262017091.003.0003",
+            "title_similarity": 0.2631578947368421
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:30.027804Z",
+        "response_sha256": "a0c611f2ad21a3d5746bd640d0d8dc412e224d0528ca3a9214d94ea5668d5777",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Direct+importance+estimation+with+model+selection+and+its+application+to+covariate+shift+adaptation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:30.030081Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-58",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-58",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-58",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Contrastive multiview coding",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Contrastive+multiview+coding&rows=5",
+        "checked_at": "2026-10-09T04:46:29.789001Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Application of Contrastive Multiview Coding in Audio Classification",
+            "authors": [
+              "Babic",
+              "Risojevic"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/infoteh53737.2022.9751326",
+            "source_url": "https://doi.org/10.1109/infoteh53737.2022.9751326",
+            "title_similarity": 0.5894736842105263
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "MPCCL: Multiview predictive coding with contrastive learning for person re-identification",
+            "authors": [
+              "Yin",
+              "Xie",
+              "Ma",
+              "Guo"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1016/j.patcog.2022.108710",
+            "source_url": "https://doi.org/10.1016/j.patcog.2022.108710",
+            "title_similarity": 0.29310344827586204
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Self-Supervised Learning of Remote Sensing Scene Representations Using Contrastive Multiview Coding",
+            "authors": [
+              "Stojnic",
+              "Risojevic"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/cvprw53098.2021.00129",
+            "source_url": "https://doi.org/10.1109/cvprw53098.2021.00129",
+            "title_similarity": 0.4409448818897638
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Driving Anomaly Detection Using Contrastive Multiview Coding to Interpret Cause of Anomaly",
+            "authors": [
+              "Qiu",
+              "Misu",
+              "Busso"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/iros47612.2022.9981815",
+            "source_url": "https://doi.org/10.1109/iros47612.2022.9981815",
+            "title_similarity": 0.4745762711864407
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Learning from All Views: A Multiview Contrastive Framework for Metabolite Annotation",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.analchem.5c05675.s001",
+            "source_url": "https://doi.org/10.1021/acs.analchem.5c05675.s001",
+            "title_similarity": 0.32432432432432434
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:29.787947Z",
+        "response_sha256": "6a1ad6d3f3ecbd5c7bcc7d8e2600ce8c422c396070be63d67adf571aa2b042d2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Contrastive+multiview+coding&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:29.789001Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-59",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-59",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-59",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Consistent inference of probabilities in layered networks: Predictions and generalization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Consistent+inference+of+probabilities+in+layered+networks%3A+Predictions+and+generalization&rows=5",
+        "checked_at": "2026-10-09T04:46:32.616616Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:32.616559Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Consistent+inference+of+probabilities+in+layered+networks%3A+Predictions+and+generalization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:32.616616Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-60",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-60",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-60",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Plex: Towards reliability using pretrained large model extensions",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Plex%3A+Towards+reliability+using+pretrained+large+model+extensions&rows=5",
+        "checked_at": "2026-10-09T04:46:32.834105Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:32.833627Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Plex%3A+Towards+reliability+using+pretrained+large+model+extensions&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:32.834105Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-61",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-61",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-61",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deep sub-ensembles for fast uncertainty estimation in image classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deep+sub-ensembles+for+fast+uncertainty+estimation+in+image+classification&rows=5",
+        "checked_at": "2026-10-09T04:46:32.858656Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Sub-Ensembles for Fast Uncertainty Estimation in Neural Networks",
+            "authors": [
+              "Valdenegro-Toro"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1109/iccvw60793.2023.00445",
+            "source_url": "https://doi.org/10.1109/iccvw60793.2023.00445",
+            "title_similarity": 0.7536231884057971
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Enhancing medical image classification via uncertainty estimation",
+            "authors": [
+              "Chen"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31274/td-20251215-59",
+            "source_url": "https://doi.org/10.31274/td-20251215-59",
+            "title_similarity": 0.4460431654676259
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Fauce",
+            "authors": [
+              "Liu",
+              "Dong",
+              "Zhou",
+              "Li"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.14778/3476249.3476254",
+            "source_url": "https://doi.org/10.14778/3476249.3476254",
+            "title_similarity": 0.12658227848101267
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Fast and reliable uncertainty quantification with neural network ensembles for industrial image classification",
+            "authors": [
+              "Thuy",
+              "Benoit"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1007/s10479-024-06440-4",
+            "source_url": "https://doi.org/10.1007/s10479-024-06440-4",
+            "title_similarity": 0.4891304347826087
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Uncertainty Estimation for Dual View X-ray Mammographic Image Registration Using Deep Ensembles",
+            "authors": [
+              "Walton",
+              "Kim"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1007/s10278-024-01244-1",
+            "source_url": "https://doi.org/10.1007/s10278-024-01244-1",
+            "title_similarity": 0.4378698224852071
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:32.857336Z",
+        "response_sha256": "fa05b5b07224733d7a7b0ba7b1e27fcfd5cc31195886d357d4df7204ebee7842",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deep+sub-ensembles+for+fast+uncertainty+estimation+in+image+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:32.858656Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-62",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-62",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-62",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "A deeper look into aleatoric and epistemic uncertainty disentanglement",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=A+deeper+look+into+aleatoric+and+epistemic+uncertainty+disentanglement&rows=5",
+        "checked_at": "2026-10-09T04:46:31.512075Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Deeper Look into Aleatoric and Epistemic Uncertainty Disentanglement",
+            "authors": [
+              "Valdenegro-Toro",
+              "Saromo"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.52591/lxai202206244",
+            "source_url": "https://doi.org/10.52591/lxai202206244",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Deeper Look into Aleatoric and Epistemic Uncertainty Disentanglement",
+            "authors": [
+              "Valdenegro-Toro",
+              "Mori"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/cvprw56347.2022.00157",
+            "source_url": "https://doi.org/10.1109/cvprw56347.2022.00157",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Site-of-Metabolism Prediction with Aleatoric and Epistemic Uncertainty Quantification",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.5c00762.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.5c00762.s001",
+            "title_similarity": 0.6064516129032258
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Disentanglement under Stress: Limits of Entropy-based Aleatoric and Epistemic Uncertainty Estimation in Bayesian Deep Learning",
+            "authors": [
+              "Nipa",
+              "Hamza Chao",
+              "Shetty"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/iwcmc69287.2026.11579951",
+            "source_url": "https://doi.org/10.1109/iwcmc69287.2026.11579951",
+            "title_similarity": 0.5743589743589743
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Figure 1: We present NeRFUS, the first method to quantify both aleatoric and epistemic uncertainty in neural semantic fields.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3866/fig-1",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3866/fig-1",
+            "title_similarity": 0.5729166666666666
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:31.510449Z",
+        "response_sha256": "430b1bb817f16add848c425cadc1f65524096f9e0200474494bcbb94d38b9299",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=A+deeper+look+into+aleatoric+and+epistemic+uncertainty+disentanglement&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:31.512075Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-63",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-63",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-63",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Batchensemble: an alternative approach to efficient ensemble and lifelong learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Batchensemble%3A+an+alternative+approach+to+efficient+ensemble+and+lifelong+learning&rows=5",
+        "checked_at": "2026-10-09T04:46:33.633227Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:33.633165Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Batchensemble%3A+an+alternative+approach+to+efficient+ensemble+and+lifelong+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:33.633227Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-64",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-64",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-64",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Part-dependent label noise: Towards instance-dependent label noise",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Part-dependent+label+noise%3A+Towards+instance-dependent+label+noise&rows=5",
+        "checked_at": "2026-10-09T04:46:34.068991Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Beyond Instance-Dependent Noise: Generalizing Noisy Label Modeling to Multiple Labeler Dependence",
+            "authors": [
+              "Dawson",
+              "Polikar"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.36227/techrxiv.21129859",
+            "source_url": "https://doi.org/10.36227/techrxiv.21129859",
+            "title_similarity": 0.40993788819875776
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Beyond Instance-Dependent Noise: Generalizing Noisy Label Modeling to Multiple Labeler Dependence",
+            "authors": [
+              "Dawson",
+              "Polikar"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.36227/techrxiv.21129859.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.21129859.v1",
+            "title_similarity": 0.40993788819875776
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Adaptive estimation of instance-dependent noise transition matrix for learning with instance-dependent label noise",
+            "authors": [
+              "Wang",
+              "Pang",
+              "Qin",
+              "Wei",
+              "Zhao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.neunet.2025.107464",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.107464",
+            "title_similarity": 0.6145251396648045
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Towards instance-dependent label noise-tolerant classification: a probabilistic approach",
+            "authors": [
+              "Bootkrajang",
+              "Chaijaruwanich"
+            ],
+            "year": 2018,
+            "years": [
+              2018,
+              2020
+            ],
+            "doi": "10.1007/s10044-018-0750-z",
+            "source_url": "https://doi.org/10.1007/s10044-018-0750-z",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Robust Multi-Label Learning with Instance-Dependent Label Noise",
+            "authors": [
+              "Wu",
+              "Shi",
+              "Zou",
+              "Li"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1145/3746252.3761148",
+            "source_url": "https://doi.org/10.1145/3746252.3761148",
+            "title_similarity": 0.703125
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:34.066608Z",
+        "response_sha256": "a286ae3521a8293aabf4174d90672b733b31b402cd7376c768683293493b2a9a",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Part-dependent+label+noise%3A+Towards+instance-dependent+label+noise&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:34.068991Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-65",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：authors",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-65",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-65",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Learning from massive noisy labeled data for image classification",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Learning+from+massive+noisy+labeled+data+for+image+classification&rows=5",
+        "checked_at": "2026-10-09T04:46:33.690173Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning from massive noisy labeled data for image classification",
+            "authors": [
+              "Tong Xiao",
+              "Tian Xia",
+              "Yi Yang",
+              "Chang Huang",
+              "Xiaogang Wang"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1109/cvpr.2015.7298885",
+            "source_url": "https://doi.org/10.1109/cvpr.2015.7298885",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning from Noisy Labeled Data Using Symmetric Cross-Entropy Loss for Image Classification",
+            "authors": [
+              "Takeda",
+              "Yoshida",
+              "Muneyasu"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1109/gcce50665.2020.9291873",
+            "source_url": "https://doi.org/10.1109/gcce50665.2020.9291873",
+            "title_similarity": 0.7261146496815286
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning from Noisy Labeled Samples Using Prediction Norm for Image Classification",
+            "authors": [
+              "Okamura",
+              "Harakawa",
+              "Iwahashi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/smc52423.2021.9659001",
+            "source_url": "https://doi.org/10.1109/smc52423.2021.9659001",
+            "title_similarity": 0.7482993197278912
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Combining PENCIL with AMDIM for image classification with noisy and sparsely labeled data",
+            "authors": [
+              "Petropoulos",
+              "Diou"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1145/3411408.3411441",
+            "source_url": "https://doi.org/10.1145/3411408.3411441",
+            "title_similarity": 0.4155844155844156
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Scalable Federated Learning for Massive Medical Image Classification: Tackling Noisy and Imbalanced Data",
+            "authors": [
+              "Zemmouri",
+              "Kout",
+              "Labed"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.48084/etasr.12040",
+            "source_url": "https://doi.org/10.48084/etasr.12040",
+            "title_similarity": 0.5238095238095238
+          }
+        ],
+        "conflicting_fields": [
+          "authors"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:33.688321Z",
+        "response_sha256": "b547fa960600a39429404c8763b4a6d493f438ad9c7554c22ec37cb22c314cf8",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Learning+from+massive+noisy+labeled+data+for+image+classification&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:33.690173Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-66",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-66",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-66",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Analysis of kernel mean matching under covariate shift",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Analysis+of+kernel+mean+matching+under+covariate+shift&rows=5",
+        "checked_at": "2026-10-09T04:46:35.148478Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Covariate Shift by Kernel Mean Matching",
+            "authors": [
+              "Gretton",
+              "Smola",
+              "Huang",
+              "Schmittfull",
+              "Borgwardt",
+              "Schölkopf"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.7551/mitpress/7921.003.0013",
+            "source_url": "https://doi.org/10.7551/mitpress/7921.003.0013",
+            "title_similarity": 0.5161290322580645
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Covariate Shift by Kernel Mean Matching",
+            "authors": [
+              "Gretton",
+              "Smola",
+              "Huang",
+              "Schmittfull",
+              "Borgwardt",
+              "Schölkopf"
+            ],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.7551/mitpress/9780262170055.003.0008",
+            "source_url": "https://doi.org/10.7551/mitpress/9780262170055.003.0008",
+            "title_similarity": 0.5161290322580645
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Towards a Unified Analysis of Kernel-based Methods Under Covariate Shift",
+            "authors": [
+              "Feng",
+              "He",
+              "Wang",
+              "Wang",
+              "Zhang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-3229",
+            "source_url": "https://doi.org/10.52202/075280-3229",
+            "title_similarity": 0.7142857142857143
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Pseudo-Labeling for kernel ridge regression under covariate shift",
+            "authors": [
+              "Wang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1214/25-aos2566",
+            "source_url": "https://doi.org/10.1214/25-aos2566",
+            "title_similarity": 0.6050420168067226
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "An adapted surrogate kernel for classification under covariate shift",
+            "authors": [
+              "Song",
+              "Park"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1016/j.asoc.2018.04.060",
+            "source_url": "https://doi.org/10.1016/j.asoc.2018.04.060",
+            "title_similarity": 0.6557377049180327
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:35.146429Z",
+        "response_sha256": "8d899015509acad3ae0f9d1b59add83ab1b0374bac7794e8dfdd66ff96b57231",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Analysis+of+kernel+mean+matching+under+covariate+shift&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:35.148478Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-67",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-67",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-67",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Robust bayesian neural networks by spectral expectation bound regularization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Robust+bayesian+neural+networks+by+spectral+expectation+bound+regularization&rows=5",
+        "checked_at": "2026-10-09T04:46:35.663678Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:46:35.663607Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Robust+bayesian+neural+networks+by+spectral+expectation+bound+regularization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:46:35.663678Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-70",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-70",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-70",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-71",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-71",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-71",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_021_openreview_2024_02_11_credibility-72",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_021_openreview_2024_02_11_credibility-72",
+        "paper_reference_id": "ref-paper_021_openreview_2024_02_11_credibility-72",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.472222222222222
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 72,
+    "extracted_count": 72,
+    "parsed_count": 69,
+    "queried_count": 69,
+    "matched_count": 9,
+    "metadata_conflict_count": 2,
+    "unverified_count": 35,
+    "parse_failed_count": 3,
+    "not_checked_count": 0,
+    "query_failed_count": 23,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:42.128449Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

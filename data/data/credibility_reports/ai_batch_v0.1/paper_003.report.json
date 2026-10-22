@@ -1,0 +1,2380 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-4e1d6716eda783a1",
+  "paper_version_id": "paper_003_openreview_2024_02_11",
+  "pdf_sha256": "82fe362dd05e0aa5937605927956e72dba7bf91681d645ca21bb1f235da85ea2",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "ab28d078ce1d98dfa529524f5d8f09eb8ebe802cae5bb68935e54222a0e47a8f",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 6.685714285714286,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 2,
+        "deduplicated_claim_count": 2,
+        "checked_claim_count": 2,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 6.057142857142857,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 35,
+        "extracted_count": 35,
+        "parsed_count": 34,
+        "queried_count": 34,
+        "matched_count": 12,
+        "metadata_conflict_count": 1,
+        "unverified_count": 19,
+        "parse_failed_count": 1,
+        "not_checked_count": 0,
+        "query_failed_count": 2,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 4,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://web.archive.org/web/20240424051917id_/https://openreview.net/pdf?id=Pmrc0nEvxf",
+            "checked_at": "2026-10-09T04:41:05.303515Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [],
+        "states": [
+          "no_public_code_found"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-1",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "An empirical evaluation of generic convolutional and recurrent networks for sequence modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=An+empirical+evaluation+of+generic+convolutional+and+recurrent+networks+for+sequence+modeling&rows=5",
+        "checked_at": "2026-10-09T04:41:02.251503Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Modeling chromatin state from sequence across angiosperms using recurrent convolutional neural networks",
+            "authors": [
+              "Wrightsman",
+              "Marand",
+              "Crisp",
+              "Springer",
+              "Buckler"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1101/2021.11.11.468292",
+            "source_url": "https://doi.org/10.1101/2021.11.11.468292",
+            "title_similarity": 0.4489795918367347
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Modeling Dynamical Vision with Biologically Plausible Recurrent Convolutional Networks",
+            "authors": [
+              "Gutzen",
+              "Lindsay"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1101/2025.08.11.669756",
+            "source_url": "https://doi.org/10.1101/2025.08.11.669756",
+            "title_similarity": 0.43575418994413406
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Biological Sequence Modeling with Convolutional Kernel Networks",
+            "authors": [
+              "Chen",
+              "Jacob",
+              "Mairal"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1101/217257",
+            "source_url": "https://doi.org/10.1101/217257",
+            "title_similarity": 0.2948717948717949
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Stochastic Convolutional Recurrent Networks for Language Modeling",
+            "authors": [
+              "Chien",
+              "Huang"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.21437/interspeech.2020-1493",
+            "source_url": "https://doi.org/10.21437/interspeech.2020-1493",
+            "title_similarity": 0.6708860759493671
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Synergistic Integration of Linear Logic and Recurrent Neural Networks for Enhanced Sequence Modeling",
+            "authors": [
+              "Veluru"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/5016",
+            "source_url": "https://doi.org/10.31224/5016",
+            "title_similarity": 0.6839378238341969
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:36.453996Z",
+        "response_sha256": "be5fbe4b31d1c9cb6a2e616195b34c29820cefeb82f42f4500472fac0fbb0b89",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=An+empirical+evaluation+of+generic+convolutional+and+recurrent+networks+for+sequence+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.251503Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-2",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarialattacksonnodeembeddingsviagraph poisoning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarialattacksonnodeembeddingsviagraph+poisoning&rows=5",
+        "checked_at": "2026-10-09T04:41:02.252461Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Water Poisoning and Salt Poisoning",
+            "authors": [],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.4324/9781315127057-10",
+            "source_url": "https://doi.org/10.4324/9781315127057-10",
+            "title_similarity": 0.3023255813953488
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Paracetamol (Acetaminophen) Poisoning",
+            "authors": [
+              "Elbidairi"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.5772/intechopen.1010151",
+            "source_url": "https://doi.org/10.5772/intechopen.1010151",
+            "title_similarity": 0.45977011494252873
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Food Poisoning",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1201/b17604-21",
+            "source_url": "https://doi.org/10.1201/b17604-21",
+            "title_similarity": 0.3939393939393939
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Seafood Poisoning",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1201/b17604-22",
+            "source_url": "https://doi.org/10.1201/b17604-22",
+            "title_similarity": 0.4057971014492754
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Ibuprofen poisoning to Iron poisoning",
+            "authors": [
+              "Dyer"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1017/cbo9780511586026.010",
+            "source_url": "https://doi.org/10.1017/cbo9780511586026.010",
+            "title_similarity": 0.2696629213483146
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:01.130676Z",
+        "response_sha256": "44d7eb56b817bb5df13c0dbbb9c831d83e7fdfd72e0196a139967576b396fdb7",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarialattacksonnodeembeddingsviagraph+poisoning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.252461Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-4",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-4",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Empirical evaluation of gated recurrent neural networks on sequence modeling",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Empirical+evaluation+of+gated+recurrent+neural+networks+on+sequence+modeling&rows=5",
+        "checked_at": "2026-10-09T04:41:02.252861Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Gated Fuzzy Cyclic Recurrent Neural Network: Adaptive Cyclic Coupling for Lightweight Sequence Modeling",
+            "authors": [
+              "Zhang",
+              "Zhu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7190900",
+            "source_url": "https://doi.org/10.2139/ssrn.7190900",
+            "title_similarity": 0.5730337078651685
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Hierarchically Gated Recurrent Neural Network for Sequence Modeling",
+            "authors": [
+              "Qin",
+              "Yang",
+              "Zhong"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.52202/075280-1442",
+            "source_url": "https://doi.org/10.52202/075280-1442",
+            "title_similarity": 0.8111888111888111
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Synergistic Integration of Linear Logic and Recurrent Neural Networks for Enhanced Sequence Modeling",
+            "authors": [
+              "Veluru"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31224/5016",
+            "source_url": "https://doi.org/10.31224/5016",
+            "title_similarity": 0.7386363636363636
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Recurrent Neural Networks (RNN)",
+            "authors": [
+              "Salem"
+            ],
+            "year": 2021,
+            "years": [
+              2021,
+              2022
+            ],
+            "doi": "10.1007/978-3-030-89929-5_3",
+            "source_url": "https://doi.org/10.1007/978-3-030-89929-5_3",
+            "title_similarity": 0.5333333333333333
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Character-level Language Modeling with Gated Hierarchical Recurrent Neural Networks",
+            "authors": [
+              "Choi",
+              "Park",
+              "Sung"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.21437/interspeech.2018-1727",
+            "source_url": "https://doi.org/10.21437/interspeech.2018-1727",
+            "title_similarity": 0.5031446540880503
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:36.341625Z",
+        "response_sha256": "3263d7ba539ef08b7f191bb098b287267fa0a5aff008d638bea32c558c28eb0a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Empirical+evaluation+of+gated+recurrent+neural+networks+on+sequence+modeling&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.252861Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-5",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Inductive representation learning on large graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5",
+        "checked_at": "2026-10-09T04:41:02.254086Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Unsupervised Inductive Node Representation Learning for Dynamic Graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/access.2025.3553377",
+            "source_url": "https://doi.org/10.1109/access.2025.3553377",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Unsupervised Inductive node representation learning for dynamic graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-3972512/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3972512/v1",
+            "title_similarity": 0.7394957983193278
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Label Deconvolution for Node Representation Learning on Large-scale Attributed Graphs against Learning Bias_supp1-3459408.pdf",
+            "authors": [
+              "Wang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tpami.2024.3459408/mm1",
+            "source_url": "https://doi.org/10.1109/tpami.2024.3459408/mm1",
+            "title_similarity": 0.5172413793103449
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial Caching Training: Unsupervised Inductive Network Representation Learning on Large-Scale Graphs",
+            "authors": [
+              "Chen",
+              "Gong",
+              "Wang",
+              "Wang",
+              "Xu",
+              "Lv",
+              "Li",
+              "Wu",
+              "Liu"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/tnnls.2021.3084195",
+            "source_url": "https://doi.org/10.1109/tnnls.2021.3084195",
+            "title_similarity": 0.6363636363636364
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FunQG: Molecular Representation Learning via Quotient Graphs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c00445.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c00445.s001",
+            "title_similarity": 0.6666666666666666
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:01.302213Z",
+        "response_sha256": "e53f1790ca49ff85ae4341b59ec6fcf354d063683a772008b2b4511d0e9c476e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Inductive+representation+learning+on+large+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.254086Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-7",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Representation learning for dynamic graphs: A survey",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Representation+learning+for+dynamic+graphs%3A+A+survey&rows=5",
+        "checked_at": "2026-10-09T04:41:02.256316Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning in Flux: Continual and Efficient Representation Learning on Dynamic Graphs",
+            "authors": [
+              "Zhang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-hdl152692",
+            "source_url": "https://doi.org/10.14711/thesis-hdl152692",
+            "title_similarity": 0.6015037593984962
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Advancing Structural Representation Learning for Static and Dynamic Graphs",
+            "authors": [
+              "Layne"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.18122/td.2292.boisestate",
+            "source_url": "https://doi.org/10.18122/td.2292.boisestate",
+            "title_similarity": 0.672
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Unsupervised Inductive Node Representation Learning for Dynamic Graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/access.2025.3553377",
+            "source_url": "https://doi.org/10.1109/access.2025.3553377",
+            "title_similarity": 0.6942148760330579
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Unsupervised Inductive node representation learning for dynamic graphs",
+            "authors": [
+              "Zhou",
+              "Abbas"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-3972512/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-3972512/v1",
+            "title_similarity": 0.6942148760330579
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "FunQG: Molecular Representation Learning via Quotient Graphs",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c00445.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c00445.s001",
+            "title_similarity": 0.6
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:38.674251Z",
+        "response_sha256": "92b01d6e47b51e1a1cbabe03bb16183f5b94b1fda877a1b1aedbe295177de7dc",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Representation+learning+for+dynamic+graphs%3A+A+survey&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.256316Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-8",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-8",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-8",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adam: A method for stochastic optimization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5",
+        "checked_at": "2026-10-09T04:41:02.253717Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "madgrad: 'MADGRAD' Method for Stochastic Optimization",
+            "authors": [
+              "Falbel"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.32614/cran.package.madgrad",
+            "source_url": "https://doi.org/10.32614/cran.package.madgrad",
+            "title_similarity": 0.8791208791208791
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+            "authors": [
+              "Hong",
+              "Lin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.52202/079017-0346",
+            "source_url": "https://doi.org/10.52202/079017-0346",
+            "title_similarity": 0.5470085470085471
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Stochastic Trust Region Inexact Newton Method",
+            "authors": [
+              "Chauhan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1201/9781003240167-10",
+            "source_url": "https://doi.org/10.1201/9781003240167-10",
+            "title_similarity": 0.37209302325581395
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "The stochastic projected gradient method for optimization problems on Hadamard manifolds",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.69829/oper-026-0301-ta03",
+            "source_url": "https://doi.org/10.69829/oper-026-0301-ta03",
+            "title_similarity": 0.40310077519379844
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+            "authors": [
+              "Barakat",
+              "Bianchi"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1137/19m1263443",
+            "source_url": "https://doi.org/10.1137/19m1263443",
+            "title_similarity": 0.5333333333333333
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:38.201160Z",
+        "response_sha256": "a7167cde8616a0aa3cf624b44a95f485d53d343dc8b6a1053fe503ee63993481",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adam%3A+A+method+for+stochastic+optimization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.253717Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-9",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Semi-supervised classification with graph convolutional networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Semi-supervised+classification+with+graph+convolutional+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:02.258365Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Hybrid Graph Convolutional Networks for Semi-Supervised Classification",
+            "authors": [],
+            "year": 2019,
+            "years": [
+              2019
+            ],
+            "doi": "10.18178/wcse.2019.06.016",
+            "source_url": "https://doi.org/10.18178/wcse.2019.06.016",
+            "title_similarity": 0.44776119402985076
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Progressive Graph Convolutional Networks for Semi-Supervised Node Classification",
+            "authors": [
+              "Heidari",
+              "Iosifidis"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/access.2021.3085905",
+            "source_url": "https://doi.org/10.1109/access.2021.3085905",
+            "title_similarity": 0.4583333333333333
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Example-feature graph convolutional networks for semi-supervised classification",
+            "authors": [
+              "Fu",
+              "Liu",
+              "Zhang",
+              "Zhou"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1016/j.neucom.2021.07.048",
+            "source_url": "https://doi.org/10.1016/j.neucom.2021.07.048",
+            "title_similarity": 0.4195804195804196
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "A Deep Graph Wavelet Convolutional Neural Network for Semi-supervised Node Classification",
+            "authors": [
+              "Wang",
+              "Deng"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1109/ijcnn52387.2021.9533634",
+            "source_url": "https://doi.org/10.1109/ijcnn52387.2021.9533634",
+            "title_similarity": 0.40522875816993464
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Dual Graph Convolutional Networks for Graph-Based Semi-Supervised Classification",
+            "authors": [
+              "Zhuang",
+              "Ma"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1145/3178876.3186116",
+            "source_url": "https://doi.org/10.1145/3178876.3186116",
+            "title_similarity": 0.4166666666666667
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:39.377867Z",
+        "response_sha256": "857c69ac7c177683f8a93a6f7a0236782459fdfce4bb46a455b4ab2d1bb655b8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Semi-supervised+classification+with+graph+convolutional+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.258365Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-13",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-13",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-13",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graphs over time: densification laws, shrinking diameters and possible explanations",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graphs+over+time%3A+densification+laws%2C+shrinking+diameters+and+possible+explanations&rows=5",
+        "checked_at": "2026-10-09T04:41:02.258782Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graphs over time",
+            "authors": [
+              "Leskovec",
+              "Kleinberg",
+              "Faloutsos"
+            ],
+            "year": 2005,
+            "years": [
+              2005
+            ],
+            "doi": "10.1145/1081870.1081893",
+            "source_url": "https://doi.org/10.1145/1081870.1081893",
+            "title_similarity": 0.32989690721649484
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Graph evolution",
+            "authors": [
+              "Leskovec",
+              "Kleinberg",
+              "Faloutsos"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1145/1217299.1217301",
+            "source_url": "https://doi.org/10.1145/1217299.1217301",
+            "title_similarity": 0.22916666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Median properties of graphs with small diameters",
+            "authors": [
+              "Zelinka"
+            ],
+            "year": 1995,
+            "years": [
+              1995,
+              2008
+            ],
+            "doi": "10.21136/mb.1995.126008",
+            "source_url": "https://doi.org/10.21136/mb.1995.126008",
+            "title_similarity": 0.31007751937984496
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7287/peerj.preprints.2474/supp-1",
+            "source_url": "https://doi.org/10.7287/peerj.preprints.2474/supp-1",
+            "title_similarity": 0.0
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Diameters of commuting graphs of matrices over semirings",
+            "authors": [
+              "Dolžan",
+              "Kokol Bukovšek",
+              "Oblak"
+            ],
+            "year": 2012,
+            "years": [
+              2012
+            ],
+            "doi": "10.1007/s00233-011-9371-1",
+            "source_url": "https://doi.org/10.1007/s00233-011-9371-1",
+            "title_similarity": 0.291970802919708
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:39.614917Z",
+        "response_sha256": "acf5a1f071ae9202ad431acdca2c5971863b0fc9e1d189ef9d926a4698fae0fc",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graphs+over+time%3A+densification+laws%2C+shrinking+diameters+and+possible+explanations&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.258782Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-14",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Revisiting graph adversarial attack and defense from a data distribution perspective",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Revisiting+graph+adversarial+attack+and+defense+from+a+data+distribution+perspective&rows=5",
+        "checked_at": "2026-10-09T04:41:05.169471Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:05.169425Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Revisiting+graph+adversarial+attack+and+defense+from+a+data+distribution+perspective&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:05.169471Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-15",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-15",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Deeper insights into graph convolutional networks for semi-supervised learning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Deeper+insights+into+graph+convolutional+networks+for+semi-supervised+learning&rows=5",
+        "checked_at": "2026-10-09T04:41:05.302559Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:41:05.302515Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Deeper+insights+into+graph+convolutional+networks+for+semi-supervised+learning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:05.302559Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-16",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-16",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards more practical adversarial attacks on graph neural networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+more+practical+adversarial+attacks+on+graph+neural+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:02.259504Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "A Dual Robust Graph Neural Network Against Graph Adversarial Attacks",
+            "authors": [
+              "Tao",
+              "Liao",
+              "Zhang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2024.106276",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.106276",
+            "title_similarity": 0.4444444444444444
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards more practical vertically federated graph neural networks",
+            "authors": [
+              "Pan",
+              "Wu"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.patrec.2026.04.004",
+            "source_url": "https://doi.org/10.1016/j.patrec.2026.04.004",
+            "title_similarity": 0.8181818181818182
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Defending Adversarial Attacks in Graph Neural Networks Via Tensor Enhancement",
+            "authors": [
+              "Zhang",
+              "Hong",
+              "Cheng",
+              "Zhang",
+              "zhao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4794780",
+            "source_url": "https://doi.org/10.2139/ssrn.4794780",
+            "title_similarity": 0.6527777777777778
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Towards Query-limited Adversarial Attacks on Graph Neural Networks",
+            "authors": [
+              "Li",
+              "Zhang",
+              "Gao",
+              "Wu",
+              "Zhou",
+              "Wang"
+            ],
+            "year": 2022,
+            "years": [
+              2022
+            ],
+            "doi": "10.1109/ictai56018.2022.00082",
+            "source_url": "https://doi.org/10.1109/ictai56018.2022.00082",
+            "title_similarity": 0.8270676691729323
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Improving the robustness of graph contrastive learning against adversarial attacks via hierarchical medoid-based contrasting",
+            "authors": [
+              "Shen",
+              "Yang",
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108357",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108357",
+            "title_similarity": 0.39790575916230364
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:41.062660Z",
+        "response_sha256": "bc2679bcf53e18a45126b55a89ed44bed27c3bab742ffb1fba92584e6d1a3a79",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+more+practical+adversarial+attacks+on+graph+neural+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.259504Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-17",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Towards deep learning models resistant to adversarial attacks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Towards+deep+learning+models+resistant+to+adversarial+attacks&rows=5",
+        "checked_at": "2026-10-09T04:41:02.260129Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "On Adversarial Attacks on Deep Learning Models",
+            "authors": [
+              "Mani"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.49ee-sknc",
+            "source_url": "https://doi.org/10.31979/etd.49ee-sknc",
+            "title_similarity": 0.4672897196261682
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Towards Preventing Adversarial Attacks: Developing a Framework for Enhancing Robustness of Deep Learning Models for Worker Safety in Construction",
+            "authors": [
+              "Anjum",
+              "Nnaji"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4938892",
+            "source_url": "https://doi.org/10.2139/ssrn.4938892",
+            "title_similarity": 0.35121951219512193
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Adversarial attacks and robustness in deep learning models and applications",
+            "authors": [
+              "Alparslan",
+              "Kim"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.17918/00000565",
+            "source_url": "https://doi.org/10.17918/00000565",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Adversarial Attacks on Machine Learning Models in Cyber- Physical Systems",
+            "authors": [
+              "Rahman",
+              "Hu"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1201/9781003187158-13",
+            "source_url": "https://doi.org/10.1201/9781003187158-13",
+            "title_similarity": 0.2857142857142857
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "The Robustness of Deep Learning Models to Adversarial Attacks in Lung X-ray Classification",
+            "authors": [
+              "Li",
+              "Pang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.21203/rs.3.rs-4923634/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-4923634/v1",
+            "title_similarity": 0.6225165562913907
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:41.785038Z",
+        "response_sha256": "7bedd89d44cfdbca6fdee4efb7938af4e68c7affa64781a640f57dcc0ff387f8",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Towards+deep+learning+models+resistant+to+adversarial+attacks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.260129Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-18",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-18",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Birds of a feather: Homophily in social networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Birds+of+a+feather%3A+Homophily+in+social+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:02.261499Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Birds of a feather scam together: Trustworthiness homophily in a business network",
+            "authors": [
+              "Barone",
+              "Coscia"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.1016/j.socnet.2018.01.009",
+            "source_url": "https://doi.org/10.1016/j.socnet.2018.01.009",
+            "title_similarity": 0.6614173228346457
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Birds of a feather at first sight: Decomposing homophily into tie formation and persistence",
+            "authors": [
+              "Grund"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.socnet.2026.08.002",
+            "source_url": "https://doi.org/10.1016/j.socnet.2026.08.002",
+            "title_similarity": 0.5401459854014599
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Faculty Opinions recommendation of Birds of a feather: homophily in social networks.",
+            "authors": [
+              "Masuda"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.3410/f.725356294.793504070",
+            "source_url": "https://doi.org/10.3410/f.725356294.793504070",
+            "title_similarity": 0.7286821705426356
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "McPherson et al. (2001): Birds of a Feather: Homophily in Social Networks",
+            "authors": [
+              "Fischbach"
+            ],
+            "year": 2018,
+            "years": [
+              2018,
+              2019
+            ],
+            "doi": "10.1007/978-3-658-21742-6_91",
+            "source_url": "https://doi.org/10.1007/978-3-658-21742-6_91",
+            "title_similarity": 0.8173913043478261
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Birds of a feather check together: Leveraging homophily for sequential rumour detection",
+            "authors": [
+              "Lathiya",
+              "Dhobi",
+              "Zubiaga",
+              "Liakata",
+              "Procter"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1016/j.osnem.2020.100097",
+            "source_url": "https://doi.org/10.1016/j.osnem.2020.100097",
+            "title_similarity": 0.5714285714285714
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:43.424560Z",
+        "response_sha256": "937132954e3c2225a19a24b9ea09d5608eec89d114a01c82c87aa57eb9adbe9e",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Birds+of+a+feather%3A+Homophily+in+social+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.261499Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-20",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-20",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Temporal graph networks for deep learning on dynamic graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Temporal+graph+networks+for+deep+learning+on+dynamic+graphs&rows=5",
+        "checked_at": "2026-10-09T04:41:02.262148Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Spectral-temporal dual view graph convolutional networks: A deep learning framework for dynamic bipartite graphs",
+            "authors": [
+              "Xing",
+              "Ye",
+              "Li",
+              "Liu"
+            ],
+            "year": 2027,
+            "years": [
+              2027
+            ],
+            "doi": "10.1016/j.neunet.2026.109672",
+            "source_url": "https://doi.org/10.1016/j.neunet.2026.109672",
+            "title_similarity": 0.6470588235294118
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Deep Learning on Graphs using Graph Convolutional Networks",
+            "authors": [
+              "Mithe"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.31979/etd.yca4-fmqh",
+            "source_url": "https://doi.org/10.31979/etd.yca4-fmqh",
+            "title_similarity": 0.42735042735042733
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Graph Neural Networks for Complex Graphs",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1017/9781108924184.012",
+            "source_url": "https://doi.org/10.1017/9781108924184.012",
+            "title_similarity": 0.5858585858585859
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Graph Neural Networks",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1017/9781108924184.009",
+            "source_url": "https://doi.org/10.1017/9781108924184.009",
+            "title_similarity": 0.35
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Scalable Graph Neural Networks",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.1017/9781108924184.011",
+            "source_url": "https://doi.org/10.1017/9781108924184.011",
+            "title_similarity": 0.38202247191011235
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:43.438555Z",
+        "response_sha256": "2bb2995154c7659acc4d92fdf96c7f3ef1cf90d297ac0fcd7b5efdc1a6721a9a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Temporal+graph+networks+for+deep+learning+on+dynamic+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.262148Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-23",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-23",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-23",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Dyrep: Learning representations over dynamic graphs",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Dyrep%3A+Learning+representations+over+dynamic+graphs&rows=5",
+        "checked_at": "2026-10-09T04:41:02.263340Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Learning Neural Representations for Dynamic Heterogeneous Graphs",
+            "authors": [
+              "Nguyen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32920/26883523.v1",
+            "source_url": "https://doi.org/10.32920/26883523.v1",
+            "title_similarity": 0.7368421052631579
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Learning Neural Representations for Dynamic Heterogeneous Graphs",
+            "authors": [
+              "Nguyen"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.32920/26883523",
+            "source_url": "https://doi.org/10.32920/26883523",
+            "title_similarity": 0.7368421052631579
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Learning attributed graphs representations",
+            "authors": [
+              "Kaloga"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/1fcb46e8z5df1z4cf9zaebfze7ce6063830f",
+            "source_url": "https://doi.org/10.70675/1fcb46e8z5df1z4cf9zaebfze7ce6063830f",
+            "title_similarity": 0.5217391304347826
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Heaps over graphs",
+            "authors": [],
+            "year": 2013,
+            "years": [
+              2013
+            ],
+            "doi": "10.1017/cbo9781139207003.003",
+            "source_url": "https://doi.org/10.1017/cbo9781139207003.003",
+            "title_similarity": 0.47761194029850745
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Graphs for deep learning representations",
+            "authors": [
+              "Rosar Kós Lassance"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/71e4bd29z1d6az4a2bza3c2z868925d41708",
+            "source_url": "https://doi.org/10.70675/71e4bd29z1d6az4a2bza3c2z868925d41708",
+            "title_similarity": 0.6222222222222222
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:45.913089Z",
+        "response_sha256": "00ec56b066c46b5683540fb96c10bb403e358ce0ffefd612b5e40cf00780c417",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Dyrep%3A+Learning+representations+over+dynamic+graphs&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.263340Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-24",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-24",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-24",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graph attention networks",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graph+attention+networks&rows=5",
+        "checked_at": "2026-10-09T04:41:02.263915Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graph Attention Site Prediction (GrASP): Identifying Druggable Binding Sites Using Graph Neural Networks with Attention",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c01698.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c01698.s001",
+            "title_similarity": 0.34285714285714286
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "IGAT: Interpretable Graph Attention Networks for Ligand Optimization",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acsomega.5c02173.s001",
+            "source_url": "https://doi.org/10.1021/acsomega.5c02173.s001",
+            "title_similarity": 0.5274725274725275
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "AHEG : attention-based heterogeneous graph convolutional networks",
+            "authors": [
+              "Zhang"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14711/thesis-991012757468803412",
+            "source_url": "https://doi.org/10.14711/thesis-991012757468803412",
+            "title_similarity": 0.45977011494252873
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Predicting Cardiotoxicity of Molecules Using Attention-Based Graph Neural Networks",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jcim.3c01286.s001",
+            "source_url": "https://doi.org/10.1021/acs.jcim.3c01286.s001",
+            "title_similarity": 0.39622641509433965
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Advancing Force Fields Parameterization: A Directed Graph Attention Networks Approach",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.1021/acs.jctc.3c01421.s001",
+            "source_url": "https://doi.org/10.1021/acs.jctc.3c01421.s001",
+            "title_similarity": 0.4444444444444444
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:03.435883Z",
+        "response_sha256": "afa1935a4b1172702bc57346465ef3ebde11e5d881ccf3e3db4986116b7047a5",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graph+attention+networks&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.263915Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-25",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-25",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-25",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Attackgraphconvolutional networks by adding fake nodes",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Attackgraphconvolutional+networks+by+adding+fake+nodes&rows=5",
+        "checked_at": "2026-10-09T04:41:02.264285Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Estimating the impact of adding sensor nodes to biomedical wireless sensor networks",
+            "authors": [
+              "Abreu",
+              "Miranda",
+              "Mendes"
+            ],
+            "year": 2015,
+            "years": [
+              2015
+            ],
+            "doi": "10.1063/1.4912937",
+            "source_url": "https://doi.org/10.1063/1.4912937",
+            "title_similarity": 0.32116788321167883
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Adding Hidden Nodes to Gene Networks",
+            "authors": [
+              "Chor",
+              "Tuller"
+            ],
+            "year": 2004,
+            "years": [
+              2004
+            ],
+            "doi": "10.1007/978-3-540-30219-3_11",
+            "source_url": "https://doi.org/10.1007/978-3-540-30219-3_11",
+            "title_similarity": 0.28888888888888886
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Dynamically adding symbolically meaningful nodes to knowledge-based neural networks",
+            "authors": [
+              "Pitz",
+              "Shavlik"
+            ],
+            "year": 1995,
+            "years": [
+              1995
+            ],
+            "doi": "10.1016/0950-7051(96)81915-0",
+            "source_url": "https://doi.org/10.1016/0950-7051(96)81915-0",
+            "title_similarity": 0.291970802919708
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Expansion of Super-Stable Tensegrity Structures by Adding Nodes",
+            "authors": [
+              "Malik"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4975685",
+            "source_url": "https://doi.org/10.2139/ssrn.4975685",
+            "title_similarity": 0.49572649572649574
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Energy-Aware Post Settings: A Study on Performance Gain by Adding Relaying Nodes in Wireless Ad-Hoc Networks",
+            "authors": [
+              "Sung",
+              "Potkonjak"
+            ],
+            "year": 2009,
+            "years": [
+              2009
+            ],
+            "doi": "10.1109/wcnc.2009.4917712",
+            "source_url": "https://doi.org/10.1109/wcnc.2009.4917712",
+            "title_similarity": 0.34782608695652173
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:45.537675Z",
+        "response_sha256": "8d1a4e4c64bc1d7f1e9fedff1d45dd8aa6912e3c634b505ee3294910091cae2c",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Attackgraphconvolutional+networks+by+adding+fake+nodes&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.264285Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-26",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-26",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-26",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "How powerful are graph neural networks? arXiv preprint arXiv:1810.00826 , 2018.",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=How+powerful+are+graph+neural+networks%3F+arXiv+preprint+arXiv%3A1810.00826+%2C+2018.&rows=5",
+        "checked_at": "2026-10-09T04:41:02.265034Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+            "authors": [
+              "Sienicki"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.20944/preprints202411.2377.v1",
+            "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+            "title_similarity": 0.4107142857142857
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "ArXiv preprint server clamps down on AI slop",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.z66g9k7",
+            "source_url": "https://doi.org/10.1126/science.z66g9k7",
+            "title_similarity": 0.3025210084033613
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "ArXiv, the pioneering preprint server, declares independence from Cornell",
+            "authors": [],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1126/science.zkb639g",
+            "source_url": "https://doi.org/10.1126/science.zkb639g",
+            "title_similarity": 0.273972602739726
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Preprint repository arXiv achieves milestone million uploads",
+            "authors": [],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1063/pt.5.028530",
+            "source_url": "https://doi.org/10.1063/pt.5.028530",
+            "title_similarity": 0.2518518518518518
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Model sensitivity analysis on arxiv",
+            "authors": [
+              "Pagnini"
+            ],
+            "year": 2018,
+            "years": [
+              2018
+            ],
+            "doi": "10.5194/gmd-2018-33-ac4",
+            "source_url": "https://doi.org/10.5194/gmd-2018-33-ac4",
+            "title_similarity": 0.2909090909090909
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:38:05.124191Z",
+        "response_sha256": "073615f31525c4dec72786aacf3e399f5905f46a9dc6fa76930cc9762dc3814a",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=How+powerful+are+graph+neural+networks%3F+arXiv+preprint+arXiv%3A1810.00826+%2C+2018.&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.265034Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-28",
+      "dimension_id": "reference_verification",
+      "severity": "medium",
+      "status": "pending_verification",
+      "title": "metadata_conflict",
+      "description": "冲突字段：year",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-28",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-28",
+        "status": "metadata_conflict",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Graph universal adversarial attacks: A few bad actors ruin graph learning models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Graph+universal+adversarial+attacks%3A+A+few+bad+actors+ruin+graph+learning+models&rows=5",
+        "checked_at": "2026-10-09T04:41:02.266844Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Graph Universal Adversarial Attacks: A Few Bad Actors Ruin Graph Learning Models",
+            "authors": [
+              "Zang",
+              "Xie",
+              "Chen",
+              "Yuan"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.24963/ijcai.2021/458",
+            "source_url": "https://doi.org/10.24963/ijcai.2021/458",
+            "title_similarity": 1.0
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GHAttack: Generative Adversarial Attacks on Heterogeneous Graph Neural Networks_supp1-3648367.pdf",
+            "authors": [
+              "Liao"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.1109/tnnls.2025.3648367/mm1",
+            "source_url": "https://doi.org/10.1109/tnnls.2025.3648367/mm1",
+            "title_similarity": 0.5028571428571429
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Can LLMs Fool Graph Learning? Exploring Universal Adversarial Attacks on Text-Attributed Graphs",
+            "authors": [
+              "Chen",
+              "Wang",
+              "Jiao",
+              "Wu",
+              "Wang",
+              "Ao",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1145/3774904.3792502",
+            "source_url": "https://doi.org/10.1145/3774904.3792502",
+            "title_similarity": 0.5780346820809249
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Preserving node similarity adversarial learning graph representation with graph neural network\"",
+            "authors": [],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1002/eng2.12854/v2/review1",
+            "source_url": "https://doi.org/10.1002/eng2.12854/v2/review1",
+            "title_similarity": 0.33695652173913043
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Peer Review #2 of \"Derivative-free optimization adversarial attacks for graph convolutional networks (v0.1)\"",
+            "authors": [],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.7287/peerj-cs.693v0.1/reviews/2",
+            "source_url": "https://doi.org/10.7287/peerj-cs.693v0.1/reviews/2",
+            "title_similarity": 0.46153846153846156
+          }
+        ],
+        "conflicting_fields": [
+          "year"
+        ],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:46.549563Z",
+        "response_sha256": "6c117b4e7bae46354964231fdcce537239c8ecdb2f0a8deeeb8237fe98aaaac9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Graph+universal+adversarial+attacks%3A+A+few+bad+actors+ruin+graph+learning+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.266844Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-30",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-30",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-30",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Universal and transferable adversarial attacks on aligned language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Universal+and+transferable+adversarial+attacks+on+aligned+language+models&rows=5",
+        "checked_at": "2026-10-09T04:41:02.268436Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "CommanderUAP: a practical and transferable universal adversarial attacks on speech recognition models",
+            "authors": [
+              "Sun",
+              "Zhao",
+              "Guo",
+              "Chen",
+              "Ju"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1186/s42400-024-00218-8",
+            "source_url": "https://doi.org/10.1186/s42400-024-00218-8",
+            "title_similarity": 0.6473988439306358
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Universal and Transferable Adversarial Attack on Large Language Models Using Exponentiated Gradient Descent",
+            "authors": [
+              "Biswas",
+              "Nishino",
+              "Jacob Chacko",
+              "Liu"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5445960",
+            "source_url": "https://doi.org/10.2139/ssrn.5445960",
+            "title_similarity": 0.7555555555555555
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "GLEAM: Enhanced Transferable Adversarial Attacks for Vision-Language Pre-Training Models via Global-Local Transformations",
+            "authors": [
+              "Liu",
+              "Ouyang",
+              "Cui"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1109/iccv51701.2025.00163",
+            "source_url": "https://doi.org/10.1109/iccv51701.2025.00163",
+            "title_similarity": 0.5803108808290155
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Framework to Benchmark Adversarial Attacks on Language Models",
+            "authors": [
+              "Aasi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32920/29873867",
+            "source_url": "https://doi.org/10.32920/29873867",
+            "title_similarity": 0.6567164179104478
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Framework to Benchmark Adversarial Attacks on Language Models",
+            "authors": [
+              "Aasi"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.32920/29873867.v1",
+            "source_url": "https://doi.org/10.32920/29873867.v1",
+            "title_similarity": 0.6567164179104478
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:35.117814Z",
+        "response_sha256": "5c7443553edcc716fe6d49d43d016f6d3fa135bc6956c11f3cc25262cc4dc6d2",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Universal+and+transferable+adversarial+attacks+on+aligned+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.268436Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-32",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-32",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-32",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarial attacks on graph neural networks via meta learning.¡ i¿ iclr¡/i¿",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarial+attacks+on+graph+neural+networks+via+meta+learning.%C2%A1+i%C2%BF+iclr%C2%A1%2Fi%C2%BF&rows=5",
+        "checked_at": "2026-10-09T04:41:02.269963Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Topological Adversarial Attacks on Graph Neural Networks Via Projected Meta Learning",
+            "authors": [
+              "Aburidi",
+              "Marcia"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1109/eais58494.2024.10569101",
+            "source_url": "https://doi.org/10.1109/eais58494.2024.10569101",
+            "title_similarity": 0.8
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Improving the robustness of graph contrastive learning against adversarial attacks via hierarchical medoid-based contrasting",
+            "authors": [
+              "Shen",
+              "Yang",
+              "Li"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1016/j.neunet.2025.108357",
+            "source_url": "https://doi.org/10.1016/j.neunet.2025.108357",
+            "title_similarity": 0.31794871794871793
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "EMHDRL: Adversarial Attacks on Graph Neural Networks via Hierarchical Reinforcement Learning",
+            "authors": [
+              "Sun",
+              "Ding",
+              "Li"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.23919/ccc58697.2023.10239808",
+            "source_url": "https://doi.org/10.23919/ccc58697.2023.10239808",
+            "title_similarity": 0.7530864197530864
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Defending Adversarial Attacks in Graph Neural Networks Via Tensor Enhancement",
+            "authors": [
+              "Zhang",
+              "Hong",
+              "Cheng",
+              "Zhang",
+              "zhao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4794780",
+            "source_url": "https://doi.org/10.2139/ssrn.4794780",
+            "title_similarity": 0.6891891891891891
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "A Dual Robust Graph Neural Network Against Graph Adversarial Attacks",
+            "authors": [
+              "Tao",
+              "Liao",
+              "Zhang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2024.106276",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.106276",
+            "title_similarity": 0.5179856115107914
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:49.029877Z",
+        "response_sha256": "13caa08a5bb31e6f849fbc90dcaa425bee1ac0837d3e0d4ff19bd4d926ccbb8b",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarial+attacks+on+graph+neural+networks+via+meta+learning.%C2%A1+i%C2%BF+iclr%C2%A1%2Fi%C2%BF&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.269963Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-34",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-34",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-34",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Adversarial attacks on graph neural networks: Perturbations and their patterns",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Adversarial+attacks+on+graph+neural+networks%3A+Perturbations+and+their+patterns&rows=5",
+        "checked_at": "2026-10-09T04:41:02.271371Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Adversarial Attacks on Graph Neural Networks",
+            "authors": [
+              "Zügner",
+              "Borchert",
+              "Akbarnejad",
+              "Günnemann"
+            ],
+            "year": 2020,
+            "years": [
+              2020
+            ],
+            "doi": "10.1145/3394520",
+            "source_url": "https://doi.org/10.1145/3394520",
+            "title_similarity": 0.7272727272727273
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "A Dual Robust Graph Neural Network Against Graph Adversarial Attacks",
+            "authors": [
+              "Tao",
+              "Liao",
+              "Zhang",
+              "Li"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2024.106276",
+            "source_url": "https://doi.org/10.1016/j.neunet.2024.106276",
+            "title_similarity": 0.5379310344827586
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Detection of Backdoor Attacks Using Targeted Universal Adversarial Perturbations for Deep Neural Networks",
+            "authors": [
+              "qu",
+              "Huang",
+              "Chen",
+              "wang"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.2139/ssrn.4374572",
+            "source_url": "https://doi.org/10.2139/ssrn.4374572",
+            "title_similarity": 0.38461538461538464
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Black-box attacks on dynamic graphs via adversarial topology perturbations",
+            "authors": [
+              "Tao",
+              "Cao",
+              "Chen",
+              "Sun",
+              "Shi",
+              "Zhu"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.neunet.2023.11.060",
+            "source_url": "https://doi.org/10.1016/j.neunet.2023.11.060",
+            "title_similarity": 0.3841059602649007
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Defending Adversarial Attacks in Graph Neural Networks Via Tensor Enhancement",
+            "authors": [
+              "Zhang",
+              "Hong",
+              "Cheng",
+              "Zhang",
+              "zhao"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.2139/ssrn.4794780",
+            "source_url": "https://doi.org/10.2139/ssrn.4794780",
+            "title_similarity": 0.6623376623376623
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:35:49.807018Z",
+        "response_sha256": "10bce51fe8abed8de2cc0b372bea42952bd04a480d052bb7e946c08475f392c9",
+        "from_cache": true
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Adversarial+attacks+on+graph+neural+networks%3A+Perturbations+and+their+patterns&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:41:02.271371Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_003_openreview_2024_02_11_credibility-35",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "parse_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_003_openreview_2024_02_11_credibility-35",
+        "paper_reference_id": "ref-paper_003_openreview_2024_02_11_credibility-35",
+        "status": "parse_failed",
+        "provider": "Crossref",
+        "query": {},
+        "query_attempted": false,
+        "source_url": null,
+        "checked_at": null,
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": null,
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [],
+      "checked_at": null,
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "code_reproduction_signals",
+      "kind": "low_dimension_score",
+      "score": 4
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 35,
+    "extracted_count": 35,
+    "parsed_count": 34,
+    "queried_count": 34,
+    "matched_count": 12,
+    "metadata_conflict_count": 1,
+    "unverified_count": 19,
+    "parse_failed_count": 1,
+    "not_checked_count": 0,
+    "query_failed_count": 2,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "no_public_code_found"
+  ],
+  "created_at": "2026-10-09T06:14:40.862734Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

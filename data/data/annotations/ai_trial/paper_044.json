@@ -1,0 +1,400 @@
+{
+  "assessment_id": "assessment_ai_paper_044_iclr_2026_proceedings",
+  "paper_version_id": "paper_044_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_044_iclr_2026_proceedings",
+    "raw_output_sha256": "79c1afc01ef7afc38daf4dc1c134ef8ae7b666ac953d6fe81a0ba22d07b8d586"
+  },
+  "paper_summary": "In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines c",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines c",
+      "type": "method_or_finding",
+      "evidence_id": "paper_044_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resultin",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_044_ev_003",
+        "paper_044_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensit",
+    "论文提供方法或实证支持：We perform further ablations on various aspects of our curation setups and analyze their impact on the attack success. TRAK We conduct these ablations on attacks against scores, which Image-based yield the strongest leakage signal and thus provide the clear- 2"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensit；边界证据为：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa",
+      "strengths": [
+        "可定位正文支持：In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensit"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+      "evidence_ids": [
+        "paper_044_ev_001",
+        "paper_044_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：We perform further ablations on various aspects of our curation setups and analyze their impact on the attack success. TRAK We conduct these ablations on attacks against scores, which Image-based yield the strongest leakage signal and thus provide the clear- 2；边界证据为：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa",
+      "strengths": [
+        "可定位正文支持：We perform further ablations on various aspects of our curation setups and analyze their impact on the attack success. TRAK We conduct these ablations on attacks against scores, which Image-based yield the strongest leakage signal and thus provide the clear- 2"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 9/10。",
+      "evidence_ids": [
+        "paper_044_ev_003",
+        "paper_044_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Data curation has become an important part of modern machine learning (ML) pipelines (Maini et al., 2024; Wu et al., 2024), offering a principled way to select high-value data in order to maximize model performance and computational efficiency. By filtering ou；边界证据为：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa",
+      "strengths": [
+        "可定位正文支持：Data curation has become an important part of modern machine learning (ML) pipelines (Maini et al., 2024; Wu et al., 2024), offering a principled way to select high-value data in order to maximize model performance and computational efficiency. By filtering ou"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_044_ev_004",
+        "paper_044_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Table 2: Overview of Curation Methods Method Description Score Function Image-based Identifies relevant pool data using s ( x ) = max cos( ϕ ( x ) ,ϕ ( t )) t ∈T image embeddings where ϕ ( · ) is the embedding function TRAK Computes attribution scores via pro-；边界证据为：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa",
+      "strengths": [
+        "可定位正文支持：Table 2: Overview of Curation Methods Method Description Score Function Image-based Identifies relevant pool data using s ( x ) = max cos( ϕ ( x ) ,ϕ ( t )) t ∈T image embeddings where ϕ ( · ) is the embedding function TRAK Computes attribution scores via pro-"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_044_ev_005",
+        "paper_044_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Experimental Setup. We evaluate our attacks using CommonPool (small) (Gadre et al., 2023) as the public dataset D , containing 12.8M samples. We evaluate across six diverse target datasets spanning natural images, medical imaging, and satellite imagery to cove；边界证据为：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa",
+      "strengths": [
+        "可定位正文支持：Experimental Setup. We evaluate our attacks using CommonPool (small) (Gadre et al., 2023) as the public dataset D , containing 12.8M samples. We evaluate across six diverse target datasets spanning natural images, medical imaging, and satellite imagery to cove"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are pa"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+      "evidence_ids": [
+        "paper_044_ev_006",
+        "paper_044_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_044_ev_001",
+      "page_number": 1,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "In machine learning, curation is used to select the most valuable data for improving both model accuracy and computational efficiency. Recently, curation has also been explored as a solution for private machine learning: rather than training directly on sensitive data, which is known to leak information through model predictions, the private data is used only to guide the selection of useful public data. The resulting model is then trained solely on curated public data. It is tempting to assume that such a model is privacy-preserving because it has never seen the private data. Yet, we show that without further protection, curation pipelines can still leak private information. Specifically, we introduce novel attacks against popular curation methods, targeting every major step: the computation of curation scores, the selection of the curated subset, and the final trained model. We demonst",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "page_number": 10,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0023",
+      "evidence_mode": "quote",
+      "excerpt": "Our work demonstrates that data curation pipelines can leak membership information about the target datasets, exposing privacy risks at every stage, from curation scores and curated subset to the final trained model. Image-based nearest-neighbor methods are particularly vulnerable, and even state-of-the-art approaches like TRAK expose privacy risks for small target sets. Our discovered risks become practically relevant when adversaries can introduce manipulated samples in the curation pool, which is the case when the pool is simply crawled from the internet. This highlights that, as curation becomes central to ML, we need novel curation methods with dedicated safeguards, such as Differential Privacy (DP), to reduce potential leakage throughout the entire data curation pipeline.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_003",
+      "page_number": 10,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_4_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0021",
+      "evidence_mode": "quote",
+      "excerpt": "We perform further ablations on various aspects of our curation setups and analyze their impact on the attack success. TRAK We conduct these ablations on attacks against scores, which Image-based yield the strongest leakage signal and thus provide the clear- 2 est insights into the factors affecting attack success. First, we ) % ( analyze the impact of the number of dimensions used for R P Image-based embeddings and TRAK-based gradient projec- F % 1 tions. Our results in Figure 37 suggest that for Image-based 1 @ curation, there is a sweet spot, with the highest leakage at 128 R P dimensions. TRAK requires enough dimensions ( ≥ 1 , 024 ), T 0 below which the attack success drops. Additionally, we show 10 1 10 0 10 1 10 2 10 3 how target dataset size impacts attack success. Our results Privacy Budget ( ) in Figure 32 suggest differences across datasets: e.g., at- Figure 6: Attack success ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_004",
+      "page_number": 1,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Data curation has become an important part of modern machine learning (ML) pipelines (Maini et al., 2024; Wu et al., 2024), offering a principled way to select high-value data in order to maximize model performance and computational efficiency. By filtering out noisy, low-quality, or redundant samples (Gadre et al., 2023; Li et al., 2024a; Gu et al., 2025; Thrush et al., 2025), curation allows to train on the most informative points, thus improving generalization and resource utilization.\n\nThis paradigm is also particularly appealing for sensitive domains, such as finance or healthcare (Schäfer et al., 2024; Assefa et al., 2021), where the available training datasets are usually limited, which hinders the training of powerful ML models. In these settings, curation offers a key advantage: it enables model developers to leverage publicly available data pools and select a subset from these ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_005",
+      "page_number": 16,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_a",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0031",
+      "evidence_mode": "quote",
+      "excerpt": "Table 2: Overview of Curation Methods\n\nMethod Description Score Function Image-based Identifies relevant pool data using s ( x ) = max cos( ϕ ( x ) ,ϕ ( t )) t ∈T image embeddings where ϕ ( · ) is the embedding function TRAK Computes attribution scores via pro- s ( x ) = 1 (cid:80) Φ( x ) T G where |T| t ∈T t jected gradients to identify influen- Φ are projected and out-to-losstial pool samples scaled features",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_006",
+      "page_number": 8,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "Experimental Setup. We evaluate our attacks using CommonPool (small) (Gadre et al., 2023) as the public dataset D , containing 12.8M samples. We evaluate across six diverse target datasets spanning natural images, medical imaging, and satellite imagery to cover a wide range of curation setups:\n\n10 0 Binary LIRA LIRA R P R P Sig. Binary LIRA F Voting Scheme F % % 10 1 Iterative Reconstruction 1 10 1 Random 1 @ @ Random R R P T (a) Score-based attacks. P T 10 2 10 2 (b) Binaryselectionattacks. LiRA and custom voting 10 100 101 m 45 10 10 100 101 m 45 10 Adapted LiRA variants and i f a r a r oo d p c a s i s c s t l achieve high success across i f a r a r oo d p c a s i s c s t l c c i f f r e c c i f f r e iterative reconstruction reall datasets. Dataset Dataset main effective.\n\nFigure 4: Attack success correlates with influence patterns from Figure 2. Cross-dataset comparison shows TPR at",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_007",
+      "page_number": 14,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_references",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0029",
+      "evidence_mode": "quote",
+      "excerpt": "Sung Min Park, Kristian Georgiev, Andrew Ilyas, Guillaume Leclerc, and Aleksander Madry. TRAK: attributing model behavior at scale. In Andreas Krause, Emma Brunskill, Kyunghyun Cho, Barbara Engelhardt, Sivan Sabato, and Jonathan Scarlett (eds.), International Conference on Machine Learning, ICML 2023, 23-29 July 2023, Honolulu, Hawaii, USA , volume 202 of Proceedings of Machine Learning Research , pp. 27074–27113. PMLR, 2023. URL https://proceedings. mlr.press/v202/park23c.html .\n\nGuilherme Penedo, Quentin Malartic, Daniel Hesslow, Ruxandra Cojocaru, Alessandro Cappelli, Hamza Alobeidli, Baptiste Pannier, Ebtesam Almazrouei, and Julien Launay. The RefinedWeb dataset for falcon LLM: Outperforming curated corpora with web data, and web data only, 2023. URL https://arxiv.org/abs/2306.01116 . arXiv: 2306.01116 [cs.CL].\n\nGuilherme Penedo, Hynek Kydlíˇ cek, Loubna Ben allal, Anton Lozhkov, Mar",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_008",
+      "page_number": 30,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_d_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0058",
+      "evidence_mode": "quote",
+      "excerpt": "We detail our approach and results of removing the most vulnerable samples from the target dataset. We conduct our experiments on the curation scores for CIFAR-10. For the TRAK-based analysis, we use a target dataset size of 25,000 samples and employ the least squares attack. The attack is evaluated over 16 seeds. For the Image-based analysis, we use a target dataset size of 5,000 samples and employ the LiRA attack. The attack is evaluated over 16 seeds with 256 shadow models. In both experiments, we define the “vulnerable” set as the top 5% of samples with the highest membership inference attack success rate. For comparison, we also remove 5% of samples at random. We report AUC only on the remaining samples.\n\nWe then evaluate four scenarios:\n\n• Baseline : Full target dataset.\n\n• Ideal : Post-hoc removal of vulnerable samples from ROC computation.\n\n• Vulnerable Removal : Re-run experimen",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_009",
+      "page_number": 22,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_c_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0044",
+      "evidence_mode": "quote",
+      "excerpt": "All end-to-end attack experiments train CLIP models following the DataComp small-scale benchmark (Gadre et al., 2023). We provide the complete training configuration below: We use the Vision Transformer ViT-B-32 architecture (Dosovitskiy et al., 2021) for all experiments. Models are trained with the AdamW optimizer (Loshchilov & Hutter, 2019) with the following hyperparameters:\n\n• Learning rate: 5 × 10 − 4 with cosine decay schedule\n\n• Linear warmup: 500 steps\n\n• Weight decay: 0.2\n\n• Beta coefficients: β = 0 . 9 , β = 0 . 98 1 2\n\n• Gradient clipping: maximum norm of 1.0\n\n• Batch size: 1024\n\n• Precision: Automatic mixed precision (AMP)\n\nTraining Budget. All models are trained for a fixed budget of 10M samples. The number of epochs is adjusted based on the curated pool size, e.g., a pool of 100k samples results in 100 epochs, while a pool of 1M samples results in 10 epochs. This ensures al",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_044_ev_010",
+      "page_number": 19,
+      "section_id": "paper_044_iclr_2026_proceedings_sec_b_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_044_iclr_2026_proceedings_chunk_0039",
+      "evidence_mode": "quote",
+      "excerpt": "We recall that for Image-based scoring, the score for each sample in D is only influenced by the nearest neighbour in T . Therefore, we analyse how many pool samples each target sample is the nearest neighbour for. Given a pool sample x ∈ D with target score s ( x ) , we can determine which target sample t ∈ T was responsible for this score through the following attack:\n\n1. Normalize the embeddings: x ˆ = ϕ ( x ) and t ˆ = ϕ ( t ) for all t ∈ T ∥ ϕ ( x ) ∥ 2 ∥ ϕ ( t ) ∥ 2 2. Compute similarities: sim ( x,t ) = x ˆ T t ˆ for all t ∈ T 3. Find target with matching score: t ∗ = argmin | sim ( x,t ) − s ( x ) | t ∈T 4. For each target t , assign votes:  1 if t = t ∗  v ( t ) = − 1 if sim ( x,t ) > s ( x )  0 otherwise\n\nThe voting scheme reveals membership in T through positive votes: if a target sample receives positive votes, it was used to compute the score of at least one pool sample. ",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_044_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_044_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_044_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_044_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_044_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_044_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_044_ev_007"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_044_ev_001"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到random_seed披露。",
+      "evidence_ids": [
+        "paper_044_ev_008"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_044_ev_009"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_044_ev_010"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

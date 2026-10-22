@@ -1,0 +1,192 @@
+{
+  "model_run_id": "model_run_codex_review_paper_047_iclr_2025_proceedings",
+  "paper_id": "paper_047",
+  "version": "iclr_2025_proceedings",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:35:36Z",
+  "raw_output_sha256": "e7a2e641f914f2a11eb31e363e1655312af001298b691095722ec133e57afa65",
+  "raw_output": {
+    "paper_summary": "High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models in lieu of costly labels to provide cheap model evaluations. Unfortunately, this method of using models as judges introduces biases, such as self-preferencing, that can distort model comparisons. An emerging family of debiasing tools promises to fix these issues by using a few high quality labels to debias a large number of model judgments. In this paper, we study how far such debiasing",
+    "overall_assessment": "Codex 按锁定五维标准，仅依据《Limits to scalable evaluation at the frontier: LLM as judge won’t beat twice the data》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+    "strengths": [
+      "研究问题与贡献陈述清楚：High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models",
+      "论文提供方法或实证支持：Figure 7 shows additional results on TruthfulQA. As on MMLU, we extract model answers to the Q&A prompts from HELM 2 (Liang et al., 2023) and define the proxy score s ˜ using the judge’s answers m ( x ) as described in Section 2. We use the top three models in"
+    ],
+    "concerns": [
+      "结论应限定在论文报告的设置内：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+    ],
+    "unresolved_questions": [
+      "核心结论在更多数据、模型或随机种子下是否稳定？",
+      "未披露的实现细节是否会影响独立复现？"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对研究价值的主要支持为：High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models；边界证据为：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab",
+        "strengths": [
+          "可定位正文支持：High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0001"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "applicability": "applicable",
+        "score": 9,
+        "confidence": "medium",
+        "summary": "正文对可靠性与证据的主要支持为：Figure 7 shows additional results on TruthfulQA. As on MMLU, we extract model answers to the Q&A prompts from HELM 2 (Liang et al., 2023) and define the proxy score s ˜ using the judge’s answers m ( x ) as described in Section 2. We use the top three models in；边界证据为：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab",
+        "strengths": [
+          "可定位正文支持：Figure 7 shows additional results on TruthfulQA. As on MMLU, we extract model answers to the Q&A prompts from HELM 2 (Liang et al., 2023) and define the proxy score s ˜ using the judge’s answers m ( x ) as described in Section 2. We use the top three models in"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 9/10。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0030"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对原创性与定位的主要支持为：LLM-as-a-Judge. With the success of large transformer-based language models, the idea of using model predictions to provide feedback for another model has become very popular. Initially, specialized fine-tuned models were used to provide training signals for a；边界证据为：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab",
+        "strengths": [
+          "可定位正文支持：LLM-as-a-Judge. With the success of large transformer-based language models, the idea of using model predictions to provide feedback for another model has become very popular. Initially, specialized fine-tuned models were used to provide training signals for a"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0018"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "applicability": "applicable",
+        "score": 8,
+        "confidence": "medium",
+        "summary": "正文对清晰度与可用性的主要支持为：As large models continue to advance in their capabilities, it is increasingly challenging for human experts to evaluate newly released models. Expert data annotation is not only slow and costly. Traditional benchmarking also struggles to keep up with rapidly c；边界证据为：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab",
+        "strengths": [
+          "可定位正文支持：As large models continue to advance in their capabilities, it is increasingly challenging for human experts to evaluate newly released models. Expert data annotation is not only slow and costly. Traditional benchmarking also struggles to keep up with rapidly c"
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0002"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "applicability": "applicable",
+        "score": 6,
+        "confidence": "medium",
+        "summary": "正文对可复现性与透明度的主要支持为：The results from the previous subsection might appear surprising, considering the strong performance of the judge models: Lama-3 70B has 79% accuracy on MMLU, while GPT-4 has 84% , and the models used in MT-Bench have 85% agreement with expert annotators. Our ；边界证据为：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab",
+        "strengths": [
+          "可定位正文支持：The results from the previous subsection might appear surprising, considering the strong performance of the judge models: Lama-3 70B has 79% accuracy on MMLU, while GPT-4 has 84% , and the models used in MT-Bench have 85% agreement with expert annotators. Our "
+        ],
+        "weaknesses": [
+          "结论范围受此正文边界约束：Our results show that for evaluating frontier models, LLM judges might fall short of the promise of largely replacing expert labelers: While doubling the effective sample size can be useful for practitioners, the order of magnitude of required ground truth lab"
+        ],
+        "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 6/10。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0006"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确code_availability披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到data_availability披露。",
+        "chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0008"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "not_available",
+        "detail": "锁定 PDF 正文中未找到明确hyperparameters披露。",
+        "chunk_ids": []
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到hardware_environment披露。",
+        "chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0028"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+        "chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0016"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "text": "High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models in lieu of costly labels to provide cheap model evaluations. Unfortunately, this method of using models as judges introduces biases, such as self-preferencing, that can distort model comparisons. An emerging family of debiasing tools promises to fix these issues by using a few high quality labels to debias a large number of model judgments. In this paper, we study how far such debiasing",
+        "type": "method_or_finding",
+        "chunk_id": "paper_047_iclr_2025_proceedings_chunk_0001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_text": "High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models in lieu of costly labels to provide cheap model evaluations. Unfortunately, this method of using models as judges introduces biases, such as self-preferencing,",
+        "claim_type": "major",
+        "scope": "锁定 PDF 报告的设置",
+        "verdict": "partially_supported",
+        "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+        "supporting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0030"
+        ],
+        "limiting_chunk_ids": [
+          "paper_047_iclr_2025_proceedings_chunk_0020"
+        ]
+      }
+    ]
+  }
+}

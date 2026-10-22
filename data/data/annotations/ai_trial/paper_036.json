@@ -1,0 +1,387 @@
+{
+  "assessment_id": "assessment_ai_paper_036_iclr_2026_proceedings",
+  "paper_version_id": "paper_036_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_036_iclr_2026_proceedings",
+    "raw_output_sha256": "6721ae57b7d1eeb8bc2c500cfc05f9e46666a8f2d56fda01446bbc51f39247ad"
+  },
+  "paper_summary": "Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL's benefits and limitations through a tractable graph-based abstraction, focusing on policy gradient (PG) and Q-learning methods. Our theoretical analyses reveal that supervised fine-tuning (SFT) may introduce co-occurrence-based spurious solutions, whereas RL achieves correct planning primarily through exploration, underscoring exploration’s role in enabling better generalization. However, we also show that PG suffers",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL's benefits and limitations through a tractable graph-based abstraction, focusing on policy gradient (PG) and Q-learning methods. Our theoretical analyses reveal that supervised fine-tuning (SFT) may introduce co-occurrence-based spurious solutions, whereas RL achieves correct planning primarily through exploration, underscoring exploration’s role in enabling better generalization. However, we also show that PG suffers",
+      "type": "method_or_finding",
+      "evidence_id": "paper_036_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL’s benefits and limitations through a tractable graph-based abstraction, focusing on policy gradient (PG) and Q-learning methods. Our theoretical analyses reveal that supervised fine-tuning (S",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_036_ev_003",
+        "paper_036_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.8,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Benefits and Pitfalls of Reinforcement Learning for Language Model Planning: A Theoretical Perspective》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL’s benefits and limitations thro",
+    "论文提供方法或实证支持：In this section, we analyze the Q-learning mechanism for language-model planning under two different reward designs. We show that stepwise process rewards enable convergence, preserve diversity, and remain valid under off-policy sampling, whereas outcome rewar"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL’s benefits and limitations thro；边界证据为：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based",
+      "strengths": [
+        "可定位正文支持：Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL’s benefits and limitations thro"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 8/10。",
+      "evidence_ids": [
+        "paper_036_ev_001",
+        "paper_036_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：In this section, we analyze the Q-learning mechanism for language-model planning under two different reward designs. We show that stepwise process rewards enable convergence, preserve diversity, and remain valid under off-policy sampling, whereas outcome rewar；边界证据为：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based",
+      "strengths": [
+        "可定位正文支持：In this section, we analyze the Q-learning mechanism for language-model planning under two different reward designs. We show that stepwise process rewards enable convergence, preserve diversity, and remain valid under off-policy sampling, whereas outcome rewar"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 9/10。",
+      "evidence_ids": [
+        "paper_036_ev_003",
+        "paper_036_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Planning is a fundamental cognitive construct that underpins human intelligence, shaping our ability to organize tasks, coordinate activities, and formulate complex solutions such as mathematical proofs. It enables humans to decompose complex goals into manage；边界证据为：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based",
+      "strengths": [
+        "可定位正文支持：Planning is a fundamental cognitive construct that underpins human intelligence, shaping our ability to organize tasks, coordinate activities, and formulate complex solutions such as mathematical proofs. It enables humans to decompose complex goals into manage"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_036_ev_004",
+        "paper_036_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Planning is a fundamental cognitive construct that underpins human intelligence, shaping our ability to organize tasks, coordinate activities, and formulate complex solutions such as mathematical proofs. It enables humans to decompose complex goals into manage；边界证据为：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based",
+      "strengths": [
+        "可定位正文支持：Planning is a fundamental cognitive construct that underpins human intelligence, shaping our ability to organize tasks, coordinate activities, and formulate complex solutions such as mathematical proofs. It enables humans to decompose complex goals into manage"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_036_ev_004",
+        "paper_036_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Beyond the setupin Section 2, weconduct additional experiments to compareRL methods with SFT. The graph construction and initial SFT stage remain unchanged. After SFT, we split all reachable pairs into an RL training set D and an RL test set D . This yields fo；边界证据为：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based",
+      "strengths": [
+        "可定位正文支持：Beyond the setupin Section 2, weconduct additional experiments to compareRL methods with SFT. The graph construction and initial SFT stage remain unchanged. After SFT, we split all reachable pairs into an RL training set D and an RL test set D . This yields fo"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 6/10。",
+      "evidence_ids": [
+        "paper_036_ev_005",
+        "paper_036_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_036_ev_001",
+      "page_number": 1,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Recent reinforcement learning (RL) methods have substantially enhanced the planning capabilities of Large Language Models (LLMs), yet the theoretical basis for their effectiveness remains elusive. In this work, we investigate RL’s benefits and limitations through a tractable graph-based abstraction, focusing on policy gradient (PG) and Q-learning methods. Our theoretical analyses reveal that supervised fine-tuning (SFT) may introduce co-occurrence-based spurious solutions, whereas RL achieves correct planning primarily through exploration, underscoring exploration’s role in enabling better generalization. However, we also show that PG suffers from diversity collapse, where output diversity decreases during training and persists even after perfect accuracy is attained. By contrast, Q-learning provides two key advantages: off-policy learning and diversity preservation at convergence. We fu",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "page_number": 4,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "Focusing on the stationarity of the training dynamics, we present a basic structural characterization that captures a fundamental limitation of SFT in planning. Our analysis builds on an early finding of Wang et al. (2024b), which showed that transformer-based SFT planning approaches lack transitivity-learning mechanisms needed to obtain complete reachability structures. The new characterization expands and complements the earlier results and provides a theoretical explanation for why SFT-based planning tends to rely on memorization. More importantly, this result establishes a theoretical basis for comparison with RL-based planning frameworks and highlights the role of exploration in achieving better generalization during the adaptive learning process.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_003",
+      "page_number": 8,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we analyze the Q-learning mechanism for language-model planning under two different reward designs. We show that stepwise process rewards enable convergence, preserve diversity, and remain valid under off-policy sampling, whereas outcome rewards collapse to trivial solutions. Our analysis begins under Assumption 3.1 for both reward types, and we then extend the processreward analysis to a more concrete linear Transformer model without this assumption.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_004",
+      "page_number": 1,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Planning is a fundamental cognitive construct that underpins human intelligence, shaping our ability to organize tasks, coordinate activities, and formulate complex solutions such as mathematical proofs. It enables humans to decompose complex goals into manageable steps, anticipate potential challenges, and maintain coherence during problem solving. Similarly, planning plays a pivotal role in state-of-the-art Large Language Models (LLMs), enhancing their ability to address structured and long-horizon tasks with greater accuracy and reliability.\n\nEarly generations of LLMs primarily relied on next-token prediction and passive statistical learning, which limited their planning capabilities to short-horizon, reactive responses. The o1 family of models represents a major advance in planning by incorporating reinforcement learning (RL) objectives that reward accurate, multi-step reasoning and ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_005",
+      "page_number": 23,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_g_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0040",
+      "evidence_mode": "quote",
+      "excerpt": "Beyond the setupin Section 2, weconduct additional experiments to compareRL methods with SFT. The graph construction and initial SFT stage remain unchanged. After SFT, we split all reachable pairs into an RL training set D and an RL test set D . This yields four intersections: RL - Train RL - Test D := D ∩ D , D := D ∩ D , D := D ∩ Train2Train Train RL - Train Train2Test Train RL - Test Test2Train Test D , and D := D ∩ D . RL - Train Test2Test Test RL - Test During the RL process, the model generates paths for pairs in D and receives reward signals. RL - Train The main difference between this setup and that in Section 2 is that the RL training set now contains new pairs that were unseen during SFT ( D ). Therefore, the initial model is not perfect on Test2Train these new training pairs. Additionally, some pairs from the SFT training set are not used for RL training ( D ), which allows us",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_006",
+      "page_number": 9,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "In this paper, we analyze the benefits and limitations of reinforcement learning in language model planning through the lens of learning dynamics. Our theoretical analysis shows that supervised fine-tuning introduces spurious co-occurrence solutions, while policy gradient and Q-learning outperform SFT primarily through exploration. We further identify a critical drawback of basic policy gradient— diversity collapse —and show that Q-learning mitigates this issue while supporting off-policy learning. These insights clarify the mechanisms behind the recent success of RL-based\n\n1.0 1.0 1.0\n\n0.9 0.8 0.8 0.8 n i a r T t s e T n i a r T t s e T D n 0.8 D n Q-Learning (Process Reward) D n D n 0.6 o y o y 0.6 Off Policy Q-Learning (Process Reward) o y 0.6 o y c a c a Q-Learning (Outcome Reward) c a c a r u cc 0.7 r u cc PG ( =0.001) r u cc r u cc 0.4 A A 0.4 A 0.4 A Q-Learning (Process Reward) PG",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_007",
+      "page_number": 2,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_2_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0004",
+      "evidence_mode": "quote",
+      "excerpt": "Following (Wang et al., 2024b), we abstract planning in large language models as path planning over an unknown directed graph G = ( V , E ) , where V represents the set of nodes and E represents the set of edges. Each node v ∈ V is represented by a unique token. The language model’s vocabulary consists of these node tokens and a special end-of-sequence token, \\ n . An edge ( u,v ) ∈ E signifies a directed connection from node u to node v . A node t is reachable from a node s if a directed path from s to t exists in G . We denote by A ∈ { 0 , 1 } |V|×|V| the adjacency matrix of G , where A [ u,v ] = 1 if and only if ( u,v ) ∈ E , and by R ∈ { 0 , 1 } |V|×|V| the reachability matrix, where R [ t,s ] = 1 if and only if t is reachable from s .\n\nRunning Example (Blocksworld). To connect this abstraction to real-world LLM planning scenarios, consider the Blocksworld domain (Valmeekam et al., 2",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_008",
+      "page_number": 8,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_5_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "ToanalyzethestructureandconvergenceoftheQ-learningstablepoint, weintroduceamildassumption, which we call the persistent exploration assumption about the RL-based learning dynamics. Assumption 5.1 (Persistent exploration) . At training step t , let i = u , j = u , k , respect target t m t tively, denote the target, current, and next nodes. We assume for every ( i,j,k ) , ∃ N prop > 0 such i,j,k that T − 1 1 (cid:88) liminf δ ≥ N prop . T ( i t ,j t ,k t )=( i,j,k ) i,j,k T →∞ t =0\n\nUnder the persistent exploration assumption, every coordinate is updated frequently enough to allow convergence analysis. In practice, this assumption is usually satisfied, for instance: Lemma 5.1. Training with ϵ -exploration (i.e., exploring each alternative action with probability proportional to ϵ ) satisfies the persistent exploration assumption.\n\nWith the outcome reward, the signal merely verifies whether",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_036_ev_009",
+      "page_number": 8,
+      "section_id": "paper_036_iclr_2026_proceedings_sec_5_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_036_iclr_2026_proceedings_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "To gain further insight in a setting closer to practice, we analyze a simplified but concrete one-layer, single-head linear Transformer without the abstraction of Assumption 3.1. Assumption 5.2 (Linear transformer Wang et al. (2024b)) . We work under the simplified Transformer setting in Wang et al. (2024b): (1) The token embedding matrix and the output weight matrix are both set to the identity; (2) Attention is fixed entirely on the target node u , so the attention target block contributes only the value lookup W V [ u , · ] ; (3) All layer normalizations are removed, target and the feedforward block is replaced by a linear map of the form FFN( X ) = XW M . Under these assumptions, the logit decomposes as u ˜ [ k ] = W M [ u ,k ]+ W V [ u ,k ] , where W M arises m +1 m target from the feed-forward weights and W V from the value matrix of the attention block.\n\nDespitethissimplification,",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_036_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_036_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_036_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_036_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_036_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_036_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_036_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_036_ev_007"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_036_ev_008"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_036_ev_009"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

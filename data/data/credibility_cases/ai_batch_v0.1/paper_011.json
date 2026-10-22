@@ -1,0 +1,3138 @@
+{
+  "schema_version": "0.1-draft",
+  "case_id": "paper_011_openreview_2024_02_11_credibility",
+  "synthetic": false,
+  "paper_version": {
+    "paper_id": "paper_011",
+    "paper_version_id": "paper_011_openreview_2024_02_11",
+    "pdf_sha256": "07507bf352741cd852140de624be626714e2eae09cf4b288d24d2df1f4917eac",
+    "page_count": 14,
+    "extraction_quality": "usable",
+    "source_url": "https://openreview.net/pdf?id=aN4Jf6Cx69"
+  },
+  "review_status": "reviewed",
+  "reviewed_at": "2026-10-09T04:41:41.040803Z",
+  "review_record": {
+    "annotators": [
+      "provisional_ai_batch"
+    ],
+    "adjudicator": null
+  },
+  "scope_complete": true,
+  "claim_scope_complete": true,
+  "reference_scope": {
+    "expected_count": 26,
+    "extraction_complete": true
+  },
+  "code_scope": {
+    "applicability": "applicable",
+    "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+    "searched_sources": [
+      {
+        "source_url": "https://openreview.net/pdf?id=aN4Jf6Cx69",
+        "checked_at": "2026-10-09T04:41:47.199970Z",
+        "status": "checked"
+      }
+    ],
+    "query_completed": true,
+    "repository_checks": []
+  },
+  "document": {
+    "sections": [
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_front_matter",
+        "title": "Front Matter",
+        "kind": "other",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_abstract",
+        "title": "ABSTRACT",
+        "kind": "abstract",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_1",
+        "title": "INTRODUCTION",
+        "kind": "introduction",
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_2",
+        "title": "TASK AND NETWORK ARCHITECTURE",
+        "kind": "other",
+        "page_start": 3,
+        "page_end": 4
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "title": "RESULTS",
+        "kind": "results",
+        "page_start": 4,
+        "page_end": 9
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_4",
+        "title": "DISCUSSION",
+        "kind": "discussion",
+        "page_start": 9,
+        "page_end": 9
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_references",
+        "title": "REFERENCES",
+        "kind": "references",
+        "page_start": 10,
+        "page_end": 11
+      },
+      {
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "title": "APPENDIX",
+        "kind": "appendix",
+        "page_start": 12,
+        "page_end": 14
+      }
+    ],
+    "chunks": [
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0000",
+        "section_id": "paper_011_openreview_2024_02_11_sec_front_matter",
+        "page_number": 1,
+        "sequence_index": 0,
+        "text": "T HE MECHANISTIC BASIS OF DATA DEPENDENCE AND ABRUPT LEARNING IN AN IN - CONTEXT CLASSIFICA - TION TASK\n\nGautam Reddy ∗ Department of Physics, Princeton University Physics & Informatics Laboratories, NTT Research Inc. Center for Brain Science, Harvard University"
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0001",
+        "section_id": "paper_011_openreview_2024_02_11_sec_abstract",
+        "page_number": 1,
+        "sequence_index": 1,
+        "text": "Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence. In-context learning contrasts with traditional in-weights learning of query-output relationships. What aspects of the training data distribution and architecture favor in-context vs in-weights learning? Recent work has shown that specific distributional properties inherent in language, such as burstiness, large dictionaries and skewed rank-frequency distributions, control the trade-off or simultaneous appearance of these two forms of learning. We first show that these results are recapitulated in a minimal attention-only network trained on a simplified dataset. In-context learning (ICL) is driven by the abrupt emergence of an induction head, which subsequently competes with in-weights learning. By identifying progress measures that precede in-context learning and targeted experiments, we construct a two-parameter model of an induction head which emulates the full data distributional dependencies displayed by the attention-based network. A phenomenological model of induction head formation traces its abrupt emergence to the sequential learning of three nested logits enabled by an intrinsic curriculum. We propose that the sharp transitions in attention-based networks arise due to a specific chain of multi-layer operations necessary to achieve ICL, which is implemented by nested nonlinearities sequentially learned during training."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0002",
+        "section_id": "paper_011_openreview_2024_02_11_sec_1",
+        "page_number": 1,
+        "sequence_index": 2,
+        "text": "A striking feature of large language models is in-context learning (Brown et al., 2020; Dong et al., 2022; Garg et al., 2022; Dai et al., 2022). In-context learning (ICL) is the ability to predict the response to a query based on illustrative examples presented in the context, without any additional weight updates. This form of learning contrasts with in-weights learning (IWL) of query-response relationships encoded in the weights of the network. ICL emerges in transformer models (Vaswani et al., 2017) trained on a diverse set of tasks that contain a common structural element. ICL can be exploited to perform zero-shot learning on novel tasks that share this structure. For example, a transformer trained to solve numerous linear regression tasks learns to solve a new linear regression task based on in-context examples (Garg et al., 2022; Aky¨ urek et al., 2022; Von Oswald et al., 2023; Ahn et al., 2023). Specifically, given a sequence of sample input-output pairs, the predictive error on a target query is comparable to an optimal Bayes predictor (Ahuja et al., 2023; Xie et al., 2021; Li et al., 2023). This remarkable feature extends to other generative models such as hierarchical regression models that involve model selection (Bai et al., 2023), random permutations of images (Kirsch et al., 2022) and mixture models over sequential data (Wang et al., 2023; Xie et al., 2021). Transformer models trained on language data exhibit another simple yet powerful form of in-context learning. Given a sequence ...x,y,...,x, ? for x,y pairs unseen during training (for example, tokens belonging to a novel proper noun), these models learn the ability to predict y (Olsson et al., 2022). In other words, the model learns empirical bigram statistics on-the-fly, thus displaying a\n\n∗ greddy@princeton.edu\n\n(a) (c) (d) ? logits ( L labels)\n\n... ... 3-layer MLP K classes L labels + (b) attention In-weights (IW) accuracy (target not in context) head 2 ? + In-context (IC) accuracy (novel classes) attention ? head 1\n\nIn-context (IC2) accuracy 2 (swapped label) ? input\n\nFigure 1: (a) Input sequences consist of N item-label pairs followed by a target. Items are drawn from K classes assigned to L ≤ K labels. At least one item belongs to the same class as the target. The network is tasked to predict the label of the target. The number of classes ( K ), their rank-frequency distribution ( α ), within-class variability ( ε ) and the number of items from a single class in an input sequence ( B ) parameterize the data distribution. (b) IWL is measured using input sequences where the items’ and target’s classes are randomly sampled. ICL is measured using items and targets from novel classes and by swapping the label of an existing class in the context. (c) Network architecture. (d) Loss and accuracy curves for six seeds (dark lines show averages over the seeds). Here, B = 2 ,K = 512 ."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0003",
+        "section_id": "paper_011_openreview_2024_02_11_sec_1",
+        "page_number": 2,
+        "sequence_index": 3,
+        "text": "primitive form of zero-shot associative learning. Past work has shown that this computation involves an induction head (discussed in detail further below) and that a minimal implementation requires a two-layer attention-only network (Olsson et al., 2022; Bietti et al., 2024). Across networks of different scales and task structures, the ability to perform ICL often increases abruptly during training (Olsson et al., 2022). The mechanistic basis of the abrupt transition remains unclear. Notably, this abrupt transition is often preceded by the formation of induction heads in intermediate layers of the network, suggesting that induction head formation may provide a scaffold for the development of more complex in-context computations. Other work provides empirical evidence that ICL is the key driver behind the emergent abilities of large language models (Lu et al., 2023). Thus, elucidating the mechanisms that underpin ICL, and induction heads in particular, may provide crucial insights into the data distributional and architectural factors that lead to emergent zero-shot learning.\n\nA recent empirical study has highlighted key data distributional properties pertinent to language that promote ICL in a hybrid in-context/in-weights classification task (Chan et al., 2022). In this setup, a 12-layer transformer network is trained to predict the class label of a target item given a sequence of N item-label pairs in the context. The item classes are drawn from Omniglot (Lake et al., 2019), a standard image-label dataset. By manipulating the distribution of classes shown during training, various data distributional properties that influence the ICL vs IWL trade-off were identified. This setupoffersa well-controlledparadigmforidentifying thefactorsthatenable attention-based models to learn in-context learning solutions without explicitly trained to do so. Our main contributions are as follows. We first show that the data dependencies highlighted in Chan et al. (2022) are recapitulated in a task with simplified input statistics and a two-layer attentiononly network architecture. By identifying progress measures and designing careful experiments, we show that ICL is driven by the abrupt formation of an induction head. We construct a minimal two-parameter model of an induction head stacked with a deep classifier, which reproduces all data distributional dependencies and captures the dynamics of learning. Finally, we develop a phenomenological model of an induction head’s loss landscape. This analysis enables us to trace the abrupt learning phenomenon to cliffs in the landscape created by nested nonlinearities in a multilayer attention-based network."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0004",
+        "section_id": "paper_011_openreview_2024_02_11_sec_2",
+        "page_number": 3,
+        "sequence_index": 4,
+        "text": "Task structure. The task structure is based on a common ICL formulation. The network is trained to predict the label of a target x given an alternating sequence of N items and N labels: q x ,ℓ ,x ,ℓ ,...,x ,ℓ ,x , ? (Figure 1a). We embed the items and labels in P + D dimensions. 1 1 2 2 N N q The first P dimensions encode positional information and the latter D dimensions encode content. Position is encoded by a one-hot P -dimensional vector (we use P = 65 throughout). The input sequence occupies a random window of length 2 N +1 between 0 and P − 1 . This choice of positional encoding biases the network to learn a translation-invariant computation. The items are sampled from a gaussian mixture model with K classes. Each class k is defined by a D -dimensional vector µ whose components are sampled i.i.d from a normal distribution with mean k zero and variance 1 /D . The content of item x , x ˜ , is given by i i µ + εη x ˜ = √ k , (1) i 1 + ε 2 where η is drawn from the same distribution as the µ ’s and ε sets the within-class variability. The √ k re-scaling with 1 + ε 2 ensures that || x ˜ || ≈ 1 . Each class is assigned to one of L labels ( L ≤ K ). i The contents of the labels are drawn prior to training from the same distribution as the µ ’s. Each k label in an input sequence appears the same number of times as every other label in that sequence."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0005",
+        "section_id": "paper_011_openreview_2024_02_11_sec_2",
+        "page_number": 3,
+        "sequence_index": 5,
+        "text": "Importantly, at least one item in the context belongs to the target’s class. The network is trained to classify the target x into one of the L labels using a cross-entropy loss. The network can thus q achieve zero loss by either learning to classify targets from the K classes as in a standard in-weights classification task (IWL), or by learning a more general in-context solution (ICL). Parameterizing the data distribution. The data distribution is modulated by tuning various parameters in addition to K and ε . The burstiness B is the number of occurrences of items from a particular class in an input sequence ( N is a multiple of B ). p is the fraction of bursty sequences. B Specifically, the burstiness is B for a fraction p of the training data. The classes (including the B target) are sampled i.i.d for the remaining fraction 1 − p . The rank-frequency distribution over the B classes is f ( k ) ∼ k − α . We use L = 32 ,N = 8 ,D = 63 ,ε = 0 . 1 ,α = 0 unless otherwise specified. Metricsfortrackingin-contextandin-weightslearning. TotrackIWL,wemeasuretheprediction accuracy on input sequences. The target and item classes are sampled independently from the rankfrequency distribution used during training (Figure 1b). Since K ≫ N in our experiments, it is unlikely that the target’s class appears in the context. The network therefore has to rely on IWL to correctly predict the target’s class label. The primary metric for tracking ICL is the prediction accuracy on input sequences. The target and items belong to novel classes (the µ ’s are drawn anew). The novel classes are randomly assigned k one of the existing L labels (Figure 1b). B copies of the target (within variability ε ) are included in the context. Since the classes are novel, the network has to rely on ICL for accurate prediction. We introduce a secondary metric for tracking ICL using input sequences where the items’ labels are different from those presented during training. We measure the accuracy of the network on predicting the swapped label. That is, the network has to rely on ICL rather than IWL. Network architecture. The inputs are passed through a two-layer attention-only network followed by a classifier. Each attention layer has one attention head with a causal mask. Given a sequence of inputs u ,u ,...,u , the outputs of the first ( v ) and second ( w ) layers are 1 2 n i i (cid:88) (1) (cid:88) (2) v = u + V p u , w = v + V p v (2) i i 1 ij j i i 2 ij j j ≤ i j ≤ i where e ( K µ u j ) T ( Q µ u i ) p ( µ ) = (3) ij (cid:80) e ( K µ u k ) T ( Q µ u i ) k ≤ i is the attention paid by query i on key j in the µ th layer. Q ,K ,V are the query, key and value µ µ µ matrices, respectively. The classifier receives w as input. n The classifier is a three-layer MLP with ReLU activations and a softmax layer which predicts the probabilities of the L labels. We use a deep classifier to ensure perfect IWL is feasible. At least three\n\n(a) (b) (c)\n\nFigure 2: In-weights (top row) and in-context accuracy (bottom row) against the number of classes ( K ), burstiness ( B ), within-class variability ( ε ) and the exponent of the rank-frequency distribution ( α ). Here K = 1024 ,α = 0 ,B = 1 ,ε = 0 . 1 except when that parameter is varied."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0006",
+        "section_id": "paper_011_openreview_2024_02_11_sec_2",
+        "page_number": 4,
+        "sequence_index": 6,
+        "text": "layers were necessary to achieve perfect classification accuracy for the parameter ranges considered in this paper (since K ≫ L ). The query/key dimension and the MLP hidden layer dimension are both 128. We repeat every experiment with six seeds (with random initializations and training/test sets). For training, we use a batch size of 128 and vanilla SGD with learning rate 0.01. Figure 1d shows sample loss and accuracy curves, including the measures used to track IWL and ICL."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0007",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 4,
+        "sequence_index": 7,
+        "text": "Recapitulating data distributional dependencies. In Figure 2, we quantify how IWL and ICL depend on the parameters of the data distribution. The upshot is that the highly simplified input statistics and network architecture considered here reproduce the core distributional dependencies observed in past work. The results are summarized below. Increasing the burstiness B and the number of classes K promotes ICL while decreasing IWL (Figure 2a), highlighting the trade-off between ICL and IWL. Recall that the target and item classes are randomly sampled when B = 0 . This implies that the network can indeed learn a perfect IWL solution for the corresponding K . Similarly, within-class variation ( ε ) promotes ICL and decreases IWL (Figure 2b). We find that the network always converges to an IWL solution when the fraction of bursty sequences p < 1 . This is expected as the ICL solution is not a global minimum when B p < 1 . B A striking result is that a Zipfian rank-frequency distribution ( α = 1 ) overcomes the trade-off between IWL and ICL, and promotes both forms of learning. This is recapitulated in our experiments (Figure 2c). Note, however, that while the network learns the IWL solution for the most common classes, it does not learn the less frequent classes even for α = 1 . Moreover, we find that the network can support both ICL and IWL simultaneously. To show this, we train the network on IC sequences, where the items are all drawn from novel classes randomly assigned to one of the L labels. The parameter p is the fraction of the training data containing C IC sequences. The remaining fraction of the training data is drawn as described previously. When 0 < p < 1 and 0 ≤ p < 1 , the network can only achieve zero loss if it learns both the in-context C B and in-weights solutions. Figure A.1 shows that the network is capable of learning both solutions simultaneously. One potential explanation for the results in Figure 2 and Figure A.1 is that the network independently learnsthein-weightsandin-contextsolutionsatdifferentratesuntilitachieveszeroloss. Therelative rates at which the network achieves ICL and IWL will then determine the fraction of loss explained by each mechanism after convergence. The rates of ICL and IWL depend on K,ε,B . Specifically,\n\n(a) (b) Before After\n\nFigure 3: (a) IC accuracy curve ( p = 0 . 8 ,B = 1 ,K = 256 ) shows a slow learning phase followed C by the abrupt transition to zero loss. (b) The layer 1 and 2 attention maps p (1) (top matrices) and p (2) (bottom vectors) before and after the abrupt transition (marked in the IC curve in panel (a)). q."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0008",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 5,
+        "sequence_index": 8,
+        "text": "increasing K,ε decreases the rate of IWL (as the classification task is harder) whereas increasing B increases the rate of ICL (as there are more demonstrations in the context). The Zipfian case of α = 1 further highlights the dynamic balance between ICL and IWL. Frequent occurrences of common classes allow the network to learn to classify them using IWL. On the other hand, the large number of rare classes promotes learning of a more general in-context solution. Once the in-context solution is learned, IWL freezes as the network incurs near-zero loss on all classes. When α > 1 , the tail of the rank-frequency distribution falls off rapidly and the rare classes do not contribute sufficiently to the loss to promote ICL. Conversely, when α < 1 , the network learns the in-context mechanism if K is large enough such that IWL takes longer than ICL (see Figure 2a for α = 0 and varying K ). Attention maps and progress measures. We now examine the dynamics of ICL. We set p > 0 ,p = 1 as C B the IC sequences promote rapid convergence to the incontext solution and allow for more experiments. Figure 3a shows the IC accuracy, which displays a slow learning phase followed by an abrupt transition to perfect accuracy. To investigate network behavior at the transition, we examine the attention maps (for a randomly chosen input sequence) before and after the transition (Figure 3b). Before the transition, the attention map of the first layer p (1) shows queries paying uniform attention to the keys. For the second layer, we visualize the attention paid by the target p (2) on the other tokens (as the other attention patq. Figure 4: Progress measures for six terns do not influence classifier output), which also shows seeds aligned based on when the IC ac- no clear pattern. After the transition, however, the attencuracy crosses 50%. The color-progress tion heads show clear structure: queries in the first layer measure pairings are orange: (ILA1), pay attention to keys that immediately precede them and green: (TILA2), blue: (CLA), red: the target pays attention to one particular key (here, the (TLA2), black: IC accuracy. See text target’s correct label). for more details. Another curious feature of the IC accuracy curves is the slow learning phase that precedes the abrupt transition (Figure 3a). This phase leads to a non-negligible increase in IC accuracy despite the unstructured attention maps. What drives this slow learning? We hypothesize that the network learns to extract useful information from the context despite not learning the optimal ICL solution. Specifically, the total number of labels ( L ) is larger than the number of labels represented in the context ( N ). The network can thus randomly pick one of the N contextual labels to increase its accuracy from 1 /L to 1 /N . This picture suggests that the target pays attention to the N labels in the second layer."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0009",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 6,
+        "sequence_index": 9,
+        "text": "To test this hypothesis and quantify the patterns visualized in the attention maps, we define four progress measures. Item-label association (ILA1): the attention paid by a token to its previous one in the first layer. Target-item-label association (TILA2): the attention paid by the target to the correct label in the second layer. Context-label accuracy (CLA): the probability that the network predicts a label present in the context. Target-labels association (TLA2): the total attention paid by the target to the N labels in the second layer. (ILA1) and (TILA2) quantify the changes that occur during the abrupt transition whereas (CLA) and (TLA2) quantify the changes expected during the slow learning phase. Each progress measure is obtained by averaging over 1000 test input sequences. Figure 4 shows aligned progress measures (based on when IC accuracy reaches 50%). The dynamics of IC accuracy and the progress measures are remarkably reproducible across seeds. Figure 4 confirms the hypothesis that the network learns to randomly pick a contextual label in the slow learning phase (blue curve in Figure 4). Moreover, this is accompanied by the target paying attention to the labels (red curve in Figure 4). As visualized in Figure 3b, the item-label associations of the first layer and target-item-label associations of the second layer appear precisely at the transition (green and orange curves in Figure 4). InductionheadformationdrivestheabrupttransitionduringICL. Thedynamicsoftheprogress measures raises various hypotheses regarding the factors that lead to ICL. Specifically, we are interested in whether learning (CLA) or (TLA2) is necessary for the abrupt transition (tracked by (ILA1),(TILA2)). We consider various hypotheses and design experiments to test them: H1. (CLA) → (TLA2) → (ILA1), (TILA2). H2. (TLA2) → (ILA1), (TILA2). H3. (CLA) → (ILA1), (TILA2). It is also possible that none of these factors or a progress measure that we have no considered leads to ICL. We first note that progress measures (ILA1) and (TILA2) strongly suggest the formation of an induction head. Recall position that an induction head enables zero-shot copying: given an read input sequence ...x,ℓ...x, ? , an induction head allows for write content predicting ℓ even if x,ℓ never appear together during trainbuffer ing. Clearly, this is a mechanism that plausibly solves our task in-context. An induction head implemented by a two- ? layer attention-only network executes the following sequence of operations (visualized in Figure 5): (i) A token (say, ℓ ) pays (i) attention to the token immediately preceding it (here, x ) using positional information. (ii) The value matrix of the first layer (ii) now writes the content of x into ℓ . Importantly, this is written to a “buffer” subspace orthogonal to the content of ℓ . (iii) (iii) The target x pays attention to ℓ by matching its content to ℓ ’s buffer, which now contains the content of the contextual x that preceded it. (iv) The value matrix of the second layer writes (iv) the content of ℓ to the target x , which is then passed to the classifier. The classifier in turn uses this information to predict ℓ . Figure5: Anillustrationofthefour operations performed by an induc- We construct a minimal three-parameter model of the twotion head. layer induction head that emulates these core computations and also captures the four progress measures. We assume that the input embedding space can be decomposed into two orthogonal D -dimensional subspaces. For a token u , these orthogonal subspaces encode content u ( c ) i i and a buffer u ( b ) (initially empty). Given a sequence u ,u ,...,u , the first and second layers of i 1 2 n our minimal model compute"
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0010",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 6,
+        "sequence_index": 10,
+        "text": "v ( b ) = (cid:88) q (1) u ( c ) , v ( c ) = u ( c ) (4) i ij j i i j ≤ i w ( b ) = (cid:88) q (2) v ( c ) , w ( c ) = v ( c ) (5) i ij j i i j ≤ i\n\n(a) (b) (c)\n\nFigure 6: (a) Aligned progress measures (plotted as in Figure 4) for the minimal three-parameter model show similar dynamics as the progress measures for the full network. For L = 32 ,N = 8 . (b) As in panel (a) with β fixed to 0. (c) Loss curves for six seeds when L = N = 8 .\n\nwhere e β δ e αv ( b ) .v ( c ) + β 2 ∆ i,j (1) 1 i − 1 ,j (2) j i q = , q = . (6) ij (cid:80) e β 1 δ i − 1 ,k ij (cid:80) αv ( b ) .v ( c ) + β ∆ k ≤ i k ≤ i e k i 2 i,k The classifier receives the concatenated vector w ( c ) ⊕ w ( b ) . Here, δ is one only if i = j and zero n n i,j otherwise. β thus determines the attention paid by a token to its previous token (progress measure (ILA1)). α determines the attention paid by the target’s content to a token’s buffer (progress measure (TILA2)). ∆ is one only if i − j is odd and zero otherwise. β thus determines the attention paid i,j 2 by the target to the labels in the context (progress measure (TLA2)). Since the classifier receives the target’s content and buffer, it has the capacity to capture progress measure (CLA). We optimize for α,β ,β and the classifier’s parameters using the same training procedure as the full network. Loss 1 2 and accuracy curves are presented in Figure A.2."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0011",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 7,
+        "sequence_index": 11,
+        "text": "Progress measures from the minimal model exhibit strikingly similar dynamics (Figure 6a), including the abrupt transition in IC accuracy. Note that the slow learning phase in the IC accuracy curve is truncated in Figure 6a compared to Figure 4. Nevertheless, the network does indeed gradually learn to predict the N contextual labels (blue curve in Figure 6a). The abrupt transition appears sooner for the three-parameter model, which masks the slow learning phase. Next, we repeat the experiment fixing β = 0 . In this case, the target cannot pay more attention to the N contextual labels relative to the items in the second layer. The dynamics of (ILA1), (TILA2) remain the same (Figure 6b), including the abrupt transition. This experiment rules out hypotheses H1 and H2, i.e., that the target-labels association (TLA2) leads to (ILA1), (TILA2). The two-parameter model (with β = 0 in equation 6) together with the deep classifier recapitulate all the data distributional dependencies exhibited by the full network (Figure A.3). Moreover, note that the two-parameter model contains only the two parameters that characterize an induction head. This reduction strongly suggests that induction head formation drives the abrupt transition in ICL in the full model. To test hypothesis H1 that (CLA) leads to (ILA1), (TILA2), we ablate the slow learning phase. Recall that during the slow learning phase, the network learns to randomly pick one of the N contextual labels. Since L > N , this simple strategy increases accuracy from 1 /L to 1 /N . The slow learning phase can be prevented by setting L = N and B = 1 . That is, the input sequence contains all the L labels exactly once. This perturbation indeed affects robust ICL. Specifically, two of the six seeds acquire the IC solution. The other four of the six seeds exhibit distinct, slow dynamics and converge to a sub-optimal minimum (Figure 6c). The loss landscape of the induction head. We now examine the loss landscape of the induction head. Through this analysis, we aim to provide mechanistic insight into the abrupt transition and explainstheempiricalresultsdescribedabove. Weproposeaphenomenologicalmodel, whichcontains the key elements of the two-parameter induction head and the classifier. While this phenomenological approach helps identify core features of the learning dynamics, it ignores other elements. These other factors include the effects of stochasticity and the finite dimension ( D ) of the embedding. We assume B = 1 ; it is straightforward to extend the model to B > 1 .\n\n(a) (b) (c)\n\nFigure 7: (a) Loss curve for the phenomenological model obtained via gradient descent on the loss in equation 9. (b) The three parameters β (layer 1), α (layer 2), ξ (layer 3) are learned sequentially. (c) The trajectory visualized on the loss landscape (green: initial point, red: final point)."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0012",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 8,
+        "sequence_index": 12,
+        "text": "Consider a softmax classifier that receives an input w and classifies it into L labels. Given that the target’s correct label for a particular input sequence is t , the classifier models the probability that the label is t as e γ t .w π = , (7) t (cid:80) L e γ .w j j =1 where γ is the D -dimensional regression vector for label j . The cross-entropy loss given target j label t is L = − log π . The input w is given by t e y 1 (cid:88) N e β 1 w = ℓ + ℓ , y = α , (8) e y + 2 N τ e y + 2 N k e β 1 + N k =1 ,k ̸ = τ where ℓ is the D -dimensional embedding vector for the label at index j , τ is the index of the target j label t in the input sequence and N = N for reasons discussed below. In equation 8, y determines the attention paid by the target to the correct label in the second layer (recall that there are 2 N + 1 tokens in the input sequence including the target). Note that we have ignored the contributions to w from the N item vectors, which contain irrelevant information and add noise to w . From equation 6, y is the product of α and v ( b ) .v ( c ) , where q is the target’s index. v ( b ) .v ( c ) is 1 if the τ q τ q label at τ pays attention to the item before it in the first layer. The attention weight corresponding to this term is e β 1 (equation 6), where N is the number of other tokens that compete for the e β 1 + N 1 1 label’s attention, namely, 2 τ − 1 . Since τ varies from 1 to N across input sequences, we use an intermediate value, N = N , for simplicity. A more elaborate model would consider an expectation over the N possibilities. From equation 8, the exponents in equation 7 contain dot products of the form γ .ℓ for arbitrary i j pairs i,j . If all labels are statistically identical and balanced, it is simpler to track the overlaps γ .ℓ ≡ ζ for all i and γ .ℓ ≡ ζ ′ for all i ̸ = j . i i i j In summary, the loss after re-arranging terms is given by (cid:16) (cid:17) L = log 1 + ( N − 1) e − z + ( L − N ) e − z ′ , where (cid:18) y (cid:19) (cid:18) y (cid:19) β e − 1 e e 1 z = ξ, z ′ = ξ, y = α , (9) e y + 2 N e y + 2 N e β 1 + N where ξ = ζ − ζ ′ . The loss contains three nested logits parameterized by β ,α,ξ , which correspond to the first attention layer, the second attention layer and the third softmax layer, respectively. The learning curves generated by gradient descent on this landscape beginning from the initial point ξ,α,β = 0 recapitulate the slow learning phase and the abrupt transition (for L > N , Figure 7a). Indeed, ∂ L /∂ξ = − ( L − N ) / ( L (2 N + 1)) at the origin. Intuitively, when L > N , the classifier gradually aligns the regression vectors with the labels (increasing ξ ) when learning to randomly pick one of the labels in the context. This phase is slow as the classifier cannot discriminate between the N contextual labels. The gradual rise in ξ eventually drives the loss off a cliff and leads to rapid learning of α and β (Figures 7b,c)."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0013",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 9,
+        "sequence_index": 13,
+        "text": "As shown in Figure 6c, when L = N , the slow learning phase is ablated and the learning dynamics show two distinct behaviors: ICL and slow convergence to a sub-optimal minimum. We reproduce these two distinct behaviors by setting L = N in equation 9 and simulating gradient descent from two points near the origin (Figure A.4a). Examining the loss landscape shows that this divergence is due to a saddle point at the origin (Figure A.4b). One path leads to the ICL solution whereas the other path gradually converges to a sub-optimal minimum. Moreover, the ICL solution takes much longer to acquire due to a shallower gradient at the origin (compare Figure 7a and A.4a). We tested this prediction in the full model (equation 2). Consistent with theory, the full model robustly learns an ICL solution for L > N but not when L = N (Figure A.5)."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0014",
+        "section_id": "paper_011_openreview_2024_02_11_sec_4",
+        "page_number": 9,
+        "sequence_index": 14,
+        "text": "Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in specific contexts. We reproduced these data distributional dependencies in a simplified model, highlighting the essential ingredients necessary to explain those observations. We present strong evidence that ICL is implemented by an induction head. We build a minimal version of an induction head, which through careful experiments reveal the key factors that lead to its emergence. In particular, the learning of an independent sub-optimal strategy accompanied by a slow learning phase supports the induction head’s abrupt formation. A phenomenological model of the loss landscape shows that this abrupt transition is likely due to the sequential learning of three nested logits. Abrupt transitions during ICL. An abrupt transition in loss has been noted in a wide variety of ICL tasks. However, a mechanistic understanding of ICL dynamics has been lacking. Known mechanisms for ICL, such as an induction head, rely on a series of specific operations performed by multiple attention-based layers. The attention operation involves a logit (or, in general, other nonlinear operations), which creates sharp gradients. A chain of operations across attention layers will thus entail a series of nested logits, which together create “cliffs” in the loss landscape. Parallel work suggests that similar mechanisms underlie ‘eureka’ moments in other multi-step tasks involving transformers Hoffmann et al. (2023). Note that this mechanism is distinct from the one that leads to sharp transitions in simple reinforcement learning tasks Reddy (2022). Relationship with past work. Our work adds to existing evidence that induction heads play a key role during ICL Olsson et al. (2022); Bietti et al. (2024). We also recapitulate the data distributional dependencies delineated in Chan et al. (2022). Our results show that even simple networks such as ours are capable of simultaneously learning ICL and IWL solutions (see Figure A.1 for example). However, ICL is not transient in our simulations. This contrasts with recent work Singh et al. (2023) who use a much larger transformer network (12 layers and 8 heads) and finite training data. It is possible that larger networks slowly memorize the training data, leading to a gradual degradation of ICL. Implications for LLMs. We show that an intrinsic curriculum may be necessary to overcome the shallow gradients at the top of the cliff and guide networks towards the ICL solution. This observation is consistent with empirical results in Garg et al. (2022), who use curricula to robustly train transformers to solve complex ICL tasks. An intriguing possibility is that learning of simpler ICL operations enables the learning of more complex ICL strategies in LLMs. An hierarchy of increasingly complex sub-tasks may lead to a cascading effect and potentially explain the sudden emergence of zero-shot learning abilities in LLMs. Testing this hypothesis will require careful mechanistic analysis of minimal networks that solve complex ICL tasks. More generally, while automatic curriculum learning has been used to train foundational models for RL Team et al. (2023), the role of curricula for accelerating ICL in LLMs remains relatively unexplored. Limitations. While our formulation provides a minimal model that exhibits ICL, it is possible that larger models use different mechanisms than the ones that we have identified here. Methods for mechanistic interpretability Wang et al. (2022) may help probe these mechanisms in LLMs. We have not used heuristics such as weight tying Inan et al. (2016); Press & Wolf (2016), which are used to accelerate training of LLMs. Such heuristics may make the slow learning phase unnecessary by aligning the classifier’s regression vectors with the labels (increasing ξ ) from the outset."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0015",
+        "section_id": "paper_011_openreview_2024_02_11_sec_references",
+        "page_number": 10,
+        "sequence_index": 15,
+        "text": "Kwangjun Ahn, Xiang Cheng, Hadi Daneshmand, and Suvrit Sra. Transformers learn to implement preconditioned gradient descent for in-context learning. arXiv preprint arXiv:2306.00297 , 2023.\n\nKabir Ahuja, Madhur Panwar, and Navin Goyal. In-context learning through the bayesian prism. arXiv preprint arXiv:2306.04891 , 2023.\n\nEkinAky¨ urek, DaleSchuurmans, JacobAndreas, TengyuMa, andDennyZhou. Whatlearningalgorithm is in-context learning? investigations with linear models. arXiv preprint arXiv:2211.15661 , 2022.\n\nYu Bai, Fan Chen, Huan Wang, Caiming Xiong, and Song Mei. Transformers as statisticians: Provable in-context learning with in-context algorithm selection. arXiv preprint arXiv:2306.04637 , 2023.\n\nAlberto Bietti, Vivien Cabannes, Diane Bouchacourt, Herve Jegou, and Leon Bottou. Birth of a transformer: A memory viewpoint. Advances in Neural Information Processing Systems , 36, 2024.\n\nTom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems , 33:1877–1901, 2020.\n\nStephanie Chan, Adam Santoro, Andrew Lampinen, Jane Wang, Aaditya Singh, Pierre Richemond, James McClelland, and Felix Hill. Data distributional properties drive emergent in-context learning in transformers. Advances in Neural Information Processing Systems , 35:18878–18891, 2022.\n\nDamai Dai, Yutao Sun, Li Dong, Yaru Hao, Zhifang Sui, and Furu Wei. Why can gpt learn incontext? language models secretly perform gradient descent as meta optimizers. arXiv preprint arXiv:2212.10559 , 2022.\n\nQingxiu Dong, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, and Zhifang Sui. A survey for in-context learning. arXiv preprint arXiv:2301.00234 , 2022.\n\nShivam Garg, Dimitris Tsipras, Percy S Liang, and Gregory Valiant. What can transformers learn in-context? a case study of simple function classes. Advances in Neural Information Processing Systems , 35:30583–30598, 2022.\n\nDavid T Hoffmann, Simon Schrodi, Nadine Behrmann, Volker Fischer, and Thomas Brox. Eurekamoments in transformers: Multi-step tasks reveal softmax induced optimization problems. arXiv preprint arXiv:2310.12956 , 2023.\n\nHakan Inan, Khashayar Khosravi, and Richard Socher. Tying word vectors and word classifiers: A loss framework for language modeling. arXiv preprint arXiv:1611.01462 , 2016.\n\nLouis Kirsch, James Harrison, Jascha Sohl-Dickstein, and Luke Metz. General-purpose in-context learning by meta-learning transformers. arXiv preprint arXiv:2212.04458 , 2022.\n\nBrenden M Lake, Ruslan Salakhutdinov, and Joshua B Tenenbaum. The omniglot challenge: a 3-year progress report. Current Opinion in Behavioral Sciences , 29:97–104, 2019.\n\nYingcong Li, M Emrullah Ildiz, Dimitris Papailiopoulos, and Samet Oymak. Transformers as algorithms: Generalization and implicit model selection in in-context learning. arXiv preprint arXiv:2301.07067 , 2023.\n\nSheng Lu, Irina Bigoulaeva, Rachneet Sachdeva, Harish Tayyar Madabushi, and Iryna Gurevych. Are emergent abilities in large language models just in-context learning? arXiv preprint arXiv:2309.01809 , 2023.\n\nCatherine Olsson, Nelson Elhage, Neel Nanda, Nicholas Joseph, Nova DasSarma, Tom Henighan, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, et al. In-context learning and induction heads. arXiv preprint arXiv:2209.11895 , 2022.\n\nOfir Press and Lior Wolf. Using the output embedding to improve language models. arXiv preprint arXiv:1608.05859 , 2016."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0016",
+        "section_id": "paper_011_openreview_2024_02_11_sec_references",
+        "page_number": 11,
+        "sequence_index": 16,
+        "text": "Gautam Reddy. A reinforcement-based mechanism for discontinuous learning. Proceedings of the National Academy of Sciences , 119(49):e2215352119, 2022.\n\nAaditya K Singh, Stephanie CY Chan, Ted Moskovitz, Erin Grant, Andrew M Saxe, and Felix Hill. The transient nature of emergent in-context learning in transformers. arXiv preprint arXiv:2311.08360 , 2023.\n\nAdaptive Agent Team, Jakob Bauer, Kate Baumli, Satinder Baveja, Feryal Behbahani, Avishkar Bhoopchand, Nathalie Bradley-Schmieg, Michael Chang, Natalie Clay, Adrian Collister, et al. Human-timescale adaptation in an open-ended task space. arXiv preprint arXiv:2301.07608 , 2023.\n\nAshish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems , 30, 2017.\n\nJohannes Von Oswald, Eyvind Niklasson, Ettore Randazzo, Jo ao ˜ Sacramento, Alexander Mordvintsev, Andrey Zhmoginov, and Max Vladymyrov. Transformers learn in-context by gradient descent. In International Conference on Machine Learning , pp. 35151–35174. PMLR, 2023.\n\nKevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, and Jacob Steinhardt. Interpretability in the wild: a circuit for indirect object identification in gpt-2 small. arXiv preprint arXiv:2211.00593 , 2022.\n\nXinyi Wang, Wanrong Zhu, and William Yang Wang. Large language models are implicitly topic models: Explaining and finding good demonstrations for in-context learning. arXiv preprint arXiv:2301.11916 , 2023.\n\nSang Michael Xie, Aditi Raghunathan, Percy Liang, and Tengyu Ma. An explanation of in-context learningasimplicitbayesianinference. In InternationalConferenceonLearningRepresentations , 2021."
+      },
+      {
+        "chunk_id": "paper_011_openreview_2024_02_11_chunk_0017",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 12,
+        "sequence_index": 17,
+        "text": "Figure A.1: Accuracy curves for the full model when 0 < p < 1 and 0 < p < 1 . In all cases, the B C network learns both the ICL and the IWL solutions. Here K = 256 ,B = 1 ,α = 0 ,ε = 0 .\n\nFigure A.2: Loss and accuracy curves for the minimal model. Here K = 512 ,D = 64 ,B = 2 .\n\nFigure A.3: Data distributional dependencies are recapitulated by the minimal model. Plotted as in Figure 2. Here K = 512 ,D = 64 ,B = 1 ,α = 0 ,ε = 0 . 1 (except when that parameter is varied)\n\n(a) (b)\n\nFigure A.4: (a) When L = N , the loss curves starting from two initial values recapitulate the two distinct behaviors noted in Figure 6c. (b) The loss landscape has a saddle at the origin such that small fluctuations lead the path either to the ICL solution (top right quadrant) or a sub-optimal minimum (bottom left quadrant).\n\nFigure A.5: IC accuracy curves for different N and L (six seeds for each pair of values of L and N are shown). Consistent with the theory and the minimal network, the full network (equation 2) robustly learns the in-context solution if L > N but not when L = N . Here K = 256 ,B = 1 ,p = C 0 . 8 ,p = 1 ,α = 0 ,ε = 0 . B"
+      }
+    ],
+    "elements": [
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_1",
+        "section_id": "paper_011_openreview_2024_02_11_sec_1",
+        "page_number": 2,
+        "element_type": "figure",
+        "caption": "(a) Input sequences consist of N item-label pairs followed by a target. Items are drawn from K classes assigned to L ≤ K labels. At least one item belongs to the same class as the target. The network is tasked to predict the label of the target. The number of classes ( K ), their rank-frequency distribution ( α ), within-class variability ( ε ) and the number of items from a single class in an input sequence ( B ) parameterize the data distribution. (b) IWL is measured using input"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_2",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 4,
+        "element_type": "figure",
+        "caption": "In-weights (top row) and in-context accuracy (bottom row) against the number of classes ( K ), burstiness ( B ), within-class variability ( ε ) and the exponent of the rank-frequency distribution ( α ). Here K = 1024 ,α = 0 ,B = 1 ,ε = 0 . 1 except when that parameter is varied. layers were necessary to achieve perfect classification accuracy for the parameter ranges considered in this paper (since K ≫ L ). The query/key dimension and the MLP hidden layer dimension are"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_3",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 5,
+        "element_type": "figure",
+        "caption": "(a) IC accuracy curve ( p = 0 . 8 ,B = 1 ,K = 256 ) shows a slow learning phase followed C by the abrupt transition to zero loss. (b) The layer 1 and 2 attention maps p (1) (top matrices) and p (2) (bottom vectors) before and after the abrupt transition (marked in the IC curve in panel (a)). q."
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_4",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 5,
+        "element_type": "figure",
+        "caption": "Progress measures for six terns do not influence classifier output), which also shows seeds aligned based on when the IC ac- no clear pattern. After the transition, however, the atten- curacy crosses 50%. The color-progress tion heads show clear structure: queries in the first layer measure pairings are orange: (ILA1), pay attention to keys that immediately precede them and green: (TILA2), blue: (CLA), red: the target pays attention to one particular key (here, the"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_5",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 6,
+        "element_type": "figure",
+        "caption": "Anillustrationofthefour operations performed by an induc- We construct a minimal three-parameter model of the two- tion head. layer induction head that emulates these core computations and also captures the four progress measures. We assume that the input embedding space can be decomposed into two or-"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_6",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 7,
+        "element_type": "figure",
+        "caption": "(a) Aligned progress measures (plotted as in Figure 4) for the minimal three-parameter model show similar dynamics as the progress measures for the full network. For L = 32 ,N = 8 . (b) As in panel (a) with β fixed to 0. (c) Loss curves for six seeds when L = N = 8 . 2 where"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_7",
+        "section_id": "paper_011_openreview_2024_02_11_sec_3",
+        "page_number": 8,
+        "element_type": "figure",
+        "caption": "(a) Loss curve for the phenomenological model obtained via gradient descent on the loss in equation 9. (b) The three parameters β (layer 1), α (layer 2), ξ (layer 3) are learned sequentially. 1 (c) The trajectory visualized on the loss landscape (green: initial point, red: final point). Consider a softmax classifier that receives an input w and classifies it into L labels. Given that the"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_a_1",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 12,
+        "element_type": "figure",
+        "caption": "Accuracy curves for the full model when 0 < p < 1 and 0 < p < 1 . In all cases, the B C network learns both the ICL and the IWL solutions. Here K = 256 ,B = 1 ,α = 0 ,ε = 0 . Figure A.2: Loss and accuracy curves for the minimal model. Here K = 512 ,D = 64 ,B = 2 . 12"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_a_2",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 12,
+        "element_type": "figure",
+        "caption": "Loss and accuracy curves for the minimal model. Here K = 512 ,D = 64 ,B = 2 . 12"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_a_3",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 13,
+        "element_type": "figure",
+        "caption": "Data distributional dependencies are recapitulated by the minimal model. Plotted as in Figure 2. Here K = 512 ,D = 64 ,B = 1 ,α = 0 ,ε = 0 . 1 (except when that parameter is varied) (a) (b) Figure A.4: (a) When L = N , the loss curves starting from two initial values recapitulate the two distinct behaviors noted in Figure 6c. (b) The loss landscape has a saddle at the origin such that small"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_a_4",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 13,
+        "element_type": "figure",
+        "caption": "(a) When L = N , the loss curves starting from two initial values recapitulate the two distinct behaviors noted in Figure 6c. (b) The loss landscape has a saddle at the origin such that small fluctuations lead the path either to the ICL solution (top right quadrant) or a sub-optimal minimum (bottom left quadrant). 13"
+      },
+      {
+        "element_id": "paper_011_openreview_2024_02_11_figure_a_5",
+        "section_id": "paper_011_openreview_2024_02_11_sec_a",
+        "page_number": 14,
+        "element_type": "figure",
+        "caption": "IC accuracy curves for different N and L (six seeds for each pair of values of L and N are shown). Consistent with the theory and the minimal network, the full network (equation 2) robustly learns the in-context solution if L > N but not when L = N . Here K = 256 ,B = 1 ,p = C 0 . 8 ,p = 1 ,α = 0 ,ε = 0 ."
+      }
+    ]
+  },
+  "claims": [
+    {
+      "credibility_claim_id": "paper_011_openreview_2024_02_11_credibility_claim_001",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "source_chunk_id": "paper_011_openreview_2024_02_11_chunk_0001",
+      "claim_text": "Recent work has shown that specific distributional properties inherent in language, such as burstiness, large dictionaries and skewed rank-frequency distributions, control the trade-off or simultaneous appearance of these two forms of learning.",
+      "claim_type": "other",
+      "importance": "major",
+      "verifiability": true,
+      "dedup_group_id": null,
+      "page_number": 1,
+      "extraction_source": "existing_ai_semantic_descriptor_alignment",
+      "review_status": "reviewed",
+      "exclusion_reason": null
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_check_id": "paper_011_openreview_2024_02_11_credibility_claim_001_check",
+      "credibility_claim_id": "paper_011_openreview_2024_02_11_credibility_claim_001",
+      "verdict": "supported",
+      "reasoning": "既有 AI 语义描述与摘要/引言原句及后文正文块对齐；属于试验性 AI 判断，未替代人工 Gold。",
+      "searched_scope": [
+        {
+          "section_id": "paper_011_openreview_2024_02_11_sec_3",
+          "page_start": 4,
+          "page_end": 9
+        }
+      ],
+      "scope_complete": true,
+      "context_comparison": null,
+      "evidence": [
+        {
+          "internal_evidence_id": "paper_011_openreview_2024_02_11_credibility_claim_001_evidence_001",
+          "chunk_id": "paper_011_openreview_2024_02_11_chunk_0007",
+          "element_id": null,
+          "evidence_role": "supports",
+          "excerpt": "B A striking result is that a Zipfian rank-frequency distribution ( α = 1 ) overcomes the trade-off between IWL and ICL, and promotes both forms of learning.",
+          "page_number": 4,
+          "location_confidence": 0.75
+        }
+      ],
+      "review_status": "reviewed",
+      "check_source": "model",
+      "checked_at": "2026-10-09T04:41:41.042666Z"
+    }
+  ],
+  "references": [
+    {
+      "sequence_index": 1,
+      "raw_reference_text": "Kwangjun Ahn, Xiang Cheng, Hadi Daneshmand, and Suvrit Sra. Transformers learn to implement preconditioned gradient descent for in-context learning. arXiv preprint arXiv:2306.00297 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-1",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Transformers learn to implement preconditioned gradient descent for in-context learning",
+      "parsed_authors": [
+        "Kwangjun Ahn",
+        "Xiang Cheng",
+        "Hadi Daneshmand",
+        "Suvrit Sra"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2306.00297",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 2,
+      "raw_reference_text": "Kabir Ahuja, Madhur Panwar, and Navin Goyal. In-context learning through the bayesian prism. arXiv preprint arXiv:2306.04891 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-2",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "In-context learning through the bayesian prism",
+      "parsed_authors": [
+        "Kabir Ahuja",
+        "Madhur Panwar",
+        "Navin Goyal"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2306.04891",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 3,
+      "raw_reference_text": "EkinAky¨ urek, DaleSchuurmans, JacobAndreas, TengyuMa, andDennyZhou. Whatlearningalgorithm is in-context learning? investigations with linear models. arXiv preprint arXiv:2211.15661 , 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-3",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Whatlearningalgorithm is in-context learning? investigations with linear models",
+      "parsed_authors": [
+        "EkinAky¨ urek",
+        "DaleSchuurmans",
+        "JacobAndreas",
+        "TengyuMa",
+        "andDennyZhou"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2211.15661",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 4,
+      "raw_reference_text": "Yu Bai, Fan Chen, Huan Wang, Caiming Xiong, and Song Mei. Transformers as statisticians: Provable in-context learning with in-context algorithm selection. arXiv preprint arXiv:2306.04637 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-4",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Transformers as statisticians: Provable in-context learning with in-context algorithm selection",
+      "parsed_authors": [
+        "Yu Bai",
+        "Fan Chen",
+        "Huan Wang",
+        "Caiming Xiong",
+        "Song Mei"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2306.04637",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 5,
+      "raw_reference_text": "Alberto Bietti, Vivien Cabannes, Diane Bouchacourt, Herve Jegou, and Leon Bottou. Birth of a transformer: A memory viewpoint. Advances in Neural Information Processing Systems , 36, 2024.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-5",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Birth of a transformer: A memory viewpoint",
+      "parsed_authors": [
+        "Alberto Bietti",
+        "Vivien Cabannes",
+        "Diane Bouchacourt",
+        "Herve Jegou",
+        "Leon Bottou"
+      ],
+      "parsed_year": 2024,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 6,
+      "raw_reference_text": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems , 33:1877–1901, 2020.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-6",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Language models are few-shot learners",
+      "parsed_authors": [
+        "Tom Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah",
+        "Jared D Kaplan",
+        "Prafulla Dhariwal",
+        "Arvind Neelakantan",
+        "Pranav Shyam",
+        "Girish Sastry",
+        "Amanda Askell"
+      ],
+      "parsed_year": 1901,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 7,
+      "raw_reference_text": "Stephanie Chan, Adam Santoro, Andrew Lampinen, Jane Wang, Aaditya Singh, Pierre Richemond, James McClelland, and Felix Hill. Data distributional properties drive emergent in-context learning in transformers. Advances in Neural Information Processing Systems , 35:18878–18891, 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-7",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Data distributional properties drive emergent in-context learning in transformers",
+      "parsed_authors": [
+        "Stephanie Chan",
+        "Adam Santoro",
+        "Andrew Lampinen",
+        "Jane Wang",
+        "Aaditya Singh",
+        "Pierre Richemond",
+        "James McClelland",
+        "Felix Hill"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 8,
+      "raw_reference_text": "Damai Dai, Yutao Sun, Li Dong, Yaru Hao, Zhifang Sui, and Furu Wei. Why can gpt learn incontext? language models secretly perform gradient descent as meta optimizers. arXiv preprint arXiv:2212.10559 , 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-8",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Why can gpt learn incontext? language models secretly perform gradient descent as meta optimizers",
+      "parsed_authors": [
+        "Damai Dai",
+        "Yutao Sun",
+        "Li Dong",
+        "Yaru Hao",
+        "Zhifang Sui",
+        "Furu Wei"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2212.10559",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 9,
+      "raw_reference_text": "Qingxiu Dong, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, and Zhifang Sui. A survey for in-context learning. arXiv preprint arXiv:2301.00234 , 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-9",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "A survey for in-context learning",
+      "parsed_authors": [
+        "Qingxiu Dong",
+        "Lei Li",
+        "Damai Dai",
+        "Ce Zheng",
+        "Zhiyong Wu",
+        "Baobao Chang",
+        "Xu Sun",
+        "Jingjing Xu",
+        "Zhifang Sui"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2301.00234",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 10,
+      "raw_reference_text": "Shivam Garg, Dimitris Tsipras, Percy S Liang, and Gregory Valiant. What can transformers learn in-context? a case study of simple function classes. Advances in Neural Information Processing Systems , 35:30583–30598, 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-10",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "What can transformers learn in-context? a case study of simple function classes",
+      "parsed_authors": [
+        "Shivam Garg",
+        "Dimitris Tsipras",
+        "Percy S Liang",
+        "Gregory Valiant"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 11,
+      "raw_reference_text": "David T Hoffmann, Simon Schrodi, Nadine Behrmann, Volker Fischer, and Thomas Brox. Eurekamoments in transformers: Multi-step tasks reveal softmax induced optimization problems. arXiv preprint arXiv:2310.12956 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-11",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Eurekamoments in transformers: Multi-step tasks reveal softmax induced optimization problems",
+      "parsed_authors": [
+        "David T Hoffmann",
+        "Simon Schrodi",
+        "Nadine Behrmann",
+        "Volker Fischer",
+        "Thomas Brox"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2310.12956",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 12,
+      "raw_reference_text": "Hakan Inan, Khashayar Khosravi, and Richard Socher. Tying word vectors and word classifiers: A loss framework for language modeling. arXiv preprint arXiv:1611.01462 , 2016.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-12",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Tying word vectors and word classifiers: A loss framework for language modeling",
+      "parsed_authors": [
+        "Hakan Inan",
+        "Khashayar Khosravi",
+        "Richard Socher"
+      ],
+      "parsed_year": 2016,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "1611.01462",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 13,
+      "raw_reference_text": "Louis Kirsch, James Harrison, Jascha Sohl-Dickstein, and Luke Metz. General-purpose in-context learning by meta-learning transformers. arXiv preprint arXiv:2212.04458 , 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-13",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "General-purpose in-context learning by meta-learning transformers",
+      "parsed_authors": [
+        "Louis Kirsch",
+        "James Harrison",
+        "Jascha Sohl-Dickstein",
+        "Luke Metz"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2212.04458",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 14,
+      "raw_reference_text": "Brenden M Lake, Ruslan Salakhutdinov, and Joshua B Tenenbaum. The omniglot challenge: a 3-year progress report. Current Opinion in Behavioral Sciences , 29:97–104, 2019.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-14",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "The omniglot challenge: a 3-year progress report",
+      "parsed_authors": [
+        "Brenden M Lake",
+        "Ruslan Salakhutdinov",
+        "Joshua B Tenenbaum"
+      ],
+      "parsed_year": 2019,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 15,
+      "raw_reference_text": "Yingcong Li, M Emrullah Ildiz, Dimitris Papailiopoulos, and Samet Oymak. Transformers as algorithms: Generalization and implicit model selection in in-context learning. arXiv preprint arXiv:2301.07067 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-15",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Transformers as algorithms: Generalization and implicit model selection in in-context learning",
+      "parsed_authors": [
+        "Yingcong Li",
+        "M Emrullah Ildiz",
+        "Dimitris Papailiopoulos",
+        "Samet Oymak"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2301.07067",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 16,
+      "raw_reference_text": "Sheng Lu, Irina Bigoulaeva, Rachneet Sachdeva, Harish Tayyar Madabushi, and Iryna Gurevych. Are emergent abilities in large language models just in-context learning? arXiv preprint arXiv:2309.01809 , 2023.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-16",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Are emergent abilities in large language models just in-context learning? arXiv preprint arXiv:2309.01809 , 2023.",
+      "parsed_authors": [
+        "Sheng Lu",
+        "Irina Bigoulaeva",
+        "Rachneet Sachdeva",
+        "Harish Tayyar Madabushi",
+        "Iryna Gurevych"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2309.01809",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 17,
+      "raw_reference_text": "Catherine Olsson, Nelson Elhage, Neel Nanda, Nicholas Joseph, Nova DasSarma, Tom Henighan, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, et al. In-context learning and induction heads. arXiv preprint arXiv:2209.11895 , 2022.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-17",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "In-context learning and induction heads",
+      "parsed_authors": [
+        "Catherine Olsson",
+        "Nelson Elhage",
+        "Neel Nanda",
+        "Nicholas Joseph",
+        "Nova DasSarma",
+        "Tom Henighan",
+        "Ben Mann",
+        "Amanda Askell",
+        "Yuntao Bai",
+        "Anna Chen"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2209.11895",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 18,
+      "raw_reference_text": "Ofir Press and Lior Wolf. Using the output embedding to improve language models. arXiv preprint arXiv:1608.05859 , 2016.",
+      "page_start": 10,
+      "page_end": 10,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-18",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Using the output embedding to improve language models",
+      "parsed_authors": [
+        "Ofir Press",
+        "Lior Wolf"
+      ],
+      "parsed_year": 2016,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "1608.05859",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 19,
+      "raw_reference_text": "Gautam Reddy. A reinforcement-based mechanism for discontinuous learning. Proceedings of the National Academy of Sciences , 119(49):e2215352119, 2022.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-19",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "A reinforcement-based mechanism for discontinuous learning",
+      "parsed_authors": [
+        "Gautam Reddy"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 20,
+      "raw_reference_text": "Aaditya K Singh, Stephanie CY Chan, Ted Moskovitz, Erin Grant, Andrew M Saxe, and Felix Hill. The transient nature of emergent in-context learning in transformers. arXiv preprint arXiv:2311.08360 , 2023.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-20",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "The transient nature of emergent in-context learning in transformers",
+      "parsed_authors": [
+        "Aaditya K Singh",
+        "Stephanie CY Chan",
+        "Ted Moskovitz",
+        "Erin Grant",
+        "Andrew M Saxe",
+        "Felix Hill"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2311.08360",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 21,
+      "raw_reference_text": "Adaptive Agent Team, Jakob Bauer, Kate Baumli, Satinder Baveja, Feryal Behbahani, Avishkar Bhoopchand, Nathalie Bradley-Schmieg, Michael Chang, Natalie Clay, Adrian Collister, et al. Human-timescale adaptation in an open-ended task space. arXiv preprint arXiv:2301.07608 , 2023.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-21",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Human-timescale adaptation in an open-ended task space",
+      "parsed_authors": [
+        "Adaptive Agent Team",
+        "Jakob Bauer",
+        "Kate Baumli",
+        "Satinder Baveja",
+        "Feryal Behbahani",
+        "Avishkar Bhoopchand",
+        "Nathalie Bradley-Schmieg",
+        "Michael Chang",
+        "Natalie Clay",
+        "Adrian Collister"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2301.07608",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 22,
+      "raw_reference_text": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems , 30, 2017.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-22",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Attention is all you need",
+      "parsed_authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N Gomez",
+        "Łukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "parsed_year": 2017,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 23,
+      "raw_reference_text": "Johannes Von Oswald, Eyvind Niklasson, Ettore Randazzo, Jo ao ˜ Sacramento, Alexander Mordvintsev, Andrey Zhmoginov, and Max Vladymyrov. Transformers learn in-context by gradient descent. In International Conference on Machine Learning , pp. 35151–35174. PMLR, 2023.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-23",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Transformers learn in-context by gradient descent",
+      "parsed_authors": [
+        "Johannes Von Oswald",
+        "Eyvind Niklasson",
+        "Ettore Randazzo",
+        "Jo ao ˜ Sacramento",
+        "Alexander Mordvintsev",
+        "Andrey Zhmoginov",
+        "Max Vladymyrov"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 24,
+      "raw_reference_text": "Kevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, and Jacob Steinhardt. Interpretability in the wild: a circuit for indirect object identification in gpt-2 small. arXiv preprint arXiv:2211.00593 , 2022.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-24",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Interpretability in the wild: a circuit for indirect object identification in gpt-2 small",
+      "parsed_authors": [
+        "Kevin Wang",
+        "Alexandre Variengien",
+        "Arthur Conmy",
+        "Buck Shlegeris",
+        "Jacob Steinhardt"
+      ],
+      "parsed_year": 2022,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2211.00593",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 25,
+      "raw_reference_text": "Xinyi Wang, Wanrong Zhu, and William Yang Wang. Large language models are implicitly topic models: Explaining and finding good demonstrations for in-context learning. arXiv preprint arXiv:2301.11916 , 2023.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-25",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "Large language models are implicitly topic models: Explaining and finding good demonstrations for in-context learning",
+      "parsed_authors": [
+        "Xinyi Wang",
+        "Wanrong Zhu",
+        "William Yang Wang"
+      ],
+      "parsed_year": 2023,
+      "parsed_doi": null,
+      "parsed_arxiv_id": "2301.11916",
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    },
+    {
+      "sequence_index": 26,
+      "raw_reference_text": "Sang Michael Xie, Aditi Raghunathan, Percy Liang, and Tengyu Ma. An explanation of in-context learningasimplicitbayesianinference. In InternationalConferenceonLearningRepresentations , 2021.",
+      "page_start": 11,
+      "page_end": 11,
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-26",
+      "paper_version_id": "paper_011_openreview_2024_02_11",
+      "parsed_title": "An explanation of in-context learningasimplicitbayesianinference",
+      "parsed_authors": [
+        "Sang Michael Xie",
+        "Aditi Raghunathan",
+        "Percy Liang",
+        "Tengyu Ma"
+      ],
+      "parsed_year": 2021,
+      "parsed_doi": null,
+      "parsed_arxiv_id": null,
+      "parse_status": "success",
+      "parse_confidence": 0.7
+    }
+  ],
+  "reference_checks": [
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-1",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-1",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Transformers learn to implement preconditioned gradient descent for in-context learning",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+learn+to+implement+preconditioned+gradient+descent+for+in-context+learning&rows=5",
+      "checked_at": "2026-10-09T04:41:42.006004Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Transformers learn to implement preconditioned gradient descent for in-context learning",
+          "authors": [
+            "Ahn",
+            "Cheng",
+            "Daneshmand",
+            "Sra"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-1977",
+          "source_url": "https://doi.org/10.52202/075280-1977",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "&lt;p&gt;When In-Context Learning Implements Gradient Descent&lt;/p&gt;\n&lt;p&gt;The Gradient-Descent Signature of the Forward Pass Is Learned, Not Architectural — A Developmental Life Cycle in Pretrained Transformers, Backed by a Mechanically Verified Theory&lt;/p&gt;",
+          "authors": [
+            "Nagy"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.2139/ssrn.6947199",
+          "source_url": "https://doi.org/10.2139/ssrn.6947199",
+          "title_similarity": 0.11560693641618497
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Preconditioned Gradient Descent for Sketched Mixture Learning",
+          "authors": [
+            "Gabet",
+            "da Costa"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.1109/isit57864.2024.10619105",
+          "source_url": "https://doi.org/10.1109/isit57864.2024.10619105",
+          "title_similarity": 0.6486486486486487
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Preconditioned Stochastic Gradient Descent",
+          "authors": [
+            "Li"
+          ],
+          "year": 2018,
+          "years": [
+            2018
+          ],
+          "doi": "10.1109/tnnls.2017.2672978",
+          "source_url": "https://doi.org/10.1109/tnnls.2017.2672978",
+          "title_similarity": 0.4806201550387597
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Multi-head Transformers Provably Learn Symbolic Multi-step Reasoning via Gradient Descent",
+          "authors": [
+            "Yang",
+            "Huang",
+            "Liang",
+            "Chi"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.52202/085713-3875",
+          "source_url": "https://doi.org/10.52202/085713-3875",
+          "title_similarity": 0.5227272727272727
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:41:42.004544Z",
+      "response_sha256": "14248ac9b9ab766634e786868a6c5c470e59a5da81daf56edc6c55ebb4cecae5",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-2",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-2",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "In-context learning through the bayesian prism",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=In-context+learning+through+the+bayesian+prism&rows=5",
+      "checked_at": "2026-10-09T04:41:41.043961Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "",
+          "authors": [],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.54499/2024.02295.bd",
+          "source_url": "https://doi.org/10.54499/2024.02295.bd",
+          "title_similarity": 0.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Kroz prizmu historije / Through the prism of history",
+          "authors": [
+            "Bandžović"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.55425/23036966.2017.4.1.137",
+          "source_url": "https://doi.org/10.55425/23036966.2017.4.1.137",
+          "title_similarity": 0.4583333333333333
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Online Bayesian inference for the parameters of PRISM programs",
+          "authors": [
+            "Cussens"
+          ],
+          "year": 2012,
+          "years": [
+            2012
+          ],
+          "doi": "10.1007/s10994-012-5305-8",
+          "source_url": "https://doi.org/10.1007/s10994-012-5305-8",
+          "title_similarity": 0.3333333333333333
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Teaching International Law through the Prism of Global Events",
+          "authors": [
+            "Saksena"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.4324/9781003429265-25",
+          "source_url": "https://doi.org/10.4324/9781003429265-25",
+          "title_similarity": 0.5233644859813084
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Chapter 1. Through a Spinning Prism Lightly",
+          "authors": [],
+          "year": 2019,
+          "years": [
+            2019
+          ],
+          "doi": "10.1515/9781618112378-002",
+          "source_url": "https://doi.org/10.1515/9781618112378-002",
+          "title_similarity": 0.5227272727272727
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:40:23.076952Z",
+      "response_sha256": "360455dbd060b9e063675ae8b06dc7dd3dcbb8638e06c47a9fafc84620a69e04",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-3",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-3",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Whatlearningalgorithm is in-context learning? investigations with linear models",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Whatlearningalgorithm+is+in-context+learning%3F+investigations+with+linear+models&rows=5",
+      "checked_at": "2026-10-09T04:41:42.128228Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Peer Review #1 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.1)\"",
+          "authors": [],
+          "year": 2021,
+          "years": [
+            2021
+          ],
+          "doi": "10.7287/peerj-cs.813v0.1/reviews/1",
+          "source_url": "https://doi.org/10.7287/peerj-cs.813v0.1/reviews/1",
+          "title_similarity": 0.3492063492063492
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Peer Review #2 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.1)\"",
+          "authors": [],
+          "year": 2021,
+          "years": [
+            2021
+          ],
+          "doi": "10.7287/peerj-cs.813v0.1/reviews/2",
+          "source_url": "https://doi.org/10.7287/peerj-cs.813v0.1/reviews/2",
+          "title_similarity": 0.3492063492063492
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Peer Review #2 of \"Context-based sentiment analysis on customer reviews using machine learning linear models (v0.2)\"",
+          "authors": [],
+          "year": 2021,
+          "years": [
+            2021
+          ],
+          "doi": "10.7287/peerj-cs.813v0.2/reviews/2",
+          "source_url": "https://doi.org/10.7287/peerj-cs.813v0.2/reviews/2",
+          "title_similarity": 0.3492063492063492
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "In-Context Operator Learning for Linear Propagator Models",
+          "authors": [
+            "Meng",
+            "Voss",
+            "Detering",
+            "Farolfi",
+            "Osher",
+            "Menz"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.2139/ssrn.5110832",
+          "source_url": "https://doi.org/10.2139/ssrn.5110832",
+          "title_similarity": 0.5185185185185185
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Context-based sentiment analysis on customer reviews using machine learning linear models",
+          "authors": [
+            "Chinnalagu",
+            "Durairaj"
+          ],
+          "year": 2021,
+          "years": [
+            2021
+          ],
+          "doi": "10.7717/peerj-cs.813",
+          "source_url": "https://doi.org/10.7717/peerj-cs.813",
+          "title_similarity": 0.3592814371257485
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:42.126403Z",
+      "response_sha256": "0a20b796f99af60c96e8a96a624cc1f72f13a0c2f81c424bac3797c01d58e58d",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-4",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-4",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Transformers as statisticians: Provable in-context learning with in-context algorithm selection",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+as+statisticians%3A+Provable+in-context+learning+with+in-context+algorithm+selection&rows=5",
+      "checked_at": "2026-10-09T04:41:41.044594Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Transformers as Statisticians: Provable In-Context Learning with In-Context Algorithm Selection",
+          "authors": [
+            "Bai",
+            "Chen",
+            "Wang",
+            "Xiong",
+            "Mei"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-2498",
+          "source_url": "https://doi.org/10.52202/075280-2498",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Transformers as Game Players: Provable In-context Game-playing Capabilities of Pre-trained Models",
+          "authors": [
+            "Shi",
+            "Yang",
+            "Yang",
+            "Shen"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.52202/079017-4196",
+          "source_url": "https://doi.org/10.52202/079017-4196",
+          "title_similarity": 0.5789473684210527
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Towards Provable Emergence of In-Context Reinforcement Learning",
+          "authors": [
+            "Wang",
+            "Chandra",
+            "Zhang"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.52202/085713-0873",
+          "source_url": "https://doi.org/10.52202/085713-0873",
+          "title_similarity": 0.40764331210191085
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Characterizing In-Context Learning: When Can Transformers Match Standard Learning Algorithms?",
+          "authors": [
+            "Hawarey"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.65737/airmcs2026277",
+          "source_url": "https://doi.org/10.65737/airmcs2026277",
+          "title_similarity": 0.5081081081081081
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "A Calculating Profession: Victorian Actuaries among the Statisticians",
+          "authors": [
+            "Alborn"
+          ],
+          "year": 1994,
+          "years": [
+            1994,
+            2008
+          ],
+          "doi": "10.1017/s0269889700001770",
+          "source_url": "https://doi.org/10.1017/s0269889700001770",
+          "title_similarity": 0.2839506172839506
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:40:23.244792Z",
+      "response_sha256": "49c93793c2635eaaf850eb54fea79a6b655bc07203d5046ce1567c16a7fe6916",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-5",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-5",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Birth of a transformer: A memory viewpoint",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Birth+of+a+transformer%3A+A+memory+viewpoint&rows=5",
+      "checked_at": "2026-10-09T04:41:42.098707Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Birth of a Transformer: A Memory Viewpoint",
+          "authors": [
+            "Bietti",
+            "Cabannes",
+            "Bouchacourt",
+            "Jegou",
+            "Bottou"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-0077",
+          "source_url": "https://doi.org/10.52202/075280-0077",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Another Viewpoint*",
+          "authors": [
+            "Rush",
+            "Stein",
+            "Susser"
+          ],
+          "year": 1982,
+          "years": [
+            1982,
+            2008
+          ],
+          "doi": "10.1111/j.1523-536x.1982.tb01603.x",
+          "source_url": "https://doi.org/10.1111/j.1523-536x.1982.tb01603.x",
+          "title_similarity": 0.4827586206896552
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Primary memory is priming memory seen through the working memory viewpoint",
+          "authors": [
+            "Smith"
+          ],
+          "year": 2013,
+          "years": [
+            2013
+          ],
+          "doi": "10.7287/peerj.preprints.36v1",
+          "source_url": "https://doi.org/10.7287/peerj.preprints.36v1",
+          "title_similarity": 0.45217391304347826
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "MEMORY AND LEARNING: A SEQUENTIAL VIEWPOINT",
+          "authors": [
+            "Capaldi"
+          ],
+          "year": 1971,
+          "years": [
+            1971
+          ],
+          "doi": "10.1016/b978-0-12-355050-7.50008-4",
+          "source_url": "https://doi.org/10.1016/b978-0-12-355050-7.50008-4",
+          "title_similarity": 0.3855421686746988
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Is Implicit Memory for Novel Objects Viewpoint-Specific or Viewpoint-Invariant?",
+          "authors": [
+            "Srjnivas",
+            "Schwoebel"
+          ],
+          "year": 1994,
+          "years": [
+            1994
+          ],
+          "doi": "10.1037/e537272012-357",
+          "source_url": "https://doi.org/10.1037/e537272012-357",
+          "title_similarity": 0.31932773109243695
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:42.097187Z",
+      "response_sha256": "8ab3d21c745b46d8f13b9b40de9065bdfb4c7c3f846ce853eb89d7e500fc81a0",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-6",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-6",
+      "status": "metadata_conflict",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Language models are few-shot learners",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Language+models+are+few-shot+learners&rows=5",
+      "checked_at": "2026-10-09T04:41:41.045552Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Language Models are Few-Shot Learners",
+          "authors": [
+            "Malakar"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.65525/svup.9788199778009.2026.224-230",
+          "source_url": "https://doi.org/10.65525/svup.9788199778009.2026.224-230",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Adapting Language-Audio Models as Few-Shot Audio Learners",
+          "authors": [
+            "Liang",
+            "Liu",
+            "Liu",
+            "Phan",
+            "Benetos",
+            "Plumbley",
+            "Wang"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.21437/interspeech.2023-1082",
+          "source_url": "https://doi.org/10.21437/interspeech.2023-1082",
+          "title_similarity": 0.7446808510638298
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Language Models of Code are Few-Shot Commonsense Learners",
+          "authors": [
+            "Madaan",
+            "Zhou",
+            "Alon",
+            "Yang",
+            "Neubig"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.18653/v1/2022.emnlp-main.90",
+          "source_url": "https://doi.org/10.18653/v1/2022.emnlp-main.90",
+          "title_similarity": 0.7872340425531915
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Language Models are Few-shot Multilingual Learners",
+          "authors": [
+            "Winata",
+            "Madotto",
+            "Lin",
+            "Liu",
+            "Yosinski",
+            "Fung"
+          ],
+          "year": 2021,
+          "years": [
+            2021
+          ],
+          "doi": "10.18653/v1/2021.mrl-1.1",
+          "source_url": "https://doi.org/10.18653/v1/2021.mrl-1.1",
+          "title_similarity": 0.8505747126436781
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "MaterialBrain: High-Performance Material Synthesis Extraction via HumanAI-Curated Few-Shot Large Language Models",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.1021/acs.jcim.5c02299.s001",
+          "source_url": "https://doi.org/10.1021/acs.jcim.5c02299.s001",
+          "title_similarity": 0.20270270270270271
+        }
+      ],
+      "conflicting_fields": [
+        "year",
+        "authors"
+      ],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:34:03.527518Z",
+      "response_sha256": "07f5926555c42d04c1b806c058e7e66db26a6d8f00a76df2d8520a0a4243b475",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-7",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-7",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Data distributional properties drive emergent in-context learning in transformers",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Data+distributional+properties+drive+emergent+in-context+learning+in+transformers&rows=5",
+      "checked_at": "2026-10-09T04:41:41.047291Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Data Distributional Properties Drive Emergent In-Context Learning in Transformers",
+          "authors": [
+            "Chan",
+            "Santoro",
+            "Lampinen",
+            "Wang",
+            "Singh",
+            "Richemond",
+            "McClelland",
+            "Hill"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.52202/068431-1371",
+          "source_url": "https://doi.org/10.52202/068431-1371",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "PAC Learning of Some Subclasses of Context-Free Grammars with Basic Distributional Properties from Positive Data",
+          "authors": [
+            "Shibata",
+            "Yoshinaka"
+          ],
+          "year": 2013,
+          "years": [
+            2013
+          ],
+          "doi": "10.1007/978-3-642-40935-6_11",
+          "source_url": "https://doi.org/10.1007/978-3-642-40935-6_11",
+          "title_similarity": 0.38341968911917096
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "The Transient Nature of Emergent In-Context Learning in Transformers",
+          "authors": [
+            "Singh",
+            "Chan",
+            "Moskovitz",
+            "Grant",
+            "Saxe",
+            "Hill"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-1208",
+          "source_url": "https://doi.org/10.52202/075280-1208",
+          "title_similarity": 0.6577181208053692
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Eliciting In-Context Learning in Vision-Language Models for Videos Through Curated Data Distributional Properties",
+          "authors": [
+            "Yu",
+            "Zhang",
+            "Hu",
+            "Storks",
+            "Chai"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.18653/v1/2024.emnlp-main.1137",
+          "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1137",
+          "title_similarity": 0.30927835051546393
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Unlabeled Data Can Provably Enhance In-Context Learning of Transformers",
+          "authors": [
+            "Liu",
+            "Yang"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.52202/085713-3073",
+          "source_url": "https://doi.org/10.52202/085713-3073",
+          "title_similarity": 0.631578947368421
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:41:34.669139Z",
+      "response_sha256": "f1b938323fdb17946874b0c08251d3ee696200c7f78ae13bdf85acda1bd161f8",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-8",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-8",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Why can gpt learn incontext? language models secretly perform gradient descent as meta optimizers",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Why+can+gpt+learn+incontext%3F+language+models+secretly+perform+gradient+descent+as+meta+optimizers&rows=5",
+      "checked_at": "2026-10-09T04:41:41.046229Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers",
+          "authors": [
+            "Dai",
+            "Sun",
+            "Dong",
+            "Hao",
+            "Ma",
+            "Sui",
+            "Wei"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.18653/v1/2023.findings-acl.247",
+          "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.247",
+          "title_similarity": 0.9948186528497409
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Can Larger Language Models Always Perform Better? A Comparison of GPT, FinBERT, and Dictionaries in Evaluating Management Sentiment",
+          "authors": [
+            "Bose",
+            "Hu",
+            "Liang",
+            "Yang"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.2139/ssrn.5153587",
+          "source_url": "https://doi.org/10.2139/ssrn.5153587",
+          "title_similarity": 0.45535714285714285
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Can Large Language Models Perform Inductive Qualitative Coding? - Evaluating GPT-4 on Korean-Language Texts",
+          "authors": [
+            "Kim"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.46397/jaih.21.4",
+          "source_url": "https://doi.org/10.46397/jaih.21.4",
+          "title_similarity": 0.45
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "How to Learn and Teach Economics with Large Language Models, Including GPT",
+          "authors": [
+            "Cowen",
+            "Tabarrok"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.2139/ssrn.4391863",
+          "source_url": "https://doi.org/10.2139/ssrn.4391863",
+          "title_similarity": 0.46153846153846156
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Why Large Language Models can Secretly Outperform Embedding Similarity in Information Retrieval",
+          "authors": [
+            "Benescu",
+            "de Jong"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.18653/v1/2026.acl-srw.5",
+          "source_url": "https://doi.org/10.18653/v1/2026.acl-srw.5",
+          "title_similarity": 0.5445026178010471
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:34.662688Z",
+      "response_sha256": "bdea8ad797a67502faa9e38952fa2f5b0616e9d11de963521d6c5249149a7bc3",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-9",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-9",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "A survey for in-context learning",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=A+survey+for+in-context+learning&rows=5",
+      "checked_at": "2026-10-09T04:41:41.048905Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "A Survey of Context-awareness in Learning Environments in 2010-2016",
+          "authors": [
+            "Hasanov",
+            "Laine"
+          ],
+          "year": 2017,
+          "years": [
+            2017
+          ],
+          "doi": "10.5220/0006255302340241",
+          "source_url": "https://doi.org/10.5220/0006255302340241",
+          "title_similarity": 0.5454545454545454
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "In-Context Learning in Large Language Models: A Comprehensive Survey",
+          "authors": [
+            "Highmore"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.20944/preprints202407.0926.v1",
+          "source_url": "https://doi.org/10.20944/preprints202407.0926.v1",
+          "title_similarity": 0.3838383838383838
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "The CALL Survey",
+          "authors": [
+            "Levy"
+          ],
+          "year": 1997,
+          "years": [
+            1997
+          ],
+          "doi": "10.1093/oso/9780198236320.005.0001",
+          "source_url": "https://doi.org/10.1093/oso/9780198236320.005.0001",
+          "title_similarity": 0.3404255319148936
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "In-Context Learning from Demonstrations for Robotic Manipulation: A Survey",
+          "authors": [
+            "Li"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.20944/preprints202609.0780.v1",
+          "source_url": "https://doi.org/10.20944/preprints202609.0780.v1",
+          "title_similarity": 0.3619047619047619
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Conceptualization II: the CALL Survey",
+          "authors": [
+            "Levy"
+          ],
+          "year": 1997,
+          "years": [
+            1997
+          ],
+          "doi": "10.1093/oso/9780198236320.003.0005",
+          "source_url": "https://doi.org/10.1093/oso/9780198236320.003.0005",
+          "title_similarity": 0.23529411764705882
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:40:25.465093Z",
+      "response_sha256": "8506a6da10d670bf2846486e10bfcc9bf17bfe34015c140315e7b42662dbf9e4",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-10",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-10",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "What can transformers learn in-context? a case study of simple function classes",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=What+can+transformers+learn+in-context%3F+a+case+study+of+simple+function+classes&rows=5",
+      "checked_at": "2026-10-09T04:41:41.048191Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "What Can Transformers Learn In-Context? a Case Study of Simple Function Classes",
+          "authors": [
+            "Garg",
+            "Tsipras",
+            "Liang",
+            "Valiant"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.52202/068431-2217",
+          "source_url": "https://doi.org/10.52202/068431-2217",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Case Study of Arizona’s K–12 Education Savings Account Program: What State Policymakers Can Learn",
+          "authors": [],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.7249/rra3431-2",
+          "source_url": "https://doi.org/10.7249/rra3431-2",
+          "title_similarity": 0.3218390804597701
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "What can we learn from exploring feedback case studies in a business context?",
+          "authors": [
+            "Lewis"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.4324/9781003370086-5",
+          "source_url": "https://doi.org/10.4324/9781003370086-5",
+          "title_similarity": 0.5324675324675324
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "What Can Political Economists Learn From Economic Sociologists? A Case Study of NASDAQ",
+          "authors": [
+            "Lee"
+          ],
+          "year": 2014,
+          "years": [
+            2014
+          ],
+          "doi": "10.1111/cccr.12043",
+          "source_url": "https://doi.org/10.1111/cccr.12043",
+          "title_similarity": 0.5644171779141104
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "The Context",
+          "authors": [],
+          "year": 2020,
+          "years": [
+            2020
+          ],
+          "doi": "10.1017/9781788212175.002",
+          "source_url": "https://doi.org/10.1017/9781788212175.002",
+          "title_similarity": 0.2247191011235955
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:40:27.573574Z",
+      "response_sha256": "a70c7a744bb26740a9f32ba49b769c0cb1487ae694868ebc0684f53ff19ab986",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-11",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-11",
+      "status": "query_failed",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Eurekamoments in transformers: Multi-step tasks reveal softmax induced optimization problems",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Eurekamoments+in+transformers%3A+Multi-step+tasks+reveal+softmax+induced+optimization+problems&rows=5",
+      "checked_at": "2026-10-09T04:41:44.026663Z",
+      "technical_error": "HTTP 429",
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:44.026588Z",
+      "response_sha256": null,
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-12",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-12",
+      "status": "query_failed",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Tying word vectors and word classifiers: A loss framework for language modeling",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Tying+word+vectors+and+word+classifiers%3A+A+loss+framework+for+language+modeling&rows=5",
+      "checked_at": "2026-10-09T04:41:44.040929Z",
+      "technical_error": "HTTP 429",
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:44.040863Z",
+      "response_sha256": null,
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-13",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-13",
+      "status": "query_failed",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "General-purpose in-context learning by meta-learning transformers",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=General-purpose+in-context+learning+by+meta-learning+transformers&rows=5",
+      "checked_at": "2026-10-09T04:41:44.818286Z",
+      "technical_error": "HTTP 429",
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:44.818223Z",
+      "response_sha256": null,
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-14",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-14",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "The omniglot challenge: a 3-year progress report",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=The+omniglot+challenge%3A+a+3-year+progress+report&rows=5",
+      "checked_at": "2026-10-09T04:41:44.248671Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "The Omniglot challenge: a 3-year progress report",
+          "authors": [
+            "Lake",
+            "Salakhutdinov",
+            "Tenenbaum"
+          ],
+          "year": 2019,
+          "years": [
+            2019
+          ],
+          "doi": "10.1016/j.cobeha.2019.04.007",
+          "source_url": "https://doi.org/10.1016/j.cobeha.2019.04.007",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "The challenge",
+          "authors": [],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.18356/9789263113634c005",
+          "source_url": "https://doi.org/10.18356/9789263113634c005",
+          "title_similarity": 0.43333333333333335
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "The climate policy response to the challenge",
+          "authors": [],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.18356/9789263113634c006",
+          "source_url": "https://doi.org/10.18356/9789263113634c006",
+          "title_similarity": 0.3956043956043956
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Achieving Human Level Performance on the Original Omniglot Challenge",
+          "authors": [
+            "Shahid"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.1201/9781003256106-9",
+          "source_url": "https://doi.org/10.1201/9781003256106-9",
+          "title_similarity": 0.3826086956521739
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Three year progress report",
+          "authors": [
+            "Author"
+          ],
+          "year": 1977,
+          "years": [
+            1977
+          ],
+          "doi": "10.2172/5354030",
+          "source_url": "https://doi.org/10.2172/5354030",
+          "title_similarity": 0.684931506849315
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:41:44.247097Z",
+      "response_sha256": "706fa52d47427d1ae3ade5a0a9d05be7d44b6ea2db0e5073ff55f1ed461d9f35",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-15",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-15",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Transformers as algorithms: Generalization and implicit model selection in in-context learning",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+as+algorithms%3A+Generalization+and+implicit+model+selection+in+in-context+learning&rows=5",
+      "checked_at": "2026-10-09T04:41:42.132621Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Generalization-Enhanced State Assessment of Railway Power Transformers Using Feature-Guided Stacking Learning",
+          "authors": [
+            "Huang",
+            "Huang",
+            "Chen"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.3390/a19070598",
+          "source_url": "https://doi.org/10.3390/a19070598",
+          "title_similarity": 0.38613861386138615
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Characterizing In-Context Learning: When Can Transformers Match Standard Learning Algorithms?",
+          "authors": [
+            "Hawarey"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.65737/airmcs2026277",
+          "source_url": "https://doi.org/10.65737/airmcs2026277",
+          "title_similarity": 0.30434782608695654
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "In-Context Learning with Representations: Contextual Generalization of Trained Transformers",
+          "authors": [
+            "Yang",
+            "Huang",
+            "Liang",
+            "Chi"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.52202/079017-2727",
+          "source_url": "https://doi.org/10.52202/079017-2727",
+          "title_similarity": 0.20765027322404372
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Generalization enhancement of support vector regression in electric load forecasting with model selection",
+          "authors": [
+            "Sarhani",
+            "El Afia"
+          ],
+          "year": 2018,
+          "years": [
+            2018
+          ],
+          "doi": "10.1145/3230905.3230947",
+          "source_url": "https://doi.org/10.1145/3230905.3230947",
+          "title_similarity": 0.3838383838383838
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Model selection for precision dosing: Comparison of Machine Learning and Evidence-plus-Expertise Algorithms",
+          "authors": [
+            "Hughes",
+            "Os",
+            "Keizer"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.70534/hnki7964",
+          "source_url": "https://doi.org/10.70534/hnki7964",
+          "title_similarity": 0.32160804020100503
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:40:29.995414Z",
+      "response_sha256": "494cef100ae41b3ea275033d6fe071742396cf433693e54096b5a3331a515f71",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-16",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-16",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Are emergent abilities in large language models just in-context learning? arXiv preprint arXiv:2309.01809 , 2023.",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Are+emergent+abilities+in+large+language+models+just+in-context+learning%3F+arXiv+preprint+arXiv%3A2309.01809+%2C+2023.&rows=5",
+      "checked_at": "2026-10-09T04:41:42.988173Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Comment on the Paper Titled ’The Origin of Quantum Mechanical Statistics: Insights from Research on Human Language’ (arXiv preprint arXiv:2407.14924, 2024)",
+          "authors": [
+            "Sienicki"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.20944/preprints202411.2377.v1",
+          "source_url": "https://doi.org/10.20944/preprints202411.2377.v1",
+          "title_similarity": 0.4263565891472868
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "ArXiv preprint server clamps down on AI slop",
+          "authors": [],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.1126/science.z66g9k7",
+          "source_url": "https://doi.org/10.1126/science.z66g9k7",
+          "title_similarity": 0.23529411764705882
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Are Emergent Abilities in Large Language Models just In-Context Learning?",
+          "authors": [
+            "Lu",
+            "Bigoulaeva",
+            "Sachdeva",
+            "Tayyar Madabushi",
+            "Gurevych"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.18653/v1/2024.acl-long.279",
+          "source_url": "https://doi.org/10.18653/v1/2024.acl-long.279",
+          "title_similarity": 0.7955801104972375
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Understanding Emergent Abilities in Large Language Models",
+          "authors": [
+            "Su"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.2139/ssrn.6584019",
+          "source_url": "https://doi.org/10.2139/ssrn.6584019",
+          "title_similarity": 0.5421686746987951
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "1. S. Mustofa et al., “A Comprehensive Review on Plant Leaf Disease Detection using Deep Learning,” arXiv preprint, 2023. 2. H. Rehana et al., “Plant Disease Detection using Region-Based Convolutional Neural Network,” arXiv preprint, 2023. 3. Y. Zhang et",
+          "authors": [
+            "Lakshmisri",
+            "Kumar",
+            "Kumar",
+            "Kumar"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.15662/ijeetr.2026.0802388",
+          "source_url": "https://doi.org/10.15662/ijeetr.2026.0802388",
+          "title_similarity": 0.03498542274052478
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:42.986918Z",
+      "response_sha256": "e30f763bfeaf0d133fcc704bb1db952e652a84629671c5f7ae4367dc2a33b746",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-17",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-17",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "In-context learning and induction heads",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=In-context+learning+and+induction+heads&rows=5",
+      "checked_at": "2026-10-09T04:41:42.991038Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Induction Heads as an Essential Mechanism for Pattern Matching in In-context Learning",
+          "authors": [
+            "Crosbie",
+            "Shutova"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.18653/v1/2025.findings-naacl.283",
+          "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.283",
+          "title_similarity": 0.3064516129032258
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "The Evolution of Statistical Induction Heads: In-Context Learning Markov Chains",
+          "authors": [
+            "Edelman",
+            "Tsilivis",
+            "Edelman",
+            "Malach",
+            "Goel"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.52202/079017-2050",
+          "source_url": "https://doi.org/10.52202/079017-2050",
+          "title_similarity": 0.42735042735042733
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Identifying Semantic Induction Heads to Understand In-Context Learning",
+          "authors": [
+            "Ren",
+            "Guo",
+            "Yan",
+            "Liu",
+            "Zhang",
+            "Qiu",
+            "Lin"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.18653/v1/2024.findings-acl.412",
+          "source_url": "https://doi.org/10.18653/v1/2024.findings-acl.412",
+          "title_similarity": 0.3486238532110092
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Emergence of Induction Heads and Their Impact on In-Context Learning in Japanese Large Language Models",
+          "authors": [
+            "Agarwal",
+            "Hasegawa"
+          ],
+          "year": 2026,
+          "years": [
+            2026,
+            2027
+          ],
+          "doi": "10.1007/978-981-92-1546-1_38",
+          "source_url": "https://doi.org/10.1007/978-981-92-1546-1_38",
+          "title_similarity": 0.3546099290780142
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Understanding and Controlling Repetition Neurons and Induction Heads in In-Context Learning",
+          "authors": [
+            "Doan",
+            "Hiraoka",
+            "Inui"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.18653/v1/2025.ijcnlp-long.153",
+          "source_url": "https://doi.org/10.18653/v1/2025.ijcnlp-long.153",
+          "title_similarity": 0.47692307692307695
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:40:33.027890Z",
+      "response_sha256": "5548b7e51ca03b56c8b420e2fcb0aa42352ab1c9cccc4ce8bbde5f1fa0361995",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-18",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-18",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Using the output embedding to improve language models",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Using+the+output+embedding+to+improve+language+models&rows=5",
+      "checked_at": "2026-10-09T04:41:44.993045Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Using the Output Embedding to Improve Language Models",
+          "authors": [
+            "Press",
+            "Wolf"
+          ],
+          "year": 2017,
+          "years": [
+            2017
+          ],
+          "doi": "10.18653/v1/e17-2025",
+          "source_url": "https://doi.org/10.18653/v1/e17-2025",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Enhancing Output Uniqueness in Large Language Models via Model Rotation, Temperature Tuning, and Embedding-Based Validation",
+          "authors": [
+            "Tiruvaipati"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.36227/techrxiv.175372906.66923093/v1",
+          "source_url": "https://doi.org/10.36227/techrxiv.175372906.66923093/v1",
+          "title_similarity": 0.3793103448275862
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "High-Performance Computing Code Translation Agent: Validating and Improve the Quality of Large Language Models Output in High-Performance Computing Translation Tasks",
+          "authors": [
+            "Chen"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.31274/cc-20251215-121",
+          "source_url": "https://doi.org/10.31274/cc-20251215-121",
+          "title_similarity": 0.35944700460829493
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Assessing the Ethical Alignment of Large Language Models Using Deep Embedding Models",
+          "authors": [
+            "Silva",
+            "Griffith",
+            "Rathore"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.1109/aitest66680.2025.00029",
+          "source_url": "https://doi.org/10.1109/aitest66680.2025.00029",
+          "title_similarity": 0.43795620437956206
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "TraceLM: Temporal Root-Cause Analysis with Contextual Embedding Language Models",
+          "authors": [
+            "Zhu"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.36227/techrxiv.174857727.77774878/v1",
+          "source_url": "https://doi.org/10.36227/techrxiv.174857727.77774878/v1",
+          "title_similarity": 0.5190839694656488
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:44.991727Z",
+      "response_sha256": "df9f8939cfc183baa906116bd7baeba09b313a8eb1418aef7b762ad51098b145",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-19",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-19",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "A reinforcement-based mechanism for discontinuous learning",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=A+reinforcement-based+mechanism+for+discontinuous+learning&rows=5",
+      "checked_at": "2026-10-09T04:41:45.010345Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "A reinforcement-based mechanism for discontinuous learning",
+          "authors": [
+            "Reddy"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.1073/pnas.2215352119",
+          "source_url": "https://doi.org/10.1073/pnas.2215352119",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "A reinforcement-based mechanism for discontinuous learning",
+          "authors": [
+            "Reddy"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.1101/2022.05.06.490910",
+          "source_url": "https://doi.org/10.1101/2022.05.06.490910",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "An Online Mechanism for Transfer Learning in Reinforcement Learning Scenarios",
+          "authors": [
+            "Bagchi",
+            "Nair"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.5220/0014037800004052",
+          "source_url": "https://doi.org/10.5220/0014037800004052",
+          "title_similarity": 0.35555555555555557
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Estimator-Based Reinforcement Learning Consensus Control for Multiagent Systems With Discontinuous Constraints",
+          "authors": [
+            "Luo",
+            "Ma",
+            "Ren",
+            "Li"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.1109/tnnls.2024.3445880",
+          "source_url": "https://doi.org/10.1109/tnnls.2024.3445880",
+          "title_similarity": 0.5238095238095238
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Discontinuous Rod Spanning Motion Control for Snake Robot based on Reinforcement Learning",
+          "authors": [
+            "Li",
+            "Tang",
+            "Zhou",
+            "Guo",
+            "Lu",
+            "Shu"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.23919/ccc58697.2023.10240038",
+          "source_url": "https://doi.org/10.23919/ccc58697.2023.10240038",
+          "title_similarity": 0.32653061224489793
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:45.008973Z",
+      "response_sha256": "7192414b408fcd60483df43f92b1d7bbc348d36583152ca4aa9846a9cbc20c8b",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-20",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-20",
+      "status": "matched",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "The transient nature of emergent in-context learning in transformers",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=The+transient+nature+of+emergent+in-context+learning+in+transformers&rows=5",
+      "checked_at": "2026-10-09T04:41:46.253815Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "The Transient Nature of Emergent In-Context Learning in Transformers",
+          "authors": [
+            "Singh",
+            "Chan",
+            "Moskovitz",
+            "Grant",
+            "Saxe",
+            "Hill"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-1208",
+          "source_url": "https://doi.org/10.52202/075280-1208",
+          "title_similarity": 1.0
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Learning stochastic dynamics and predicting emergent behavior using transformers",
+          "authors": [
+            "Casert",
+            "Tamblyn",
+            "Whitelam"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.1038/s41467-024-45629-w",
+          "source_url": "https://doi.org/10.1038/s41467-024-45629-w",
+          "title_similarity": 0.4864864864864865
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Data Distributional Properties Drive Emergent In-Context Learning in Transformers",
+          "authors": [
+            "Chan",
+            "Santoro",
+            "Lampinen",
+            "Wang",
+            "Singh",
+            "Richemond",
+            "McClelland",
+            "Hill"
+          ],
+          "year": 2022,
+          "years": [
+            2022
+          ],
+          "doi": "10.52202/068431-1371",
+          "source_url": "https://doi.org/10.52202/068431-1371",
+          "title_similarity": 0.738255033557047
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Instrument transformers",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.3403/01646333",
+          "source_url": "https://doi.org/10.3403/01646333",
+          "title_similarity": 0.3956043956043956
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Instrument transformers",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.3403/01646333u",
+          "source_url": "https://doi.org/10.3403/01646333u",
+          "title_similarity": 0.3956043956043956
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": "candidate-0",
+      "match_confidence": 1.0,
+      "retrieved_at": "2026-10-09T04:41:46.252471Z",
+      "response_sha256": "e726fde7439037f87fb1961409ee5ebc20e6b748c32891d064ce4664203e8d42",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-21",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-21",
+      "status": "query_failed",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Human-timescale adaptation in an open-ended task space",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Human-timescale+adaptation+in+an+open-ended+task+space&rows=5",
+      "checked_at": "2026-10-09T04:41:47.074894Z",
+      "technical_error": "HTTP 429",
+      "candidates": [],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:47.074816Z",
+      "response_sha256": null,
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-22",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-22",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Attention is all you need",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Attention+is+all+you+need&rows=5",
+      "checked_at": "2026-10-09T04:41:44.819864Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Is Attention All You Need?",
+          "authors": [
+            "Mineault"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.1007/978-3-031-84300-6_13",
+          "source_url": "https://doi.org/10.1007/978-3-031-84300-6_13",
+          "title_similarity": 0.88
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Attention Is All You Need: An Analysis Of The Valuation Of Artificial Intelligence Tokens",
+          "authors": [
+            "Akpan"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.2139/ssrn.4993784",
+          "source_url": "https://doi.org/10.2139/ssrn.4993784",
+          "title_similarity": 0.4424778761061947
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Attention is All You Need... Unless You Are a CISO: The Inherent Incompatibility Between Transformer Architectures and Zero-Trust Environments",
+          "authors": [
+            "Canale"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.2139/ssrn.5967774",
+          "source_url": "https://doi.org/10.2139/ssrn.5967774",
+          "title_similarity": 0.3067484662576687
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "One Vector Is All You Need for O(1) Self-Attention: The Ocean State",
+          "authors": [
+            "YU"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.21203/rs.3.rs-10916252/v1",
+          "source_url": "https://doi.org/10.21203/rs.3.rs-10916252/v1",
+          "title_similarity": 0.4
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "All You Need Is LSD",
+          "authors": [
+            "Butler"
+          ],
+          "year": 2018,
+          "years": [
+            2018
+          ],
+          "doi": "10.5040/9781350101272.00000005",
+          "source_url": "https://doi.org/10.5040/9781350101272.00000005",
+          "title_similarity": 0.5454545454545454
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:40:36.880184Z",
+      "response_sha256": "271087e8e66bc45e0cd59f21a59453cda7dd37d875f64fff240115e34f4b7312",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-23",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-23",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Transformers learn in-context by gradient descent",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Transformers+learn+in-context+by+gradient+descent&rows=5",
+      "checked_at": "2026-10-09T04:41:44.821549Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Transformers learn to implement preconditioned gradient descent for in-context learning",
+          "authors": [
+            "Ahn",
+            "Cheng",
+            "Daneshmand",
+            "Sra"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-1977",
+          "source_url": "https://doi.org/10.52202/075280-1977",
+          "title_similarity": 0.6470588235294118
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Multi-head Transformers Provably Learn Symbolic Multi-step Reasoning via Gradient Descent",
+          "authors": [
+            "Yang",
+            "Huang",
+            "Liang",
+            "Chi"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.52202/085713-3875",
+          "source_url": "https://doi.org/10.52202/085713-3875",
+          "title_similarity": 0.5652173913043478
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "&lt;p&gt;When In-Context Learning Implements Gradient Descent&lt;/p&gt;\n&lt;p&gt;The Gradient-Descent Signature of the Forward Pass Is Learned, Not Architectural — A Developmental Life Cycle in Pretrained Transformers, Backed by a Mechanically Verified Theory&lt;/p&gt;",
+          "authors": [
+            "Nagy"
+          ],
+          "year": 2026,
+          "years": [
+            2026
+          ],
+          "doi": "10.2139/ssrn.6947199",
+          "source_url": "https://doi.org/10.2139/ssrn.6947199",
+          "title_similarity": 0.09090909090909091
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "Making Asynchronous Stochastic Gradient Descent Work for Transformers",
+          "authors": [
+            "Aji",
+            "Heafield"
+          ],
+          "year": 2019,
+          "years": [
+            2019
+          ],
+          "doi": "10.18653/v1/d19-5608",
+          "source_url": "https://doi.org/10.18653/v1/d19-5608",
+          "title_similarity": 0.423728813559322
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Why Can GPT Learn In-Context? Language Models Secretly Perform Gradient Descent as Meta-Optimizers",
+          "authors": [
+            "Dai",
+            "Sun",
+            "Dong",
+            "Hao",
+            "Ma",
+            "Sui",
+            "Wei"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.18653/v1/2023.findings-acl.247",
+          "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.247",
+          "title_similarity": 0.5205479452054794
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:38.375425Z",
+      "response_sha256": "617b97573e8f55a49c7dc2c25e9e732d2d7015b7c603af0a69faa0e8fe46f575",
+      "from_cache": true
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-24",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-24",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Interpretability in the wild: a circuit for indirect object identification in gpt-2 small",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Interpretability+in+the+wild%3A+a+circuit+for+indirect+object+identification+in+gpt-2+small&rows=5",
+      "checked_at": "2026-10-09T04:41:45.905945Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Application of an open circuit indirect calorimetry system for gaseous exchange measurements in small ruminant nutrition",
+          "authors": [
+            "CRISCIONI FERREIRA"
+          ],
+          "year": null,
+          "years": [],
+          "doi": "10.4995/thesis/10251/64069",
+          "source_url": "https://doi.org/10.4995/thesis/10251/64069",
+          "title_similarity": 0.41346153846153844
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Maneuvering Object Tracking and Movement Parameters Identification by Indirect Observations with Random Delays",
+          "authors": [
+            "Bosov"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.3390/axioms13100668",
+          "source_url": "https://doi.org/10.3390/axioms13100668",
+          "title_similarity": 0.31313131313131315
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Development of a mobile open-circuit system based on indirect calorimetry for energetic metabolism studies in small ruminants",
+          "authors": [
+            "LÓPEZ LUJÁN"
+          ],
+          "year": null,
+          "years": [],
+          "doi": "10.4995/thesis/10251/50430",
+          "source_url": "https://doi.org/10.4995/thesis/10251/50430",
+          "title_similarity": 0.4507042253521127
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "VERB-INDIRECT OBJECT-DIRECT OBJECT and VERB-DIRECT OBJECT-INDIRECT OBJECT",
+          "authors": [
+            "Rivas"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.5565/rev/isogloss.511",
+          "source_url": "https://doi.org/10.5565/rev/isogloss.511",
+          "title_similarity": 0.38509316770186336
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "GPT-4o and the Quest for Machine Learning Interpretability in ICU Mortality Prediction",
+          "authors": [
+            "Samadi",
+            "Nikulina",
+            "Fritsch",
+            "Schuppert"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.21203/rs.3.rs-4816139/v1",
+          "source_url": "https://doi.org/10.21203/rs.3.rs-4816139/v1",
+          "title_similarity": 0.39080459770114945
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:45.904224Z",
+      "response_sha256": "b942adbdc08f3c2da1d33246f1926975b8e17569155aa305e9e0c34b1b9655df",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-25",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-25",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "Large language models are implicitly topic models: Explaining and finding good demonstrations for in-context learning",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Large+language+models+are+implicitly+topic+models%3A+Explaining+and+finding+good+demonstrations+for+in-context+learning&rows=5",
+      "checked_at": "2026-10-09T04:41:47.096753Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Large Language Models Are Latent Variable Models: Explaining and Finding Good Demonstrations for In-Context Learning",
+          "authors": [
+            "Wang",
+            "Zhu",
+            "Saxon",
+            "Steyvers",
+            "Wang"
+          ],
+          "year": 2023,
+          "years": [
+            2023
+          ],
+          "doi": "10.52202/075280-0687",
+          "source_url": "https://doi.org/10.52202/075280-0687",
+          "title_similarity": 0.8831168831168831
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "Topic Labeling Using Large Language Models",
+          "authors": [
+            "Bogachek"
+          ],
+          "year": 2025,
+          "years": [
+            2025
+          ],
+          "doi": "10.2139/ssrn.5369321",
+          "source_url": "https://doi.org/10.2139/ssrn.5369321",
+          "title_similarity": 0.26582278481012656
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "Explaining Large Language Models Decisions Using Shapley Values",
+          "authors": [
+            "Mohammadi"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.2139/ssrn.4759713",
+          "source_url": "https://doi.org/10.2139/ssrn.4759713",
+          "title_similarity": 0.37988826815642457
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "In-Context Learning in Large Language Models: A Comprehensive Survey",
+          "authors": [
+            "Highmore"
+          ],
+          "year": 2024,
+          "years": [
+            2024
+          ],
+          "doi": "10.20944/preprints202407.0926.v1",
+          "source_url": "https://doi.org/10.20944/preprints202407.0926.v1",
+          "title_similarity": 0.32786885245901637
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "Benchmarking In-Context Learning Strategies of Large Language Models for Math Reasoning Tasks_supp1-3630117.pdf",
+          "authors": [
+            "Rong"
+          ],
+          "year": null,
+          "years": [],
+          "doi": "10.1109/tlt.2025.3630117/mm1",
+          "source_url": "https://doi.org/10.1109/tlt.2025.3630117/mm1",
+          "title_similarity": 0.29955947136563876
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:47.094936Z",
+      "response_sha256": "c9c663d32021b53aa09336715e1c4f834a3a40727d1c8639d437aae10126246a",
+      "from_cache": false
+    },
+    {
+      "reference_check_id": "rc-ref-paper_011_openreview_2024_02_11_credibility-26",
+      "paper_reference_id": "ref-paper_011_openreview_2024_02_11_credibility-26",
+      "status": "unverified",
+      "provider": "Crossref",
+      "query": {
+        "query.bibliographic": "An explanation of in-context learningasimplicitbayesianinference",
+        "rows": 5
+      },
+      "query_attempted": true,
+      "source_url": "https://api.crossref.org/works?query.bibliographic=An+explanation+of+in-context+learningasimplicitbayesianinference&rows=5",
+      "checked_at": "2026-10-09T04:41:47.198046Z",
+      "technical_error": null,
+      "candidates": [
+        {
+          "candidate_id": "candidate-0",
+          "title": "Context",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.1057/9781137403865.0005",
+          "source_url": "https://doi.org/10.1057/9781137403865.0005",
+          "title_similarity": 0.19718309859154928
+        },
+        {
+          "candidate_id": "candidate-1",
+          "title": "How does community context matter? Social mechanisms and the explanation of crime rates",
+          "authors": [
+            "Sampson"
+          ],
+          "year": 2006,
+          "years": [
+            2006
+          ],
+          "doi": "10.1017/cbo9780511489341.003",
+          "source_url": "https://doi.org/10.1017/cbo9780511489341.003",
+          "title_similarity": 0.30666666666666664
+        },
+        {
+          "candidate_id": "candidate-2",
+          "title": "CENsible: Interpretable Insights into Small-Molecule Binding with Context Explanation Networks",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.1021/acs.jcim.4c00825.s003",
+          "source_url": "https://doi.org/10.1021/acs.jcim.4c00825.s003",
+          "title_similarity": 0.22929936305732485
+        },
+        {
+          "candidate_id": "candidate-3",
+          "title": "CENsible: Interpretable Insights into Small-Molecule Binding with Context Explanation Networks",
+          "authors": [],
+          "year": null,
+          "years": [],
+          "doi": "10.1021/acs.jcim.4c00825.s001",
+          "source_url": "https://doi.org/10.1021/acs.jcim.4c00825.s001",
+          "title_similarity": 0.22929936305732485
+        },
+        {
+          "candidate_id": "candidate-4",
+          "title": "The Context of Our Query",
+          "authors": [
+            "Lissack"
+          ],
+          "year": null,
+          "years": [],
+          "doi": "10.1057/9781137403865.0008",
+          "source_url": "https://doi.org/10.1057/9781137403865.0008",
+          "title_similarity": 0.29545454545454547
+        }
+      ],
+      "conflicting_fields": [],
+      "selected_candidate_id": null,
+      "match_confidence": null,
+      "retrieved_at": "2026-10-09T04:41:47.196936Z",
+      "response_sha256": "f2524ea592e61de479cb21ecf34ad767aea6a4a361b499f9ae0bd2d1bfb361b5",
+      "from_cache": false
+    }
+  ],
+  "repositories": [],
+  "reproduction_signals": []
+}

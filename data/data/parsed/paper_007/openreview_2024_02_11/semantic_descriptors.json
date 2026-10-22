@@ -1,0 +1,92 @@
+[
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_001",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "research_problem",
+    "descriptor_type": "problem_statement",
+    "text": "Large language models are trained on vast amounts of internet data, prompting concerns that they have memorized public benchmarks. Detecting this type of contamination is challenging because the pretraining data used by proprietary models are often not publicly accessible.",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_002",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "We propose a procedure for detecting test set contamination of language models with exact false positive guarantees and without access to pretraining data or model weights.",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_003",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "Our approach leverages the fact that when there is no data contamination, all orderings of an exchangeable benchmark should be equally likely.",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_004",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "contributions",
+    "descriptor_type": "claimed_contribution",
+    "text": "We demonstrate that our procedure is sensitive enough to reliably detect contamination in challenging situations, including models as small as 1.4 billion parameters, on small test sets only 1000 examples, and datasets that appear only a few times in the pretraining corpus.",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_005",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "claims",
+    "descriptor_type": "major_claim",
+    "text": "We demonstrate that our procedure is sensitive enough to reliably detect contamination in challenging situations, including models as small as 1.4 billion parameters, on small test sets only 1000 examples, and datasets that appear only a few times in the pretraining corpus.",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0027",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_006",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "method",
+    "descriptor_type": "metho_summary",
+    "text": "《Proving Test Set Contamination in Black-Box Language Models》在研究价值方面的正文支持是：Large language models are trained on vast amounts of internet data, prompting concerns and speculation that they have memorized public benchmarks.  限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0001",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_007",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "evaluation",
+    "descriptor_type": "evaluatio_summary",
+    "text": "《Proving Test Set Contamination in Black-Box Language Models》在可靠性与证据方面的正文支持是：The core idea of our statistical test is to compare the log probability of the dataset under its original ordering to the log probability under random permutations.  限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0006",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_008",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "reliability_checks",
+    "descriptor_type": "reliability_check_summary",
+    "text": "《Proving Test Set Contamination in Black-Box Language Models》在可复现性与透明度方面的正文支持是：Dataset Size LLaMA2-7B Mistral-7B Pythia-1.4B GPT-2 XL BioMedLM Abstract-Algebra 100 0.103 0.246 0.645 0.894 0.861 Anatomy 135 0.586 0.605 0.605 0.439 0.649 Astronomy 152 0.550 0.657 0.050 0.003 0.050 Business-Ethics 100 0.936 0.440 0.107 0.808 0.499 Clinical-Knowledge 265 0.199… 限制或边界证据是：We highlight a few limitations of our approach for detecting test set contamination. ",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0029",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  },
+  {
+    "descriptor_id": "paper_007_openreview_2024_02_11_descriptor_009",
+    "paper_version_id": "paper_007_openreview_2024_02_11",
+    "descriptor_group": "limitations",
+    "descriptor_type": "boundary_or_gap",
+    "text": "评分受以下论文内边界约束：We highlight a few limitations of our approach for detecting test set contamination. ",
+    "evidence_chunk_id": "paper_007_openreview_2024_02_11_chunk_0017",
+    "evidence_element_id": null,
+    "confidence": "medium"
+  }
+]

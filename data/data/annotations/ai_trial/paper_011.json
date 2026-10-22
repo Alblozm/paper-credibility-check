@@ -1,0 +1,353 @@
+{
+  "assessment_id": "assessment_ai_paper_011_openreview_2024_02_11",
+  "paper_version_id": "paper_011_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_011_openreview_2024_02_11",
+    "raw_output_sha256": "c3ccd46a4823d539f8e8842cab33a20b58dd47891973bd82d60822609855888e"
+  },
+  "paper_summary": "Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence, which contrasts with traditional in-weights learning of query-output relationships. What aspects of the training data distribution and architecture favor in-context vs in-weights learning?",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "We propose that the sharp transitions in attention-based networks arise due to a specific chain of multi-layer operations necessary to achieve ICL, which is implemented by nested nonlinearities sequentially learned during training.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_011_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Recent work has shown that specific distributional properties inherent in language, such as burstiness, large dictionaries and skewed rank-frequency distributions, control the trade-off or simultaneous appearance of these two forms of learning.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_011_ev_004",
+        "paper_011_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.4,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.4/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence. ",
+    "正文可定位证据支持该维度判断：T HE MECHANISTIC BASIS OF DATA DEPENDENCE AND ABRUPT LEARNING IN AN IN - CONTEXT CLASSIFICA - TION TASK Gautam Reddy ∗ Department of Physics, Princeton University Physics & Informatics Laboratories, NTT Research Inc. ",
+    "正文可定位证据支持该维度判断：Recapitulating data distributional dependencies. In Figure 2, we quantify how IWL and ICL depend on the parameters of the data distribution. The upshot is that the highly simplified input statistics and network architecture considered here reproduce the core distributional depen…"
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》在研究价值方面的正文支持是：Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence.  限制或边界证据是：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_011_ev_001",
+        "paper_011_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》在可靠性与证据方面的正文支持是：T HE MECHANISTIC BASIS OF DATA DEPENDENCE AND ABRUPT LEARNING IN AN IN - CONTEXT CLASSIFICA - TION TASK Gautam Reddy ∗ Department of Physics, Princeton University Physics & Informatics Laboratories, NTT Research Inc.  限制或边界证据是：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：T HE MECHANISTIC BASIS OF DATA DEPENDENCE AND ABRUPT LEARNING IN AN IN - CONTEXT CLASSIFICA - TION TASK Gautam Reddy ∗ Department of Physics, Princeton University Physics & Informatics Laboratories, NTT Research Inc. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_011_ev_003",
+        "paper_011_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》在原创性定位方面的正文支持是：Recapitulating data distributional dependencies. In Figure 2, we quantify how IWL and ICL depend on the parameters of the data distribution. The upshot is that the highly simplified input statistics and network architecture considered here reproduce the core distributional depen… 限制或边界证据是：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Recapitulating data distributional dependencies. In Figure 2, we quantify how IWL and ICL depend on the parameters of the data distribution. The upshot is that the highly simplified input statistics and network architecture considered here reproduce the core distributional depen…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_011_ev_004",
+        "paper_011_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》在清晰度与可用性方面的正文支持是：A striking feature of large language models is in-context learning (Brown et al., 2020; Dong et al., 2022; Garg et al., 2022; Dai et al., 2022).  限制或边界证据是：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：A striking feature of large language models is in-context learning (Brown et al., 2020; Dong et al., 2022; Garg et al., 2022; Dai et al., 2022). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_011_ev_005",
+        "paper_011_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《The mechanistic basis of data dependence and abrupt learning in an in-context classification task》在可复现性与透明度方面的正文支持是：Figure A.1: Accuracy curves for the full model when 0 < p < 1 and 0 < p < 1 .  限制或边界证据是：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Figure A.1: Accuracy curves for the full model when 0 < p < 1 and 0 < p < 1 . "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in s…"
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_011_ev_006",
+        "paper_011_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_011_ev_001",
+      "page_number": 1,
+      "section_id": "paper_011_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Transformer models exhibit in-context learning: the ability to accurately predict the response to a novel query based on illustrative examples in the input sequence. In-context learning contrasts with traditional in-weights learning of query-output relationships. What aspects of the training data distribution and architecture favor in-context vs in-weights learning? Recent work has shown that specific distributional properties inherent in language, such as burstiness, large dictionaries and skewed rank-frequency distributions, control the trade-off or simultaneous appearance of these two forms of learning. We first show that these results are recapitulated in a minimal attention-only network trained on a simplified dataset. In-context learning (ICL) is driven by the abrupt emergence of an induction head, which subsequently competes with in-weights learning. By identifying progress measur",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "page_number": 9,
+      "section_id": "paper_011_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "Summary. In summary, past work has found that particular features of the data distribution influence the trade-off between ICL and IWL. The features that promote ICL are especially prominent in language, such as a large number of rare tokens that are highly over-represented in specific contexts. We reproduced these data distributional dependencies in a simplified model, highlighting the essential ingredients necessary to explain those observations. We present strong evidence that ICL is implemented by an induction head. We build a minimal version of an induction head, which through careful experiments reveal the key factors that lead to its emergence. In particular, the learning of an independent sub-optimal strategy accompanied by a slow learning phase supports the induction head’s abrupt formation. A phenomenological model of the loss landscape shows that this abrupt transition is like",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_011_ev_003",
+      "page_number": 1,
+      "section_id": "paper_011_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "T HE MECHANISTIC BASIS OF DATA DEPENDENCE AND ABRUPT LEARNING IN AN IN - CONTEXT CLASSIFICA - TION TASK\n\nGautam Reddy ∗ Department of Physics, Princeton University Physics & Informatics Laboratories, NTT Research Inc. Center for Brain Science, Harvard University",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_011_ev_004",
+      "page_number": 4,
+      "section_id": "paper_011_openreview_2024_02_11_sec_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "Recapitulating data distributional dependencies. In Figure 2, we quantify how IWL and ICL depend on the parameters of the data distribution. The upshot is that the highly simplified input statistics and network architecture considered here reproduce the core distributional dependencies observed in past work. The results are summarized below. Increasing the burstiness B and the number of classes K promotes ICL while decreasing IWL (Figure 2a), highlighting the trade-off between ICL and IWL. Recall that the target and item classes are randomly sampled when B = 0 . This implies that the network can indeed learn a perfect IWL solution for the corresponding K . Similarly, within-class variation ( ε ) promotes ICL and decreases IWL (Figure 2b). We find that the network always converges to an IWL solution when the fraction of bursty sequences p < 1 . This is expected as the ICL solution is not ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_011_ev_005",
+      "page_number": 1,
+      "section_id": "paper_011_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "A striking feature of large language models is in-context learning (Brown et al., 2020; Dong et al., 2022; Garg et al., 2022; Dai et al., 2022). In-context learning (ICL) is the ability to predict the response to a query based on illustrative examples presented in the context, without any additional weight updates. This form of learning contrasts with in-weights learning (IWL) of query-response relationships encoded in the weights of the network. ICL emerges in transformer models (Vaswani et al., 2017) trained on a diverse set of tasks that contain a common structural element. ICL can be exploited to perform zero-shot learning on novel tasks that share this structure. For example, a transformer trained to solve numerous linear regression tasks learns to solve a new linear regression task based on in-context examples (Garg et al., 2022; Aky¨ urek et al., 2022; Von Oswald et al., 2023; Ahn",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_011_ev_006",
+      "page_number": 12,
+      "section_id": "paper_011_openreview_2024_02_11_sec_a",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_011_openreview_2024_02_11_chunk_0017",
+      "evidence_mode": "quote",
+      "excerpt": "Figure A.1: Accuracy curves for the full model when 0 < p < 1 and 0 < p < 1 . In all cases, the B C network learns both the ICL and the IWL solutions. Here K = 256 ,B = 1 ,α = 0 ,ε = 0 .\n\nFigure A.2: Loss and accuracy curves for the minimal model. Here K = 512 ,D = 64 ,B = 2 .\n\nFigure A.3: Data distributional dependencies are recapitulated by the minimal model. Plotted as in Figure 2. Here K = 512 ,D = 64 ,B = 1 ,α = 0 ,ε = 0 . 1 (except when that parameter is varied)\n\n(a) (b)\n\nFigure A.4: (a) When L = N , the loss curves starting from two initial values recapitulate the two distinct behaviors noted in Figure 6c. (b) The loss landscape has a saddle at the origin such that small fluctuations lead the path either to the ICL solution (top right quadrant) or a sub-optimal minimum (bottom left quadrant).\n\nFigure A.5: IC accuracy curves for different N and L (six seeds for each pair of values ",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_011_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_011_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_011_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_011_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_011_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_011_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_011_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_011_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_011_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "preprocessing details is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

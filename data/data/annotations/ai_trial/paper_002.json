@@ -1,0 +1,372 @@
+{
+  "assessment_id": "assessment_ai_paper_002_v1",
+  "paper_version_id": "paper_002_v1",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-07T06:08:19Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-legacy-audit-1",
+    "model_run_id": "model_run_codex_review_paper_002_v1",
+    "raw_output_sha256": "656d4a4c8967f1654f6268bcc96f0921e0a8afa0605e01a1fe4289b7f3c65741"
+  },
+  "paper_summary": "The paper critically tests intrinsic LLM self-correction on reasoning tasks and finds that performance often stagnates or degrades without external feedback.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Empirical distinction between oracle and intrinsic self-correction.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_002_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Evidence that intrinsic correction can degrade reasoning performance.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_002_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "Call-budget comparison of multi-agent debate and self-consistency.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_002_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Intrinsic self-correction does not reliably improve reasoning without external feedback.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_002_ev_002",
+        "paper_002_ev_004"
+      ]
+    },
+    {
+      "claim_id": "cl2",
+      "claim_text": "Multi-agent debate offers no benefit over self-consistency at equal response budgets.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_002_ev_002",
+        "paper_002_ev_004"
+      ]
+    }
+  ],
+  "overall_score": 7.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "A useful negative-result paper with a clear question, controlled call-budget comparisons and appropriately bounded conclusions. Reproduction is limited by incomplete environment, seed and implementation disclosure.",
+  "strengths": [
+    "Challenges a popular assumption with direct experiments rather than leaderboard framing.",
+    "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets.",
+    "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+  ],
+  "concerns": [
+    "Results depend on a limited set of proprietary model snapshots and prompts.",
+    "Some prompts are described as casually written, leaving prompt sensitivity unresolved.",
+    "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+  ],
+  "unresolved_questions": [
+    "Would the conclusions hold for current open-weight models?",
+    "How sensitive are the negative results to prompt optimization and sampling variance?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality evaluates the paper's positioning rather than an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Challenges a popular assumption with direct experiments rather than leaderboard framing. Results depend on a limited set of proprietary model snapshots and prompts.",
+      "strengths": [
+        "Challenges a popular assumption with direct experiments rather than leaderboard framing."
+      ],
+      "weaknesses": [
+        "Results depend on a limited set of proprietary model snapshots and prompts."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_002_ev_001",
+        "paper_002_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets. Some prompts are described as casually written, leaving prompt sensitivity unresolved.",
+      "strengths": [
+        "Separates oracle-feedback correction from intrinsic correction and controls model-call budgets."
+      ],
+      "weaknesses": [
+        "Some prompts are described as casually written, leaving prompt sensitivity unresolved."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_002_ev_002",
+        "paper_002_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+      "strengths": [
+        "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+      ],
+      "weaknesses": [
+        "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+      ],
+      "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_002_ev_003",
+        "paper_002_ev_001"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+      "strengths": [
+        "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+      ],
+      "weaknesses": [
+        "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_002_ev_001",
+        "paper_002_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 5,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper. Code, environment and random seeds are not clearly disclosed in the assessed PDF.",
+      "strengths": [
+        "Discusses when post-hoc feedback is genuinely useful and when pre-hoc prompting is cheaper."
+      ],
+      "weaknesses": [
+        "Code, environment and random seeds are not clearly disclosed in the assessed PDF."
+      ],
+      "rationale": "Assigned 5/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_002_ev_005",
+        "paper_002_ev_004"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_002_ev_001",
+      "page_number": 1,
+      "section_id": "paper_002_v1_sec_abstract",
+      "section_title": "ABSTRACT",
+      "locator_type": "text",
+      "locator_label": "paper_002_v1_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "ly examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction , whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to selfcorrect their responses without external feedback, and at times, their performance might even degrade post self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_002_ev_002",
+      "page_number": 3,
+      "section_id": "paper_002_v1_sec_3_1_1",
+      "section_title": "EXPERIMENTAL SETUP",
+      "locator_type": "text",
+      "locator_label": "paper_002_v1_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": ") for testing.\n\n1 The official implementation uses the continuously updated gpt-3.5-turbo kernel from OpenAI.\n\nTable 1: Results of GPT-3.5 and GPT-4 on reasoning benchmarks with the setting in Section 3.1.1.\n\nGSM8K CommonSenseQA HotpotQA Standard Prompting 75.9 75.8 26.0 GPT-3.5 Self-Correct (Oracle) 84.3 89.7 29.0 Standard Prompting 95.5 82.0 49.0 GPT-4 Self-Correct (Oracle) 97.5 85.5 59.0\n\nOther Setup. We prompt the models to undergo a maximum of two rounds of self-correction, using the default temperature (1.). Following Kim et al. (2023); Shinn et al. (2023); Welleck et al. (2023), we use the correct label to determine when to stop the se",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_002_ev_003",
+      "page_number": 6,
+      "section_id": "paper_002_v1_sec_3_3",
+      "section_title": "MULTI -AGENT DEBATE AND SELF -CONSISTENCY",
+      "locator_type": "text",
+      "locator_label": "paper_002_v1_chunk_0013",
+      "evidence_mode": "quote",
+      "excerpt": "In examining the literature, we find that another potential approach for LLMs to self-correct their answers involves allowing the models to critique and debate through multiple model calls (Du et al.,\n\n4 We delve deeper into this topic in Section 4.\n\n2023; Liang et al., 2023; Chen et al., 2023a). Du et al. (2023) implement a multi-agent debate method by leveraging multiple instances of a single ChatGPT model and demonstrate significant improvements on reasoning tasks. We adopt their method to test performance on GSM8K. For an unbiased implementation, we use the exact same prompt as Du et al. (2023) and replicate their experiment with the gpt-",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_002_ev_004",
+      "page_number": 9,
+      "section_id": "paper_002_v1_sec_6",
+      "section_title": "CONCLUSION",
+      "locator_type": "text",
+      "locator_label": "paper_002_v1_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "rovement and a multi-faceted approach when deploying LLMs in real-world applications. In light of these findings, it is imperative for researchers and practitioners to approach the concept of self-correction with a discerning perspective, acknowledging its potential and recognizing its boundaries. By doing so, we can better equip this technique to address the limitations of LLMs, steering their evolution towards enhanced accuracy and reliability.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_002_ev_005",
+      "page_number": 3,
+      "section_id": "paper_002_v1_sec_3_1_1",
+      "section_title": "EXPERIMENTAL SETUP",
+      "locator_type": "text",
+      "locator_label": "paper_002_v1_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "cle) 97.5 85.5 59.0\n\nOther Setup. We prompt the models to undergo a maximum of two rounds of self-correction, using the default temperature (1.). Following Kim et al. (2023); Shinn et al. (2023); Welleck et al. (2023), we use the correct label to determine when to stop the self-correction loop.",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_002_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_002_ev_004",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_002_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_002_ev_004",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_002_ev_003",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_002_ev_001",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_002_ev_001",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_002_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_002_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_002_ev_004",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_available",
+      "detail": "code availability is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_002_ev_005"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_002_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_002_ev_005"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "unable_to_verify",
+      "detail": "hyperparameters is unable to verify in the assessed PDF.",
+      "evidence_ids": [
+        "paper_002_ev_005"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "hardware environment is not available in the assessed PDF.",
+      "evidence_ids": [
+        "paper_002_ev_005"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_applicable",
+      "detail": "preprocessing details is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

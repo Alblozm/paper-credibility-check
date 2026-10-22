@@ -1,0 +1,359 @@
+{
+  "assessment_id": "assessment_ai_paper_016_openreview_2024_02_11",
+  "paper_version_id": "paper_016_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_016_openreview_2024_02_11",
+    "raw_output_sha256": "0592af7ac5e688480d97ff70d3cb79b244e76249adc271530de93433d60dd741"
+  },
+  "paper_summary": "Acquiring an accurate world model $\\textit{online}$ for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs). From the online learning perspective, a Follow-The-Leader (FTL) world model is desirable, which optimally fits all previous experiences at each round.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "To best trade off model capacity and computation efficiency, we introduce a locality sensitive sparse encoding, which allows us to conduct efficient sparse updates even with very high dimensional nonlinear features.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_016_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Unfortunately, NN-based models need re-training on all accumulated data at every interaction step to achieve FTL, which is computationally expensive for lifelong agents.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_016_ev_004",
+        "paper_016_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Locality Sensitive Sparse Encoding for Learning World Models Online》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.2/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：Acquiring an accurate world model online for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs). ",
+    "正文可定位证据支持该维度判断：We provide more implementation details of Losse-FTL in this section. Referring to Figure 3, the input x is first pre-processed to be bounded between [ 3 , 3] , and then projected with a matrix t − 2 https://github.com/jannerm/mbpo containing values sampled from an isotropic Gaus…",
+    "正文可定位证据支持该维度判断：In this section, we will showcase empirical results to validate the expressiveness of Losse (Section 4.1) and the online learning capability of Losse-FTL (Section 4.2), both in supervised learning settings."
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在研究价值方面的正文支持是：Acquiring an accurate world model online for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs).  限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Acquiring an accurate world model online for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs). "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_016_ev_001",
+        "paper_016_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在可靠性与证据方面的正文支持是：We provide more implementation details of Losse-FTL in this section. Referring to Figure 3, the input x is first pre-processed to be bounded between [ 3 , 3] , and then projected with a matrix t − 2 https://github.com/jannerm/mbpo containing values sampled from an isotropic Gaus… 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：We provide more implementation details of Losse-FTL in this section. Referring to Figure 3, the input x is first pre-processed to be bounded between [ 3 , 3] , and then projected with a matrix t − 2 https://github.com/jannerm/mbpo containing values sampled from an isotropic Gaus…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_016_ev_003",
+        "paper_016_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在原创性定位方面的正文支持是：In this section, we will showcase empirical results to validate the expressiveness of Losse (Section 4.1) and the online learning capability of Losse-FTL (Section 4.2), both in supervised learning settings. 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In this section, we will showcase empirical results to validate the expressiveness of Losse (Section 4.1) and the online learning capability of Losse-FTL (Section 4.2), both in supervised learning settings."
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_016_ev_004",
+        "paper_016_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在清晰度与可用性方面的正文支持是：World models have been demonstrated to enable sample-efficient model-based reinforcement learning(MBRL)(Sutton,1990;Janneretal.,2019;Kaiseretal.,2020;Schrittwieseretal.,2020), andare deemed as a critical component for next-generation intelligent agents (Sutton et al., 2022; LeCu… 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：World models have been demonstrated to enable sample-efficient model-based reinforcement learning(MBRL)(Sutton,1990;Janneretal.,2019;Kaiseretal.,2020;Schrittwieseretal.,2020), andare deemed as a critical component for next-generation intelligent agents (Sutton et al., 2022; LeCu…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_016_ev_005",
+        "paper_016_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Locality Sensitive Sparse Encoding for Learning World Models Online》在可复现性与透明度方面的正文支持是：81 def update( 82 self, 83 params: LosseParams, 84 x: jax.Array, 85 y: jax.Array, 86 ) -> LosseParams: 87 chex.assert_tree_shape_prefix((x, y), (1,)) # assert non-batched 88 indices, values = self._indices_and_values(params.projection, x) 89 params = self._update_memory(params,… 限制或边界证据是：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：81 def update( 82 self, 83 params: LosseParams, 84 x: jax.Array, 85 y: jax.Array, 86 ) -> LosseParams: 87 chex.assert_tree_shape_prefix((x, y), (1,)) # assert non-batched 88 indices, values = self._indices_and_values(params.projection, x) 89 params = self._update_memory(params,…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_016_ev_006",
+        "paper_016_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_016_ev_001",
+      "page_number": 1,
+      "section_id": "paper_016_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Acquiring an accurate world model online for model-based reinforcement learning (MBRL) is challenging due to data nonstationarity, which typically causes catastrophic forgetting for neural networks (NNs). From the online learning perspective, a Follow-The-Leader (FTL) world model is desirable, which optimally fits all previous experiences at each round. Unfortunately, NN-based models need re-training on all accumulated data at every interaction step to achieve FTL, which is computationally expensive for lifelong agents. In this paper, we revisit models that can achieve FTL with incremental updates. Specifically, our world model is a linear regression model supported by nonlinear random features. The linear part ensures efficient FTL update while the nonlinear random feature empowers the fitting of complex environments. To best trade off model capacity and computation efficiency, we intro",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "page_number": 9,
+      "section_id": "paper_016_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "Currently, we have not validated our method on problems with very high-dimensional state space such as Humanoid, or tasks with image observations. They are expected to be challenging for linear models to directly work on. Extending Losse-FTL to handle such large-scale problems, perhaps using pre-trained models to obtain compact sparse encoding, is a potential avenue for future work.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_016_ev_003",
+      "page_number": 16,
+      "section_id": "paper_016_openreview_2024_02_11_sec_e",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0031",
+      "evidence_mode": "quote",
+      "excerpt": "We provide more implementation details of Losse-FTL in this section. Referring to Figure 3, the input x is first pre-processed to be bounded between [ 3 , 3] , and then projected with a matrix t − 2 https://github.com/jannerm/mbpo\n\ncontaining values sampled from an isotropic Gaussian with µ = 0 and Σ = 1 I , where c is the fanc in dimension, i.e., S + A . This ensures the projected values σ ( x ) are bounded with high probability t and facilitates a more even bin utilization. In computing the sparse update at line 7 of Algorithm 2, we use ( A + ε I ) − 1 for some small ε > 0 to ensure its invertibility. We provide Jax-based Python t,ss codes in Listing 1.\n\n1 import math 2 from typing import NamedTuple, Tuple\n\n4 import chex 5 import jax 6 import jax.numpy as jnp 7 import numpy as np\n\n10 class LosseParams(NamedTuple): 11 count: jax.Array 12 projection: jax.Array 13 xtx: jax.Array 14 xty: j",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_016_ev_004",
+      "page_number": 6,
+      "section_id": "paper_016_openreview_2024_02_11_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0013",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we will showcase empirical results to validate the expressiveness of Losse (Section 4.1) and the online learning capability of Losse-FTL (Section 4.2), both in supervised learning settings.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_016_ev_005",
+      "page_number": 1,
+      "section_id": "paper_016_openreview_2024_02_11_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "World models have been demonstrated to enable sample-efficient model-based reinforcement learning(MBRL)(Sutton,1990;Janneretal.,2019;Kaiseretal.,2020;Schrittwieseretal.,2020), andare deemed as a critical component for next-generation intelligent agents (Sutton et al., 2022; LeCun, 2022). Unfortunately, learning accurate world models in an incremental online manner is challenging, because the data generated from agent-environment interaction is nonstationarily distributed, due to the continually changing policy, state visitation, and even environment dynamics. For neural network (NN) based world models, the nonstationarity could lead to catastrophic forgetting (Mc- Closkey & Cohen, 1989; French, 1999), making models inaccurate at recently under-visited regions (as illustrated in the top row of Figure 1). Planning with inaccurate models is detrimental as the model errors can compound due t",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_016_ev_006",
+      "page_number": 18,
+      "section_id": "paper_016_openreview_2024_02_11_sec_e",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_016_openreview_2024_02_11_chunk_0032",
+      "evidence_mode": "quote",
+      "excerpt": "81 def update( 82 self, 83 params: LosseParams, 84 x: jax.Array, 85 y: jax.Array, 86 ) -> LosseParams: 87 chex.assert_tree_shape_prefix((x, y), (1,)) # assert non-batched 88 indices, values = self._indices_and_values(params.projection, x) 89 params = self._update_memory(params, indices, values, y) 90 params = self._update_w(params, indices) 91 return params\n\n93 def predict(self, params: LosseParams, x: jax.Array): 94 indices, values = self._indices_and_values(params.projection, x) 95 output = params.w[indices] * values[..., None ] 96 return output.sum(1)\n\n98 def _indices_and_values( 99 self, 100 projection: jax.Array, 101 x: jax.Array, 102 ): 103 h = jnp.matmul(x, projection) 104 h = jax.nn.sigmoid(h) 105 h = jnp.clip(h, 0, 1) * self.num_bins 106 indices = jnp.floor(h).astype(jnp.int32) 107 offsets = h - indices 108 indices, values = _to_1d_index( 109 indices, 110 offsets, 111 self.num_f",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_016_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_016_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_016_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_016_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_016_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_016_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "available",
+      "detail": "random seed is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_016_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

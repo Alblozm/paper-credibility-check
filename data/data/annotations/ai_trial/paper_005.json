@@ -1,0 +1,362 @@
+{
+  "assessment_id": "assessment_ai_paper_005_v5",
+  "paper_version_id": "paper_005_v5",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-07T06:08:19Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-legacy-audit-1",
+    "model_run_id": "model_run_codex_review_paper_005_v5",
+    "raw_output_sha256": "a13d4f7595a2f448d10c040d245f577b4c8ae45997a6ab4b1d8a340ea4860c2b"
+  },
+  "paper_summary": "The paper studies the formal expressive power gained when decoder-only transformers use intermediate chain-of-thought tokens, proving automata and Turing-machine simulation results.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Formalizes transformer decoding with intermediate tokens.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_005_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "Constructs simulations of finite automata and Turing machines.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_005_ev_001"
+    },
+    {
+      "contribution_id": "c3",
+      "text": "Provides upper and lower bounds for decoder expressiveness.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_005_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Intermediate decoding strictly expands transformer computational expressiveness under the stated model.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_005_ev_002",
+        "paper_005_ev_004"
+      ]
+    },
+    {
+      "claim_id": "cl2",
+      "claim_text": "The constructed transformer can simulate bounded-time Turing computation.",
+      "claim_type": "major",
+      "scope": "assessed PDF and reported experiments/theory",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+      "evidence_ids": [
+        "paper_005_ev_002",
+        "paper_005_ev_004"
+      ]
+    }
+  ],
+  "overall_score": 7.6,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "A theoretically substantial paper with explicit constructions and a clear separation between direct and intermediate decoding. Dense notation and distributed appendices reduce usability, while the proof-focused nature makes several experimental checklist items inapplicable.",
+  "strengths": [
+    "Formulates a precise theoretical question rather than treating chain of thought only empirically.",
+    "Provides constructive lower bounds through automata and Turing-machine simulations.",
+    "Separates assumptions and places detailed constructions in appendices."
+  ],
+  "concerns": [
+    "The relationship between idealized precision/attention assumptions and deployed transformers is limited.",
+    "Dense notation makes the proof path difficult to audit quickly.",
+    "No executable proof artifact or implementation is identified in the assessed version."
+  ],
+  "unresolved_questions": [
+    "Which results survive finite-precision and soft-attention constraints?",
+    "Can the constructions predict practical scaling behavior?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality evaluates the paper's positioning rather than an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Formulates a precise theoretical question rather than treating chain of thought only empirically. The relationship between idealized precision/attention assumptions and deployed transformers is limited.",
+      "strengths": [
+        "Formulates a precise theoretical question rather than treating chain of thought only empirically."
+      ],
+      "weaknesses": [
+        "The relationship between idealized precision/attention assumptions and deployed transformers is limited."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_005_ev_001",
+        "paper_005_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Provides constructive lower bounds through automata and Turing-machine simulations. Dense notation makes the proof path difficult to audit quickly.",
+      "strengths": [
+        "Provides constructive lower bounds through automata and Turing-machine simulations."
+      ],
+      "weaknesses": [
+        "Dense notation makes the proof path difficult to audit quickly."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_005_ev_002",
+        "paper_005_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Separates assumptions and places detailed constructions in appendices. No executable proof artifact or implementation is identified in the assessed version.",
+      "strengths": [
+        "Separates assumptions and places detailed constructions in appendices."
+      ],
+      "weaknesses": [
+        "No executable proof artifact or implementation is identified in the assessed version."
+      ],
+      "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_005_ev_003",
+        "paper_005_ev_001"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Separates assumptions and places detailed constructions in appendices. No executable proof artifact or implementation is identified in the assessed version.",
+      "strengths": [
+        "Separates assumptions and places detailed constructions in appendices."
+      ],
+      "weaknesses": [
+        "No executable proof artifact or implementation is identified in the assessed version."
+      ],
+      "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_005_ev_001",
+        "paper_005_ev_004"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "Separates assumptions and places detailed constructions in appendices. No executable proof artifact or implementation is identified in the assessed version.",
+      "strengths": [
+        "Separates assumptions and places detailed constructions in appendices."
+      ],
+      "weaknesses": [
+        "No executable proof artifact or implementation is identified in the assessed version."
+      ],
+      "rationale": "Assigned 7/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+      "evidence_ids": [
+        "paper_005_ev_005",
+        "paper_005_ev_004"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_005_ev_001",
+      "page_number": 4,
+      "section_id": "paper_005_v5_sec_2",
+      "section_title": "PRELIMINARIES",
+      "locator_type": "text",
+      "locator_label": "paper_005_v5_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "We study the power of decoder-only transformers that can generate intermediate tokens between reading the input and generating an answer. On input x Σ n , the transformer consumes tokens ∈ x ,...,x for the first n steps, and then, for t ( n ) intermediate steps , consumes the token gener- 1 n ated by the previous step. At each step, the transformer can attend over all previous hidden states. This standard method of generating text from a decoder-only model can be described formally as follows. Let Σ be a finite alphabet and f : Σ ∗ Σ be a function mapping a prefix to a next token → (parameterized by a transformer). Let be concatenation. We de",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_005_ev_002",
+      "page_number": 2,
+      "section_id": "paper_005_v5_sec_1",
+      "section_title": "INTRODUCTION",
+      "locator_type": "text",
+      "locator_label": "paper_005_v5_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "solving linear equalities. 2 3. Linear Steps. Linear intermediate steps allow transformers with projected pre-norm 3 to simulate automata ( NC 1 -complete), which cannot be done without intermediate steps unless TC 0 = NC 1 . Polynomial Steps. With a polynomial number of decoding steps, we show that transformers with strict causal attention and projected pre-norm are equivalent to the class P . This, to our best knowledge, is the first equivalence between a class of transformers and a standard complexity class. Together, our results provide a framework for understandinghow the length of a transformer’schain of thoughtaffectsits reasoningpower",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_005_ev_003",
+      "page_number": 2,
+      "section_id": "paper_005_v5_sec_1",
+      "section_title": "INTRODUCTION",
+      "locator_type": "text",
+      "locator_label": "paper_005_v5_chunk_0003",
+      "evidence_mode": "quote",
+      "excerpt": "regimes: logarithmic steps (when t ( n ) = Θ(log n ) ), linear steps (when t ( n ) = Θ( n ) ), and polynomial steps: 1. Prior Work: No Intermediate Steps. Recent work has shown transformer decoders without any intermediate steps can only solve problems that lie inside the fairly small circuit complexity class TC 0 (Merrill & Sabharwal, 2023b) and related logical classes (Merrill & Sabharwal, 2023a; Chiang et al., 2023). This implies basic transformers are far from Turing-complete: they cannot even solve problems complete for classes larger than TC 0 such as simulating automata ( NC 1 -complete), deciding directed graph connectivity ( NL -comp",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_005_ev_004",
+      "page_number": 3,
+      "section_id": "paper_005_v5_sec_1_1",
+      "section_title": "MAIN RESULTS : POWER OF TRANSFORMERS WITH INTERMEDIATE DECODING",
+      "locator_type": "text",
+      "locator_label": "paper_005_v5_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "Limitations of Transformers with CoT. The right side of Equation (1) establishes two upper bounds on transformer decoders with t ( n ) intermediate steps that depend on both t ( n ) and n . We turn to the implications of this general result in different regimes for t ( n ) : 1. Log Steps : Transformerdecoderswith O(log n ) intermediatesteps canonly recognizelanguages in L = SPACE (log n ) . This implies that transformers with O(log n ) intermediate steps cannot solve NL - or P -complete problems like directed graph connectivity, just like transformers with no intermediate decoding (Merrill & Sabharwal, 2023b). 2. Linear Steps : Transformer de",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_005_ev_005",
+      "page_number": 4,
+      "section_id": "paper_005_v5_sec_2_1",
+      "section_title": "TRANSFORMERS",
+      "locator_type": "text",
+      "locator_label": "paper_005_v5_chunk_0007",
+      "evidence_mode": "quote",
+      "excerpt": "putcontainsa beginning-of-sequencetoken $ (Theorems 1 and 2), we will use 0-indexing starting at $ in the natural way.\n\nTransformer Precision. We consider log-precision transformers (Merrill & Sabharwal, 2023b), i.e., we allow the transformer at most c log m precision for m decoding steps. As a transformerwith intermediate generation runs for n input steps and t ( n ) intermediate decoding steps, this means we have precision at most c log( n + t ( n )) . Log precision has been analyzed in prior work (P´ erez et al., 2021; Merrill & Sabharwal, 2023b;a) because it gives the transformer just enough precision to represent indexes and sums across",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_005_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_005_ev_004",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_005_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_005_ev_004",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_005_ev_003",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_005_ev_001",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_005_ev_001",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_005_ev_004",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_005_ev_005",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports the dimension judgment."
+    },
+    {
+      "evidence_id": "paper_005_ev_004",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a material limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "not_applicable",
+      "detail": "code availability is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "data_availability",
+      "status": "not_applicable",
+      "detail": "data availability is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_applicable",
+      "detail": "random seed is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "not_applicable",
+      "detail": "hyperparameters is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_applicable",
+      "detail": "hardware environment is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_applicable",
+      "detail": "preprocessing details is not applicable in the assessed PDF.",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

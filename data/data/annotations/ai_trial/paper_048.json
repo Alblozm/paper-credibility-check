@@ -1,0 +1,365 @@
+{
+  "assessment_id": "assessment_ai_paper_048_iclr_2025_proceedings",
+  "paper_version_id": "paper_048_iclr_2025_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_048_iclr_2025_proceedings",
+    "raw_output_sha256": "c6307d5927cd86da85a21ea6865648c422ecf33f7caa94cb993ebf42c1ff5157"
+  },
+  "paper_summary": "Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad, which automates ``differentiation'' via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in various real-world applications that do not support numerical gradient propagation or loss calculation. It opens new avenues for optimization in decentralized, resource-constrained environments, suggesting that users of black-box LLMs (e.g., ChatGPT) could enhance components of LLM agentic systems (such as prompt optimization) through collaborative paradigms like federated learning (FL). In this paper, we system",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad, which automates ``differentiation'' via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in various real-world applications that do not support numerical gradient propagation or loss calculation. It opens new avenues for optimization in decentralized, resource-constrained environments, suggesting that users of black-box LLMs (e.g., ChatGPT) could enhance components of LLM agentic systems (such as prompt optimization) through collaborative paradigms like federated learning (FL). In this paper, we system",
+      "type": "method_or_finding",
+      "evidence_id": "paper_048_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad (Yuksekgonul et al., 2024), which automates “differentiation” via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in various real-world applications that do not support numerical gradient propagation or loss calculation. It opens new avenues for optimization in decentralized,",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_048_ev_003",
+        "paper_048_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 6.8,
+  "overall_rating": "adequate",
+  "reading_recommendation": "selective_reading",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《Can Textual Gradient Work in Federated Learning?》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad (Yuksekgonul et al., 2024), which automates “differentiation” via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in ",
+    "论文提供方法或实证支持：Concatenation aggregation in FedTextGrad risks exceeding token limits and increasing costs, posing scalability challenges. Concatenation is a natural approach for aggregating text information; however, this method introduces a significant issue in our FedTextG"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad (Yuksekgonul et al., 2024), which automates “differentiation” via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in ；边界证据为：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda",
+      "strengths": [
+        "可定位正文支持：Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad (Yuksekgonul et al., 2024), which automates “differentiation” via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in "
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 7/10。",
+      "evidence_ids": [
+        "paper_048_ev_001",
+        "paper_048_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：Concatenation aggregation in FedTextGrad risks exceeding token limits and increasing costs, posing scalability challenges. Concatenation is a natural approach for aggregating text information; however, this method introduces a significant issue in our FedTextG；边界证据为：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda",
+      "strengths": [
+        "可定位正文支持：Concatenation aggregation in FedTextGrad risks exceeding token limits and increasing costs, posing scalability challenges. Concatenation is a natural approach for aggregating text information; however, this method introduces a significant issue in our FedTextG"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 7/10。",
+      "evidence_ids": [
+        "paper_048_ev_003",
+        "paper_048_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Large Language Models (LLMs) (Zhao et al., 2023), such as GPT (Brown, 2020), Gemini (Team et al., 2023) and LLaMa (Touvron et al., 2023), have become the foundational backbone of modern natural language processing (NLP) systems. These models often require fine；边界证据为：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda",
+      "strengths": [
+        "可定位正文支持：Large Language Models (LLMs) (Zhao et al., 2023), such as GPT (Brown, 2020), Gemini (Team et al., 2023) and LLaMa (Touvron et al., 2023), have become the foundational backbone of modern natural language processing (NLP) systems. These models often require fine"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 7/10。",
+      "evidence_ids": [
+        "paper_048_ev_004",
+        "paper_048_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：In this section, we first provide background on TextGrad, including its forward operation, backpropogation and how LLM-as-the-optimizer can be integrated with TextGrad (Section 2.1). Next, we explain the analogy between textual and numerical gradients, and des；边界证据为：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda",
+      "strengths": [
+        "可定位正文支持：In this section, we first provide background on TextGrad, including its forward operation, backpropogation and how LLM-as-the-optimizer can be integrated with TextGrad (Section 2.1). Next, we explain the analogy between textual and numerical gradients, and des"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 7/10。",
+      "evidence_ids": [
+        "paper_048_ev_005",
+        "paper_048_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：Algorithm 1 Algorithm of FedTextGrad Data and Tasks. We evaluate FedTextGrad Input: N clients indexed by i , B : local minion prompt optimization across three key tasks batch size, C : Client sampling rate. T : number from the BBH benchmark (Srivastava et al.,；边界证据为：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda",
+      "strengths": [
+        "可定位正文支持：Algorithm 1 Algorithm of FedTextGrad Data and Tasks. We evaluate FedTextGrad Input: N clients indexed by i , B : local minion prompt optimization across three key tasks batch size, C : Client sampling rate. T : number from the BBH benchmark (Srivastava et al.,"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupda"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 6/10。",
+      "evidence_ids": [
+        "paper_048_ev_006",
+        "paper_048_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_048_ev_001",
+      "page_number": 1,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Recent studies highlight the promise of LLM-based prompt optimization, especially with TextGrad (Yuksekgonul et al., 2024), which automates “differentiation” via texts and backpropagates textual feedback provided by LLMs. This approach facilitates training in various real-world applications that do not support numerical gradient propagation or loss calculation. It opens new avenues for optimization in decentralized, resource-constrained environments, suggesting that users of black-box LLMs ( e.g. , ChatGPT) could enhance components of LLM agentic systems (such as prompt optimization) through collaborative paradigms like federated learning (FL). In this paper, we systematically explore the potential and challenges of incorporating textual gradient into FL. Our contributions are fourfold. Firstly , we introduce a novel FL paradigm, Federated Textual Gradient ( FedTextGrad ), that allows FL",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "page_number": 10,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0019",
+      "evidence_mode": "quote",
+      "excerpt": "In this work, we introduced FedTextGrad , an extension of the TextGrad framework specifically designed to address the challenges of prompt optimization in federated learning settings. By identifyingthetraininginstabilitycausedbyaggregatingdistributedpromptupdatesanddemonstratingthe limitations of traditional concatenation and summarization-based techniques, we proposed a novel approach based on Uniform Information Density Principles to enhance FedTextGrad prompt summarization. Our method addresses the issue of uneven information distribution, leading to improved prompt efficacy and overall performance in federated environments. This study establishes a foundation for future advancements in prompt optimization for large-scale, distributed learning systems and opens new avenues for deploying LLMs in privacy-sensitive, resource-constrained environments.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_003",
+      "page_number": 8,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_4_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "Concatenation aggregation in FedTextGrad risks exceeding token limits and increasing costs, posing scalability challenges. Concatenation is a natural approach for aggregating text information; however, this method introduces a significant issue in our FedTextGrad framework, as the prompt length increases with the number of clients, potentially exceeding token limits and leading to rejection by LLM API services. The Fig. 4 illustrates the exponential growth in concatenated prompt token length as the number of clients increases, highlighting the risk of exceeding GPT-4’s context window limit of 8192 tokens (denoted by the red dashed line). The right y-axis shows the associated cost in USD, with increasing token lengths resulting in higher costs. Error bars represent the standard deviation of token lengths across different client configurations. The figure emphasizes the trade-off between p",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_004",
+      "page_number": 1,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Large Language Models (LLMs) (Zhao et al., 2023), such as GPT (Brown, 2020), Gemini (Team et al., 2023) and LLaMa (Touvron et al., 2023), have become the foundational backbone of modern natural language processing (NLP) systems. These models often require fine-tuning to enhance their responsiveness to specific tasks. While existing open datasets play an important role in LLM tuning, the vast amount of privately owned, potentially sensitive data continuously generated by end devices represents a significant, yet largely untapped, pool of samples for LLM fine-tuning.\n\nTo adapt to this reality, federated learning (FL) (McMahan et al., 2017) offers a promising privacypreserving framework for collaboratively fine-tuning LLMs with distributed, privately owned data. To address the efficiency demands and black-box nature of many involving LLM APIs (Achiam et al., 2023), recent advancements in ze",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_005",
+      "page_number": 3,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "In this section, we first provide background on TextGrad, including its forward operation, backpropogation and how LLM-as-the-optimizer can be integrated with TextGrad (Section 2.1). Next, we explain the analogy between textual and numerical gradients, and describe its extension into the FL setting - FedTextGrad (Section 2.2). Finally, we present preliminary results across various LLM APIs using TextGrad and FedTextGrad , highlighting the performance drops (Section 2.3).",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_006",
+      "page_number": 5,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_3_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0009",
+      "evidence_mode": "quote",
+      "excerpt": "Algorithm 1 Algorithm of FedTextGrad Data and Tasks. We evaluate FedTextGrad Input: N clients indexed by i , B : local minion prompt optimization across three key tasks batch size, C : Client sampling rate. T : number from the BBH benchmark (Srivastava et al., of rounds 2022): 1) BBH Object Counting , 2) BBH Mul- Output: Updated Prompts P tistep Arithmetic , and 3) GSM8k Math Prob- C 1: ServerExecute( ): lem (Cobbe et al., 2021). They are well-suited Initialize P 0 2: for assessing the effectiveness of prompt opti- 3: for each round t = 1 , 2 ,...T do mization in complex reasoning scenarios. For 4: m ← max( C · N, 1) each dataset, we split it into training , validation , S ← (random set of m clients) 5: t and test sets. We adopt the dataset preprocess- 6: for each client i ∈ S in parallel do t ing methodology outlined in (Yuksekgonul et al., 7: P t +1 ← ClientUpdate ( i,P t ) i 2024). Th",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_048_ev_007",
+      "page_number": 6,
+      "section_id": "paper_048_iclr_2025_proceedings_sec_3_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_048_iclr_2025_proceedings_chunk_0011",
+      "evidence_mode": "quote",
+      "excerpt": "Heterogeneous Experimental Setup. We FedTextGrad Table 1: Performance of Heterogeneous evaluate the Heterogeneous FedTextGrad Framework Across Batch framework using three distinct datasets: Object Sizes ( B ) and Local Steps ( E ). This table Counting, Multistep Arithmetic, and GSM8K, presents the performance of the Heterogewith each dataset representing a client in the neous FedTextGrad framework using three federated learning setting. The experiments fodatasets (Object Counting, Multistep Arithmetic, cus on two critical hyperparameters: the num- GSM8K) as clients in a federated learning setup, ber of local steps ( E ) and batch size ( B ). Lowith a total of 3 clients. cal steps ( E ) refer to the number of clientspecific updates performed before global model synchronization, while the batch size ( B ) de- E B = 1 B = 3 B = 10 termines the number of samples processed in 3 0.73 (0.03) 0.",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_048_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_048_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_048_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_048_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_048_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_048_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_048_ev_001"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_048_ev_004"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到hyperparameters披露。",
+      "evidence_ids": [
+        "paper_048_ev_007"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到preprocessing_details披露。",
+      "evidence_ids": [
+        "paper_048_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

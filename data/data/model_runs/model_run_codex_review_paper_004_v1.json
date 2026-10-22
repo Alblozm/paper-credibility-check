@@ -1,0 +1,231 @@
+{
+  "model_run_id": "model_run_codex_review_paper_004_v1",
+  "paper_id": "paper_004",
+  "version": "v1",
+  "provider": "codex_interactive_review",
+  "model_id": "gpt-5-codex-session",
+  "created_at": "2026-09-08T08:32:32.432703Z",
+  "raw_output_sha256": "9610e47d81b756b99a994decd04ad03d580d59949f98192a4425ba664a98cd07",
+  "raw_output": {
+    "paper_summary": "Mamba introduces input-dependent selective state-space models and a hardware-aware parallel scan, delivering linear sequence scaling and strong results across language, DNA and audio.",
+    "overall_assessment": "A high-value, original and extensively evaluated architecture paper. Evidence spans synthetic mechanism tests, scaling studies, downstream tasks and efficiency benchmarks, with unusually strong implementation availability.",
+    "strengths": [
+      "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism.",
+      "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone.",
+      "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+    ],
+    "concerns": [
+      "Some comparisons use different training regimes or parameter budgets, complicating causal attribution.",
+      "The paper covers many modalities but detailed failure analysis is limited.",
+      "Several efficiency conclusions are hardware- and implementation-dependent."
+    ],
+    "unresolved_questions": [
+      "How robust are gains under matched-data and matched-compute comparisons?",
+      "Which selection components drive performance in the largest models?"
+    ],
+    "dimension_assessments": [
+      {
+        "dimension_id": "research_value",
+        "dimension_question": "research value",
+        "applicability": "applicable",
+        "score": 9,
+        "rating": "strong",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism. Some comparisons use different training regimes or parameter budgets, complicating causal attribution.",
+        "strengths": [
+          "Links a clear modeling limitation of LTI state-space models to an input-dependent selection mechanism."
+        ],
+        "weaknesses": [
+          "Some comparisons use different training regimes or parameter budgets, complicating causal attribution."
+        ],
+        "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_004_ev_001",
+          "paper_004_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "soundness_evidence",
+        "dimension_question": "soundness evidence",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone. The paper covers many modalities but detailed failure analysis is limited.",
+        "strengths": [
+          "Combines algorithmic and hardware-aware contributions rather than reporting accuracy alone."
+        ],
+        "weaknesses": [
+          "The paper covers many modalities but detailed failure analysis is limited."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_004_ev_002",
+          "paper_004_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "originality_positioning",
+        "dimension_question": "originality positioning",
+        "applicability": "applicable",
+        "score": 9,
+        "rating": "strong",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+        "strengths": [
+          "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+        ],
+        "weaknesses": [
+          "Several efficiency conclusions are hardware- and implementation-dependent."
+        ],
+        "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_004_ev_003",
+          "paper_004_ev_001"
+        ]
+      },
+      {
+        "dimension_id": "clarity_usability",
+        "dimension_question": "clarity usability",
+        "applicability": "applicable",
+        "score": 8,
+        "rating": "good",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+        "strengths": [
+          "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+        ],
+        "weaknesses": [
+          "Several efficiency conclusions are hardware- and implementation-dependent."
+        ],
+        "rationale": "Assigned 8/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_004_ev_001",
+          "paper_004_ev_004"
+        ]
+      },
+      {
+        "dimension_id": "reproducibility_transparency",
+        "dimension_question": "reproducibility transparency",
+        "applicability": "applicable",
+        "score": 9,
+        "rating": "strong",
+        "weight": 0.2,
+        "confidence": "medium",
+        "summary": "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory. Several efficiency conclusions are hardware- and implementation-dependent.",
+        "strengths": [
+          "Evaluates language, DNA, audio, long-context behavior, ablations, speed and memory."
+        ],
+        "weaknesses": [
+          "Several efficiency conclusions are hardware- and implementation-dependent."
+        ],
+        "rationale": "Assigned 9/10 under the rubric anchors after weighing the cited paper-internal evidence.",
+        "evidence_ids": [
+          "paper_004_ev_005",
+          "paper_004_ev_004"
+        ]
+      }
+    ],
+    "reproducibility_checks": [
+      {
+        "check_id": "code_availability",
+        "status": "available",
+        "detail": "code availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      },
+      {
+        "check_id": "data_availability",
+        "status": "available",
+        "detail": "data availability is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      },
+      {
+        "check_id": "random_seed",
+        "status": "unable_to_verify",
+        "detail": "random seed is unable to verify in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      },
+      {
+        "check_id": "hyperparameters",
+        "status": "available",
+        "detail": "hyperparameters is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      },
+      {
+        "check_id": "hardware_environment",
+        "status": "available",
+        "detail": "hardware environment is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      },
+      {
+        "check_id": "preprocessing_details",
+        "status": "available",
+        "detail": "preprocessing details is available in the assessed PDF.",
+        "evidence_ids": [
+          "paper_004_ev_005"
+        ]
+      }
+    ],
+    "claimed_contributions": [
+      {
+        "contribution_id": "c1",
+        "text": "Input-dependent selective state-space parameters.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_004_ev_001"
+      },
+      {
+        "contribution_id": "c2",
+        "text": "Hardware-aware parallel scan avoiding expanded-state materialization.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_004_ev_001"
+      },
+      {
+        "contribution_id": "c3",
+        "text": "A simplified selective SSM architecture evaluated across modalities.",
+        "type": "method_or_finding",
+        "evidence_id": "paper_004_ev_001"
+      }
+    ],
+    "claim_checks": [
+      {
+        "claim_id": "cl1",
+        "claim_text": "Selective SSMs close key quality gaps while retaining linear sequence scaling.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "supported_within_stated_scope",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_004_ev_002",
+          "paper_004_ev_004"
+        ]
+      },
+      {
+        "claim_id": "cl2",
+        "claim_text": "Mamba provides substantially higher generation throughput than matched Transformers.",
+        "claim_type": "major",
+        "scope": "assessed PDF and reported experiments/theory",
+        "verdict": "supported_within_stated_scope",
+        "reasoning": "Judged only against the paper's own methods, results and stated limitations.",
+        "evidence_ids": [
+          "paper_004_ev_002",
+          "paper_004_ev_004"
+        ]
+      }
+    ],
+    "review_note": "Existing evidence-linked AI assessment reviewed in the Codex session under rubric v0.1."
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "assessment_id": "assessment_ai_paper_010_openreview_2024_02_11",
+  "paper_version_id": "paper_010_openreview_2024_02_11",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T07:58:42.635813Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "model_version": "2026-09-08-session",
+    "prompt_version": "rubric-0.1-codex-review-1",
+    "model_run_id": "model_run_codex_review_paper_010_openreview_2024_02_11",
+    "raw_output_sha256": "eeede05564dd976e073a8afc722fed035ec77408d4613230625aaa3b13ba1220"
+  },
+  "paper_summary": "In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions. However, the limitations of Transformers in implementing learning algorithms, and their ability to learn other forms of algorithms are not well understood.",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "a set of examples that uniquely identifies a function in a class, we show that Transformers learn more sample-efficiently.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_010_ev_001"
+    },
+    {
+      "contribution_id": "c2",
+      "text": "(c) Lastly, we show that extant LLMs, e.g.",
+      "type": "method_or_finding",
+      "evidence_id": "paper_010_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions.",
+      "claim_type": "major",
+      "scope": "reported settings in the assessed PDF",
+      "verdict": "supported_within_stated_scope",
+      "reasoning": "The paper reports direct evidence for the claim, while the cited limiting passage bounds its scope.",
+      "evidence_ids": [
+        "paper_010_ev_004",
+        "paper_010_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 7.2,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 会话依据《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》锁定 PDF 中的可定位正文，对五个维度进行了独立暂定评估。总分 7.2/10 由五维等权计算；结论受论文自身实验范围、披露程度和未执行复现实验的限制。",
+  "strengths": [
+    "正文可定位证据支持该维度判断：In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions. ",
+    "正文可定位证据支持该维度判断：U NDERSTANDING I N -C ONTEXT L EARNING IN T RANSFORMERS AND LLM S BY L EARNING TO L EARN D ISCRETE F UNCTIONS Satwik Bhattamishra ∧ † Arkil Patel ∨ Phil Blunsom ∧⊕ Varun Kanade ∧† ∧ University of Oxford ∨ Mila and McGill University ⊕ Cohere",
+    "正文可定位证据支持该维度判断：Table 1 summarizes the performance of various architectures on the Boolean function tasks considered in the paper. "
+  ],
+  "concerns": [
+    "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+  ],
+  "unresolved_questions": [
+    "How stable are the central findings under additional seeds, settings or datasets?",
+    "Which conclusions remain valid outside the evaluated scope?"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》在研究价值方面的正文支持是：In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions.  限制或边界证据是：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，研究价值评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_010_ev_001",
+        "paper_010_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》在可靠性与证据方面的正文支持是：U NDERSTANDING I N -C ONTEXT L EARNING IN T RANSFORMERS AND LLM S BY L EARNING TO L EARN D ISCRETE F UNCTIONS Satwik Bhattamishra ∧ † Arkil Patel ∨ Phil Blunsom ∧⊕ Varun Kanade ∧† ∧ University of Oxford ∨ Mila and McGill University ⊕ Cohere 限制或边界证据是：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：U NDERSTANDING I N -C ONTEXT L EARNING IN T RANSFORMERS AND LLM S BY L EARNING TO L EARN D ISCRETE F UNCTIONS Satwik Bhattamishra ∧ † Arkil Patel ∨ Phil Blunsom ∧⊕ Varun Kanade ∧† ∧ University of Oxford ∨ Mila and McGill University ⊕ Cohere"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可靠性与证据评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_010_ev_003",
+        "paper_010_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》在原创性定位方面的正文支持是：Table 1 summarizes the performance of various architectures on the Boolean function tasks considered in the paper.  限制或边界证据是：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Table 1 summarizes the performance of various architectures on the Boolean function tasks considered in the paper. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，原创性定位评为 7/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_010_ev_004",
+        "paper_010_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》在清晰度与可用性方面的正文支持是：In-Context learning in Stylized settings. Understanding the in-context learning (ICL) phenomenon has attracted significant interest in recent years. Since the ICL phenomenon was demonstrated in Brown et al. (2020), numerous works have investigated the practical capabilities and… 限制或边界证据是：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：In-Context learning in Stylized settings. Understanding the in-context learning (ICL) phenomenon has attracted significant interest in recent years. Since the ICL phenomenon was demonstrated in Brown et al. (2020), numerous works have investigated the practical capabilities and…"
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，清晰度与可用性评为 8/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_010_ev_005",
+        "paper_010_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 6,
+      "rating": "adequate",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "《Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions》在可复现性与透明度方面的正文支持是：Our results on the adaptive selection of algorithms add to some observations in recent works.  限制或边界证据是：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. ",
+      "strengths": [
+        "正文可定位证据支持该维度判断：Our results on the adaptive selection of algorithms add to some observations in recent works. "
+      ],
+      "weaknesses": [
+        "评分受以下论文内边界约束：In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. "
+      ],
+      "rationale": "依据评分指南的 1–10 锚点，同时权衡上述支持证据与限制证据，可复现性与透明度评为 6/10；该判断仅覆盖锁定 PDF，不使用外部评审或录取结果。",
+      "evidence_ids": [
+        "paper_010_ev_006",
+        "paper_010_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_010_ev_001",
+      "page_number": 1,
+      "section_id": "paper_010_openreview_2024_02_11_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "In order to understand the in-context learning phenomenon, recent works have adopted a stylized experimental framework and demonstrated that Transformers can match the performance of gradient-based learning algorithms for various classes of real-valued functions. However, the limitations of Transformers in implementing learning algorithms, and their ability to learn other forms of algorithms are not well understood. Additionally, the degree to which these capabilities are confined to attention-based models is unclear. Furthermore, it remains to be seen whether the insights derived from these stylized settings can be extrapolated to pretrained Large Language Models (LLMs). In this work, we take a step towards answering these questions by demonstrating the following: (a) On a test-bed with a variety of Boolean function classes, we find that Transformers can nearly match the optimal learnin",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "page_number": 9,
+      "section_id": "paper_010_openreview_2024_02_11_sec_7",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "In this work, we highlighted certain limitations of Transformers in in-context learning and their ability to leverage more informative examples such as teaching sequences for learning in a more sampleefficient manner. Additionally, we showed that pretrained models also learn mechanisms to solve tasks in the stylized ICL setting. Further, we show that LLMs are also capable of performing as well as certain baseline learning algorithms in a more practical setting. Our results raise several interesting questions for future work: (a) Can LLMs leverage more informative examples to sample-efficiently learn practical tasks in-context? (b) What aspects of the pretraining process of LLMs lead to their ability to implement learning algorithms since they are not primarily trained in the meta-learning-like framework? (c) What are the theoretical limitations behind the difficulty of learning Parities ",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_010_ev_003",
+      "page_number": 1,
+      "section_id": "paper_010_openreview_2024_02_11_sec_front_matter",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0000",
+      "evidence_mode": "quote",
+      "excerpt": "U NDERSTANDING I N -C ONTEXT L EARNING IN T RANSFORMERS AND LLM S BY L EARNING TO L EARN D ISCRETE F UNCTIONS\n\nSatwik Bhattamishra ∧ † Arkil Patel ∨ Phil Blunsom ∧⊕ Varun Kanade ∧† ∧ University of Oxford ∨ Mila and McGill University ⊕ Cohere",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_010_ev_004",
+      "page_number": 4,
+      "section_id": "paper_010_openreview_2024_02_11_sec_3_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0006",
+      "evidence_mode": "quote",
+      "excerpt": "Table 1 summarizes the performance of various architectures on the Boolean function tasks considered in the paper. The numbers indicate the accuracy of prediction for the last example in a prompt sequence, averaged over 1280 sequences. The curves showing the accuracy as a function of the number of observed examples for all tasks are provided in Appendix C.4. Transformers show varied performance on Boolean functions. We find that on certain simple classes of functions such as Conjunctions and Disjunctions, Transformers achieve perfect accuracy within a relatively small number of examples. We observe that the performance of Transformers is close to that of feedforward networks (FFN) trained with gradient-descent as well as known PAClearning algorithms for the respective tasks (see Figure 13), in terms of sample complexity required to achieve perfect accuracy. On such tasks, we also find th",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_010_ev_005",
+      "page_number": 8,
+      "section_id": "paper_010_openreview_2024_02_11_sec_6",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0014",
+      "evidence_mode": "quote",
+      "excerpt": "In-Context learning in Stylized settings. Understanding the in-context learning (ICL) phenomenon has attracted significant interest in recent years. Since the ICL phenomenon was demonstrated in Brown et al. (2020), numerous works have investigated the practical capabilities and limitations of LLMs to perform ICL (see Dong et al. (2022) for a survey). Since it is infeasible to precisely define real-world data and tasks, several works have studied it in stylized well-defined settings (Chan et al., 2022; Hahn & Goyal, 2023; Xie et al., 2021). Garg et al. (2022) presented a meta-learning-like\n\nConjunction n_dims=5 Conjunction n_dims=7 Conjunction n_dims=15 1.0 1.0 1.0\n\n0.9 0.9 0.9 y c y c y c a r u 0.8 a r u 0.8 a r u 0.8 cc cc cc a n 0.7 a n 0.7 a n 0.7 a e a e a e M 0.6 M 0.6 M 0.6\n\n0.5 0.5 0.5\n\n0.4 0.4 0.4 Majority n_dims=5 Majority n_dims=7 Majority n_dims=15 1.0 1.0 1.0\n\n0.9 0.9 0.9 y c",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_010_ev_006",
+      "page_number": 33,
+      "section_id": "paper_010_openreview_2024_02_11_sec_h_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_010_openreview_2024_02_11_chunk_0053",
+      "evidence_mode": "quote",
+      "excerpt": "Our results on the adaptive selection of algorithms add to some observations in recent works. Ahuja et al. (2023); Bai et al. (2023) explored (among other things) the efficacy of Transformers in learning mixtures of tasks in-context and showed that they could adaptively select appropriate algorithms depending on the sequence of inputs and labels. In our case, the emphasis is on choosing between different algorithms for the same class of functions (e.g. Conjunctions). Hence, the target labelling function is still a Conjunction where the vanilla algorithm leads to near-perfect accuracy as well but models such as Transformers are able to choose the more sample-efficient algorithm which leads to near-perfect accuracy with fewer input examples. The fact that LSTMs can exhibit in-context learning phenomenon was observed in Xie et al. (2021) as well. Our work attempts to conduct a more systemat",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_010_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_010_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_010_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_010_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_010_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_010_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "code availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_010_ev_006"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "data availability is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_010_ev_006"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "random seed is not identified in the assessed PDF text.",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "available",
+      "detail": "hyperparameters is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_010_ev_006"
+      ]
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "available",
+      "detail": "hardware environment is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_010_ev_006"
+      ]
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "available",
+      "detail": "preprocessing details is identified in the assessed PDF text.",
+      "evidence_ids": [
+        "paper_010_ev_006"
+      ]
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}

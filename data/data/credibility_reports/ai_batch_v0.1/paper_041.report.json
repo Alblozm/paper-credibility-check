@@ -1,0 +1,1345 @@
+{
+  "schema_version": "0.1-draft",
+  "analysis_mode": "credibility_check",
+  "credibility_assessment_id": "ca-12f541f0b580317f",
+  "paper_version_id": "paper_041_iclr_2026_proceedings",
+  "pdf_sha256": "7fe355f9eb0e6b29cf4df67a33b4d4e3f7d0fd776268d5d88aa9fccc51cebe0e",
+  "rubric_id": "paper_credibility",
+  "rubric_version": "0.2-provisional-complete",
+  "rubric_status": "provisional",
+  "rubric_sha256": "6412475983663b4d8999fcc5197d805c4f0ee21e84d256f2d5148d9d81cb24d1",
+  "source_case_sha256": "69b81239334b74c903f8aaa6a705c56beae5f490ad1ae766b9ef7ecd1f950e15",
+  "status": "draft",
+  "scope_complete": false,
+  "overall_score": 7.066666666666666,
+  "overall_category": "some_concerns",
+  "dimensions": [
+    {
+      "dimension_id": "claim_evidence_consistency",
+      "applicability": "applicable",
+      "score": 10,
+      "weight": 1,
+      "coverage": {
+        "reviewed_claim_count": 1,
+        "deduplicated_claim_count": 1,
+        "checked_claim_count": 1,
+        "scope_complete": true
+      },
+      "failure_reasons": []
+    },
+    {
+      "dimension_id": "reference_verification",
+      "applicability": "applicable",
+      "score": 4.2,
+      "weight": 1,
+      "coverage": {
+        "expected_count": 20,
+        "extracted_count": 20,
+        "parsed_count": 20,
+        "queried_count": 20,
+        "matched_count": 2,
+        "metadata_conflict_count": 0,
+        "unverified_count": 10,
+        "parse_failed_count": 0,
+        "not_checked_count": 0,
+        "query_failed_count": 8,
+        "extraction_coverage": 1.0,
+        "verification_coverage": 1.0
+      },
+      "failure_reasons": [
+        "reference_verification_incomplete_or_failed"
+      ]
+    },
+    {
+      "dimension_id": "code_reproduction_signals",
+      "applicability": "applicable",
+      "score": 7,
+      "weight": 1,
+      "coverage": {
+        "applicability": "applicable",
+        "justification": "论文包含实验或计算方法；检查论文显式仓库链接及公开反馈。",
+        "searched_sources": [
+          {
+            "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/04d39dca309cb02e8d7a8f16b75f41c5-Paper-Conference.pdf",
+            "checked_at": "2026-10-09T04:53:13.616311Z",
+            "status": "checked"
+          }
+        ],
+        "query_completed": true,
+        "repository_checks": [
+          {
+            "repository_id": "repo-14f63c6cb7cb",
+            "completed": true,
+            "truncated": false,
+            "issues_checked": 0,
+            "comments_checked": 0,
+            "technical_error": null,
+            "checked_at": "2026-10-09T04:53:14.052241Z",
+            "source_urls": [
+              "https://api.github.com/repos/alanarenda/openestimate",
+              "https://api.github.com/repos/alanarenda/openestimate/issues?state=all&per_page=100&page=1"
+            ]
+          }
+        ],
+        "states": [
+          "official_code_available",
+          "no_relevant_public_feedback"
+        ]
+      },
+      "failure_reasons": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-1",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-1",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-1",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "GPT-4technicalreport",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=GPT-4technicalreport&rows=5",
+        "checked_at": "2026-10-09T04:53:04.960417Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v2",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v2",
+            "title_similarity": 0.35294117647058826
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "GPT-4 vs. GPT-3",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330.v1",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330.v1",
+            "title_similarity": 0.35294117647058826
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Figure 3: The process of obtaining embedding vectors in normal GPT, Prompt-Tuning fine-tuned GPT, and CE-Prompt fine-tuned GPT.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.3231/fig-3",
+            "source_url": "https://doi.org/10.7717/peerj-cs.3231/fig-3",
+            "title_similarity": 0.16783216783216784
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "GPT-4 vs. GPT-3.5: A Concise Showdown",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.36227/techrxiv.22312330",
+            "source_url": "https://doi.org/10.36227/techrxiv.22312330",
+            "title_similarity": 0.32727272727272727
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "GPT-4 vs. GPT-3.5: A Concise Showdown",
+            "authors": [
+              "Koubaa"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.20944/preprints202303.0422.v1",
+            "source_url": "https://doi.org/10.20944/preprints202303.0422.v1",
+            "title_similarity": 0.32727272727272727
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:04.958398Z",
+        "response_sha256": "61db3116dd846b4f30617391fdbcce2d66835b766188183e65384b2d472e2c81",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=GPT-4technicalreport&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:04.960417Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-2",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-2",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-2",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "National health and nutrition examination survey (NHANES), 2017–2018",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=National+health+and+nutrition+examination+survey+%28NHANES%29%2C+2017%E2%80%932018&rows=5",
+        "checked_at": "2026-10-09T04:53:05.479676Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Associação da insegurança alimentar com vitaminas e carotenóides plasmáticos em adultos participantes do National Health and Nutrition Examination Survey (NHANES) 2017-2018",
+            "authors": [
+              "Reis"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14393/ufu.di.2026.514",
+            "source_url": "https://doi.org/10.14393/ufu.di.2026.514",
+            "title_similarity": 0.5531914893617021
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "National Health and Nutrition Examination Survey (NHANES)",
+            "authors": [],
+            "year": 2008,
+            "years": [
+              2008
+            ],
+            "doi": "10.4135/9781412963947.n318",
+            "source_url": "https://doi.org/10.4135/9781412963947.n318",
+            "title_similarity": 0.9166666666666666
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Table 7: Structural causal edges for national health and nutrition examination survey (NHANES) dataset.",
+            "authors": [],
+            "year": null,
+            "years": [],
+            "doi": "10.7717/peerj-cs.4030/table-7",
+            "source_url": "https://doi.org/10.7717/peerj-cs.4030/table-7",
+            "title_similarity": 0.6829268292682927
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Abordagem crononutricional do consumo alimentar e sua associação com a ingestão dietética e obesidade em adultos americanos: Dados do National Health and Nutrition Examination Survey (NHANES) 2017-2018",
+            "authors": [
+              "Teixeira"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.14393/ufu.te.2024.228",
+            "source_url": "https://doi.org/10.14393/ufu.te.2024.228",
+            "title_similarity": 0.49429657794676807
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Disparities in Healthcare and HBV Vaccination by Smoking Status: Findings from the National Health and Nutrition Examination Survey (NHANES) 2017–2018",
+            "authors": [
+              "Lin"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.3390/healthcare12010041",
+            "source_url": "https://doi.org/10.3390/healthcare12010041",
+            "title_similarity": 0.6132075471698113
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:05.478592Z",
+        "response_sha256": "d642b6ed0978cd2c4cc8671ef73f0e31aca638f7bda734d8d3de4a3c58c277ce",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=National+health+and+nutrition+examination+survey+%28NHANES%29%2C+2017%E2%80%932018&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:05.479676Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-3",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-3",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-3",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Acomprehensiveevaluationoflargelanguagemodelsontemporaleventforecasting",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Acomprehensiveevaluationoflargelanguagemodelsontemporaleventforecasting&rows=5",
+        "checked_at": "2026-10-09T04:53:07.040117Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:07.040068Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Acomprehensiveevaluationoflargelanguagemodelsontemporaleventforecasting&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:07.040117Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-4",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-4",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-4",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "BIRD:AtrustworthyBayesianinferenceframework forlargelanguagemodels",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=BIRD%3AAtrustworthyBayesianinferenceframework+forlargelanguagemodels&rows=5",
+        "checked_at": "2026-10-09T04:53:07.176057Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:07.175979Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=BIRD%3AAtrustworthyBayesianinferenceframework+forlargelanguagemodels&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:07.176057Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-5",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-5",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-5",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "The Llama 3 herd ofmodels",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=The+Llama+3+herd+ofmodels&rows=5",
+        "checked_at": "2026-10-09T04:53:05.255391Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Camelid Herd Health and Nutrition",
+            "authors": [
+              "Johnson"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1016/b978-1-4377-2352-6.00004-3",
+            "source_url": "https://doi.org/10.1016/b978-1-4377-2352-6.00004-3",
+            "title_similarity": 0.3103448275862069
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Camelid Management, Handling Techniques and Facilities, and Herd Management",
+            "authors": [
+              "Bennett"
+            ],
+            "year": 2014,
+            "years": [
+              2014
+            ],
+            "doi": "10.1016/b978-1-4377-2352-6.00007-9",
+            "source_url": "https://doi.org/10.1016/b978-1-4377-2352-6.00007-9",
+            "title_similarity": 0.24489795918367346
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Llama Herd Health",
+            "authors": [
+              "Long"
+            ],
+            "year": 1989,
+            "years": [
+              1989
+            ],
+            "doi": "10.1016/s0749-0720(15)31012-4",
+            "source_url": "https://doi.org/10.1016/s0749-0720(15)31012-4",
+            "title_similarity": 0.6190476190476191
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Llama Herd Health",
+            "authors": [
+              "Johnson"
+            ],
+            "year": 1994,
+            "years": [
+              1994
+            ],
+            "doi": "10.1016/s0749-0720(15)30559-4",
+            "source_url": "https://doi.org/10.1016/s0749-0720(15)30559-4",
+            "title_similarity": 0.6190476190476191
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Possible <i>m</i>-diagrams ofmodels of arithmetic",
+            "authors": [
+              "Arana"
+            ],
+            "year": 2017,
+            "years": [
+              2017
+            ],
+            "doi": "10.1017/9781316755846.002",
+            "source_url": "https://doi.org/10.1017/9781316755846.002",
+            "title_similarity": 0.3880597014925373
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:05.253262Z",
+        "response_sha256": "4aea590d834718dae17698419a252bf889fd90bf0ca0b5d44c1198e619d0f6b4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=The+Llama+3+herd+ofmodels&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:05.255391Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-6",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-6",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-6",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Approaching human-level forecasting with language models",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Approaching+human-level+forecasting+with+language+models&rows=5",
+        "checked_at": "2026-10-09T04:53:07.795142Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:07.795071Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Approaching+human-level+forecasting+with+language+models&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:07.795142Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-7",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-7",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-7",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Improving treatment effect estimation with LLM-based data augmentation",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Improving+treatment+effect+estimation+with+LLM-based+data+augmentation&rows=5",
+        "checked_at": "2026-10-09T04:53:06.839314Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Improving Cross-Lingual Dependency Parsing Via Llm-Based Transferring and Self-Optimizing Synthetic Data Augmentation",
+            "authors": [
+              "Liu",
+              "Li",
+              "Yu",
+              "Huang",
+              "Gao"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.2139/ssrn.5201049",
+            "source_url": "https://doi.org/10.2139/ssrn.5201049",
+            "title_similarity": 0.4919786096256685
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Enhancing Multi-Dimensional Music Generation by an LLM-based Data Augmentation Technique",
+            "authors": [
+              "Kharlashkin"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.31237/osf.io/9exyu",
+            "source_url": "https://doi.org/10.31237/osf.io/9exyu",
+            "title_similarity": 0.569620253164557
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Improving LLM-Based Verilog Code Generation with Data Augmentation and RL",
+            "authors": [
+              "Min",
+              "Park",
+              "Park",
+              "Cho",
+              "Kang"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.23919/date64628.2025.10992897",
+            "source_url": "https://doi.org/10.23919/date64628.2025.10992897",
+            "title_similarity": 0.6013986013986014
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "LLM-TDA: A LLM-based Tabular Data Augmentation Framework",
+            "authors": [
+              "Lin",
+              "Zhang"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/cnml68938.2026.11452539",
+            "source_url": "https://doi.org/10.1109/cnml68938.2026.11452539",
+            "title_similarity": 0.544
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Advancing fake news detection : from hybrid and multilingual approaches to LLM-Based data augmentation and bias analysis",
+            "authors": [
+              "Chalehchaleh"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.70675/8922e5b7zbfe0z44aeza827zb8904c9ed3dd",
+            "source_url": "https://doi.org/10.70675/8922e5b7zbfe0z44aeza827zb8904c9ed3dd",
+            "title_similarity": 0.46808510638297873
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:06.837653Z",
+        "response_sha256": "0fda33974bec901e3b339f47c193558d97e0a45209dbf0e2815c51fbeee59ddd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Improving+treatment+effect+estimation+with+LLM-based+data+augmentation&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:06.839314Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-9",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-9",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-9",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Forecastbench: A dynamic benchmark of AI forecasting capabilities",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Forecastbench%3A+A+dynamic+benchmark+of+AI+forecasting+capabilities&rows=5",
+        "checked_at": "2026-10-09T04:53:07.938836Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "BQEB ForecastBench: Benchmarking AI Models for Smart Grid Forecasting Using BQEB-Data v1",
+            "authors": [
+              "Agrawal"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.21203/rs.3.rs-10484554/v1",
+            "source_url": "https://doi.org/10.21203/rs.3.rs-10484554/v1",
+            "title_similarity": 0.543046357615894
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Review for \"Theoretical Physics Benchmark (TPBench) - a dataset and study of AI reasoning capabilities in theoretical physics\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1088/2632-2153/adfcb0/v1/review2",
+            "source_url": "https://doi.org/10.1088/2632-2153/adfcb0/v1/review2",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Artificial intelligence enabling circular business model innovation in digital servitization: Conceptualizing dynamic capabilities, AI capacities, business models and effects",
+            "authors": [
+              "Sjödin",
+              "Parida",
+              "Kohtamäki"
+            ],
+            "year": 2023,
+            "years": [
+              2023
+            ],
+            "doi": "10.1016/j.techfore.2023.122903",
+            "source_url": "https://doi.org/10.1016/j.techfore.2023.122903",
+            "title_similarity": 0.23829787234042554
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Review for \"Theoretical Physics Benchmark (TPBench) - a dataset and study of AI reasoning capabilities in theoretical physics\"",
+            "authors": [],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1088/2632-2153/adfcb0/v1/review1",
+            "source_url": "https://doi.org/10.1088/2632-2153/adfcb0/v1/review1",
+            "title_similarity": 0.5
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Foresight Arena: An On-Chain Benchmark for Evaluating AI Forecasting Agents",
+            "authors": [
+              "Nechepurenko",
+              "Shuvalov"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.6674059",
+            "source_url": "https://doi.org/10.2139/ssrn.6674059",
+            "title_similarity": 0.6086956521739131
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:07.937237Z",
+        "response_sha256": "0c91c52e2f8ed7b20d956933012733ee6df9d78da7c02a8657a5271ce5ddaba0",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Forecastbench%3A+A+dynamic+benchmark+of+AI+forecasting+capabilities&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:07.938836Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-10",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-10",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-10",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Extractingprobabilistic knowledge from large language models for Bayesian network parameterization",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Extractingprobabilistic+knowledge+from+large+language+models+for+Bayesian+network+parameterization&rows=5",
+        "checked_at": "2026-10-09T04:53:09.826329Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:09.826258Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Extractingprobabilistic+knowledge+from+large+language+models+for+Bayesian+network+parameterization&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:09.826329Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-11",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-11",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-11",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "o3-minisystemcard",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=o3-minisystemcard&rows=5",
+        "checked_at": "2026-10-09T04:53:09.499169Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Degradation of azole pesticides in WWTP effluent by hybrid advanced oxidation processes: UV, O3, US, EO, US/UV, O3/EO, O3/US, UV/O3, UV/EO, UV/O3/US, and UV/O3/EO",
+            "authors": [
+              "Dominguez",
+              "González",
+              "Montero-Fernández"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.1016/j.jece.2025.116676",
+            "source_url": "https://doi.org/10.1016/j.jece.2025.116676",
+            "title_similarity": 0.05952380952380952
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Evaluation of adsorption potential of microplastics after O3 and O3/H2O2 oxidation treatments",
+            "authors": [
+              "Gomes de Aragão Belé"
+            ],
+            "year": null,
+            "years": [],
+            "doi": "10.47749/t/unicamp.2020.1231605",
+            "source_url": "https://doi.org/10.47749/t/unicamp.2020.1231605",
+            "title_similarity": 0.10909090909090909
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Erste Gruppe : Die Ionen S″O4, P‴O4, B‴O3, F′, C″O3, Si″O3",
+            "authors": [
+              "Emich"
+            ],
+            "year": 1926,
+            "years": [
+              1926
+            ],
+            "doi": "10.1007/978-3-642-91506-2_49",
+            "source_url": "https://doi.org/10.1007/978-3-642-91506-2_49",
+            "title_similarity": 0.11940298507462686
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Comparison among O3, PAC adsorption, O3/HCO3−, O3/H2O2 and O3/PAC processes for the removal of Bomaplex Red CR-L dye from aqueous solution",
+            "authors": [
+              "Oguz",
+              "Keskinler"
+            ],
+            "year": 2007,
+            "years": [
+              2007
+            ],
+            "doi": "10.1016/j.dyepig.2006.02.011",
+            "source_url": "https://doi.org/10.1016/j.dyepig.2006.02.011",
+            "title_similarity": 0.15894039735099338
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Degradation performance and conversion mechanisms of MNZ by advanced oxidation systems with O3: Comparison of O3, O3/UV, O3/H2O2 and UV-H2O2/O3 systems",
+            "authors": [
+              "Ren",
+              "Wang",
+              "Xue",
+              "Liu",
+              "He",
+              "Jia",
+              "Liu",
+              "Jia"
+            ],
+            "year": 2024,
+            "years": [
+              2024
+            ],
+            "doi": "10.1016/j.jwpe.2024.106536",
+            "source_url": "https://doi.org/10.1016/j.jwpe.2024.106536",
+            "title_similarity": 0.18181818181818182
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:09.497093Z",
+        "response_sha256": "c48d97365a32e1dc1a894af969cdd257360a3a838a6c90746245c316255f47e4",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=o3-minisystemcard&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:09.499169Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-12",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-12",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-12",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "o3ando4-minisystemcard",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=o3ando4-minisystemcard&rows=5",
+        "checked_at": "2026-10-09T04:53:08.328988Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:08.327610Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=o3ando4-minisystemcard&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:08.328988Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-14",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-14",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-14",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Pitchbook database",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Pitchbook+database&rows=5",
+        "checked_at": "2026-10-09T04:53:10.730584Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:10.730540Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Pitchbook+database&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:10.730584Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-15",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-15",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-15",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "AI-augmented predictions: LLMassistantsimprovehumanforecastingaccuracy",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=AI-augmented+predictions%3A+LLMassistantsimprovehumanforecastingaccuracy&rows=5",
+        "checked_at": "2026-10-09T04:53:10.510104Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "Retrieval-Augmented Explainable AI for Converting Multi-Disease Medical Image Predictions into Clinician-Friendly Clinical Recommendations",
+            "authors": [
+              "Adekunle"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.2139/ssrn.7308699",
+            "source_url": "https://doi.org/10.2139/ssrn.7308699",
+            "title_similarity": 0.3671497584541063
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "AI vs Augmented and Virtual Reality (AR/VR)",
+            "authors": [
+              "Cursio"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1201/9781003608158-6",
+            "source_url": "https://doi.org/10.1201/9781003608158-6",
+            "title_similarity": 0.4
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "Smart IoT-Enabled Precision Irrigation System with AI-Driven Predictions",
+            "authors": [
+              "Parthiban",
+              "Harini",
+              "Kanya",
+              "Muthumanickam"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1109/icaiss68683.2026.11526150",
+            "source_url": "https://doi.org/10.1109/icaiss68683.2026.11526150",
+            "title_similarity": 0.24113475177304963
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "AI-Augmented Research",
+            "authors": [
+              "Boudourides"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.61700/wonlusuqiuw2z2626",
+            "source_url": "https://doi.org/10.61700/wonlusuqiuw2z2626",
+            "title_similarity": 0.37777777777777777
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Legal Judgment Predictions and AI",
+            "authors": [
+              "Eliot"
+            ],
+            "year": 2021,
+            "years": [
+              2021
+            ],
+            "doi": "10.2139/ssrn.3954615",
+            "source_url": "https://doi.org/10.2139/ssrn.3954615",
+            "title_similarity": 0.47058823529411764
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:10.508582Z",
+        "response_sha256": "afaa0c2cce19128c259166f7bb4b143d0f3ef8c56b14b2cace9db45bb95101d2",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=AI-augmented+predictions%3A+LLMassistantsimprovehumanforecastingaccuracy&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:10.510104Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-16",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-16",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-16",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Had enough of experts? Quantitativeknowledgeretrievalfromlargelanguagemodels",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Had+enough+of+experts%3F+Quantitativeknowledgeretrievalfromlargelanguagemodels&rows=5",
+        "checked_at": "2026-10-09T04:53:11.633924Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:11.633875Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Had+enough+of+experts%3F+Quantitativeknowledgeretrievalfromlargelanguagemodels&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:11.633924Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-17",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-17",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-17",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Collins, Lance Ying, Adrian Weller Cedegao E",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Collins%2C+Lance+Ying%2C+Adrian+Weller+Cedegao+E&rows=5",
+        "checked_at": "2026-10-09T04:53:11.884624Z",
+        "technical_error": null,
+        "candidates": [
+          {
+            "candidate_id": "candidate-0",
+            "title": "On Benchmarking Human-like Intelligence in Machines",
+            "authors": [
+              "Ying",
+              "Collins",
+              "Wong",
+              "Sucholutsky",
+              "Liu",
+              "Weller",
+              "Shu",
+              "Griffiths",
+              "Tenenbaum"
+            ],
+            "year": 2026,
+            "years": [
+              2026
+            ],
+            "doi": "10.1162/opmi.a.385",
+            "source_url": "https://doi.org/10.1162/opmi.a.385",
+            "title_similarity": 0.3225806451612903
+          },
+          {
+            "candidate_id": "candidate-1",
+            "title": "Inconsistent Phonological Disorder: A Case Report",
+            "authors": [
+              "Roepke",
+              "Adrian",
+              "Lance",
+              "Gildehaus"
+            ],
+            "year": 2024,
+            "years": [
+              2024,
+              2025
+            ],
+            "doi": "10.1177/15257401241241813",
+            "source_url": "https://doi.org/10.1177/15257401241241813",
+            "title_similarity": 0.37777777777777777
+          },
+          {
+            "candidate_id": "candidate-2",
+            "title": "A Free Lance",
+            "authors": [
+              "C.",
+              "Collins"
+            ],
+            "year": 1924,
+            "years": [
+              1924
+            ],
+            "doi": "10.2307/802742",
+            "source_url": "https://doi.org/10.2307/802742",
+            "title_similarity": 0.2222222222222222
+          },
+          {
+            "candidate_id": "candidate-3",
+            "title": "Empathy in Explanation",
+            "authors": [
+              "Collins",
+              "Chandran",
+              "Weller",
+              "Ragan-Kelley",
+              "Tenenbaum"
+            ],
+            "year": 2025,
+            "years": [
+              2025
+            ],
+            "doi": "10.31234/osf.io/frp2w_v3",
+            "source_url": "https://doi.org/10.31234/osf.io/frp2w_v3",
+            "title_similarity": 0.25
+          },
+          {
+            "candidate_id": "candidate-4",
+            "title": "Adrian P. Gee, PhD, Editor Laureate",
+            "authors": [
+              "Collins"
+            ],
+            "year": 2001,
+            "years": [
+              2001
+            ],
+            "doi": "10.1080/146532401753277643",
+            "source_url": "https://doi.org/10.1080/146532401753277643",
+            "title_similarity": 0.35135135135135137
+          }
+        ],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:11.883669Z",
+        "response_sha256": "b516ea1210bffb8e9a39983957f2a260c83678258293cb1193ed0b56bc0f4f42",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Collins%2C+Lance+Ying%2C+Adrian+Weller+Cedegao+E&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:11.884624Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-18",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-18",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-18",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Let’s think var-by-var: Large language models enable ad hocprobabilisticreasoning",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Let%E2%80%99s+think+var-by-var%3A+Large+language+models+enable+ad+hocprobabilisticreasoning&rows=5",
+        "checked_at": "2026-10-09T04:53:12.612758Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:12.612639Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Let%E2%80%99s+think+var-by-var%3A+Large+language+models+enable+ad+hocprobabilisticreasoning&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:12.612758Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-19",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "unverified",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-19",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-19",
+        "status": "unverified",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Qwen3technicalreport",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Qwen3technicalreport&rows=5",
+        "checked_at": "2026-10-09T04:53:12.742132Z",
+        "technical_error": null,
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:12.741502Z",
+        "response_sha256": "d83d11d14424a728ec9b7d343fdfd29c4938cddb387d4161e1a9fe71140658bd",
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Qwen3technicalreport&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:12.742132Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    },
+    {
+      "finding_id": "f-rc-ref-paper_041_iclr_2026_proceedings_credibility-20",
+      "dimension_id": "reference_verification",
+      "severity": "info",
+      "status": "pending_verification",
+      "title": "query_failed",
+      "description": "该条目尚未获得足够确认，详见逐条技术状态。",
+      "reference_check": {
+        "reference_check_id": "rc-ref-paper_041_iclr_2026_proceedings_credibility-20",
+        "paper_reference_id": "ref-paper_041_iclr_2026_proceedings_credibility-20",
+        "status": "query_failed",
+        "provider": "Crossref",
+        "query": {
+          "query.bibliographic": "Mirai: EvaluatingLLMagentsforeventforecasting",
+          "rows": 5
+        },
+        "query_attempted": true,
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Mirai%3A+EvaluatingLLMagentsforeventforecasting&rows=5",
+        "checked_at": "2026-10-09T04:53:13.610183Z",
+        "technical_error": "HTTP 429",
+        "candidates": [],
+        "conflicting_fields": [],
+        "selected_candidate_id": null,
+        "match_confidence": null,
+        "retrieved_at": "2026-10-09T04:53:13.610123Z",
+        "response_sha256": null,
+        "from_cache": false
+      },
+      "internal_evidence": [],
+      "external_source_urls": [
+        "https://api.crossref.org/works?query.bibliographic=Mirai%3A+EvaluatingLLMagentsforeventforecasting&rows=5"
+      ],
+      "checked_at": "2026-10-09T04:53:13.610183Z",
+      "uncertainty": "未核实、解析失败或 API 失败均不能作为引用虚假的结论。"
+    }
+  ],
+  "alerts": [
+    {
+      "dimension_id": "reference_verification",
+      "kind": "low_dimension_score",
+      "score": 4.2
+    }
+  ],
+  "reference_coverage": {
+    "expected_count": 20,
+    "extracted_count": 20,
+    "parsed_count": 20,
+    "queried_count": 20,
+    "matched_count": 2,
+    "metadata_conflict_count": 0,
+    "unverified_count": 10,
+    "parse_failed_count": 0,
+    "not_checked_count": 0,
+    "query_failed_count": 8,
+    "extraction_coverage": 1.0,
+    "verification_coverage": 1.0
+  },
+  "code_states": [
+    "official_code_available",
+    "no_relevant_public_feedback"
+  ],
+  "created_at": "2026-10-09T06:14:43.369447Z",
+  "limitations": [
+    "试验性完整评分：无法消除的未核实、技术失败、不确定和材料缺失按可验证性较低计分，同时保留原始状态与失败原因。",
+    "技术失败或材料缺失不等于引用虚假、结果错误、造假或其他学术不端；这些分数只表示本轮可验证性。",
+    "本合同与实现均为独立草案，正式合同尚未取得。",
+    "系统不运行论文代码，不提供亲自复现认证。",
+    "外部来源只代表各记录的 checked_at/observed_at 时点。"
+  ]
+}

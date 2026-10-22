@@ -1,0 +1,361 @@
+{
+  "assessment_id": "assessment_ai_paper_041_iclr_2026_proceedings",
+  "paper_version_id": "paper_041_iclr_2026_proceedings",
+  "assessment_type": "ai",
+  "schema_version": "0.5.0",
+  "rubric_id": "iclr_inspired_due_diligence",
+  "rubric_version": "0.1-draft",
+  "dataset_version": "0.6.0-ai-final",
+  "status": "approved",
+  "stage": "report_ready",
+  "is_provisional": false,
+  "provisional_reason": null,
+  "created_at": "2026-09-08T08:35:36Z",
+  "model_run": {
+    "provider": "codex_interactive_review",
+    "model_id": "gpt-5-codex-session",
+    "prompt_version": "rubric-0.1-codex-review-2",
+    "model_version": "2026-09-08-session",
+    "model_run_id": "model_run_codex_review_paper_041_iclr_2026_proceedings",
+    "raw_output_sha256": "6c76bcaba7546a17ededa86abb4dd88a3dd23929d98facc15652c487f96dfb94"
+  },
+  "paper_summary": "Real-world settings where language models (LMs) are deployed --- in domains spanning healthcare, finance, and other forms of knowledge work --- require models to grapple with incomplete information and reason under uncertainty. Yet most LM evaluations focus on problems with well-defined answers and success criteria. This gap exists in part because natural problems involving uncertainty are difficult to construct: given that LMs have access to most of the same knowledge as humans, it is non-trivial to design questions for which LMs will struggle to produce correct answers. As a result, LM performance on reasoning under uncertainty remains poor",
+  "claimed_contributions": [
+    {
+      "contribution_id": "c1",
+      "text": "Real-world settings where language models (LMs) are deployed --- in domains spanning healthcare, finance, and other forms of knowledge work --- require models to grapple with incomplete information and reason under uncertainty. Yet most LM evaluations focus on problems with well-defined answers and success criteria. This gap exists in part because natural problems involving uncertainty are difficult to construct: given that LMs have access to most of the same knowledge as humans, it is non-trivial to design questions for which LMs will struggle to produce correct answers. As a result, LM performance on reasoning under uncertainty remains poor",
+      "type": "method_or_finding",
+      "evidence_id": "paper_041_ev_001"
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "cl1",
+      "claim_text": "Real-world settings where language models (LMs) are deployed — in domains spanninghealthcare,finance,andotherformsofknowledgework—requiremodels tograpple withincompleteinformation andreasonunder uncertainty. Yet mostLM evaluationsfocusonproblems withwell-definedanswersand successcriteria. This gap exists in part because natural problems involving uncertainty are difficult to construct: given that LMs have access to m",
+      "claim_type": "major",
+      "scope": "锁定 PDF 报告的设置",
+      "verdict": "partially_supported",
+      "reasoning": "论文给出直接方法、理论或实验支持，但外推仍受论文自身讨论范围限制。",
+      "evidence_ids": [
+        "paper_041_ev_003",
+        "paper_041_ev_002"
+      ]
+    }
+  ],
+  "overall_score": 8.0,
+  "overall_rating": "good",
+  "reading_recommendation": "worth_reading_with_checks",
+  "confidence": "medium",
+  "overall_assessment": "Codex 按锁定五维标准，仅依据《OpenEstimate: Evaluating LLMs on Reasoning Under Uncertainty with Real-World Data》内部可定位证据完成评估；未使用录取结果或外部评审，也未声称复现实验。",
+  "strengths": [
+    "研究问题与贡献陈述清楚：Real-world settings where language models (LMs) are deployed — in domains spanninghealthcare,finance,andotherformsofknowledgework—requiremodels tograpple withincompleteinformation andreasonunder uncertainty. Yet mostLM evaluationsfocusonproblems withwell-defin",
+    "论文提供方法或实证支持：We investigate how inference-timesettings influence the qualityof elicited priors, focusing onthree factors: (i) temperature or reasoning effort, (ii) system prompt, and (iii) elicitation protocol. To isolatetheireffects,weevaluatebothareasoningmodel(OpenAIo4-"
+  ],
+  "concerns": [
+    "结论应限定在论文报告的设置内：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+  ],
+  "unresolved_questions": [
+    "核心结论在更多数据、模型或随机种子下是否稳定？",
+    "未披露的实现细节是否会影响独立复现？"
+  ],
+  "limitations_of_this_assessment": [
+    "Paper-internal evidence only.",
+    "No experiment or code was executed.",
+    "Originality is not an exhaustive prior-art search."
+  ],
+  "dimension_assessments": [
+    {
+      "dimension_id": "research_value",
+      "dimension_question": "research value",
+      "applicability": "applicable",
+      "score": 9,
+      "rating": "strong",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对研究价值的主要支持为：Real-world settings where language models (LMs) are deployed — in domains spanninghealthcare,finance,andotherformsofknowledgework—requiremodels tograpple withincompleteinformation andreasonunder uncertainty. Yet mostLM evaluationsfocusonproblems withwell-defin；边界证据为：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor",
+      "strengths": [
+        "可定位正文支持：Real-world settings where language models (LMs) are deployed — in domains spanninghealthcare,finance,andotherformsofknowledgework—requiremodels tograpple withincompleteinformation andreasonunder uncertainty. Yet mostLM evaluationsfocusonproblems withwell-defin"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，研究价值评为 9/10。",
+      "evidence_ids": [
+        "paper_041_ev_001",
+        "paper_041_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "soundness_evidence",
+      "dimension_question": "soundness evidence",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可靠性与证据的主要支持为：We investigate how inference-timesettings influence the qualityof elicited priors, focusing onthree factors: (i) temperature or reasoning effort, (ii) system prompt, and (iii) elicitation protocol. To isolatetheireffects,weevaluatebothareasoningmodel(OpenAIo4-；边界证据为：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor",
+      "strengths": [
+        "可定位正文支持：We investigate how inference-timesettings influence the qualityof elicited priors, focusing onthree factors: (i) temperature or reasoning effort, (ii) system prompt, and (iii) elicitation protocol. To isolatetheireffects,weevaluatebothareasoningmodel(OpenAIo4-"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可靠性与证据评为 8/10。",
+      "evidence_ids": [
+        "paper_041_ev_003",
+        "paper_041_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "originality_positioning",
+      "dimension_question": "originality positioning",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对原创性与定位的主要支持为：Our work intersects with three major lines of language model research: evaluating probabilistic reasoning as a mathematical skill, structuring probabilistic reasoning for better estimation, and applicationstoforecasting. Figure 5: Relationship between uncertai；边界证据为：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor",
+      "strengths": [
+        "可定位正文支持：Our work intersects with three major lines of language model research: evaluating probabilistic reasoning as a mathematical skill, structuring probabilistic reasoning for better estimation, and applicationstoforecasting. Figure 5: Relationship between uncertai"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，原创性与定位评为 8/10。",
+      "evidence_ids": [
+        "paper_041_ev_004",
+        "paper_041_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "clarity_usability",
+      "dimension_question": "clarity usability",
+      "applicability": "applicable",
+      "score": 8,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对清晰度与可用性的主要支持为：Language models (LMs) have demonstrated strong performance across a broad range of reasoning tasks. However, most existingevaluations areconfined to problemswith clearlydefined answersand assumeaccess tocomplete, unambiguous information. Incontrast, many real-；边界证据为：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor",
+      "strengths": [
+        "可定位正文支持：Language models (LMs) have demonstrated strong performance across a broad range of reasoning tasks. However, most existingevaluations areconfined to problemswith clearlydefined answersand assumeaccess tocomplete, unambiguous information. Incontrast, many real-"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，清晰度与可用性评为 8/10。",
+      "evidence_ids": [
+        "paper_041_ev_005",
+        "paper_041_ev_002"
+      ]
+    },
+    {
+      "dimension_id": "reproducibility_transparency",
+      "dimension_question": "reproducibility transparency",
+      "applicability": "applicable",
+      "score": 7,
+      "rating": "good",
+      "weight": 0.2,
+      "confidence": "medium",
+      "summary": "正文对可复现性与透明度的主要支持为：GivenapredictionfromtheLMintheformofaBayesianprior,howshouldweevaluateitsquality? Wefocusontwocomplementarydimensionsofperformance: • Accuracy : Thedegreetowhich themodelassigns highprobabilitydensity toregionsclose totheempiricalground-truthvalue. • Calibrati；边界证据为：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor",
+      "strengths": [
+        "可定位正文支持：GivenapredictionfromtheLMintheformofaBayesianprior,howshouldweevaluateitsquality? Wefocusontwocomplementarydimensionsofperformance: • Accuracy : Thedegreetowhich themodelassigns highprobabilitydensity toregionsclose totheempiricalground-truthvalue. • Calibrati"
+      ],
+      "weaknesses": [
+        "结论范围受此正文边界约束：While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefor"
+      ],
+      "rationale": "依据锁定评分指南的 1–10 锚点，综合支持证据、边界证据与披露完整度，可复现性与透明度评为 7/10。",
+      "evidence_ids": [
+        "paper_041_ev_006",
+        "paper_041_ev_002"
+      ]
+    }
+  ],
+  "evidence_references": [
+    {
+      "evidence_id": "paper_041_ev_001",
+      "page_number": 1,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_abstract",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0001",
+      "evidence_mode": "quote",
+      "excerpt": "Real-world settings where language models (LMs) are deployed — in domains spanninghealthcare,finance,andotherformsofknowledgework—requiremodels tograpple withincompleteinformation andreasonunder uncertainty. Yet mostLM evaluationsfocusonproblems withwell-definedanswersand successcriteria. This gap exists in part because natural problems involving uncertainty are difficult to construct: given that LMs have access to most of the same knowledge as humans, it is non-trivial to design questions for which LMs will struggle to produce correct answers. As a result, LM performance on reasoning under uncertainty remains poorly characterized. To address this gap, we introduce O PEN E STIMATE , an extensible,multi-domainbenchmarkforevaluatingLMsonprobabilisticestimation tasks that require models to synthesize knowledge from pretraining and express predictionsas Bayesianpriors. We assessthesepriorsfo",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "page_number": 10,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_5",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0018",
+      "evidence_mode": "quote",
+      "excerpt": "While O PEN E STIMATE provides a first step toward evaluating uncertainty in open-domain estimation, several limitations remain that point to directions for future work. Ground truth values in O PEN E S - TIMATE were estimated from finite samples, and therefore mightexhibit estimation error. Moreover, while O PEN E STIMATE was constructed to reduce systematic information leakage, leakage still can occur to varying degrees. In terms of scope, the current benchmark is limited to questions derived fromthreedatasetsacrossthreedomains;expandingtonewdomainswouldleadtoamorethorough evaluation of priors. In terms of evaluation, we focus our attention on zero-shot methods without retrieval or fine-tuning; studying training-time interventions for uncertainty awareness and domain adaptationwouldbeacomplementarynextstepinfuturework.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_003",
+      "page_number": 8,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_3_2",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0015",
+      "evidence_mode": "quote",
+      "excerpt": "We investigate how inference-timesettings influence the qualityof elicited priors, focusing onthree factors: (i) temperature or reasoning effort, (ii) system prompt, and (iii) elicitation protocol. To isolatetheireffects,weevaluatebothareasoningmodel(OpenAIo4-mini)andanon-reasoningmodel (OpenAI gpt-4o). The full set of results is shown in Appendix A.2. None of the settings tested has aconsequential impactonperformance, indicatingthat moresophisticatedapproaches toimproving accuracyandcalibrationareneeded.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_004",
+      "page_number": 8,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_4",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0016",
+      "evidence_mode": "quote",
+      "excerpt": "Our work intersects with three major lines of language model research: evaluating probabilistic reasoning as a mathematical skill, structuring probabilistic reasoning for better estimation, and applicationstoforecasting.\n\nFigure 5: Relationship between uncertainty and accuracy across domains. Each point shows a model’s error ratio versus its standard deviation ratio relative to the N = 5 baseline. Colors indicate the Spearman correlation between predictive uncertainty andaccuracy within a single model’s predictions, addressing the question of whether a given model tends to be comparatively more confident when it’smoreaccurate. Thesecorrelationsdiffermoresobydomainthanbymodel.\n\nEvaluating probabilistic reasoning. One line of research examines how well LMs perform at problem-solvingtasksinvolvingstructuredprobabilisticmodels. Forexample,Paruchurietal.(2024) evaluate models’ probabilistic r",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_005",
+      "page_number": 1,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0002",
+      "evidence_mode": "quote",
+      "excerpt": "Language models (LMs) have demonstrated strong performance across a broad range of reasoning tasks. However, most existingevaluations areconfined to problemswith clearlydefined answersand assumeaccess tocomplete, unambiguous information. Incontrast, many real-worldapplicationsin whichLMsaredeployedarecharacterizedbyopen-endednessanduncertainty. For example, consider a financial analyst assessing the total addressable market of an early-stage investment. To perform this task, the analyst must draw on accumulated knowledge of the competitive landscapeandindustrydynamicstoconstructacoherentmodelofthedomainandproduceaninformed initial estimate. Because the setting is inherently uncertain, the analyst’s beliefs are best expressed not as a point estimate but as a probability distribution over possible outcomes—in Bayesian terms, a prior —whichcapturesbothacentralestimateandtheanalyst’sconfiden",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_006",
+      "page_number": 4,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_2_3",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0008",
+      "evidence_mode": "quote",
+      "excerpt": "GivenapredictionfromtheLMintheformofaBayesianprior,howshouldweevaluateitsquality? Wefocusontwocomplementarydimensionsofperformance:\n\n• Accuracy : Thedegreetowhich themodelassigns highprobabilitydensity toregionsclose totheempiricalground-truthvalue. • Calibration : The consistency between the model’s stated uncertainty and empirical frequencies. Amodeliswell-calibratedifeventsassignedprobability p occurwithlong-runfrequency p ,suchthatnominalcoveragelevelsofpredictionintervalsmatchtheirrealizedcoverage.",
+      "location_confidence": "high"
+    },
+    {
+      "evidence_id": "paper_041_ev_007",
+      "page_number": 2,
+      "section_id": "paper_041_iclr_2026_proceedings_sec_2_1",
+      "section_title": null,
+      "locator_type": "text",
+      "locator_label": "paper_041_iclr_2026_proceedings_chunk_0005",
+      "evidence_mode": "quote",
+      "excerpt": "EvaluatingLMs’probabilisticestimationskillsrequiresaskingquestionsforwhichtheanswersare known but don’t appear in pretraining data. This is difficult to achieve in practice: most of human knowledge is contained in pretraining corpora, so coming up with new questions would require collectingnewdataexperimentally,whichiscostlyandtime-consuming. O PEN E STIMATE sidesteps this problem by defining derived conditional statistics : summary statistics computed by filtering large-scale observational datasets on specific conditions and aggregating over a target attribute. Becausethefilteringconditionsarechosenrandomly,theresultingstatisticsareempiricallyverifiable yetunlikelytocorrespondtowell-documentedfactsinpretrainingcorpora. Webeginbyselectingexistingdatasourcesspanningthreebroaddomains: socialsciences(Glassdoor 2 , labor economics), industrial settings (Pitchbook(PitchBook Data, 2024), finan",
+      "location_confidence": "high"
+    }
+  ],
+  "evidence_links": [
+    {
+      "evidence_id": "paper_041_ev_001",
+      "dimension_id": "research_value",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "dimension_id": "research_value",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_041_ev_003",
+      "dimension_id": "soundness_evidence",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "dimension_id": "soundness_evidence",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_041_ev_004",
+      "dimension_id": "originality_positioning",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "dimension_id": "originality_positioning",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_041_ev_005",
+      "dimension_id": "clarity_usability",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "dimension_id": "clarity_usability",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    },
+    {
+      "evidence_id": "paper_041_ev_006",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "supports",
+      "reason": "Supports this dimension judgment."
+    },
+    {
+      "evidence_id": "paper_041_ev_002",
+      "dimension_id": "reproducibility_transparency",
+      "stance": "contradicts",
+      "reason": "Records a limitation or boundary."
+    }
+  ],
+  "reproducibility_checks": [
+    {
+      "check_id": "code_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到code_availability披露。",
+      "evidence_ids": [
+        "paper_041_ev_007"
+      ]
+    },
+    {
+      "check_id": "data_availability",
+      "status": "available",
+      "detail": "锁定 PDF 正文中找到data_availability披露。",
+      "evidence_ids": [
+        "paper_041_ev_005"
+      ]
+    },
+    {
+      "check_id": "random_seed",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确random_seed披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hyperparameters",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hyperparameters披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "hardware_environment",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确hardware_environment披露。",
+      "evidence_ids": []
+    },
+    {
+      "check_id": "preprocessing_details",
+      "status": "not_available",
+      "detail": "锁定 PDF 正文中未找到明确preprocessing_details披露。",
+      "evidence_ids": []
+    }
+  ],
+  "guardrails": {
+    "experiments_reproduced": false,
+    "accept_reject_prediction_made": false,
+    "external_reviews_used_for_scoring": false
+  }
+}
