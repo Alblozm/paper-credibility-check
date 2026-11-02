@@ -1,4 +1,4 @@
-"""任务一：摘要与引言的关键主张，对照方法、实验、结果、表格、附录或结论里的证据。
+"""主张检查：摘要与引言的关键主张，对照方法、实验、结果、表格、附录或结论里的证据。
 
 真实请求现场生成模型候选；prepared_claims 仅供显式离线示例和回归测试。
 两种候选都交给 build_claim_checks，走同一套定位核对与条件守卫：
@@ -7,7 +7,7 @@
 - 页码、章节、表号只取解析结果；quote 必须能在原文找到；写出的数字必须在原文出现。
 - 判为 contradicted 时，至少一条对照证据的 metric、dataset、baseline、setting
   都写明且与主张一致；否则降为 unable_to_determine。
-任务二、任务三不改本文件。
+引用检查和代码检查不改本文件。
 """
 
 from __future__ import annotations

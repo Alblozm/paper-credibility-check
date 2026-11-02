@@ -35,6 +35,16 @@ class Settings(BaseSettings):
     openai_base_url: str = "https://api.openai.com/v1"
     openai_model: str = "gpt-5.6-terra"
     openai_reasoning_effort: str = "medium"
+    # Claude and Gemini through an OpenAI-compatible endpoint (app/llm/compatible.py). Listed when a key is
+    # configured, and offered only once enabled after a minimal sample run has been verified (contract 7.3).
+    anthropic_api_key: str = ""
+    anthropic_base_url: str = "https://api.anthropic.com/v1"
+    anthropic_model: str = "claude-sonnet-5"
+    claude_enabled: bool = False
+    gemini_api_key: str = ""
+    gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai"
+    gemini_model: str = "gemini-3.7-flash"
+    gemini_enabled: bool = False
     llm_timeout_seconds: float = 120.0
     llm_max_retries: int = 2
 
@@ -73,8 +83,18 @@ class Settings(BaseSettings):
     credibility_code_max_rounds: int = Field(default=3, ge=1, le=6)
     credibility_code_max_tool_calls: int = Field(default=6, ge=1, le=20)
     credibility_code_max_characters: int = Field(default=60000, ge=1000, le=150000)
-    credibility_code_max_output_tokens: int = Field(default=16000, ge=1000, le=16000)
+    credibility_code_max_output_tokens: int = Field(default=16000, ge=1000, le=65536)
+    # Shared per-check cap on GitHub/page/Search/Fetch source reads (cache hits included).
+    # A GitHub token raises GitHub's own rate limit; this bounds one check's time and cost.
+    credibility_code_max_source_reads: int = Field(default=60, ge=1, le=200)
+    # Discussions reach the model in small batches so long threads do not truncate the JSON
+    # output; every batch after the first has its own round allowance.
+    credibility_code_discussion_batch_size: int = Field(default=5, ge=1, le=8)
+    credibility_code_max_reviewed_discussions: int = Field(default=30, ge=1, le=60)
+    credibility_code_discussion_batch_rounds: int = Field(default=2, ge=1, le=3)
     credibility_code_discovery_enabled: bool = True
+    # A separate, snippet-only lead search also runs when official code is already available.
+    credibility_code_reproduction_search_enabled: bool = True
     credibility_code_discovery_max_queries: int = Field(default=3, ge=1, le=3)
     credibility_code_discovery_max_fetches: int = Field(default=4, ge=1, le=4)
     credibility_code_discovery_max_rounds: int = Field(default=4, ge=2, le=4)

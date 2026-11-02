@@ -17,6 +17,7 @@ from typing import Literal, TypeVar
 
 from pydantic import Field, ValidationError
 
+from app.credibility import live
 from app.credibility.claims import (
     CLAIM_ROLES,
     NON_EVIDENCE_ROLES,
@@ -584,6 +585,7 @@ def _invoke(ctx, client, prompt, purpose, calls, policy, repair):
             purpose=purpose, provider=provider, model_version=client.model_version,
         )
         calls.append(call)
+        live.note(purpose)
         history = call.model_dump(mode="json")
         ctx.model_history.append(history)
         response = client.complete_json(_SYSTEM, prompt, temperature=0.0, max_tokens=max_tokens)
@@ -619,6 +621,8 @@ def _invoke(ctx, client, prompt, purpose, calls, policy, repair):
 
 
 def _provider(client: LLMClient) -> str:
+    if isinstance(declared := getattr(client, "provider", None), str):
+        return declared
     identity = f"{type(client).__module__}.{type(client).__name__} {client.model_version}".lower()
     if "deepseek" in identity:
         return "deepseek"

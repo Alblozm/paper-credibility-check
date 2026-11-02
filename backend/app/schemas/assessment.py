@@ -103,6 +103,8 @@ class Assessment(StrictModel):
     created_at: str
     started_at: str | None = None
     completed_at: str | None = None
+    # Set when it was started beside a credibility assessment (one run); null for a quality assessment on its own.
+    credibility_assessment_id: str | None = None
 
     @model_validator(mode="after")
     def _status_rules(self) -> Assessment:

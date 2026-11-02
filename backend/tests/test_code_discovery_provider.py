@@ -404,7 +404,7 @@ def test_config_key_is_reused_without_customized_chat_endpoint(factory, monkeypa
 
 
 @pytest.mark.parametrize("kwargs", [
-    {"max_requests": -1}, {"max_requests": True}, {"max_requests": 41}, {"timeout": 0},
+    {"max_requests": -1}, {"max_requests": True}, {"max_requests": 201}, {"timeout": 0},
     {"timeout": 61}, {"max_bytes": 100}, {"max_characters": 500}, {"deadline_seconds": 0},
 ])
 def test_constructor_rejects_invalid_limits(factory, kwargs):

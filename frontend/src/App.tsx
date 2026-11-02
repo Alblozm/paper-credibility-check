@@ -235,9 +235,10 @@ function App() {
     <div className="app-shell">
       <header className="app-bar">
         <div className="app-bar-inner">
-          <button className="brand" type="button" onClick={() => navigate('check', { home: true })} aria-label="Paper Credibility Check home">
-            <span className="brand-mark" aria-hidden="true">PC</span>
-            <span className="brand-name">Paper Credibility Check</span>
+          <button className="brand" type="button" onClick={() => navigate('check', { home: true })} aria-label="PaperTrace home">
+            <span className="brand-mark" aria-hidden="true">PT</span>
+            <span className="brand-name">PaperTrace</span>
+            <span className="brand-sub">Paper Due Diligence</span>
           </button>
           <nav className="app-nav" aria-label="Sections">
             {nav.map(item => (

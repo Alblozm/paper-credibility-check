@@ -184,14 +184,14 @@ def _running_headers(page_texts: list[str]) -> set[str]:
     return {line for line, count in counts.items() if count >= max(2, len(page_texts) // 2)}
 
 
-def _join_title_lines(lines: list[str], vocabulary: set[str]) -> str:
+def _join_title_lines(lines: list[str], vocabulary: set[str] | Counter) -> str:
     title = lines[0]
     for line in lines[1:]:
-        wrapped = re.search(r"(\w+)-$", title)
+        wrapped = re.search(r"(\w+)\s*-$", title)
         joined = (wrapped.group(1) + line.split()[0]).lower() if wrapped and line.split() else ""
         # A line-end hyphen is a wrap only when the joined word occurs in the paper.
         if joined and joined in vocabulary:
-            title = title[:-1] + line
+            title = title.rstrip()[:-1].rstrip() + line
         else:
             title = f"{title} {line}"
     # Small-cap fonts split words after their first capital ("E VALUATING", "TITLE :");
@@ -201,8 +201,37 @@ def _join_title_lines(lines: list[str], vocabulary: set[str]) -> str:
         lambda m: m.group(1) + m.group(2) if (m.group(1) + m.group(2)).lower() in vocabulary else m.group(0),
         title,
     )
+    # Letter-spaced small caps can also split mid-word ("VALIDA TION", "A SSESSING"). Hyphenated
+    # body text leaves fragments like "tion" in the vocabulary, so compare counts when known.
+    counts = vocabulary if isinstance(vocabulary, Counter) else Counter(vocabulary)
+
+    def rejoin(match):
+        joined, tail = (match.group(1) + match.group(2)).lower(), match.group(2).lower()
+        return match.group(1) + match.group(2) if counts[joined] and counts[joined] >= counts[tail] else match.group(0)
+
+    title = re.sub(r"\b([A-Z]+)\s+([A-Z]{3,})\b", rejoin, title)
     title = re.sub(r"\s+([:?!,])", r"\1", title)
+    title = re.sub(r":(?=[A-Za-z])", ": ", title)
     return re.sub(r"\s*-\s*", "-", title)
+
+
+_AUTHOR_LINE = re.compile(r"[A-Za-z]\d|\d,|[∗*†‡§→@{}]|\b(?:University|Institute|Laboratory|School)\b")
+
+
+def _title_continues(previous: str, line: str, frequencies: Counter) -> bool:
+    """A mixed-case title wraps onto a line that is not the author/affiliation line."""
+    words = line.split()
+    if not words or len(words) > 14 or _AUTHOR_LINE.search(line) or line.rstrip().endswith("."):
+        return False
+    if previous.split()[-1].lower() in _TITLE_STOPWORDS or words[0][0].islower():
+        return True
+    # "Main title:" or "Main title —" announces a subtitle on the next line, whose words may be rare in the body
+    # (e.g. "Instance Normalization:" / "The Missing Ingredient for Fast Stylization").
+    if previous.rstrip().endswith((":", "—", "–")):
+        return True
+    # Author names rarely recur in the body; title words do.
+    content = [w for w in re.findall(r"[A-Za-z][A-Za-z-]+", line) if w.lower() not in _TITLE_STOPWORDS]
+    return bool(content) and all(frequencies[w.lower()] >= 3 for w in content)
 
 
 def _letter_heading(compact: str) -> tuple[int, str] | None:
@@ -219,10 +248,11 @@ def _letter_heading(compact: str) -> tuple[int, str] | None:
 
 def _title_from_first_page(
     lines: list[str], *, headers: set[str] = frozenset(), vocabulary: set[str] = frozenset(),
+    frequencies: Counter | None = None,
 ) -> str | None:
     """Keep contiguous all-caps title lines before the author/abstract area."""
     candidates: list[str] = []
-    for line in lines:
+    for index, line in enumerate(lines):
         if line in headers or _RUNNING_HEADER.match(line):
             continue
         heading = _heading(line)
@@ -233,7 +263,15 @@ def _title_from_first_page(
         elif candidates:
             break
         else:
-            return line if len(line) >= 8 else None
+            if len(line) < 8:
+                return None
+            title = [line]
+            for following in lines[index + 1:index + 3]:
+                if (not _title_continues(title[-1], following, frequencies or Counter())
+                        or len(" ".join(title + [following]).split()) > 20):  # titles are short
+                    break
+                title.append(following)
+            return _join_title_lines(title, vocabulary) if len(title) > 1 else line
     return _join_title_lines(candidates, vocabulary) if candidates else None
 
 
@@ -466,13 +504,18 @@ class GenericPdfParser:
         quality = ParseQuality.PARTIAL if set(warnings) - {"TABLE_STRUCTURE_UNVERIFIED"} else ParseQuality.GOOD
 
         first_page_lines = [line.strip() for line in page_texts[0].splitlines() if line.strip()]
-        vocabulary = {word.lower() for text in page_texts for word in re.findall(r"[A-Za-z]{2,}", text)}
+        vocabulary = Counter(word.lower() for text in page_texts for word in re.findall(r"[A-Za-z]{2,}", text))
+        # Self-citations repeat author names in the references; count title evidence before them.
+        body = "\n".join(page_texts[1:])
+        references = re.search(r"(?im)^\s*(?:\d+\s*)?(?:references|bibliography)\s*$", body)
+        body = body[:references.start()] if references else body
         metadata = reader.metadata or {}
         metadata_title = _clean(getattr(metadata, "title", None) or metadata.get("/Title"))
         title = (
             arxiv_metadata.title if arxiv_metadata else metadata_title
         ) or _title_from_first_page(
             first_page_lines, headers=_running_headers(page_texts), vocabulary=vocabulary,
+            frequencies=Counter(word.lower() for word in re.findall(r"[A-Za-z]{2,}", body)),
         )
         abstract = arxiv_metadata.abstract if arxiv_metadata else None
         if not abstract:

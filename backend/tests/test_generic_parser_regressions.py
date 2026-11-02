@@ -219,3 +219,51 @@ def test_article_a_in_title_is_not_an_appendix_but_post_references_letter_headin
     assert appendix_block.section_title.casefold() == "additional results"
     assert references_block.section_id != appendix_block.section_id
     assert references_block.pages == appendix_block.pages == {2}
+
+
+def test_mixed_case_title_wraps_but_author_line_does_not():
+    from collections import Counter
+
+    from app.parsing.generic import _title_from_first_page
+
+    body = Counter({"network": 12, "transformer": 9, "matt": 5, "macdermott": 4})
+    assert _title_from_first_page(
+        ["Mixture of Noise for", "Pre-Trained Model-Based Class-Incremental Learning", "Kai Jiang1,2, Zhengyan Shi2"],
+        frequencies=body,
+    ) == "Mixture of Noise for Pre-Trained Model-Based Class-Incremental Learning"
+    assert _title_from_first_page(
+        ["On the Role of Hidden States of Modern Hopfield", "Network in Transformer", "Tsubasa Masumura∗"],
+        frequencies=body,
+    ) == "On the Role of Hidden States of Modern Hopfield Network in Transformer"
+    assert _title_from_first_page(["Measuring Goal-Directedness", "Matt MacDermott", "Imperial College London"],
+                                  frequencies=Counter({"matt": 0})) == "Measuring Goal-Directedness"
+
+
+def test_title_ending_in_a_colon_keeps_its_subtitle():
+    from collections import Counter
+
+    from app.parsing.generic import _title_from_first_page
+
+    # The subtitle's words are rare in the body, but the colon says the title goes on.
+    lines = ["Instance Normalization:", "The Missing Ingredient for Fast Stylization",
+             "Dmitry Ulyanov", "Skoltech & Yandex"]
+    assert _title_from_first_page(lines, frequencies=Counter({"normalization": 40})) == (
+        "Instance Normalization: The Missing Ingredient for Fast Stylization")
+    # An author line after the colon is still not part of the title.
+    author_after_colon = ["Deep Learning:", "Jane Doe1,2, John Roe2"]
+    assert _title_from_first_page(author_after_colon, frequencies=Counter()) == "Deep Learning:"
+
+
+def test_small_caps_title_fragments_and_spaced_line_hyphen_rejoin():
+    from collections import Counter
+
+    from app.parsing.generic import _title_from_first_page
+
+    vocabulary = Counter({"validation": 27, "tion": 4, "assessing": 1, "ssessing": 1, "regularization": 3,
+                          "general": 5})
+    graphon = _title_from_first_page(["GRAPHON CROSS -VALIDA TION :A SSESSING MODELS", "ON NETWORK DATA"],
+                                     vocabulary=vocabulary)
+    assert graphon == "GRAPHON CROSS-VALIDATION: ASSESSING MODELS ON NETWORK DATA"
+    fairness = _title_from_first_page(["FAIRNESS VIA INDEPENDENCE : A G ENERAL REGULAR -", "IZATION FRAMEWORK"],
+                                      vocabulary=vocabulary)
+    assert fairness == "FAIRNESS VIA INDEPENDENCE: A GENERAL REGULARIZATION FRAMEWORK"

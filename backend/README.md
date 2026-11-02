@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh-CN.md)
 
-FastAPI + Pydantic service for Paper Credibility Check, application version `1.0.0`. It takes an arXiv link or an uploaded PDF, parses the paper, calls a model, and returns either a credibility report (`/v1/credibility/assessments`) or a five-dimension report (`/v1/assessments`). The HTTP API is described in [docs/api.md](../docs/api.md).
+FastAPI + Pydantic service for PaperTrace. It takes an arXiv link or an uploaded PDF, parses the paper, calls a model, and returns either a credibility report (`/v1/credibility/assessments`) or a five-dimension report (`/v1/assessments`). The HTTP API is described in [docs/api.md](../docs/api.md).
 
 ## Quick start
 
@@ -34,7 +34,7 @@ Override the port with `make run PORT=8001`.
 
 ## Configuration
 
-Everything is set in `.env`; see `.env.example` for every option with comments.
+Everything is set in `.env`; see `.env.example` for every option with comments. For setting up GPT, Claude, Gemini or DeepSeek with your own keys, follow [docs/models.md](../docs/models.md).
 
 | Variable | Values |
 |---|---|
@@ -43,11 +43,14 @@ Everything is set in `.env`; see `.env.example` for every option with comments.
 | `TASK_RUNNER` | `inline` (FastAPI background tasks) or `celery` |
 | `CREDIBILITY_PARSE_SOURCE` | `live` (default: parse the input like the five-dimension flow) or `benchmark` (prefer `../data/data/parsed`, for regression replays) |
 | `OPENAI_API_KEY`, `OPENAI_MODEL` | GPT, default `gpt-5.6-terra` |
-| `DEEPSEEK_API_KEY`, `DEEPSEEK_MODEL` | DeepSeek, default `deepseek-flash` |
+| `DEEPSEEK_API_KEY`, `DEEPSEEK_MODEL`, `DEEPSEEK_ENABLED` | DeepSeek, default `deepseek-flash`; hidden when `DEEPSEEK_ENABLED=false` |
+| `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`, `CLAUDE_ENABLED` | Claude, default `claude-sonnet-5`; listed once a key is set, selectable with `CLAUDE_ENABLED=true` |
+| `GEMINI_API_KEY`, `GEMINI_MODEL`, `GEMINI_ENABLED` | Gemini, default `gemini-3.7-flash`; listed once a key is set, selectable with `GEMINI_ENABLED=true` |
+| `CREDIBILITY_CODE_MAX_SOURCE_READS` | Shared budget of source reads for the code check, default 60 |
 | `GITHUB_TOKEN` | Optional; raises the GitHub rate limit for code checks |
 | `CROSSREF_MAILTO` | Optional; contact email sent to Crossref in the User-Agent |
 
-When both model keys are set, `/v1/models` lists both and the user's choice applies to that job. DeepSeek accepts `medium` reasoning effort but maps it to `high`; its native levels are `low`, `high` and `max`. DeepSeek only supports `response_format={"type": "json_object"}`, so structural validity is enforced by `app/validation/`. The OpenAI client uses the Responses API with JSON mode and `store: false`.
+Every configured model is listed by `/v1/models`, and the user's choice applies to that job. Claude and Gemini are called through their OpenAI-compatible `/chat/completions` endpoints (`app/llm/compatible.py`), with a capability profile per vendor (strict JSON or not, minimum output budget for thinking models, context limit). Neither has a usable built-in web search, so their code search borrows OpenAI's search; this is recorded in the report, and it needs `OPENAI_API_KEY`. DeepSeek accepts `medium` reasoning effort but maps it to `high`; its native levels are `low`, `high` and `max`. DeepSeek only supports `response_format={"type": "json_object"}`, so structural validity is enforced by `app/validation/`. The OpenAI client uses the Responses API with JSON mode and `store: false`.
 
 ## Credibility check
 
@@ -71,6 +74,16 @@ Shared pieces: [external evidence tools](docs/credibility/external-tools.md), [c
 
 These transport versions do not change the scoring.
 
+Controlling a running check:
+
+- `GET /v1/credibility/assessments/{id}/progress` reports each check's status and the model calls in progress, for the waiting page (`app/credibility/live.py`; display only).
+- `POST /v1/credibility/assessments/{id}/checks/{check}/stop` stops one check. It is recorded as stopped by the user (`STOPPED_BY_USER`) and gets the fallback score; the other checks continue. A restart does not run it again.
+- `POST /v1/credibility/assessments/{id}/cancel` cancels the whole run (`CANCELLED`, retryable). Model calls run on a helper thread (`app/llm/interrupt.py`), so both stop within about a second instead of waiting for the current call.
+- `DELETE /v1/credibility/assessments/{id}` and `DELETE /v1/assessments/{id}` remove finished records; a running record returns 409.
+- A five-dimension request may carry `credibility_assessment_id` to mark it as part of the same run. The server stores it and returns it in the detail and history responses.
+
+See [docs/api.md](../docs/api.md) for request and response details.
+
 ## Five-dimension scoring
 
 The older flow scores research value, soundness, originality, clarity and reproducibility under field contract v0.4, with a six-item reproducibility checklist. Input handling and the eligibility gate are described in [arxiv-ingestion.zh-CN.md](docs/arxiv-ingestion.zh-CN.md) and [eligibility-and-rubric.zh-CN.md](docs/eligibility-and-rubric.zh-CN.md); the analysis prompt in [llm-analysis.md](docs/llm-analysis.md).
@@ -84,9 +97,9 @@ Rules the backend enforces:
 ## Code map
 
 - `app/api/`: HTTP routes.
-- `app/credibility/`: the three checks, external lookups, scoring and the task runner.
+- `app/credibility/`: the three checks, external lookups, live progress, scoring and the task runner.
 - `app/eligibility/`: the machine-learning paper gate.
-- `app/llm/`: model clients, prompts, retry and repair.
+- `app/llm/`: model clients (OpenAI, DeepSeek, OpenAI-compatible for Claude and Gemini), prompts, retry, repair and interruptible calls.
 - `app/parsing/`: arXiv download, PDF parsing, location anchors and the benchmark loader.
 - `app/pipeline/orchestrator.py`: the five-dimension flow from input to report.
 - `app/validation/`: evidence verification, dimension degradation, cross-checks and overall score.

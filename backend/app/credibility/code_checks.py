@@ -39,7 +39,7 @@ from app.credibility.models import (
 from app.credibility.paper_link_classifier import OWN_ROLES
 from app.credibility.snapshots import SnapshotError, capture_snapshot, derive_snapshot, read_snapshot
 
-CODE_CHECKS_VERSION = "code-checks-2.6-model-paper-links"
+CODE_CHECKS_VERSION = "code-checks-2.7-result-gap-supplement-claim"
 
 _DATA_DIR = re.compile(
     r"(?i)\.?(?:data|datasets?|results?|outputs?|assets|figures?|images?|imgs?|logs?|cache|checkpoints?|"
@@ -55,13 +55,30 @@ _OWN_CODE = re.compile(
     r"(?:we\s+(?:release|provide))\s+(?:the\s+)?code",
     re.I,
 )
+# Recorded as a located claim only: supplementary files are never fetched here.
+_SUPPLEMENT_CODE = re.compile(
+    r"[^.!?]*\b(?:source\s+)?(?:codes?|implementations?)\b[^.!?]{0,120}"
+    r"\b(?:supplementary|supplemental)\s+(?:materials?|files?)\b[^.!?]*[.!?]?"
+    r"|[^.!?]*\b(?:supplementary|supplemental)\s+(?:materials?|files?)\b[^.!?]{0,80}"
+    r"\b(?:source\s+)?(?:codes?|implementations?)\b[^.!?]*[.!?]?",
+    re.I,
+)
 _THEORY = re.compile(
     r"\b(?:this (?:paper|work) is (?:purely|entirely) theoretical|"
     r"we (?:present|provide) a purely theoretical (?:analysis|study))\b",
     re.I,
 )
 _EMPIRICAL = re.compile(r"\b(?:we (?:conduct|evaluate|train|experiment)|our experiments|empirical results)\b", re.I)
-_TOPIC = re.compile(r"reproduc|replicat|dataset|data set|benchmark|accuracy|training|checkpoint|results?", re.I)
+# GitHub's own repository-role labels; a maintainer reply is not proof of paper authorship.
+_MAINTAINER_ROLES = frozenset({"OWNER", "MEMBER", "COLLABORATOR"})
+_METRIC = r"(?:m?AP\w*|acc(?:uracy)?|top-?[15]|F1|BLEU|ROUGE\w*|mIoU|PSNR|FID)"
+_METRIC_VALUE = re.compile(
+    rf"\b\d+(?:\.\d+)?\s*%?\s*{_METRIC}\b|\b{_METRIC}\b[^\n]{{0,40}}?\d+(?:\.\d+)?|准确率[^\n]{{0,20}}?\d", re.I,
+)
+_RESULT_COMPARISON = re.compile(
+    r"\bonly\s+(?:get|got|reach\w*|achiev\w*|obtain\w*)\b|\b(?:lower|higher|worse|less)\s+than\b"
+    r"|\bgap\b|\bdrop(?:s|ped)?\b|差距|低于|低於|只有|只能", re.I,
+)
 _FAIL = re.compile(
     r"\b(?:I|we)\s+(?:could not|cannot|can't|failed to|was unable to|were unable to)\s+"
     r"(?:reproduce|replicate)|\b(?:dataset|data|checkpoint)\b.{0,60}"
@@ -124,6 +141,25 @@ def _is_reference(block) -> bool:
     return block.section_role == "references" or bool(re.search(r"references|bibliography", block.section_title, re.I))
 
 
+def source_read_cap() -> int:
+    from app.config import get_settings
+
+    return get_settings().credibility_code_max_source_reads
+
+
+def discussion_collection_incomplete(result: CodeCheckResult) -> bool:
+    """A failed listing/comment read or a pagination cap leaves unread messages."""
+    return any(s.scope_type == "discussion_list" and s.outcome == "failed" for s in result.checks.searches) or any(
+        limit.startswith("Pagination limit reached") for limit in result.checks.scope_limitations
+    )
+
+
+def reports_result_gap(text: str) -> bool:
+    """A metric value plus a comparison ("only get 38.2 mAP") is result-level
+    feedback even without the word reproduce. Attention only, not a label."""
+    return bool(_METRIC_VALUE.search(text) and _RESULT_COMPARISON.search(text))
+
+
 def classify_feedback(text: str) -> str:
     """Only explicit first-person reports; questions and negation are not success."""
     text = "\n".join(line for line in text.splitlines() if not line.lstrip().startswith((">", "```")))
@@ -144,7 +180,7 @@ class _Check:
         self.limitations = [
             "No code was executed. Public reports are not system reproduction results.",
             "Bounded check: at most 4 repositories, 4 official pages, 2 issue pages per repository, "
-            "20 issues per page and 2 comment pages per issue; 40 external requests per check.",
+            f"20 issues per page and 2 comment pages per issue; {source_read_cap()} external requests per check.",
             "Only GitHub repositories and public issues/comments are supported; GitHub Discussions is not checked.",
             "Rule-based English feedback classification requires human review; conditions are not assumed equivalent.",
             "Binary supplements are not parsed here; "
@@ -163,7 +199,7 @@ class _Check:
         }
         self.model_calls: list = []
         self.requests = 0
-        self.max_requests = 40
+        self.max_requests = source_read_cap()
         self.plan_failed = False
         self.followup_state = {}
         self.discussion_complete = True
@@ -313,6 +349,19 @@ class _Check:
                         "Paper explicitly describes purely theoretical work.",
                     )
                 return self.finish("not_applicable", "completed", "not_applicable", "not_applicable")
+        claim = next((
+            (b, m[0].strip()) for b in blocks for m in _SUPPLEMENT_CODE.finditer(b.text)
+            # Checklist questions and negated answers are not code claims.
+            if b.text[m.end():m.end() + 1] != "?" and not m[0].rstrip().endswith("?")
+            and not re.search(r"\b(?:not|no|never|cannot|won't)\b|\[No\]|\[N/A\]", m[0], re.I)
+        ), None)
+        if claim and (evidence_id := self.paper(*claim)):
+            supplement = self.searches["supplement"]
+            supplement.evidence_ids.append(evidence_id)
+            supplement.reason = ("The paper states code is in its supplementary material; supplementary "
+                                 "files were not retrieved or inspected.")
+            self.limitations.append("The paper states that code is provided in its supplementary material; "
+                                    "this check did not inspect supplementary files and cannot confirm or rule it out.")
 
         candidates: dict[str, list[str]] = {}
         candidate_urls: dict[str, str] = {}
@@ -406,6 +455,9 @@ class _Check:
         availability = "available" if available else "unable_to_verify" if candidates or pages else "not_found_in_scope"
         signals = {d.signal for d in self.discussions if d.relevance == "relevant"}
         signal = next((s for s in ("failure_reported", "success_reported", "discussion_only") if s in signals), None)
+        if signal == "discussion_only" and not self.discussion_complete:
+            # Unread comments may hold the only result report; partial reads cannot conclude "no problem".
+            signal = None
         if signal is None:
             signal = (
                 "no_feedback_found"
@@ -812,19 +864,16 @@ class _Check:
             comments = []
             if issue.get("comments", 0):
                 comments = self.listing(api + f"/issues/{number}/comments?per_page=100", "Public issue comments.")
+            # Every issue is kept: reply coverage matters even for non-reproduction topics,
+            # and comments were already read, so this costs no extra requests.
             messages = [(issue, fetched, "issue")] + [(row, fetch, "comment") for row, fetch, _ in comments]
-            topic = any(
-                _TOPIC.search(str(row.get("title") or "") + " " + str(row.get("body") or "")) for row, _, _ in messages
-            )
-            if not topic:
-                continue
             thread_text = "\n".join(
                 str(row.get("title") or "") + "\n" + str(row.get("body") or "") for row, _, _ in messages
             )
             relevance = "undetermined" if shared_repository and not self.matches_paper(thread_text) else "relevant"
             if relevance == "undetermined":
                 self.limitations.append("A shared-repository thread does not identify which paper it concerns.")
-            source_ids, evidence_ids, responses, signals = [], [], [], []
+            source_ids, evidence_ids, responses, maintainer_responses, signals = [], [], [], [], []
             for message, fetch, kind in messages:
                 url = message.get("html_url")
                 if not isinstance(url, str) or not url.startswith("https://github.com/"):
@@ -846,6 +895,8 @@ class _Check:
                 source_ids.append(sid)
                 if text:
                     evidence_ids.append(self.external(text, sid))
+                if kind == "comment" and str(message.get("author_association") or "").upper() in _MAINTAINER_ROLES:
+                    maintainer_responses.append(sid)
                 if str(login).casefold() in author_logins and kind == "comment" and read_sid:
                     responses.append(sid)
                     source_ids.append(read_sid)
@@ -868,6 +919,7 @@ class _Check:
                     conditions="See quoted thread; datasets, metrics and settings were not normalized.",
                     resolution="unknown",
                     author_response_source_ids=responses,
+                    maintainer_response_source_ids=maintainer_responses,
                     scoring_eligible=False,
                     reason="Conservative English rule classification. Closed issue does not prove resolution. "
                     "Author replies require a full-name GitHub profile link in README matching paper author metadata. "
@@ -995,7 +1047,7 @@ def _scope_key(scope: dict) -> tuple:
 
 
 def intake_discovered_repositories(
-    ctx: CheckContext, result: CodeCheckResult, candidates, *, max_requests: int = 40
+    ctx: CheckContext, result: CodeCheckResult, candidates, *, max_requests: int | None = None
 ) -> CodeCheckResult:
     """Register source-bound discovery candidates without granting ownership.
 
@@ -1007,7 +1059,7 @@ def intake_discovered_repositories(
     if ctx.doc is None or not ctx.doc.blocks:
         return output
     checker = _Check(ctx)
-    checker.max_requests = min(40, max(0, max_requests))
+    checker.max_requests = min(source_read_cap(), max(0, source_read_cap() if max_requests is None else max_requests))
     checker.requests = output.external_request_count
     checker.evidence, checker.sources = output.evidence, output.sources
     checker.repositories, checker.discussions = output.checks.repositories, output.checks.discussions
@@ -1111,7 +1163,7 @@ def intake_discovered_repositories(
 
 
 def complete_confirmed_repositories(
-    ctx: CheckContext, result: CodeCheckResult, *, max_requests: int = 40
+    ctx: CheckContext, result: CodeCheckResult, *, max_requests: int | None = None
 ) -> CodeCheckResult:
     """Complete newly confirmed repository evidence, once, within the same budget.
 
@@ -1126,7 +1178,7 @@ def complete_confirmed_repositories(
         # collection plan ran. Keep the producer's not_run/failed state.
         return output
     checker = _Check(ctx)
-    checker.max_requests = min(40, max(0, max_requests))
+    checker.max_requests = min(source_read_cap(), max(0, source_read_cap() if max_requests is None else max_requests))
     checker.requests = output.external_request_count
     checker.evidence, checker.sources = output.evidence, output.sources
     checker.repositories, checker.discussions = output.checks.repositories, output.checks.discussions
@@ -1199,6 +1251,8 @@ def complete_confirmed_repositories(
         (value for value in ("failure_reported", "success_reported", "discussion_only") if value in signals),
         output.checks.reproduction_signal,
     )
+    if signal == "discussion_only" and not checker.discussion_complete:
+        signal = "unable_to_verify"
     if not signals and checker.discussion_ran and checker.discussion_complete and not checker.discussions:
         signal = "no_feedback_found"
     completed = checker.finish(

@@ -396,7 +396,7 @@ def test_stage_record_exposes_status_payload_and_original_attempt_without_promot
     store.save_stage("cred_storage", lease, "reference_check", "fp", {"items": [{"id": "r1"}]},
                      status=checkpoint_status)
     record = store.load_stage_record("cred_storage", "reference_check", "fp")
-    assert record == {"status": checkpoint_status, "payload": {"items": [{"id": "r1"}]}, "attempt": 1}
+    assert record == {"status": checkpoint_status, "note": None, "payload": {"items": [{"id": "r1"}]}, "attempt": 1}
     record["payload"]["items"][0]["id"] = "caller mutation"
     assert store.load_stage_record("cred_storage", "reference_check", "fp")["payload"] == {"items": [{"id": "r1"}]}
     if checkpoint_status == "completed":
@@ -574,3 +574,55 @@ def test_lease_owner_tag_is_validated(durable, owner):
     with pytest.raises(ValueError, match="owner"):
         store.fail_interrupted_tasks(owner, RESTARTED)
     assert store.load_task("cred_storage")["status"] == "queued"
+
+
+def test_stage_statuses_report_finished_checks_without_payloads(durable):
+    store, _sessions, _clock, _url = durable
+    create(store)
+    assert store.stage_statuses("missing") is None
+    lease = store.claim_task("cred_storage", fingerprint="task-fp-v1")
+    assert store.stage_statuses("cred_storage") == {}
+    store.save_stage("cred_storage", lease, "claim_check", "claim-fp", {"claims": [1]})
+    store.save_stage("cred_storage", lease, "code_check", "code-fp", {"repos": []}, status="partial")
+    statuses = store.stage_statuses("cred_storage")
+    assert {name: s["status"] for name, s in statuses.items()} == {"claim_check": "completed", "code_check": "partial"}
+    assert all(s["finished_at"].endswith("Z") for s in statuses.values())
+
+
+def test_cancel_fails_a_running_task_and_its_worker_can_no_longer_write(durable):
+    store, _sessions, _clock, _url = durable
+    create(store)
+    lease = store.claim_task("cred_storage", fingerprint="task-fp-v1")
+    error = {"code": "CANCELLED", "message": "Cancelled.", "retryable": True}
+    cancelled = store.cancel_task("cred_storage", error)
+    assert cancelled["status"] == "failed" and cancelled["error"]["code"] == "CANCELLED"
+    assert store.load_task("cred_storage")["status"] == "failed"
+    with pytest.raises(StaleLease):
+        store.update_task("cred_storage", lease, progress_percent=80)
+    # A finished task is left as it is.
+    assert store.cancel_task("cred_storage", error) is None
+
+
+def test_delete_removes_a_finished_task_but_never_a_running_one(durable):
+    store, _sessions, _clock, _url = durable
+    create(store)
+    lease = store.claim_task("cred_storage", fingerprint="task-fp-v1")
+    store.save_stage("cred_storage", lease, "claim_check", "claim-fp", {"claims": [1]})
+    assert store.delete_task("cred_storage") == "running"
+    store.cancel_task("cred_storage", {"code": "CANCELLED", "message": "Cancelled.", "retryable": True})
+    assert store.delete_task("cred_storage") == "deleted"
+    assert store.load_task("cred_storage") is None and store.stage_statuses("cred_storage") is None
+    assert store.delete_task("cred_storage") == "missing"
+
+
+def test_a_check_stopped_by_the_user_is_marked_in_the_stage_statuses(durable):
+    store, _, _, _ = durable
+    create(store)
+    lease = store.claim_task("cred_storage")
+    store.save_stage("cred_storage", lease, "code_check", "fp", {"error": {"code": "STOPPED_BY_USER"}},
+                     status="failed", note="STOPPED_BY_USER")
+    store.save_stage("cred_storage", lease, "claim_check", "fp", {"claims": []})
+    statuses = store.stage_statuses("cred_storage")
+    assert statuses["code_check"]["status"] == "failed" and statuses["code_check"]["stopped_by_user"] is True
+    assert "stopped_by_user" not in statuses["claim_check"]
+    assert store.load_stage_record("cred_storage", "code_check", "fp")["note"] == "STOPPED_BY_USER"

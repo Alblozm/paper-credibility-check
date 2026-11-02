@@ -4,8 +4,8 @@ import { describe, expect, it, vi } from 'vitest'
 import { InputWorkspace } from './InputWorkspace'
 
 const options = {
-  venues: window.PCC_MOCK.venues,
-  models: window.PCC_MOCK.models,
+  venues: window.PAPERTRACE_MOCK.venues,
+  models: window.PAPERTRACE_MOCK.models,
 }
 
 function renderWorkspace(onSubmit = vi.fn(), modelOptions = options.models) {

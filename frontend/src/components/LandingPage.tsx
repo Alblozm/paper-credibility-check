@@ -43,7 +43,7 @@ export function LandingPage({ onStart }: Props) {
         <div className="hero-copy">
           <h1 id="landing-title">Read the paper that is worth reading</h1>
           <p className="hero-lead">
-            Paper Credibility Check scores a machine learning paper across five dimensions and anchors every
+            PaperTrace scores a machine learning paper across five dimensions and anchors every
             judgement to the page, section, table or figure it came from — so you can check
             the reasoning instead of trusting it.
           </p>

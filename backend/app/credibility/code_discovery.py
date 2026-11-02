@@ -16,7 +16,8 @@ from urllib.parse import parse_qsl, unquote, urljoin, urlsplit, urlunsplit
 
 from pydantic import Field, ValidationError, model_validator
 
-from app.credibility.code_checks import _norm, _repo
+from app.credibility import live
+from app.credibility.code_checks import _norm, _repo, source_read_cap
 from app.credibility.code_discovery_provider import _basic_url_reason, page_content_problem
 from app.credibility.code_lookup import now
 from app.credibility.context import paper_from_context
@@ -340,7 +341,8 @@ class DiscoverySession:
             status="not_run", reason="External discovery has not completed.",
             queries=paper_queries(ctx, max_queries),
             budget=CredibilityCodeDiscoveryBudget(max_queries=max_queries, max_candidates=max_candidates,
-                max_source_reads=min(max_queries + max_fetches, max(0, 40 - result.external_request_count)),
+                max_source_reads=min(max_queries + max_fetches,
+                                     max(0, source_read_cap() - result.external_request_count)),
                 max_tool_calls=max_calls),
         )
         self.result.discovery = self.summary
@@ -740,6 +742,7 @@ def discover_code(ctx, result, client, provider, *, max_rounds=4, max_queries=3,
                 choice = ("none" if final_repair or reserve_repair or session.implementation_lead_read()
                           or index == max_rounds - 1 or len(session.calls) >= max_calls
                           else "auto")
+                live.raise_if_cancelled()
                 response = client.complete_tools(messages, TOOL_DEFINITIONS,
                                                  max_tokens=max_output_tokens, tool_choice=choice)
             except Exception as exc:
@@ -752,8 +755,10 @@ def discover_code(ctx, result, client, provider, *, max_rounds=4, max_queries=3,
                                   "completion_tokens": response.usage.completion_tokens})
             attempt["result_snapshot_ref"] = capture_snapshot(kind="code_discovery_model_attempt_result",
                 normalized_json=attempt, parent_ref=attempt["attempt_snapshot_ref"])
+            live.note("external_code_discovery_native_tools")
             output.model_calls.append(CredibilityModelCall(purpose="external_code_discovery_native_tools",
-                provider="deepseek" if "deepseek" in type(client).__module__.lower() else type(client).__module__,
+                provider=getattr(client, "provider", None) if isinstance(getattr(client, "provider", None), str)
+                else "deepseek" if "deepseek" in type(client).__module__.lower() else type(client).__module__,
                 model_version=response.model_version))
             # Internal reasoning travels only to the next provider request, never snapshots.
             messages.append(response.assistant_message)

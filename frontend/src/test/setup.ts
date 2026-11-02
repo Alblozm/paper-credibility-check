@@ -47,7 +47,7 @@ const baseAssessment: Assessment = {
   completed_at: '2026-08-28T06:30:00Z',
 }
 
-window.PCC_MOCK = {
+window.PAPERTRACE_MOCK = {
   venues: [venue],
   models: [model],
   stages: [],

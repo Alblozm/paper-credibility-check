@@ -494,6 +494,12 @@ export const mockCredibilityApi: CredibilityApi = {
     }
     return clone(record.assessment)
   },
+  async deleteAssessment(assessmentId) {
+    const record = records.get(assessmentId)
+    if (!record) throw new Error('No local credibility fixture exists with that ID.')
+    if (record.assessment.status !== 'completed' && record.assessment.status !== 'failed') throw new Error('The assessment is still running.')
+    records.delete(assessmentId)
+  },
   async listAssessments(search = '', offset = 0) {
     const needle = search.trim().toLowerCase()
     const items = [...records.values()].map(record => record.assessment)

@@ -749,6 +749,123 @@ def test_benchmark_identity_comes_from_same_authoritative_context_as_report(ctx,
     assert client.inputs[0]["review_target_ids"] == {"repositories": ["repo1"], "discussions": []}
 
 
+class EnvelopeReviewClient:
+    model_id, model_version, supports_native_tools = "test", "test", True
+
+    def __init__(self, *outputs):
+        self.outputs, self.inputs, self.options = outputs, [], []
+
+    def _next(self, task, options):
+        self.inputs.append(copy.deepcopy(task))
+        self.options.append(options)
+        return self.outputs[min(len(self.inputs) - 1, len(self.outputs) - 1)]
+
+    def complete_json(self, system, user, **kwargs):
+        raw = self._next(json.loads(user), kwargs)
+        return LLMResponse(raw, self.model_id, self.model_version)
+
+    def complete_tools(self, messages, tools, **kwargs):
+        raw = self._next(messages, kwargs)
+        return LLMToolResponse(raw, [], {"role": "assistant", "content": raw}, self.model_id, self.model_version)
+
+
+def _envelope_judgments(body):
+    return {"repositories": [], "discussions": [{
+        "discussion_id": "disc1", "signal": "failure_reported", "relevance": "relevant",
+        "resolution": "unknown", "conditions": "The reporter cannot reproduce accuracy; the tiny dataset is missing.",
+        "reason": "The same thread reports a reproduction difficulty without a confirmed outcome.",
+        "citations": [{"source_id": "src_issue", "excerpt": body}],
+    }]}
+
+
+@pytest.mark.parametrize("mode", ["prefetch", "native_tools"])
+@pytest.mark.parametrize("language", ["json", ""])
+def test_whole_json_fence_is_validated_without_retry_and_raw_is_archived(ctx, result, mode, language):
+    body = add_discussion(result)
+    payload = _envelope_judgments(body)
+    raw = " \n```" + language + "\n" + json.dumps(payload) + "\n```\n "
+    client, lookup = EnvelopeReviewClient(raw), Lookup()
+    output = enrich_code_checks(ctx, result, client, mode=mode, lookup=lookup)
+    assert output.status == "completed" and len(output.model_calls) == output.audit["attempt_count"] == 1
+    assert "repair_attempts" not in output.audit
+    assert lookup.urls == ([API + "/issues/2/comments?per_page=30&page=1"] if mode == "prefetch" else [])
+    assert read_snapshot(output.audit["raw_output_snapshot_ref"]).normalized_text == raw
+    assert read_snapshot(output.audit["output_snapshot_ref"]).normalized_json == payload
+    assert output.audit["output_normalization"] == {
+        "protocol": "json-or-single-markdown-json-fence-1",
+        "attempts": [{"raw_output_snapshot_ref": output.audit["raw_output_snapshot_ref"],
+                      "markdown_json_fence_removed": True}],
+    }
+    assert output.checks.dimension.score is None and not output.checks.checks.discussions[0].scoring_eligible
+
+
+@pytest.mark.parametrize("mode", ["prefetch", "native_tools"])
+@pytest.mark.parametrize("envelope", ["prefix", "suffix", "multiple_blocks"])
+def test_prose_or_multiple_json_fences_require_existing_bounded_repair(ctx, result, mode, envelope):
+    body = add_discussion(result)
+    framed = "```json\n" + json.dumps(_envelope_judgments(body)) + "\n```"
+    invalid = {"prefix": "Here is the review:\n" + framed,
+               "suffix": framed + "\nThis is my review.",
+               "multiple_blocks": framed + "\n" + framed}[envelope]
+    client, lookup = EnvelopeReviewClient(invalid, framed), Lookup()
+    output = enrich_code_checks(ctx, result, client, mode=mode, lookup=lookup)
+    assert output.status == "completed" and output.audit["attempt_count"] == 2
+    assert lookup.urls == ([API + "/issues/2/comments?per_page=30&page=1"] if mode == "prefetch" else [])
+    assert output.audit["repair_attempts"] == 1
+    assert output.audit["validation_issues"] == [{
+        "code": "SEMANTIC_SCHEMA_INVALID", "schema_error": "json_invalid", "path": [], "repaired": True,
+    }]
+    normalizations = output.audit["output_normalization"]["attempts"]
+    assert [item["markdown_json_fence_removed"] for item in normalizations] == [False, True]
+    assert read_snapshot(normalizations[0]["raw_output_snapshot_ref"]).normalized_text == invalid
+    if mode == "native_tools":
+        assert client.options[1]["tool_choice"] == "none"
+
+
+@pytest.mark.parametrize("mode", ["prefetch", "native_tools"])
+@pytest.mark.parametrize("invalid,code,calls", [
+    ("authority", "SEMANTIC_SCHEMA_INVALID", 1),
+    ("quote", "SEMANTIC_QUOTE_NOT_FOUND", 2),
+    ("source", "SEMANTIC_SOURCE_UNKNOWN", 1),
+])
+def test_json_fence_does_not_bypass_schema_quote_or_source_validation(ctx, result, mode, invalid, code, calls):
+    body = add_discussion(result)
+    payload = _envelope_judgments(body)
+    discussion = payload["discussions"][0]
+    if invalid == "authority":
+        discussion["independence"] = "independent"
+    elif invalid == "quote":
+        discussion["citations"][0]["excerpt"] = "Invented success statement absent from this thread."
+    else:
+        discussion["citations"][0]["source_id"] = "invented_source"
+    framed = "```json\n" + json.dumps(payload) + "\n```"
+    client, lookup = EnvelopeReviewClient(framed), Lookup()
+    output = enrich_code_checks(ctx, result, client, mode=mode, lookup=lookup)
+    assert output.status == "failed" and output.audit["attempt_count"] == calls
+    assert lookup.urls == ([API + "/issues/2/comments?per_page=30&page=1"] if mode == "prefetch" else [])
+    assert output.audit["validation_issue"]["code"] == code and "output_snapshot_ref" not in output.audit
+    assert output.checks.checks.discussions[0].conditions == "Unknown"
+    assert output.checks.checks.discussions[0].independence == "unknown"
+    assert all(row["markdown_json_fence_removed"] for row in output.audit["output_normalization"]["attempts"])
+
+
+@pytest.mark.parametrize("mode", ["prefetch", "native_tools"])
+def test_explicit_larger_output_budget_reaches_transport_without_changing_review(ctx, result, mode):
+    body = add_discussion(result)
+    client = EnvelopeReviewClient(json.dumps(_envelope_judgments(body)))
+    output = enrich_code_checks(ctx, result, client, mode=mode, max_output_tokens=65_536, lookup=Lookup())
+    assert output.status == "completed" and client.options[0]["max_tokens"] == 65_536
+    assert output.audit["attempt_count"] == 1 and output.checks.dimension.score is None
+
+
+@pytest.mark.parametrize("tokens", [999, 65_537])
+def test_invalid_output_budget_is_rejected_before_transport(ctx, result, tokens):
+    client = EnvelopeReviewClient("{}")
+    with pytest.raises(ValueError, match="Invalid external review model budget"):
+        enrich_code_checks(ctx, result, client, max_output_tokens=tokens, lookup=Lookup())
+    assert client.inputs == []
+
+
 class JsonRepairClient:
     model_id, model_version = "test", "test"
 
@@ -1248,6 +1365,79 @@ def test_shared_repository_thread_can_identify_this_paper_explicitly(ctx, result
     result.followup_state["repo1"] = {"shared_paper_ids": ["2401.12345", "2401.99999"]}
     output = enrich_code_checks(ctx, result, DiscussionClient(quote=body), mode="native_tools", lookup=Lookup())
     assert output.status == "completed" and output.checks.checks.discussions[0].relevance == "relevant"
+
+
+@pytest.mark.parametrize("shared_ids", [[], ["2401.12345"]])
+def test_single_paper_repository_keeps_relevant_when_model_says_undetermined(ctx, result, shared_ids):
+    body = "I attempted to reproduce your results but got total acc 7.48."
+    _thread_text(result, body)
+    result.checks.discussions[0].relevance = "relevant"
+    result.followup_state["repo1"] = {"shared_paper_ids": shared_ids}
+    client = DiscussionClient(quote=body, relevance="undetermined", resolution="disputed")
+    output = enrich_code_checks(ctx, result, client, mode="native_tools", lookup=Lookup())
+    discussion = output.checks.checks.discussions[0]
+    assert output.status == "completed" and discussion.relevance == "relevant"
+    assert discussion.resolution == "disputed" and not discussion.scoring_eligible
+    assert output.checks.checks.reproduction_signal == "failure_reported"
+    assert output.audit["semantic_guards"] == [{"code": "SINGLE_PAPER_REPOSITORY_RELEVANCE_RETAINED",
+                                                "discussion_id": "disc1"}]
+    assert "is not shared by multiple papers" in discussion.reason
+    assert "Interpreted only the original same-thread report." in discussion.reason
+
+
+def test_single_paper_repository_allows_quoted_irrelevance(ctx, result):
+    body = "This question is about the forked TensorFlow port, not this paper's code."
+    _thread_text(result, body)
+    result.checks.discussions[0].relevance = "relevant"
+    output = enrich_code_checks(ctx, result, DiscussionClient(quote=body, relevance="irrelevant"),
+                                mode="native_tools", lookup=Lookup())
+    assert output.status == "completed" and output.checks.checks.discussions[0].relevance == "irrelevant"
+    assert not output.audit["semantic_guards"]
+
+
+def test_shared_repository_undetermined_is_not_restored(ctx, result):
+    body = "I cannot reproduce the reported accuracy in this repository."
+    _thread_text(result, body)
+    result.checks.discussions[0].relevance = "relevant"
+    result.followup_state["repo1"] = {"shared_paper_ids": ["2401.12345", "2401.99999"]}
+    output = enrich_code_checks(ctx, result, DiscussionClient(quote=body, relevance="undetermined"),
+                                mode="native_tools", lookup=Lookup())
+    assert output.status == "completed" and output.checks.checks.discussions[0].relevance == "undetermined"
+    assert not output.audit["semantic_guards"]
+
+
+def test_metric_gap_thread_gets_top_review_priority(ctx, result):
+    from app.credibility.code_model import _discussion_priority
+
+    _thread_text(result, "Performance gap! I train this code only get 38.2 mAP on minival.")
+    assert _discussion_priority(result.checks.discussions[0], result) == 0
+
+
+def test_failed_review_names_unreviewed_result_level_threads(ctx, result):
+    _thread_text(result, "I train this code only get 38.2 mAP on minival.")
+
+    class BrokenClient(DiscussionClient):
+        def complete_tools(self, messages, tools, **kwargs):
+            return LLMToolResponse("not json", [], {"role": "assistant", "content": "not json"}, "test", "test")
+
+    output = enrich_code_checks(ctx, result, BrokenClient(quote=""), mode="native_tools", lookup=Lookup())
+    assert output.status in {"failed", "partial"}
+    assert output.checks.checks.discussions[0].signal == "failure_reported"  # rule label unchanged
+    assert any("not semantically reviewed" in w and "disc1" in w for w in output.warnings)
+
+
+def test_prompt_limits_thread_identity_rule_to_shared_repositories():
+    from app.credibility.code_model import _SYSTEM
+
+    assert "shared only when repository_supported_paper_ids lists two or more" in _SYSTEM
+    assert "In a non-shared repository, keep a supplied" in _SYSTEM
+
+
+def test_prompt_separates_unlabelled_test_split_and_value_attribution():
+    from app.credibility.code_model import _SYSTEM
+
+    assert "test split without public labels" in _SYSTEM and "not a reproduction failure" in _SYSTEM
+    assert "never attribute another implementation's number to the paper" in _SYSTEM
 
 
 def test_mixed_feedback_retains_different_settings_dispute_and_ineligible_status(ctx, result):

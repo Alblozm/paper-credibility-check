@@ -33,6 +33,10 @@ def deterministic_test_providers(monkeypatch, tmp_path):
     # tests of the production default (backend live parsing) opt out explicitly.
     monkeypatch.setattr(settings, "credibility_parse_source", "benchmark")
     monkeypatch.setattr(settings, "credibility_code_model_enabled", False)
+    # Existing provider fixtures isolate repository checking; reproduction-search tests opt in.
+    monkeypatch.setattr(settings, "credibility_code_reproduction_search_enabled", False)
+    # Budget-exhaustion fixtures are written against a 40-read cap; cap tests opt in explicitly.
+    monkeypatch.setattr(settings, "credibility_code_max_source_reads", 40)
     # Live-parse fixtures inject claim clients only; gate tests opt back in explicitly.
     monkeypatch.setattr(settings, "credibility_eligibility_gate_enabled", False)
     monkeypatch.setattr(settings, "credibility_release_classifier_enabled", False)

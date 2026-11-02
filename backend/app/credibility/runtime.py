@@ -37,6 +37,8 @@ def request_versions() -> dict:
     from app.credibility.code_discovery import PROMPT_VERSION as DISCOVERY_PROMPT_VERSION
     from app.credibility.code_discovery_provider import PROVIDER_VERSION as DISCOVERY_PROVIDER_VERSION
     from app.credibility.code_model import PROMPT_VERSION as CODE_PROMPT_VERSION
+    from app.credibility.code_reproduction_discovery import PROMPT_VERSION as REPRODUCTION_PROMPT_VERSION
+    from app.credibility.code_reproduction_discovery import REPRODUCTION_VERSION
     from app.credibility.paper_link_classifier import PROMPT_VERSION as LINK_PROMPT_VERSION
     from app.credibility.reference_agent import AGENT_VERSION as REFERENCE_AGENT_VERSION
     from app.credibility.reference_agent import PROMPT_VERSION as REFERENCE_AGENT_PROMPT_VERSION
@@ -71,6 +73,13 @@ def request_versions() -> dict:
         "code_discovery_fetches": settings.credibility_code_discovery_max_fetches,
         "code_discovery_rounds": settings.credibility_code_discovery_max_rounds,
         "code_discovery_tools": settings.credibility_code_discovery_max_tool_calls,
+        "code_source_reads": settings.credibility_code_max_source_reads,
+        "code_discussion_batch_size": settings.credibility_code_discussion_batch_size,
+        "code_max_reviewed_discussions": settings.credibility_code_max_reviewed_discussions,
+        "code_discussion_batch_rounds": settings.credibility_code_discussion_batch_rounds,
+        "code_reproduction_search": REPRODUCTION_VERSION,
+        "code_reproduction_prompt": REPRODUCTION_PROMPT_VERSION,
+        "code_reproduction_search_enabled": settings.credibility_code_reproduction_search_enabled,
         "reference_hints": REFERENCE_HINTS_VERSION,
         "reference_matching": REFERENCE_MATCHING_VERSION,
         "reference_version_resolver": REFERENCE_VERSION_RESOLVER_VERSION,
@@ -85,13 +94,15 @@ def request_versions() -> dict:
         "deepseek_model": settings.deepseek_model, "openai_model": settings.openai_model,
         "thinking": settings.deepseek_thinking_enabled, "effort": settings.deepseek_reasoning_effort,
         "openai_effort": settings.openai_reasoning_effort,
+        "anthropic_model": settings.anthropic_model, "gemini_model": settings.gemini_model,
         "code_model": settings.credibility_code_model_enabled,
         "tool_mode": settings.credibility_code_tool_mode,
         "tool_rounds": settings.credibility_code_max_rounds,
         "tool_calls": settings.credibility_code_max_tool_calls,
         "tool_characters": settings.credibility_code_max_characters,
         "tool_output_tokens": settings.credibility_code_max_output_tokens,
-        "endpoints_sha256": digest([settings.deepseek_base_url, settings.openai_base_url]),
+        "endpoints_sha256": digest([settings.deepseek_base_url, settings.openai_base_url,
+                                    settings.anthropic_base_url, settings.gemini_base_url]),
     }
 
 
@@ -188,6 +199,10 @@ class StageExecution:
         ):
             raise ValueError("Checkpoint artifact does not belong to this task/stage/version")
         return snapshot.normalized_json
+
+    def stopped_by_user(self, stage: str, fingerprint: str) -> bool:
+        record = self.store.load_stage_record(self.assessment_id, stage, fingerprint)
+        return bool(record) and record["status"] == "failed" and record.get("note") == "STOPPED_BY_USER"
 
     def load_partial(self, stage: str, fingerprint: str) -> dict | None:
         record = self.store.load_stage_record(self.assessment_id, stage, fingerprint)

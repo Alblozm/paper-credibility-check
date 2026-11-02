@@ -11,6 +11,9 @@ export const outcomeNames: Record<string, string> = {
 }
 export const categoryNames: Record<string, string> = { no_significant_concerns: 'No significant concerns found', some_concerns: 'Some concerns', significant_concerns: 'Significant concerns', critical_concerns: 'Critical concerns' }
 
+/** "24 Oct, 07:54": when a run started, short enough for a tab, a table cell or a status bar. */
+export const startedAt = (iso: string) => new Date(iso).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+
 export function duration(seconds: number) {
   const total = Math.max(1, Math.round(seconds))
   if (total < 60) return `${total} s`

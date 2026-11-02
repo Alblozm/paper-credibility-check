@@ -230,7 +230,7 @@ describe('CredibilityWorkspace', () => {
     }
     const scored = scoring002 as unknown as Assessment
     const scoringApi = {
-      getOptions: vi.fn().mockResolvedValue({ venues: window.PCC_MOCK.venues, models: [{ ...deepseek, is_default: true }] }),
+      getOptions: vi.fn().mockResolvedValue({ venues: window.PAPERTRACE_MOCK.venues, models: [{ ...deepseek, is_default: true }] }),
       createAssessment: vi.fn().mockResolvedValue({ assessment_id: scored.assessment_id, status: 'queued', stage: 'queued', progress_percent: 0, schema_version: '0.4', created_at: scored.created_at }),
       getAssessment: vi.fn().mockResolvedValue(scored), listAssessments: vi.fn(), retryAssessment: vi.fn(),
     } as unknown as AssessmentApi

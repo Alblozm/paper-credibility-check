@@ -441,9 +441,28 @@ class CredibilityTaskStore:
                 return None
             return {
                 "status": checkpoint.status,
+                "note": checkpoint.note,
                 "payload": copy.deepcopy(checkpoint.payload),
                 "attempt": checkpoint.attempt,
             }
+
+    def stage_statuses(self, assessment_id: str) -> dict[str, dict] | None:
+        """Latest checkpoint state per stage for progress display; payloads stay private."""
+        self._ensure_schema()
+        with self.sessions() as session:
+            task = session.get(CredibilityTaskRow, assessment_id)
+            if task is None:
+                return None
+            rows = session.scalars(select(CredibilityStageRow).where(
+                CredibilityStageRow.assessment_id == assessment_id,
+                CredibilityStageRow.task_fingerprint == task.fingerprint,
+            )).all()
+            latest: dict[str, dict] = {}
+            for row in sorted(rows, key=lambda r: r.updated_at):
+                latest[row.stage] = {"status": row.status, "finished_at": _iso_time(row.updated_at)}
+                if row.note == "STOPPED_BY_USER":
+                    latest[row.stage]["stopped_by_user"] = True
+            return latest
 
     def load_stage(self, assessment_id: str, stage: str, fingerprint: str) -> dict | None:
         self._ensure_schema()
@@ -482,6 +501,57 @@ class CredibilityTaskStore:
             return {"payload": payload, "status": "failed", "lease_token": None, "lease_until": None}, None
 
         return self._mutate(assessment_id, lease, change)
+
+    def cancel_task(self, assessment_id: str, error: dict) -> dict | None:
+        """Fail a queued or running task at the user's request; ``None`` when it already finished.
+
+        The lease is cleared in the same write, so the worker's next write fails as a stale lease and cannot
+        overwrite the cancellation. Checkpoints and the parsed paper stay for the record.
+        """
+        content = _json_copy(error)
+        self._ensure_schema()
+        for _ in range(8):
+            now = self._clock()
+            with self.sessions.begin() as session:
+                row = session.get(CredibilityTaskRow, assessment_id)
+                if row is None:
+                    raise TaskNotFound(assessment_id)
+                if row.status not in {"queued", "processing"}:
+                    return None
+                payload = self._merge_payload(row, {
+                    "status": "failed", "stage": "failed", "report": None,
+                    "error": {**content, "debug_id": assessment_id}, "completed_at": _iso_time(now),
+                })
+                result = session.execute(update(CredibilityTaskRow).where(
+                    CredibilityTaskRow.assessment_id == assessment_id,
+                    CredibilityTaskRow.revision == row.revision,
+                ).values(
+                    status="failed", payload=payload, revision=row.revision + 1,
+                    lease_token=None, lease_until=None, updated_at=now,
+                ), execution_options={"synchronize_session": False})
+                if result.rowcount == 1:
+                    return copy.deepcopy(payload)
+        raise LeaseConflict("The task changed concurrently; retry the cancellation")
+
+    def delete_task(self, assessment_id: str) -> str:
+        """Delete a finished task and its checkpoints: 'deleted', 'missing' or 'running' (left untouched).
+
+        Content-addressed snapshot objects stay, since other assessments may share them.
+        """
+        self._ensure_schema()
+        with self.sessions.begin() as session:
+            row = session.get(CredibilityTaskRow, assessment_id)
+            if row is None:
+                return "missing"
+            if row.status in {"queued", "processing"}:
+                return "running"
+            for checkpoint in session.scalars(select(CredibilityStageRow).where(
+                CredibilityStageRow.assessment_id == assessment_id,
+            )).all():
+                session.delete(checkpoint)
+            session.flush()
+            session.delete(row)
+            return "deleted"
 
     def release_task(self, assessment_id: str, lease: TaskLease, **fields: Any) -> dict:
         """Relinquish this attempt without discarding successful checkpoints."""

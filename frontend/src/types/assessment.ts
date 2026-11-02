@@ -172,6 +172,8 @@ export interface Assessment {
   created_at: string
   started_at: string | null
   completed_at: string | null
+  /** The credibility assessment it was started beside (one run); null when it was run on its own. */
+  credibility_assessment_id?: string | null
 }
 
 export interface AssessmentOptions {
@@ -192,6 +194,7 @@ export interface ReviewSummary {
   is_demo: boolean
   created_at: string
   completed_at: string | null
+  credibility_assessment_id?: string | null
 }
 
 export interface ReviewList {
@@ -201,9 +204,13 @@ export interface ReviewList {
   limit: number
 }
 
-export type CreateAssessmentRequest =
+export type CreateAssessmentRequest = (
   | { source_type: 'arxiv'; arxiv_id: string; venue_id: string; model_id: string }
   | { source_type: 'pdf'; file: File; venue_id: string; model_id: string }
+) & {
+  /** The credibility assessment of the same run, recorded by the server so every browser pairs the two. */
+  credibility_assessment_id?: string
+}
 
 export interface SelectedEvidence {
   reference: EvidenceReference
@@ -223,7 +230,7 @@ export interface EvidenceSelection {
 
 declare global {
   interface Window {
-    PCC_MOCK: {
+    PAPERTRACE_MOCK: {
       venues: VenueOption[]
       models: ModelOption[]
       stages: Array<{ stage: AssessmentStage; label: string; description: string; progress: number }>

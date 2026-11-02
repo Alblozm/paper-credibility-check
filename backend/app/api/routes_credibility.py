@@ -15,7 +15,7 @@ from fastapi import APIRouter, BackgroundTasks, HTTPException, Query
 
 from app.api.routes_options import list_models
 from app.config import get_settings
-from app.credibility import runtime
+from app.credibility import live, runtime
 from app.credibility.models import CreateCredibilityRequest, CredibilityAssessment, CredibilityAssessmentResponse
 from app.credibility.rubric import load_credibility_rubric
 from app.credibility.shell import PaperIneligible, PaperUnavailable, build_completed_assessment
@@ -51,10 +51,15 @@ def _run(
 
     store = runtime.get_task_store()
     fingerprint = runtime.request_fingerprint(source, model_id, rubric_version, runtime.request_versions())
-    lease = store.claim_task(
-        assessment_id, resume=resume, force=force,
-        lease_seconds=get_settings().credibility_lease_seconds, fingerprint=fingerprint, owner=owner,
-    )
+    try:
+        lease = store.claim_task(
+            assessment_id, resume=resume, force=force,
+            lease_seconds=get_settings().credibility_lease_seconds, fingerprint=fingerprint, owner=owner,
+        )
+    except LeaseConflict:
+        # Cancelled while still queued, or claimed elsewhere: nothing to run here.
+        logger.info("credibility assessment %s was not claimed (cancelled or claimed elsewhere)", assessment_id)
+        return
     execution = runtime.StageExecution(store, assessment_id, lease, fingerprint)
     execution.start_heartbeat()
     started_at = _now()
@@ -73,6 +78,9 @@ def _run(
             completed["report"]["generated_at"] = finished_at
         execution.save("report", fingerprint, {"assessment": completed})
         _TASKS[assessment_id] = store.finish_task(assessment_id, lease, completed)
+    except live.Cancelled:
+        # The cancel route already recorded the outcome; this worker only stops.
+        logger.info("credibility assessment %s stopped after the user cancelled it", assessment_id)
     except LeaseConflict:
         logger.warning("credibility assessment %s lost its execution lease", assessment_id)
     except LLMError as exc:
@@ -95,6 +103,7 @@ def _run(
               "The credibility check failed unexpectedly. Try again later.", True)
     finally:
         execution.stop_heartbeat()
+        live.forget(assessment_id)
 
 
 def _fail(
@@ -143,7 +152,7 @@ def create_credibility_assessment(body: CreateCredibilityRequest, background: Ba
     model = next(
         (item for item in list_models() if item.model_id == body.model_id and item.is_available), None
     )
-    if not offline_demo and (model is None or model.provider not in {"deepseek", "openai"}):
+    if not offline_demo and (model is None or model.provider not in {"deepseek", "openai", "anthropic", "google"}):
         raise HTTPException(
             status_code=400,
             detail={
@@ -217,6 +226,107 @@ def list_credibility_assessments(
             "completed_at": task.get("completed_at"),
         })
     return {"items": items[offset:offset + limit], "total": len(items), "offset": offset, "limit": limit}
+
+
+@router.delete("/v1/credibility/assessments/{assessment_id}", status_code=204)
+def delete_credibility_assessment(assessment_id: str) -> None:
+    """Delete a finished assessment from the history; a running one has to be cancelled first."""
+    outcome = runtime.get_task_store().delete_task(assessment_id)
+    if outcome == "missing":
+        raise HTTPException(status_code=404, detail={
+            "code": "ASSESSMENT_NOT_FOUND", "message": "Credibility assessment not found.", "debug_id": None,
+        })
+    if outcome == "running":
+        raise HTTPException(status_code=409, detail={
+            "code": "STILL_RUNNING", "message": "Cancel the assessment before deleting it.", "debug_id": assessment_id,
+        })
+    _TASKS.pop(assessment_id, None)
+    live.forget(assessment_id)
+    logger.info("credibility assessment %s deleted by the user", assessment_id)
+
+
+@router.post("/v1/credibility/assessments/{assessment_id}/cancel", response_model=CredibilityAssessmentResponse)
+def cancel_credibility_assessment(assessment_id: str) -> dict:
+    """Stop a queued or running assessment. It stays in the history as failed with ``CANCELLED`` (retryable)."""
+    from app.storage.credibility_tasks import TaskNotFound
+
+    try:
+        snapshot = runtime.get_task_store().cancel_task(assessment_id, {
+            "code": "CANCELLED", "message": "The assessment was cancelled before it finished.", "retryable": True,
+        })
+    except TaskNotFound:
+        raise HTTPException(status_code=404, detail={
+            "code": "ASSESSMENT_NOT_FOUND", "message": "Credibility assessment not found.", "debug_id": None,
+        }) from None
+    if snapshot is None:
+        raise HTTPException(status_code=409, detail={
+            "code": "NOT_RUNNING", "message": "The assessment has already finished.", "debug_id": assessment_id,
+        })
+    live.cancel(assessment_id)
+    logger.info("credibility assessment %s cancelled by the user", assessment_id)
+    _TASKS[assessment_id] = CredibilityAssessment.model_validate(snapshot).model_dump(mode="json")
+    return _TASKS[assessment_id]
+
+
+_CHECKS = ("claim_check", "reference_check", "code_check")
+
+
+@router.post("/v1/credibility/assessments/{assessment_id}/checks/{check}/stop", status_code=202)
+def stop_credibility_check(assessment_id: str, check: str) -> dict:
+    """Stop one check of a running assessment; the others carry on.
+
+    The stopped check ends as failed with ``STOPPED_BY_USER`` and its fallback score, so the report says plainly that
+    it was stopped rather than presenting a finding. It takes effect within about a second.
+    """
+    if check not in _CHECKS:
+        raise HTTPException(status_code=404, detail={
+            "code": "CHECK_NOT_FOUND", "message": f"Unknown check: {check}.", "debug_id": None,
+        })
+    store = runtime.get_task_store()
+    task = store.load_task(assessment_id)
+    if task is None:
+        raise HTTPException(status_code=404, detail={
+            "code": "ASSESSMENT_NOT_FOUND", "message": "Credibility assessment not found.", "debug_id": None,
+        })
+    if task["status"] not in {"queued", "processing"}:
+        raise HTTPException(status_code=409, detail={
+            "code": "NOT_RUNNING", "message": "The assessment has already finished.", "debug_id": assessment_id,
+        })
+    if check in (store.stage_statuses(assessment_id) or {}):
+        raise HTTPException(status_code=409, detail={
+            "code": "CHECK_FINISHED", "message": "This check has already finished.", "debug_id": assessment_id,
+        })
+    live.stop_check(assessment_id, check)
+    logger.info("credibility assessment %s: %s stopped by the user", assessment_id, check)
+    return {"assessment_id": assessment_id, "check": check, "stop_requested": True}
+
+
+@router.get("/v1/credibility/assessments/{assessment_id}/progress")
+def get_credibility_progress(assessment_id: str) -> dict:
+    """Which of the three checks have finished. Display only; the full snapshot stays the source of truth."""
+    store = runtime.get_task_store()
+    task = store.load_task(assessment_id)
+    if task is None:
+        raise HTTPException(
+            status_code=404,
+            detail={"code": "ASSESSMENT_NOT_FOUND", "message": "Credibility assessment not found.", "debug_id": None},
+        )
+    stages = store.stage_statuses(assessment_id) or {}
+    steps = live.summary(assessment_id)
+    checks = {}
+    for name in _CHECKS:
+        if name in stages:
+            checks[name] = dict(stages[name])
+        else:
+            checks[name] = {"status": "running" if task["stage"] == "checking" else "waiting", "finished_at": None}
+            if live.stop_requested(assessment_id, name):
+                checks[name]["stop_requested"] = True
+        # Sub-steps while the check runs: model calls by purpose, e.g. claim_judgment × 4.
+        checks[name].update(steps.get(name, {"started_at": None, "steps": {}, "last_step": None, "last_at": None}))
+    return {
+        "assessment_id": assessment_id, "status": task["status"], "stage": task["stage"],
+        "progress_percent": task["progress_percent"], "started_at": task.get("started_at"), "checks": checks,
+    }
 
 
 @router.get("/v1/credibility/assessments/{assessment_id}", response_model=CredibilityAssessmentResponse)

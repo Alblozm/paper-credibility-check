@@ -1,4 +1,4 @@
-"""可信度核查（任务一）：独立入口、轮询、主张对照、证据定位、条件守卫与计分。"""
+"""可信度核查（主张检查）：独立入口、轮询、主张对照、证据定位、条件守卫与计分。"""
 
 from __future__ import annotations
 
@@ -533,7 +533,7 @@ def test_stub_parser_is_never_used_for_credibility(fake_ctx: CheckContext):
     assert "parser_provider=stub" in (ctx.unresolved_reason or "")
 
 
-# --- 与任务二、任务三的接缝 ----------------------------------------------------
+# --- 与引用检查、代码检查的接缝 ----------------------------------------------------
 
 
 def test_reference_and_code_checks_take_the_shared_context():

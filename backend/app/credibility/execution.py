@@ -9,14 +9,19 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
 
 from app.config import get_settings
+from app.credibility import live
 from app.credibility.models import ClaimCheckResult, CodeCheckResult, ReferenceCheckResult
 from app.credibility.runtime import StageExecution, digest, encode_context
 
 logger = logging.getLogger(__name__)
 
 
-def failed_check(name, ctx, exc):
-    message = f"{name} could not complete ({type(exc).__name__}); no positive or negative finding was inferred."
+STOPPED_BY_USER = "STOPPED_BY_USER"
+
+
+def failed_check(name, ctx, exc, message=None):
+    message = message or (f"{name} could not complete ({type(exc).__name__}); "
+                          "no positive or negative finding was inferred.")
     if name == "claim_check":
         from app.credibility.claim_model import PROMPT_VERSION
         from app.credibility.claims import _not_run
@@ -45,6 +50,7 @@ def check_code_with_model(ctx):
         check_code,
         complete_confirmed_repositories,
         intake_discovered_repositories,
+        source_read_cap,
     )
     from app.credibility.code_discovery import discover_code, finalize_discovery
 
@@ -78,17 +84,64 @@ def check_code_with_model(ctx):
         result.discovery.status = "disabled"
         result.discovery.reason = "Model-assisted code checking is disabled; external discovery was not run."
         return result
-    from app.credibility.code_model import enrich_code_checks
+    from app.credibility.code_model import (
+        _discussion_needs_review,
+        _unreviewed_result_feedback_warning,
+        enrich_code_checks,
+    )
     from app.credibility.snapshots import capture_snapshot
     from app.pipeline.orchestrator import build_llm_client
 
     passes, calls, warnings = [], historical_calls, []
+    attempted_discussions: set[str] = set()
     discovery_audit = {}
     model_remaining = settings.credibility_code_max_rounds
     tools_remaining = settings.credibility_code_max_tool_calls
     review_status, prompt_version = "not_needed", "not_run"
     had_partial_review = False
     followup = {"new_discussion_ids": [], "executed": False}
+
+    def review_all_discussions():
+        """Later batches cover discussions the first passes left; each target is attempted once."""
+        nonlocal review_status
+        attempted = attempted_discussions
+        cap = settings.credibility_code_max_reviewed_discussions
+        batches = 0
+        while True:
+            rejected = {repo.repository_id for repo in result.checks.repositories if repo.association == "rejected"}
+            pending = [item.discussion_id for item in result.checks.discussions
+                       if item.discussion_id not in attempted and item.repository_id not in rejected
+                       and _discussion_needs_review(item)]
+            room = cap - len(attempted)
+            # An exhausted shared budget keeps its recorded gap; batches only extend coverage.
+            if not pending or room <= 0 or model_remaining <= 0:
+                break
+            before, size = review_status, len(attempted)
+            review(repository_ids=[], discussion_ids=pending,
+                              batch_rounds=settings.credibility_code_discussion_batch_rounds,
+                              max_discussions=min(settings.credibility_code_discussion_batch_size, room))
+            if before in {"partial", "failed"} and review_status in {"completed", "not_needed"}:
+                review_status = before  # a later success cannot erase an earlier incomplete pass
+            if len(attempted) == size:
+                break
+            batches += 1
+        followup["discussion_batches"] = batches
+        # Earlier passes reported their own leftovers; restate coverage once for the whole run.
+        stale = ("Semantic discussion item budget reached", "Possible result-level feedback")
+        result.checks.scope_limitations = [v for v in result.checks.scope_limitations if not v.startswith(stale)]
+        warnings[:] = [v for v in warnings if not v.startswith(stale)]
+        rejected = {repo.repository_id for repo in result.checks.repositories if repo.association == "rejected"}
+        left = [item.discussion_id for item in result.checks.discussions
+                if item.discussion_id not in attempted and item.repository_id not in rejected
+                and _discussion_needs_review(item)]
+        if left:
+            message = (f"Semantic discussion review attempted {len(attempted)} threads (cap {cap}); "
+                       f"{len(left)} keep rule labels only.")
+            result.checks.scope_limitations.append(message)
+            warnings.append(message)
+            if flagged := _unreviewed_result_feedback_warning(left, result):
+                result.checks.scope_limitations.append(flagged)
+                warnings.append(flagged)
 
     def mark_gap(message):
         nonlocal review_status
@@ -99,9 +152,10 @@ def check_code_with_model(ctx):
         if message not in warnings:
             warnings.append(message)
 
-    def review(*, discussion_ids=None, repository_ids=None):
+    def review(*, discussion_ids=None, repository_ids=None, batch_rounds=None, max_discussions=None):
+        """batch_rounds: a later discussion batch with its own round allowance (shared budget untouched)."""
         nonlocal result, model_remaining, tools_remaining, review_status, prompt_version, had_partial_review
-        remaining_requests = max(0, 40 - result.external_request_count)
+        remaining_requests = max(0, source_read_cap() - result.external_request_count)
         options = {}
         if repository_ids is not None:
             options["target_repository_ids"] = repository_ids
@@ -109,23 +163,27 @@ def check_code_with_model(ctx):
             options["target_discussion_ids"] = discussion_ids
         reviewed = enrich_code_checks(
             ctx, result, client, mode=settings.credibility_code_tool_mode,
-            max_rounds=model_remaining, max_tool_calls=min(tools_remaining, remaining_requests),
+            max_rounds=batch_rounds or model_remaining, max_tool_calls=min(tools_remaining, remaining_requests),
             max_characters=settings.credibility_code_max_characters,
-            max_output_tokens=settings.credibility_code_max_output_tokens, **options,
+            max_output_tokens=settings.credibility_code_max_output_tokens,
+            max_discussions=max_discussions or settings.credibility_code_discussion_batch_size, **options,
         )
         result = reviewed.checks
         passes.append(reviewed.audit)
+        attempted_discussions.update(reviewed.audit.get("target_discussion_ids", discussion_ids or []))
         calls.extend(reviewed.model_calls)
         warnings.extend(reviewed.warnings)
         prompt_version, review_status = reviewed.prompt_version, reviewed.status
         had_partial_review |= reviewed.status == "partial"
         attempts = reviewed.audit.get("attempt_count", len(reviewed.model_calls))
-        model_remaining = max(0, model_remaining - attempts)
+        if batch_rounds is None:
+            model_remaining = max(0, model_remaining - attempts)
         tools_remaining = max(0, tools_remaining - reviewed.audit.get("tool_call_count", 0))
         if reviewed.status in {"failed", "unsupported", "partial"}:
             result.dimension.check_status = "partial"
         return reviewed
 
+    client = None
     try:
         from app.credibility.code_discovery_provider import discovery_provider_for
 
@@ -145,7 +203,7 @@ def check_code_with_model(ctx):
             result.discovery.reason = "Existing source-bound implementation/non-applicability evidence is sufficient."
         elif ctx.doc is None or not ctx.doc.blocks:
             result.discovery.reason = "No usable parsed paper is available for an identity-bound search."
-        elif result.external_request_count >= 40:
+        elif result.external_request_count >= source_read_cap():
             result.discovery.status = "partial"
             result.discovery.reason = "Shared source-read budget exhausted before external code discovery."
             had_partial_review = True
@@ -153,7 +211,7 @@ def check_code_with_model(ctx):
         elif not getattr(client, "supports_native_tools", False) or (provider := discovery_provider_for(
             client, max_requests=min(
                 settings.credibility_code_discovery_max_queries + settings.credibility_code_discovery_max_fetches,
-                max(0, 40 - result.external_request_count),
+                max(0, source_read_cap() - result.external_request_count),
             ), deadline_seconds=600,
         )) is None:
             result.discovery.status = "disabled"
@@ -168,7 +226,8 @@ def check_code_with_model(ctx):
                 max_output_tokens=settings.credibility_code_max_output_tokens)
             result, discovery_audit = discovered.result, discovered.audit
             calls.extend(discovered.model_calls)
-            result = intake_discovered_repositories(ctx, result, discovered.intake_candidates, max_requests=40)
+            result = intake_discovered_repositories(ctx, result, discovered.intake_candidates,
+                                                    max_requests=source_read_cap())
             if result.discovery.status in {"failed", "partial"}:
                 had_partial_review = True
                 mark_gap(result.discovery.reason)
@@ -193,7 +252,7 @@ def check_code_with_model(ctx):
         accepted_partial = first.status == "partial" and bool(first.audit.get("output_snapshot_ref"))
         if first.status in {"completed", "not_needed"} or accepted_partial:
             old_discussions = {item.discussion_id for item in result.checks.discussions}
-            result = complete_confirmed_repositories(ctx, result, max_requests=40)
+            result = complete_confirmed_repositories(ctx, result, max_requests=source_read_cap())
             followup["executed"] = True
             added = sorted({item.discussion_id for item in result.checks.discussions} - old_discussions)
             followup["new_discussion_ids"] = added
@@ -217,6 +276,7 @@ def check_code_with_model(ctx):
                     review(repository_ids=[], discussion_ids=active_discussions)
             if result.dimension.check_status == "partial" and review_status in {"completed", "not_needed"}:
                 review_status = "partial"
+        review_all_discussions()
     except Exception as exc:
         logger.warning("external model review failed: %s", type(exc).__name__)
         result.dimension.check_status = "partial"
@@ -224,6 +284,41 @@ def check_code_with_model(ctx):
         review_status = "failed"
         warnings.append(f"External review or continuation failed ({type(exc).__name__}).")
         followup["error_code"] = type(exc).__name__
+    # External reports are a separate snippet-only lead search. Available official
+    # code and a failed discussion pass must not suppress this bounded follow-up.
+    if settings.credibility_code_discovery_enabled and settings.credibility_code_reproduction_search_enabled:
+        from app.credibility.code_reproduction_discovery import search_reproduction_reports
+
+        try:
+            remaining = max(0, source_read_cap() - result.external_request_count)
+            provider = (discovery_provider_for(client, max_requests=min(2, remaining), deadline_seconds=60)
+                        if getattr(client, "supports_native_tools", False) else None)
+            reports = search_reproduction_reports(
+                ctx, result, client, provider, max_source_reads=source_read_cap(),
+            )
+            result = reports.result
+            calls.extend(reports.model_calls)
+            warnings.extend(reports.warnings)
+            discovery_audit["reproduction_reports"] = reports.audit
+            for key in ("rounds", "attempts", "attempt_refs", "tool_calls"):
+                discovery_audit.setdefault(key, []).extend(reports.audit.get(key, []))
+            discovery_audit["attempt_count"] = (
+                discovery_audit.get("attempt_count", 0) + reports.audit.get("attempt_count", 0)
+            )
+            followup["reproduction_reports"] = {
+                "status": reports.status,
+                "reused": bool(reports.audit.get("reused_audit_ref")),
+            }
+            if reports.status in {"partial", "failed"}:
+                had_partial_review = True
+                result.dimension.check_status = "partial"
+        except Exception as exc:
+            # Keep all earlier source-bound results if this optional step fails.
+            had_partial_review = True
+            message = f"External reproduction report search failed ({type(exc).__name__})."
+            result.checks.scope_limitations.append(message)
+            warnings.append(message)
+            followup["reproduction_reports"] = {"status": "failed", "error_code": type(exc).__name__}
     # Accepted positive judgments can drive safe deterministic collection even
     # when another tool read failed. Successful continuation cannot erase that
     # recorded partial semantic pass.
@@ -244,9 +339,12 @@ def check_code_with_model(ctx):
         "discovery": discovery_audit,
         "discovery_audit_ref": result.discovery.audit_ref,
         "max_combined_model_rounds": settings.credibility_code_discovery_max_rounds
-            + settings.credibility_code_max_rounds,
+            + settings.credibility_code_max_rounds
+            + followup.get("discussion_batches", 0) * settings.credibility_code_discussion_batch_rounds
+            + int(settings.credibility_code_reproduction_search_enabled),
         "max_combined_tool_calls": settings.credibility_code_discovery_max_tool_calls
-            + settings.credibility_code_max_tool_calls,
+            + settings.credibility_code_max_tool_calls
+            + 2 * int(settings.credibility_code_reproduction_search_enabled),
     }
     for key in ("rounds", "attempts", "attempt_refs", "tool_calls"):
         audit[key] = [row for item in passes for row in item.get(key, [])]
@@ -287,6 +385,17 @@ def _result_state(result) -> str:
     return "partial" if failed_sources or review_failed else "completed"
 
 
+def stopped_check(name, ctx):
+    """The result of a check the reader stopped: failed with a fallback score, saying so plainly."""
+    message = (f"{name} was stopped by the user before it finished; "
+               "no positive or negative finding was inferred.")
+    # Outside the check's live scope, so building the fallback cannot trip the stop flag again.
+    with live.scope(None, name):
+        result = failed_check(name, ctx, None, message)
+    return result, {"status": "failed", "reused": False, "stopped_by_user": True,
+                    "error": {"code": STOPPED_BY_USER, "retryable": False}}
+
+
 def run_checks(ctx, checks, execution: StageExecution | None = None):
     settings = get_settings()
     lock = threading.Lock()
@@ -299,6 +408,15 @@ def run_checks(ctx, checks, execution: StageExecution | None = None):
     ]
 
     def run(spec):
+        name = spec[0]
+        with live.scope(getattr(ctx, "assessment_id", None), name):
+            try:
+                live.note("started")
+            except live.CheckStopped:
+                pass  # stopped before it began; run_check records it without running
+            return run_check(spec)
+
+    def run_check(spec):
         name, fn, model = spec
         start = time.monotonic()
         branch = copy.copy(ctx)
@@ -322,8 +440,17 @@ def run_checks(ctx, checks, execution: StageExecution | None = None):
                 # only this validated legacy misclassification before replacing
                 # it with the next attempt's actual failed/partial state.
                 execution.store.discard_stage(execution.assessment_id, execution.lease, name, fingerprint)
+        stopped_earlier = execution is not None and execution.stopped_by_user(name, fingerprint)
         if reusable:
             event = {"status": "completed", "reused": True}
+        elif stopped_earlier:
+            # A check the reader stopped stays stopped when the task resumes after a restart.
+            result, event = stopped_check(name, branch)
+        elif live.stop_requested(getattr(ctx, "assessment_id", None) or "", name):
+            result, event = stopped_check(name, branch)
+            if execution:
+                execution.record(name, fingerprint, {"error": event["error"]}, status="failed",
+                                 note=STOPPED_BY_USER)
         else:
             try:
                 partial = cached or (execution.load_partial(name, fingerprint) if execution else None)
@@ -340,6 +467,12 @@ def run_checks(ctx, checks, execution: StageExecution | None = None):
                 if execution:
                     execution.record(name, fingerprint, {"result": result.model_dump(mode="json")}, status=state)
                 event = {"status": state, "reused": False}
+            except live.CheckStopped:
+                logger.info("%s stopped by the user", name)
+                result, event = stopped_check(name, branch)
+                if execution:
+                    execution.record(name, fingerprint, {"error": event["error"]}, status="failed",
+                                     note=STOPPED_BY_USER)
             except Exception as exc:
                 # A stale lease is an ownership failure, not a paper-check result.
                 from app.storage.credibility_tasks import LeaseConflict

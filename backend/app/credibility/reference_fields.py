@@ -7,6 +7,7 @@ when its letters and digits appear in that entry, so nothing is invented.
 """
 from __future__ import annotations
 
+import contextvars
 import re
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor
@@ -75,8 +76,9 @@ def parse_reference_fields(
         return batch_calls, labels
 
     with ThreadPoolExecutor(max_workers=min(3, len(batches))) as pool:
+        # Each batch carries the caller's context, so its model calls count towards this check's progress.
         results = [label_or_none(lambda fn=future: fn.result(), PURPOSE)
-                   for future in [pool.submit(run, batch) for batch in batches]]
+                   for future in [pool.submit(contextvars.copy_context().run, run, batch) for batch in batches]]
     if all(result is None for result in results):
         return None
     fields: list[dict | None] = [None] * len(raws)

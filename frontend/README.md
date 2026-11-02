@@ -2,17 +2,21 @@
 
 **English** · [中文](README.zh-CN.md)
 
-React + TypeScript + Vite web app for Paper Credibility Check. The interface is in English. Text returned by the backend, such as `message` and `summary`, is shown as is.
+The PaperTrace web app: React 19, TypeScript, Vite, Tailwind CSS 4, TanStack Router and Query, and pdf.js. The interface is in English.
 
 ## Pages
 
-One top bar with three sections:
+- **Start page** (`/`): choose arXiv or PDF, pick a model (GPT, Claude, Gemini or DeepSeek, whichever the backend offers), and keep "Include a five-dimension quality assessment" ticked to score quality in the same run.
+- **Waiting page**: a progress dial, the current stage of each check with an estimated time range, and the quality assessment's own progress. You can stop one slow check ("Stop check") or the whole run ("Cancel assessment"). Every run keeps a tab in the title bar, so you can leave and come back.
+- **Run page** (`/check/$id`): two switches at the top choose the part (**Credibility** or **Quality**) and, for credibility, the view.
+  - **Paper** view: the PDF with evidence highlighted in place. The left panel has Outline, Pages and Skills (highlight layers). Widgets on the right show the Verdict, Claims, References, Code, Evidence, Process record and Notes; they can be collapsed, reordered, closed and added back.
+  - **Report** view: the credibility report as a document with a section outline.
+  - **Quality**: the five-dimension report. A failed or missing quality assessment can be retried or run from here.
+- **History** (`/reports`): one row per run with both results, search, retry and delete. A run that is still running appears at the top.
+- **Export**: "Report (PDF)" opens a printable page with both parts (`/check/$id/print`); "Raw data (JSON)" downloads both assessments. Every report has its own address.
+- **Help assistant** (optional): a chat window in the corner that answers questions about using PaperTrace.
 
-- **Credibility check** (home, `/#check`; the old `/#credibility` still works): submit an arXiv ID, link or PDF. You can also tick "five-dimension scoring" to run a quick score alongside. Example reports from completed checks are listed below the form.
-- **While a check runs**: the page explains the expected wait. Progress stays at 60% until all three checks finish. You can read an example report or the quick score meanwhile. Polling continues when you switch sections, and a progress pill in the top bar leads back.
-- **Report**: overall score and the three checks (claims & evidence, references, code & reproduction). Evidence opens in a side drawer. **How this check ran** shows each check's duration and status, the model steps, how many references the agent verified, and the code search trail. The backend sends this trace with the finished report; it is not streamed live.
-- **Paper scoring**: the five-dimension flow with its landing page, progress view and report.
-- **Reports**: every saved credibility check and five-dimension score, with type filter and search. Opening a saved report does not call a model again.
+Notes and "reviewed" marks stay in the browser. An uploaded PDF is kept in the browser's IndexedDB so its report can show the paper after a reload.
 
 ## Run
 
@@ -23,9 +27,9 @@ npm ci
 npm run dev -- --host 127.0.0.1 --port 5173
 ```
 
-The dev server forwards `/v1` to `http://127.0.0.1:8000`, so start the backend first (see [backend/README.md](../backend/README.md)). In HTTP mode a failed request shows an error and never falls back to mock data.
+The dev server forwards `/v1` to the backend at `http://127.0.0.1:8000` (see [backend/README.md](../backend/README.md)) and `/assistant` to the help assistant at `http://127.0.0.1:8020`. A failed request shows an error; it never falls back to sample data.
 
-If the model menu is empty, check `GET /v1/models` on the backend. `is_available: false` usually means the backend did not read an API key. Fix `.env`, restart the backend and reload the page.
+If the model menu is empty, check `GET /v1/models` on the backend. `is_available: false` usually means the backend did not read that model's API key. Fix `backend/.env`, restart the backend and reload the page.
 
 ### Mock mode (no backend)
 
@@ -33,41 +37,54 @@ If the model menu is empty, check `GET /v1/models` on the backend. `is_available
 VITE_API_MODE=mock npm run dev -- --host 127.0.0.1 --port 5174
 ```
 
-Mock mode uploads nothing and calls no model, parser or external service.
+Mock mode uses the sample data in `public/mock-data.js` and `src/api/mock*Api.ts`. It uploads nothing and calls no model, parser or external service, and it labels its reports as samples.
 
-- **Paper scoring** lets you pick one of four outcomes: full report, provisional report with an `uncertain` dimension, retryable model timeout, and non-retryable PDF parse failure. The mock API walks through queued, seven processing stages and the result. The data lives in `public/mock-data.js`.
-- **Credibility check** offers review scenarios: a prepared first claim (arXiv `2310.01798v1`, real source pages 1 and 5), a core contradiction, an external lookup failure, code not applicable, and a parse failure. Apart from the first claim, these are synthetic and never presented as a parse of the input. External `example.invalid` links are marked as unavailable examples.
+### Help assistant (optional)
 
-Mock mode and the backend's fixture model both label their reports as examples, so sample scores are not mistaken for real results.
+```bash
+npm run assistant          # starts assistant/server.mjs on port 8020
+npm run assistant:check    # checks guide.md against the interface
+```
+
+The assistant is a small dependency-free Node service. It sends `assistant/guide.md` and a short summary of the current page (scores and counts, never the paper or notes) to any OpenAI-compatible chat endpoint. It reads `ASSISTANT_API_KEY`, `ASSISTANT_BASE_URL` and `ASSISTANT_MODEL`, and falls back to `OPENAI_*` from `../backend/.env`. Without it, the chat window says the assistant is unavailable and nothing else changes. See [assistant/README.md](assistant/README.md) for how to maintain the guide.
 
 ## Commands
 
 ```bash
-npm run dev      # dev server
-npm test         # Vitest suite
-npm run lint     # oxlint
-npm run build    # type check and production build
-npm run preview  # preview the production build
+npm run dev              # dev server
+npm test                 # Vitest suite
+npm run lint             # oxlint
+npm run build            # type check and production build
+npm run preview          # preview the production build
+npm run assistant        # help assistant service
+npm run assistant:check  # static check of the assistant guide
 ```
 
 ## Code map
 
-- `src/App.tsx`: top bar, sections and API mode selection (`VITE_API_MODE`).
-- `src/types/assessment.ts`, `src/types/credibility.ts`: types for the five-dimension contract v0.4 and the credibility contract `credibility-0.5.0-draft`.
-- `src/api/`: one interface per flow, each with an HTTP adapter (`http*Api.ts`) and a mock (`mock*Api.ts`). The HTTP adapters handle uploads, job creation, polling with backoff and history.
-- `src/hooks/useAssessment.ts`: create, poll and retry for five-dimension scoring.
+- `src/main.tsx`, `src/router.tsx`: entry point and routes (`/`, `/check/$id`, `/check/$id/print`, `/score/$id`, `/reports`).
+- `src/app/`: the shell and title bar tabs, API selection (`VITE_API_MODE`), queries, pairing a credibility check with its quality assessment, run deletion, and PDF storage.
+- `src/features/home/`: the start page.
+- `src/features/check/`: the waiting page, live progress and the two-part run page.
+- `src/features/report/`: the PDF reader, report document, widgets, outline and printable report.
+- `src/features/score/`: the five-dimension quality report.
+- `src/features/reports/`: history.
+- `src/features/assistant/`: the help assistant chat window.
+- `src/ui/`: shared controls (buttons, pills, progress dial, score gauge, model picker, widget frame, icons, motion).
+- `src/api/`: HTTP adapters (`http*Api.ts`) and mocks (`mock*Api.ts`) for both assessment types.
+- `src/types/`: types for field contract v0.4 and the credibility contract `credibility-0.5.0-draft`.
+- `src/styles/`: design tokens (`theme.css`) and component styles. The rules behind them are in [docs/design/DESIGN_SYSTEM.zh-CN.md](docs/design/DESIGN_SYSTEM.zh-CN.md).
 - `src/utils/arxiv.ts`: arXiv input normalization, using the same rules as the backend's `app/parsing/arxiv.py`.
-- `src/constants/`: labels, error-code titles, the five dimensions and score bands.
-- `src/components/`: `CredibilityWorkspace`, `CredibilityReport`, `CredibilityProcess` (how a check ran), `CredibilityEvidenceDrawer`, `ExampleReports`, `ReportsPage`, and the five-dimension `LandingPage`, `InputWorkspace`, `AssessmentProgress`, `AssessmentReport`, `EvidenceDrawer`, `AssessmentErrorView`.
-- `src/index.css`: design tokens and page styles; no UI framework.
-- `src/test/fixtures/`: captured backend responses used by the tests.
+- `public/brand/`: the PaperTrace logo and icon.
+- `assistant/`: the help assistant service, its guide and checks.
+- `src/components/`, `src/App.tsx`, `src/hooks/`: the earlier single-page interface, kept with its tests.
 
 ## Display rules
 
-- **Unknown is not zero.** A dimension whose `score` is `null` shows `—` and its reason. The overall score notes how many dimensions it is based on.
-- **Every finding leads back to a source.** Evidence chips show page and location (for example `Supports · p. 7 · Table 2`). They open a drawer; `←` / `→` move between evidence for the same finding and `Esc` closes it.
-- **Scores come from the backend.** Overall score, rating, categories, evidence relations and the model and venue options are all computed by the backend; the frontend never recomputes them.
+- **Unknown is not zero.** A dimension without a score shows why. A check that cannot finish gets a fixed fallback score of 3 and says so; it is never presented as a finding.
+- **Every finding leads back to a source.** Highlights and evidence chips open the passage, reference or code source behind them.
+- **Scores come from the backend.** Scores, categories, evidence relations and the model options are computed by the backend; the frontend never recomputes them.
 
 ## Deployment
 
-The `/v1` proxy only exists in `npm run dev`. A production build or `npm run preview` needs a reverse proxy that forwards `/v1` to the backend. Model API keys belong to the backend only; never put them in the frontend or in a `VITE_` variable.
+The `/v1` and `/assistant` proxies only exist in `npm run dev`. A production build or `npm run preview` needs a reverse proxy for both paths. Model API keys belong to the backend and the assistant service only; never put them in the frontend or in a `VITE_` variable.

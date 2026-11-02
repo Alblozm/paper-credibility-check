@@ -8,6 +8,7 @@ from typing import Any
 import certifi
 import httpx
 
+from app.llm import interrupt
 from app.llm.base import LLMClient, LLMResponse, LLMToolCall, LLMToolResponse, LLMUsage
 from app.llm.retry import (
     LLMEmptyContent,
@@ -102,6 +103,7 @@ def _response_usage(data, http_status) -> LLMUsage:
 
 class DeepSeekClient(LLMClient):
     supports_native_tools = True
+    provider = "deepseek"
 
     def __init__(
         self,
@@ -148,11 +150,11 @@ class DeepSeekClient(LLMClient):
         ssl_context = ssl.create_default_context(cafile=certifi.where())
         try:
             with httpx.Client(timeout=self.timeout, verify=ssl_context) as client:
-                resp = client.post(
+                resp = interrupt.call(lambda: client.post(
                     f"{self.base_url}/chat/completions",
                     headers={"Authorization": f"Bearer {self.api_key}"},
                     json=payload,
-                )
+                ))
         except httpx.TimeoutException as exc:
             raise LLMTimeout(str(exc)) from exc
         except httpx.HTTPError as exc:
@@ -214,10 +216,10 @@ class DeepSeekClient(LLMClient):
             with httpx.Client(
                 timeout=self.timeout, verify=ssl.create_default_context(cafile=certifi.where()),
             ) as client:
-                response = client.post(
+                response = interrupt.call(lambda: client.post(
                     f"{self.base_url}/chat/completions",
                     headers={"Authorization": f"Bearer {self.api_key}"}, json=payload,
-                )
+                ))
         except httpx.TimeoutException as exc:
             raise LLMTimeout(str(exc)) from exc
         except httpx.HTTPError as exc:

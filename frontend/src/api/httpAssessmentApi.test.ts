@@ -6,8 +6,8 @@ afterEach(() => vi.unstubAllGlobals())
 
 describe('HTTP adapter', () => {
   it('keeps unavailable models visible so the UI can explain why they cannot be selected', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValueOnce(json(window.PCC_MOCK.venues))
-      .mockResolvedValueOnce(json([...window.PCC_MOCK.models, { model_id: 'disabled', is_available: false }])))
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValueOnce(json(window.PAPERTRACE_MOCK.venues))
+      .mockResolvedValueOnce(json([...window.PAPERTRACE_MOCK.models, { model_id: 'disabled', is_available: false }])))
     const options = await httpAssessmentApi.getOptions()
     expect(options.models).toHaveLength(2)
     expect(options.models[1]).toMatchObject({ model_id: 'disabled', is_available: false })
@@ -42,15 +42,15 @@ describe('HTTP adapter', () => {
     await expect(httpAssessmentApi.getAssessment('a')).rejects.toThrow('incomplete')
   })
 
-  it('surfaces backend upload errors without creating a task', async () => {
-    const fetcher = vi.fn().mockResolvedValue(json({ detail: { code: 'INVALID_PDF', message: 'PDF 已损坏。' /* backend-authored text, surfaced verbatim */ } }, 400))
+  it('shows legacy backend upload errors in English without creating a task', async () => {
+    const fetcher = vi.fn().mockResolvedValue(json({ detail: { code: 'INVALID_PDF', message: 'PDF 已损坏。' } }, 400))
     vi.stubGlobal('fetch', fetcher)
-    await expect(httpAssessmentApi.createAssessment({ source_type: 'pdf', file: new File(['bad'], 'p.pdf'), venue_id: 'v', model_id: 'm' })).rejects.toThrow('PDF 已损坏')
+    await expect(httpAssessmentApi.createAssessment({ source_type: 'pdf', file: new File(['bad'], 'p.pdf'), venue_id: 'v', model_id: 'm' })).rejects.toThrow('The PDF is damaged or could not be read.')
     expect(fetcher).toHaveBeenCalledTimes(1)
   })
 
   it('retries a retryable failure by creating a new task with the original source', async () => {
-    const previous = { ...window.PCC_MOCK.completed, status: 'failed', error: window.PCC_MOCK.errors.retryable }
+    const previous = { ...window.PAPERTRACE_MOCK.completed, status: 'failed', error: window.PAPERTRACE_MOCK.errors.retryable }
     const fetcher = vi.fn().mockResolvedValueOnce(json(previous)).mockResolvedValueOnce(json({ assessment_id: 'asmt_retry' }, 202))
     vi.stubGlobal('fetch', fetcher)
     expect((await httpAssessmentApi.retryAssessment(previous.assessment_id)).assessment_id).toBe('asmt_retry')

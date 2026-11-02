@@ -39,13 +39,13 @@ function createId() {
 
 function resolveFixture(scenario: MockScenario) {
   return scenario === 'provisional'
-    ? clone(window.PCC_MOCK.provisional)
-    : clone(window.PCC_MOCK.completed)
+    ? clone(window.PAPERTRACE_MOCK.provisional)
+    : clone(window.PAPERTRACE_MOCK.completed)
 }
 
 function applyRequest(fixture: Assessment, request: CreateAssessmentRequest) {
-  const venue = window.PCC_MOCK.venues.find((item) => item.venue_id === request.venue_id)
-  const model = window.PCC_MOCK.models.find((item) => item.model_id === request.model_id)
+  const venue = window.PAPERTRACE_MOCK.venues.find((item) => item.venue_id === request.venue_id)
+  const model = window.PAPERTRACE_MOCK.models.find((item) => item.model_id === request.model_id)
   if (!venue || !model) throw new Error('The selected rubric or model is not available.')
 
   fixture.venue = clone(venue)
@@ -99,6 +99,13 @@ function failedAssessment(record: MockRecord, error: AssessmentError) {
 export const mockAssessmentApi: AssessmentApi & {
   setScenario(scenario: MockScenario): void
 } = {
+  async deleteAssessment(assessmentId) {
+    await wait()
+    const record = records.get(assessmentId)
+    if (!record) throw new Error('No assessment with that ID.')
+    if (!['completed', 'failed'].includes(record.assessment.status)) throw new Error('The assessment is still running.')
+    records.delete(assessmentId)
+  },
   async listAssessments(search = '', sort = 'date', offset = 0) {
     await wait()
     const term = search.toLowerCase().trim()
@@ -118,6 +125,7 @@ export const mockAssessmentApi: AssessmentApi & {
         is_demo: true,
         created_at: item.created_at,
         completed_at: item.completed_at,
+        credibility_assessment_id: item.credibility_assessment_id ?? null,
       }))
       .filter((item) => `${item.title} ${item.authors.join(' ')} ${item.venue.code}`.toLowerCase().includes(term))
       .sort((a, b) => sort === 'title' ? a.title.localeCompare(b.title)
@@ -133,14 +141,14 @@ export const mockAssessmentApi: AssessmentApi & {
   async getOptions() {
     await wait()
     return {
-      venues: clone(window.PCC_MOCK.venues.filter((item) => item.is_available)),
-      models: clone(window.PCC_MOCK.models),
+      venues: clone(window.PAPERTRACE_MOCK.venues.filter((item) => item.is_available)),
+      models: clone(window.PAPERTRACE_MOCK.models),
     }
   },
 
   async createAssessment(request) {
     await wait(320)
-    const assessment = queuedAssessment(request, selectedScenario)
+    const assessment = { ...queuedAssessment(request, selectedScenario), credibility_assessment_id: request.credibility_assessment_id ?? null }
     records.set(assessment.assessment_id, {
       assessment,
       tick: -1,
@@ -157,11 +165,11 @@ export const mockAssessmentApi: AssessmentApi & {
     record.tick += 1
 
     if (record.scenario === 'retryable_error' && record.tick >= 3) {
-      failedAssessment(record, window.PCC_MOCK.errors.retryable)
+      failedAssessment(record, window.PAPERTRACE_MOCK.errors.retryable)
       return clone(record.assessment)
     }
     if (record.scenario === 'non_retryable_error' && record.tick >= 2) {
-      failedAssessment(record, window.PCC_MOCK.errors.nonRetryable)
+      failedAssessment(record, window.PAPERTRACE_MOCK.errors.nonRetryable)
       return clone(record.assessment)
     }
 

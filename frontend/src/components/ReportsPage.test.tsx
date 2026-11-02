@@ -7,7 +7,7 @@ import type { ReviewList } from '../types/assessment'
 import type { CredibilityApi, CredibilityAssessment, CredibilityHistory } from '../types/credibility'
 import { ReportsPage } from './ReportsPage'
 
-const snapshot = window.PCC_MOCK.completed
+const snapshot = window.PAPERTRACE_MOCK.completed
 const scoringList: ReviewList = {
   items: [{
     assessment_id: 'asmt_old', status: 'completed', title: 'Scored paper', authors: ['A. Author'], source_type: 'arxiv',

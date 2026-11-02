@@ -250,7 +250,7 @@
   provisional.report.overall_assessment.summary = "The four assessable dimensions suggest the paper is worth reading, but its originality and positioning could not be judged from the parsed text.";
   provisional.warnings.push({ code: "SECTION_PARSE_PARTIAL", message: "Related Work was parsed incompletely, so the originality dimension is unscored.", stage: "parsing_paper" });
 
-  window.PCC_MOCK = {
+  window.PAPERTRACE_MOCK = {
     venues: [
       { venue_id: "iclr_2027_main", code: "ICLR", name: "International Conference on Learning Representations", year: 2027, track: "main", rubric_id: "iclr_inspired_due_diligence", rubric_version: "0.1", is_available: true }
     ],

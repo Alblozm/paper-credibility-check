@@ -226,7 +226,7 @@ class DeepSeekCodeDiscoveryProvider:
                  store: SnapshotStore | None = None, resolver: Callable[[str], Iterable[str]] = _resolve,
                  max_requests: int = 7, timeout: float = 20, max_bytes: int = 1_000_000,
                  max_characters: int = 60_000, deadline_seconds: float = 120):
-        if (not isinstance(max_requests, int) or isinstance(max_requests, bool) or not 0 <= max_requests <= 40
+        if (not isinstance(max_requests, int) or isinstance(max_requests, bool) or not 0 <= max_requests <= 200
                 or not 0 < timeout <= 60 or not 1024 <= max_bytes <= 5_000_000
                 or not 1000 <= max_characters <= 150_000 or not 0 < deadline_seconds <= 600):
             raise ValueError("Invalid discovery provider budget")
@@ -559,10 +559,13 @@ def _without_tracking(url: str) -> str:
 
 def discovery_provider_for(client, **kwargs) -> DeepSeekCodeDiscoveryProvider | None:
     """The search/fetch transport matching the selected model's provider, or None when unavailable."""
+    from app.llm.compatible import CompatibleChatClient
     from app.llm.openai import OpenAIClient
 
     settings = get_settings()
-    if isinstance(client, OpenAIClient):
+    # Claude and Gemini have no usable built-in search through their compatible endpoints, so their
+    # queries run through the OpenAI search transport; its calls are recorded under that provider.
+    if isinstance(client, (OpenAIClient, CompatibleChatClient)):
         return OpenAICodeDiscoveryProvider(**kwargs) if settings.openai_api_key else None
     if settings.deepseek_api_key and settings.deepseek_enabled:
         return DeepSeekCodeDiscoveryProvider(**kwargs)

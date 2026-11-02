@@ -4,7 +4,7 @@ import { useAssessment } from './useAssessment'
 import type { AssessmentApi } from '../api/assessmentApi'
 
 const input = { source_type: 'arxiv' as const, arxiv_id: '2307.08122', venue_id: 'v', model_id: 'm' }
-const snapshot = { ...window.PCC_MOCK.completed, status: 'processing' as const }
+const snapshot = { ...window.PAPERTRACE_MOCK.completed, status: 'processing' as const }
 afterEach(() => vi.useRealTimers())
 
 function makeApi(): AssessmentApi {

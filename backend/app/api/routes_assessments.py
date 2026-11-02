@@ -13,17 +13,19 @@ from fastapi import APIRouter, BackgroundTasks, Query, UploadFile
 
 from app.api.routes_options import list_models, list_venues
 from app.config import get_settings
+from app.credibility import runtime
 from app.parsing.arxiv import ArxivSourceError, normalize_arxiv_id
 from app.pipeline.orchestrator import run_assessment
 from app.schemas.assessment import Assessment, ModelRef, VenueRef
 from app.schemas.enums import SCHEMA_VERSION, Stage, Status
 from app.schemas.requests import CreateAssessmentRequest, CreateAssessmentResponse
 from app.storage.assessment_history import (
-    list_assessments as list_saved_assessments,
-)
-from app.storage.assessment_history import (
+    delete_assessment,
     load_assessment,
     save_assessment,
+)
+from app.storage.assessment_history import (
+    list_assessments as list_saved_assessments,
 )
 from app.storage.uploads import reject, resolve_upload, save_upload
 
@@ -64,6 +66,8 @@ def create_assessment(
     model = next((m for m in list_models() if m.model_id == body.model_id and m.is_available), None)
     if venue is None or model is None:
         reject(400, "OPTION_UNAVAILABLE", "The selected venue or model does not exist or is unavailable.")
+    if body.credibility_assessment_id and runtime.get_task_store().load_task(body.credibility_assessment_id) is None:
+        reject(404, "CREDIBILITY_ASSESSMENT_NOT_FOUND", "The credibility assessment to pair with does not exist.")
     pdf_path = None
     if body.source.type.value == "arxiv":
         try:
@@ -99,6 +103,7 @@ def create_assessment(
         "error": None,
         "started_at": None,
         "completed_at": None,
+        "credibility_assessment_id": body.credibility_assessment_id,
     })
     save_assessment(_STORE[assessment_id])
     background.add_task(run_assessment, assessment_id, body, _STORE, pdf_path=pdf_path)
@@ -120,6 +125,20 @@ def get_assessment_history(
 ) -> dict:
     """List local completed and failed reviews; never include raw uploaded PDFs."""
     return list_saved_assessments(search=search, sort=sort, offset=offset, limit=limit)
+
+
+@router.delete("/assessments/{assessment_id}", status_code=204)
+def remove_assessment(assessment_id: str) -> None:
+    """Delete a finished quality assessment from the history; a running one must finish first."""
+    live = _STORE.get(assessment_id)
+    if live is not None and live.get("status") not in {"completed", "failed"}:
+        reject(409, "STILL_RUNNING", "The assessment is still running.")
+    outcome = delete_assessment(assessment_id)
+    if outcome == "missing" and live is None:
+        reject(404, "NOT_FOUND", "Assessment not found.")
+    if outcome == "running":
+        reject(409, "STILL_RUNNING", "The assessment is still running.")
+    _STORE.pop(assessment_id, None)
 
 
 @router.get("/assessments/{assessment_id}", response_model=Assessment)

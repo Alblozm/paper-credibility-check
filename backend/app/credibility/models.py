@@ -359,6 +359,8 @@ class CredibilityDiscussion(StrictModel):
     conditions: str
     resolution: Literal["open", "resolved", "disputed", "unknown"]
     author_response_source_ids: list[str]
+    # Replies by accounts GitHub marks OWNER/MEMBER/COLLABORATOR; not proof of paper authorship.
+    maintainer_response_source_ids: list[str] = Field(default_factory=list)
     scoring_eligible: bool
     reason: str
 
@@ -632,7 +634,7 @@ CredibilityAssessmentResponse = Annotated[
 
 
 class ClaimCheckResult(StrictModel):
-    """任务一主张检查的返回值。任务二、任务三不改这个结果的组装方式。"""
+    """主张检查的返回值。引用检查和代码检查不改这个结果的组装方式。"""
 
     applies: bool
     anchors_matched: bool
@@ -647,7 +649,7 @@ class ClaimCheckResult(StrictModel):
 
 
 class ReferenceCheckResult(StrictModel):
-    """引用检查（任务二）的返回值。
+    """引用检查的返回值。
 
     evidence 里论文内证据（参考文献条目原文）用 origin=paper，经 locate_paper_span 定位；
     外部元数据用 origin=external，并在 sources 里登记 URL、抓取时间和 fetch_status。
@@ -664,7 +666,7 @@ class ReferenceCheckResult(StrictModel):
 
 
 class CodeCheckResult(StrictModel):
-    """代码与复现线索（任务三）的返回值。约定同 ReferenceCheckResult。"""
+    """代码与复现线索的返回值。约定同 ReferenceCheckResult。"""
 
     dimension: CredibilityDimension
     checks: CredibilityCodeChecks

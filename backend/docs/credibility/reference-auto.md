@@ -116,4 +116,4 @@ CoT 对应任务为 `cred_84983f4a99e24180bc4d9b5b93303aaa`，PDF 为 `../../tmp
 
 全量自动化 **1,362 项通过**，保留 2 个已有依赖弃用警告；app／tests 及新验收脚本 Ruff 通过。新增核实率和解释字段未改 0.2 数值规则；此次只验收引用自动分支，不作为新的整篇 DeepSeek、六篇正式跨论文或前端 UI 验收。
 
-详细结果见 `outputs/reference-auto-20261019/report.md`（本地运行产物，未随仓库发布），四轮汇总、来源与 HTTP 轨迹在同根目录的各 run 子目录，最终闭合复核为 [`final-artifact-audit.json`](../../../../outputs/reference-auto-20261019/final-artifact-audit.json)。早期 `lora-live/` 为修复前尝试，保留历史但不用于以上最终数值。此前 37 条定向人工补查继续单独留档，当前自动结果以本节及 final 产物为准。
+详细结果见 `outputs/reference-auto-20261019/report.md`（本地运行产物，未随仓库发布），四轮汇总、来源与 HTTP 轨迹在同根目录的各 run 子目录，最终闭合复核为 `final-artifact-audit.json`（同为本地运行产物）。早期 `lora-live/` 为修复前尝试，保留历史但不用于以上最终数值。此前 37 条定向人工补查继续单独留档，当前自动结果以本节及 final 产物为准。

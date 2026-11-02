@@ -2,7 +2,7 @@
 
 [English](README.md) · **中文**
 
-Paper Credibility Check 的 FastAPI + Pydantic 服务，应用版本 `1.0.0`。输入 arXiv 链接或上传的 PDF，后端解析论文、调用模型，返回可信度报告（`/v1/credibility/assessments`）或五维评分报告（`/v1/assessments`）。HTTP 接口见 [docs/api.zh-CN.md](../docs/api.zh-CN.md)。
+PaperTrace 的 FastAPI + Pydantic 服务。输入 arXiv 链接或上传的 PDF，后端解析论文、调用模型，返回可信度报告（`/v1/credibility/assessments`）或五维评分报告（`/v1/assessments`）。HTTP 接口见 [docs/api.zh-CN.md](../docs/api.zh-CN.md)。
 
 ## 快速开始
 
@@ -34,7 +34,7 @@ make docker-up     # 完整栈：Postgres、Redis、Celery、GROBID
 
 ## 配置
 
-全部写在 `.env` 里，`.env.example` 列出了每个选项和注释。
+全部写在 `.env` 里，`.env.example` 列出了每个选项和注释。用自己的 key 配置 GPT、Claude、Gemini 或 DeepSeek，按 [docs/models.zh-CN.md](../docs/models.zh-CN.md) 操作。
 
 | 变量 | 取值 |
 |---|---|
@@ -43,11 +43,14 @@ make docker-up     # 完整栈：Postgres、Redis、Celery、GROBID
 | `TASK_RUNNER` | `inline`（FastAPI 后台任务）或 `celery` |
 | `CREDIBILITY_PARSE_SOURCE` | `live`（默认，与五维相同，现场解析输入）或 `benchmark`（优先读 `../data/data/parsed`，用于回归重放） |
 | `OPENAI_API_KEY`、`OPENAI_MODEL` | GPT，默认 `gpt-5.6-terra` |
-| `DEEPSEEK_API_KEY`、`DEEPSEEK_MODEL` | DeepSeek，默认 `deepseek-flash` |
+| `DEEPSEEK_API_KEY`、`DEEPSEEK_MODEL`、`DEEPSEEK_ENABLED` | DeepSeek，默认 `deepseek-flash`；`DEEPSEEK_ENABLED=false` 时不列出 |
+| `ANTHROPIC_API_KEY`、`ANTHROPIC_MODEL`、`CLAUDE_ENABLED` | Claude，默认 `claude-sonnet-5`；配置 key 后列出，`CLAUDE_ENABLED=true` 后可选 |
+| `GEMINI_API_KEY`、`GEMINI_MODEL`、`GEMINI_ENABLED` | Gemini，默认 `gemini-3.7-flash`；配置 key 后列出，`GEMINI_ENABLED=true` 后可选 |
+| `CREDIBILITY_CODE_MAX_SOURCE_READS` | 代码检查共享的来源读取上限，默认 60 |
 | `GITHUB_TOKEN` | 可选，提高代码检查的 GitHub 限流额度 |
 | `CROSSREF_MAILTO` | 可选，放在 User-Agent 里发给 Crossref 的联系邮箱 |
 
-两个模型的 key 都配置时，`/v1/models` 两个都列出，用户的选择只作用于当次任务。DeepSeek 接受 `medium` 推理强度但实际映射为 `high`，原生档位只有 `low`、`high`、`max`。DeepSeek 只支持 `response_format={"type": "json_object"}`，结构正确性由 `app/validation/` 保证。OpenAI 客户端使用 Responses API 的 JSON 模式，并设置 `store: false`。
+配置好的模型都会出现在 `/v1/models` 里，用户的选择只作用于当次任务。Claude 和 Gemini 通过各自 OpenAI 兼容的 `/chat/completions` 接口调用（`app/llm/compatible.py`），每个厂商有一份能力档案（是否严格 JSON、思考模型的最低输出额度、上下文上限）。两者都没有可用的内置联网搜索，代码检索借用 OpenAI 的搜索，报告里如实记录，因此也需要 `OPENAI_API_KEY`。DeepSeek 接受 `medium` 推理强度但实际映射为 `high`，原生档位只有 `low`、`high`、`max`。DeepSeek 只支持 `response_format={"type": "json_object"}`，结构正确性由 `app/validation/` 保证。OpenAI 客户端使用 Responses API 的 JSON 模式，并设置 `store: false`。
 
 ## 可信度核查
 
@@ -71,6 +74,16 @@ make docker-up     # 完整栈：Postgres、Redis、Celery、GROBID
 
 这些传输版本不影响计分。
 
+运行中的控制：
+
+- `GET /v1/credibility/assessments/{id}/progress`：三项检查各自的状态和进行中的模型调用，供等待页显示（`app/credibility/live.py`，只读）。
+- `POST /v1/credibility/assessments/{id}/checks/{check}/stop`：只停止一项检查，记为用户停止（`STOPPED_BY_USER`）并按兜底分计分，其余检查继续；服务重启后不会重新执行。
+- `POST /v1/credibility/assessments/{id}/cancel`：取消整次运行（`CANCELLED`，可重试）。模型调用在辅助线程上进行（`app/llm/interrupt.py`），所以停止和取消都在约 1 秒内生效，不用等当前调用返回。
+- `DELETE /v1/credibility/assessments/{id}` 和 `DELETE /v1/assessments/{id}`：删除已结束的记录，运行中的返回 409。
+- 五维评分请求可以带 `credibility_assessment_id`，标明属于同一次运行；服务端会记录，并在详情和历史列表中返回。
+
+请求与响应细节见 [docs/api.zh-CN.md](../docs/api.zh-CN.md)。
+
 ## 五维评分
 
 较早的流程按字段合同 v0.4 给研究价值、可靠性、原创性、清晰度和可复现性打分，并附 6 项可复现清单。输入处理和论文门控见 [arxiv-ingestion.zh-CN.md](docs/arxiv-ingestion.zh-CN.md) 和 [eligibility-and-rubric.zh-CN.md](docs/eligibility-and-rubric.zh-CN.md)，分析提示词见 [llm-analysis.md](docs/llm-analysis.md)。
@@ -84,9 +97,9 @@ make docker-up     # 完整栈：Postgres、Redis、Celery、GROBID
 ## 代码位置
 
 - `app/api/`：HTTP 路由。
-- `app/credibility/`：三项检查、外部查询、计分和任务执行。
+- `app/credibility/`：三项检查、外部查询、实时进度、计分和任务执行。
 - `app/eligibility/`：机器学习论文门控。
-- `app/llm/`：模型客户端、提示词、重试和修复。
+- `app/llm/`：模型客户端（OpenAI、DeepSeek，以及 Claude 和 Gemini 用的 OpenAI 兼容客户端）、提示词、重试、修复和可中断调用。
 - `app/parsing/`：arXiv 下载、PDF 解析、位置锚点和 benchmark 读取。
 - `app/pipeline/orchestrator.py`：五维评分从输入到报告的流程。
 - `app/validation/`：证据校验、维度降级、交叉校验和总分。

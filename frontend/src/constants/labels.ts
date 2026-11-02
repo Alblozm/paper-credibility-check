@@ -62,6 +62,7 @@ export const errorTitles: Record<string, string> = {
   MODEL_TIMEOUT: 'The analysis model timed out',
   MODEL_OUTPUT_INVALID: 'The model returned an unusable report',
   INTERNAL_ERROR: 'The assessment could not be completed',
+  CANCELLED: 'The assessment was cancelled',
 }
 
 /**

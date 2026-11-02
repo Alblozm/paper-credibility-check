@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Paper Credibility Check — design tokens
+   PaperTrace — design tokens
    Warm paper ground, ink text, one teal accent for anything interactive.
    Score colours are a separate ramp so "brand" and "this scored well" never
    get confused with each other.
@@ -173,6 +173,12 @@ h3 { font-size: 15px; font-weight: 600; letter-spacing: -.005em; }
   font-weight: 650;
   letter-spacing: -.01em;
   transition: color 140ms ease;
+}
+
+.brand-sub {
+  color: var(--ink-3);
+  font-size: 13px;
+  font-weight: 450;
 }
 
 .bar-spacer { flex: 1; }
@@ -1713,6 +1719,7 @@ h3 { font-size: 15px; font-weight: 600; letter-spacing: -.005em; }
   .env-badge { padding: 7px; }
   .app-bar-inner, .app-main { padding-left: 16px; padding-right: 16px; }
   .app-main { padding-top: 28px; }
+  .brand-sub { display: none; }
   .score-panel { grid-template-columns: minmax(0, 1fr); }
   .score-figure { border-right: 0; border-bottom: 1px solid var(--line); }
   .scorecard { grid-template-columns: repeat(2, 1fr); }

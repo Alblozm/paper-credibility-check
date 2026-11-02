@@ -47,6 +47,19 @@ def load_assessment(assessment_id: str) -> dict | None:
         return row.payload if row else None
 
 
+def delete_assessment(assessment_id: str) -> str:
+    """Remove a finished assessment from the history: 'deleted', 'missing' or 'running' (left untouched)."""
+    init_db()
+    with SessionLocal.begin() as session:
+        row = session.get(AssessmentSnapshotRow, assessment_id)
+        if row is None:
+            return "missing"
+        if row.status not in {"completed", "failed"}:
+            return "running"
+        session.delete(row)
+        return "deleted"
+
+
 def list_assessments(
     *, search: str = "", sort: str = "date", offset: int = 0, limit: int = 20,
 ) -> dict:
@@ -84,6 +97,7 @@ def list_assessments(
                 "is_demo": any(warning.get("code") == "DEMO_MODE" for warning in value.get("warnings") or []),
                 "created_at": value.get("created_at"),
                 "completed_at": value.get("completed_at"),
+                "credibility_assessment_id": value.get("credibility_assessment_id"),
             })
         return {"items": items, "total": total, "offset": offset, "limit": limit}
 

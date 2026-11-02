@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh-CN.md)
 
-A small, evidence-backed benchmark of 50 machine learning papers used to build, calibrate and regression-test Paper Credibility Check. Dataset `iclr_pilot`, release `0.6.0-ai-final` (see `data/manifests/release.json`).
+A small, evidence-backed benchmark of 50 machine learning papers used to build, calibrate and regression-test PaperTrace. Dataset `iclr_pilot`, release `0.6.0-ai-final` (see `data/manifests/release.json`).
 
 - **Papers**: a balanced calibration split of 30 ICLR 2024 papers, plus a temporal holdout of 15 ICLR 2026 and 5 ICLR 2025 proceedings papers.
 - **Structured text**: every paper is parsed into metadata, sections, text chunks and paper elements (tables, figures), each traceable to a page.

@@ -11,6 +11,8 @@ export type AssessmentReceipt = Pick<Assessment,
 export interface AssessmentApi {
   getOptions(): Promise<AssessmentOptions>
   listAssessments(search?: string, sort?: 'date' | 'title' | 'author', offset?: number): Promise<ReviewList>
+  /** Removes a finished assessment from the history; present only where the server supports it. */
+  deleteAssessment?(assessmentId: string): Promise<void>
   createAssessment(request: CreateAssessmentRequest): Promise<AssessmentReceipt>
   getAssessment(assessmentId: string, signal?: AbortSignal): Promise<Assessment>
   retryAssessment(assessmentId: string): Promise<AssessmentReceipt>

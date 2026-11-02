@@ -4,16 +4,26 @@
 
 论文正文没有代码链接，或现有入口无法确认实现时，后端先启动有预算的外部发现，再进入现有仓库核查。沿用 0.2 试验评分；搜索命中本身不产生代码可用性或复现加分。默认使用当前 DeepSeek 凭据调用官方 Search / Fetch API，不新增密钥。
 
-数据流：新解析的论文身份 → DeepSeek 选择受控搜索查询 → Search 返回候选 → DeepSeek 选择候选页面 → Fetch 读取正文与链接 → 带原文引用的候选分类 → 未确认的仓库登记 → 固定提交 README 关联判断 → 实现材料与公开讨论核查 → 原评分器。
+数据流：新解析的论文身份 → DeepSeek 选择受控搜索查询 → Search 返回候选 → DeepSeek 选择候选页面 → Fetch 读取正文与链接 → 带原文引用的候选分类 → 未确认的仓库登记 → 固定提交 README 关联判断 → 实现材料与公开讨论核查 → 外部复现报告线索补查 → 原评分器。
+
+## 外部复现报告线索
+
+代码与讨论核查结束后，后端追加最多两条由论文身份构造的 `reproducibility` / `reproduction` 查询。已有官方代码时也执行；仍与 GitHub、项目页及代码发现共享每篇默认 60 次来源读取上限。预算不足、搜索失败或模型输出无效会保留具体缺口，不能记为未找到报告。
+
+只有同时包含论文标识和复现词的命中才进入一次独立的模型分类。论文本身、官方仓库及摘要镜像被排除；同一 OpenReview ID 的 PDF / forum 链接合并，同一 GitHub 仓库首页和根 README 入口也合并，并保留各命中的来源与片段。模型从服务端登记的候选和摘要片段中选择，后端保存对应原文，拒绝虚构 ID、跨候选引用和非法结构。
+
+这一步检索报告线索，不下载或核验报告全文。结果写入现有 `code_discovery.candidates`：`resource_kind=third_party_reproduction`、`status=candidate`、`repository_id=null`，原因和低置信证据明确标为“搜索摘要级、未核实”。这类证据不改变 `reproduction_signal`、代码可用性、仓库归属或评分。代码发现阶段原有的“必须读取原文”规则继续适用。
+
+每次查询、模型尝试、分类结果及其来源快照进入审计链。继续同一份已保存事实时复用补查记录，包括空结果和失败记录，不自动重复付费；新任务按当前版本重新检查。`CREDIBILITY_CODE_REPRODUCTION_SEARCH_ENABLED` 默认开启，可单独关闭；总开关 `CREDIBILITY_CODE_DISCOVERY_ENABLED=false` 同时关闭两类外部检索。检索能力门控沿用原有工具检查，fixture 或无工具能力的内部客户端不会借用本机真实密钥发起补查。
 
 搜索、网页正文及仓库内容都作为不可信材料；它们不能扩大工具权限、执行程序或设置分数。第三方相关基准、阅读列表和真正针对本文的复现代码分别记录。搜索失败、限流、网站不可读及预算耗尽保留为覆盖缺口，不能表述成不存在代码。
 
 ## 实现约定
 
-- 发现作为代码检查之前的独立阶段，解决当前无候选时语义模型直接跳过的问题。已有可用实现时默认跳过额外搜索。
+- 代码发现作为代码检查之前的独立阶段，解决当前无候选时语义模型直接跳过的问题。已有可用实现时跳过找代码的搜索，后置复现报告查询仍执行。
 - 模型选择启动由论文题名与 arXiv ID 构造的身份查询组；后端在同一次工具操作内执行其余已登记查询，每条最多一次。读取目标只来自搜索结果或已读取页面的真实链接，并须为公网 HTTPS。搜索摘要只能引导选择，确认使用实际读取的正文。
 - 查询、正文、工具调用、模型请求尝试与最后分类都存不可变快照；报告保存来源引用。GET 和重放只读已存结果，不重新搜索。
-- 发现与已有核查共享每篇 40 次外部来源请求；发现有单独、公开的模型轮次及工具预算。默认至多 3 次查询、4 次页面读取、20 个候选、4 轮模型请求、8 次工具调用。原仓库语义核查仍使用原来的 3 轮 / 6 次工具预算。
+- 发现与已有核查共享每篇 `CREDIBILITY_CODE_MAX_SOURCE_READS` 次外部来源请求（默认 60）；发现有单独、公开的模型轮次及工具预算。默认至多 3 次查询、4 次页面读取、20 个候选、4 轮模型请求、8 次工具调用。原仓库语义核查仍使用原来的 3 轮 / 6 次工具预算。
 - 新发现仓库一律以未确认关系登记，继续走 GitHub 公共仓库证明、固定提交和 README 的证据验证；搜索结果与 Fetch 的 GitHub 页面不能代替固定提交的源码证据。
 - 公开发现摘要由后端统计生成，写明实际查询、页面读取、通过证据校验的候选与未读 URL 数；模型自由文字解释仅保存在未验证审计字段中，不能当作未读页面的核查结论。未确定的候选也不输出未经证实的内容断言。
 - 新结果使用字段合同 0.5 的 `code_discovery`；旧版本投影继续保持旧结构。配置和版本进入持久任务指纹，不包含凭据。
@@ -49,6 +59,7 @@ DataMIL 的仓库审核与新增讨论审核两个 pass 都 completed；公开�
 | `app/credibility/code_discovery.py` | 原生工具循环、查询组、可读正文及父快照、URL 登记、候选分类、引文验证、最后一轮修复与后端事实摘要 |
 | `app/credibility/code_checks.py` | 新候选以 uncertain 登记；复用固定 SHA 的 README、实现材料及公开讨论采集 |
 | `app/credibility/code_model.py` | 同仓库／提交／子目录引用权限、明确实现归属、第三方声明防错、讨论与原帖指标判断 |
+| `app/credibility/code_reproduction_discovery.py` | 已有代码也执行的固定复现报告查询、摘要候选分类与独立审计，不参与评分 |
 | `app/credibility/execution.py` | 在原语义审核前启动发现，确认后补查和新讨论第二轮，共享来源预算并保存全部阶段 |
 | `models.py`、`shell.py`、`locate.py`、`snapshots.py` | 0.5 结构、旧版投影、全部 ID 闭合与离线快照验证 |
 
@@ -64,9 +75,9 @@ Fetch 的 HTTP 200 与正文可读性分别记录。浏览器验证、CAPTCHA �
 
 ## 调用方式
 
-部署使用真实 DeepSeek 模型与可用的 PDF 解析器（`LLM_PROVIDER=deepseek`、`PARSER_PROVIDER=generic`）；已有 `DEEPSEEK_API_KEY` 同时用于模型及 Search / Fetch，`GITHUB_TOKEN` 用于后续公共仓库读取。`CREDIBILITY_CODE_DISCOVERY_ENABLED` 默认开启；其他发现预算配置见 `.env.example`。发现来源读取总计仍受 40 次共享上限限制，单次 Search / Fetch 最多 20 秒，发现阶段最长 600 秒，错误不会无限重试。
+部署使用真实 DeepSeek 模型与可用的 PDF 解析器（`LLM_PROVIDER=deepseek`、`PARSER_PROVIDER=generic`）；已有 `DEEPSEEK_API_KEY` 同时用于模型及 Search / Fetch，`GITHUB_TOKEN` 用于后续公共仓库读取。`CREDIBILITY_CODE_DISCOVERY_ENABLED` 默认开启；其他发现预算配置见 `.env.example`。两类发现与其他来源读取总计受 `CREDIBILITY_CODE_MAX_SOURCE_READS` 限制（默认 60 次）；单次 Search / Fetch 最多 20 秒，代码发现来源读取期限为 600 秒，报告补查来源读取期限为 60 秒，模型请求受既有客户端超时约束。错误不会无限重试。
 
-发现阶段使用原生函数工具；`CREDIBILITY_CODE_TOOL_MODE=prefetch|native_tools` 继续控制后续仓库／讨论语义阶段。使用当前正常的可信度创建接口即可启动闭环。
+发现阶段使用原生函数工具；`CREDIBILITY_CODE_TOOL_MODE=prefetch|native_tools` 继续控制后续仓库／讨论语义阶段。报告补查使用固定查询和一次 JSON 分类，不增加工具权限。使用当前正常的可信度创建接口即可启动闭环。
 
 正常提交可信度任务即可自动触发，不需要前端单独调用搜索接口：
 
@@ -76,7 +87,7 @@ curl -X POST http://127.0.0.1:8000/v1/credibility/assessments \
   -d '{"schema_version":"credibility-0.5.0-draft","analysis_mode":"credibility","source":{"type":"arxiv","arxiv_id":"2310.07923v5","upload_id":null},"model_id":"model_standard_v1","rubric_version":"0.2-provisional-complete"}'
 ```
 
-用返回的 `assessment_id` 读取 `GET /v1/credibility/assessments/{id}`。在 `report.code_discovery` 查看查询、实际读取次数、候选关系、证据 ID 和未完成原因；确认后的仓库、实现材料及讨论仍在 `report.checks.code`。已有充分实现证据时发现状态为 `not_needed`；未配置模型/检索能力时为 `disabled`，都与搜索后没有找到不同。旧 0.1–0.4 请求继续保留旧响应结构。
+用返回的 `assessment_id` 读取 `GET /v1/credibility/assessments/{id}`。在 `report.code_discovery` 查看查询、实际读取次数、候选关系、证据 ID 和未完成原因；确认后的仓库、实现材料及讨论仍在 `report.checks.code`。已有充分实现证据时跳过代码发现，汇总状态还会反映后置报告补查是否完成；关闭报告补查时可保留 `not_needed`。未配置检索能力与成功搜索但没有候选分别记录。旧 0.1–0.4 请求继续保留旧响应结构。
 
 只验证代码模块、避免重复运行引用与论点检查时，维护者可用冻结样本脚本；必须使用新目录：
 

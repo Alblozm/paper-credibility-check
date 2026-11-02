@@ -1,5 +1,6 @@
 import type { AssessmentApi, AssessmentReceipt } from './assessmentApi'
 import type { Assessment, CreateAssessmentRequest, ModelOption, ReviewList, VenueOption } from '../types/assessment'
+import { englishServiceMessage, withEnglishAssessmentCopy } from '../utils/englishCopy'
 
 export class ApiError extends Error {
   status: number
@@ -26,8 +27,9 @@ export async function request<T>(path: string, init: RequestInit = {}): Promise<
         : response.status === 404 ? 'The assessment or upload no longer exists. It may have been cleared when the service restarted.'
         : response.status === 422 ? 'The request did not match the API contract. Check the input and try again.'
         : `The service returned ${response.status}. Try again in a moment.`
-      throw new ApiError(message, response.status, detail?.code ?? 'HTTP_ERROR')
+      throw new ApiError(englishServiceMessage(message, detail?.code), response.status, detail?.code ?? 'HTTP_ERROR')
     }
+    if (response.status === 204) return undefined as T
     if (!body) throw new ApiError('The service returned a response that could not be read.', response.status, 'INVALID_RESPONSE')
     return body as T
   } catch (error) {
@@ -42,17 +44,26 @@ export async function request<T>(path: string, init: RequestInit = {}): Promise<
   }
 }
 
-async function create(source: Assessment['source'], venue_id: string, model_id: string) {
-  const receipt = await request<AssessmentReceipt>('/v1/assessments', {
+async function create(source: Assessment['source'], venue_id: string, model_id: string, credibility_assessment_id?: string) {
+  const post = (link?: string) => request<AssessmentReceipt>('/v1/assessments', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ schema_version: '0.4', source, venue_id, model_id }),
+    body: JSON.stringify({ schema_version: '0.4', source, venue_id, model_id, ...(link ? { credibility_assessment_id: link } : {}) }),
+  })
+  // A backend from before the run link rejects the extra field; the pair is then kept only in this browser.
+  const receipt = await post(credibility_assessment_id).catch(error => {
+    if (credibility_assessment_id && error instanceof ApiError && error.status === 422) return post()
+    throw error
   })
   if (!receipt.assessment_id) throw new ApiError('The create response did not include an assessment ID.', 200, 'INVALID_RESPONSE')
   return receipt
 }
 
 export const httpAssessmentApi: AssessmentApi = {
+  async deleteAssessment(id) {
+    await request<unknown>(`/v1/assessments/${encodeURIComponent(id)}`, { method: 'DELETE' })
+  },
+
   async listAssessments(search = '', sort = 'date', offset = 0) {
     const params = new URLSearchParams({ search, sort, offset: String(offset), limit: '20' })
     const value = await request<ReviewList>(`/v1/assessments?${params}`)
@@ -79,7 +90,7 @@ export const httpAssessmentApi: AssessmentApi = {
         type: 'arxiv', arxiv_id: input.arxiv_id,
         original_url: `https://arxiv.org/abs/${input.arxiv_id}`,
         upload_id: null, original_filename: null,
-      }, input.venue_id, input.model_id)
+      }, input.venue_id, input.model_id, input.credibility_assessment_id)
     }
     const data = new FormData()
     data.append('file', input.file)
@@ -90,7 +101,7 @@ export const httpAssessmentApi: AssessmentApi = {
     return create({
       type: 'pdf', arxiv_id: null, original_url: null,
       upload_id: upload.upload_id, original_filename: upload.original_filename,
-    }, input.venue_id, input.model_id)
+    }, input.venue_id, input.model_id, input.credibility_assessment_id)
   },
 
   async getAssessment(id, signal) {
@@ -102,7 +113,7 @@ export const httpAssessmentApi: AssessmentApi = {
       || (value.status === 'failed' && !value.error)) {
       throw new ApiError('The assessment response is incomplete or uses an incompatible schema version. Check the field contract with the backend.', 200, 'INVALID_RESPONSE')
     }
-    return value
+    return withEnglishAssessmentCopy(value)
   },
 
   async retryAssessment(id) {

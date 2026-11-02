@@ -1120,3 +1120,53 @@ def test_resumed_partial_keeps_rejected_dependency_discussions_out_of_review_bud
     assert len(result.checks.discussions) == 2 and result.external_request_count == 1
     audit = read_snapshot(result.external_review["audit_ref"]).normalized_json
     assert audit["remaining_model_rounds"] == 2 and audit["remaining_tool_calls"] == 5
+
+
+@pytest.mark.parametrize("cap,expected_batches,expected_left", [(30, 2, 0), (7, 1, 5)])
+def test_discussions_are_reviewed_in_batches_up_to_the_cap(durable_pipeline, monkeypatch, cap, expected_batches,
+                                                          expected_left):
+    from app.credibility import code_checks, code_model
+    from app.credibility.execution import check_code_with_model
+
+    state, settings = durable_pipeline, get_settings()
+    monkeypatch.setattr(settings, "credibility_code_model_enabled", True)
+    monkeypatch.setattr(settings, "credibility_code_discovery_enabled", False)
+    monkeypatch.setattr(settings, "credibility_code_max_rounds", 3)
+    monkeypatch.setattr(settings, "credibility_code_discussion_batch_size", 5)
+    monkeypatch.setattr(settings, "credibility_code_max_reviewed_discussions", cap)
+    base = state.results["code_check"].model_copy(deep=True)
+    base.checks.discussions = [CredibilityDiscussion(
+        discussion_id=f"thread_{index}", repository_id="repo_1", source_ids=[], evidence_ids=[],
+        signal="discussion_only", relevance="relevant", independence="unknown", conditions="Unknown",
+        resolution="unknown", author_response_source_ids=[], scoring_eligible=False, reason="Rule label.",
+    ) for index in range(12)]
+    base.checks.scope_limitations.append("Semantic discussion item budget reached; other threads remain unreviewed.")
+    monkeypatch.setattr(code_checks, "check_code", lambda _ctx: base.model_copy(deep=True))
+    monkeypatch.setattr(code_checks, "complete_confirmed_repositories", lambda _ctx, result, **_: result)
+    monkeypatch.setattr("app.pipeline.orchestrator.build_llm_client", lambda _: object())
+    observed = []
+
+    def semantic(_ctx, result, _client, **options):
+        wanted = options.get("target_discussion_ids")
+        targets = [d.discussion_id for d in result.checks.discussions
+                   if (wanted is None or d.discussion_id in wanted)][:options["max_discussions"]]
+        observed.append((targets, options["max_rounds"]))
+        return SimpleNamespace(
+            checks=result.model_copy(deep=True), model_calls=[], prompt_version="offline-batch-test",
+            mode="prefetch", status="completed", warnings=[],
+            audit={"attempt_count": 1, "tool_call_count": 0, "rounds": [], "tool_calls": [],
+                   "target_discussion_ids": targets},
+        )
+
+    monkeypatch.setattr(code_model, "enrich_code_checks", semantic)
+    ctx = copy.deepcopy(state.context)
+    ctx.model_id = "model_standard_v1"
+    result = check_code_with_model(ctx)
+    reviewed = [did for targets, _ in observed for did in targets]
+    assert len(reviewed) == len(set(reviewed)) == 12 - expected_left  # each thread at most once
+    assert all(rounds == settings.credibility_code_discussion_batch_rounds for _, rounds in observed[1:])
+    audit = read_snapshot(result.external_review["audit_ref"]).normalized_json
+    assert audit["followup"]["discussion_batches"] == expected_batches
+    limits = result.checks.scope_limitations
+    assert not any(v.startswith("Semantic discussion item budget reached") for v in limits)
+    assert any(f"{expected_left} keep rule labels only" in v for v in limits) is bool(expected_left)

@@ -1,4 +1,4 @@
-"""论文内证据的定位核对。三项检查共用，任务二、任务三的论文内证据也走这里。
+"""论文内证据的定位核对。三项检查共用，引用检查和代码检查的论文内证据也走这里。
 
 候选证据（已准备文件或以后的模型输出）只能给 chunk_id 或 element_id、摘录和数字。
 页码、章节、表号一律以解析结果为准；quote 必须能在原文找到；转述里写出的数字
@@ -198,5 +198,6 @@ def assert_report_links(report: CredibilityReport) -> None:
             f"repository {repo.repository_id}",
         )
     for disc in code.discussions:
-        need(disc.source_ids + disc.author_response_source_ids, sources, f"discussion {disc.discussion_id}")
+        need(disc.source_ids + disc.author_response_source_ids + disc.maintainer_response_source_ids,
+             sources, f"discussion {disc.discussion_id}")
         need(disc.evidence_ids, evidence, f"discussion {disc.discussion_id}")

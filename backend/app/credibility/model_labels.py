@@ -11,6 +11,7 @@ from typing import TypeVar
 
 from pydantic import ValidationError
 
+from app.credibility import live
 from app.credibility.context import CheckContext
 from app.credibility.models import CredibilityModelCall
 from app.llm.retry import LLMError, LLMOutputInvalid, RetryPolicy, call_with_retry
@@ -40,6 +41,7 @@ def label_items(
     def complete() -> _T:
         call = CredibilityModelCall(purpose=purpose, provider=provider(client), model_version=client.model_version)
         calls.append(call)
+        live.note(purpose)
         response = client.complete_json(system, json.dumps(task, ensure_ascii=False), temperature=0.0,
                                         max_tokens=max_tokens)
         call.model_version = response.model_version
@@ -77,5 +79,7 @@ def label_or_none(fn, purpose: str):
 
 
 def provider(client) -> str:
+    if isinstance(declared := getattr(client, "provider", None), str):
+        return declared
     identity = f"{type(client).__module__}.{type(client).__name__} {client.model_version}".lower()
     return "deepseek" if "deepseek" in identity else "openai" if "openai" in identity else type(client).__module__

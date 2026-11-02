@@ -13,9 +13,14 @@ The backend listens on `http://127.0.0.1:8000` by default. The running service's
 | POST | `/v1/assessments` | Create a five-dimension scoring job (202) |
 | GET | `/v1/assessments` | Five-dimension history |
 | GET | `/v1/assessments/{id}` | Poll a five-dimension job |
+| DELETE | `/v1/assessments/{id}` | Delete a finished five-dimension job (204) |
 | POST | `/v1/credibility/assessments` | Create a credibility check (202) |
 | GET | `/v1/credibility/assessments` | Credibility check history |
 | GET | `/v1/credibility/assessments/{id}` | Poll a credibility check |
+| GET | `/v1/credibility/assessments/{id}/progress` | Per-check progress for the waiting page |
+| POST | `/v1/credibility/assessments/{id}/checks/{check}/stop` | Stop one of the three checks (202) |
+| POST | `/v1/credibility/assessments/{id}/cancel` | Cancel a queued or running check |
+| DELETE | `/v1/credibility/assessments/{id}` | Delete a finished credibility check (204) |
 | POST | `/internal/validate-report` | Internal tool: validate one model output |
 
 Both job types are long-running. Creation returns at once and the client polls for status. Do not wait for a synchronous result.
@@ -27,11 +32,15 @@ Both job types are long-running. Creation returns at once and the client polls f
 | model_id | provider | Default | Notes |
 |---|---|---|---|
 | `model_gpt_v1` | openai (`gpt-5.6-terra`) | yes (`LLM_PROVIDER=openai`) | Default model |
+| `model_claude_v1` | anthropic (`claude-sonnet-5`) | no | Listed once `ANTHROPIC_API_KEY` is set; available with `CLAUDE_ENABLED=true` |
+| `model_gemini_v1` | google (`gemini-3.7-flash`) | no | Listed once `GEMINI_API_KEY` is set; available with `GEMINI_ENABLED=true` |
 | `model_standard_v1` | deepseek (`deepseek-flash`) | no | Lower cost |
+
+`description` is a one-sentence summary meant for users.
 
 - Use the option with `is_default=true` as the initial choice, and send the selected `model_id` unchanged to both scoring and credibility endpoints.
 - Only options with `is_available=true` can be submitted. Others return 400 `OPTION_UNAVAILABLE`.
-- With `DEEPSEEK_ENABLED=false`, DeepSeek is not listed. Starting with `make run-deepseek` makes DeepSeek the default while GPT stays selectable. The credibility endpoint accepts only available `openai` or `deepseek` models. The one exception: when the backend runs with `LLM_PROVIDER=fixture`, `model_id: "not_called"` returns an offline example without calling a model.
+- With `DEEPSEEK_ENABLED=false`, DeepSeek is not listed. Starting with `make run-deepseek` makes DeepSeek the default while GPT stays selectable. The credibility endpoint accepts any available `openai`, `deepseek`, `anthropic` or `google` model. The one exception: when the backend runs with `LLM_PROVIDER=fixture`, `model_id: "not_called"` returns an offline example without calling a model.
 
 ## 2. PDF upload
 
@@ -50,6 +59,7 @@ Both job types are long-running. Creation returns at once and the client polls f
 - `POST /v1/assessments` → 202 `{assessment_id, status, stage, progress_percent, created_at}`
 - `GET /v1/assessments/{id}`: poll
 - `GET /v1/assessments?search=&sort=date|title|author&offset=&limit=`: history (completed and failed)
+- Optional request field `credibility_assessment_id` (`cred_` + 32 hex characters): the credibility check this assessment was started with. The server stores it and returns it in the detail and in every history item (`null` for a standalone assessment), so any client can show both as one run. An unknown check returns 404 `CREDIBILITY_ASSESSMENT_NOT_FOUND`; a malformed value returns 422.
 
 ## 4. Credibility check
 
@@ -75,7 +85,20 @@ Both job types are long-running. Creation returns at once and the client polls f
 ### 4.2 Polling and history
 
 - `GET /v1/credibility/assessments/{id}`: `status` is `queued | processing | completed | failed`; `stage` is `queued | retrieving | parsing | checking | finalizing | done | failed`.
-- Progress stays at 60% during `checking` until all three checks finish, with no finer steps. This usually takes from a few minutes to over twenty, mostly depending on the number of references.
+- Progress stays at 60% during `checking` until all three checks finish. This usually takes 5 to 15 minutes, mostly depending on the number of references. Finer progress comes from `/progress`:
+
+```json
+{"assessment_id": "cred_...", "status": "processing", "stage": "checking", "progress_percent": 60,
+ "started_at": "...",
+ "checks": {
+   "claim_check": {"status": "completed", "finished_at": "...", "started_at": "...",
+                   "steps": {"claim_extraction": 1, "claim_judgment": 4}, "last_step": "claim_judgment", "last_at": "..."},
+   "reference_check": {"status": "running", "finished_at": null, "started_at": "...",
+                       "steps": {"reference_field_parsing": 3}, "last_step": "reference_field_parsing", "last_at": "..."},
+   "code_check": {"status": "waiting", "finished_at": null, "started_at": null, "steps": {}, "last_step": null, "last_at": null}}}
+```
+
+  `status` is `waiting | running | completed | partial | failed`. Step counts live in memory and are cleared when a check ends; the report itself remains the source of truth. A check the user asked to stop carries `"stop_requested": true`, and one that ended that way carries `"stopped_by_user": true`.
 - `GET /v1/credibility/assessments?search=&offset=&limit=`: locally saved completed and failed checks, newest first:
 
 ```json
@@ -88,7 +111,13 @@ Both job types are long-running. Creation returns at once and the client polls f
 
 The home page's example reports are the `status=completed` items from this list, opened through the detail endpoint by `assessment_id`.
 
-### 4.3 Failure codes (`error.code` when `status=failed`)
+### 4.3 Stop, cancel and delete
+
+- `POST /v1/credibility/assessments/{id}/checks/{check}/stop`, with `check` one of `claim_check`, `reference_check`, `code_check`: stops that check only and returns 202 `{assessment_id, check, stop_requested: true}`. The other checks continue and the report is produced as usual. The stopped check is recorded truthfully: `check_status=failed`, the fallback score, a summary saying it was stopped by the user, and `report.execution.checks.<check>` with `{"status": "failed", "stopped_by_user": true, "error": {"code": "STOPPED_BY_USER", "retryable": false}}`. A restart does not run it again. Errors: unknown check 404 `CHECK_NOT_FOUND`, unknown assessment 404, finished assessment 409 `NOT_RUNNING`, finished check 409 `CHECK_FINISHED`.
+- `POST /v1/credibility/assessments/{id}/cancel`: ends a queued or running check at once as `status=failed` with `error.code=CANCELLED` (retryable), kept in the history. Work stops within about a second; a model call in progress is abandoned. Unknown 404, already finished 409 `NOT_RUNNING`.
+- `DELETE /v1/credibility/assessments/{id}` and `DELETE /v1/assessments/{id}`: remove a finished record (204), including the credibility checkpoints. A running record returns 409 `STILL_RUNNING` (cancel it first); an unknown one 404.
+
+### 4.4 Failure codes (`error.code` when `status=failed`)
 
 | code | retryable | Suggested display |
 |---|---|---|
@@ -99,6 +128,7 @@ The home page's example reports are the `status=completed` items from this list,
 | `UPLOAD_NOT_FOUND` | no | Ask the user to upload again |
 | `ARXIV_FETCH_FAILED` | yes | Offer a retry |
 | `SERVICE_RESTARTED` | yes | Interrupted by a restart; submit again |
+| `CANCELLED` | yes | Cancelled by the user; show it neutrally and allow a new submission |
 | `MODEL_UNAVAILABLE` / `MODEL_TIMEOUT` / `MODEL_OUTPUT_INVALID` / `INTERNAL_ERROR` | per `retryable` | Offer a retry |
 
 Five-dimension scoring uses the same error codes.

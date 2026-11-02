@@ -38,7 +38,7 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(
     lifespan=lifespan,
-    title="Paper Credibility Check API",
+    title="PaperTrace API",
     version="1.0.0",
     description=(
         "Backend for Unified Field Contract v0.4. "

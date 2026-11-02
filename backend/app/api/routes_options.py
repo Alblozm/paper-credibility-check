@@ -35,8 +35,10 @@ def list_models() -> list[ModelOption]:
     deepseek_ready = s.deepseek_enabled and bool(s.deepseek_api_key)
     openai_ready = bool(s.openai_api_key)
 
-    options = [
-        ModelOption(
+    options: list[ModelOption] = []
+    # DeepSeek is for internal testing; switching it off (DEEPSEEK_ENABLED=false) removes it from the list.
+    if s.deepseek_enabled:
+        options.append(ModelOption(
             model_id="model_standard_v1",
             display_name="DeepSeek Review Model",
             provider="deepseek",
@@ -45,18 +47,41 @@ def list_models() -> list[ModelOption]:
             speed_tier="standard",
             is_available=deepseek_ready,
             is_default=deepseek_ready and s.llm_provider == "deepseek",
-        ),
-        ModelOption(
-            model_id="model_gpt_v1",
-            display_name="GPT Review Model",
-            provider="openai",
-            model_version=s.openai_model,
-            description="OpenAI GPT analysis and tool-using agents.",
+        ))
+    options.append(ModelOption(
+        model_id="model_gpt_v1",
+        display_name="GPT Review Model",
+        provider="openai",
+        model_version=s.openai_model,
+        description="Balanced reasoning with built-in web search for code and reproduction checks.",
+        speed_tier="standard",
+        is_available=openai_ready,
+        is_default=openai_ready and s.llm_provider == "openai",
+    ))
+    # Claude and Gemini appear once a key is configured, but stay unavailable until enabled after a
+    # verified sample run (contract 7.3).
+    if s.anthropic_api_key:
+        options.append(ModelOption(
+            model_id="model_claude_v1",
+            display_name="Claude Review Model",
+            provider="anthropic",
+            model_version=s.anthropic_model,
+            description="Careful reading of long papers with precise quotation.",
             speed_tier="standard",
-            is_available=openai_ready,
-            is_default=openai_ready and s.llm_provider == "openai",
-        ),
-    ]
+            is_available=s.claude_enabled,
+            is_default=False,
+        ))
+    if s.gemini_api_key:
+        options.append(ModelOption(
+            model_id="model_gemini_v1",
+            display_name="Gemini Review Model",
+            provider="google",
+            model_version=s.gemini_model,
+            description="Very long context and fast responses; reasons before answering.",
+            speed_tier="fast",
+            is_available=s.gemini_enabled,
+            is_default=False,
+        ))
     if s.llm_provider == "fixture":
         options.append(
             ModelOption(

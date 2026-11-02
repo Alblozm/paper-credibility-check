@@ -21,6 +21,7 @@ from urllib.parse import urlsplit
 
 from pydantic import Field, ValidationError
 
+from app.credibility import live
 from app.credibility.code_discovery import normalize_discovery_page_text, safe_candidate_url
 from app.credibility.code_discovery_provider import page_content_problem
 from app.credibility.code_lookup import now
@@ -527,6 +528,7 @@ def run_reference_agent(
             call = CredibilityModelCall(purpose=PURPOSE, provider=provider_name(client),
                                         model_version=client.model_version)
             calls.append(call)
+            live.note(PURPOSE)
             response = client.complete_tools(messages, TOOL_DEFINITIONS, max_tokens=max_output_tokens,
                                              tool_choice=choice)
             call.model_version = response.model_version

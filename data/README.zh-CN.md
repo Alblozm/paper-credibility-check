@@ -2,7 +2,7 @@
 
 [English](README.md) · **中文**
 
-这是一套小而有据可查的基准，包含 50 篇机器学习论文，用于开发、校准和回归测试 Paper Credibility Check。数据集 `iclr_pilot`，发布版本 `0.6.0-ai-final`（见 `data/manifests/release.json`）。
+这是一套小而有据可查的基准，包含 50 篇机器学习论文，用于开发、校准和回归测试 PaperTrace。数据集 `iclr_pilot`，发布版本 `0.6.0-ai-final`（见 `data/manifests/release.json`）。
 
 - **论文**：30 篇 ICLR 2024 论文组成均衡的校准集，另有 15 篇 ICLR 2026 和 5 篇 ICLR 2025 正式论文作为时间外推的留出集。
 - **结构化正文**：每篇论文都解析成元数据、章节、正文块和论文元素（表格、图），每一项都能追溯到页码。

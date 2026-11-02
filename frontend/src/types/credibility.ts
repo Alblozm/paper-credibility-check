@@ -323,6 +323,8 @@ export interface CredibilityExecution {
     reused: boolean
     elapsed_seconds: number
     error?: { code: string; retryable: boolean }
+    /** The reader stopped this check; it carries the fallback score (error code STOPPED_BY_USER). */
+    stopped_by_user?: boolean
   }>>
 }
 
@@ -454,5 +456,11 @@ export interface CredibilityApi {
   listAssessments?(search?: string, offset?: number): Promise<CredibilityHistory>
   /** Backend model options, unfiltered; see credibilityModelChoice. */
   getModels?(): Promise<ModelOption[]>
+  /** Stops a queued or running check; it is kept as failed with the code CANCELLED. */
+  cancelAssessment?(assessmentId: string): Promise<CredibilityAssessment>
+  /** Removes a finished check from the history. */
+  deleteAssessment?(assessmentId: string): Promise<void>
+  /** Stops one of the three checks of a running assessment; the others carry on. */
+  stopCheck?(assessmentId: string, check: CredibilityCheckName): Promise<void>
 }
 

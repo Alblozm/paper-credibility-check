@@ -59,6 +59,16 @@ def build_llm_client(model_id: str) -> LLMClient:
             reasoning_effort=s.openai_reasoning_effort,
             timeout=s.llm_timeout_seconds,
         )
+    if model_id in {"model_claude_v1", "model_gemini_v1"}:
+        from app.llm.compatible import PROFILES, CompatibleChatClient
+
+        claude = model_id == "model_claude_v1"
+        return CompatibleChatClient(
+            model_id=model_id, profile=PROFILES["anthropic" if claude else "google"],
+            api_key=s.anthropic_api_key if claude else s.gemini_api_key,
+            base_url=s.anthropic_base_url if claude else s.gemini_base_url,
+            model=s.anthropic_model if claude else s.gemini_model, timeout=s.llm_timeout_seconds,
+        )
     if model_id == "model_fixture_v1":
         return FixtureLLMClient()
     raise ValueError(f"Unsupported model_id: {model_id}")

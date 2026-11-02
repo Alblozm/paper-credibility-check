@@ -1,0 +1,107 @@
+/* Design tokens for PaperTrace. The values and their rules live in docs/design/DESIGN_SYSTEM.zh-CN.md;
+   change both together. Components never hard-code colours, sizes or timings. */
+
+@layer theme, base, components, utilities;
+@import "tailwindcss";
+@import "./components.css" layer(components);
+
+@theme static {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* Interface neutrals */
+  --color-canvas: #F4F7FB;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F6F8FB;
+  --color-chrome: #E8EEF5;
+  --color-rail: #EFF3F8;
+  --color-paper-bed: #E5EAF0;
+  --color-ink: #1F2328;
+  --color-muted: #5F6B76;
+  --color-line: #DFE6EE;
+  --color-line-strong: #C9D4E0;
+  --color-hairline: #EDF1F5;
+
+  /* Outlook blue: trusted, verified, actionable */
+  --color-blue-100: #E3EFFA;
+  --color-blue-200: #B9DDFA;
+  --color-blue-400: #3A9CE8;
+  --color-blue-500: #0078D4;
+  --color-blue-600: #005A9E;
+  --color-blue-700: #0062B1;
+  --color-blue-800: #004A88;
+  --color-accent: #0078D4;
+  --color-accent-strong: #005A9E;
+  --color-accent-soft: #E3EFFA;
+
+  /* Slate: gaps and fallback scores, never "wrong" */
+  --color-slate-100: #EDF1F3;
+  --color-slate-300: #B4C0C6;
+  --color-slate-400: #95A3AA;
+  --color-slate-500: #7A8890;
+  --color-slate-600: #66737A;
+  --color-gap: #66737A;
+
+  /* Found concerns only */
+  --color-concern: #D13438;
+  --color-concern-soft: #FBE9EA;
+
+  /* Overall score scale, doubtful to trustworthy */
+  --color-score-low: #A7B3BF;
+  --color-score-mid: #86A6C8;
+  --color-score-upper: #2A86D6;
+  --color-score-high: #0067B8;
+
+  --font-*: initial;
+  --font-sans: "Zen Kaku Gothic New", "PingFang SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Shippori Mincho", "Songti SC", Georgia, serif;
+  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+
+  --text-*: initial;
+  --text-caption: 11px;
+  --text-caption--line-height: 16px;
+  --text-small: 12px;
+  --text-small--line-height: 18px;
+  --text-body: 13px;
+  --text-body--line-height: 20px;
+  --text-body-l: 14px;
+  --text-body-l--line-height: 22px;
+  --text-title-s: 16px;
+  --text-title-s--line-height: 22px;
+  --text-title: 19px;
+  --text-title--line-height: 26px;
+  --text-title-l: 24px;
+  --text-title-l--line-height: 32px;
+  --text-display: 34px;
+  --text-display--line-height: 42px;
+  --text-score-m: 46px;
+  --text-score-m--line-height: 1;
+  --text-score-l: 56px;
+  --text-score-l--line-height: 1;
+
+  --radius-*: initial;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --shadow-*: initial;
+  --shadow-1: 0 1px 2px rgb(10 44 86 / 5%), 0 8px 18px -16px rgb(10 44 86 / 40%);
+  --shadow-2: 0 12px 28px -18px rgb(10 44 86 / 45%), 0 2px 6px -3px rgb(10 44 86 / 18%);
+  --shadow-3: 0 24px 48px -24px rgb(10 44 86 / 50%), 0 4px 12px -6px rgb(10 44 86 / 20%);
+
+  /* Fluent 2 motion */
+  --ease-*: initial;
+  --ease-decelerate-max: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --ease-decelerate-mid: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate-mid: cubic-bezier(1, 0, 1, 1);
+  --ease-easy: cubic-bezier(0.33, 0, 0.67, 1);
+  --ease-easy-max: cubic-bezier(0.8, 0, 0.2, 1);
+  --duration-faster: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-gentle: 250ms;
+  --duration-slow: 300ms;
+  --duration-slower: 400ms;
+}

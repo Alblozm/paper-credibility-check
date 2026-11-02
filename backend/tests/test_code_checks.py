@@ -1012,3 +1012,86 @@ def test_oversized_recursive_tree_falls_back_to_shallow_source_directories(monke
     assert result.checks.code_availability == "available" and repo.implementation_evidence_ids
     assert not any("/git/trees/" + "d" * 40 in url for url in called)  # data directories are skipped
     assert any("one level deep" in note for note in result.checks.scope_limitations)
+
+
+def test_metric_gap_thread_without_topic_words_is_collected(monkeypatch):
+    gap = issue("The AP with ResNet-50 can reach 39.1, which is 0.4 higher than this project. Why?",
+                title="AP gap of ResNet-50")
+    network(monkeypatch, issues=[gap])
+    discussion = check_code(context()).checks.discussions[0]
+    assert discussion.signal == "discussion_only"  # attention only; the label is not inferred from numbers
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("I train this code only get 38.2 mAP on minival.", True),
+    ("我跑出来的准确率只有 61.2%，和论文差距很大", True),
+    ("positive_loss is much larger than negative_loss at iter 260", False),
+    ("Does it support training on my own dataset with 8 GPUs?", False),
+])
+def test_result_gap_detector(text, expected):
+    assert code_checks.reports_result_gap(text) is expected
+
+
+def test_supplement_code_claim_is_recorded_without_changing_availability(monkeypatch):
+    network(monkeypatch)
+    baseline = check_code(context("We evaluate on ImageNet."))
+    result = check_code(context(
+        "We evaluate on ImageNet. Answer: [Yes]\nJustification: Codes and settings are included in the "
+        "Supplementary Material."
+    ))
+    supplement = next(s for s in result.checks.searches if s.scope_type == "supplement")
+    assert supplement.outcome == "not_checked" and supplement.evidence_ids
+    assert any("supplementary material" in limit for limit in result.checks.scope_limitations)
+    assert result.checks.code_availability == baseline.checks.code_availability
+    quote = next(e for e in result.evidence if e.evidence_id == supplement.evidence_ids[0])
+    assert "Codes and settings are included in the Supplementary Material." in quote.excerpt
+
+
+@pytest.mark.parametrize("text", [
+    "Question: Does the paper provide open access to the data and code, as described in supplemental material?",
+    "Answer: [No]\nJustification: The code is not included in the supplementary material.",
+])
+def test_checklist_question_or_negation_is_not_a_supplement_claim(monkeypatch, text):
+    network(monkeypatch)
+    result = check_code(context(text))
+    supplement = next(s for s in result.checks.searches if s.scope_type == "supplement")
+    assert not supplement.evidence_ids
+    assert not any("supplementary material;" in limit for limit in result.checks.scope_limitations)
+
+
+def test_source_read_cap_defaults_to_60_and_is_configurable(monkeypatch):
+    from app.config import Settings, get_settings
+    from app.credibility.code_checks import complete_confirmed_repositories
+
+    assert Settings.model_fields["credibility_code_max_source_reads"].default == 60
+    monkeypatch.setattr(get_settings(), "credibility_code_max_source_reads", 60)
+    calls = network(monkeypatch, readme="Implementation details")
+    result = check_code(context("Related repository: https://github.com/alice/method."))
+    assert any("60 external requests per check" in value for value in result.checks.scope_limitations)
+    result.checks.repositories[0].association = "confirmed"
+    result.external_request_count = 40  # exhausted under the old fixed cap, not under 60
+    before = list(calls)
+    completed = complete_confirmed_repositories(context(), result)
+    assert len(calls) > len(before) and completed.external_request_count > 40
+    result.external_request_count = 60
+    before = list(calls)
+    capped = complete_confirmed_repositories(context(), result)
+    assert calls == before and any("budget exhausted" in value for value in capped.checks.scope_limitations)
+
+
+def test_every_issue_is_collected_and_maintainer_replies_are_marked(monkeypatch):
+    reply = {
+        "body": "Please install the CUDA extension first.",
+        "html_url": "https://github.com/alice/method/issues/1#issuecomment-7",
+        "user": {"login": "bob"},
+        "author_association": "COLLABORATOR",
+    }
+    visitor = {**reply, "html_url": "https://github.com/alice/method/issues/1#issuecomment-8",
+               "user": {"login": "carol"}, "author_association": "NONE", "body": "Same here."}
+    network(monkeypatch, issues=[issue("Build fails on Windows", count=2, title="Compile error")],
+            comments=[reply, visitor])
+    result = check_code(context())
+    discussion = result.checks.discussions[0]  # no reproduction words, still collected
+    marked = [s.url for s in result.sources if s.source_id in discussion.maintainer_response_source_ids]
+    assert marked == ["https://github.com/alice/method/issues/1#issuecomment-7"]
+    assert discussion.author_response_source_ids == []  # maintainer is not assumed to be a paper author

@@ -230,6 +230,10 @@ def test_reused_discovery_failure_cannot_be_upgraded_by_no_target_semantics(tmp_
     settings = SimpleNamespace(
         credibility_code_model_enabled=True,
         credibility_code_discovery_enabled=True,
+        credibility_code_reproduction_search_enabled=False,
+        credibility_code_discussion_batch_size=5,
+        credibility_code_max_reviewed_discussions=30,
+        credibility_code_discussion_batch_rounds=2,
         credibility_code_max_rounds=3,
         credibility_code_max_tool_calls=6,
         credibility_code_tool_mode="native_tools",

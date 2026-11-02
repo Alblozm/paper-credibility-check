@@ -111,4 +111,4 @@ def test_model_call_is_reported_with_the_code_result(monkeypatch):
     network(monkeypatch, readme="# Another title\nA benchmark.")
     result = check_code(_ctx(FOOTNOTE))
     assert [call.purpose for call in result.model_calls] == ["paper_link_classification"]
-    assert code_checks.CODE_CHECKS_VERSION == "code-checks-2.6-model-paper-links"
+    assert code_checks.CODE_CHECKS_VERSION == "code-checks-2.7-result-gap-supplement-claim"

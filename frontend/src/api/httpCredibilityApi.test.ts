@@ -61,10 +61,12 @@ describe('HTTP credibility adapter', () => {
   it('offers only real models, and falls back to an offline sample on a fixture backend', () => {
     const gpt = model('model_gpt_v1', 'openai', { is_default: true })
     const deepseek = model('model_standard_v1', 'deepseek')
-    expect(credibilityModelChoice([deepseek, gpt])).toEqual({ models: [deepseek, gpt], defaultId: 'model_gpt_v1', offline: false })
+    expect(credibilityModelChoice([deepseek, gpt])).toEqual({ models: [deepseek, gpt], pending: [], defaultId: 'model_gpt_v1', offline: false })
+    const claude = model('model_claude_v1', 'anthropic', { is_available: false })
+    expect(credibilityModelChoice([deepseek, gpt, claude]).pending).toEqual([claude])
     expect(credibilityModelChoice([deepseek, { ...gpt, is_available: false }]).defaultId).toBe('model_standard_v1')
     const fixture = model('model_fixture_v1', 'internal', { is_default: true })
-    expect(credibilityModelChoice([{ ...deepseek, is_available: false }, fixture])).toEqual({ models: [], defaultId: 'not_called', offline: true })
+    expect(credibilityModelChoice([{ ...deepseek, is_available: false }, fixture])).toEqual({ models: [], pending: [{ ...deepseek, is_available: false }], defaultId: 'not_called', offline: true })
     expect(credibilityModelChoice([{ ...deepseek, is_available: false }]).defaultId).toBeNull()
   })
 
@@ -75,5 +77,18 @@ describe('HTTP credibility adapter', () => {
     expect(await httpCredibilityApi.uploadPdf!(file)).toBe('upl_0123456789ab')
     expect(fetcher.mock.calls[0][0]).toBe('/v1/uploads')
     expect(fetcher.mock.calls[0][1].body.get('file')).toBe(file)
+  })
+
+  it('deletes a finished check, accepting an empty 204 response', async () => {
+    const fetcher = vi.fn().mockResolvedValue(new Response(null, { status: 204 }))
+    vi.stubGlobal('fetch', fetcher)
+    await expect(httpCredibilityApi.deleteAssessment!('cred_1')).resolves.toBeUndefined()
+    expect(fetcher.mock.calls[0][0]).toBe('/v1/credibility/assessments/cred_1')
+    expect(fetcher.mock.calls[0][1].method).toBe('DELETE')
+  })
+
+  it('reports a check that is still running instead of deleting it', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(json({ detail: { code: 'STILL_RUNNING', message: 'Cancel the assessment before deleting it.' } }, 409)))
+    await expect(httpCredibilityApi.deleteAssessment!('cred_1')).rejects.toMatchObject({ status: 409, code: 'STILL_RUNNING' })
   })
 })

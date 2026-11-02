@@ -104,8 +104,9 @@ def test_unrepairable_output_reports_blocking_issues(example_report):
     ("thinking_enabled", "expected_type", "has_temperature"),
     [(False, "disabled", True), (True, "enabled", False)],
 )
+@pytest.mark.parametrize("max_tokens", [25000, 65536])
 def test_deepseek_thinking_mode_payload(
-    monkeypatch, thinking_enabled, expected_type, has_temperature,
+    monkeypatch, thinking_enabled, expected_type, has_temperature, max_tokens,
 ):
     captured = {}
 
@@ -137,7 +138,7 @@ def test_deepseek_thinking_mode_payload(
 
     monkeypatch.setattr("app.llm.deepseek.httpx.Client", HttpClient)
     client = DeepSeekClient("test-key", thinking_enabled=thinking_enabled)
-    response = client.complete_json("return json", "paper")
+    response = client.complete_json("return json", "paper", max_tokens=max_tokens)
 
     assert response.text == '{"ok": true}'
     assert captured["verify"] is not None
@@ -147,6 +148,7 @@ def test_deepseek_thinking_mode_payload(
         "medium" if thinking_enabled else None
     )
     assert captured["payload"]["model"] == "deepseek-flash"
+    assert captured["payload"]["max_tokens"] == max_tokens
 
 
 def test_deepseek_rejects_truncated_json(monkeypatch):

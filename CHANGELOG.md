@@ -1,5 +1,29 @@
 # Changelog / 变更日志
 
+## 1.1.0 — 2026-11-01
+
+### English
+
+- **PaperTrace**: the app now carries its product name, logo and icon.
+- **New interface**: a start page with a model picker; a waiting page with per-check progress; a run page that shows the credibility and quality parts side by side, with a Paper view (the PDF with evidence highlighted in place, outline, page thumbnails, highlight layers and rearrangeable widgets) and a Report view; title bar tabs for every run; a History page with retry and delete; export as a printable PDF report or raw JSON.
+- **Help assistant**: an optional service that answers questions about using PaperTrace from a maintained guide, with a static check that keeps the guide in step with the interface.
+- **Models**: Claude and Gemini through their OpenAI-compatible endpoints, alongside GPT and DeepSeek.
+- **Run control**: stop a single check (recorded as stopped by the user, fallback score), cancel a whole run, delete finished records, and read per-check progress while a run is in flight.
+- **Same-run pairing**: a five-dimension assessment can carry `credibility_assessment_id`, so both parts of a run stay together in every client.
+- **Code & reproduction**: a separate search for third-party reproduction reports, every issue collected for discussion review, batched semantic review, and a configurable source budget (default 60 reads).
+- **Parsing**: titles with subtitles or mixed case are joined correctly across lines.
+
+### 中文
+
+- **PaperTrace**：应用启用正式产品名、logo 和图标。
+- **新界面**：开始页可选择模型；等待页显示每项检查的进度；运行页把可信度和五维两部分并列，提供 Paper 视图（PDF 原文上直接高亮证据，含目录、页面缩略图、高亮图层和可重排的组件区）和 Report 视图；每次运行在标题栏有自己的标签页；History 页支持重试和删除；可导出可打印的 PDF 报告或原始 JSON。
+- **帮助助手**：可选的独立服务，依据维护好的操作指南回答使用问题，并有静态检查保证指南与界面同步。
+- **模型**：在 GPT、DeepSeek 之外，通过 OpenAI 兼容接口接入 Claude 和 Gemini。
+- **运行控制**：可单独停止一项检查（记为用户停止并按兜底分计分）、取消整次运行、删除已结束的记录，运行中可查看分项进度。
+- **同一次运行配对**：五维评估可以带 `credibility_assessment_id`，任何客户端都能把同一次运行的两部分放在一起。
+- **代码与复现**：新增第三方复现报告的独立检索，讨论采集覆盖全部 issue，语义复核分批进行，来源读取上限可配置（默认 60 次）。
+- **解析**：带副标题或大小写混排的标题可以正确跨行拼接。
+
 ## 1.0.0 — 2026-10-22
 
 ### English

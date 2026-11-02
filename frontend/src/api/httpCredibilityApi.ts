@@ -1,5 +1,6 @@
 import { ApiError, request } from './httpAssessmentApi'
 import type { ModelOption } from '../types/assessment'
+import { withEnglishMessages } from '../utils/englishCopy'
 import {
   CREDIBILITY_SCHEMA_VERSION,
   type CredibilityApi,
@@ -17,18 +18,21 @@ function checked(value: CredibilityAssessment, id?: string) {
     || (value.status === 'failed' && !value.error)) {
     throw new ApiError('The credibility response is incomplete or uses an incompatible contract version.', 200, 'INVALID_RESPONSE')
   }
-  return value
+  return withEnglishMessages(value)
 }
 
 /**
- * The credibility route accepts only real OpenAI/DeepSeek models. A fixture backend lists a demo model
- * instead, and then only 'not_called' runs: an offline sample, never a real check.
+ * Any available real model can run a check; the backend decides which providers it supports. A fixture
+ * backend lists a demo model instead, and then only 'not_called' runs: an offline sample, never a real check.
+ * Listed models that are not available (not yet verified, or missing a key) come back as `pending`, so the
+ * picker can show them disabled.
  */
 export function credibilityModelChoice(models: ModelOption[]) {
-  const live = models.filter(item => item.is_available && (item.provider === 'openai' || item.provider === 'deepseek'))
+  const live = models.filter(item => item.is_available && item.provider !== 'internal')
+  const pending = models.filter(item => item.provider !== 'internal' && !live.includes(item))
   const offline = !live.length && models.some(item => item.is_available && item.provider === 'internal')
   const defaultId = (live.find(item => item.is_default) ?? live[0])?.model_id ?? (offline ? 'not_called' : null)
-  return { models: live, defaultId, offline }
+  return { models: live, pending, defaultId, offline }
 }
 
 export const httpCredibilityApi: CredibilityApi = {
@@ -42,6 +46,18 @@ export const httpCredibilityApi: CredibilityApi = {
 
   async getAssessment(id, signal) {
     return checked(await request<CredibilityAssessment>(`/v1/credibility/assessments/${encodeURIComponent(id)}`, { signal }), id)
+  },
+
+  async stopCheck(id, check) {
+    await request<unknown>(`/v1/credibility/assessments/${encodeURIComponent(id)}/checks/${check}/stop`, { method: 'POST' })
+  },
+
+  async deleteAssessment(id) {
+    await request<unknown>(`/v1/credibility/assessments/${encodeURIComponent(id)}`, { method: 'DELETE' })
+  },
+
+  async cancelAssessment(id) {
+    return checked(await request<CredibilityAssessment>(`/v1/credibility/assessments/${encodeURIComponent(id)}/cancel`, { method: 'POST' }), id)
   },
 
   async uploadPdf(file) {

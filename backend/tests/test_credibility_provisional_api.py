@@ -90,3 +90,38 @@ def test_packaged_trial_policy_is_the_data_team_snapshot():
     if not delivered.is_file():
         pytest.skip("The sibling data repository is not installed")
     assert load_credibility_rubric().content_sha256 == hashlib.sha256(delivered.read_bytes()).hexdigest()
+
+
+def test_progress_route_lists_three_checks(client):
+    created = client.post("/v1/credibility/assessments", json=request()).json()
+    progress = client.get(f"/v1/credibility/assessments/{created['assessment_id']}/progress")
+    assert progress.status_code == 200
+    body = progress.json()
+    assert body["status"] == "completed" and set(body["checks"]) == {"claim_check", "reference_check", "code_check"}
+    assert all({"started_at", "steps", "last_step"} <= set(check) for check in body["checks"].values())
+    assert client.get("/v1/credibility/assessments/cred_missing/progress").status_code == 404
+
+
+def test_cancel_route_reports_missing_and_finished_assessments(client):
+    assert client.post("/v1/credibility/assessments/cred_missing/cancel").status_code == 404
+    created = client.post("/v1/credibility/assessments", json=request()).json()
+    finished = client.post(f"/v1/credibility/assessments/{created['assessment_id']}/cancel")
+    assert finished.status_code == 409 and finished.json()["detail"]["code"] == "NOT_RUNNING"
+
+
+def test_stop_check_route_reports_unknown_missing_and_finished(client):
+    assert client.post("/v1/credibility/assessments/cred_missing/checks/code_check/stop").status_code == 404
+    created = client.post("/v1/credibility/assessments", json=request()).json()
+    base = f"/v1/credibility/assessments/{created['assessment_id']}/checks"
+    unknown = client.post(f"{base}/style_check/stop")
+    assert unknown.status_code == 404 and unknown.json()["detail"]["code"] == "CHECK_NOT_FOUND"
+    finished = client.post(f"{base}/code_check/stop")
+    assert finished.status_code == 409 and finished.json()["detail"]["code"] == "NOT_RUNNING"
+
+
+def test_finished_assessment_can_be_deleted(client):
+    created = client.post("/v1/credibility/assessments", json=request()).json()
+    assessment_id = created["assessment_id"]
+    assert client.delete(f"/v1/credibility/assessments/{assessment_id}").status_code == 204
+    assert client.get(f"/v1/credibility/assessments/{assessment_id}").status_code == 404
+    assert client.delete(f"/v1/credibility/assessments/{assessment_id}").status_code == 404

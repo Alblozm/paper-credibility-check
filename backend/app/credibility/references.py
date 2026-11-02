@@ -1,4 +1,4 @@
-"""文末引用的存在性核查（任务二）。
+"""文末引用的存在性核查。
 
 这一模块只回答「论文末尾列出的文献，能否在公开元数据中找到？」。
 它不调用 LLM、不阅读被引论文全文，也不判断被引论文是否支持正文论点。
@@ -305,7 +305,7 @@ _LOOKUP = CrossrefLookup()
 
 
 def check_references(ctx: CheckContext) -> ReferenceCheckResult:
-    """执行任务二；同一分支的限流等待总额默认不超过 60 秒。"""
+    """执行引用检查；同一分支的限流等待总额默认不超过 60 秒。"""
     with reference_retry_budget(getattr(_LOOKUP, "retry_wait_budget_seconds", 60.0)):
         result = _check_references(ctx)
     if get_settings().reference_multisource_enabled and isinstance(_LOOKUP, CrossrefLookup):

@@ -42,7 +42,8 @@ DeepSeek 思考模式下，后续请求会按供应商协议回传原有 `reason
 | `CREDIBILITY_CODE_MODEL_ENABLED` | `true` | 启用存在疑点时的模型辅助核查。 |
 | `CREDIBILITY_CODE_TOOL_MODE` | `prefetch` | 显式选择 `prefetch` 或 `native_tools`。 |
 | `CREDIBILITY_CODE_MAX_ROUNDS` | `3` | 原生模式最多模型轮次，范围 1–6；最后一轮要求直接给出结论。 |
-| `CREDIBILITY_CODE_MAX_TOOL_CALLS` | `6` | 补抓工具的调用上限，范围 1–20，还受固定检查与补抓共同的 40 次外部请求预算限制。 |
+| `CREDIBILITY_CODE_MAX_TOOL_CALLS` | `6` | 补抓工具的调用上限，范围 1–20，还受固定检查与补抓共同的外部请求预算限制。 |
+| `CREDIBILITY_CODE_MAX_SOURCE_READS` | `60` | 每次代码核查的来源读取总上限（GitHub、项目页、Search、Fetch 共用，含缓存命中），范围 1–200。`GITHUB_TOKEN` 只提高 GitHub 自身限流，不改变此上限。 |
 | `CREDIBILITY_CODE_MAX_CHARACTERS` | `60000` | 本次外部文本总字符预算，范围 1000–150000；单来源最多向模型提供 15000 字符。 |
 | `CREDIBILITY_CODE_MAX_OUTPUT_TOKENS` | `16000` | 单次模型输出上限，范围 1000–16000；思考模式的思考 token 也可能占用输出预算。 |
 | `CREDIBILITY_ARTIFACT_DIR` | 上传目录同级 `credibility-artifacts` | 不可变证据与模型输入的存储位置。 |
